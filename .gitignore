@@ -27,8 +27,9 @@ yarn-error.log*
 scripts/
 
 # Data and output (not for deployment)
-data/
-output/
+# Use /data/ to match only root level, not src/data/
+/data/
+/output/
 
 # Documentation (planning docs - not for deployment)
 docs/
