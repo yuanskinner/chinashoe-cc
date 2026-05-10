@@ -1,0 +1,146 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Guangdong Perfect Footwear Co., Ltd."
+  description="Leading manufacturer of sports shoes and running footwear. Verified supplier with BSCI, ISO 9001 certifications."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Guangdong', url: '/suppliers/guangdong/' },
+    { name: 'Guangdong Perfect Footwear', url: '/suppliers/guangdong-perfect-footwear/' },
+  ]}
+>
+  <div class="flex flex-col lg:flex-row gap-8 mb-8">
+    <!-- Main Content -->
+    <div class="flex-1">
+      <div class="flex items-start justify-between gap-4 mb-6">
+        <div>
+          <span class="badge-success mb-2">Verified Supplier</span>
+          <h1 class="text-2xl md:text-3xl font-bold text-neutral-900">
+            Guangdong Perfect Footwear Co., Ltd.
+          </h1>
+          <div class="flex items-center gap-2 text-neutral-500 mt-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Dongguan, Guangdong, China</span>
+          </div>
+        </div>
+        <a href="/contact/?supplier=guangdong-perfect-footwear" class="btn-primary">
+          Request Quote
+        </a>
+      </div>
+
+      <!-- Images -->
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop" alt="Factory" class="rounded-lg w-full h-32 object-cover" />
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop" alt="Products" class="rounded-lg w-full h-32 object-cover" />
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" alt="Products" class="rounded-lg w-full h-32 object-cover" />
+      </div>
+
+      <!-- About -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-neutral-900 mb-4">Company Profile</h2>
+        <div class="prose prose-neutral max-w-none">
+          <p>
+            Guangdong Perfect Footwear Co., Ltd. is a professional sports shoe manufacturer located in Dongguan, China's largest footwear production hub. Established in 2008, we have accumulated 15+ years of experience in producing high-quality athletic footwear for major international brands.
+          </p>
+          <p>
+            Our factory covers 15,000 square meters with 6 automated production lines and over 500 skilled workers. We specialize in running shoes, basketball shoes, training shoes, and sports sneakers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Production Capabilities -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-neutral-900 mb-4">Production Capabilities</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="card text-center">
+            <div class="text-2xl font-bold text-primary-600">150,000</div>
+            <div class="text-sm text-neutral-600">Pairs/Month</div>
+          </div>
+          <div class="card text-center">
+            <div class="text-2xl font-bold text-primary-600">500+</div>
+            <div class="text-sm text-neutral-600">Employees</div>
+          </div>
+          <div class="card text-center">
+            <div class="text-2xl font-bold text-primary-600">6</div>
+            <div class="text-sm text-neutral-600">Production Lines</div>
+          </div>
+          <div class="card text-center">
+            <div class="text-2xl font-bold text-primary-600">2008</div>
+            <div class="text-sm text-neutral-600">Established</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specialization -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-neutral-900 mb-4">Product Specialization</h2>
+        <div class="flex flex-wrap gap-2">
+          {['Running Shoes', 'Basketball Shoes', 'Sports Sneakers', 'Training Shoes', 'Casual Sneakers'].map(item => (
+            <span class="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-neutral-900 mb-4">Certifications</h2>
+        <div class="flex flex-wrap gap-3">
+          {['BSCI', 'ISO 9001', 'Nike FS Authorized'].map(cert => (
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 rounded-lg">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              {cert}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="lg:w-80 flex-shrink-0">
+      <div class="card sticky top-24">
+        <h3 class="font-semibold text-neutral-900 mb-4">Quick Facts</h3>
+        <dl class="space-y-3 text-sm">
+          <div class="flex justify-between">
+            <dt class="text-neutral-500">Location</dt>
+            <dd class="font-medium text-neutral-900">Dongguan, GD</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-neutral-500">Established</dt>
+            <dd class="font-medium text-neutral-900">2008</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-neutral-500">MOQ</dt>
+            <dd class="font-medium text-neutral-900">500 pairs</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-neutral-500">Lead Time</dt>
+            <dd class="font-medium text-neutral-900">30-45 days</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-neutral-500">Payment Terms</dt>
+            <dd class="font-medium text-neutral-900">30% deposit</dd>
+          </div>
+        </dl>
+        
+        <hr class="my-4 border-neutral-200" />
+        
+        <a href="/contact/?supplier=guangdong-perfect-footwear" class="btn-primary w-full text-center mb-3">
+          Request Quote
+        </a>
+        <button class="btn-secondary w-full text-center">
+          Save to Favorites
+        </button>
+      </div>
+    </div>
+  </div>
+</PageLayout>

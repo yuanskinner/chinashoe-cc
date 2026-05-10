@@ -1,0 +1,214 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const marketReports = [
+  {
+    title: 'Global Footwear Market Report 2024',
+    description: 'Comprehensive analysis of the worldwide footwear market including market size, growth drivers, and regional trends.',
+    type: 'Annual Report',
+    pages: 156,
+    date: 'December 2024',
+    href: '/market/reports/global-footwear-2024/',
+    featured: true,
+  },
+  {
+    title: 'China Footwear Export Analysis Q3 2024',
+    description: 'Detailed breakdown of China\'s footwear exports by destination, product category, and price trends.',
+    type: 'Quarterly Update',
+    pages: 45,
+    date: 'October 2024',
+    href: '/market/reports/china-exports-q3-2024/',
+  },
+  {
+    title: 'Athletic Footwear Consumer Trends',
+    description: 'Insights into consumer preferences, purchasing behavior, and emerging trends in the athletic footwear segment.',
+    type: 'Market Research',
+    pages: 78,
+    date: 'November 2024',
+    href: '/market/reports/athletic-footwear-trends/',
+  },
+  {
+    title: 'Sustainable Footwear Market Forecast',
+    description: 'Growth projections and market opportunities for eco-friendly and sustainable footwear products.',
+    type: 'Market Forecast',
+    pages: 34,
+    date: 'September 2024',
+    href: '/market/reports/sustainable-footwear-forecast/',
+  },
+];
+
+const pricingData = [
+  { category: 'Running Shoes (Sports)', min: 12, max: 45, currency: 'USD/pair' },
+  { category: 'Leather Formal Shoes', min: 18, max: 85, currency: 'USD/pair' },
+  { category: 'Canvas Sneakers', min: 5, max: 18, currency: 'USD/pair' },
+  { category: 'Safety Work Shoes', min: 15, max: 55, currency: 'USD/pair' },
+  { category: "Children's Shoes", min: 6, max: 25, currency: 'USD/pair' },
+  { category: 'Sandals', min: 4, max: 22, currency: 'USD/pair' },
+];
+
+const keyMetrics = [
+  { label: 'Global Market Size (2024)', value: '$385B', change: '+4.2% YoY' },
+  { label: 'China Export Volume', value: '10.2B pairs', change: '+3.8% YoY' },
+  { label: 'Average Export Price', value: '$8.50/pair', change: '+2.1% YoY' },
+  { label: 'Top Export Destination', value: 'USA (18%)', change: 'Stable' },
+];
+
+const regions = [
+  { name: 'North America', share: 28, color: 'bg-blue-500' },
+  { name: 'Europe', share: 25, color: 'bg-green-500' },
+  { name: 'Asia Pacific', share: 30, color: 'bg-yellow-500' },
+  { name: 'Latin America', share: 9, color: 'bg-orange-500' },
+  { name: 'Middle East & Africa', share: 8, color: 'bg-purple-500' },
+];
+---
+
+<PageLayout
+  title="Market Data & Analysis"
+  description="Access comprehensive footwear market data, pricing guides, industry reports, and trend analysis for informed business decisions."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Market', url: '/market/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Market Data & Analysis
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Make informed decisions with our comprehensive footwear market data, pricing guides, and industry analysis.
+    </p>
+  </div>
+
+  <!-- Key Metrics -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    {keyMetrics.map(metric => (
+      <div class="card text-center">
+        <div class="text-2xl md:text-3xl font-bold text-primary-600 mb-1">
+          {metric.value}
+        </div>
+        <div class="text-sm text-neutral-600 mb-1">{metric.label}</div>
+        <span class={`text-xs font-medium ${
+          metric.change.includes('+') ? 'text-green-600' : 
+          metric.change.includes('-') ? 'text-red-600' : 'text-neutral-500'
+        }`}>
+          {metric.change}
+        </span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Market Distribution -->
+  <div class="bg-neutral-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-6">Global Market Distribution</h2>
+    <div class="space-y-4">
+      {regions.map(region => (
+        <div class="flex items-center gap-4">
+          <div class="w-32 text-sm font-medium text-neutral-700">{region.name}</div>
+          <div class="flex-1 bg-neutral-200 rounded-full h-3 overflow-hidden">
+            <div
+              class={`${region.color} h-full rounded-full transition-all`}
+              style={`width: ${region.share}%`}
+            ></div>
+          </div>
+          <div class="w-12 text-sm font-semibold text-neutral-900 text-right">{region.share}%</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Featured Report -->
+  {marketReports.filter(r => r.featured).map(report => (
+    <a href={report.href} class="block card p-0 overflow-hidden mb-12 bg-gradient-to-r from-primary-50 to-white group border-2 border-primary-100">
+      <div class="p-6 md:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="badge-primary">{report.type}</span>
+          <span class="text-sm text-neutral-500">{report.pages} pages</span>
+          <span class="text-sm text-neutral-500">{report.date}</span>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors mb-4">
+          {report.title}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {report.description}
+        </p>
+        <span class="inline-flex items-center text-primary-600 font-medium">
+          Download Report
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </span>
+      </div>
+    </a>
+  ))}
+
+  <!-- Pricing Guide -->
+  <div class="mb-12">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold text-neutral-900">Wholesale Pricing Guide</h2>
+      <a href="/market/pricing/" class="link-arrow text-sm">
+        View Full Guide
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <thead>
+          <tr class="border-b border-neutral-200">
+            <th class="text-left py-3 px-4 font-semibold text-neutral-900">Category</th>
+            <th class="text-right py-3 px-4 font-semibold text-neutral-900">Min Price</th>
+            <th class="text-right py-3 px-4 font-semibold text-neutral-900">Max Price</th>
+            <th class="text-right py-3 px-4 font-semibold text-neutral-900">Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pricingData.map((row, index) => (
+            <tr class={index % 2 === 0 ? 'bg-white' : 'bg-neutral-50'}>
+              <td class="py-3 px-4 text-neutral-700">{row.category}</td>
+              <td class="py-3 px-4 text-right font-medium text-neutral-900">${row.min}</td>
+              <td class="py-3 px-4 text-right font-medium text-neutral-900">${row.max}</td>
+              <td class="py-3 px-4 text-right text-neutral-500">{row.currency}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-neutral-500 mt-4">
+      * Prices are indicative FOB China. Actual prices vary based on order quantity, materials, and specifications.
+    </p>
+  </div>
+
+  <!-- More Reports -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h2 class="text-xl font-bold text-neutral-900 mb-6">Latest Reports</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {marketReports.filter(r => !r.featured).map(report => (
+        <a href={report.href} class="card group">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="badge-primary text-xs">{report.type}</span>
+          </div>
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {report.title}
+          </h3>
+          <p class="text-sm text-neutral-600 mb-3 line-clamp-2">
+            {report.description}
+          </p>
+          <div class="flex items-center gap-4 text-xs text-neutral-500">
+            <span>{report.pages} pages</span>
+            <span>{report.date}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

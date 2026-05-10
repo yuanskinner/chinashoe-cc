@@ -1,0 +1,193 @@
+---
+import { mainNavItems } from '@utils/seo';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+  <!-- Top Bar -->
+  <div class="hidden lg:block bg-neutral-900 text-white text-sm">
+    <div class="container-custom py-2 flex justify-between items-center">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <a href="mailto:contact@chinashoe.cc" class="hover:text-primary-300 transition-colors">contact@chinashoe.cc</a>
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Mon-Fri: 9:00 AM - 6:00 PM CST</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="/news/" class="hover:text-primary-300 transition-colors">Industry News</a>
+        <span>|</span>
+        <a href="/about/" class="hover:text-primary-300 transition-colors">About Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="container-custom">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 flex-shrink-0">
+        <img src="/favicon.svg" alt="ChinaShoe.cc" class="w-10 h-10" />
+        <div class="hidden sm:block">
+          <span class="text-xl font-bold text-neutral-900">ChinaShoe</span>
+          <span class="text-xl font-bold text-primary-600">.cc</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-1">
+        {mainNavItems.map(item => {
+          const isActive = currentPath.startsWith(item.href);
+          return (
+            <a
+              href={item.href}
+              class={`px-4 py-2 rounded-lg font-medium transition-all ${
+                isActive
+                  ? 'bg-primary-50 text-primary-700'
+                  : 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900'
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </div>
+
+      <!-- Search & Mobile Menu -->
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <button
+          type="button"
+          class="p-2 rounded-lg text-neutral-600 hover:bg-neutral-100 transition-colors"
+          aria-label="Search"
+          id="search-toggle"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="/suppliers/" class="hidden md:inline-flex btn-primary text-sm">
+          Find Suppliers
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          type="button"
+          class="lg:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100 transition-colors"
+          aria-label="Toggle menu"
+          id="mobile-menu-toggle"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div id="search-overlay" class="hidden fixed inset-0 z-50 bg-neutral-900/50 backdrop-blur-sm">
+    <div class="container-custom py-8">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-xl shadow-2xl p-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              type="search"
+              placeholder="Search shoes, suppliers, materials..."
+              class="flex-1 border-0 focus:ring-0 text-lg"
+              id="search-input"
+            />
+            <button
+              type="button"
+              class="p-2 rounded-lg text-neutral-500 hover:bg-neutral-100"
+              id="search-close"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-4 pt-4 border-t border-neutral-100">
+            <p class="text-sm text-neutral-500 mb-2">Popular searches:</p>
+            <div class="flex flex-wrap gap-2">
+              <a href="/encyclopedia/running-shoes/" class="badge-primary">Running Shoes</a>
+              <a href="/encyclopedia/leather-shoes/" class="badge-primary">Leather Shoes</a>
+              <a href="/suppliers/dongguan/" class="badge-primary">Dongguan Suppliers</a>
+              <a href="/sourcing/" class="badge-primary">Sourcing Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-200 bg-white">
+    <div class="container-custom py-4 space-y-1">
+      {mainNavItems.map(item => {
+        const isActive = currentPath.startsWith(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`block px-4 py-3 rounded-lg font-medium transition-all ${
+              isActive
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-neutral-700 hover:bg-neutral-100'
+            }`}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+      <div class="pt-4 border-t border-neutral-200">
+        <a href="/suppliers/" class="btn-primary w-full text-center">
+          Find Suppliers
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Search toggle
+  const searchToggle = document.getElementById('search-toggle');
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchClose = document.getElementById('search-close');
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+
+  searchToggle?.addEventListener('click', () => {
+    searchOverlay?.classList.remove('hidden');
+    searchInput?.focus();
+  });
+
+  searchClose?.addEventListener('click', () => {
+    searchOverlay?.classList.add('hidden');
+  });
+
+  searchOverlay?.addEventListener('click', (e) => {
+    if (e.target === searchOverlay) {
+      searchOverlay.classList.add('hidden');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

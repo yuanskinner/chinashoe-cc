@@ -1,0 +1,76 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import Sidebar from '@components/Sidebar.astro';
+import { generateBreadcrumbSchema } from '@utils/seo';
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  authors?: string[];
+  tags?: string[];
+  breadcrumbs: BreadcrumbItem[];
+  sidebarItems?: Array<{
+    title: string;
+    links: Array<{ label: string; href: string; active?: boolean }>;
+  }>;
+}
+
+const {
+  title,
+  description,
+  image,
+  type,
+  publishedTime,
+  modifiedTime,
+  authors,
+  tags,
+  breadcrumbs,
+  sidebarItems,
+} = Astro.props;
+
+const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  type={type}
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  authors={authors}
+  tags={tags}
+  canonicalUrl={breadcrumbs[breadcrumbs.length - 1]?.url}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  
+  <div class="bg-neutral-50 border-b border-neutral-200">
+    <div class="container-custom py-4">
+      <Breadcrumb items={breadcrumbs} />
+    </div>
+  </div>
+  
+  <div class="container-custom py-8 lg:py-12">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      {sidebarItems && (
+        <aside class="lg:w-64 flex-shrink-0">
+          <Sidebar items={sidebarItems} />
+        </aside>
+      )}
+      
+      <article class="flex-1 min-w-0">
+        <slot />
+      </article>
+    </div>
+  </div>
+</BaseLayout>

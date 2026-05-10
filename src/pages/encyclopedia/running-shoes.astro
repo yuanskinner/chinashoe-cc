@@ -1,0 +1,163 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Running Shoe Anatomy',
+    description: 'Understanding the components of a running shoe: outsole, midsole, upper, tongue, collar, and lacing system.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/anatomy/',
+  },
+  {
+    title: 'Cushioning Technologies',
+    description: 'Compare EVA, PU, Gel, Air, and other cushioning systems used in modern athletic footwear.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/cushioning/',
+  },
+  {
+    title: 'Running Shoe Categories',
+    description: 'Neutral, stability, motion control: choosing the right running shoe for your gait type.',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/categories/',
+  },
+  {
+    title: 'Trail Running Shoes',
+    description: 'Features and technologies designed for off-road running: traction, protection, and durability.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/trail/',
+  },
+  {
+    title: 'Marathon Racing Flats',
+    description: 'Lightweight, minimalist shoes designed for competitive racing and fast training sessions.',
+    image: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/racing-flats/',
+  },
+  {
+    title: 'Running Shoe Sizing Guide',
+    description: 'How running shoes should fit: toe box space, heel lock, and proper sizing for different brands.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/running-shoes/sizing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Basketball Shoes', href: '/encyclopedia/basketball-shoes/', count: 98 },
+  { name: 'Training Shoes', href: '/encyclopedia/training-shoes/', count: 67 },
+  { name: 'Hiking Shoes', href: '/encyclopedia/hiking-shoes/', count: 72 },
+  { name: 'Tennis Shoes', href: '/encyclopedia/tennis-shoes/', count: 65 },
+];
+---
+
+<PageLayout
+  title="Running Shoes Guide"
+  description="Comprehensive guide to running shoes: anatomy, cushioning technologies, categories, and how to choose the right shoes for your running style."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Running Shoes', url: '/encyclopedia/running-shoes/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Running Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/running-shoes/', active: true },
+        { label: 'Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+        { label: 'Cushioning', href: '/encyclopedia/running-shoes/cushioning/' },
+        { label: 'Categories', href: '/encyclopedia/running-shoes/categories/' },
+        { label: 'Trail Running', href: '/encyclopedia/running-shoes/trail/' },
+        { label: 'Racing Flats', href: '/encyclopedia/running-shoes/racing-flats/' },
+        { label: 'Sizing Guide', href: '/encyclopedia/running-shoes/sizing/' },
+      ],
+    },
+    {
+      title: 'Athletic Categories',
+      links: [
+        { label: 'Basketball Shoes', href: '/encyclopedia/basketball-shoes/' },
+        { label: 'Soccer Cleats', href: '/encyclopedia/soccer-cleats/' },
+        { label: 'Tennis Shoes', href: '/encyclopedia/tennis-shoes/' },
+        { label: 'Hiking Shoes', href: '/encyclopedia/hiking-shoes/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Athletic & Sports</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Running Shoes Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about running shoes: from basic anatomy to advanced cushioning technologies. Find the perfect shoes for your running goals.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Running Shoes Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-3 gap-8 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏃</div>
+      <h3 class="font-semibold text-lg mb-2">For Road Running</h3>
+      <p class="text-neutral-600 text-sm">
+        Lightweight, cushioned shoes designed for pavement and treadmill running.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏔️</div>
+      <h3 class="font-semibold text-lg mb-2">For Trail Running</h3>
+      <p class="text-neutral-600 text-sm">
+        Rugged shoes with enhanced traction for off-road terrain and mountain paths.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-lg mb-2">For Racing</h3>
+      <p class="text-neutral-600 text-sm">
+        Minimalist, energy-returning shoes for competitive runners and fast training.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

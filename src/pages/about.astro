@@ -1,0 +1,176 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const team = [
+  {
+    name: 'David Zhang',
+    role: 'Founder & CEO',
+    bio: 'Former procurement director with 15+ years in the footwear industry.',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+  },
+  {
+    name: 'Sarah Chen',
+    role: 'Head of Content',
+    bio: 'Footwear designer turned content strategist, covering industry trends.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
+  },
+  {
+    name: 'Michael Liu',
+    role: 'Supplier Relations',
+    bio: 'Connects buyers with verified manufacturers across China\'s production hubs.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+  },
+  {
+    name: 'Emily Wang',
+    role: 'Market Analyst',
+    bio: 'Data-driven insights on global footwear trade and market dynamics.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
+  },
+];
+
+const values = [
+  {
+    title: 'Trust & Transparency',
+    description: 'We verify every supplier and fact-check every article to ensure accuracy.',
+    icon: '🛡️',
+  },
+  {
+    title: 'Expert Knowledge',
+    description: 'Our team combines industry experience with deep research expertise.',
+    icon: '📚',
+  },
+  {
+    title: 'B2B Focus',
+    description: 'We serve professional buyers, not end consumers. Our content is designed for business decisions.',
+    icon: '💼',
+  },
+  {
+    title: 'Continuous Updates',
+    description: 'Markets evolve, and so do we. Our content is regularly updated to reflect the latest trends.',
+    icon: '🔄',
+  },
+];
+---
+
+<PageLayout
+  title="About Us"
+  description="Learn about ChinaShoe.cc - your trusted B2B footwear knowledge hub connecting global buyers with Chinese manufacturers and industry insights."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about/' },
+  ]}
+>
+  <div class="mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      About ChinaShoe.cc
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Your trusted B2B footwear knowledge hub. We connect global shoe buyers with Chinese manufacturers and provide comprehensive industry insights.
+    </p>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="grid md:grid-cols-2 gap-8 mb-16">
+    <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl p-8 text-white">
+      <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+      <p class="text-primary-100 leading-relaxed">
+        To democratize access to footwear industry knowledge and connect global buyers with verified manufacturers, enabling informed decisions and successful partnerships.
+      </p>
+    </div>
+    <div class="bg-neutral-900 rounded-xl p-8 text-white">
+      <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
+      <p class="text-neutral-300 leading-relaxed">
+        A world where every footwear buyer, regardless of experience or location, has the tools and knowledge to source quality products at fair prices.
+      </p>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <div class="mb-16">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Our Story</h2>
+    <div class="prose prose-neutral max-w-none">
+      <p class="text-neutral-600 leading-relaxed mb-4">
+        ChinaShoe.cc was founded by a team of footwear industry veterans who saw a gap in the market: while China produces over 13 billion pairs of shoes annually, finding reliable information and verified suppliers remained challenging for international buyers.
+      </p>
+      <p class="text-neutral-600 leading-relaxed mb-4">
+        Our platform combines deep industry expertise with rigorous verification processes. Every supplier in our directory has been vetted for business legitimacy, production capability, and quality standards. Our encyclopedia draws from decades of combined experience in design, manufacturing, and international trade.
+      </p>
+      <p class="text-neutral-600 leading-relaxed">
+        Today, we serve thousands of footwear designers, wholesalers, and retailers from around the world, helping them navigate the complex landscape of Chinese footwear manufacturing with confidence.
+      </p>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="mb-16">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Our Values</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {values.map(value => (
+        <div class="card text-center">
+          <span class="text-4xl mb-4 block">{value.icon}</span>
+          <h3 class="font-semibold text-neutral-900 mb-2">{value.title}</h3>
+          <p class="text-sm text-neutral-600">{value.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="bg-neutral-50 rounded-xl p-8 mb-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl md:text-4xl font-bold text-primary-600 mb-1">5,000+</div>
+        <div class="text-neutral-600">Verified Suppliers</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-bold text-primary-600 mb-1">600+</div>
+        <div class="text-neutral-600">Industry Articles</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-bold text-primary-600 mb-1">50+</div>
+        <div class="text-neutral-600">Countries Served</div>
+      </div>
+      <div>
+        <div class="text-3xl md:text-4xl font-bold text-primary-600 mb-1">2018</div>
+        <div class="text-neutral-600">Founded</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team -->
+  <div class="mb-16">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Meet Our Team</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {team.map(member => (
+        <div class="card text-center">
+          <img
+            src={member.image}
+            alt={member.name}
+            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h3 class="font-semibold text-neutral-900 mb-1">{member.name}</h3>
+          <p class="text-sm text-primary-600 mb-2">{member.role}</p>
+          <p class="text-sm text-neutral-600">{member.bio}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">
+      Get in Touch
+    </h3>
+    <p class="text-neutral-600 mb-4 max-w-md mx-auto">
+      Have questions about our platform or want to partner with us? We'd love to hear from you.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="/contact/" class="btn-primary">
+        Contact Us
+      </a>
+      <a href="mailto:contact@chinashoe.cc" class="btn-secondary">
+        Email: contact@chinashoe.cc
+      </a>
+    </div>
+  </div>
+</PageLayout>

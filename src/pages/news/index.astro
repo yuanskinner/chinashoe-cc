@@ -1,0 +1,198 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const latestNews = [
+  {
+    title: 'Vietnam Emerges as Key Alternative for Chinese Shoe Manufacturing',
+    excerpt: 'As labor costs rise in China, Vietnamese factories are attracting more B2B orders from European retailers seeking competitive pricing.',
+    date: '2024-12-15',
+    category: 'Industry News',
+    author: 'Sarah Chen',
+    readTime: '5 min read',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop',
+    href: '/news/vietnam-shoe-manufacturing-2024/',
+  },
+  {
+    title: 'Sustainable Materials Gain Traction in Athletic Footwear',
+    excerpt: 'Major brands commit to recycled and bio-based materials in their 2025 product lines, driving innovation in eco-friendly manufacturing.',
+    date: '2024-12-12',
+    category: 'Trends',
+    author: 'Michael Zhang',
+    readTime: '4 min read',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&h=400&fit=crop',
+    href: '/news/sustainable-footwear-materials-2025/',
+  },
+  {
+    title: 'Dongguan Shoe Fair 2025: Key Dates and Registration',
+    excerpt: "China's premier footwear trade show announces dates for spring exhibition, expecting record attendance from global buyers.",
+    date: '2024-12-10',
+    category: 'Events',
+    author: 'Lisa Wang',
+    readTime: '3 min read',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=400&fit=crop',
+    href: '/news/dongguan-shoe-fair-2025/',
+  },
+];
+
+const categories = [
+  { name: 'All News', count: 245, active: true },
+  { name: 'Industry News', count: 89 },
+  { name: 'Market Analysis', count: 56 },
+  { name: 'Trends', count: 67 },
+  { name: 'Events', count: 33 },
+];
+
+const olderNews = [
+  { title: 'Rising Raw Material Costs Impact Shoe Pricing', date: '2024-12-08', category: 'Market Analysis', href: '/news/raw-material-costs-2024/' },
+  { title: 'AI-Driven Design Tools Transform Footwear Development', date: '2024-12-05', category: 'Technology', href: '/news/ai-design-footwear/' },
+  { title: 'European Retailers Shift Sourcing Strategies', date: '2024-12-03', category: 'Industry News', href: '/news/european-sourcing-strategies/' },
+  { title: 'Innovation Awards at Guangzhou Footwear Expo', date: '2024-11-30', category: 'Events', href: '/news/guangzhou-footwear-expo-2024/' },
+  { title: 'E-commerce Growth Drives New Distribution Models', date: '2024-11-28', category: 'Trends', href: '/news/ecommerce-footwear-distribution/' },
+  { title: 'Labor Regulations Update for Manufacturing Sector', date: '2024-11-25', category: 'Industry News', href: '/news/labor-regulations-2024/' },
+];
+---
+
+<PageLayout
+  title="Industry News & Trends"
+  description="Stay updated with the latest footwear industry news, market analysis, trends, and events from around the world."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Industry News & Trends
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Stay informed with the latest developments in global footwear manufacturing, trade, and design.
+    </p>
+  </div>
+
+  <!-- Featured Article -->
+  <article class="mb-12">
+    <a href={latestNews[0].href} class="block card p-0 overflow-hidden group">
+      <div class="grid md:grid-cols-2">
+        <div class="overflow-hidden">
+          <img
+            src={latestNews[0].image}
+            alt={latestNews[0].title}
+            class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6 md:p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="badge-primary">{latestNews[0].category}</span>
+            <span class="text-sm text-neutral-500">{latestNews[0].date}</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors mb-4">
+            {latestNews[0].title}
+          </h2>
+          <p class="text-neutral-600 mb-4">
+            {latestNews[0].excerpt}
+          </p>
+          <div class="flex items-center gap-4 text-sm text-neutral-500">
+            <span>By {latestNews[0].author}</span>
+            <span>•</span>
+            <span>{latestNews[0].readTime}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <!-- Category Filter -->
+  <div class="flex flex-wrap gap-2 mb-8">
+    {categories.map(cat => (
+      <button
+        class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+          cat.active
+            ? 'bg-primary-600 text-white'
+            : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
+        }`}
+      >
+        {cat.name} ({cat.count})
+      </button>
+    ))}
+  </div>
+
+  <!-- More Articles Grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    {latestNews.slice(1).map(article => (
+      <a href={article.href} class="card p-0 overflow-hidden group">
+        <div class="overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="badge-primary text-xs">{article.category}</span>
+            <span class="text-xs text-neutral-500">{article.date}</span>
+          </div>
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2 line-clamp-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600 line-clamp-2">
+            {article.excerpt}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Older News List -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h2 class="text-xl font-bold text-neutral-900 mb-6">Earlier Articles</h2>
+    <div class="space-y-4">
+      {olderNews.map(article => (
+        <a href={article.href} class="flex items-center justify-between gap-4 p-4 rounded-lg hover:bg-neutral-50 transition-colors group">
+          <div class="flex-1">
+            <span class="text-xs text-primary-600 font-medium">{article.category}</span>
+            <h3 class="font-medium text-neutral-900 group-hover:text-primary-600 transition-colors">
+              {article.title}
+            </h3>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-sm text-neutral-500">{article.date}</span>
+            <svg class="w-5 h-5 text-neutral-400 group-hover:text-primary-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Newsletter CTA -->
+  <div class="mt-12 bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">
+      Never Miss an Update
+    </h3>
+    <p class="text-neutral-600 mb-4 max-w-md mx-auto">
+      Subscribe to our newsletter for weekly industry insights and analysis delivered to your inbox.
+    </p>
+    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="input flex-1"
+        required
+      />
+      <button type="submit" class="btn-primary whitespace-nowrap">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</PageLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

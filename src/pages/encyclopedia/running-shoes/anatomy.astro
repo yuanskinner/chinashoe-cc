@@ -1,0 +1,150 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Running Shoe Anatomy Guide"
+  description="Understanding the components of a running shoe: outsole, midsole, upper, tongue, collar, and lacing system explained in detail."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Running Shoes', url: '/encyclopedia/running-shoes/' },
+    { name: 'Anatomy Guide', url: '/encyclopedia/running-shoes/anatomy/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Running Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/running-shoes/' },
+        { label: 'Anatomy', href: '/encyclopedia/running-shoes/anatomy/', active: true },
+        { label: 'Cushioning', href: '/encyclopedia/running-shoes/cushioning/' },
+        { label: 'Categories', href: '/encyclopedia/running-shoes/categories/' },
+      ],
+    },
+  ]}
+>
+  <article class="prose prose-neutral max-w-none">
+    <span class="badge-primary mb-2">Technical Guide</span>
+    <h1>Running Shoe Anatomy: Complete Component Guide</h1>
+    
+    <p class="lead">
+      Understanding the parts of a running shoe helps you choose the right footwear for your needs and communicate effectively with manufacturers.
+    </p>
+
+    <h2>Upper Structure</h2>
+    
+    <h3>Vamp (Toe Box)</h3>
+    <p>
+      The front part of the upper that covers the toes. Modern running shoes feature various toe box shapes:
+    </p>
+    <ul>
+      <li><strong>Curved:</strong> Most common, curves upward from the midsole</li>
+      <li><strong>Semi-Curved:</strong> Moderate curve, balanced feel</li>
+      <li><strong>Straight:</strong> Flat profile, more stable for overpronators</li>
+    </ul>
+
+    <h3>Quarter</h3>
+    <p>
+      The side and back sections of the upper that wrap around the heel and midfoot. The quarter provides structural support and helps secure the foot in the shoe.
+    </p>
+
+    <h3>Tongue</h3>
+    <p>
+      The padded flap that sits under the laces and covers the top of the foot. Functions include:
+    </p>
+    <ul>
+      <li>Distributes lace pressure evenly</li>
+      <li>Protects the instep from lace bite</li>
+      <li>Provides cushioning and comfort</li>
+    </ul>
+
+    <h3>Collar</h3>
+    <p>
+      The padded opening around the ankle. The collar design affects heel lockdown and ankle comfort.
+    </p>
+
+    <h3>Lacing System</h3>
+    <p>
+      Traditional eyelets, speed hooks, or Booneys (hook-and-eye) configurations. Modern shoes may feature:
+    </p>
+    <ul>
+      <li>Traditional flat laces</li>
+      <li>Elastic laces for easy entry</li>
+      <li>BOA closure systems with dial tensioning</li>
+      <li>Flywire cables for lightweight support</li>
+    </ul>
+
+    <h2>Midsole</h2>
+    
+    <p>
+      The cushioning layer between the upper and outsole. The midsole is the most critical component for running shoe performance.
+    </p>
+
+    <h3>Stack Height</h3>
+    <p>
+      The thickness of the midsole measured from the insole to the bottom of the outsole. Higher stack heights provide more cushioning but may reduce ground feel.
+    </p>
+
+    <h3>Drop (Heel-to-Toe Offset)</h3>
+    <p>
+      The difference in height between the heel and forefoot. Common drops range from 0mm (zero drop) to 12mm (maximum cushioning).
+    </p>
+
+    <h3>Stability Features</h3>
+    <ul>
+      <li><strong>Medial Posts:</strong> Denser foam on the inner side to prevent excessive inward rolling</li>
+      <li><strong>Guide Rails:</strong> Contoured midsole edges that guide the foot</li>
+      <li><strong>Rockered Sole:</strong> Curved geometry that facilitates forward motion</li>
+    </ul>
+
+    <h2>Outsole</h2>
+    
+    <p>
+      The bottom layer that contacts the ground. Outsole design varies by intended use:
+    </p>
+
+    <h3>Road Running Outsoles</h3>
+    <p>
+      Smooth, durable rubber compounds designed for pavement. Carbon rubber or blown rubber are common materials.
+    </p>
+
+    <h3>Trail Running Outsoles</h3>
+    <p>
+      Aggressive lugs (4-6mm) provide traction on uneven terrain. Multi-directional lug patterns enhance grip on slopes.
+    </p>
+
+    <h3>Crash Pads</h3>
+    <p>
+      Cushioning elements in the heel area that absorb impact upon landing.
+    </p>
+
+    <h2>Interior Components</h2>
+
+    <h3>Insole (Footbed)</h3>
+    <p>
+      The removable layer inside the shoe that contacts the bottom of the foot. Insoles can be:
+    </p>
+    <ul>
+      <li>Factory-provided standard insoles</li>
+      <li>Custom orthotic insoles</li>
+      <li>Aftermarket performance insoles</li>
+    </ul>
+
+    <h3>Toe Box Lining</h3>
+    <p>
+      Protective layer that prevents toe friction and adds durability to the vamp.
+    </p>
+
+    <h3>Heel Counter</h3>
+    <p>
+      Rigid internal structure that cups and stabilizes the heel. May be external (visible) or internal (hidden).
+    </p>
+
+    <h2>Related Topics</h2>
+    <div class="flex flex-wrap gap-3">
+      <a href="/encyclopedia/running-shoes/cushioning/" class="badge-primary">Cushioning Technologies</a>
+      <a href="/encyclopedia/running-shoes/categories/" class="badge-primary">Shoe Categories</a>
+      <a href="/encyclopedia/running-shoes/sizing/" class="badge-primary">Sizing Guide</a>
+    </div>
+  </article>
+</PageLayout>

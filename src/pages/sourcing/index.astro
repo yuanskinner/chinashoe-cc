@@ -1,0 +1,218 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const guides = [
+  {
+    title: 'Complete Guide to Sourcing Shoes from China',
+    description: 'Step-by-step process for finding, evaluating, and working with Chinese footwear manufacturers.',
+    category: 'Getting Started',
+    readTime: '15 min read',
+    href: '/sourcing/guide-to-sourcing-from-china/',
+    icon: '📋',
+  },
+  {
+    title: 'Quality Control Inspection Checklist',
+    description: 'Comprehensive checklist for conducting quality inspections at footwear factories.',
+    category: 'Quality Control',
+    readTime: '10 min read',
+    href: '/sourcing/quality-control-checklist/',
+    icon: '✅',
+  },
+  {
+    title: 'Understanding MOQ and Pricing Structures',
+    description: 'How minimum order quantities affect pricing and strategies for managing production runs.',
+    category: 'Pricing',
+    readTime: '8 min read',
+    href: '/sourcing/understanding-moq/',
+    icon: '💰',
+  },
+  {
+    title: 'Factory Audit Guide and Evaluation Criteria',
+    description: 'How to conduct factory audits and evaluate manufacturer capabilities and compliance.',
+    category: 'Factory Evaluation',
+    readTime: '12 min read',
+    href: '/sourcing/factory-audit-guide/',
+    icon: '🏭',
+  },
+  {
+    title: 'Shipping and Logistics for Footwear Import',
+    description: 'Shipping methods, incoterms, customs procedures, and cost optimization strategies.',
+    category: 'Logistics',
+    readTime: '11 min read',
+    href: '/sourcing/shipping-logistics/',
+    icon: '🚢',
+  },
+  {
+    title: 'Sample Development Process',
+    description: 'How to request and evaluate samples, provide feedback, and iterate on product development.',
+    category: 'Product Development',
+    readTime: '9 min read',
+    href: '/sourcing/sample-development/',
+    icon: '👟',
+  },
+];
+
+const steps = [
+  {
+    step: 1,
+    title: 'Define Your Requirements',
+    description: 'Product specifications, materials, quantities, budget, and timeline.',
+  },
+  {
+    step: 2,
+    title: 'Find Suppliers',
+    description: 'Use our directory, trade shows, or sourcing agents to identify potential manufacturers.',
+  },
+  {
+    step: 3,
+    title: 'Evaluate and Shortlist',
+    description: 'Review capabilities, certifications, samples, and factory audits.',
+  },
+  {
+    step: 4,
+    title: 'Negotiate Terms',
+    description: 'Pricing, MOQ, payment terms, lead times, and contract details.',
+  },
+  {
+    step: 5,
+    title: 'Place Order',
+    description: 'Confirm specifications, sign contract, and arrange deposit payment.',
+  },
+  {
+    step: 6,
+    title: 'Production & QC',
+    description: 'Monitor production, conduct inspections, and ensure quality standards.',
+  },
+];
+---
+
+<PageLayout
+  title="Sourcing Guide"
+  description="Comprehensive guides for sourcing footwear from China: finding suppliers, quality control, pricing, logistics, and best practices."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Sourcing Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about sourcing footwear from China and managing your supply chain effectively.
+    </p>
+  </div>
+
+  <!-- Process Overview -->
+  <div class="bg-neutral-50 rounded-xl p-6 md:p-8 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-6">The Sourcing Process</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {steps.map(step => (
+        <div class="flex items-start gap-4 bg-white rounded-lg p-4">
+          <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+            <span class="text-primary-600 font-bold">{step.step}</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-neutral-900 mb-1">{step.title}</h3>
+            <p class="text-sm text-neutral-600">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Featured Guide -->
+  <a href={guides[0].href} class="block card p-0 overflow-hidden mb-12 group">
+    <div class="md:flex">
+      <div class="md:w-1/3 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center p-12">
+        <span class="text-7xl">{guides[0].icon}</span>
+      </div>
+      <div class="md:w-2/3 p-6 md:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="badge-primary">{guides[0].category}</span>
+          <span class="text-sm text-neutral-500">{guides[0].readTime}</span>
+        </div>
+        <h2 class="text-2xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors mb-3">
+          {guides[0].title}
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          {guides[0].description}
+        </p>
+        <span class="link-arrow">
+          Read Full Guide
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- All Guides -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">All Sourcing Guides</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {guides.map(guide => (
+        <a href={guide.href} class="card group">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">{guide.icon}</span>
+            <div>
+              <span class="badge-primary text-xs">{guide.category}</span>
+            </div>
+          </div>
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {guide.title}
+          </h3>
+          <p class="text-sm text-neutral-600 mb-3 line-clamp-2">
+            {guide.description}
+          </p>
+          <span class="text-sm text-neutral-500">{guide.readTime}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h2 class="text-xl font-bold text-neutral-900 mb-6">Browse by Topic</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {[
+        { name: 'Getting Started', count: 8, href: '/sourcing/getting-started/' },
+        { name: 'Quality Control', count: 12, href: '/sourcing/quality-control/' },
+        { name: 'Factory Evaluation', count: 6, href: '/sourcing/factory-evaluation/' },
+        { name: 'Logistics', count: 9, href: '/sourcing/logistics/' },
+        { name: 'Pricing & Costs', count: 7, href: '/sourcing/pricing/' },
+        { name: 'Negotiation', count: 5, href: '/sourcing/negotiation/' },
+        { name: 'Compliance', count: 6, href: '/sourcing/compliance/' },
+        { name: 'Tools & Templates', count: 10, href: '/sourcing/tools/' },
+      ].map(topic => (
+        <a href={topic.href} class="flex items-center justify-between p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100 transition-colors">
+          <span class="font-medium text-neutral-700">{topic.name}</span>
+          <span class="text-sm text-neutral-500">({topic.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="mt-12 bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">
+      Need Personalized Guidance?
+    </h3>
+    <p class="text-neutral-600 mb-4 max-w-md mx-auto">
+      Our sourcing experts can help you find the right suppliers and navigate the procurement process.
+    </p>
+    <a href="/contact/" class="btn-primary">
+      Request Consultation
+    </a>
+  </div>
+</PageLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

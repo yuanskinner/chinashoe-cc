@@ -1,0 +1,167 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const collections = [
+  {
+    title: 'Spring/Summer 2025 Trends',
+    description: 'Explore the latest seasonal color palettes and design directions for upcoming collections.',
+    image: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&h=600&fit=crop',
+    href: '/inspiration/spring-summer-2025/',
+    count: 45,
+  },
+  {
+    title: 'Minimalist Design Concepts',
+    description: 'Clean lines, premium materials, and understated elegance for contemporary footwear.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=600&fit=crop',
+    href: '/inspiration/minimalist/',
+    count: 32,
+  },
+  {
+    title: 'Sustainable Fashion Movement',
+    description: 'Eco-conscious designs using recycled materials and innovative green manufacturing.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop',
+    href: '/inspiration/sustainable/',
+    count: 28,
+  },
+  {
+    title: 'Heritage & Retro Revival',
+    description: 'Classic designs reimagined with modern materials and contemporary colorways.',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&h=600&fit=crop',
+    href: '/inspiration/retro/',
+    count: 36,
+  },
+];
+
+const designElements = [
+  { name: 'Color Palettes', icon: '🎨', count: 89 },
+  { name: 'Material Combinations', icon: '🧵', count: 67 },
+  { name: 'Silhouette Studies', icon: '📐', count: 54 },
+  { name: 'Detail Close-ups', icon: '🔍', count: 78 },
+  { name: 'Tech Packs', icon: '📋', count: 34 },
+  { name: 'Mood Boards', icon: '🖼️', count: 45 },
+];
+
+const trendingSearches = [
+  'Chunky sneakers',
+  'Platform sandals',
+  'Eco-friendly materials',
+  'Monochrome',
+  'Textured leather',
+  'Retro running',
+];
+---
+
+<PageLayout
+  title="Design Inspiration"
+  description="Explore footwear design trends, color palettes, material combinations, and creative concepts for your next collection."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Inspiration', url: '/inspiration/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Design Inspiration
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Discover trending designs, color palettes, and material combinations to fuel your next footwear collection.
+    </p>
+  </div>
+
+  <!-- Search -->
+  <div class="bg-neutral-50 rounded-xl p-4 mb-8">
+    <div class="relative max-w-xl">
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="search"
+        placeholder="Search inspiration by style, color, material..."
+        class="input pl-12"
+      />
+    </div>
+    <div class="flex flex-wrap gap-2 mt-3">
+      <span class="text-sm text-neutral-500">Trending:</span>
+      {trendingSearches.map(term => (
+        <button class="text-sm px-3 py-1 bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:text-primary-600 transition-colors">
+          {term}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Collections Grid -->
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {collections.map(collection => (
+      <a href={collection.href} class="card p-0 overflow-hidden group">
+        <div class="relative h-64 overflow-hidden">
+          <img
+            src={collection.image}
+            alt={collection.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <span class="text-sm text-white/80">{collection.count} concepts</span>
+            <h3 class="text-xl font-bold text-white mb-2">{collection.title}</h3>
+            <p class="text-white/80 text-sm line-clamp-2">{collection.description}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Design Elements -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Browse by Element</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {designElements.map(element => (
+        <a href="#" class="card text-center hover:border-primary-300 border border-transparent">
+          <span class="text-3xl mb-2 block">{element.icon}</span>
+          <h3 class="font-medium text-neutral-900 text-sm">{element.name}</h3>
+          <span class="text-xs text-neutral-500">{element.count} items</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Color Palette Section -->
+  <div class="border-t border-neutral-200 pt-12">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold text-neutral-900">Popular Color Palettes</h2>
+      <a href="/inspiration/colors/" class="link-arrow text-sm">
+        View All
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {[
+        { name: 'Earth Tones', colors: ['#8B7355', '#A0522D', '#D2691E', '#DEB887'], trend: 'Spring 2025' },
+        { name: 'Ocean Blues', colors: ['#1E3A5F', '#2E5984', '#4A90A4', '#87CEEB'], trend: 'Summer 2025' },
+        { name: 'Forest Greens', colors: ['#228B22', '#2E8B57', '#3CB371', '#90EE90'], trend: 'Fall 2025' },
+        { name: 'Urban Neutrals', colors: ['#2F4F4F', '#708090', '#A9A9A9', '#D3D3D3'], trend: 'Year-round' },
+      ].map(palette => (
+        <div class="card">
+          <div class="flex h-16 rounded-lg overflow-hidden mb-3">
+            {palette.colors.map(color => (
+              <div class="flex-1" style={`background-color: ${color}`}></div>
+            ))}
+          </div>
+          <h3 class="font-medium text-neutral-900">{palette.name}</h3>
+          <span class="text-xs text-neutral-500">{palette.trend}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

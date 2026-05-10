@@ -1,0 +1,175 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const categories = [
+  {
+    name: 'Athletic & Sports',
+    icon: '🏃',
+    items: [
+      { name: 'Running Shoes', href: '/encyclopedia/running-shoes/', count: 156 },
+      { name: 'Basketball Shoes', href: '/encyclopedia/basketball-shoes/', count: 98 },
+      { name: 'Soccer Cleats', href: '/encyclopedia/soccer-cleats/', count: 87 },
+      { name: 'Tennis Shoes', href: '/encyclopedia/tennis-shoes/', count: 65 },
+      { name: 'Hiking Shoes', href: '/encyclopedia/hiking-shoes/', count: 72 },
+    ],
+  },
+  {
+    name: 'Formal & Dress',
+    icon: '👞',
+    items: [
+      { name: 'Oxford Shoes', href: '/encyclopedia/oxford-shoes/', count: 78 },
+      { name: 'Derby Shoes', href: '/encyclopedia/derby-shoes/', count: 56 },
+      { name: 'Loafers', href: '/encyclopedia/loafers/', count: 64 },
+      { name: 'Chelsea Boots', href: '/encyclopedia/chelsea-boots/', count: 48 },
+    ],
+  },
+  {
+    name: 'Casual & Lifestyle',
+    icon: '👟',
+    items: [
+      { name: 'Sneakers', href: '/encyclopedia/sneakers/', count: 98 },
+      { name: 'Canvas Shoes', href: '/encyclopedia/canvas-shoes/', count: 45 },
+      { name: 'Boat Shoes', href: '/encyclopedia/boat-shoes/', count: 38 },
+      { name: 'Slip-on Shoes', href: '/encyclopedia/slip-on-shoes/', count: 42 },
+    ],
+  },
+  {
+    name: 'Women\'s Footwear',
+    icon: '👠',
+    items: [
+      { name: 'High Heels', href: '/encyclopedia/high-heels/', count: 89 },
+      { name: 'Flats', href: '/encyclopedia/flats/', count: 67 },
+      { name: 'Sandals', href: '/encyclopedia/sandals/', count: 78 },
+      { name: 'Ankle Boots', href: '/encyclopedia/ankle-boots/', count: 54 },
+    ],
+  },
+  {
+    name: 'Materials',
+    icon: '🎨',
+    items: [
+      { name: 'Leather Types', href: '/encyclopedia/leather-types/', count: 45 },
+      { name: 'Synthetic Materials', href: '/encyclopedia/synthetic-materials/', count: 38 },
+      { name: 'Rubber & Outsoles', href: '/encyclopedia/outsoles/', count: 52 },
+      { name: 'Textiles & Mesh', href: '/encyclopedia/textiles/', count: 34 },
+    ],
+  },
+  {
+    name: 'Manufacturing',
+    icon: '🔧',
+    items: [
+      { name: 'Goodyear Welted', href: '/encyclopedia/goodyear-welted/', count: 28 },
+      { name: 'Cemented Construction', href: '/encyclopedia/cemented/', count: 35 },
+      { name: 'Vulcanized Process', href: '/encyclopedia/vulcanized/', count: 22 },
+      { name: 'Injection Molding', href: '/encyclopedia/injection-molding/', count: 31 },
+    ],
+  },
+];
+
+const popularArticles = [
+  { title: 'Complete Guide to Running Shoe Anatomy', category: 'Running Shoes', href: '/encyclopedia/running-shoes/anatomy-guide/' },
+  { title: 'Difference Between Full Grain and Top Grain Leather', category: 'Materials', href: '/encyclopedia/leather-types/full-grain-vs-top-grain/' },
+  { title: 'How to Identify Quality Leather Shoes', category: 'Buying Guide', href: '/encyclopedia/leather-shoes/quality-guide/' },
+  { title: 'Understanding Soccer Cleat Types (FG, SG, AG, TF)', category: 'Soccer', href: '/encyclopedia/soccer-cleats/types-guide/' },
+  { title: 'Safety Shoe Standards: EN ISO 20345 Explained', category: 'Safety', href: '/encyclopedia/safety-shoes/standards/' },
+];
+---
+
+<PageLayout
+  title="Footwear Encyclopedia"
+  description="Comprehensive knowledge base covering all aspects of footwear: types, materials, manufacturing processes, and brand histories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+  ]}
+>
+  <div class="mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Footwear Encyclopedia
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Your comprehensive resource for footwear knowledge. Explore categories, materials, manufacturing processes, and brand histories.
+    </p>
+  </div>
+
+  <!-- Search Box -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <div class="flex flex-col md:flex-row gap-4 items-center">
+      <div class="flex-1 w-full">
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="search"
+            placeholder="Search articles, topics, materials..."
+            class="input pl-12"
+          />
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <select class="input w-auto">
+          <option value="">All Categories</option>
+          <option value="athletic">Athletic & Sports</option>
+          <option value="formal">Formal & Dress</option>
+          <option value="casual">Casual & Lifestyle</option>
+          <option value="womens">Women's Footwear</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories Grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    {categories.map(category => (
+      <div class="card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">{category.icon}</span>
+          <h2 class="text-xl font-semibold text-neutral-900">
+            {category.name}
+          </h2>
+        </div>
+        <ul class="space-y-2">
+          {category.items.map(item => (
+            <li class="flex items-center justify-between">
+              <a
+                href={item.href}
+                class="text-neutral-600 hover:text-primary-600 transition-colors"
+              >
+                {item.name}
+              </a>
+              <span class="text-xs text-neutral-400">({item.count})</span>
+            </li>
+          ))}
+        </ul>
+        <a href="#" class="inline-flex items-center text-sm text-primary-600 hover:text-primary-700 mt-4 font-medium">
+          View all in {category.name}
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    ))}
+  </div>
+
+  <!-- Popular Articles -->
+  <div class="border-t border-neutral-200 pt-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">
+      Popular Articles
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {popularArticles.map(article => (
+        <a href={article.href} class="flex items-start gap-3 p-4 rounded-lg hover:bg-neutral-50 transition-colors group">
+          <div class="flex-1">
+            <span class="text-xs text-primary-600 font-medium">{article.category}</span>
+            <h3 class="font-medium text-neutral-900 group-hover:text-primary-600 transition-colors">
+              {article.title}
+            </h3>
+          </div>
+          <svg class="w-5 h-5 text-neutral-400 flex-shrink-0 mt-1 group-hover:text-primary-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

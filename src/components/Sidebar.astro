@@ -1,0 +1,38 @@
+---
+interface SidebarItem {
+  title: string;
+  links: Array<{ label: string; href: string; active?: boolean }>;
+}
+
+interface Props {
+  items: SidebarItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="space-y-6">
+  {items.map(section => (
+    <div>
+      <h3 class="font-semibold text-neutral-900 mb-3 text-sm uppercase tracking-wide">
+        {section.title}
+      </h3>
+      <ul class="space-y-1">
+        {section.links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class={`block px-3 py-2 rounded-lg text-sm transition-colors ${
+                link.active
+                  ? 'bg-primary-50 text-primary-700 font-medium'
+                  : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
+              }`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</nav>
