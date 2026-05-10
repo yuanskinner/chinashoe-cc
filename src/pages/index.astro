@@ -151,8 +151,9 @@ const stats = [
               type="search"
               placeholder="Search shoes, suppliers, materials, processes..."
               class="flex-1 px-4 py-3 text-neutral-900 border-0 focus:ring-0"
+              onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
             />
-            <button type="button" class="btn-primary px-6 py-3">
+            <button type="button" class="btn-primary px-6 py-3" onclick="alert('Search feature is coming soon! Stay tuned.');">
               Search
             </button>
           </div>

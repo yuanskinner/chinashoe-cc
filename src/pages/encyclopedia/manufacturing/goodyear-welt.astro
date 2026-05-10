@@ -1,0 +1,228 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Welt Types',
+    description: 'Storm welt, reverse welt, and feather edge: construction variations.',
+    image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/goodyear-welt/welt-types/',
+  },
+  {
+    title: 'Goodyear vs Blake',
+    description: 'Comparing Goodyear welt and Blake stitch construction methods.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/goodyear-welt/comparison/',
+  },
+  {
+    title: 'Machine Stitching',
+    description: 'The Goodyear welting machine: how the process works.',
+    image: 'https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/goodyear-welt/machine/',
+  },
+  {
+    title: 'Hand-Welted Shoes',
+    description: 'Traditional hand-welting: the pinnacle of shoemaking craft.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/goodyear-welt/hand/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Cemented Construction', href: '/encyclopedia/manufacturing/cemented/', count: 35 },
+  { name: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/', count: 28 },
+  { name: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/', count: 25 },
+];
+---
+
+<PageLayout
+  title="Goodyear Welt Construction Guide"
+  description="Complete guide to Goodyear welt construction: the gold standard in dress shoe construction. Learn about the process, benefits, and how to identify quality welted footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Manufacturing', url: '/encyclopedia/manufacturing/' },
+    { name: 'Goodyear Welt', url: '/encyclopedia/manufacturing/goodyear-welt/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Goodyear Welt',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/manufacturing/goodyear-welt/', active: true },
+        { label: 'Welt Types', href: '/encyclopedia/manufacturing/goodyear-welt/welt-types/' },
+        { label: 'Construction Comparison', href: '/encyclopedia/manufacturing/goodyear-welt/comparison/' },
+        { label: 'Machine Process', href: '/encyclopedia/manufacturing/goodyear-welt/machine/' },
+        { label: 'Hand-Welting', href: '/encyclopedia/manufacturing/goodyear-welt/hand/' },
+      ],
+    },
+    {
+      title: 'Other Methods',
+      links: [
+        { label: 'Cemented', href: '/encyclopedia/manufacturing/cemented/' },
+        { label: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/' },
+        { label: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Manufacturing Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Goodyear Welt Construction Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about Goodyear welt construction: the traditional method that creates durable, repairable dress shoes. Learn about the process, benefits, and quality indicators.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&h=400&fit=crop"
+      alt="Quality Leather Dress Shoes"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Goodyear Welt Construction</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Goodyear welt construction is a traditional method of shoe construction that creates footwear capable of being resoled multiple times, extending the shoe's lifespan significantly. Named after Charles Goodyear Jr., who invented the machinery used in the process, this construction method has been the benchmark for quality dress shoes for over a century.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The key feature of Goodyear welt construction is the welt, a strip of leather or synthetic material that runs around the perimeter of the shoe. This welt is stitched to both the upper and insole, and then the outsole is stitched to the welt. This creates a stable, durable structure that can be disassembled for resoling without damaging the upper.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Construction Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Channeling:</strong> A channel is cut into the insole where the welt will be attached, allowing the welt stitching to sit flush with the insole surface. In quality shoes, this channel is cut precisely to accommodate the welt.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rib Attachment:</strong> A canvas rib is cemented into the channel, providing the surface to which the welt is stitched. The rib adds flexibility while maintaining the channel's shape.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Welt Stitching:</strong> The upper, lining, and welt are joined together with a lockstitch. The Goodyear welting machine uses a complex mechanism to stitch through multiple layers while maintaining consistent tension.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Outsole Attachment:</strong> The outsole is attached by stitching through the welt, typically using a different stitch type than the welt joining. This stitching is often done with a rapid stitcher machine or by hand in premium shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Bottom Finishing:</strong> The edges are trimmed, and the outsole is finished with various treatments including sanding, staining, and polishing to create the final appearance.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Benefits of Goodyear Welt Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Resoleability:</strong> The primary advantage of Goodyear welt construction is the ability to replace the outsole without damaging the upper. A well-made Goodyear welted shoe can be resoled multiple times, potentially lasting decades with proper care.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Structural Stability:</strong> The welt creates a stable platform that maintains its shape over time and resists the toe-spring and heel-cracking that plagues cemented shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water Resistance:</strong> Properly made Goodyear welted shoes offer better water resistance than Blake stitched shoes, as the construction creates a more complete seal.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Comfort Evolution:</strong> The leather insole of Goodyear welted shoes gradually conforms to the foot, creating a personalized fit that improves over years of wear. This break-in period results in exceptional comfort for long-term wearers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Identifying Quality Goodyear Welt Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Not all Goodyear welt shoes are created equal. Quality indicators include uniform stitch density in the welt stitching, flush welt-to-insole junction, consistent channel depth, and quality leather selection for the insole and welt.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Look for hand-finished edges, natural leather insoles (indicated by their ability to absorb moisture and develop patina), and overall construction consistency. Examine the heel attachment and outsole stitching for quality indicators.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers with Goodyear welt capabilities are primarily located in regions with established leather goods traditions, including Wenzhou (Zhejiang), Chengdu (Sichuan), and some facilities in Guangzhou (Guangdong). When sourcing Goodyear welted shoes from China, verify the manufacturer's equipment and experience with this specialized process.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality Goodyear welt production requires specific machinery including Goodyear welting machines, rapid stitchers, and channel cutters. Request factory tours and evaluate equipment condition and maintenance. Request samples that can be disassembled to verify proper construction including rib attachment, welt stitching quality, and insole quality.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔧</div>
+      <h3 class="font-semibold text-lg mb-2">Resoleable</h3>
+      <p class="text-neutral-600 text-sm">
+        Can be resoled multiple times, lasting decades with proper care.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💧</div>
+      <h3 class="font-semibold text-lg mb-2">Water Resistant</h3>
+      <p class="text-neutral-600 text-sm">
+        Better moisture protection than Blake stitched construction.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🦶</div>
+      <h3 class="font-semibold text-lg mb-2">Custom Fit</h3>
+      <p class="text-neutral-600 text-sm">
+        Leather insole conforms to foot shape over time.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⏱️</div>
+      <h3 class="font-semibold text-lg mb-2">Durable</h3>
+      <p class="text-neutral-600 text-sm">
+        Stable construction maintains shape through years of wear.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

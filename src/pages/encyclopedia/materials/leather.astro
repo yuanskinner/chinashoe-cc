@@ -1,0 +1,224 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Full Grain Leather',
+    description: 'The highest quality leather: natural beauty and exceptional durability.',
+    image: 'https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/full-grain-leather/',
+  },
+  {
+    title: 'Top Grain Leather',
+    description: 'Sanded and refined: good quality with more uniform appearance.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/top-grain-leather/',
+  },
+  {
+    title: 'Suede and Nubuck',
+    description: 'Split leather and buffed grain: soft textures for style and comfort.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/suede-nubuck/',
+  },
+  {
+    title: 'Exotic Leathers',
+    description: 'Crocodile, ostrich, and snake: premium materials for luxury footwear.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/exotic-leathers/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 45 },
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/', count: 38 },
+  { name: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/', count: 32 },
+];
+---
+
+<PageLayout
+  title="Leather Guide"
+  description="Complete guide to leather materials in footwear: full grain, top grain, suede, nubuck, and exotic leathers. Learn about leather types, quality grades, and care requirements."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Leather', url: '/encyclopedia/materials/leather/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Leather Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/leather/', active: true },
+        { label: 'Full Grain', href: '/encyclopedia/materials/full-grain-leather/' },
+        { label: 'Top Grain', href: '/encyclopedia/materials/top-grain-leather/' },
+        { label: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/' },
+        { label: 'Exotic Leathers', href: '/encyclopedia/materials/exotic-leathers/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Synthetic', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+        { label: 'Textiles', href: '/encyclopedia/materials/textiles/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Leather Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about leather in footwear: from full grain to suede, understanding leather types, quality grades, and how to evaluate leather quality for shoe manufacturing.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=1200&h=400&fit=crop"
+      alt="Premium Leather Material"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Leather</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Leather is a durable and flexible material created by tanning animal rawhide and skin, primarily from cattle. In footwear manufacturing, leather has been the traditional material of choice for premium shoes due to its exceptional combination of comfort, durability, breathability, and aesthetic appeal. Quality leather conforms to the foot over time, creating a personalized fit that improves with wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The quality of leather varies significantly based on the part of the hide used, the tanning process, and the finishing treatments applied. Understanding these differences is essential for evaluating leather footwear and making informed sourcing decisions.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Leather Grades</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Full Grain Leather:</strong> The highest quality leather available, full grain leather includes the entire grain surface without any removal or correction. This leather retains all natural markings, scars, and textures that give each piece unique character. Full grain leather is the most durable leather type, developing a beautiful patina over time that enhances its appearance. It's commonly used in premium dress shoes, work boots, and luxury footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Top Grain Leather:</strong> The second-highest quality leather, top grain has the surface sanded or buffed to remove imperfections, creating a more uniform appearance. While slightly less durable than full grain, top grain offers excellent quality at a more accessible price point. It's commonly used in mid-range leather goods and footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Split Leather:</strong> Created from the lower layers of hide that remain after the top layers are split off, split leather is less durable than full or top grain but offers good value. Suede is created from split leather that has been buffed to create its characteristic soft texture.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Corrected Grain Leather:</strong> Made from lower-quality hides that undergo significant processing to remove imperfections, corrected grain leather is often embossed with artificial grain patterns. While functional, corrected grain does not develop patina and represents the most affordable leather option.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Tanning Processes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Vegetable Tanning:</strong> Traditional method using natural tannins from tree bark, vegetable-tanned leather is firm, durable, and develops rich patinas over time. It's commonly used in high-quality dress shoes and leather goods but requires longer tanning times and is more susceptible to water damage.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Chrome Tanning:</strong> The most common modern tanning method, chrome tanning uses chromium salts to produce soft, flexible, and water-resistant leather. Chrome-tanned leather is available in various thicknesses and colors and is the predominant method for footwear leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Combination Tanning:</strong> Some leathers undergo both vegetable and chrome tanning processes, combining the benefits of both methods for specific applications.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Specialty Leathers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nubuck:</strong> Created by buffing the grain surface of top grain leather, nubuck has a velvety texture similar to suede but with better durability since the stronger grain surface is used. Nubuck requires regular maintenance with specialized brushes and protectants.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Patent Leather:</strong> Leather with a high-gloss lacquer finish, patent leather is created by applying multiple coats of lacquer or varnish to the leather surface. While not breathable, patent leather offers distinctive formal aesthetics and water resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Exotic Leathers:</strong> Including alligator, crocodile, ostrich, and snake, exotic leathers offer unique textures and status appeal. These materials command premium prices and require specialized care.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China imports significant quantities of leather from around the world, including premium leathers from Italy, traditional hides from India, and value-oriented options from Brazil and Argentina. When sourcing leather footwear from China, understand the origin and grade of leather being used and request documentation including hide specifications and tannery certifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality indicators include consistent thickness throughout the hide, absence of loose fibers, natural flexibility, and appropriate smell (not chemical or fishy odors). Request sample hides with your specifications to verify quality before production.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Full Grain</h3>
+      <p class="text-neutral-600 text-sm">
+        Premium quality with natural markings and superior durability.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">📏</div>
+      <h3 class="font-semibold text-lg mb-2">Top Grain</h3>
+      <p class="text-neutral-600 text-sm">
+        Sanded for uniformity while maintaining good quality.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧸</div>
+      <h3 class="font-semibold text-lg mb-2">Suede</h3>
+      <p class="text-neutral-600 text-sm">
+        Soft, buffed texture for casual and stylish footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🐊</div>
+      <h3 class="font-semibold text-lg mb-2">Exotic</h3>
+      <p class="text-neutral-600 text-sm">
+        Premium materials for luxury footwear and accessories.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

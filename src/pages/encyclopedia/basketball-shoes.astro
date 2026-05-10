@@ -1,0 +1,199 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Basketball Shoe Anatomy',
+    description: 'Understanding the key components: ankle support, cushioning systems, and outsole traction patterns.',
+    image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop',
+    href: '/encyclopedia/basketball-shoes/anatomy/',
+  },
+  {
+    title: 'Cushioning Technologies',
+    description: 'Air, foam, and hybrid cushioning systems used in modern basketball footwear.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/basketball-shoes/cushioning/',
+  },
+  {
+    title: 'High-Top vs Low-Top',
+    description: 'Ankle support versus mobility: choosing the right silhouette for your playing style.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/basketball-shoes/silhouettes/',
+  },
+  {
+    title: 'Court Surfaces',
+    description: 'Indoor, outdoor, and multi-surface basketball shoe outsoles explained.',
+    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop',
+    href: '/encyclopedia/basketball-shoes/court-types/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Running Shoes', href: '/encyclopedia/running-shoes/', count: 156 },
+  { name: 'Training Shoes', href: '/encyclopedia/training-shoes/', count: 67 },
+  { name: 'Sneakers', href: '/encyclopedia/sneakers/', count: 98 },
+];
+---
+
+<PageLayout
+  title="Basketball Shoes Guide"
+  description="Complete guide to basketball shoes: from high-top ankle support to low-top mobility, cushioning technologies, and how to choose the right court shoes."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Basketball Shoes', url: '/encyclopedia/basketball-shoes/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Basketball Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/basketball-shoes/', active: true },
+        { label: 'Anatomy', href: '/encyclopedia/basketball-shoes/anatomy/' },
+        { label: 'Cushioning', href: '/encyclopedia/basketball-shoes/cushioning/' },
+        { label: 'Silhouettes', href: '/encyclopedia/basketball-shoes/silhouettes/' },
+        { label: 'Court Types', href: '/encyclopedia/basketball-shoes/court-types/' },
+      ],
+    },
+    {
+      title: 'Athletic Categories',
+      links: [
+        { label: 'Running Shoes', href: '/encyclopedia/running-shoes/' },
+        { label: 'Soccer Cleats', href: '/encyclopedia/soccer-cleats/' },
+        { label: 'Training Shoes', href: '/encyclopedia/training-shoes/' },
+        { label: 'Sneakers', href: '/encyclopedia/sneakers/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Athletic & Sports</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Basketball Shoes Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about basketball shoes: from high-top ankle support to advanced cushioning technologies. Find the perfect basketball footwear for your game.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=400&fit=crop"
+      alt="Basketball Shoes Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Basketball Shoes</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Basketball shoes are specialized athletic footwear designed to provide the support, stability, and performance characteristics needed for the demanding movements in basketball. Unlike regular sneakers, basketball shoes are engineered with specific features that address the unique physical requirements of the sport.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The sport of basketball involves frequent jumps, lateral movements, quick direction changes, and explosive acceleration. These movements place significant stress on the feet, ankles, and lower legs, making proper footwear essential for both performance enhancement and injury prevention. Modern basketball shoes incorporate advanced materials and technologies to address these demands while providing comfort during extended wear.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Key Features of Basketball Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ankle Support:</strong> Perhaps the most distinguishing feature of basketball shoes is their ankle support system. High-top basketball shoes extend above the ankle to provide stability and help prevent ankle rolls, which are common injuries in basketball. Mid-top and low-top options offer increasing mobility at the expense of some ankle protection, catering to different player preferences and playing styles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cushioning Systems:</strong> Modern basketball shoes feature sophisticated cushioning systems that absorb impact forces during jumps and provide energy return for explosive movements. Common technologies include air cushioning (pressurized air units), foam cushioning (EVA, PU, or proprietary compounds), and hybrid systems that combine multiple technologies for optimal performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Traction Outsoles:</strong> The outsole patterns on basketball shoes are specifically designed for indoor court surfaces, typically featuring herringbone or pivot circle patterns that provide excellent grip on hardwood floors. Some models include outdoor-specific outsoles with more durable rubber compounds for playing on concrete and asphalt surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Upper Construction:</strong> Basketball shoe uppers are constructed from various materials including leather, synthetic leather, mesh, and knit textiles. Each material offers different benefits in terms of support, breathability, flexibility, and durability. Premium leather uppers provide excellent support and durability but may require a break-in period, while mesh and knit uppers offer superior breathability and a sock-like fit.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Choosing the Right Basketball Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Selecting the appropriate basketball shoes depends on several factors including your playing position, style of play, foot type, and personal preferences. Guards who prioritize speed and quickness may prefer lighter, low-top shoes with minimal break-in requirements. Centers and power players who need more support and cushioning for landing jumps may benefit from high-top models with maximum cushioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B buyers sourcing basketball shoes, understanding these technical requirements is essential for selecting the right manufacturer and product specifications. Chinese manufacturers like those in Putian and Dongguan have established expertise in basketball shoe production, with capabilities ranging from basic canvas basketball shoes to premium leather models with advanced cushioning systems.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Manufacturing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese basketball shoe manufacturers offer various production capabilities including OEM (Original Equipment Manufacturing) and ODM (Original Design Manufacturing) services. When sourcing basketball shoes from China, key considerations include material quality, construction methods (cemented, vulcanized, or hybrid), cushioning system specifications, and quality control procedures.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Most basketball shoes are produced using cemented construction, where the upper is bonded to the midsole and outsole using industrial adhesives. This method allows for precise control over cushioning placement and provides a consistent, durable bond. Quality manufacturers implement rigorous testing protocols to ensure shoes can withstand the demands of basketball performance.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-3 gap-8 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏀</div>
+      <h3 class="font-semibold text-lg mb-2">For Guards</h3>
+      <p class="text-neutral-600 text-sm">
+        Lightweight, low-profile shoes designed for speed, agility, and quick direction changes.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">For Forwards</h3>
+      <p class="text-neutral-600 text-sm">
+        Versatile shoes balancing support, cushioning, and responsiveness for all-around performance.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔒</div>
+      <h3 class="font-semibold text-lg mb-2">For Centers</h3>
+      <p class="text-neutral-600 text-sm">
+        Maximum cushioning and support for players who frequently battle for position and jump.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

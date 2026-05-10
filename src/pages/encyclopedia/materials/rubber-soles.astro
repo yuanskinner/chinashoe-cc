@@ -1,0 +1,228 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Outsole Types',
+    description: 'Rubber, TPR, and PU outsoles: selecting the right sole material.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/rubber-soles/outsole-types/',
+  },
+  {
+    title: 'Traction Patterns',
+    description: 'Understanding outsole tread designs for different surfaces.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/rubber-soles/traction/',
+  },
+  {
+    title: 'Durability Ratings',
+    description: 'Abrasion resistance, tear strength, and outsole longevity.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/rubber-soles/durability/',
+  },
+  {
+    title: 'Slip Resistance',
+    description: 'Testing standards and properties for slip-resistant outsoles.',
+    image: 'https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/rubber-soles/slip-resistance/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'EVA Midsoles', href: '/encyclopedia/materials/eva-midsoles/', count: 38 },
+  { name: 'Leather Soles', href: '/encyclopedia/materials/leather-soles/', count: 32 },
+  { name: 'Manufacturing', href: '/encyclopedia/manufacturing/', count: 48 },
+];
+---
+
+<PageLayout
+  title="Rubber Soles Guide"
+  description="Complete guide to rubber soles in footwear: outsole types, traction patterns, durability ratings, and slip resistance. Learn how to select the right rubber sole for your application."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Rubber Soles', url: '/encyclopedia/materials/rubber-soles/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Rubber Soles',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/rubber-soles/', active: true },
+        { label: 'Outsole Types', href: '/encyclopedia/materials/rubber-soles/outsole-types/' },
+        { label: 'Traction Patterns', href: '/encyclopedia/materials/rubber-soles/traction/' },
+        { label: 'Durability', href: '/encyclopedia/materials/rubber-soles/durability/' },
+        { label: 'Slip Resistance', href: '/encyclopedia/materials/rubber-soles/slip-resistance/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'EVA Midsoles', href: '/encyclopedia/materials/eva-midsoles/' },
+        { label: 'TPU Materials', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Manufacturing', href: '/encyclopedia/manufacturing/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Rubber Soles Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about rubber soles in footwear: from outsole materials and traction patterns to durability ratings and slip resistance standards.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Rubber Shoe Soles"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Rubber Soles</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Rubber soles are fundamental components of most footwear, providing the critical interface between the shoe and the ground. Beyond basic traction, rubber soles contribute to comfort, durability, shock absorption, and overall shoe performance. The right rubber sole can enhance the wearer's experience while the wrong choice can lead to premature wear, safety issues, or customer complaints.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern footwear uses various rubber compounds and synthetic alternatives, each with distinct properties suited for different applications. Understanding these materials helps footwear professionals make informed decisions during design and sourcing.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Natural Rubber</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Natural rubber, derived from the latex of rubber trees, offers excellent elasticity, tear resistance, and grip on various surfaces. It provides superior traction, particularly on dry surfaces, and offers good flexibility across temperature ranges. Natural rubber is commonly used in premium footwear outsoles and specialized applications where grip is critical.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      However, natural rubber has limitations including susceptibility to degradation from ozone, UV exposure, and petroleum-based products. It also tends to be heavier than synthetic alternatives and may harden in very cold conditions.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Synthetic Rubber Compounds</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Styrene-Butadiene Rubber (SBR):</strong> The most common general-purpose rubber, SBR offers good abrasion resistance and consistent quality at an affordable price. It's widely used in casual and work footwear outsoles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polybutadiene Rubber (BR):</strong> Known for excellent wear resistance and low-temperature flexibility, BR is often blended with other rubber types to improve overall performance. It's commonly used in athletic shoe outsoles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nitrile Butadiene Rubber (NBR):</strong> Offers excellent oil and fuel resistance, making it suitable for industrial and work footwear applications where exposure to petroleum products is a concern.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ethylene Propylene Diene Monomer (EPDM):</strong> Excellent resistance to heat, ozone, and weathering, EPDM is used in applications where durability in harsh conditions is required.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Thermoplastic Rubber (TPR)</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      TPR is a compound that combines the properties of rubber with the processing advantages of plastics. It offers good grip, adequate durability, and can be injection molded efficiently. TPR outsoles are common in casual and fashion footwear, particularly at lower price points where cost efficiency is prioritized.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Traction Patterns</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Outsole tread patterns significantly impact traction on different surfaces. Herringbone patterns provide excellent grip on smooth surfaces and are common in athletic footwear. Lug patterns with deep, widely-spaced treads offer better performance on uneven terrain. Multi-directional patterns provide versatile traction for varied conditions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The depth and spacing of tread elements affect both traction and debris shedding. Self-cleaning patterns that shed mud and debris are essential for outdoor and work footwear. Smooth outsoles may offer better traction on wet polished surfaces where deep treads can create hydroplaning.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Slip Resistance Standards</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Slip resistance is critical for work and safety footwear. Testing standards include SATRA TM144 and EN ISO 13287, which measure coefficient of friction on various surfaces including wet ceramic and steel. OSHA requirements in the United States and similar regulations elsewhere mandate slip-resistant footwear in certain workplace settings.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing footwear with rubber outsoles from China, specify the rubber compound, hardness (measured in Shore A), and performance requirements. Request test reports for abrasion resistance (DIN or NBS methods), tear strength, and any required slip resistance certifications for your target markets.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Sample testing is essential for rubber soles. Evaluate consistency across samples, proper bonding to uppers, and performance after simulated wear. For safety footwear, verify third-party testing for slip resistance and other required standards.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌳</div>
+      <h3 class="font-semibold text-lg mb-2">Natural Rubber</h3>
+      <p class="text-neutral-600 text-sm">
+        Premium grip and elasticity from natural latex sources.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚗️</div>
+      <h3 class="font-semibold text-lg mb-2">SBR Rubber</h3>
+      <p class="text-neutral-600 text-sm">
+        General-purpose synthetic rubber for everyday footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔧</div>
+      <h3 class="font-semibold text-lg mb-2">TPR</h3>
+      <p class="text-neutral-600 text-sm">
+        Thermoplastic rubber for efficient manufacturing.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-lg mb-2">NBR Rubber</h3>
+      <p class="text-neutral-600 text-sm">
+        Oil-resistant rubber for industrial applications.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

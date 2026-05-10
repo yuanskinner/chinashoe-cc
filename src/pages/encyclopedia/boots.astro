@@ -1,0 +1,217 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Ankle Boots',
+    description: 'Versatile short boots: from dress boots to combat styles.',
+    image: 'https://images.unsplash.com/photo-1542840410-8e6f3e5c5c4a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/boots/ankle-boots/',
+  },
+  {
+    title: 'Chelsea Boots',
+    description: 'The slip-on classic with elastic side panels and history.',
+    image: 'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400&h=300&fit=crop',
+    href: '/encyclopedia/boots/chelsea/',
+  },
+  {
+    title: 'Combat Boots',
+    description: 'Military-inspired boots: from tactical origins to fashion statements.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/boots/combat/',
+  },
+  {
+    title: 'Riding Boots',
+    description: 'Equestrian-inspired footwear: knee-high boots for style and function.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/boots/riding/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Dress Shoes', href: '/encyclopedia/dress-shoes/', count: 124 },
+  { name: 'Safety Shoes', href: '/encyclopedia/safety-shoes/', count: 67 },
+  { name: 'Sandals', href: '/encyclopedia/sandals/', count: 52 },
+];
+---
+
+<PageLayout
+  title="Boots Guide"
+  description="Complete guide to boots: from ankle boots to knee-high riding boots. Learn about boot styles, construction methods, and how to choose the right boots for any occasion."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Boots', url: '/encyclopedia/boots/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Boots',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/boots/', active: true },
+        { label: 'Ankle Boots', href: '/encyclopedia/boots/ankle-boots/' },
+        { label: 'Chelsea Boots', href: '/encyclopedia/boots/chelsea/' },
+        { label: 'Combat Boots', href: '/encyclopedia/boots/combat/' },
+        { label: 'Riding Boots', href: '/encyclopedia/boots/riding/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'Dress Shoes', href: '/encyclopedia/dress-shoes/' },
+        { label: 'Safety Shoes', href: '/encyclopedia/safety-shoes/' },
+        { label: 'Sandals', href: '/encyclopedia/sandals/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Versatile Footwear</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Boots Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about boots: from casual ankle boots to formal dress boots. Explore styles, construction methods, and styling guidelines for this versatile footwear category.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542840410-8e6f3e5c5c4a?w=1200&h=400&fit=crop"
+      alt="Collection of Boots"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Boots</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Boots are footwear that covers at least the ankle and extends up the leg, providing protection, support, and style for various activities and occasions. From practical work boots designed for demanding environments to fashion-forward styles that define seasonal trends, boots represent one of the most versatile categories in footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The history of boots dates back thousands of years, with early examples found in ancient Egyptian and Roman civilizations. Throughout history, boots have served both functional and symbolic purposes, representing everything from military rank to fashion status. Today, boots remain essential in both utilitarian and fashion contexts.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Boot Categories</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ankle Boots:</strong> These boots cover only the ankle, making them versatile and easy to style with various outfits. Ankle boots range from casual styles with flat soles to dressy options with elevated heels. They pair well with jeans, skirts, and dresses of various lengths.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Chelsea Boots:</strong> Characterized by their elastic side panels and pull tabs, Chelsea boots originated in Victorian England. Their slip-on design and clean silhouette make them versatile enough for both casual and formal occasions. Chelsea boots typically feature a low heel and may be made from leather or suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Combat Boots:</strong> Originally designed for military use, combat boots feature rugged construction, thick soles, and often lace-up designs that extend high on the ankle. In fashion, combat boots have become iconic style statements, appearing in various subcultures from punk to high fashion.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Riding Boots:</strong> Inspired by equestrian footwear, riding boots extend to the knee or just below and feature a low heel and rounded toe. They're designed to work with horse riding but have become popular fashion items that pair well with skinny jeans and dresses.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Work and Safety Boots</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Work boots are designed for industrial and construction environments, featuring reinforced toe caps (steel, composite, or alloy), slip-resistant soles, and often electrical hazard protection. Safety boots must meet specific standards such as ASTM F2413 in the United States or EN ISO 20345 in Europe.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern work boots incorporate advanced materials and technologies, including lightweight composite toe caps, moisture-wicking linings, and ergonomic cushioning systems. Despite their utilitarian origins, work boots have influenced fashion trends, with workwear aesthetics becoming increasingly popular.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Boots may be constructed using various methods that affect their durability, water resistance, and repairability. Goodyear welt construction offers the best longevity and allows for resoling, while cemented construction provides excellent aesthetics and comfort. Direct attach and injection molding methods are common in work boots for superior water resistance.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Materials</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Leather remains the traditional material for quality boots, offering durability, water resistance, and the ability to develop a beautiful patina over time. Suede provides a softer, more casual appearance. Modern synthetic materials offer consistent quality and easier maintenance at lower price points.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China produces boots across all quality segments, from budget work boots to premium leather styles. Key manufacturing regions include Guangdong (especially Dongguan) for fashion boots and casual styles, and various regions for safety and work boots. When sourcing boots from China, verify compliance with relevant safety standards for your target market.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality boot construction requires attention to details including heel attachment, sole bonding, seam quality, and lining materials. Request samples to evaluate construction quality and request certification documentation for safety boots. Consider the break-in period and overall comfort when evaluating fashion boots.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🦶</div>
+      <h3 class="font-semibold text-lg mb-2">Ankle Boots</h3>
+      <p class="text-neutral-600 text-sm">
+        Short and versatile boots perfect for transitional seasons.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Chelsea Boots</h3>
+      <p class="text-neutral-600 text-sm">
+        Classic slip-on boots with elastic side panels.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎖️</div>
+      <h3 class="font-semibold text-lg mb-2">Combat Boots</h3>
+      <p class="text-neutral-600 text-sm">
+        Rugged lace-up boots from military origins to fashion icons.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🐴</div>
+      <h3 class="font-semibold text-lg mb-2">Riding Boots</h3>
+      <p class="text-neutral-600 text-sm">
+        Knee-high equestrian-inspired boots for style and function.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

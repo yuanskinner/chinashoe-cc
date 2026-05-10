@@ -1,0 +1,234 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Adhesive Selection',
+    description: 'Choosing the right industrial adhesives for cemented footwear construction.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/adhesives/',
+  },
+  {
+    title: 'Surface Preparation',
+    description: 'Proper upper and sole preparation for optimal adhesive bonding.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/preparation/',
+  },
+  {
+    title: 'Activation and Pressing',
+    description: 'Heat activation and pressing processes for strong bonds.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/activation/',
+  },
+  {
+    title: 'Quality Testing',
+    description: 'Bond strength testing and quality control procedures.',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/testing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/', count: 45 },
+  { name: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/', count: 25 },
+  { name: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/', count: 28 },
+];
+---
+
+<PageLayout
+  title="Cemented Construction Guide"
+  description="Complete guide to cemented footwear construction: the adhesive bonding method used in most modern shoes. Learn about the process, quality control, and how cemented shoes compare to other construction methods."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Manufacturing', url: '/encyclopedia/manufacturing/' },
+    { name: 'Cemented', url: '/encyclopedia/manufacturing/cemented/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Cemented Construction',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/manufacturing/cemented/', active: true },
+        { label: 'Adhesive Selection', href: '/encyclopedia/manufacturing/cemented/adhesives/' },
+        { label: 'Surface Preparation', href: '/encyclopedia/manufacturing/cemented/preparation/' },
+        { label: 'Activation & Pressing', href: '/encyclopedia/manufacturing/cemented/activation/' },
+        { label: 'Quality Testing', href: '/encyclopedia/manufacturing/cemented/testing/' },
+      ],
+    },
+    {
+      title: 'Other Methods',
+      links: [
+        { label: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/' },
+        { label: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/' },
+        { label: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Manufacturing Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Cemented Construction Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about cemented footwear construction: the adhesive bonding method used in most modern athletic and casual shoes. Learn about the process and quality factors.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Modern Athletic Shoe Construction"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Cemented Construction</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Cemented construction, also known as adhesive construction or stuck-on construction, is the most common method for joining shoe uppers to soles in modern footwear manufacturing. This method uses industrial adhesives to bond the upper, midsole, and outsole together, creating a flexible, lightweight, and cost-effective shoe.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      While cemented construction doesn't offer the resolability of Goodyear welt or Blake stitch methods, it enables modern athletic shoe designs that would be impossible with traditional construction. The method is particularly suited to shoes with complex sole geometries, integrated cushioning systems, and performance-focused designs.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Cementing Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Preparation:</strong> The bonding surfaces must be properly prepared to ensure strong adhesion. This typically involves roughening the surfaces, removing dust and contaminants, and ensuring appropriate moisture content. For leather, this may include cleaning and sometimes applying a primer.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Adhesive Application:</strong> Industrial adhesives are applied to both the upper lasting margin and the sole surface. Common adhesive systems include polyurethane (PU) adhesives, polychloroprene (CR) adhesives, and hot melt adhesives. Application must be even and thorough, covering the entire bonding surface.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flash-Off Time:</strong> After adhesive application, a flash-off period allows solvents to evaporate and the adhesive to reach the proper viscosity for bonding. This time must be carefully controlled—too short results in solvent entrapment; too long allows the adhesive to skin over.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heat Activation:</strong> Many modern adhesives require heat activation before bonding. The adhesive-coated surfaces are heated, typically to 60-80°C, which activates the adhesive and prepares it for bonding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pressing:</strong> The heated surfaces are brought together under pressure, typically using pressing machines that ensure uniform contact across the entire bonding surface. Pressure must be sufficient to ensure contact but not so high as to squeeze out all adhesive.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Adhesive Types</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polychloroprene (Neoprene):</strong> Traditional choice for shoe cementing, offering excellent initial grab and good heat resistance. Requires solvent-based application and careful handling.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polyurethane (PU):</strong> Water-based options available, offering good bond strength and environmental compliance. Common in European manufacturing due to regulatory pressures.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hot Melt Adhesives:</strong> 100% solid materials that melt when heated and solidify on cooling. Offer fast processing and no solvent concerns but require precise temperature control.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Quality Factors</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Bond strength depends on proper surface preparation, appropriate adhesive selection, correct flash-off timing, proper heat activation, and adequate pressing pressure. Failure in any step can lead to delamination—the most common quality issue in cemented footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental factors including temperature and humidity can affect adhesive performance. Quality manufacturers maintain controlled production environments and adjust processes seasonally as needed.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Advantages and Limitations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Advantages:</strong> Cemented construction enables complex sole designs, lightweight construction, cost efficiency at scale, design flexibility, and compatibility with modern materials like EVA foam and mesh uppers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Limitations:</strong> Cemented shoes cannot be resoled in the traditional sense. Bond strength can degrade over time with exposure to flexing, heat, and moisture. Some adhesives may fail with extended exposure to water.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing cemented footwear from China, quality control is critical given the adhesive-dependent nature of the construction. Evaluate the manufacturer's adhesive selection, surface preparation processes, and quality testing procedures.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Request pull-off tests demonstrating bond strength specifications. Evaluate sample durability through flex testing and exposure to heat and moisture. Understand the manufacturer's environmental controls and seasonal process adjustments.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Design Flexibility</h3>
+      <p class="text-neutral-600 text-sm">
+        Enables complex geometries impossible with traditional methods.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🪶</div>
+      <h3 class="font-semibold text-lg mb-2">Lightweight</h3>
+      <p class="text-neutral-600 text-sm">
+        No heavy welt or insole boards add unnecessary weight.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Cost Efficient</h3>
+      <p class="text-neutral-600 text-sm">
+        Economical at scale with efficient manufacturing processes.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-lg mb-2">Fast Production</h3>
+      <p class="text-neutral-600 text-sm">
+        Faster manufacturing cycle compared to welted methods.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

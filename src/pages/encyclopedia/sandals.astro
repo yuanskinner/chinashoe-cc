@@ -1,0 +1,219 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Flip Flops',
+    description: 'The simplest sandal design: history, materials, and appropriate use.',
+    image: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=300&fit=crop',
+    href: '/encyclopedia/sandals/flip-flops/',
+  },
+  {
+    title: 'Gladiator Sandals',
+    description: 'Ancient Rome meets modern fashion: the enduring appeal of gladiator styles.',
+    image: 'https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=300&fit=crop',
+    href: '/encyclopedia/sandals/gladiator/',
+  },
+  {
+    title: 'Slide Sandals',
+    description: 'The easy slip-on design: from poolside to street style.',
+    image: 'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400&h=300&fit=crop',
+    href: '/encyclopedia/sandals/slides/',
+  },
+  {
+    title: 'Sport Sandals',
+    description: 'Water-friendly sandals with adjustable straps for outdoor activities.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/sandals/sport/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'High Heels', href: '/encyclopedia/high-heels/', count: 88 },
+  { name: 'Casual Shoes', href: '/encyclopedia/casual-shoes/', count: 78 },
+  { name: 'Athletic Shoes', href: '/encyclopedia/athletic/', count: 120 },
+];
+---
+
+<PageLayout
+  title="Sandals Guide"
+  description="Complete guide to sandals: flip flops, gladiator sandals, slides, and sport sandals. Learn about styles, materials, and how to choose the right sandals for any occasion."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Sandals', url: '/encyclopedia/sandals/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Sandals',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/sandals/', active: true },
+        { label: 'Flip Flops', href: '/encyclopedia/sandals/flip-flops/' },
+        { label: 'Gladiator Sandals', href: '/encyclopedia/sandals/gladiator/' },
+        { label: 'Slide Sandals', href: '/encyclopedia/sandals/slides/' },
+        { label: 'Sport Sandals', href: '/encyclopedia/sandals/sport/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'High Heels', href: '/encyclopedia/high-heels/' },
+        { label: 'Casual Shoes', href: '/encyclopedia/casual-shoes/' },
+        { label: 'Athletic Shoes', href: '/encyclopedia/athletic/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Casual & Outdoor</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Sandals Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about sandals: from simple flip flops to elegant gladiator styles. Explore different sandal types, materials, and appropriate occasions for this open-toe footwear.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1603487742131-4160ec999306?w=1200&h=400&fit=crop"
+      alt="Stylish Sandals"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Sandals</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Sandals are open-toe footwear characterized by a sole held onto the foot by straps that pass over the instep and around the ankle. As one of the oldest forms of footwear, sandals have been worn by cultures across the globe for thousands of years. Today, sandals remain popular for their comfort, breathability, and versatility.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern sandals range from simple flip flops designed for casual beach wear to elegant styles appropriate for formal occasions. The open design makes sandals ideal for warm weather, water activities, and environments where breathability is valued. Different construction methods and materials create sandals suited for various purposes.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Types of Sandals</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flip Flops:</strong> The simplest sandal design consists of a flat sole with a Y-shaped strap that passes between the big toe and second toe and along both sides of the foot. Flip flops are designed for casual, short-term wear and are commonly worn at beaches, pools, and in casual settings. Quality varies widely, from basic disposable styles to premium leather flip flops.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Gladiator Sandals:</strong> Characterized by multiple straps that extend up the leg, gladiator sandals draw inspiration from ancient Roman and Greek footwear. Modern interpretations range from knee-high styles to ankle-strap designs, offering options for both casual and dressy occasions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Slide Sandals:</strong> These feature a single wide strap across the top of the foot, making them easy to slip on and off. Slides have evolved from poolside essentials to fashion-forward styles, with designers creating versions featuring logos, fur, and other embellishments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sport Sandals:</strong> Designed for outdoor activities, sport sandals feature adjustable straps, contoured footbeds, and durable outsoles. They're suitable for hiking, water sports, and other active pursuits where protection and support are needed while maintaining breathability.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Materials</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Leather:</strong> Premium sandals often feature leather straps and footbeds, offering comfort that improves over time as the leather conforms to the foot. Leather sandals are appropriate for both casual and dressy occasions, depending on the style.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rubber/EVA:</strong> Most casual and sport sandals are made from rubber compounds, which offer excellent water resistance, durability, and affordability. Modern formulations provide cushioning and support comparable to more expensive materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Textiles:</strong> Fabric straps offer lightweight comfort and endless design possibilities. Canvas, webbing, and woven materials are common in casual sandals, while decorative fabrics allow for fashion-forward styles.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Sandal construction varies based on the type and quality level. Basic flip flops typically feature straps glued directly to the sole. Higher-quality sandals may use stitched constructions where straps are attached through the sole for improved durability. Some premium sandals feature leather footbeds that can be resoled.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For sport sandals, contoured footbeds with arch support provide comfort during extended wear. Injection molding creates seamless constructions that are durable and water-resistant.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is a major producer of sandals across all quality segments, from basic flip flops to premium leather styles. Key considerations when sourcing sandals include material quality, particularly for leather and foam components, and construction durability for the intended use case.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For casual and sport sandals, verify the quality of injection molding and strap attachment methods. For premium leather sandals, assess the quality of leather, stitching, and finishing. Request samples that have been worn and cleaned to evaluate material durability.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌊</div>
+      <h3 class="font-semibold text-lg mb-2">Flip Flops</h3>
+      <p class="text-neutral-600 text-sm">
+        Simple Y-strap design for casual beach and poolside wear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚔️</div>
+      <h3 class="font-semibold text-lg mb-2">Gladiator</h3>
+      <p class="text-neutral-600 text-sm">
+        Multi-strap designs inspired by ancient Roman footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">➡️</div>
+      <h3 class="font-semibold text-lg mb-2">Slides</h3>
+      <p class="text-neutral-600 text-sm">
+        Easy slip-on design from casual to fashion-forward styles.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏃</div>
+      <h3 class="font-semibold text-lg mb-2">Sport Sandals</h3>
+      <p class="text-neutral-600 text-sm">
+        Technical designs for outdoor activities and water sports.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

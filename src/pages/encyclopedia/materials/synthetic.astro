@@ -1,0 +1,224 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'PU Leather',
+    description: 'Polyurethane leather: affordable alternative with versatile applications.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pu-leather/',
+  },
+  {
+    title: 'Microfiber',
+    description: 'Ultra-fine fiber technology for premium synthetic leather alternatives.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/microfiber/',
+  },
+  {
+    title: 'Mesh and Knit',
+    description: 'Breathable performance materials for athletic footwear.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/mesh-knit/',
+  },
+  {
+    title: 'TPU Materials',
+    description: 'Thermoplastic polyurethane: versatility in soles and structural elements.',
+    image: 'https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/tpu/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Leather', href: '/encyclopedia/materials/leather/', count: 55 },
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/', count: 38 },
+  { name: 'Textiles', href: '/encyclopedia/materials/textiles/', count: 42 },
+];
+---
+
+<PageLayout
+  title="Synthetic Materials Guide"
+  description="Complete guide to synthetic materials in footwear: PU leather, microfiber, mesh, knit textiles, and TPU. Learn about synthetic alternatives to traditional materials."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Synthetic', url: '/encyclopedia/materials/synthetic/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Synthetic Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/synthetic/', active: true },
+        { label: 'PU Leather', href: '/encyclopedia/materials/pu-leather/' },
+        { label: 'Microfiber', href: '/encyclopedia/materials/microfiber/' },
+        { label: 'Mesh & Knit', href: '/encyclopedia/materials/mesh-knit/' },
+        { label: 'TPU Materials', href: '/encyclopedia/materials/tpu/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Leather', href: '/encyclopedia/materials/leather/' },
+        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+        { label: 'Textiles', href: '/encyclopedia/materials/textiles/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Synthetic Materials Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about synthetic materials in footwear: from PU leather to microfiber, mesh, and TPU. Understanding modern alternatives to traditional materials.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=1200&h=400&fit=crop"
+      alt="Modern Synthetic Materials"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Synthetic Materials</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Synthetic materials have become essential in modern footwear manufacturing, offering consistent quality, versatile design possibilities, and often more affordable price points than traditional materials like leather. These materials range from leather alternatives like PU and microfiber to performance textiles like mesh and knit materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear industry's adoption of synthetic materials has been driven by factors including cost efficiency, design flexibility, consistent quality, and sometimes superior performance characteristics for specific applications. Modern synthetics can closely mimic natural materials while offering unique benefits.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Synthetic Leather Alternatives</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PU Leather (Polyurethane Leather):</strong> PU leather consists of a backing layer (often polyester or cotton) coated with a polyurethane surface layer. It's available in various quality levels, from basic budget options to premium PU that closely resembles genuine leather. Quality PU offers good durability, water resistance, and easier maintenance than genuine leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PVC Leather (Polyvinyl Chloride):</strong> Similar to PU leather but using PVC as the surface layer, PVC leather offers excellent water resistance and durability at lower cost. However, it's generally considered less premium than PU leather due to its less natural feel and environmental concerns.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Microfiber Leather:</strong> Made from ultra-fine synthetic fibers that are entangled and impregnated with polyurethane, microfiber leather offers superior quality to standard PU leather. It has a structure similar to natural leather with excellent breathability, durability, and a hand feel that closely resembles genuine leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Recycled Leather:</strong> Made from leather scraps and fibers combined with polyurethane binders, recycled leather offers an eco-friendlier option with good durability. It's commonly used in linings and insoles.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Performance Textiles</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Mesh:</strong> Woven or knitted synthetic fabrics with open structures that provide excellent breathability and lightweight performance. Mesh is common in athletic footwear uppers, particularly running shoes and cross-trainers, where airflow is prioritized.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>3D Knit:</strong> Advanced knitting technology creates seamless, one-piece uppers that conform precisely to foot contours. 3D knit materials offer excellent breathability, reduced waste in manufacturing, and customizable support zones.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flywire/Monomesh:</strong> High-strength cables or thin mesh panels integrated into shoe uppers to provide targeted support while maintaining minimal weight. Originally developed for athletic shoes, these technologies are now used across footwear categories.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Thermoplastic Materials</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>TPU (Thermoplastic Polyurethane):</strong> TPU is used extensively in footwear for outsoles, midsole accents, and structural elements. It offers excellent abrasion resistance, flexibility across temperature ranges, and can be injection molded into complex shapes. TPU film can also be heat-bonded to uppers for design accents and reinforcement.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>EVA (Ethylene-Vinyl Acetate):</strong> While technically a foam material rather than a leather alternative, EVA is crucial in footwear midsoles for cushioning. It offers lightweight, flexible cushioning that is particularly effective for athletic footwear.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China produces a wide range of synthetic materials for footwear, from basic PVC to premium microfiber. When sourcing synthetic footwear from China, understand the specific material grades being used and how they compare to alternatives in your target market.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality indicators for synthetic materials include consistent thickness, uniform surface texture, appropriate flexibility, and durability specifications appropriate for the intended use. Request material specifications including abrasion resistance ratings, tensile strength, and any relevant environmental certifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental and safety regulations vary by market. Ensure your Chinese manufacturer can provide documentation for REACH compliance (Europe), CA Prop 65 compliance (California), or other relevant regulations for your target markets.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">PU Leather</h3>
+      <p class="text-neutral-600 text-sm">
+        Versatile polyurethane coating for leather-like aesthetics.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧵</div>
+      <h3 class="font-semibold text-lg mb-2">Microfiber</h3>
+      <p class="text-neutral-600 text-sm">
+        Ultra-fine fibers for premium synthetic leather alternatives.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🕸️</div>
+      <h3 class="font-semibold text-lg mb-2">Mesh & Knit</h3>
+      <p class="text-neutral-600 text-sm">
+        Breathable performance textiles for athletic footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💎</div>
+      <h3 class="font-semibold text-lg mb-2">TPU</h3>
+      <p class="text-neutral-600 text-sm">
+        Thermoplastic for outsoles and structural components.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

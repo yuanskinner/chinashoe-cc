@@ -1,0 +1,226 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'EVA vs PU Midsoles',
+    description: 'Comparing cushioning materials: weight, durability, and performance.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/eva-midsoles/eva-vs-pu/',
+  },
+  {
+    title: 'Cushioning Technologies',
+    description: 'Air, gel, and foam systems: modern midsole cushioning innovations.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/eva-midsoles/technologies/',
+  },
+  {
+    title: 'Density and Hardness',
+    description: 'Understanding midsole specifications: Shore C and compression ratings.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/eva-midsoles/specifications/',
+  },
+  {
+    title: 'EVA Compression Molding',
+    description: 'The process of creating custom EVA midsole shapes and densities.',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/eva-midsoles/molding/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/', count: 38 },
+  { name: 'Insoles', href: '/encyclopedia/materials/insoles/', count: 28 },
+  { name: 'Running Shoes', href: '/encyclopedia/running-shoes/', count: 156 },
+];
+---
+
+<PageLayout
+  title="EVA Midsoles Guide"
+  description="Complete guide to EVA midsoles in footwear: cushioning properties, density specifications, and comparison with other midsole materials. Learn about EVA technology for athletic footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'EVA Midsoles', url: '/encyclopedia/materials/eva-midsoles/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'EVA Midsoles',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/eva-midsoles/', active: true },
+        { label: 'EVA vs PU', href: '/encyclopedia/materials/eva-midsoles/eva-vs-pu/' },
+        { label: 'Cushioning Tech', href: '/encyclopedia/materials/eva-midsoles/technologies/' },
+        { label: 'Specifications', href: '/encyclopedia/materials/eva-midsoles/specifications/' },
+        { label: 'Molding Process', href: '/encyclopedia/materials/eva-midsoles/molding/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+        { label: 'Insoles', href: '/encyclopedia/materials/insoles/' },
+        { label: 'Running Shoes', href: '/encyclopedia/running-shoes/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      EVA Midsoles Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about EVA midsoles: cushioning technology, density specifications, manufacturing processes, and comparison with other midsole materials.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="EVA Midsole Technology"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding EVA Midsoles</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      EVA (Ethylene-Vinyl Acetate) is a closed-cell foam material that has become the most widely used midsole material in athletic footwear. Its combination of lightweight cushioning, cost efficiency, and versatile processing capabilities makes it ideal for everything from entry-level running shoes to premium performance footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      EVA midsoles absorb impact forces during walking and running, protecting joints from repetitive stress while providing energy return for efficient movement. The material's properties can be tuned through formulation and processing to achieve specific performance characteristics.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">EVA Properties and Performance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Lightweight:</strong> EVA is significantly lighter than polyurethane and most other cushioning materials, with densities ranging from 60 to 150 kg/m³. This weight advantage is crucial for athletic footwear where every gram affects performance and comfort during extended wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cushioning:</strong> EVA provides excellent shock absorption through its cellular structure, which compresses under load and returns to its original shape. The degree of cushioning depends on the foam's density and hardness, with softer foams offering more cushioning but potentially less durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flexibility:</strong> EVA remains flexible across a wide temperature range, maintaining consistent performance in cold conditions where some materials become stiff. This flexibility contributes to natural foot motion and comfortable stride.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Processability:</strong> EVA can be injection molded, compression molded, or direct-injected onto uppers, allowing for complex geometries and integrated design features. This versatility supports innovative midsole designs.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">EVA Specifications</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Density:</strong> Measured in kilograms per cubic meter (kg/m³), EVA density typically ranges from 60 kg/m³ for ultra-lightweight foams to 150 kg/m³ for firmer, more durable applications. Lower density means lighter weight but generally reduced durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hardness:</strong> EVA hardness is measured on the Asker C or Shore C scale, with typical athletic midsole EVA ranging from 35 to 60 Shore C. Softer foams provide more cushioning but may compress over time; firmer foams offer better support and durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Compression Set:</strong> This measures how much an EVA foam permanently deforms after repeated compression. Lower compression set values indicate better durability and longer-lasting cushioning performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Energy Return:</strong> The percentage of impact energy returned to the wearer. Standard EVA typically provides 35-45% energy return, while premium formulations and specialized processing can achieve higher values.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">EVA vs Polyurethane (PU)</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      While EVA dominates athletic footwear midsoles, polyurethane remains popular for dress shoes, work boots, and applications where durability is paramount. PU offers higher density and better resistance to compression set, but at significantly higher weight. PU can also be directly-injected onto leather uppers for seamless construction.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Premium EVA Technologies</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Major athletic footwear brands have developed proprietary EVA formulations that improve upon standard EVA performance. These include expanded EVA (eEVA) using gas-blown processes for reduced weight, engineered EVA compounds with improved durability, and hybrid materials combining EVA with other polymers for enhanced properties.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing footwear with EVA midsoles from China, specify the required density, hardness, and performance characteristics. Request technical data sheets from material suppliers to verify quality. Evaluate midsole durability through testing protocols including repeated compression cycles and accelerated aging.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Understand the manufacturing process used: compression molding, injection molding, or direct injection. Each process affects the final properties and cost. Request production samples that have been worn and tested to evaluate real-world performance before committing to bulk orders.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🪶</div>
+      <h3 class="font-semibold text-lg mb-2">Ultra-Light EVA</h3>
+      <p class="text-neutral-600 text-sm">
+        Densities below 80 kg/m³ for featherweight cushioning.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚖️</div>
+      <h3 class="font-semibold text-lg mb-2">Standard EVA</h3>
+      <p class="text-neutral-600 text-sm">
+        Balanced performance for everyday athletic footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">High-Density EVA</h3>
+      <p class="text-neutral-600 text-sm">
+        Enhanced durability for work and hiking footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🚀</div>
+      <h3 class="font-semibold text-lg mb-2">Premium eEVA</h3>
+      <p class="text-neutral-600 text-sm">
+        Expanded EVA with superior energy return properties.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

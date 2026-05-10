@@ -1,0 +1,233 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Oxford vs Derby',
+    description: 'Understanding the difference between these two classic formal shoe constructions.',
+    image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/oxford-vs-derby/',
+  },
+  {
+    title: 'Leather Types Guide',
+    description: 'Full grain, top grain, and corrected grain leather: which is right for your dress shoes?',
+    image: 'https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/leather-types/',
+  },
+  {
+    title: 'Goodyear Welt Construction',
+    description: 'The gold standard in dress shoe construction: durability, repairability, and comfort.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/goodyear-welt/',
+  },
+  {
+    title: 'Sole Options',
+    description: 'Leather soles, rubber soles, and hybrid options for dress shoes.',
+    image: 'https://images.unsplash.com/photo-1603251579711-ba1b6b5ed07e?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/sole-options/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Loafers', href: '/encyclopedia/loafers/', count: 82 },
+  { name: 'Boots', href: '/encyclopedia/boots/', count: 95 },
+  { name: 'Leather Goods', href: '/encyclopedia/leather-goods/', count: 45 },
+];
+---
+
+<PageLayout
+  title="Dress Shoes Guide"
+  description="Complete guide to dress shoes: Oxford and Derby constructions, leather types, Goodyear welt construction, and how to choose the perfect formal footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Dress Shoes', url: '/encyclopedia/dress-shoes/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Dress Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/dress-shoes/', active: true },
+        { label: 'Oxford vs Derby', href: '/encyclopedia/dress-shoes/oxford-vs-derby/' },
+        { label: 'Leather Types', href: '/encyclopedia/dress-shoes/leather-types/' },
+        { label: 'Construction', href: '/encyclopedia/dress-shoes/goodyear-welt/' },
+        { label: 'Sole Options', href: '/encyclopedia/dress-shoes/sole-options/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'Loafers', href: '/encyclopedia/loafers/' },
+        { label: 'Boots', href: '/encyclopedia/boots/' },
+        { label: 'Leather Goods', href: '/encyclopedia/leather-goods/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Formal & Dress</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Dress Shoes Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about dress shoes: from classic Oxford construction to Goodyear welt craftsmanship. Learn about leather types, construction methods, and styling guidelines.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&h=400&fit=crop"
+      alt="Classic Leather Dress Shoes"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Dress Shoes</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Dress shoes represent the pinnacle of men's footwear craftsmanship, combining traditional construction techniques with premium materials to create footwear suitable for formal occasions, professional settings, and sophisticated casual wear. Unlike casual or athletic footwear, dress shoes are defined by their refined aesthetics, quality materials, and attention to detail in construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The dress shoe market encompasses a wide range of styles from classic cap-toe Oxfords to modern chunky-sole derbies, but all share common characteristics that distinguish them from more casual footwear: closed lacing systems, premium leather uppers, leather or leather-like soles, and refined finishing details.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Oxford vs Derby: The Fundamental Difference</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The distinction between Oxford and Derby shoes is one of the most important concepts in dress shoe terminology. These two constructions differ in how the vamp (the front part of the shoe upper) is attached to the quarters (the sides and back of the shoe).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Oxford Shoes:</strong> Also known as "closed lacing" shoes, Oxfords feature a vamp that sits on top of the quarters, with the quarters sewn underneath. The lacing system is enclosed, creating a clean, formal appearance. Oxfords are considered the most formal type of dress shoe and are the traditional choice for black tie events and business formal attire.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Derby Shoes:</strong> Also known as "open lacing" shoes, Derbies feature quarters that are sewn on top of the vamp. The lacing system is visible, creating a more casual appearance. While Derbies are less formal than Oxfords, they remain appropriate for business professional settings and can be dressed down for smart casual occasions.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The method by which a dress shoe is constructed significantly impacts its durability, comfort, repairability, and price point. Understanding these construction methods helps buyers make informed decisions when sourcing or purchasing dress shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Goodyear Welt Construction:</strong> This traditional method uses a strip of leather (the welt) that is stitched around the perimeter of the shoe, joining the upper, insole, and outsole together. Goodyear welted shoes can be resoled multiple times, extending their lifespan significantly. They offer excellent support and develop a unique patina over time.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Blake Stitch Construction:</strong> This method stitches the upper directly to the outsole through the insole. Blake stitched shoes are more flexible and can be manufactured at lower price points, but they are more difficult to repair and cannot be resoled as easily as Goodyear welted shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cemented Construction:</strong> Modern dress shoes often use cemented construction, where the upper is glued to the midsole and outsole. While less traditional, cemented dress shoes can offer excellent aesthetics and comfort at various price points.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Leather Types and Quality</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The quality and type of leather used in dress shoes significantly impacts their appearance, comfort, and longevity. Understanding leather grades helps buyers evaluate the value proposition of different dress shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Full Grain Leather:</strong> Made from the entire grain surface, this is the highest quality leather. It retains all natural markings and develops a beautiful patina over time. Full grain leather is the most durable and breathable leather type.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Top Grain Leather:</strong> The top layer of leather with the surface slightly sanded to remove imperfections. It offers good durability and appearance while being more affordable than full grain.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Corrected Grain Leather:</strong> Made from lower-quality hides that have been heavily processed to remove imperfections. Often embossed with artificial grains, corrected grain is less expensive but does not develop patina and may not last as long.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sole Options</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Dress shoe soles range from traditional leather to modern rubber compounds. Leather soles offer classic aesthetics and flexibility but wear faster on wet surfaces. Rubber soles provide better grip and durability while maintaining a dressy appearance when properly designed.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China has a long history of dress shoe manufacturing, particularly in regions like Wenzhou (Zhejiang) and Chengdu (Sichuan). These regions have developed specialized expertise in leather footwear production, from basic cemented construction to more sophisticated Goodyear welt capabilities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing dress shoes from China, key considerations include the manufacturer's experience with Goodyear welt or Blake stitch construction, their leather sourcing capabilities, and their finishing processes. Request samples to evaluate material quality, construction consistency, and overall craftsmanship before committing to production orders.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👞</div>
+      <h3 class="font-semibold text-lg mb-2">Oxford</h3>
+      <p class="text-neutral-600 text-sm">
+        The most formal closed-lacing style for black tie and business formal occasions.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👞</div>
+      <h3 class="font-semibold text-lg mb-2">Derby</h3>
+      <p class="text-neutral-600 text-sm">
+        Versatile open-lacing style suitable for business and smart casual settings.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎩</div>
+      <h3 class="font-semibold text-lg mb-2">Whole Cut</h3>
+      <p class="text-neutral-600 text-sm">
+        Single-piece leather upper for maximum elegance and formal occasions.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Brogue</h3>
+      <p class="text-neutral-600 text-sm">
+        Decorative perforations adding character while maintaining formality.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

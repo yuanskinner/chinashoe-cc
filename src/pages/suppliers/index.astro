@@ -116,6 +116,7 @@ const featuredSuppliers = [
             type="search"
             placeholder="Search by company name, product, or keyword..."
             class="input pl-12"
+            onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
           />
         </div>
       </div>
@@ -129,7 +130,7 @@ const featuredSuppliers = [
     <div class="flex flex-wrap gap-3 mt-4">
       <span class="text-sm text-neutral-600">Popular:</span>
       {['Sports Shoes', 'Leather Shoes', 'Safety Shoes', 'OEM/ODM'].map(tag => (
-        <button class="text-sm px-3 py-1 bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:text-primary-600 transition-colors">
+        <button class="text-sm px-3 py-1 bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:text-primary-600 transition-colors" onclick="alert('Search feature is coming soon! Stay tuned.');">
           {tag}
         </button>
       ))}

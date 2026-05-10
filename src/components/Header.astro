@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <a href="mailto:contact@chinashoe.cc" class="hover:text-primary-300 transition-colors">contact@chinashoe.cc</a>
+          <a href="mailto:Nicole99124@gmail.com" class="hover:text-primary-300 transition-colors">Nicole99124@gmail.com</a>
         </span>
         <span class="flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,6 +109,7 @@ const currentPath = Astro.url.pathname;
               placeholder="Search shoes, suppliers, materials..."
               class="flex-1 border-0 focus:ring-0 text-lg"
               id="search-input"
+              onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
             />
             <button
               type="button"

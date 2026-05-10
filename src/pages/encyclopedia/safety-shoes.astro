@@ -1,0 +1,229 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Steel Toe Cap Standards',
+    description: 'ASTM F2413 and EN ISO 20345: understanding safety boot certifications.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/safety-shoes/standards/',
+  },
+  {
+    title: 'Composite Toe vs Steel Toe',
+    description: 'Comparing toe protection materials: weight, insulation, and safety ratings.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/safety-shoes/toe-types/',
+  },
+  {
+    title: 'Slip-Resistant Outsoles',
+    description: 'Understanding outsole traction ratings and testing standards.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/safety-shoes/slip-resistance/',
+  },
+  {
+    title: 'EH Protection',
+    description: 'Electrical hazard protection: when is it needed and what standards apply?',
+    image: 'https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=300&fit=crop',
+    href: '/encyclopedia/safety-shoes/electrical/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Boots', href: '/encyclopedia/boots/', count: 95 },
+  { name: 'Work Shoes', href: '/encyclopedia/work-shoes/', count: 45 },
+  { name: 'Athletic Shoes', href: '/encyclopedia/athletic/', count: 120 },
+];
+---
+
+<PageLayout
+  title="Safety Shoes Guide"
+  description="Complete guide to safety shoes: steel toe vs composite toe, ASTM and EN standards, slip-resistant outsoles, and how to choose the right protective footwear for your workplace."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Safety Shoes', url: '/encyclopedia/safety-shoes/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Safety Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/safety-shoes/', active: true },
+        { label: 'Safety Standards', href: '/encyclopedia/safety-shoes/standards/' },
+        { label: 'Toe Protection', href: '/encyclopedia/safety-shoes/toe-types/' },
+        { label: 'Slip Resistance', href: '/encyclopedia/safety-shoes/slip-resistance/' },
+        { label: 'Electrical Protection', href: '/encyclopedia/safety-shoes/electrical/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'Boots', href: '/encyclopedia/boots/' },
+        { label: 'Work Shoes', href: '/encyclopedia/work-shoes/' },
+        { label: 'Athletic Footwear', href: '/encyclopedia/athletic/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Industrial & Work</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Safety Shoes Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about safety shoes: protective toe caps, slip-resistant soles, electrical hazard protection, and understanding the safety standards that keep workers protected.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Industrial Safety Boots"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Safety Shoes</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Safety shoes, also known as safety footwear or work boots, are designed to protect feet from workplace hazards that could cause injury. Unlike regular footwear, safety shoes are engineered with specific protective features that meet established safety standards, making them essential equipment in many industrial, construction, and manufacturing environments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Workplace foot injuries remain a significant concern across industries, with common hazards including falling objects, heavy equipment, sharp materials, electrical hazards, and slippery surfaces. Safety shoes are designed to prevent or reduce the severity of these injuries, protecting workers from foot trauma, punctures, burns, and other hazards.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Safety Standards and Certifications</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Safety shoes must meet specific standards to be certified for workplace use. Understanding these standards is crucial for selecting appropriate footwear and ensuring regulatory compliance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>ASTM F2413 (United States):</strong> This standard covers various protective qualities including impact resistance (I/75, I/50), compression resistance (C/75, C/50), metatarsal protection (Mt), puncture resistance (P), and static dissipative (SD) or static resistant (SR) properties. Shoes meeting ASTM F2413 carry specific markings indicating their protective capabilities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>EN ISO 20345 (Europe):</strong> This European standard classifies safety footwear into categories based on protection types. SB (basic requirements), S1 (with closed seat region and antistatic properties), S2 (S1 plus water penetration), and S3 (S2 plus penetration resistance) represent increasing levels of protection.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Toe Protection Types</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Steel Toe Caps:</strong> The traditional choice for toe protection, steel toe caps provide excellent impact resistance and are relatively affordable. They can be cold in winter conditions and may trigger metal detectors in security settings.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Composite Toe Caps:</strong> Made from materials like fiberglass, carbon fiber, or Kevlar, composite toes offer similar protection to steel with several advantages: they're lighter weight, don't conduct cold, and won't trigger metal detectors. However, composite toes typically can't accommodate as much toe room as steel toes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Aluminum Toe Caps:</strong> A newer option that provides toe protection similar to steel but at approximately half the weight. Aluminum toes offer a good balance of protection and comfort.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Additional Protection Features</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Puncture-Resistant Soles:</strong> Metal or non-metallic plates embedded in the sole protect against sharp objects penetrating from below. Essential for construction and manufacturing environments with debris on floors.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Electrical Hazard (EH) Protection:</strong> Insulated soles protect against accidental contact with live electrical circuits. EH-rated footwear should not be worn where static dissipative or conductive properties are required.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Slip-Resistant Outsoles:</strong> Specialized tread patterns and compounds provide traction on wet, oily, or slippery surfaces. Look for outsoles tested to specific slip-resistance standards for your workplace conditions.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Choosing the Right Safety Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Selecting appropriate safety footwear requires understanding your specific workplace hazards and required protection levels. Consider factors including impact hazards, electrical exposure, slip risks, and any specific industry requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Comfort is also important for worker compliance and productivity. Modern safety shoes incorporate ergonomic designs, cushioned footbeds, and lightweight materials to improve all-day comfort without sacrificing protection.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is a major producer of safety footwear, with manufacturers capable of producing shoes meeting various international safety standards. When sourcing safety shoes from China, verify that manufacturers can produce footwear certified to the standards required in your target market.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Request documentation including test reports and certificates for each safety feature. Third-party testing from recognized laboratories provides independent verification of safety compliance. Establish clear specifications for materials, construction methods, and testing requirements.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔩</div>
+      <h3 class="font-semibold text-lg mb-2">Steel Toe</h3>
+      <p class="text-neutral-600 text-sm">
+        Traditional protection against impact and compression hazards.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧪</div>
+      <h3 class="font-semibold text-lg mb-2">Composite Toe</h3>
+      <p class="text-neutral-600 text-sm">
+        Lightweight protection without metal detection concerns.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-lg mb-2">EH Rated</h3>
+      <p class="text-neutral-600 text-sm">
+        Insulation against electrical hazard exposure.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🦶</div>
+      <h3 class="font-semibold text-lg mb-2">Puncture Resistant</h3>
+      <p class="text-neutral-600 text-sm">
+        Protection against sharp objects penetrating the sole.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

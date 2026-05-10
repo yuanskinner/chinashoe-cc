@@ -103,6 +103,7 @@ const popularArticles = [
             type="search"
             placeholder="Search articles, topics, materials..."
             class="input pl-12"
+            onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
           />
         </div>
       </div>
@@ -141,7 +142,7 @@ const popularArticles = [
             </li>
           ))}
         </ul>
-        <a href="#" class="inline-flex items-center text-sm text-primary-600 hover:text-primary-700 mt-4 font-medium">
+        <a href="/encyclopedia/" class="inline-flex items-center text-sm text-primary-600 hover:text-primary-700 mt-4 font-medium">
           View all in {category.name}
           <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

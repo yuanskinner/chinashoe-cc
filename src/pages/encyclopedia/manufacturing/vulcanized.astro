@@ -1,0 +1,234 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Vulcanization Process',
+    description: 'Heat and pressure bonding: the science of vulcanization.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/process/',
+  },
+  {
+    title: 'Molded Soles',
+    description: 'Creating outsoles with integrated traction patterns and colors.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/molded-soles/',
+  },
+  {
+    title: 'Canvas Vulcanized Shoes',
+    description: 'Classic sneakers: the vulcanized canvas shoe tradition.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/canvas/',
+  },
+  {
+    title: 'Quality and Durability',
+    description: 'Why vulcanized construction creates long-lasting footwear.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/quality/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Cemented', href: '/encyclopedia/manufacturing/cemented/', count: 35 },
+  { name: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/', count: 45 },
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/', count: 38 },
+];
+---
+
+<PageLayout
+  title="Vulcanized Construction Guide"
+  description="Complete guide to vulcanized footwear construction: the traditional method for canvas sneakers and molded rubber soles. Learn about the vulcanization process and its advantages."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Manufacturing', url: '/encyclopedia/manufacturing/' },
+    { name: 'Vulcanized', url: '/encyclopedia/manufacturing/vulcanized/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Vulcanized Construction',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/manufacturing/vulcanized/', active: true },
+        { label: 'Process', href: '/encyclopedia/manufacturing/vulcanized/process/' },
+        { label: 'Molded Soles', href: '/encyclopedia/manufacturing/vulcanized/molded-soles/' },
+        { label: 'Canvas Shoes', href: '/encyclopedia/manufacturing/vulcanized/canvas/' },
+        { label: 'Quality', href: '/encyclopedia/manufacturing/vulcanized/quality/' },
+      ],
+    },
+    {
+      title: 'Other Methods',
+      links: [
+        { label: 'Cemented', href: '/encyclopedia/manufacturing/cemented/' },
+        { label: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/' },
+        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Manufacturing Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Vulcanized Construction Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about vulcanized footwear construction: the traditional method used for canvas sneakers and molded rubber soles. Learn about the process and why it creates durable, flexible footwear.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&h=400&fit=crop"
+      alt="Classic Canvas Sneakers"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Vulcanized Construction</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Vulcanized construction is a traditional shoe manufacturing method that uses heat and pressure to bond rubber soles to canvas or leather uppers. Named after Charles Goodyear (the inventor of vulcanized rubber, not to be confused with the Goodyear welt), this method creates exceptionally flexible, durable, and lightweight footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The vulcanization process transforms raw rubber compounds into elastic, durable materials while simultaneously bonding the sole to the upper. This creates a seamless, unified construction where the sole and upper work together as a single unit, providing exceptional flexibility and a characteristic "broken-in" feel from the first wear.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Vulcanization Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Mold Pressing:</strong> The shoe is assembled with the raw rubber sole positioned against the upper. The assembled shoe is placed in a vulcanizing press that applies heat (typically 140-160°C) and pressure for a specific time. This heat cures the rubber while bonding it to the upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Time and Temperature:</strong> The vulcanization parameters must be precisely controlled. Under-vulcanization results in soft, tacky rubber that won't bond properly; over-vulcanization causes the rubber to become hard and brittle. Quality manufacturers carefully control these parameters.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Direct Vulcanization:</strong> In direct vulcanization, the assembled shoe is placed in a mold that shapes the sole while vulcanizing. This creates molded soles with integrated tread patterns and decorations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Compression Vulcanization:</strong> For simpler constructions, shoes may be vulcanized in presses without molds, with the sole material taking its shape from pre-formed blanks. This method is common for basic canvas shoes.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Characteristics of Vulcanized Footwear</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Exceptional Flexibility:</strong> Vulcanized shoes are known for their remarkable flexibility, bending easily with foot motion. This flexibility comes from the unified construction where the rubber sole and upper move as one.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Lightweight:</strong> Vulcanized constructions are typically lighter than cemented shoes with separate midsoles and outsoles. The absence of additional adhesive layers reduces weight.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Durability:</strong> Properly vulcanized shoes can last for years of heavy use. The chemical bond between rubber and upper provides excellent resistance to separation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Classic Aesthetics:</strong> Vulcanized construction produces the characteristic look of classic canvas sneakers with thin, flexible soles and clean lines.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Canvas Vulcanized Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas vulcanized shoes represent the classic sneaker design, exemplified by brands like Converse and Vans. These shoes feature canvas uppers that are lasted and vulcanized with rubber soles, creating lightweight, breathable, and affordable footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The canvas upper is typically constructed from multiple pieces joined with seams that are often covered with rubber overlays for durability and style. The thin rubber foxing tape around the sole provides protection while maintaining flexibility.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Advantages and Limitations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Advantages:</strong> Vulcanized construction offers exceptional flexibility, lightweight design, excellent durability when properly made, classic aesthetics, and relatively simple manufacturing that can be cost-effective.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Limitations:</strong> The process is less suited to complex cushioning systems or multi-density midsoles. Limited ability to incorporate advanced cushioning technologies found in modern athletic footwear.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China has extensive vulcanized footwear manufacturing capabilities, particularly in regions producing canvas sneakers and casual vulcanized shoes. When sourcing vulcanized footwear from China, verify the manufacturer's vulcanization equipment and process control capabilities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Request samples that demonstrate consistent vulcanization across multiple pairs. Evaluate sole flexibility by bending the shoe and checking for uniform flexibility without hard spots. Examine the bond between upper and sole for any signs of incomplete vulcanization or adhesive failure.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:col-span-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧘</div>
+      <h3 class="font-semibold text-lg mb-2">Flexible</h3>
+      <p class="text-neutral-600 text-sm">
+        Exceptional bend with foot motion for natural movement.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🪶</div>
+      <h3 class="font-semibold text-lg mb-2">Lightweight</h3>
+      <p class="text-neutral-600 text-sm">
+        Minimal construction for lightweight, breathable footwear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⏱️</div>
+      <h3 class="font-semibold text-lg mb-2">Durable</h3>
+      <p class="text-neutral-600 text-sm">
+        Chemical bonding creates long-lasting construction.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Classic Style</h3>
+      <p class="text-neutral-600 text-sm">
+        Traditional aesthetics for timeless sneaker designs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>
