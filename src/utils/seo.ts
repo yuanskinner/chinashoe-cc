@@ -96,7 +96,7 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url.startsWith('http') ? item.url : `https://chinashoe.cc${item.url}`,
+      item: item.url?.startsWith('http') ? item.url : `https://chinashoe.cc${item.url || ''}`,
     })),
   };
 }

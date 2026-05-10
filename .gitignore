@@ -22,3 +22,13 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Scripts (Python utilities - AI orchestration)
+scripts/
+
+# Data and output (not for deployment)
+data/
+output/
+
+# Documentation (planning docs - not for deployment)
+docs/

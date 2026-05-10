@@ -172,7 +172,9 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-- **Email**: contact@chinashoe.cc
-- **Website**: https://chinashoe.cc
-- **LinkedIn**: https://linkedin.com/company/chinashoe
-- **Twitter**: https://twitter.com/chinashoecc
+- **Email**: Nicole99124@gmail.com
+- Instagram: instagram.com/women_shoes9012
+- **LinkedIn**: linkedin.cn/inicareer/in/chunzhang2025
+- Tel:+8615986707004
+- WhatsApp: wa.me/8615986707004
+- FaceBook:https://www.facebook.com/p/Lady-shoes-factory-in-china-100065057501406 
