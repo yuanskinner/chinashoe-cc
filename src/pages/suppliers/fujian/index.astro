@@ -1,0 +1,165 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const whyFujian = [
+  { title: 'Sports Shoe Capital', description: "Putian alone produces over 40% of China's sports shoes" },
+  { title: 'Complete Supply Chain', description: 'From materials to finished products, all within the region' },
+  { title: 'Strong Export Base', description: 'Major supplier to international brands for 20+ years' },
+  { title: 'Cost Competitive', description: 'Mature cluster effect reduces production costs by 15-20%' },
+];
+
+const cities = [
+  { name: 'Putian', description: 'Sports shoes, running shoes, basketball shoes', href: '/suppliers/fujian-putian-sports-shoes/' },
+  { name: 'Quanzhou', description: 'Casual footwear, outdoor shoes, sneakers', href: '/suppliers/fujian-quanzhou-casual/' },
+  { name: 'Xiamen', description: 'Sports brands, export-oriented manufacturers', href: '/suppliers/?region=ximen' },
+  { name: 'Fuzhou', description: 'Leather shoes, formal footwear', href: '/suppliers/?region=fuzhou' },
+];
+
+const specializations = [
+  'Running Shoes',
+  'Basketball Shoes',
+  'Trail Running Shoes',
+  'Hiking Shoes',
+  'Sports Sneakers',
+  'Casual Sneakers',
+  'Training Shoes',
+];
+---
+
+<PageLayout
+  title="Footwear Suppliers in Fujian Province, China"
+  description="Find verified sports shoe manufacturers in Fujian Province. Putian and Quanzhou are China's premier sports shoe manufacturing hubs with 20+ years of experience."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Fujian', url: '/suppliers/fujian/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Key Production Region</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Fujian Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Fujian Province is China's sports shoe manufacturing heartland. Putian alone produces hundreds of millions of pairs annually, serving major international brands. The province offers complete supply chains, competitive pricing, and rigorous quality control systems.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1200&h=400&fit=crop"
+      alt="Sports Shoe Manufacturing in Fujian"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Fujian -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Why Source from Fujian?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {whyFujian.map(item => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+          <p class="text-sm text-neutral-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Fujian: China's Sports Shoe Capital</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Fujian Province, particularly the cities of Putian and Quanzhou, has earned the title of "Sports Shoe Capital of China." The region produces over 40% of China's sports footwear and has been the manufacturing base for major international brands since the 1990s. Today, Fujian factories produce hundreds of millions of pairs of sports shoes annually for brands worldwide.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Industry Concentration</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Putian City in central Fujian is the most concentrated sports shoe production area in China. The city's footwear industry began in the 1980s and has grown into a complete industrial ecosystem. An estimated 4,000+ footwear-related enterprises operate in Putian, employing over 500,000 workers. The city produces running shoes, basketball shoes, training shoes, and casual sneakers for brands including Nike, Adidas, Puma, New Balance, and many others.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Quanzhou, located on the southeastern coast, is another major footwear hub. The city is particularly known for casual footwear, outdoor shoes, and sneakers. Quanzhou has developed strong capabilities in material innovation, particularly in EVA midsoles and mesh upper materials. The city's ports provide efficient logistics for export shipments.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Product Specializations</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Fujian suppliers specialize in athletic and sports footwear. The region's core competencies include running shoes with advanced cushioning systems, basketball shoes with ankle support constructions, trail running shoes with aggressive outsole patterns, and casual sneakers with fashion-forward designs. Factories in Fujian are experienced with advanced materials including EVA foam, PU injection midsoles, mesh knit uppers, and proprietary cushioning technologies.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Working with Fujian Factories</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Most Fujian factories require minimum order quantities of 500-1,000 pairs per style for production. Sample development typically takes 3-4 weeks. Production lead times range from 35-60 days depending on complexity. Many factories offer OEM (Original Equipment Manufacturing) services where they produce to your specifications, as well as ODM (Original Design Manufacturing) services where they can develop products based on your concept.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Quality control is well-established in Fujian. Leading factories implement multi-stage inspection protocols and have experience with international quality standards. Third-party inspection by companies like SGS, Bureau Veritas, or Intertek is standard practice for international buyers. The region's factories hold certifications including ISO 9001, BSCI, SEDEX, WRAP, and brand-specific social compliance audits.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Certifications and Compliance</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Fujian factories commonly hold ISO 9001 (Quality Management) and ISO 14001 (Environmental Management) certifications. Social compliance certifications including BSCI, SEDEX, and WRAP are widespread among export-oriented manufacturers. Factories regularly undergo audits for major brands' codes of conduct and are experienced in maintaining compliance throughout production runs.
+    </p>
+  </div>
+
+  <!-- Cities Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Major Production Cities</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {cities.map(city => (
+      <a href={city.href} class="card flex items-center gap-4">
+        <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-neutral-900">{city.name}</h3>
+          <p class="text-sm text-neutral-500">{city.description}</p>
+        </div>
+        <svg class="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    ))}
+  </div>
+
+  <!-- Specializations -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Specializations</h2>
+  <div class="flex flex-wrap gap-3 mb-12">
+    {specializations.map(spec => (
+      <span class="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full">{spec}</span>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Links</h3>
+    <div class="flex flex-wrap gap-4">
+      <a href="/suppliers/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        All Suppliers
+      </a>
+      <a href="/encyclopedia/running-shoes/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Running Shoes Guide
+      </a>
+      <a href="/sourcing/guide-to-sourcing-from-china/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Sourcing Guide
+      </a>
+    </div>
+  </div>
+</PageLayout>

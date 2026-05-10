@@ -1,0 +1,163 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const whySichuan = [
+  { title: 'Low Production Costs', description: 'Labor costs 20-30% lower than coastal provinces' },
+  { title: 'Growing Capability', description: 'Modern factories with new equipment built in 2010s' },
+  { title: "Women's Boots Focus", description: "Specialized in women's fashion boots and heels" },
+  { title: 'Western China Hub', description: 'Closer to European overland routes via rail' },
+];
+
+const cities = [
+  { name: 'Chengdu', description: "Women's boots, fashion footwear", href: '/suppliers/sichuan-chengdu-womens-boots/' },
+  { name: 'Mianyang', description: 'Sports shoes, casual footwear', href: '/suppliers/?region=mianyang' },
+  { name: 'Dazhou', description: 'Leather goods, work footwear', href: '/suppliers/?region=dazhou' },
+  { name: 'Leshan', description: 'Children shoes, casual styles', href: '/suppliers/?region=leshan' },
+];
+
+const specializations = [
+  "Women's Boots",
+  "Women's Heels",
+  "Fashion Boots",
+  "Leather Boots",
+  "Flat Shoes",
+  "Casual Footwear",
+  "Safety Shoes",
+];
+---
+
+<PageLayout
+  title="Footwear Suppliers in Sichuan Province, China"
+  description="Find verified shoe manufacturers in Sichuan Province. Chengdu is emerging as a center for women's fashion boots, with lower production costs and modern facilities."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Sichuan', url: '/suppliers/sichuan/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Emerging Production Region</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Sichuan Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Sichuan Province in western China is an emerging footwear manufacturing center. With lower labor costs and modern facilities built in the 2010s, the province offers competitive pricing for women's fashion boots, heels, and casual footwear. Chengdu has developed particular expertise in women's footwear.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1543087903-1ac2ef45f97d?w=1200&h=400&fit=crop"
+      alt="Footwear Manufacturing in Sichuan"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Sichuan -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Why Source from Sichuan?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {whySichuan.map(item => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+          <p class="text-sm text-neutral-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Sichuan: Rising Manufacturing Center</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Sichuan Province has emerged as a significant footwear manufacturing center in western China. The province offers production costs 20-30% lower than coastal provinces, combined with modern facilities constructed since 2010. Chengdu, the provincial capital, has developed particular expertise in women's fashion footwear including boots, heels, and flat shoes.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Chengdu's Footwear Industry</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Chengdu has transformed from a major textile manufacturing center to an important footwear production hub. The city's footwear industry began expanding significantly in the 2000s, when coastal manufacturers sought lower-cost alternatives. Today, Chengdu and surrounding areas host hundreds of footwear factories employing tens of thousands of workers.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The region's specialization in women's fashion footwear developed organically from its textile heritage. Factories in Chengdu are particularly skilled in women's boots, fashion heels, and stylish casual shoes. Designs tend toward fashion-forward aesthetics favored in European and American markets. The region produces both elegant dress boots and rugged combat boot styles.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Cost Advantages</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Sichuan's primary advantage is cost competitiveness. Labor costs run 20-30% lower than in Guangdong or Zhejiang provinces. Factory rent and utilities are significantly cheaper. For buyers prioritizing unit cost over speed-to-market or proximity to ports, Sichuan offers compelling economics for orders of 1,000+ pairs.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The China-Europe Railway (via Chongqing or Chengdu) provides an alternative logistics route to European markets. Transit times of 14-18 days to Europe compare favorably with 25-30 days by sea, at roughly 3x the cost. For high-value orders where speed justifies premium shipping, the rail route offers a middle ground.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Working with Sichuan Factories</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Minimum order quantities in Sichuan typically start at 500-1,000 pairs per style. Sample development takes 3-4 weeks. Production lead times of 45-60 days are standard. Quality standards vary more widely than in established coastal manufacturing centers, so thorough vetting is essential before placing large orders.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      When evaluating Sichuan factories, look for modern equipment, experienced management with coastal manufacturing backgrounds, and clear quality control systems. Some factories in Chengdu have management teams who previously worked in Guangdong or Zhejiang, bringing established manufacturing practices to the region. Third-party inspection is strongly recommended for first orders.
+    </p>
+  </div>
+
+  <!-- Cities Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Major Production Cities</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {cities.map(city => (
+      <a href={city.href} class="card flex items-center gap-4">
+        <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-neutral-900">{city.name}</h3>
+          <p class="text-sm text-neutral-500">{city.description}</p>
+        </div>
+        <svg class="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    ))}
+  </div>
+
+  <!-- Specializations -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Specializations</h2>
+  <div class="flex flex-wrap gap-3 mb-12">
+    {specializations.map(spec => (
+      <span class="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full">{spec}</span>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Links</h3>
+    <div class="flex flex-wrap gap-4">
+      <a href="/suppliers/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        All Suppliers
+      </a>
+      <a href="/encyclopedia/high-heels/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        High Heels Guide
+      </a>
+      <a href="/sourcing/factory-audit-guide/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Factory Audit Guide
+      </a>
+    </div>
+  </div>
+</PageLayout>

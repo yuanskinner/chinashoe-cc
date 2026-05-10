@@ -1,0 +1,164 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const whyGuangdong = [
+  { title: 'Manufacturing Hub', description: 'Dongguan alone has 40+ years of footwear production history' },
+  { title: 'Complete Ecosystem', description: 'Materials, components, and finished products all locally available' },
+  { title: 'Advanced Capabilities', description: 'Strong in athletic shoes, leather goods, and safety footwear' },
+  { title: 'Export Infrastructure', description: 'Direct access to Shenzhen and Hong Kong ports' },
+];
+
+const cities = [
+  { name: 'Dongguan', description: 'Sports shoes, sneakers, leather footwear', href: '/suppliers/dongguan/' },
+  { name: 'Guangzhou', description: 'All types, large trading companies', href: '/suppliers/?region=guangzhou' },
+  { name: 'Shenzhen', description: 'Tech-integrated footwear, export hub', href: '/suppliers/?region=shenzhen' },
+  { name: 'Foshan', description: 'Safety shoes, work footwear', href: '/suppliers/?region=foshan' },
+];
+
+const specializations = [
+  'Running Shoes',
+  'Basketball Shoes',
+  'Sports Sneakers',
+  'Leather Shoes',
+  'Safety Shoes',
+  'Work Boots',
+  'Casual Footwear',
+  'OEM Manufacturing',
+];
+---
+
+<PageLayout
+  title="Footwear Suppliers in Guangdong Province, China"
+  description="Find verified shoe manufacturers in Guangdong Province. Dongguan, Guangzhou, and Shenzhen are major production hubs for sports shoes, leather goods, and safety footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Guangdong', url: '/suppliers/guangdong/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Largest Production Province</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Guangdong Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Guangdong Province is China's largest footwear production base, home to major manufacturing centers including Dongguan, Guangzhou, and Shenzhen. The province produces athletic shoes, leather footwear, casual shoes, and safety shoes for global brands.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&h=400&fit=crop"
+      alt="Footwear Manufacturing in Guangdong"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Guangdong -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Why Source from Guangdong?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {whyGuangdong.map(item => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+          <p class="text-sm text-neutral-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Guangdong: The World's Factory Floor</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Guangdong Province in the Pearl River Delta is the most important footwear manufacturing region in China. The province produces approximately 40% of China's footwear output, with factories ranging from small workshops to large-scale modern manufacturing facilities. Major international brands maintain production relationships with Guangdong factories.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Dongguan: Manufacturing Heart</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Dongguan City has earned the nickname "World's Factory Floor" and is a major footwear production center. The city's footwear industry traces its roots to the 1980s when Taiwanese and Hong Kong companies established factories that evolved into sophisticated manufacturing operations. Today, Dongguan factories produce running shoes, basketball shoes, casual sneakers, and leather goods for brands worldwide.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The city's production capabilities span from basic cemented construction to advanced Goodyear welted footwear. Factories in Dongguan are particularly strong in athletic shoes with advanced cushioning technologies, injection-molded soles, and knit mesh uppers. The region's workforce is highly skilled in footwear-specific operations accumulated over 40 years of manufacturing experience.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Product Range</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Guangdong suppliers offer the widest product range of any Chinese province. The region produces running shoes with proprietary cushioning systems, basketball shoes with advanced ankle support, casual sneakers with fashion-forward designs, leather dress shoes and oxfords, safety footwear meeting European and American standards, and work boots for industrial applications.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Material innovation is a Guangdong strength. The province has established supply chains for every component from leather and synthetic uppers to rubber outsoles and PU midsoles. Many factories can source specialized materials including waterproof membranes, reflective elements, and performance textiles.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Working with Guangdong Factories</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Minimum order quantities in Guangdong typically range from 300-1,000 pairs per style, depending on factory size and product complexity. Sample development takes 2-4 weeks. Production lead times of 45-60 days are standard for athletic footwear with customization. Many factories offer both OEM and ODM services.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Quality systems are mature in Guangdong's established factories. Multi-stage inspection protocols, AQL standards, and third-party testing are standard practice. Most export-oriented factories hold ISO 9001, BSCI, SEDEX, and brand-specific certifications. The region's proximity to Shenzhen and Hong Kong ports enables efficient container shipping to global destinations.
+    </p>
+  </div>
+
+  <!-- Cities Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Major Production Cities</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {cities.map(city => (
+      <a href={city.href} class="card flex items-center gap-4">
+        <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-neutral-900">{city.name}</h3>
+          <p class="text-sm text-neutral-500">{city.description}</p>
+        </div>
+        <svg class="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    ))}
+  </div>
+
+  <!-- Specializations -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Specializations</h2>
+  <div class="flex flex-wrap gap-3 mb-12">
+    {specializations.map(spec => (
+      <span class="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full">{spec}</span>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Links</h3>
+    <div class="flex flex-wrap gap-4">
+      <a href="/suppliers/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        All Suppliers
+      </a>
+      <a href="/suppliers/dongguan/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Dongguan Suppliers
+      </a>
+      <a href="/sourcing/how-to-vet-suppliers/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Supplier Vetting Guide
+      </a>
+    </div>
+  </div>
+</PageLayout>

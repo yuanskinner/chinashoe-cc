@@ -1,0 +1,170 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const whyZhejiang = [
+  { title: 'Leather Heritage', description: 'Wenzhou has 1000+ year history in leather craftsmanship' },
+  { title: 'Fashion Focus', description: 'Known for dress shoes, oxfords, and fashion boots' },
+  { title: 'Complete Industry', description: 'From tanning to finished products in one region' },
+  { title: 'Export Oriented', description: 'Major supplier to European and American brands' },
+];
+
+const cities = [
+  { name: 'Wenzhou', description: 'Dress shoes, oxfords, leather boots', href: '/suppliers/zhejiang-wenzhou-dress-shoes/' },
+  { name: 'Ningbo', description: 'Sports shoes, outdoor footwear', href: '/suppliers/?region=ningbo' },
+  { name: 'Hangzhou', description: 'Fashion shoes, e-commerce brands', href: '/suppliers/?region=hangzhou' },
+  { name: 'Shaoxing', description: 'Children shoes, casual footwear', href: '/suppliers/?region=shaoxing' },
+];
+
+const specializations = [
+  'Leather Dress Shoes',
+  'Oxford Shoes',
+  'Derby Shoes',
+  'Loafers',
+  'Chelsea Boots',
+  'Fashion Boots',
+  'Goodyear Welted',
+  'Leather Goods',
+];
+---
+
+<PageLayout
+  title="Footwear Suppliers in Zhejiang Province, China"
+  description="Find verified leather shoe manufacturers in Zhejiang Province. Wenzhou is China's 'Shoe Capital' with 1000+ years of leather craftsmanship tradition."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Zhejiang', url: '/suppliers/zhejiang/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">China's Shoe Capital</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Zhejiang Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Zhejiang Province, particularly Wenzhou City, is renowned as China's "Shoe Capital" with over a thousand years of leather craftsmanship tradition. The province specializes in high-quality leather dress shoes, oxfords, and fashion boots for international brands.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&h=400&fit=crop"
+      alt="Leather Shoe Manufacturing in Zhejiang"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Zhejiang -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Why Source from Zhejiang?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {whyZhejiang.map(item => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+          <p class="text-sm text-neutral-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Zhejiang: China's Shoe Capital</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Wenzhou in Zhejiang Province carries the title "Shoe Capital of China" for good reason. The city's leather footwear tradition dates back over a thousand years, and today the region produces hundreds of millions of pairs of leather shoes annually. Wenzhou's craftsmen developed techniques that influenced footwear manufacturing across Asia, and modern factories have built upon this heritage with contemporary manufacturing methods.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Wenzhou's Leather Heritage</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Wenzhou's reputation as a shoe-making center originated during the Southern Song Dynasty (1127-1279), when craftsmen from the imperial court established workshops in the city. The tradition of quality leather work continued through subsequent dynasties. In the 1980s, Wenzhou's shoemakers began producing for national markets, and by the 1990s, the city had become a major export base for international brands.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Modern Wenzhou factories combine traditional craftsmanship with contemporary manufacturing capabilities. The region is particularly known for Goodyear welted construction, Blake stitched dress shoes, and hand-finished leather goods. Craftsmen in Wenzhou develop the fine details that distinguish quality leather footwear—precise stitching, careful edge finishing, and proper lasting.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Product Specializations</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Zhejiang suppliers, particularly Wenzhou factories, specialize in formal and dress leather footwear. Core products include Oxford shoes with closed lacing systems, Derby shoes with open lacing, monk strap and double monk strap designs, loafer constructions including penny loafers and tassel loafers, Chelsea boots and fashion boots, and leather goods including belts and small leather goods.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The region produces both cemented and Goodyear welted constructions. Goodyear welted footwear from Wenzhou represents excellent value compared to Italian or British alternatives, while maintaining good quality standards. Factories often work with premium leathers sourced from tanneries in Jiangsu and Guangdong provinces.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Working with Wenzhou Factories</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Minimum order quantities for Wenzhou factories typically range from 200-500 pairs per style for standard production. Custom colorways or materials may require higher MOQs. Sample development takes 2-3 weeks for standard styles, longer for custom constructions. Production lead times of 45-60 days are typical for Goodyear welted footwear.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Quality standards in Wenzhou vary significantly between factories. Premium factories serving international brands implement rigorous quality control with multi-stage inspection protocols. When sourcing from Wenzhou, specify exact construction methods, material requirements, and inspection standards in your purchase order. Request samples from multiple factories before committing to large orders.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Certifications and Standards</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Leading Wenzhou factories hold ISO 9001 certification and comply with major social standards including BSCI, SEDEX, and WRAP. Many are experienced with brand-specific codes of conduct and audit requirements. For European markets, factories can provide CE marking documentation. Testing by SGS, Bureau Veritas, or Intertek is available locally.
+    </p>
+  </div>
+
+  <!-- Cities Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Major Production Cities</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {cities.map(city => (
+      <a href={city.href} class="card flex items-center gap-4">
+        <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-neutral-900">{city.name}</h3>
+          <p class="text-sm text-neutral-500">{city.description}</p>
+        </div>
+        <svg class="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    ))}
+  </div>
+
+  <!-- Specializations -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Specializations</h2>
+  <div class="flex flex-wrap gap-3 mb-12">
+    {specializations.map(spec => (
+      <span class="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full">{spec}</span>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Links</h3>
+    <div class="flex flex-wrap gap-4">
+      <a href="/suppliers/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        All Suppliers
+      </a>
+      <a href="/encyclopedia/leather-shoes/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Leather Shoes Guide
+      </a>
+      <a href="/encyclopedia/manufacturing/goodyear-welt/" class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Goodyear Welt Construction
+      </a>
+    </div>
+  </div>
+</PageLayout>
