@@ -74,11 +74,11 @@
   }
 
   .link-arrow {
-    @apply inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group;
+    @apply inline-flex items-center text-primary-600 hover:text-primary-700 font-medium;
   }
 
   .link-arrow svg {
-    @apply w-4 h-4 ml-1 transition-transform group-hover:translate-x-1;
+    @apply w-4 h-4 ml-1 transition-transform;
   }
 }
 
