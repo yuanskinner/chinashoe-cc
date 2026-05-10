@@ -1,0 +1,231 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const technologies = [
+  {
+    name: 'EVA Foam',
+    description: 'Ethylene-vinyl acetate, the most common running shoe cushioning material.',
+    pros: ['Lightweight', 'Affordable', 'Versatile'],
+    cons: ['Durability varies', 'Compacts over time'],
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+  },
+  {
+    name: 'PU Foam',
+    description: 'Polyurethane offers excellent durability and energy return.',
+    pros: ['Long-lasting', 'High energy return', 'Stable'],
+    cons: ['Heavier', 'More expensive'],
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+  },
+  {
+    name: 'Gel Technology',
+    description: 'Silicone-based gel pads for shock absorption.',
+    pros: ['Excellent impact absorption', 'Temperature stable'],
+    cons: ['Heavier', 'Limited energy return'],
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+  },
+  {
+    name: 'Air Cushioning',
+    description: 'Pressurized air units for responsive cushioning.',
+    pros: ['Responsive', 'Lightweight options', 'Adjustable pressure'],
+    cons: ['Durability concerns', 'Less durable under extreme use'],
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+  },
+];
+
+const relatedLinks = [
+  { name: 'Running Shoe Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+  { name: 'Running Shoe Categories', href: '/encyclopedia/running-shoes/categories/' },
+  { name: 'Running Shoe Sizing', href: '/encyclopedia/running-shoes/sizing/' },
+  { name: 'EVA Midsoles', href: '/encyclopedia/materials/eva-midsoles/' },
+];
+---
+
+<PageLayout
+  title="Running Shoe Cushioning Technologies Guide"
+  description="Understanding running shoe cushioning: EVA, PU, Gel, Air, and Foam technologies. Learn how each system works and which is best for your running needs."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Running Shoes', url: '/encyclopedia/running-shoes/' },
+    { name: 'Cushioning Technologies', href: '/encyclopedia/running-shoes/cushioning/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Running Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/running-shoes/' },
+        { label: 'Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+        { label: 'Cushioning', href: '/encyclopedia/running-shoes/cushioning/', active: true },
+        { label: 'Categories', href: '/encyclopedia/running-shoes/categories/' },
+        { label: 'Trail Running', href: '/encyclopedia/running-shoes/trail/' },
+        { label: 'Racing Flats', href: '/encyclopedia/running-shoes/racing-flats/' },
+        { label: 'Sizing Guide', href: '/encyclopedia/running-shoes/sizing/' },
+      ],
+    },
+    {
+      title: 'Cushioning Materials',
+      links: [
+        { label: 'EVA Midsoles', href: '/encyclopedia/materials/eva-midsoles/' },
+        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+        { label: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Running & Athletic</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Running Shoe Cushioning Technologies
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Modern running shoes feature sophisticated cushioning systems designed to absorb impact, return energy, and protect runners from injury. Understanding the different technologies helps buyers make informed decisions when sourcing or selecting footwear.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Running Shoe Cushioning Technologies"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Cushioning Technologies</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Running generates impact forces equivalent to 2-3 times body weight with each footstrike. Modern cushioning technologies are engineered to absorb these forces, reduce stress on joints and muscles, and return energy to propel runners forward efficiently. The midsole, located between the outsole and upper, is the primary location for cushioning technology implementation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Advances in materials science and engineering have revolutionized running shoe cushioning over the past decades. From basic foam compounds to sophisticated air and gel systems, manufacturers continuously develop new technologies to improve performance, comfort, and durability. For B2B buyers, understanding these technologies helps in evaluating products and communicating specifications to suppliers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">EVA Foam Cushioning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Ethylene-vinyl acetate (EVA) foam is the most widely used cushioning material in running shoes, accounting for approximately 80% of all running shoe midsoles. EVA offers an excellent balance of cushioning, weight, and cost, making it the foundation for both entry-level and premium running shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Standard EVA foam provides good initial cushioning but tends to compress over time, losing approximately 30% of its cushioning effectiveness after 300-500 miles of use. Manufacturers address this through various approaches: adding rubber compounds for durability, using nitrogen injection for consistent cell structure, and developing proprietary formulations that maintain performance longer.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Premium EVA variants include brands' proprietary formulations such as ASICS's FlyteFoam, Saucony's Everun, and New Balance's Fresh Foam. These engineered EVA compounds offer improved durability, energy return, and consistency compared to standard EVA, though at higher price points.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">PU Foam Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Polyurethane (PU) foam provides superior durability compared to EVA, maintaining its cushioning properties over significantly longer periods. While PU is denser and heavier than EVA, its longevity makes it cost-effective for shoes intended for high-mileage runners or walking use.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      PU foam's closed-cell structure provides excellent resistance to moisture absorption and maintains consistent performance across temperature ranges. Brooks uses DNA Loft PU technology in several models, while Hoka incorporates PU in their maximum cushioning options. The material's resilience makes it popular for walking shoes and work footwear where durability is paramount.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Gel Cushioning Systems</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Gel technology, pioneered by ASICS, uses silicone-based gel pads strategically placed in the midsole to absorb shock and disperse impact forces. Gel units are typically positioned in the heel for rearfoot strikers or throughout the midsole for comprehensive cushioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The primary advantage of gel cushioning is its excellent shock absorption characteristics, particularly effective for runners who heel-strike. However, traditional gel units add weight and may not provide the same energy return as advanced foam compounds. Modern gel technologies have evolved to combine gel with foam for optimal performance.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Air Cushioning Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Air cushioning, developed by Nike with Air Max and later Zoom Air technologies, uses pressurized air chambers to provide responsive cushioning. The air is trapped in durable urethane shells, with pressure and volume calibrated to achieve specific cushioning characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Air Max:</strong> Visible air units in the heel provide maximum cushioning with a distinctive aesthetic. Air Max units typically have larger air volumes for plush cushioning, making them popular for casual wear and everyday running.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Zoom Air:</strong> Thin, pressurized air units with fibers for responsiveness and quick energy return. Zoom Air provides a more responsive feel than Air Max, making it popular for racing shoes and performance training where energy return is prioritized.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Advanced Foam Technologies</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Recent years have seen breakthrough developments in foam cushioning technology, with major brands investing heavily in research and development. These proprietary materials represent the current state-of-the-art in running shoe cushioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>TPEE-Based Foams:</strong> Thermoplastic elastomer foams like Saucony's PWRRUN and Puma's NITRO offer excellent energy return and durability. These materials provide a responsive feel while maintaining cushioning over extended use.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PEBA-Based Foams:</strong> Polyether block amide foams, including Nike's ZoomX and adidas's Lightstrike Pro, represent the pinnacle of running shoe cushioning technology. These ultra-lightweight materials offer exceptional energy return exceeding 80%, significantly higher than traditional EVA foams.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Carbon Fiber Plate Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      While not cushioning per se, carbon fiber plates work in conjunction with cushioning systems to enhance running efficiency. Plates made from carbon fiber composites are embedded within the midsole, typically in combination with advanced foam materials. The plate provides a lever arm effect that stores energy during compression and releases it during toe-off, improving running economy.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Carbon-plated shoes have transformed elite and recreational running, with studies showing improvements in running economy of 4-6%. However, the optimal combination of plate stiffness, positioning, and foam compatibility requires sophisticated engineering. For B2B sourcing, evaluating carbon plate implementation quality is essential for performance products.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China has developed advanced capabilities in running shoe cushioning technology production, with major international brands manufacturing in facilities that produce components and complete shoes. Key considerations for sourcing cushioning technology include the manufacturer's foam mixing and processing capabilities, their equipment for air unit production and testing, quality control processes for consistency, and ability to implement proprietary technologies under license.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Material specifications should include density, hardness, compression set, and rebound values to ensure consistent performance. Sample testing should include accelerated wear testing to evaluate how cushioning properties change over simulated use, as well as temperature stability testing for products intended for various climate conditions.
+    </p>
+  </div>
+
+  <!-- Technology Cards -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Cushioning Technologies Overview</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {technologies.map(tech => (
+      <div class="card overflow-hidden">
+        <img src={tech.image} alt={tech.name} class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg text-neutral-900 mb-2">{tech.name}</h3>
+          <p class="text-neutral-600 text-sm mb-3">{tech.description}</p>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span class="font-medium text-green-700">Pros:</span>
+              <ul class="text-neutral-600 text-xs mt-1">
+                {tech.pros.map(pro => <li>• {pro}</li>)}
+              </ul>
+            </div>
+            <div>
+              <span class="font-medium text-red-700">Cons:</span>
+              <ul class="text-neutral-600 text-xs mt-1">
+                {tech.cons.map(con => <li>• {con}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

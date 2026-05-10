@@ -65,7 +65,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'contact@chinashoe.cc',
+      email: 'Nicole99124@gmail.com',
     },
   };
 }

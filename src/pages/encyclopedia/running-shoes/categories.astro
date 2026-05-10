@@ -1,0 +1,239 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const categories = [
+  {
+    name: 'Cushioning',
+    description: 'Maximum comfort through soft, plush cushioning systems.',
+    icon: '🛡️',
+    href: '/encyclopedia/running-shoes/cushioning/',
+    bestFor: 'Daily training, heavier runners, those seeking maximum comfort',
+  },
+  {
+    name: 'Stability',
+    description: 'Guide your stride with medial support features.',
+    icon: '⚖️',
+    href: '/encyclopedia/running-shoes/categories/',
+    bestFor: 'Overpronators, runners needing arch support',
+  },
+  {
+    name: 'Neutral',
+    description: 'Pure ride without interference from support systems.',
+    icon: '⚡',
+    href: '/encyclopedia/running-shoes/categories/',
+    bestFor: 'Neutral gaits, efficient runners, race training',
+  },
+  {
+    name: 'Motion Control',
+    description: 'Maximum support for severe overpronation control.',
+    icon: '🏋️',
+    href: '/encyclopedia/running-shoes/categories/',
+    bestFor: 'Heavy overpronators, wide feet, maximum stability needs',
+  },
+  {
+    name: 'Trail',
+    description: 'Rugged traction and protection for off-road running.',
+    icon: '🏔️',
+    href: '/encyclopedia/running-shoes/trail/',
+    bestFor: 'Off-road terrain, hiking, adventure races',
+  },
+  {
+    name: 'Racing',
+    description: 'Lightweight, responsive shoes for competition.',
+    icon: '🏃',
+    href: '/encyclopedia/running-shoes/racing-flats/',
+    bestFor: 'Race day, speed work, elite performance',
+  },
+];
+
+const gaitTypes = [
+  { type: 'Neutral', description: 'Foot rolls slightly inward after heel strike', suitable: ['Cushioning', 'Neutral', 'Racing'] },
+  { type: 'Overpronator', description: 'Foot rolls excessively inward, requiring stability support', suitable: ['Stability', 'Motion Control'] },
+  { type: 'Supinator', description: 'Foot rolls outward, needing extra cushioning', suitable: ['Cushioning', 'Neutral'] },
+];
+
+const relatedLinks = [
+  { name: 'Running Shoe Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+  { name: 'Cushioning Technologies', href: '/encyclopedia/running-shoes/cushioning/' },
+  { name: 'Running Shoe Sizing', href: '/encyclopedia/running-shoes/sizing/' },
+  { name: 'Trail Running Shoes', href: '/encyclopedia/running-shoes/trail/' },
+];
+---
+
+<PageLayout
+  title="Running Shoe Categories Guide"
+  description="Understanding running shoe categories: cushioning, stability, neutral, motion control, trail, and racing shoes. Find the right category for your gait type and running goals."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Running Shoes', url: '/encyclopedia/running-shoes/' },
+    { name: 'Categories', url: '/encyclopedia/running-shoes/categories/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Running Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/running-shoes/' },
+        { label: 'Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+        { label: 'Cushioning', href: '/encyclopedia/running-shoes/cushioning/' },
+        { label: 'Categories', href: '/encyclopedia/running-shoes/categories/', active: true },
+        { label: 'Trail Running', href: '/encyclopedia/running-shoes/trail/' },
+        { label: 'Racing Flats', href: '/encyclopedia/running-shoes/racing-flats/' },
+        { label: 'Sizing Guide', href: '/encyclopedia/running-shoes/sizing/' },
+      ],
+    },
+    {
+      title: 'Athletic Categories',
+      links: [
+        { label: 'Basketball Shoes', href: '/encyclopedia/basketball-shoes/' },
+        { label: 'Training Shoes', href: '/encyclopedia/training-shoes/' },
+        { label: 'Hiking Shoes', href: '/encyclopedia/hiking-shoes/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Running & Athletic</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Running Shoe Categories Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Understanding the differences between running shoe categories is essential for selecting footwear that matches your gait pattern, running style, and performance goals. This guide covers cushioning, stability, neutral, motion control, trail, and racing categories.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=1200&h=400&fit=crop"
+      alt="Running Shoe Categories Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Understanding Your Gait -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Understanding Your Gait Type</h2>
+    <p class="text-neutral-600 mb-4">
+      Before selecting a running shoe category, understanding your natural gait pattern helps ensure optimal comfort and injury prevention. Your gait pattern determines how your foot behaves during the running cycle.
+    </p>
+    <div class="grid md:grid-cols-3 gap-4">
+      {gaitTypes.map(gait => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{gait.type}</h3>
+          <p class="text-sm text-neutral-600 mb-3">{gait.description}</p>
+          <p class="text-xs text-neutral-500">Suitable: {gait.suitable.join(', ')}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Running Shoe Categories Explained</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The running shoe industry categorizes footwear based on the level of support and cushioning provided, with each category designed to address specific biomechanical needs. Understanding these categories helps runners select shoes that optimize their performance while minimizing injury risk.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Cushioning Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Cushioning shoes are designed with maximum soft midsole material to absorb impact forces and provide plush comfort. These shoes typically feature generous amounts of EVA foam, air cushioning, or gel systems without medial posting or stability features. They are ideal for runners with high arches who naturally underpronate, as well as runners seeking maximum comfort for daily training.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern cushioning shoes have evolved significantly, with brands introducing energy-return technologies that not only absorb impact but also return energy to the runner. These shoes typically have a stack height of 25mm or more in the heel, providing substantial cushioning without compromising ground feel for more experienced runners.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Stability Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Stability shoes incorporate features designed to control excessive pronation, the inward rolling motion of the foot during the running stride. These shoes feature firmer foam on the medial (inner) side of the midsole, dual-density midsoles, or proprietary support systems that guide the foot through a more neutral trajectory.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The level of stability support varies among models, from mild support for mild overpronators to strong stability for moderate overpronators. Modern stability shoes have become more sophisticated, using computational fluid dynamics and finite element analysis to optimize support placement and minimize weight.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Neutral Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Neutral shoes provide consistent cushioning throughout the midsole without targeted support features. These shoes allow the foot to move naturally, making them suitable for runners with efficient biomechanics who don't require additional support. Neutral shoes are also preferred by runners who want a more versatile shoe that can adapt to various training situations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Many neutral shoes serve as the platform for popular maximalist cushioning models, which combine generous stack heights with neutral geometry. These maximalist neutral shoes have gained popularity among runners seeking both comfort and performance benefits.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Motion Control Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Motion control shoes represent the maximum level of pronation support available in running footwear. These shoes feature the firmest midsoles, widest bases, and most aggressive medial support structures. They are designed for severe overpronators, heavier runners who need additional support, or those with specific biomechanical issues requiring maximum control.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      While motion control shoes have declined in popularity as running form philosophy has evolved, they remain important options for certain runners. The decision to use motion control shoes should be based on professional gait analysis and consideration of individual needs.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Trail Running Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Trail running shoes are specifically designed for off-road running, featuring aggressive outsole lugs for traction on dirt, mud, rocks, and technical terrain. These shoes typically have protective features including rock plates, reinforced toe caps, and secure upper construction to handle the challenges of trail environments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Trail shoes range from lightweight models for smooth trails to rugged options for technical mountain terrain. They often feature waterproof membranes for wet conditions and enhanced ankle support for uneven ground. The category has seen significant innovation with the growth of ultrarunning and trail racing.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Racing Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Racing shoes prioritize weight reduction and energy return over durability and cushioning. These lightweight shoes typically weigh under 200 grams and feature responsive midsole materials, minimal upper construction, and streamlined geometries designed for efficient running at race paces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The racing category has been revolutionized by carbon fiber plate technology, which provides significant energy return and propulsion assistance. Modern carbon-plated racing shoes have helped runners achieve unprecedented performance improvements, raising questions about the future definition of what constitutes a racing shoe.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China dominates global athletic shoe production, including running shoes across all categories. Key manufacturing regions include Dongguan and Huizhou in Guangdong Province, Quanzhou in Fujian Province, and Putian, each with specialized capabilities in different product categories.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing running shoes, B2B buyers should consider the manufacturer's experience with specific cushioning technologies, their ability to implement stability features consistently, quality control for outsole traction patterns, and development capabilities for custom constructions. Sample evaluation should include wear testing to assess durability and performance characteristics.
+    </p>
+  </div>
+
+  <!-- Category Cards -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Running Shoe Categories</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    {categories.map(cat => (
+      <a href={cat.href} class="card group p-6 hover:border-primary-300">
+        <div class="text-4xl mb-3">{cat.icon}</div>
+        <h3 class="font-semibold text-lg text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-neutral-600 text-sm mb-3">{cat.description}</p>
+        <p class="text-xs text-neutral-500">Best for: {cat.bestFor}</p>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

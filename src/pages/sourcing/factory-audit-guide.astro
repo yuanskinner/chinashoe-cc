@@ -1,0 +1,240 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const auditStandards = [
+  {
+    name: 'BSCI',
+    fullName: 'Business Social Compliance Initiative',
+    description: 'European retail industry initiative for social responsibility',
+    focus: ['Labor rights', 'Working hours', 'Health & safety', 'Environment'],
+    regions: ['Europe', 'Global'],
+  },
+  {
+    name: 'SEDEX',
+    fullName: 'Supplier Ethical Data Exchange',
+    description: 'Membership organization for ethical supply chain management',
+    focus: ['Labor standards', 'Health & safety', 'Environment', 'Business ethics'],
+    regions: ['UK', 'Global'],
+  },
+  {
+    name: 'WRAP',
+    fullName: 'Worldwide Responsible Accredited Production',
+    description: 'Independent certification for lawful, humane, and ethical manufacturing',
+    focus: ['Labor practices', 'Compliance', 'Environmental compliance', 'Security'],
+    regions: ['Global'],
+  },
+  {
+    name: 'ISO 9001',
+    fullName: 'Quality Management System',
+    description: 'International standard for quality management systems',
+    focus: ['Quality control', 'Process management', 'Continuous improvement', 'Customer satisfaction'],
+    regions: ['Global'],
+  },
+];
+
+const auditChecklist = [
+  { category: 'Documentation', items: ['Business license', 'Production permits', 'Employee contracts', 'Payroll records'] },
+  { category: 'Labor Practices', items: ['Child labor verification', 'Forced labor prevention', 'Working hours compliance', 'Wage payment verification'] },
+  { category: 'Health & Safety', items: ['Fire safety equipment', 'Emergency exits', 'Ventilation systems', 'PPE availability'] },
+  { category: 'Environment', items: ['Waste disposal', 'Chemical storage', 'Water treatment', 'Air quality'] },
+];
+
+const relatedLinks = [
+  { name: 'Supplier Directory', href: '/suppliers/' },
+  { name: 'China Export Statistics', href: '/market/china-export-statistics/' },
+  { name: 'Manufacturing Methods', href: '/encyclopedia/manufacturing/' },
+];
+---
+
+<PageLayout
+  title="Factory Audit Guide for Footwear Sourcing"
+  description="Complete factory audit guide: BSCI, SEDEX, and other social compliance standards. Learn how to conduct effective supplier audits in China footwear industry."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Factory Audit Guide', url: '/sourcing/factory-audit-guide/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Sourcing Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Factory Audit Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Factory audits are essential for verifying supplier capabilities, ensuring social compliance, and protecting your brand reputation. This comprehensive guide covers audit standards, processes, and best practices for footwear sourcing in China and beyond.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&h=400&fit=crop"
+      alt="Factory Audit"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Why Factory Audits Matter</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Factory audits serve multiple critical purposes in footwear supply chain management. They verify that suppliers can actually produce the products they claim capability for, ensure compliance with social and environmental standards, identify risks before they become costly problems, and build confidence in long-term partnerships.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear industry has faced significant reputational damage from supply chain failures, including labor rights violations, environmental contamination, and quality inconsistencies. Proactive auditing helps brands and buyers demonstrate due diligence while protecting their reputation and consumers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Types of Factory Audits</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Social Compliance Audits</strong> evaluate labor practices, working conditions, wages, and worker treatment against recognized standards. These audits address issues including child labor, forced labor, discrimination, harassment, and freedom of association. Social compliance audits are often required by brands selling in European and North American markets.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Audits</strong> assess manufacturing capabilities, quality control systems, equipment maintenance, and production processes. Quality audits verify that factories can consistently produce products meeting specifications. These audits typically include production line observations, equipment inspection, and documentation review.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Environmental Audits</strong> evaluate environmental management practices including waste handling, chemical storage, emissions control, and regulatory compliance. Environmental audits are increasingly important as brands commit to sustainability goals and face regulatory requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ethical Audits</strong> assess broader business ethics including anti-corruption practices, data protection, and responsible sourcing. These audits address risks that may not be covered by social or environmental standards.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Popular Audit Standards</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Several recognized audit standards and certification programs address social compliance in the footwear industry. Understanding these standards helps buyers select appropriate audit frameworks and interpret audit results.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>BSCI (Business Social Compliance Initiative):</strong> Developed by the Foreign Trade Association for European companies, BSCI provides a common code of conduct and audit methodology. Members commit to implementing the BSCI Code of Conduct throughout their supply chains. BSCI audits result in ratings from A (excellent) to D (acceptable) based on performance across various criteria.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>SEDEX/SMETA:</strong> The Supplier Ethical Data Exchange is a membership organization that hosts the Sedex Members Ethical Trade Audit (SMETA). SMETA audits use a standardized methodology covering labor standards, health and safety, environment, and business ethics. SEDEX provides a platform for sharing audit reports among members, reducing duplicate audits.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>WRAP (Worldwide Responsible Accredited Production):</strong> WRAP offers third-party certification for facilities demonstrating compliance with its 12 principles covering lawful, humane, and ethical production. WRAP certification is valid for six months to one year depending on the certification level achieved.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>ISO Certifications:</strong> While not specifically social compliance standards, ISO 9001 (quality management) and ISO 14001 (environmental management) certifications indicate management system maturity. These certifications provide indirect assurance of organizational capabilities and process control.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Preparing for a Factory Audit</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Successful audits require preparation from both buyers and suppliers. Before the audit, clearly communicate audit scope, standards, and expectations to the supplier. Request preliminary documentation including business licenses, organizational charts, and production records.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Develop a comprehensive audit checklist that covers all relevant standards and your specific requirements. Include items addressing your product category requirements, target market regulations, and any specific risks identified during supplier evaluation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Consider whether audits will be announced, semi-announced (24-48 hours notice), or unannounced. Unannounced audits provide more accurate assessments but may damage relationships if not handled carefully. Most brands begin with announced audits, transitioning to semi-announced or unannounced audits for ongoing suppliers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Conducting the Audit</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Audit visits typically follow a structured process: opening meeting to establish purpose and scope, document review covering policies, records, and certifications, facility tour to observe production lines, warehouses, dormitories, and welfare areas, worker interviews conducted privately to verify practices, and closing meeting to discuss findings.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      During the facility tour, observe production organization, equipment condition, material handling, quality control stations, health and safety provisions, worker behavior and morale, and environmental management practices. Take photographs for documentation while respecting sensitive areas.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Worker interviews are critical for verifying that documented practices match actual conditions. Interview workers in private, covering topics including hiring practices, contracts and wages, working hours, safety training, grievance procedures, and any concerns. Conduct interviews in workers' native language using qualified interpreters.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Common Audit Findings</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Several issues commonly arise during footwear factory audits. Overtime violations, including excessive hours during peak seasons, frequently appear in regions with tight production schedules. Documented versus actual wages must be carefully verified, as some factories maintain two sets of records.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Health and safety deficiencies including inadequate fire exits, missing safety equipment, poor ventilation, and improper chemical storage represent significant risks. Document and photograph any violations for follow-up verification.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Contract compliance issues arise when workers sign contracts different from actual employment terms. Verification of employment contracts against legal requirements and actual practices is essential.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Post-Audit Follow-up</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Audit reports should clearly document findings, evidence, and recommendations. Grade or rate overall compliance, with specific ratings for each audit area. Develop corrective action plans (CAPs) for identified issues, with clear deadlines and responsibilities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Schedule follow-up audits to verify corrective actions have been implemented. Some brands require third-party verification of major non-compliances before resuming or continuing orders. Consider whether ongoing monitoring through periodic audits or worker voice technology provides appropriate oversight.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Third-Party vs Internal Audits</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Third-party audits conducted by independent certification bodies provide credibility and consistency. Accredited certification bodies operate under international standards ensuring competence and impartiality. Third-party audit reports are often accepted across multiple brands, reducing audit burden on suppliers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Internal audits by brand or buyer staff provide direct insight but require significant resources. Internal auditors can develop deeper supplier relationships and provide specific guidance. Many brands combine internal audits for strategic suppliers with third-party audits for the broader supply base.
+    </p>
+  </div>
+
+  <!-- Audit Standards -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Popular Audit Standards</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {auditStandards.map(std => (
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg text-neutral-900 mb-1">{std.name}</h3>
+        <p class="text-sm text-primary-600 mb-2">{std.fullName}</p>
+        <p class="text-neutral-600 text-sm mb-3">{std.description}</p>
+        <div class="text-xs text-neutral-500 mb-2">Focus: {std.focus.join(', ')}</div>
+        <div class="text-xs text-neutral-500">Regions: {std.regions.join(', ')}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Checklist Preview -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Audit Checklist Categories</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {auditChecklist.map(item => (
+      <div class="card p-4">
+        <h3 class="font-semibold text-neutral-900 mb-3">{item.category}</h3>
+        <ul class="space-y-1">
+          {item.items.map(i => (
+            <li class="flex items-center gap-2 text-sm text-neutral-600">
+              <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              {i}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="flex flex-wrap gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

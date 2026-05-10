@@ -1,0 +1,193 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const priceFactors = [
+  { name: 'Materials', impact: '30-40%', description: 'Leather, foam, rubber, and components' },
+  { name: 'Labor', impact: '20-30%', description: 'Manufacturing wages and quality control' },
+  { name: 'Overhead', impact: '15-20%', description: 'Factory operations, equipment, utilities' },
+  { name: 'Logistics', impact: '10-15%', description: 'Shipping, customs, warehousing' },
+  { name: 'Margin', impact: '10-20%', description: 'Manufacturer and retailer profit' },
+];
+
+const priceTiers = [
+  { tier: 'Budget', range: '$5-15', description: 'Basic materials, simple construction, high volume' },
+  { tier: 'Mid-Range', range: '$15-40', description: 'Better materials, improved construction, brand value' },
+  { tier: 'Premium', range: '$40-100', description: 'Quality materials, advanced features, established brands' },
+  { tier: 'Luxury', range: '$100+', description: 'Premium materials, craftsmanship, heritage brands' },
+];
+
+const relatedLinks = [
+  { name: 'China Export Statistics', href: '/market/china-export-statistics/' },
+  { name: 'Factory Audit Guide', href: '/sourcing/factory-audit-guide/' },
+  { name: 'Manufacturing Methods', href: '/encyclopedia/manufacturing/' },
+];
+---
+
+<PageLayout
+  title="Footwear Pricing Analysis Guide"
+  description="Understanding footwear pricing: wholesale costs, retail pricing, and cost breakdown. Learn how materials, labor, and logistics affect shoe pricing for informed sourcing."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Market', url: '/market/' },
+    { name: 'Pricing', url: '/market/pricing/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Market Analysis</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Footwear Pricing Analysis Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Understanding footwear pricing structure helps buyers, designers, and business owners make informed decisions. This guide covers cost components, pricing tiers, and market dynamics that influence shoe prices from factory to consumer.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop"
+      alt="Footwear Manufacturing"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Footwear Cost Structure</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Footwear pricing reflects a complex interplay of materials, manufacturing processes, labor costs, logistics, and brand positioning. Understanding these components helps buyers evaluate quotes, negotiate effectively, and understand market price variations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The global footwear industry operates on significant margins at each stage of the supply chain. A pair of shoes retailing for $100 might cost $25-35 to manufacture, representing a manufacturer margin and subsequent wholesale and retail margins that determine final consumer pricing.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Material Costs</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Materials typically represent 30-40% of footwear production cost, making material selection critical to pricing strategy. Leather costs vary dramatically based on hide quality, with full grain leather costing 3-5 times more than corrected grain. Synthetic materials offer more consistent pricing but may sacrifice perceived quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Midsole materials range from basic EVA foam at $2-4 per pair to premium compounds costing $8-15 per pair. Carbon fiber plates and advanced cushioning technologies can add $5-20 to per-unit costs. Outsole materials similarly range from basic rubber compounds to premium traction systems.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Hardware components including laces, eyelets, buckles, and branding elements add incremental costs that accumulate across large production runs. Premium metal hardware can cost $1-3 per pair compared to $0.10-0.30 for standard plastic alternatives.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Labor Costs</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Labor costs in footwear manufacturing vary significantly by region, from $1-2 per pair in Vietnam and Indonesia to $3-5 in China, and $8-15 in Brazil. These differences reflect local wage levels, worker productivity, and infrastructure quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Construction complexity directly impacts labor requirements. A basic cemented sneaker might require 30-40 minutes of labor, while a Goodyear welted dress shoe could require 2-3 hours. Hand-stitching operations for premium footwear can add significant cost but provide quality markers that justify premium pricing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality control personnel, pattern making, and sample development add overhead costs that must be absorbed across production volumes. Lower-volume orders carry higher per-unit development costs, making large orders more cost-effective.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Logistics and Supply Chain</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Shipping costs from Asia to North America or Europe typically add $1-3 per pair for sea freight, or $4-8 for air freight. Lead times of 3-4 months for sea freight require significant inventory investment, while faster air shipping ties up less capital but increases per-unit costs.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Tariffs and duties significantly impact landed costs for international buyers. US footwear tariffs average 10-20% depending on material composition and HS code classification. EU duties range from 8-17% for leather footwear. These costs directly affect final pricing competitiveness.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Warehouse storage, distribution center operations, and last-mile delivery add additional costs that factor into retail pricing. E-commerce fulfillment costs often exceed traditional retail distribution for individual unit shipments.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Price Tiers and Positioning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear market segments into distinct price tiers, each with different consumer expectations and competitive dynamics. Understanding these tiers helps businesses position products appropriately.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Budget Segment ($5-15 wholesale):</strong> Competition centers on price and basic quality. Brands in this tier compete on volume and supply chain efficiency. Material and construction compromises are necessary to achieve price points, though recent improvements in manufacturing have elevated quality across the segment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Mid-Range ($15-40 wholesale):</strong> This broad segment balances quality and value, offering consumers meaningful differentiation in materials and construction without luxury pricing. Most athletic and casual footwear competes in this range.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Premium Segment ($40-100 wholesale):</strong> Premium pricing reflects quality materials, advanced technologies, brand heritage, and marketing investment. Consumers expect superior construction and durability that justifies higher prices through longer product lifecycles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Luxury Segment ($100+ wholesale):</strong> Luxury footwear emphasizes craftsmanship, heritage, exclusivity, and brand prestige. Production volumes are lower, with handcrafting often contributing to both cost and value perception. Marketing and retail experience significantly influence luxury positioning.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Factors Affecting Price Negotiation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Volume is the most significant factor in footwear pricing negotiations. Orders of 5,000+ pairs typically achieve 15-30% lower unit costs compared to 500-pair orders due to fixed cost amortization and production efficiency. Understanding minimum order quantities helps set realistic pricing expectations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Product complexity and material specification flexibility influence pricing flexibility. Standard colors and materials from supplier inventory command better pricing than custom specifications requiring new tooling or inventory commitments. Sample development costs and tooling amortization should be negotiated upfront.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Payment terms affect pricing, with advance payment or letters of credit often enabling better pricing than open account terms. Buyers with strong credit ratings and established relationships can negotiate more favorable pricing structures.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing footwear, comparing quotes requires understanding what's included. Factory quotes may or may not include sample development, tooling, shipping, insurance, or duty payment. Requesting detailed cost breakdowns enables accurate comparison.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Price should be evaluated alongside total cost of ownership, including quality consistency, on-time delivery rates, communication efficiency, and flexibility for order changes. The lowest price rarely represents the best value when quality or reliability issues add hidden costs.
+    </p>
+  </div>
+
+  <!-- Cost Breakdown -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Typical Cost Breakdown</h2>
+  <div class="grid md:grid-cols-5 gap-4 mb-12">
+    {priceFactors.map(factor => (
+      <div class="card p-4 text-center">
+        <div class="text-2xl font-bold text-primary-600 mb-2">{factor.impact}</div>
+        <h3 class="font-semibold text-neutral-900 mb-1">{factor.name}</h3>
+        <p class="text-xs text-neutral-600">{factor.description}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Price Tiers -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Price Tier Overview</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    {priceTiers.map(tier => (
+      <div class="card p-4">
+        <h3 class="font-semibold text-neutral-900 mb-2">{tier.tier}</h3>
+        <div class="text-xl font-bold text-primary-600 mb-2">{tier.range}</div>
+        <p class="text-sm text-neutral-600">{tier.description}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="flex flex-wrap gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

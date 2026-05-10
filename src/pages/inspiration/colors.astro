@@ -1,0 +1,172 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const colorTrends = [
+  { season: 'Spring/Summer 2025', colors: ['Coral Reef', 'Sky Blue', 'Lemon Zest', 'Sage Green'], mood: 'Fresh, energetic, optimistic' },
+  { season: 'Fall/Winter 2025', colors: ['Burgundy Wine', 'Forest Moss', 'Camel', 'Navy Night'], mood: 'Warm, sophisticated, grounding' },
+];
+
+const psychologyColors = [
+  { color: 'Red', meaning: 'Energy, passion, confidence', useCase: 'Statement pieces, athletic footwear' },
+  { color: 'Blue', meaning: 'Trust, calm, professionalism', useCase: 'Business casual, uniform footwear' },
+  { color: 'Black', meaning: 'Timeless, versatile, powerful', useCase: 'Formal, everyday, universal appeal' },
+  { color: 'White', meaning: 'Clean, minimal, modern', useCase: 'Streetwear, athletic, summer styles' },
+  { color: 'Green', meaning: 'Nature, growth, freshness', useCase: 'Eco-friendly lines, outdoor footwear' },
+  { color: 'Brown', meaning: 'Earth, reliability, warmth', useCase: 'Casual, boots, dress shoes' },
+];
+
+const relatedLinks = [
+  { name: 'Eco-Friendly Design', href: '/inspiration/eco-friendly-design-concepts/' },
+  { name: 'SS2026 Color Trends', href: '/inspiration/ss2026-color-trends/' },
+  { name: 'Footwear Materials', href: '/encyclopedia/materials/' },
+];
+---
+
+<PageLayout
+  title="Shoe Color Trends and Psychology"
+  description="Explore footwear color trends, seasonal palettes, and color psychology. Learn how to choose colors that resonate with target markets and enhance product appeal."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Inspiration', url: '/inspiration/' },
+    { name: 'Colors', url: '/inspiration/colors/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Design & Trends</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Shoe Color Trends & Psychology
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Color is a powerful design element that influences purchasing decisions and brand perception. Understanding color trends and the psychology behind color choices helps designers and buyers create compelling footwear collections.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&h=400&fit=crop"
+      alt="Colorful Shoe Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Color in Footwear Design</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Color selection in footwear design balances multiple considerations: seasonal trends, consumer preferences, material constraints, and psychological impact. Successful footwear lines often feature a strategic mix of classic core colors with trend-driven accents to maintain relevance while ensuring commercial viability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The global footwear market increasingly values color diversity, with consumers seeking unique expressions through their shoe choices. This trend has driven innovation in color application techniques, from traditional leather dyeing to advanced coating technologies that enable vibrant, durable finishes on various materials.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Seasonal Color Forecasting</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Fashion color forecasting agencies release seasonal palettes 18-24 months in advance, influencing material development and production planning across the footwear industry. These forecasts are based on broader cultural movements, runway analysis, and consumer sentiment research.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Spring and summer collections typically emphasize lighter, more vibrant colors that reflect the season's energy and optimism. Fall and winter palettes shift toward deeper, warmer tones that provide visual comfort during darker months. However, these traditional patterns have evolved, with consumers increasingly embracing year-round color variety.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Color Psychology in Footwear</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Color psychology suggests that hues influence consumer perceptions and purchasing behavior. In footwear, color choices communicate personality traits, social status, and intended use contexts. Understanding these associations helps designers create products that resonate with target audiences.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Red:</strong> Conveys energy, excitement, and confidence. Red footwear makes bold statements and is popular in athletic and fashion-forward segments. Studies show red can increase perceived performance, making it common in running and training shoes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Blue:</strong> Represents trust, stability, and professionalism. Navy and royal blue footwear is versatile across casual and business contexts. Lighter blues convey freshness and approachability, while deep blues project sophistication.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Black:</strong> The most versatile color in footwear, black represents timelessness, power, and adaptability. Black shoes complement virtually any outfit and are considered essential wardrobe pieces. The dominance of black in formal footwear reflects its association with professionalism and elegance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>White:</strong> Clean, minimal, and modern, white footwear has transcended seasonal trends to become a year-round staple. White's association with purity and simplicity makes it popular across athletic, casual, and even formal contexts, though maintenance considerations limit some applications.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Material and Color Interactions</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Different materials respond differently to color application, affecting both aesthetic outcome and durability. Leather accepts dye deeply, allowing rich, saturated colors that develop character over time. Synthetic materials often require surface coatings that may have different durability characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Patent leather and glossy finishes create different color perceptions than matte treatments of the same hue. Metallic and pearlescent effects add dimension and visual interest, though these trends tend to be more cyclical and fashion-dependent than solid colors.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Regional Color Preferences</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Color preferences vary significantly across global markets. European markets often favor neutral, muted palettes with classic combinations. North American consumers embrace broader color variety, including bolder choices. Asian markets show strong preferences for certain colors that vary by country, with Japan often leading in experimental color adoption.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sustainable Color Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Sustainable footwear production has influenced color trends, with natural dyes and eco-friendly pigments gaining attention. These alternatives often produce more muted, earthy tones that align with environmental consciousness messaging. The tension between vibrant fashion colors and sustainable production methods drives ongoing innovation.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing footwear, color consistency across production runs is critical for maintaining brand standards. Specify color standards using Pantone or other standardized color systems, and require pre-production color samples from manufacturers to verify accuracy.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Consider the material composition when selecting colors, as some hues are more difficult to achieve consistently on certain substrates. Request color matching reports and understand the tolerance levels acceptable for your brand. Color fading and rub-off characteristics should be evaluated during product testing.
+    </p>
+  </div>
+
+  <!-- Season Trends -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Current Color Trends</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {colorTrends.map(trend => (
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg text-neutral-900 mb-3">{trend.season}</h3>
+        <div class="flex flex-wrap gap-2 mb-3">
+          {trend.colors.map(color => (
+            <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">{color}</span>
+          ))}
+        </div>
+        <p class="text-sm text-neutral-600">Mood: {trend.mood}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Color Psychology -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Color Psychology Reference</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+    {psychologyColors.map(item => (
+      <div class="card p-4">
+        <h3 class="font-semibold text-neutral-900 mb-2">{item.color}</h3>
+        <p class="text-sm text-neutral-600 mb-2">{item.meaning}</p>
+        <p class="text-xs text-neutral-500">Use: {item.useCase}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="flex flex-wrap gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

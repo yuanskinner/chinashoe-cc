@@ -1,0 +1,231 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Oxford Shoes',
+    description: 'The most formal dress shoe with closed lacing system, ideal for business and formal occasions.',
+    image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/',
+  },
+  {
+    title: 'Derby Shoes',
+    description: 'Versatile open-lacing style suitable for both formal and smart casual settings.',
+    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/',
+  },
+  {
+    title: 'Loafers',
+    description: 'Slip-on leather shoes ranging from casual penny loafers to formal horsebit styles.',
+    image: 'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400&h=300&fit=crop',
+    href: '/encyclopedia/loafers/',
+  },
+  {
+    title: 'Monk Strap Shoes',
+    description: 'Distinguished by one or two buckle straps, offering a unique alternative to traditional laces.',
+    image: 'https://images.unsplash.com/photo-1603251579711-ba1b6b5ed07e?w=400&h=300&fit=crop',
+    href: '/encyclopedia/dress-shoes/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Loafers', href: '/encyclopedia/loafers/', count: 82 },
+  { name: 'Boots', href: '/encyclopedia/boots/', count: 95 },
+  { name: 'Dress Shoes', href: '/encyclopedia/dress-shoes/', count: 120 },
+];
+---
+
+<PageLayout
+  title="Leather Shoes Guide"
+  description="Comprehensive guide to leather shoes: Oxford, Derby, Loafer types, leather grades, construction methods, and B2B sourcing insights from Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Leather Shoes', url: '/encyclopedia/leather-shoes/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Footwear Types',
+      links: [
+        { label: 'Running Shoes', href: '/encyclopedia/running-shoes/' },
+        { label: 'Basketball Shoes', href: '/encyclopedia/basketball-shoes/' },
+        { label: 'Dress Shoes', href: '/encyclopedia/dress-shoes/' },
+        { label: 'Leather Shoes', href: '/encyclopedia/leather-shoes/', active: true },
+        { label: 'Boots', href: '/encyclopedia/boots/' },
+        { label: 'Sandals', href: '/encyclopedia/sandals/' },
+      ],
+    },
+    {
+      title: 'Leather Types',
+      links: [
+        { label: 'Full Grain Leather', href: '/encyclopedia/materials/leather/' },
+        { label: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Leather & Formal</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Leather Shoes Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Everything you need to know about leather footwear: from classic Oxford constructions to premium leather grades. Learn about leather shoe types, craftsmanship, and sourcing from Chinese manufacturers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&h=400&fit=crop"
+      alt="Classic Leather Dress Shoes Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Leather Shoes</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Leather shoes represent centuries of footwear craftsmanship, combining traditional techniques with premium materials to create footwear that offers durability, comfort, and timeless style. From formal business occasions to sophisticated casual wear, leather shoes remain the cornerstone of professional attire and quality footwear collections worldwide.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The global leather footwear market is valued at over $50 billion, with China producing approximately 40% of the world's leather shoes. Chinese manufacturers have developed advanced capabilities in producing leather footwear across all quality tiers, from budget-friendly cemented construction to premium Goodyear welted shoes that rival European craftsmanship.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Oxford Shoes: The Pinnacle of Formal Footwear</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Oxford shoes originated in Scotland and Ireland during the 19th century, evolving from the more casual boots of the era. They became the standard for formal men's footwear and have maintained that position through their clean lines, sophisticated appearance, and versatile styling options. The defining characteristic of Oxford shoes is their closed lacing system, where the vamp (the front part of the shoe upper) is sewn under the quarters, creating a seamless appearance when laced.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern Oxford shoes come in several variations: plain toe (simplest design), cap toe (featuring a horizontal line across the toe box), wingtip (with an M-shaped seam extending from the toe to the sides), and whole cut (made from a single piece of leather for maximum elegance). Each variation offers different levels of formality, with plain toe cap toes being the most formal and wingtips providing slightly more visual interest while maintaining appropriateness for business settings.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Derby Shoes: Versatile Elegance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Derby shoes offer a more approachable alternative to Oxfords while maintaining a polished appearance. The key difference lies in the construction: Derby shoes feature an open lacing system where the quarters are sewn on top of the vamp, creating a visible lace gap when fastened. This construction makes Derby shoes more accommodating for wider feet and provides a slightly more relaxed aesthetic.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Originally designed for outdoor activities and hunting in the 19th century, Derby shoes have evolved into versatile footwear suitable for both formal and smart casual occasions. They pair equally well with suits and with dark jeans, making them an excellent investment for professionals who need footwear that can transition between different settings.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Loafers: The Art of Effortless Style</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Loafers are slip-on shoes that eliminate the need for laces while maintaining the sophisticated appearance of leather dress shoes. The loafer category encompasses several distinct styles, each with its own history and appropriate use cases. Penny loafers emerged in the 1930s as casual campus footwear and evolved into versatile business casual options. Horsebit loafers, popularized by Gucci in the 1950s, feature decorative metal bridles and can be dressed up for formal occasions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Belgian slippers represent the pinnacle of luxury casual footwear, featuring a hand-sewn moccasin construction and distinctive bow. These shoes are ideal for indoor entertaining and upscale casual settings. For B2B buyers, loafers offer excellent opportunities for product differentiation through unique materials, decorative elements, and comfort-focused innovations.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Leather Grades and Quality</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The quality of leather significantly impacts the appearance, comfort, and longevity of leather shoes. Understanding leather grades helps buyers evaluate the value proposition of different products and make informed sourcing decisions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Full Grain Leather:</strong> The highest quality leather available, featuring the complete grain surface with all natural markings intact. Full grain leather develops a beautiful patina over time, becoming more attractive with age. It offers superior durability and breathability, making it ideal for premium dress shoes that are meant to last for decades with proper care.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Top Grain Leather:</strong> The surface is sanded to remove imperfections, resulting in a more uniform appearance while retaining reasonable durability. Top grain leather is commonly used in mid-range dress shoes, offering good quality at accessible price points.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Corrected Grain Leather:</strong> Made from hides with significant imperfections that require extensive processing. The surface is buffed and embossed with artificial grain patterns. While corrected grain is affordable, it lacks the character and longevity of higher-quality leathers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Goodyear welt construction remains the gold standard for leather dress shoes, allowing for multiple resolings and providing excellent support. Blake stitch construction offers a sleeker profile and greater flexibility, though with limited repairability. Cemented construction has evolved significantly, with modern adhesives providing durable bonds suitable for many applications.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China offers comprehensive leather shoe manufacturing capabilities across all quality tiers. Key production regions include Wenzhou in Zhejiang Province, known for traditional Goodyear welt craftsmanship; Chengdu in Sichuan Province, specializing in both Western-style dress shoes and traditional Chinese leather footwear; and the Pearl River Delta region, offering modern manufacturing with competitive pricing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing leather shoes from China, critical factors include the manufacturer's leather sourcing capabilities and supplier relationships, their experience with specific construction methods, quality control processes, and sample development procedures. Requesting multiple samples and conducting thorough evaluation before placing production orders helps ensure product quality and consistency.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👞</div>
+      <h3 class="font-semibold text-lg mb-2">Oxford</h3>
+      <p class="text-neutral-600 text-sm">
+        The most formal closed-lacing style for business and black tie occasions.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👞</div>
+      <h3 class="font-semibold text-lg mb-2">Derby</h3>
+      <p class="text-neutral-600 text-sm">
+        Versatile open-lacing style for business professional settings.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Loafer</h3>
+      <p class="text-neutral-600 text-sm">
+        Slip-on elegance for smart casual and business casual occasions.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎩</div>
+      <h3 class="font-semibold text-lg mb-2">Monk Strap</h3>
+      <p class="text-neutral-600 text-sm">
+        Buckle-closure distinction adding character to formal attire.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Related Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+            {article.title}
+          </h3>
+          <p class="text-sm text-neutral-600">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
+    <div class="flex flex-wrap gap-3">
+      {relatedCategories.map(cat => (
+        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
+          <span class="font-medium text-neutral-700">{cat.name}</span>
+          <span class="text-sm text-neutral-500">({cat.count})</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

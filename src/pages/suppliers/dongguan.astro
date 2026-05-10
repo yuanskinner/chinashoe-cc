@@ -1,0 +1,235 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const whyDongguan = [
+  { title: 'Industry Hub', description: 'Over 40 years of footwear manufacturing history with established supply chains' },
+  { title: 'Skilled Workforce', description: 'Experienced workers with specialized skills in athletic and casual footwear' },
+  { title: 'Infrastructure', description: 'Modern factories with advanced equipment and quality control systems' },
+  { title: 'Certification', description: 'Many factories hold international certifications including BSCI, ISO 9001' },
+];
+
+const dongguanSuppliers = [
+  {
+    name: 'Guangdong Perfect Footwear Co., Ltd.',
+    location: 'Dongguan City, Guangdong',
+    established: 2008,
+    specialization: ['Running Shoes', 'Basketball Shoes', 'Sports Sneakers'],
+    moq: '500 pairs',
+    certifications: ['BSCI', 'ISO 9001', 'Nike FS'],
+    productionCapacity: '100,000 pairs/month',
+    employees: '500+',
+    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop',
+    href: '/suppliers/guangdong-perfect-footwear/',
+  },
+  {
+    name: 'Dongguan Huaxin Sports Products Co.',
+    location: 'Dongguan, Guangdong',
+    established: 2010,
+    specialization: ['Running Shoes', 'Trail Shoes', 'Outdoor Footwear'],
+    moq: '300 pairs',
+    certifications: ['ISO 9001', 'ISO 14001', 'WRAP'],
+    productionCapacity: '80,000 pairs/month',
+    employees: '350+',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/suppliers/dongguan-huaxin/',
+  },
+  {
+    name: 'Dongguan Kaiyuan Leather Goods Co.',
+    location: 'Dongguan, Guangdong',
+    established: 2005,
+    specialization: ['Leather Shoes', 'Dress Shoes', 'Boots'],
+    moq: '200 pairs',
+    certifications: ['BSCI', 'Sedex', 'CE'],
+    productionCapacity: '50,000 pairs/month',
+    employees: '280+',
+    image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=300&fit=crop',
+    href: '/suppliers/dongguan-kaiyuan/',
+  },
+  {
+    name: 'Dongguan Yitai Sports Footwear Factory',
+    location: 'Dongguan, Guangdong',
+    established: 2012,
+    specialization: ['Sports Shoes', 'Casual Sneakers', 'Training Shoes'],
+    moq: '500 pairs',
+    certifications: ['ISO 9001', 'Adidas'],
+    productionCapacity: '120,000 pairs/month',
+    employees: '450+',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/suppliers/dongguan-yitai/',
+  },
+  {
+    name: 'Dongguan Hongyuan Safety Products Co.',
+    location: 'Dongguan, Guangdong',
+    established: 2007,
+    specialization: ['Safety Shoes', 'Work Boots', 'Steel Toe Shoes'],
+    moq: '500 pairs',
+    certifications: ['ISO 9001', 'EN ISO 20345', 'ASTM'],
+    productionCapacity: '60,000 pairs/month',
+    employees: '320+',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+    href: '/suppliers/dongguan-hongyuan/',
+  },
+];
+
+const relatedLinks = [
+  { name: 'Supplier Directory', href: '/suppliers/' },
+  { name: 'All Suppliers', href: '/suppliers/all/' },
+  { name: 'Guangdong Region', href: '/suppliers/guangdong/' },
+];
+---
+
+<PageLayout
+  title="Dongguan Shoe Factories & Suppliers"
+  description="Find verified footwear manufacturers in Dongguan, China. Complete directory of Dongguan shoe factories specializing in sports, casual, and leather footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Dongguan', url: '/suppliers/dongguan/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Guangdong Province</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Dongguan Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Dongguan is one of China's most important footwear manufacturing hubs, home to hundreds of factories producing athletic shoes, casual footwear, leather goods, and safety shoes for global brands.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&h=400&fit=crop"
+      alt="Dongguan Manufacturing"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Dongguan -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Why Source from Dongguan?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {whyDongguan.map(item => (
+        <div class="bg-white rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-2">{item.title}</h3>
+          <p class="text-sm text-neutral-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Dongguan: The Factory Floor of China</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Dongguan has earned its reputation as a global manufacturing powerhouse for footwear and sports goods. Located in the Pearl River Delta, the city offers strategic advantages including proximity to major ports, mature supply chain ecosystems, and a deep pool of experienced workers and managers familiar with international quality standards.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear industry in Dongguan traces its roots to the 1980s when foreign investment flooded into the Pearl River Delta. Taiwanese and Hong Kong companies established factories that evolved into sophisticated manufacturing operations serving global brands. Today, Dongguan factories produce hundreds of millions of pairs of shoes annually, making it one of the world's largest footwear production centers.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Industry Specializations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Dongguan factories are particularly strong in athletic and sports footwear, producing running shoes, basketball shoes, training shoes, and outdoor footwear. The region's expertise in injection molding, EVA foam processing, and synthetic material handling makes it ideal for athletic shoe production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Leather footwear manufacturing also thrives in Dongguan, with factories producing dress shoes, casual leather shoes, and boots for European and American brands. Quality standards in Dongguan leather factories range from mid-range to premium, with several facilities capable of Goodyear welt and Blake stitch construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Safety footwear production has grown in Dongguan, with factories serving industrial markets in Europe, North America, and Australia. These factories often hold certifications for EN ISO 20345 (European safety footwear standard) and ASTM standards for the North American market.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Working with Dongguan Factories</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Successful partnerships with Dongguan factories require clear communication, detailed specifications, and realistic expectations. Most factories prefer orders of 500+ pairs per style to achieve economic production runs. Sample development typically takes 3-4 weeks, with production lead times of 45-60 days for standard orders.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality control is essential when working with any manufacturer. We recommend third-party inspection at key production stages: initial production samples (IPS), during production check (DUPRO), and final random inspection (FRI). Many buyers also engage laboratories to test materials and finished products for compliance with target market regulations.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Logistics and Shipping</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Dongguan's location in the Pearl River Delta provides excellent logistics connectivity. The Port of Shenzhen is approximately 1-2 hours from Dongguan by truck, offering direct container service to major global destinations. The Port of Hong Kong is similarly accessible, providing additional routing options.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Air cargo services are available through Shenzhen Bao'an International Airport for urgent shipments. Most factories are experienced in handling export documentation including commercial invoices, packing lists, and certificates of origin.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Factory Audits and Compliance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      International brands sourcing from Dongguan typically require social compliance audits including BSCI, SEDEX/SMETA, or WRAP certifications. Most established factories in the region hold multiple certifications and are experienced in audit preparation and ongoing compliance maintenance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental compliance is increasingly important, with factories investing in wastewater treatment, chemical management systems, and energy efficiency improvements. Buyers with sustainability commitments will find Dongguan factories increasingly capable of meeting environmental standards.
+    </p>
+  </div>
+
+  <!-- Supplier Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Featured Dongguan Suppliers</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    {dongguanSuppliers.map(supplier => (
+      <a href={supplier.href} class="card group overflow-hidden">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={supplier.image}
+            alt={supplier.name}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2 line-clamp-1">
+            {supplier.name}
+          </h3>
+          <div class="flex items-center gap-2 text-sm text-neutral-500 mb-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            {supplier.location}
+          </div>
+          <div class="flex flex-wrap gap-1 mb-3">
+            {supplier.specialization.slice(0, 3).map(spec => (
+              <span class="text-xs px-2 py-1 bg-neutral-100 rounded text-neutral-600">{spec}</span>
+            ))}
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs text-neutral-500 mb-3">
+            <div>MOQ: {supplier.moq}</div>
+            <div>Capacity: {supplier.productionCapacity}</div>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            {supplier.certifications.map(cert => (
+              <span class="text-xs px-2 py-0.5 bg-green-100 rounded text-green-700">{cert}</span>
+            ))}
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Links</h3>
+    <div class="flex flex-wrap gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

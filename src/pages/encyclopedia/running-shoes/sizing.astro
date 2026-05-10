@@ -1,0 +1,197 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const sizeCharts = [
+  { region: 'US Men', sizes: ['7', '8', '9', '10', '11', '12', '13'] },
+  { region: 'US Women', sizes: ['5', '6', '7', '8', '9', '10', '11'] },
+  { region: 'UK', sizes: ['6', '7', '8', '9', '10', '11', '12'] },
+  { region: 'EU', sizes: ['40', '41', '42', '43', '44', '45', '46'] },
+  { region: 'CM', sizes: ['25', '26', '27', '28', '29', '30', '31'] },
+];
+
+const fittingTips = [
+  { title: 'Toe Box Space', tip: 'Ensure thumb width (1-1.5cm) between longest toe and shoe end' },
+  { title: 'Heel Lock', tip: 'Heel should fit snugly without slipping when walking' },
+  { title: 'Width Check', tip: 'Side-to-side fit should be comfortable without pinching' },
+  { title: 'Arch Support', tip: 'Arch should align with shoe\'s arch curve for proper support' },
+];
+
+const relatedLinks = [
+  { name: 'Running Shoe Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+  { name: 'Cushioning Technologies', href: '/encyclopedia/running-shoes/cushioning/' },
+  { name: 'Running Shoe Categories', href: '/encyclopedia/running-shoes/categories/' },
+];
+---
+
+<PageLayout
+  title="Running Shoe Sizing Guide"
+  description="Complete running shoe sizing guide: international size conversions, proper fit techniques, width options, and how to choose the right size for your running shoes."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Running Shoes', url: '/encyclopedia/running-shoes/' },
+    { name: 'Sizing Guide', href: '/encyclopedia/running-shoes/sizing/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Running Shoes',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/running-shoes/' },
+        { label: 'Anatomy', href: '/encyclopedia/running-shoes/anatomy/' },
+        { label: 'Cushioning', href: '/encyclopedia/running-shoes/cushioning/' },
+        { label: 'Categories', href: '/encyclopedia/running-shoes/categories/' },
+        { label: 'Trail Running', href: '/encyclopedia/running-shoes/trail/' },
+        { label: 'Racing Flats', href: '/encyclopedia/running-shoes/racing-flats/' },
+        { label: 'Sizing Guide', href: '/encyclopedia/running-shoes/sizing/', active: true },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Running & Athletic</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Running Shoe Sizing Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Getting the right fit is crucial for running comfort and injury prevention. This guide covers international sizing charts, fit verification techniques, and width options to help you find your perfect running shoe size.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=1200&h=400&fit=crop"
+      alt="Running Shoe Sizing Guide"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Size Chart -->
+  <div class="bg-neutral-50 rounded-xl p-6 mb-12">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">International Size Conversion Chart</h2>
+    <p class="text-neutral-600 text-sm mb-4">Note: Sizes may vary between brands. Always verify with manufacturer-specific charts when available.</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-neutral-200">
+            <th class="text-left py-2 px-3 font-semibold text-neutral-700">US Men</th>
+            <th class="text-left py-2 px-3 font-semibold text-neutral-700">US Women</th>
+            <th class="text-left py-2 px-3 font-semibold text-neutral-700">UK</th>
+            <th class="text-left py-2 px-3 font-semibold text-neutral-700">EU</th>
+            <th class="text-left py-2 px-3 font-semibold text-neutral-700">CM</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sizeCharts[0].sizes.map((usMen, i) => (
+            <tr class="border-b border-neutral-100">
+              <td class="py-2 px-3 text-neutral-600">{usMen}</td>
+              <td class="py-2 px-3 text-neutral-600">{sizeCharts[1].sizes[i]}</td>
+              <td class="py-2 px-3 text-neutral-600">{sizeCharts[2].sizes[i]}</td>
+              <td class="py-2 px-3 text-neutral-600">{sizeCharts[3].sizes[i]}</td>
+              <td class="py-2 px-3 text-neutral-600">{sizeCharts[4].sizes[i]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">How to Measure Your Foot</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Accurate foot measurement is the foundation of finding the right running shoe size. Feet change over time due to weight fluctuations, aging, and activity levels. Measure both feet at the end of the day when feet are slightly swollen, as this represents their largest state during typical daily activities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      To measure your foot at home, place a piece of paper on a hard floor against a wall. Stand on the paper with your heel against the wall, then mark the longest toe and the back of your heel. Measure the distance between these marks in centimeters. Repeat for both feet and use the larger measurement.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Understanding Running Shoe Fit</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Running shoes should fit differently than casual or dress shoes. The additional space accommodates foot swelling during runs, allows for proper biomechanics, and ensures comfort over extended exercise durations. A common rule is to have approximately one thumb's width (1-1.5cm) between your longest toe and the end of the shoe.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Running shoe sizing often differs from street shoe sizing. Many runners wear a half size to full size larger in running shoes compared to their dress or casual shoes. This additional space becomes particularly important during longer runs where feet naturally expand further.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Width Options and Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Standard running shoe widths are designated as follows: 2A (narrow), B (standard women's width), D (standard men's width), and 2E or 4E (wide/extra wide). Most running shoe manufacturers offer multiple width options for popular models to accommodate different foot shapes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Runners with wider feet should seek out wide width options rather than sizing up, which can cause the shoe to fit too loosely in the heel and compromise heel lock. Similarly, narrow-footed runners benefit from narrow or standard widths to prevent excessive side-to-side movement that can cause blisters.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Brand-Specific Sizing Variations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Each running shoe brand has unique sizing characteristics based on their last (the form around which shoes are constructed). Nike running shoes often run slightly small, while ASICS tends to offer more generous fit. New Balance and Brooks typically run true to size, though width availability varies.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B buyers, understanding these brand variations is essential when sourcing or private-labeling products. Consistency in sizing across different models from the same manufacturer should be verified, as midsole stack heights and upper constructions can affect fit even within a single brand's lineup.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Try Before You Buy</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Whenever possible, try running shoes in person before purchasing. Visit specialty running stores where staff can analyze your gait, measure your feet properly, and recommend appropriate models and sizes. Running in place or doing a few steps in the store helps verify the fit before committing to a purchase.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      If buying online, research return policies carefully and consider ordering multiple sizes to compare. Many online retailers offer free returns, making it possible to try several sizes in the comfort of your home with minimal risk.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Break-In Period</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern running shoes typically require minimal break-in time compared to traditional leather footwear. However, new shoes may feel slightly stiff initially as the upper materials conform to your foot. Wear them for short walks or easy runs initially, then evaluate comfort before long or intense workouts.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      If persistent discomfort occurs after several wears, the shoe may not be the right fit regardless of accurate sizing. Discomfort in specific areas (toes, heels, arches) often indicates width or size issues that should be addressed by trying different options.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing running shoes from manufacturers, understanding the last used for each model helps predict fit characteristics. Request specification sheets that include last dimensions and compare these against target market foot measurements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Consider the target market's demographic when selecting sizing ranges. Asian markets often prefer narrower fits, while North American markets typically require wider width options. European markets fall somewhere in between. Offering comprehensive size ranges including half sizes and width variations improves market appeal.
+    </p>
+  </div>
+
+  <!-- Fitting Tips -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Essential Fitting Tips</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {fittingTips.map(tip => (
+      <div class="card p-4">
+        <h3 class="font-semibold text-neutral-900 mb-2">{tip.title}</h3>
+        <p class="text-sm text-neutral-600">{tip.tip}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Related Links -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      {relatedLinks.map(link => (
+        <a href={link.href} class="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{link.name}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,227 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const regions = [
+  { name: 'Guangdong', description: 'Sports shoes, sneakers, casual footwear', count: 1240, href: '/suppliers/guangdong/' },
+  { name: 'Fujian', description: 'Sports shoes, outdoor footwear', count: 890, href: '/suppliers/fujian/' },
+  { name: 'Zhejiang', description: 'Leather shoes, fashion footwear', count: 720, href: '/suppliers/zhejiang/' },
+  { name: 'Shandong', description: 'Safety shoes, work footwear', count: 540, href: '/suppliers/shandong/' },
+  { name: 'Jiangsu', description: 'Children\'s shoes, casual footwear', count: 420, href: '/suppliers/jiangsu/' },
+  { name: 'Anhui', description: 'PU shoes, casual footwear', count: 310, href: '/suppliers/anhui/' },
+];
+
+const categories = [
+  { name: 'Running Shoes', href: '/suppliers/?category=running-shoes', count: 890 },
+  { name: 'Leather Shoes', href: '/suppliers/?category=leather-shoes', count: 670 },
+  { name: 'Sneakers', href: '/suppliers/?category=sneakers', count: 780 },
+  { name: 'Safety Shoes', href: '/suppliers/?category=safety-shoes', count: 450 },
+  { name: 'Casual Shoes', href: '/suppliers/?category=casual-shoes', count: 620 },
+  { name: "Children's Shoes", href: '/suppliers/?category=children-shoes', count: 340 },
+  { name: 'Sandals', href: '/suppliers/?category=sandals', count: 280 },
+  { name: 'Boots', href: '/suppliers/?category=boots', count: 390 },
+];
+
+const allSuppliers = [
+  {
+    name: 'Guangdong Perfect Footwear Co., Ltd.',
+    location: 'Dongguan, Guangdong',
+    established: 2008,
+    specialization: ['Running Shoes', 'Basketball Shoes', 'Sports Sneakers'],
+    moq: '500 pairs',
+    certifications: ['BSCI', 'ISO 9001', 'Nike FS'],
+    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop',
+    href: '/suppliers/guangdong-perfect-footwear/',
+  },
+  {
+    name: 'Fujian Yili Shoes Manufacturing Co.',
+    location: 'Quanzhou, Fujian',
+    established: 2005,
+    specialization: ['Sports Shoes', 'Hiking Shoes', 'Outdoor Footwear'],
+    moq: '300 pairs',
+    certifications: ['WRAP', 'ISO 14001', 'Adidas'],
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/suppliers/fujian-yili-shoes/',
+  },
+  {
+    name: 'Wenzhou Huachen Leather Goods Co.',
+    location: 'Wenzhou, Zhejiang',
+    established: 1998,
+    specialization: ['Oxford Shoes', 'Derby Shoes', 'Loafers'],
+    moq: '200 pairs',
+    certifications: ['BSCI', 'Sedex', 'CE'],
+    image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=300&fit=crop',
+    href: '/suppliers/wenzhou-huachen/',
+  },
+  {
+    name: 'Qingdao Safety First Industrial Co.',
+    location: 'Qingdao, Shandong',
+    established: 2010,
+    specialization: ['Safety Shoes', 'Work Boots', 'Steel Toe Cap Shoes'],
+    moq: '500 pairs',
+    certifications: ['ISO 9001', 'EN ISO 20345', 'ASTM'],
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/suppliers/qingdao-safety-first/',
+  },
+  {
+    name: 'Fujian Putian Sports Shoes Co.',
+    location: 'Putian, Fujian',
+    established: 2003,
+    specialization: ['Sports Shoes', 'Running Shoes', 'Sneakers'],
+    moq: '500 pairs',
+    certifications: ['BSCI', 'ISO 9001', 'Nike'],
+    image: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=400&h=300&fit=crop',
+    href: '/suppliers/fujian-putian-sports-shoes/',
+  },
+  {
+    name: 'Sichuan Chengdu Women Boots Factory',
+    location: 'Chengdu, Sichuan',
+    established: 2006,
+    specialization: ['Women\'s Boots', 'Ankle Boots', 'Fashion Boots'],
+    moq: '300 pairs',
+    certifications: ['ISO 9001', 'CE'],
+    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=300&fit=crop',
+    href: '/suppliers/sichuan-chengdu-womens-boots/',
+  },
+];
+---
+
+<PageLayout
+  title="All Suppliers Directory"
+  description="Browse all verified Chinese footwear manufacturers. Complete supplier directory with regional and categorical filters."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'All Suppliers', url: '/suppliers/all/' },
+  ]}
+>
+  <div class="mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      All Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Browse our complete directory of verified footwear manufacturers from across China. Find the right supplier for your specific product requirements.
+    </p>
+  </div>
+
+  <!-- Stats Banner -->
+  <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-6 md:p-8 text-white mb-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold mb-1">5,000+</div>
+        <div class="text-primary-100 text-sm">Verified Suppliers</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold mb-1">15</div>
+        <div class="text-primary-100 text-sm">Production Regions</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold mb-1">50+</div>
+        <div class="text-primary-100 text-sm">Product Categories</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold mb-1">24/7</div>
+        <div class="text-primary-100 text-sm">Inquiry Support</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search & Filter -->
+  <div class="bg-neutral-50 rounded-xl p-6 mb-12">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="md:col-span-2">
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="search"
+            placeholder="Search by company name, product, or keyword..."
+            class="input pl-12"
+            onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
+          />
+        </div>
+      </div>
+      <select class="input">
+        <option value="">All Categories</option>
+        {categories.map(cat => (
+          <option value={cat.name}>{cat.name} ({cat.count})</option>
+        ))}
+      </select>
+    </div>
+    <div class="flex flex-wrap gap-3 mt-4">
+      <span class="text-sm text-neutral-600">Popular:</span>
+      {['Sports Shoes', 'Leather Shoes', 'Safety Shoes', 'OEM/ODM'].map(tag => (
+        <button class="text-sm px-3 py-1 bg-white border border-neutral-200 rounded-full hover:border-primary-300 hover:text-primary-600 transition-colors" onclick="alert('Search feature is coming soon! Stay tuned.');">
+          {tag}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Regions -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Browse by Region</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {regions.map(region => (
+        <a href={region.href} class="card flex items-center gap-4 hover:border-primary-300 border border-transparent">
+          <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-semibold text-neutral-900">{region.name}</h3>
+            <p class="text-sm text-neutral-500">{region.description}</p>
+          </div>
+          <div class="text-sm text-neutral-400">{region.count}</div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- All Suppliers Grid -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Featured Suppliers</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {allSuppliers.map(supplier => (
+        <a href={supplier.href} class="card group overflow-hidden">
+          <div class="aspect-video overflow-hidden">
+            <img
+              src={supplier.image}
+              alt={supplier.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2 line-clamp-1">
+              {supplier.name}
+            </h3>
+            <div class="flex items-center gap-2 text-sm text-neutral-500 mb-3">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {supplier.location}
+            </div>
+            <div class="flex flex-wrap gap-1 mb-3">
+              {supplier.specialization.slice(0, 3).map(spec => (
+                <span class="text-xs px-2 py-1 bg-neutral-100 rounded text-neutral-600">{spec}</span>
+              ))}
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-neutral-500">MOQ: {supplier.moq}</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- View More -->
+  <div class="text-center">
+    <a href="/suppliers/" class="btn-secondary">
+      View Regional Supplier Lists
+    </a>
+  </div>
+</PageLayout>
