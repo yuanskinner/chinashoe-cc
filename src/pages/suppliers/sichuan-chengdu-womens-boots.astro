@@ -1,0 +1,202 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const products = [
+  { name: 'Ankle Boots', moq: '300 pairs', leadTime: '45-60 days' },
+  { name: 'Knee-High Boots', moq: '200 pairs', leadTime: '50-65 days' },
+  { name: 'Riding Boots', moq: '200 pairs', leadTime: '50-65 days' },
+  { name: 'Combat Boots', moq: '300 pairs', leadTime: '45-60 days' },
+  { name: 'Fashion Boots', moq: '250 pairs', leadTime: '45-60 days' },
+];
+
+const certifications = [
+  { name: 'BSCI', description: 'Business Social Compliance Initiative' },
+  { name: 'ISO 9001', description: 'Quality Management System' },
+  { name: 'ISO 14001', description: 'Environmental Management System' },
+  { name: 'WRAP', description: 'Worldwide Responsible Accredited Production' },
+];
+
+const capabilities = [
+  { name: 'Direct Injection', description: 'PU direct-injection for seamless waterproof construction' },
+  { name: 'Hand-Lasting', description: 'Traditional craftsmanship for premium products' },
+  { name: 'Leather Matching', description: 'Expert color and texture matching across materials' },
+  { name: 'Custom Hardware', description: 'Specialized buttons, zippers, and buckles sourcing' },
+];
+---
+
+<PageLayout
+  title="Sichuan Chengdu Women's Boots Factory"
+  description="Verified supplier profile for a women's boots manufacturer in Chengdu, Sichuan. Specializing in fashion boots, ankle boots, and knee-high riding boots with direct injection and hand-lasting capabilities."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Sichuan', url: '/suppliers/sichuan/' },
+    { name: 'Chengdu Women Boots', url: '/suppliers/sichuan-chengdu-womens-boots/' },
+  ]}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-success">Verified Supplier</span>
+      <span class="badge-primary">Women's Boots</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Sichuan Chengdu Women's Boots Factory
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Specializing in women's fashion boots with direct injection and hand-lasting capabilities. Located in Chengdu, Sichuan Province, combining skilled craftsmanship with modern production technology for premium women's boot collections.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542840410-8e6f3e5c5c4a?w=1200&h=400&fit=crop"
+      alt="Women's Fashion Boots"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Quick Info -->
+  <div class="grid md:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">Chengdu</div>
+      <div class="text-sm text-neutral-500">Location</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">2005</div>
+      <div class="text-sm text-neutral-500">Established</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">500K</div>
+      <div class="text-sm text-neutral-500">Annual Capacity</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">50+</div>
+      <div class="text-sm text-neutral-500">Brand Partners</div>
+    </div>
+  </div>
+
+  <!-- Company Overview -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Company Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Our Chengdu factory has been dedicated exclusively to women's boots for nearly two decades, developing deep expertise in this specialized category. We understand that women's boots require different last shapes, heel configurations, and aesthetic considerations than men's or athletic footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our 15,000 square meter facility employs over 350 workers, with specialized teams for pattern development, sample making, and production. We operate both traditional hand-lasting production lines for premium products and modern direct-injection lines for waterproof work and fashion boots.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We serve an international client base including European fashion brands, American specialty retailers, and Asian department store private labels. Our design team stays current with international fashion trends to help clients develop relevant, market-ready products.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Specialization in Women's Boots</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Women's boots require specialized knowledge in areas including calf accommodation for different heights, heel-to-toe ratios for comfort and style, narrow vs. wide width options, and seasonal fashion forecasting. Our two decades of focus have allowed us to develop expertise in all these areas.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We offer extensive last libraries with over 200 unique lasts specifically designed for women's feet, including variations for narrow, standard, and wide fits, different heel heights, and various boot shaft heights and widths.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      We offer multiple construction methods to meet different product requirements. Our PU direct-injection lines create seamless, waterproof boots ideal for fashion-forward styles and work boots. Traditional cemented construction with hand-lasting produces classic fashion boots with excellent aesthetics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For premium products, we offer Goodyear welt construction that allows resoling and provides the durability expected of investment footwear. Our craftsmen are skilled in decorative techniques including hand-burnishing, antiquing, and multi-tone finishing.
+    </p>
+  </div>
+
+  <!-- Product Lines Table -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Lines</h2>
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Product Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">MOQ</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Lead Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map(product => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700">{product.name}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.moq}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.leadTime}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Certifications -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Certifications</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    {certifications.map(cert => (
+      <div class="card">
+        <div class="text-lg font-semibold text-neutral-900 mb-1">{cert.name}</div>
+        <div class="text-sm text-neutral-600">{cert.description}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Capabilities -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Key Capabilities</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {capabilities.map(cap => (
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-neutral-900">{cap.name}</div>
+          <div class="text-sm text-neutral-600">{cap.description}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- AI Rating Section -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">AI Supplier Rating</h3>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.7/5</div>
+        <div class="text-sm text-neutral-600">Overall Score</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.8</div>
+        <div class="text-sm text-neutral-600">Quality</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.6</div>
+        <div class="text-sm text-neutral-600">Communication</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.7</div>
+        <div class="text-sm text-neutral-600">Delivery</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="bg-neutral-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-3">Interested in This Supplier?</h3>
+    <p class="text-neutral-600 mb-6 max-w-2xl mx-auto">
+      Contact us to request a quote, schedule a factory visit, or discuss your specific requirements with this verified supplier.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="btn-primary">Request Quote</a>
+      <a href="/encyclopedia/boots/" class="btn-outline">Boot Guide</a>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,167 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const marketSegments = [
+  { segment: 'Athletic/Performance', value: '$95B', share: '26%', growth: '5.2%' },
+  { segment: 'Casual/Lifestyle', value: '$78B', share: '21%', growth: '4.1%' },
+  { segment: 'Formal/Dress', value: '$42B', share: '12%', growth: '2.3%' },
+  { segment: 'Children\'s', value: '$38B', share: '10%', growth: '4.8%' },
+  { segment: 'Outdoor/Hiking', value: '$28B', share: '8%', growth: '5.5%' },
+  { segment: 'Work/Safety', value: '$25B', share: '7%', growth: '3.9%' },
+];
+
+const regions = [
+  { region: 'Asia Pacific', value: '$145B', share: '40%', growth: '6.2%' },
+  { region: 'North America', value: '$85B', share: '23%', growth: '3.8%' },
+  { region: 'Europe', value: '$82B', share: '22%', growth: '3.1%' },
+  { region: 'Latin America', value: '$25B', share: '7%', growth: '4.5%' },
+  { region: 'Middle East/Africa', value: '$18B', share: '5%', growth: '5.8%' },
+];
+
+const relatedArticles = [
+  { title: 'China Export Statistics Q1 2026', href: '/news/china-shoe-export-q1-2026/', date: '2026-01-15' },
+  { title: '2026 Footwear Market Trends', href: '/news/2026-footwear-market-trends/', date: '2026-01-20' },
+];
+---
+
+<PageLayout
+  title="Global Footwear Market Size & Analysis"
+  description="Comprehensive analysis of the global footwear market size, segment breakdown, regional distribution, and growth projections for B2B buyers and industry professionals."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Market', url: '/market/' },
+    { name: 'Global Market Size', url: '/market/global-footwear-market-size/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Market Data</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Global Footwear Market Size & Analysis
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive overview of the global footwear market: market size by segment, regional distribution, growth drivers, and strategic insights for B2B buyers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop"
+      alt="Global Footwear Market"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The global footwear market reached an estimated $365 billion in retail value in 2025, with projections indicating growth to $385-400 billion by 2026. The market encompasses all footwear categories from athletic performance shoes to formal dress footwear, serving consumers across all demographics and price points.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      China remains the dominant manufacturing hub, producing over 60% of global footwear volume. However, value creation is increasingly concentrated in design, brand, and retail, with manufacturing margins remaining compressed.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market by Segment</h2>
+  </div>
+
+  <!-- Segment Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Segment</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market Value</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market Share</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">YoY Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        {marketSegments.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.segment}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.value}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.share}</td>
+            <td class="py-3 px-4 text-green-600 font-medium">{row.growth}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Regional Analysis</h2>
+  </div>
+
+  <!-- Region Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Region</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market Value</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market Share</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">YoY Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        {regions.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.region}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.value}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.share}</td>
+            <td class="py-3 px-4 text-green-600 font-medium">{row.growth}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Key Market Drivers</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Growth Drivers</h3>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Athleisure continuation:</strong> The integration of athletic and casual styles continues driving premium segment growth.</li>
+      <li><strong>Rising middle class:</strong> Expanding middle-class populations in Asia and Latin America drive volume and value growth.</li>
+      <li><strong>Health and wellness trends:</strong> Increased participation in sports and fitness activities supports athletic footwear demand.</li>
+      <li><strong>Premiumization:</strong> Consumers trading up to higher-quality, higher-priced products in key categories.</li>
+    </ul>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Market Challenges</h3>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Macroeconomic uncertainty:</strong> Economic volatility affects consumer spending on discretionary footwear.</li>
+      <li><strong>Supply chain disruptions:</strong> Continued logistics challenges and raw material price volatility.</li>
+      <li><strong>Competition from private label:</strong> Retailer private label growth increasing price competition in value segments.</li>
+      <li><strong>Shifting retail dynamics:</strong> E-commerce growth disrupting traditional wholesale relationships.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Implications for B2B Buyers</h2>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Segment focus:</strong> Athletic and casual segments offer strongest growth; position product development accordingly.</li>
+      <li><strong>Regional opportunity:</strong> Asia Pacific's growth rate exceeds other regions; consider suppliers with strong Asian market capabilities.</li>
+      <li><strong>Value chain positioning:</strong> Manufacturing is commoditizing; focus on design capability, quality control, and supply chain integration for differentiation.</li>
+      <li><strong>Risk management:</strong> Diversify supplier base and maintain buffer inventory to manage supply chain volatility.</li>
+    </ul>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="card group">
+          <div class="text-sm text-neutral-500 mb-1">{article.date}</div>
+          <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+            {article.title}
+          </h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

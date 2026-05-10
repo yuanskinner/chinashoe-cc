@@ -1,0 +1,179 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const products = [
+  { name: 'Running Shoes', moq: '500 pairs', leadTime: '45-60 days' },
+  { name: 'Basketball Shoes', moq: '500 pairs', leadTime: '45-60 days' },
+  { name: 'Training Sneakers', moq: '300 pairs', leadTime: '40-55 days' },
+  { name: 'Casual Sneakers', moq: '300 pairs', leadTime: '40-55 days' },
+  { name: 'Trail Running Shoes', moq: '300 pairs', leadTime: '45-60 days' },
+];
+
+const certifications = [
+  { name: 'BSCI', description: 'Business Social Compliance Initiative' },
+  { name: 'ISO 9001', description: 'Quality Management System' },
+  { name: 'ISO 14001', description: 'Environmental Management System' },
+  { name: 'WRAP', description: 'Worldwide Responsible Accredited Production' },
+];
+
+const capabilities = [
+  { name: 'OEM/ODM Services', description: 'Custom design and brand manufacturing' },
+  { name: 'Material Sourcing', description: 'Global sourcing of premium materials' },
+  { name: 'Sample Development', description: 'Rapid prototyping and sampling' },
+  { name: 'Quality Control', description: 'Multi-stage inspection protocols' },
+];
+---
+
+<PageLayout
+  title="Fujian Putian Sports Shoes Factory"
+  description="Verified supplier profile for a leading sports shoe manufacturer in Putian, Fujian. Specializing in athletic footwear including running shoes, basketball shoes, and training sneakers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Fujian', url: '/suppliers/fujian/' },
+    { name: 'Putian Sports Shoes', url: '/suppliers/fujian-putian-sports-shoes/' },
+  ]}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-success">Verified Supplier</span>
+      <span class="badge-primary">Sports Shoes</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Fujian Putian Sports Shoes Factory
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Leading manufacturer of athletic footwear specializing in running shoes, basketball shoes, and performance training sneakers. Located in Putian, the heart of China's sports shoe manufacturing industry.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Sports Shoe Manufacturing"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Quick Info -->
+  <div class="grid md:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">Putian</div>
+      <div class="text-sm text-neutral-500">Location</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">2008</div>
+      <div class="text-sm text-neutral-500">Established</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">1.2M</div>
+      <div class="text-sm text-neutral-500">Annual Capacity</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">92%</div>
+      <div class="text-sm text-neutral-500">On-Time Delivery</div>
+    </div>
+  </div>
+
+  <!-- Company Overview -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Company Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Located in Putian, Fujian Province—often called the "Sneaker Capital of China"—our factory has been at the forefront of athletic footwear manufacturing for over 15 years. Our strategic location in China's premier sports shoe production hub provides access to the finest raw material suppliers, skilled workforce, and established logistics networks.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our 25,000 square meter production facility houses over 800 employees, including a dedicated design and development team of 45 professionals. We operate three production lines specifically configured for athletic footwear, with capabilities ranging from basic canvas sneakers to advanced performance running shoes with proprietary cushioning systems.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We have established long-term partnerships with international brands and maintain rigorous quality control systems that meet or exceed international standards. Our commitment to sustainable manufacturing practices includes water-based adhesives, recycled material options, and energy-efficient production processes.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Production Capabilities</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Our factory specializes in athletic and sports footwear, with particular expertise in running shoes, basketball shoes, cross-trainers, and casual sneakers. We offer both OEM (Original Equipment Manufacturing) services where we produce shoes to your specifications, and ODM (Original Design Manufacturing) where we can develop products based on your brand requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Key production capabilities include injection molding for outsoles, compression molding and direct injection for midsoles, and both cemented and vulcanized construction methods. We work with a wide range of materials including EVA, PU, TPR, various leather types, mesh, and knit textiles.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Quality Assurance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality is our foundation. We implement multi-stage quality control at every production step, from incoming material inspection to final packaging. Our QC team of 30 professionals follows standardized inspection protocols aligned with AQL 2.5 standards.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We offer comprehensive testing capabilities including flex testing, abrasion resistance testing, bond strength testing, and color fastness verification. For clients requiring third-party verification, we regularly cooperate with SGS, Bureau Veritas, and Intertek for product testing and factory audits.
+    </p>
+  </div>
+
+  <!-- Product Lines Table -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Lines</h2>
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Product Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">MOQ</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Lead Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map(product => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700">{product.name}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.moq}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.leadTime}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Certifications -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Certifications</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    {certifications.map(cert => (
+      <div class="card">
+        <div class="text-lg font-semibold text-neutral-900 mb-1">{cert.name}</div>
+        <div class="text-sm text-neutral-600">{cert.description}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Capabilities -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Key Capabilities</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {capabilities.map(cap => (
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-neutral-900">{cap.name}</div>
+          <div class="text-sm text-neutral-600">{cap.description}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="bg-neutral-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-3">Interested in This Supplier?</h3>
+    <p class="text-neutral-600 mb-6 max-w-2xl mx-auto">
+      Contact us to request a quote, schedule a factory visit, or discuss your specific requirements with this verified supplier.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="btn-primary">Request Quote</a>
+      <a href="/sourcing/how-to-vet-suppliers/" class="btn-outline">Learn About Vetting</a>
+    </div>
+  </div>
+</PageLayout>

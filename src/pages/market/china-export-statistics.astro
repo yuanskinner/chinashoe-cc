@@ -1,0 +1,179 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const exportData = [
+  { category: 'Sports/Athletic Shoes', value: '$32.8B', growth: '+5.2%', volume: '4.2B pairs' },
+  { category: 'Casual/Street Sneakers', value: '$23.2B', growth: '+4.1%', volume: '3.1B pairs' },
+  { category: 'Leather Dress Shoes', value: '$16.8B', growth: '+2.1%', volume: '1.2B pairs' },
+  { category: 'Children\'s Footwear', value: '$12.4B', growth: '+6.8%', volume: '1.8B pairs' },
+  { category: 'Safety/Work Footwear', value: '$11.6B', growth: '+4.5%', volume: '0.9B pairs' },
+  { category: 'Sandals/Flip Flops', value: '$9.6B', growth: '+3.2%', volume: '2.4B pairs' },
+  { category: 'Other Categories', value: '$14.8B', growth: '+3.5%', volume: '1.5B pairs' },
+];
+
+const productionRegions = [
+  { region: 'Guangdong', share: '35%', specialization: 'Sports, casual, safety shoes' },
+  { region: 'Fujian', share: '25%', specialization: 'Sports shoes, casual footwear' },
+  { region: 'Zhejiang', share: '15%', specialization: 'Dress shoes, leather goods' },
+  { region: 'Sichuan', share: '10%', specialization: 'Women\'s boots, fashion footwear' },
+  { region: 'Shandong', share: '8%', specialization: 'Safety shoes, work footwear' },
+  { region: 'Other Regions', share: '7%', specialization: 'Various categories' },
+];
+
+const relatedArticles = [
+  { title: 'Global Market Size', href: '/market/global-footwear-market-size/', date: 'Market Data' },
+  { title: 'China Export Q1 2026', href: '/news/china-shoe-export-q1-2026/', date: '2026-01-15' },
+];
+---
+
+<PageLayout
+  title="China Footwear Export Statistics"
+  description="Comprehensive analysis of China's footwear export statistics: category breakdowns, production regions, and trends shaping the world's largest footwear manufacturing hub."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Market', url: '/market/' },
+    { name: 'China Export Stats', url: '/market/china-export-statistics/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Market Data</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      China Footwear Export Statistics
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive analysis of China's footwear export statistics: category breakdowns, regional production hubs, and trends shaping the world's largest footwear manufacturing center.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1586892477838-2b96e85e0f96?w=1200&h=400&fit=crop"
+      alt="Chinese Manufacturing"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China's Footwear Industry: Global Leader</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      China remains the world's dominant footwear manufacturer, producing approximately 14 billion pairs annually—over 60% of global footwear volume. The industry has evolved significantly from low-cost mass production to a sophisticated manufacturing ecosystem capable of producing everything from basic sandals to premium athletic and luxury footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Annual footwear exports from China total approximately $121 billion, serving markets worldwide. The industry employs directly and indirectly several million workers, with major production concentrated in established manufacturing hubs across multiple provinces.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Export by Category</h2>
+  </div>
+
+  <!-- Export Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Annual Value</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Growth</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Volume</th>
+        </tr>
+      </thead>
+      <tbody>
+        {exportData.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.category}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.value}</td>
+            <td class="py-3 px-4 text-green-600 font-medium">{row.growth}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.volume}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Production Regions</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      China's footwear manufacturing is concentrated in specific regions, each with distinct specializations developed over decades:
+    </p>
+  </div>
+
+  <!-- Regions Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Province</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Production Share</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Specialization</th>
+        </tr>
+      </thead>
+      <tbody>
+        {productionRegions.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.region}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.share}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.specialization}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Key Industry Characteristics</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Manufacturing Ecosystem</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China's footwear industry benefits from mature ecosystems including specialized component suppliers, supporting industries (machinery, materials, packaging), logistics networks, and a skilled workforce with generations of footwear manufacturing experience.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Capability Evolution</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers have upgraded capabilities from basic OEM production to sophisticated ODM and even brand development services. Many factories now offer comprehensive services including design collaboration, material development, and supply chain management.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Regional Specialization</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Different regions have developed specific expertise:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Guangdong (Dongguan):</strong> Premium athletic and casual footwear, technical sports shoes</li>
+      <li><strong>Fujian (Putian, Quanzhou):</strong> Sports shoes, known as the "sneaker capital"</li>
+      <li><strong>Zhejiang (Wenzhou):</strong> Leather dress shoes with traditional craftsmanship</li>
+      <li><strong>Sichuan (Chengdu):</strong> Women's fashion boots and contemporary footwear</li>
+      <li><strong>Shandong:</strong> Safety and work footwear for industrial applications</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Strategic Considerations for B2B Buyers</h2>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Region matters:</strong> Match your product category to regions with relevant expertise for best quality and pricing.</li>
+      <li><strong>Supplier hierarchy:</strong> China has factories at all quality levels; due diligence is essential to identify appropriate partners.</li>
+      <li><strong>Relationship investment:</strong> Strong supplier relationships unlock better pricing, priority allocation, and collaboration opportunities.</li>
+      <li><strong>Quality evolution:</strong> Quality expectations should reflect China's advanced manufacturing capabilities—middle-market Chinese factories often meet premium market standards.</li>
+    </ul>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Resources</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="card group">
+          <div class="text-sm text-neutral-500 mb-1">{article.date}</div>
+          <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+            {article.title}
+          </h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

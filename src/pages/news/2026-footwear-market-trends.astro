@@ -1,0 +1,181 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const keyTrends = [
+  { title: 'Sustainable Materials', description: 'Recycled and bio-based materials becoming standard across all segments.' },
+  { title: 'Direct-to-Consumer Models', description: 'Brands bypassing traditional retail with DTC strategies affecting B2B orders.' },
+  { title: 'Health-Focused Design', description: 'Footwear designed for wellness and comfort driving innovation.' },
+  { title: 'Digital Customization', description: 'Personalization through digital tools becoming increasingly accessible.' },
+];
+
+const marketDrivers = [
+  { region: 'North America', growth: '4.2%', drivers: 'Premium segments, sustainability demand' },
+  { region: 'Europe', growth: '3.1%', drivers: 'Athleisure trends, eco-innovation' },
+  { region: 'Asia Pacific', growth: '6.8%', drivers: 'Rising middle class, urbanization' },
+  { region: 'Latin America', growth: '3.5%', drivers: 'Regional brands, e-commerce growth' },
+];
+
+const relatedArticles = [
+  { title: 'China Shoe Export Statistics Q1 2026', href: '/news/china-shoe-export-q1-2026/', date: '2026-01-15' },
+  { title: 'Sustainable Materials Innovation', href: '/news/sustainable-materials-innovation/', date: '2026-01-10' },
+];
+---
+
+<PageLayout
+  title="2026 Footwear Market Trends"
+  description="Analysis of footwear market trends for 2026: sustainable materials, health-focused design, regional growth patterns, and strategic implications for B2B buyers and industry professionals."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: '2026 Footwear Market Trends', url: '/news/2026-footwear-market-trends/' },
+  ]}
+  publishedTime="2026-01-20"
+  authors={['ChinaShoe Editorial Team']}
+  tags={['market trends', '2026', 'forecast', 'industry analysis']}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">Industry Analysis</span>
+      <span class="text-sm text-neutral-500">January 20, 2026</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      2026 Footwear Market Trends: What B2B Buyers Need to Know
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Analysis of emerging trends shaping the global footwear market in 2026, with strategic insights for B2B buyers and industry professionals navigating changing market dynamics.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=1200&h=400&fit=crop"
+      alt="Footwear Market Trends 2026"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The global footwear market continues its recovery trajectory in 2026, with market size estimated at $365 billion, representing a 4.3% increase from 2025. Growth is driven by sustained athleisure demand, premiumization trends, and innovation in sustainable materials, though macroeconomic uncertainties and shifting consumer behaviors create both opportunities and challenges for industry participants.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B buyers sourcing from China, understanding these trends is essential for making informed procurement decisions, identifying supplier capabilities aligned with market demands, and positioning products competitively in target markets.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Key Trends Shaping 2026</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1. Sustainability as Standard Practice</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Sustainability has evolved from a differentiating feature to an expected baseline. Major brands have committed to specific environmental targets, and these commitments cascade through supply chains to affect B2B sourcing decisions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Key developments include widespread adoption of recycled materials, particularly in athletic footwear midsoles and uppers. Bio-based alternatives including algae foam, sugar cane EVA, and mushroom leather are moving from niche experiments to commercial production. Water-based adhesives and chrome-free leather tanning are becoming standard options from quality manufacturers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B buyers, this means sustainability options are increasingly available at competitive prices. However, quality and consistency of sustainable materials vary significantly—working with experienced manufacturers who have established sustainable production capabilities is essential.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2. Health and Comfort Innovation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The wellness trend continues driving footwear innovation. Beyond athletic performance, consumers seek comfort benefits for everyday wear. This has blurred traditional category boundaries, with "comfort" positioning now common across dress shoes, casual footwear, and even formal occasions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Memory foam, gel inserts, and advanced arch support systems are becoming standard in casual and dress segments. Even traditional dress shoe manufacturers in China are incorporating comfort technologies—flexible soles, cushioned footbeds, and ergonomic designs—while maintaining formal aesthetics.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3. Digital and Customization Trends</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Digital tools are transforming both consumer shopping and B2B procurement. For consumers, AR try-on and fit prediction tools reduce return rates and improve purchase confidence. For B2B buyers, digital platforms streamline supplier discovery, sample management, and order tracking.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Mass customization capabilities are expanding, with Chinese manufacturers increasingly offering modular designs that allow buyers to combine upper styles, colors, and sole options within relatively low minimums.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4. Supply Chain Regionalization</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Geopolitical factors and pandemic lessons are driving supply chain diversification strategies. While China remains the dominant footwear manufacturing hub, brands are developing backup suppliers in Vietnam, Indonesia, and India to reduce concentration risk.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      This doesn't mean major shifts away from China—its manufacturing ecosystem, infrastructure, and skilled workforce remain unmatched. Instead, we're seeing a "China plus one" approach where brands maintain strong China partnerships while establishing secondary sources elsewhere.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Regional Growth Patterns</h2>
+  </div>
+
+  <!-- Regional Growth Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Region</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Growth Rate</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Key Drivers</th>
+        </tr>
+      </thead>
+      <tbody>
+        {marketDrivers.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.region}</td>
+            <td class="py-3 px-4 text-primary-600 font-semibold">{row.growth}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.drivers}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Strategic Implications for B2B Buyers</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B buyers sourcing from China, several strategic considerations emerge from these trends:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Plan sustainability requirements early</strong> — Sustainable materials often require longer lead times and may affect MOQs. Include sustainability specifications in initial RFQs.</li>
+      <li><strong>Evaluate manufacturer capabilities</strong> — Not all Chinese factories have equal capabilities for new material technologies. Assess specific capabilities rather than assuming general competence.</li>
+      <li><strong>Build flexible supplier relationships</strong> — Market volatility favors partnerships over transactions. Longer-term commitments often unlock better pricing, priority allocation, and collaboration on innovation.</li>
+      <li><strong>Consider total cost of quality</strong> — The lowest price rarely represents best value. Factor in defect rates, inspection costs, and potential brand damage from quality failures.</li>
+      <li><strong>Monitor regulatory developments</strong> — Environmental and safety regulations are tightening globally. Ensure suppliers can provide required documentation for your target markets.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Looking Ahead</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear market in 2026 rewards agility and informed decision-making. B2B buyers who understand market trends, maintain strong supplier relationships, and make data-driven procurement decisions will be best positioned for success.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      China remains central to global footwear manufacturing, but the relationship is evolving toward higher-value activities including innovation collaboration, advanced materials processing, and flexible small-batch production alongside traditional high-volume manufacturing.
+    </p>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="card group">
+          <div class="text-sm text-neutral-500 mb-1">{article.date}</div>
+          <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+            {article.title}
+          </h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

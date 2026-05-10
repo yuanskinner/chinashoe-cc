@@ -1,0 +1,175 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const principles = [
+  {
+    title: 'Material Selection',
+    description: 'Choose materials with lower environmental impact: recycled content, bio-based alternatives, certified sustainable sources.',
+    icon: '🌱',
+  },
+  {
+    title: 'Design for Durability',
+    description: 'Create products built to last, reducing replacement frequency and lifetime environmental footprint.',
+    icon: '⏱️',
+  },
+  {
+    title: 'Modular Design',
+    description: 'Design products with replaceable components, extending product life through repair rather than replacement.',
+    icon: '🔧',
+  },
+  {
+    title: 'End-of-Life Planning',
+    description: 'Consider product end-of-life from design stage: recyclability, biodegradability, take-back programs.',
+    icon: '♻️',
+  },
+];
+
+const relatedArticles = [
+  { title: 'SS2026 Color Trends', href: '/inspiration/ss2026-color-trends/', date: '2026-01-08' },
+];
+---
+
+<PageLayout
+  title="Eco-Friendly Design Concepts"
+  description="Eco-friendly footwear design principles: sustainable materials, design for durability, modular construction, and end-of-life planning for reduced environmental impact."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Inspiration', url: '/inspiration/' },
+    title: 'Eco-Friendly Design', url: '/inspiration/eco-friendly-design-concepts/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Design Inspiration</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Eco-Friendly Design Concepts
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Design principles and strategies for creating environmentally responsible footwear. Learn about sustainable materials, durability-focused design, and circular economy approaches.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=400&fit=crop"
+      alt="Sustainable Design"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">The Case for Eco-Friendly Footwear Design</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental responsibility has moved from differentiating brand positioning to consumer expectation. Major brands have made public commitments to sustainability, and regulatory pressure is increasing globally. For B2B buyers, understanding eco-design principles helps create products aligned with market demands and regulatory requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Eco-friendly design isn't about sacrificing performance or aesthetics—it's about making conscious choices at every design decision point to minimize environmental impact while maximizing product value.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Core Design Principles</h2>
+  </div>
+
+  <!-- Principles Grid -->
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {principles.map(principle => (
+      <div class="card">
+        <div class="text-4xl mb-4">{principle.icon}</div>
+        <h3 class="font-semibold text-lg text-neutral-900 mb-2">{principle.title}</h3>
+        <p class="text-neutral-600">{principle.description}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Material Selection Strategies</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Material choices account for the majority of footwear's environmental footprint. Strategic material selection offers the most impactful opportunity for improvement.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Recycled Content</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Incorporate recycled materials where performance allows: recycled rubber outsoles, recycled PET mesh uppers, recycled EVA midsoles. Traceable certifications (GRS, RCS) verify recycled content claims.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Bio-Based Alternatives</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Emerging bio-based materials offer alternatives to petroleum-derived inputs: sugar cane EVA, algae foam, hemp textiles, mushroom leather. These materials are maturing but may carry premiums and supply constraints.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sustainable Conventional Materials</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When recycled or bio-based options aren't suitable, source conventional materials responsibly: LWG-certified leather, organic cotton, water-based adhesives. These improvements reduce impact without major formulation changes.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Design for Durability</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The most sustainable product is one that doesn't need replacing. Design for longevity through:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Quality construction:</strong> Goodyear welt or similar constructions that allow resoling extend product life significantly.</li>
+      <li><strong>Reinforced wear points:</strong> Strategic reinforcement at high-stress areas prevents premature failure.</li>
+      <li><strong>Timeless aesthetics:</strong> Classic designs that don't go out of style reduce desire for replacement.</li>
+      <li><strong>Repairable design:</strong> Construction methods that allow stitching repairs rather than requiring replacement.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Modular and Circular Approaches</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Modular design, where components can be replaced individually, extends product life and reduces waste. Examples include:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Replaceable outsoles:</strong> Athletic shoes with replaceable traction outsoles for different sports.</li>
+      <li><strong>Modular uppers:</strong> Systems allowing upper replacement when worn while keeping structural components.</li>
+      <li><strong>Interchangeable midsoles:</strong> Allows users to customize cushioning as preferences or needs change.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">End-of-Life Considerations</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Planning for product end-of-life from the design stage enables better environmental outcomes:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Design for disassembly:</strong> Minimize adhesives; use mechanical fastening where possible to enable material separation.</li>
+      <li><strong>Material compatibility:</strong> Use materials that can be recycled together or easily separated.</li>
+      <li><strong>Biodegradable options:</strong> Natural materials (cotton, leather, natural rubber) can biodegrade; consider this for specific product categories.</li>
+      <li><strong>Take-back programs:</strong> Partner with suppliers on collection and recycling programs.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Implementing Eco-Design with Chinese Manufacturers</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers increasingly offer eco-friendly capabilities, but quality and reliability vary. When implementing eco-design with Chinese suppliers:
+    </p>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Start with validated suppliers:</strong> Work with manufacturers who have proven sustainable material processing capabilities.</li>
+      <li><strong>Provide clear specifications:</strong> Specify recycled content percentages, certification requirements, and testing protocols.</li>
+      <li><strong>Allow development time:</strong> Sustainable materials often require multiple development iterations.</li>
+      <li><strong>Verify claims independently:</strong> Third-party testing verifies sustainability claims beyond supplier documentation.</li>
+    </ul>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Inspiration</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      <a href={relatedArticles[0].href} class="card group">
+        <div class="text-sm text-neutral-500 mb-1">{relatedArticles[0].date}</div>
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+          {relatedArticles[0].title}
+        </h4>
+      </a>
+    </div>
+  </div>
+</PageLayout>

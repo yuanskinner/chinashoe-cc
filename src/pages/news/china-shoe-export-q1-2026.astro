@@ -1,0 +1,186 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const exportData = [
+  { category: 'Sports Shoes', value: '$8.2B', growth: '+5.3%', share: '28%' },
+  { category: 'Casual Sneakers', value: '$5.8B', growth: '+4.1%', share: '20%' },
+  { category: 'Leather Dress Shoes', value: '$4.2B', growth: '+2.1%', share: '14%' },
+  { category: 'Children\'s Footwear', value: '$3.1B', growth: '+6.8%', share: '11%' },
+  { category: 'Safety/Work Shoes', value: '$2.9B', growth: '+4.5%', share: '10%' },
+  { category: 'Sandals/Flip Flops', value: '$2.4B', growth: '+3.2%', share: '8%' },
+];
+
+const topMarkets = [
+  { country: 'United States', share: '24%', growth: '+4.2%' },
+  { country: 'European Union', share: '22%', growth: '+3.1%' },
+  { country: 'Southeast Asia', share: '15%', growth: '+8.5%' },
+  { country: 'Middle East', share: '8%', growth: '+5.2%' },
+  { country: 'Latin America', share: '7%', growth: '+4.8%' },
+  { country: 'Africa', share: '5%', growth: '+7.1%' },
+];
+
+const relatedArticles = [
+  { title: '2026 Footwear Market Trends', href: '/news/2026-footwear-market-trends/', date: '2026-01-20' },
+  { title: 'Sustainable Materials Innovation', href: '/news/sustainable-materials-innovation/', date: '2026-01-10' },
+];
+---
+
+<PageLayout
+  title="China Shoe Export Statistics Q1 2026"
+  description="Analysis of China's footwear export statistics for Q1 2026: category breakdowns, regional markets, and trends affecting B2B buyers and industry professionals."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: 'China Export Q1 2026', url: '/news/china-shoe-export-q1-2026/' },
+  ]}
+  publishedTime="2026-01-15"
+  authors={['ChinaShoe Editorial Team']}
+  tags={['exports', 'China statistics', 'Q1 2026', 'trade data']}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">Trade Data</span>
+      <span class="text-sm text-neutral-500">January 15, 2026</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      China Shoe Export Statistics: Q1 2026 Analysis
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive analysis of China's footwear export data for Q1 2026, including category breakdowns, regional market performance, and implications for B2B sourcing strategies.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1200&h=400&fit=crop"
+      alt="Container Shipping"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Executive Summary</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      China's footwear exports reached $29.4 billion in Q1 2026, representing a 4.3% increase year-over-year. The growth reflects continued demand from traditional markets combined with expanding partnerships in emerging economies. Sports shoes remain the largest export category, while children's footwear shows the strongest growth rate.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The data reveals several important trends for B2B buyers: sustained demand despite macroeconomic uncertainties, regional market diversification, and quality improvements positioning Chinese manufacturers for premium segments.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Export Performance by Category</h2>
+  </div>
+
+  <!-- Category Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Value</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">YoY Growth</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        {exportData.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.category}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.value}</td>
+            <td class="py-3 px-4 text-green-600 font-medium">{row.growth}</td>
+            <td class="py-3 px-4 text-neutral-600">{row.share}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Regional Market Analysis</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The United States remains China's largest footwear export market, though its share has declined slightly as exporters diversify. The European Union maintains steady growth, with particular strength in sustainable and premium segments. Southeast Asia shows the fastest growth, driven by rising middle-class consumption and regional trade agreements.
+    </p>
+  </div>
+
+  <!-- Regional Table -->
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Market</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Share of Exports</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">YoY Growth</th>
+        </tr>
+      </thead>
+      <tbody>
+        {topMarkets.map(row => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{row.country}</td>
+            <td class="py-3 px-4 text-neutral-900 font-semibold">{row.share}</td>
+            <td class="py-3 px-4 text-green-600 font-medium">{row.growth}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Key Industry Developments</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Manufacturing Consolidation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China's footwear manufacturing sector continues consolidation, with smaller factories exiting the market while larger, more sophisticated manufacturers expand capabilities. This trend benefits B2B buyers seeking quality consistency and reliability, though it may pressure pricing in some segments.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Value Chain Upgrading</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers are moving up the value chain, investing in advanced materials processing, design capabilities, and brand development services. This is particularly evident in sports footwear and children's categories, where Chinese factories increasingly offer full-service ODM capabilities.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sustainability Integration</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental compliance and sustainable production have become baseline requirements for export-oriented manufacturers. Q1 data shows sustainable product categories growing faster than conventional alternatives, indicating successful industry adaptation to global sustainability expectations.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Implications for B2B Buyers</h2>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Diversification opportunity:</strong> Emerging markets in Southeast Asia, Africa, and Latin America offer growing demand for Chinese footwear. Consider suppliers with established regional market experience.</li>
+      <li><strong>Quality positioning:</strong> Chinese manufacturers increasingly compete in premium segments. Quality expectations should be recalibrated—middle-market Chinese factories often match or exceed Western market standards.</li>
+      <li><strong>Lead time planning:</strong> Global logistics challenges have stabilized but remain a consideration. Build appropriate buffer times into sourcing timelines and maintain communication with suppliers on shipping developments.</li>
+      <li><strong>Supplier selection:</strong> Consolidation favors established factories with track records. Due diligence on supplier financial stability and market position helps reduce supply chain risk.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Outlook for Remainder of 2026</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Industry forecasts suggest continued moderate growth through 2026, with full-year export values expected to reach $120-125 billion. Key factors to monitor include consumer sentiment in major markets, raw material price movements, and potential policy changes affecting trade relationships.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      B2B buyers should maintain diversified supplier relationships, plan orders with reasonable lead times, and stay informed about regulatory developments in target markets. China's footwear manufacturing ecosystem remains resilient and capable of adapting to changing market conditions.
+    </p>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="card group">
+          <div class="text-sm text-neutral-500 mb-1">{article.date}</div>
+          <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+            {article.title}
+          </h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

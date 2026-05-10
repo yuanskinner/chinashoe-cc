@@ -1,0 +1,165 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const colorPalettes = [
+  {
+    name: 'Natural Earth Tones',
+    colors: ['#8B7355', '#A0926D', '#C4B998', '#E8DFD0', '#5C4033'],
+    description: 'Warm browns and sand tones inspired by natural landscapes',
+  },
+  {
+    name: 'Ocean Breeze',
+    colors: ['#1E3A5F', '#2E5077', '#4A90A4', '#7CB4C4', '#C9E4ED'],
+    description: 'Cool blues from deep sea to coastal shallows',
+  },
+  {
+    name: 'Urban Minimal',
+    colors: ['#1A1A1A', '#333333', '#666666', '#999999', '#F5F5F5'],
+    description: 'Sophisticated neutrals for modern streetwear',
+  },
+  {
+    name: 'Sunset Gradient',
+    colors: ['#FF6B6B', '#FFA07A', '#FFD93D', '#6BCB77', '#4D96FF'],
+    description: 'Vibrant sunset-inspired palette for athletic footwear',
+  },
+];
+
+const relatedArticles = [
+  { title: 'Eco-Friendly Design Concepts', href: '/inspiration/eco-friendly-design-concepts/', date: '2026-01-05' },
+];
+---
+
+<PageLayout
+  title="Spring/Summer 2026 Color Trends"
+  description="Color trend analysis for Spring/Summer 2026 footwear collections. Explore emerging palettes from natural earth tones to bold brights, with strategic insights for B2B buyers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Inspiration', url: '/inspiration/' },
+    { title: 'SS2026 Color Trends', url: '/inspiration/ss2026-color-trends/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Design Inspiration</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Spring/Summer 2026 Color Trends
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Color trend analysis for SS2026 footwear collections. Explore emerging palettes from natural earth tones to bold brights, with insights for B2B buyers planning upcoming seasons.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&h=400&fit=crop"
+      alt="Colorful Sneaker Collection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Color Forecasting Context</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Color trends in footwear reflect broader cultural movements and consumer sentiment. For Spring/Summer 2026, we're seeing a continued focus on naturalism balanced with optimism, as consumers seek both grounding comfort and expressive joy after years of uncertainty.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Pantone's Color of the Year 2026, "Mocha Mousse," signals a shift toward warm, comforting neutrals that evoke stability and quality. This influences color stories across footwear categories, from dress shoes to athletic sneakers.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Key Color Stories for SS2026</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1. Natural Earth Tones</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Warm browns, terracotta, sand, and olive continue their dominance from recent seasons. These "grounded" colors resonate with sustainability-conscious consumers and work across categories from outdoor footwear to casual sneakers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Key considerations for B2B buyers: Earth tones require careful attention to material quality, as these colors can highlight inconsistencies. Leather sourced for brown-toned dress shoes should be selected for uniform texture and color absorption.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2. Ocean Blues</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      From deep navy to seafoam, ocean-inspired blues offer versatility across athletic and casual footwear. The trend reflects environmental consciousness while providing refreshing palette options for spring/summer collections.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Blue tones work particularly well with mesh and knit upper materials, where they can be combined with contrasting accents. White and silver midsoles complement ocean blue uppers for a clean, modern aesthetic.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3. Optimistic Brights</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      After years of muted palettes, brighter colors are returning with a vengeance. Coral, electric blue, lime green, and warm yellow offer energetic options for athletic and lifestyle footwear targeting younger consumers and those seeking self-expression.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      These bold colors require robust color fastness testing, particularly for athletic footwear subjected to sweat, washing, and sun exposure. Ensure suppliers have appropriate testing protocols for bright colors.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4. Monochrome Neutrals</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Clean monochrome looks in black, white, and gray continue their appeal for premium and fashion-forward segments. The "quiet luxury" aesthetic favors uniform color treatments without contrasting accents.
+    </p>
+  </div>
+
+  <!-- Color Palettes -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">SS2026 Color Palettes</h2>
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {colorPalettes.map(palette => (
+      <div class="card">
+        <h3 class="font-semibold text-lg text-neutral-900 mb-3">{palette.name}</h3>
+        <div class="flex gap-2 mb-4">
+          {palette.colors.map(color => (
+            <div 
+              class="w-12 h-12 rounded-lg flex-shrink-0" 
+              style={`background-color: ${color}`}
+              title={color}
+            />
+          ))}
+        </div>
+        <p class="text-sm text-neutral-600">{palette.description}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Strategic Implications for B2B Buyers</h2>
+    
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Plan color development early:</strong> Custom color matching requires time for material sourcing, formulation, and approval. Include color development in product timelines.</li>
+      <li><strong>Request color standards:</strong> Work with suppliers to establish color standards using physical chips or spectral data for consistent production.</li>
+      <li><strong>Consider seasonal timing:</strong> Different materials and dyes perform better in different seasons. Match color recommendations to intended retail timing.</li>
+      <li><strong>Test for color migration:</strong> Particularly with bold colors on light-colored midsoles, request color migration testing to prevent bleeding.</li>
+      <li><strong>Balance trends with classics:</strong> Core colorways should include reliable sellers alongside trend-forward options for risk management.</li>
+    </ul>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Working with Chinese Manufacturers</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers have extensive experience matching international color trends. When requesting specific colors, provide reference standards (Pantone numbers, physical samples, or spectral data) to ensure accurate color matching. Allow time for multiple rounds of color approval during development.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For custom colorways, minimum order quantities may be higher than for standard colors due to setup requirements. Factor this into pricing negotiations and inventory planning.
+    </p>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Inspiration</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      <a href={relatedArticles[0].href} class="card group">
+        <div class="text-sm text-neutral-500 mb-1">{relatedArticles[0].date}</div>
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+          {relatedArticles[0].title}
+        </h4>
+      </a>
+    </div>
+  </div>
+</PageLayout>

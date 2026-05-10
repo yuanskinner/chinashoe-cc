@@ -1,0 +1,202 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const products = [
+  { name: 'Canvas Sneakers', moq: '500 pairs', leadTime: '35-50 days' },
+  { name: 'Vulcanized Shoes', moq: '500 pairs', leadTime: '35-50 days' },
+  { name: 'Slip-on Sneakers', moq: '400 pairs', leadTime: '35-50 days' },
+  { name: 'Low-Top Sneakers', moq: '400 pairs', leadTime: '35-50 days' },
+  { name: 'Fashion Sneakers', moq: '300 pairs', leadTime: '40-55 days' },
+];
+
+const certifications = [
+  { name: 'BSCI', description: 'Business Social Compliance Initiative' },
+  { name: 'ISO 9001', description: 'Quality Management System' },
+  { name: 'WRAP', description: 'Worldwide Responsible Accredited Production' },
+  { name: 'ISO 14001', description: 'Environmental Management System' },
+];
+
+const capabilities = [
+  { name: 'Vulcanized Construction', description: 'Traditional canvas shoe manufacturing' },
+  { name: 'Cemented Production', description: 'Modern sneaker construction methods' },
+  { name: 'Canvas Sourcing', description: 'Organic and recycled canvas options' },
+  { name: 'Custom Colors', description: 'Dyeing and color matching services' },
+];
+---
+
+<PageLayout
+  title="Fujian Quanzhou Casual Shoes Factory"
+  description="Verified supplier profile for a casual sneaker manufacturer in Quanzhou, Fujian. Specializing in canvas sneakers, vulcanized shoes, and fashion casual footwear with competitive pricing."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Fujian', url: '/suppliers/fujian/' },
+    { name: 'Quanzhou Casual', url: '/suppliers/fujian-quanzhou-casual/' },
+  ]}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-success">Verified Supplier</span>
+      <span class="badge-primary">Casual Shoes</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Fujian Quanzhou Casual Shoes Factory
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Leading casual sneaker manufacturer specializing in canvas sneakers and vulcanized footwear. Located in Quanzhou, Fujian, offering competitive pricing with quality-focused production for mid-market casual footwear programs.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&h=400&fit=crop"
+      alt="Casual Sneakers"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Quick Info -->
+  <div class="grid md:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">Quanzhou</div>
+      <div class="text-sm text-neutral-500">Location</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">2010</div>
+      <div class="text-sm text-neutral-500">Established</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">2M+</div>
+      <div class="text-sm text-neutral-500">Annual Capacity</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">95%</div>
+      <div class="text-sm text-neutral-500">On-Time Delivery</div>
+    </div>
+  </div>
+
+  <!-- Company Overview -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Company Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Located in Quanzhou, one of Fujian's major footwear manufacturing hubs, our factory has established itself as a reliable producer of casual and lifestyle footwear. We specialize in canvas sneakers and vulcanized construction, serving clients seeking quality products at competitive price points.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our 30,000 square meter facility houses over 600 employees with efficient production lines optimized for casual footwear categories. We operate both traditional vulcanization presses and modern cemented production capabilities to serve diverse product requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our client base includes international casual footwear brands, private label programs, and promotional products suppliers. We focus on mid-market positioning where we can offer competitive pricing without compromising on quality standards.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Casual Footwear Expertise</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Our specialization in casual footwear allows us to optimize our processes for this category. We understand the specific requirements for canvas sneakers, including proper foxing tape application, canvas tension during lasting, and vulcanization temperature control.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We offer extensive customization options including custom colors (minimum quantities apply), material substitutions (organic cotton canvas, recycled materials), and various sole hardness options to meet different comfort requirements.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Quality Approach</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Despite our competitive pricing, quality remains our priority. We implement comprehensive quality control including incoming material inspection, in-process quality checks at each production stage, and final inspection before shipment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our quality team follows standardized inspection procedures aligned with AQL 2.5 standards. We also offer enhanced inspection protocols for clients with stricter requirements, including detailed photo documentation and third-party inspection services.
+    </p>
+  </div>
+
+  <!-- Product Lines Table -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Lines</h2>
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Product Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">MOQ</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Lead Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map(product => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700">{product.name}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.moq}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.leadTime}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Certifications -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Certifications</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    {certifications.map(cert => (
+      <div class="card">
+        <div class="text-lg font-semibold text-neutral-900 mb-1">{cert.name}</div>
+        <div class="text-sm text-neutral-600">{cert.description}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Capabilities -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Key Capabilities</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {capabilities.map(cap => (
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-neutral-900">{cap.name}</div>
+          <div class="text-sm text-neutral-600">{cap.description}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- AI Rating Section -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">AI Supplier Rating</h3>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.4/5</div>
+        <div class="text-sm text-neutral-600">Overall Score</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.3</div>
+        <div class="text-sm text-neutral-600">Quality</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.5</div>
+        <div class="text-sm text-neutral-600">Communication</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.6</div>
+        <div class="text-sm text-neutral-600">Delivery</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="bg-neutral-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-3">Interested in This Supplier?</h3>
+    <p class="text-neutral-600 mb-6 max-w-2xl mx-auto">
+      Contact us to request a quote, schedule a factory visit, or discuss your specific requirements with this verified supplier.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="btn-primary">Request Quote</a>
+      <a href="/encyclopedia/manufacturing/vulcanized/" class="btn-outline">Vulcanized Guide</a>
+    </div>
+  </div>
+</PageLayout>

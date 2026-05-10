@@ -1,0 +1,182 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const negotiationStrategies = [
+  { title: 'Start with Market Research', description: 'Research typical MOQs for your product type and price range before negotiating.' },
+  { title: 'Offer Long-Term Commitment', description: 'Promise future orders in exchange for lower initial MOQs.' },
+  { title: 'Request Split Shipments', description: 'Accept single MOQ but negotiate split deliveries to reduce inventory risk.' },
+  { title: 'Combine Similar Products', description: 'Aggregate orders across product styles to meet MOQ requirements.' },
+  { title: 'Provide Design Exclusivity', description: 'Offer exclusivity for custom designs in exchange for reduced MOQs.' },
+  { title: 'Accept Higher Unit Price', description: 'Negotiate higher per-unit cost in exchange for lower MOQ requirements.' },
+];
+
+const moqFactors = [
+  { factor: 'Product Complexity', impact: 'More complex designs typically require higher MOQs due to setup costs.' },
+  { factor: 'Material Costs', impact: 'Expensive materials often mean higher MOQs to ensure efficient production runs.' },
+  { factor: 'Seasonal Demand', impact: 'Off-season orders may negotiate lower MOQs due to available capacity.' },
+  { factor: 'Supplier Size', impact: 'Larger factories often have higher minimums but better unit economics.' },
+  { factor: 'Customization', impact: 'Custom colors, materials, or branding typically increases minimums.' },
+];
+---
+
+<PageLayout
+  title="MOQ Negotiation Guide for Footwear Orders"
+  description="Learn effective strategies for negotiating minimum order quantities with Chinese footwear suppliers. Understand MOQ factors and tactics for getting favorable terms."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'MOQ Negotiation', url: '/sourcing/moq-negotiation-guide/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Sourcing Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      MOQ Negotiation Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Master the art of negotiating minimum order quantities with Chinese footwear suppliers. Learn strategies to reduce MOQs, understand pricing factors, and build supplier relationships.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=1200&h=400&fit=crop"
+      alt="Business Negotiation"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Minimum Order Quantities</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Minimum Order Quantity (MOQ) is the smallest number of units a supplier will produce in a single order. For Chinese footwear manufacturers, MOQs exist because production setup costs—including creating patterns, adjusting machinery, and sourcing materials—must be amortized across enough units to be economically viable.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Typical footwear MOQs range from 200 pairs for simple leather dress shoes to 1,000+ pairs for complex athletic footwear with multiple materials and custom components. Understanding why suppliers set these minimums helps you negotiate more effectively.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Why Suppliers Set MOQs</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Footwear production involves significant setup costs that don't vary much with order size. Creating production patterns, setting up machines, sourcing materials, and conducting quality checks all require fixed investments. Suppliers set MOQs to ensure these setup costs don't exceed their profit margins on small orders.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Additionally, material waste is inherent in footwear production. Die-cutting leather and other materials creates waste that must be absorbed. Larger orders distribute this waste across more units, reducing effective material costs per pair.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Factors Affecting MOQs</h2>
+  </div>
+
+  <!-- Factors Grid -->
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {moqFactors.map(factor => (
+      <div class="card">
+        <h3 class="font-semibold text-neutral-900 mb-2">{factor.factor}</h3>
+        <p class="text-neutral-600 text-sm">{factor.impact}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Negotiation Strategies -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Effective Negotiation Strategies</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    {negotiationStrategies.map(strategy => (
+      <div class="card">
+        <div class="text-2xl mb-3">💡</div>
+        <h3 class="font-semibold text-neutral-900 mb-2">{strategy.title}</h3>
+        <p class="text-neutral-600 text-sm">{strategy.description}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Detailed Strategies -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Detailed Negotiation Approaches</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Build the Relationship First</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese business culture emphasizes relationships (guanxi). Suppliers are often more flexible with MOQs for clients they know and trust. Start with smaller orders to establish the relationship before pushing for MOQ flexibility on larger commitments.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Order Seasonally</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Peak production seasons (typically Q1 for fall/winter products, Q2 for spring/summer) see factories at capacity with no incentive to reduce MOQs. Off-peak ordering often finds factories with available capacity willing to accommodate smaller orders at slightly higher unit prices.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Consider Multi-SKU Orders</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      If a supplier quotes 500-pair MOQ per SKU, consider ordering multiple SKUs to reach 500 pairs total across styles. This allows you to test multiple products while meeting the factory's overall production minimum. Ensure your agreement specifies per-SKU quantities clearly.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Negotiate Split Shipments</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Even if you must order the full MOQ, negotiate phased shipments. This allows you to manage inventory and cash flow while satisfying the supplier's minimum. Include shipment schedules with clear terms in your purchase agreement.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Pricing vs. MOQ Trade-offs</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      MOQ reduction often comes with unit price increases. A supplier may offer a 500-pair MOQ at $15 per pair but require $18 per pair for a 200-pair order. Calculate whether the reduced inventory risk justifies the higher cost, and factor in potential markdowns if you're uncertain about demand.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Getting Quotes with Multiple MOQ Options</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      When requesting quotes, ask suppliers to provide pricing at different order quantities: their standard MOQ, 50% above, and 50% below. This reveals their pricing tiers and helps you understand where flexibility might exist. Suppliers often have informal flexibility that isn't volunteered.
+    </p>
+  </div>
+
+  <!-- Sample Order Tips -->
+  <div class="bg-primary-50 rounded-xl p-8 mb-12">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Sample Order Tips</h3>
+    <ul class="space-y-3">
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold">1.</span>
+        <span class="text-neutral-700">Always order samples before bulk production—quality may differ significantly</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold">2.</span>
+        <span class="text-neutral-700">Negotiate sample pricing separately from production pricing</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold">3.</span>
+        <span class="text-neutral-700">Request production-line samples, not lab samples, for accurate quality assessment</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold">4.</span>
+        <span class="text-neutral-700">Factor sample costs into your product development budget</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Related Resources -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Sourcing Guides</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="/sourcing/how-to-vet-suppliers/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Supplier Vetting Guide</h4>
+        <p class="text-sm text-neutral-600">How to verify suppliers before placing orders.</p>
+      </a>
+      <a href="/sourcing/quality-control-checklist/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Quality Control Checklist</h4>
+        <p class="text-sm text-neutral-600">QC procedures for footwear orders.</p>
+      </a>
+      <a href="/contact/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Need Help?</h4>
+        <p class="text-sm text-neutral-600">Connect with sourcing experts for assistance.</p>
+      </a>
+    </div>
+  </div>
+</PageLayout>

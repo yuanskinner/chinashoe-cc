@@ -1,0 +1,275 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const inspectionStages = [
+  {
+    stage: 'Pre-Production Inspection (PPI)',
+    timing: 'Before production begins',
+    items: ['Material verification', 'Pattern approval', 'Color confirmation', 'Accessory check', 'Sample comparison'],
+  },
+  {
+    stage: 'During Production Inspection (DPI)',
+    timing: 'When 10-20% complete',
+    items: ['Early defect detection', 'Process monitoring', 'Workmanship check', 'Component quality', 'Progress verification'],
+  },
+  {
+    stage: 'Final Inspection (FI)',
+    timing: '100% finished, before shipment',
+    items: ['Visual inspection', 'Dimensional check', 'Functional testing', 'Packaging verification', 'AQL sampling'],
+  },
+];
+
+const checklistCategories = [
+  {
+    category: 'Materials & Components',
+    items: [
+      'Upper material matches approval sample',
+      'Leather quality acceptable (no major defects)',
+      'Color consistent with approval sample',
+      'Mesh/knit materials properly bonded',
+      'Outsole material correct',
+      'Midsole density as specified',
+      'Laces, eyelets, hardware correct',
+      'Labels and tags accurate',
+    ],
+  },
+  {
+    category: 'Construction Quality',
+    items: [
+      'Stitching uniform and secure',
+      'No loose threads',
+      'Seams properly joined',
+      'Bonding/flashing clean',
+      'No gaps in sole attachment',
+      'Heel attachment secure',
+      'Toe shape correct',
+      'Overall symmetry'],
+  },
+  {
+    category: 'Finish & Appearance',
+    items: [
+      'No color migration or bleeding',
+      'No scuffs or scratches',
+      'Logo/branding placement correct',
+      'Clean finish overall',
+      'No excess glue visible',
+      'Edges clean and even',
+      'Shape matches sample',
+    ],
+  },
+  {
+    category: 'Fit & Function',
+    items: [
+      'Size run verification',
+      'Last shape correct',
+      'Insole comfort acceptable',
+      'Flexibility appropriate',
+      'Closure systems functional',
+      'No unusual odor',
+      'Weight within spec',
+    ],
+  },
+  {
+    category: 'Packaging & Labeling',
+    items: [
+      'Box style correct',
+      'Box dimensions accurate',
+      'Printing legible and correct',
+      'Barcode scannable',
+      'Size marking correct',
+      'Country of origin correct',
+      'Pairs properly matched',
+      'Protection adequate',
+    ],
+  },
+];
+
+const defects = [
+  { type: 'Critical', description: 'Safety hazards (sharp edges, toxic materials)', severity: 'Reject' },
+  { type: 'Major', description: 'Obvious defects affecting functionality or appearance', severity: 'Negotiate' },
+  { type: 'Minor', description: 'Small cosmetic issues not affecting use', severity: 'Accept within limits' },
+];
+---
+
+<PageLayout
+  title="Footwear Quality Control Checklist"
+  description="Comprehensive quality control checklist for footwear orders from China. Learn inspection procedures, defect classification, and how to ensure consistent quality."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Quality Control', url: '/sourcing/quality-control-checklist/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Sourcing Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Quality Control Checklist
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive quality control procedures for footwear orders. Learn inspection stages, defect classifications, and how to conduct effective quality checks.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&h=400&fit=crop"
+      alt="Quality Control Inspection"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Introduction -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Why Quality Control Matters</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality control is essential when sourcing footwear from China. Even with trusted suppliers, production issues can occur. Without proper inspection procedures, defective products may reach your customers, resulting in returns, complaints, and brand damage.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Effective quality control doesn't mean rejecting all imperfect products—it means establishing clear standards, detecting issues early, and making informed decisions about acceptable quality levels based on your market and customer expectations.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Inspection Stages</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality control should occur at multiple stages of production, not just final inspection. Catching defects early is less expensive and less disruptive than rejecting finished goods.
+    </p>
+  </div>
+
+  <!-- Inspection Stages -->
+  <div class="grid md:grid-cols-3 gap-6 mb-12">
+    {inspectionStages.map(stage => (
+      <div class="card">
+        <div class="text-sm text-primary-600 font-medium mb-1">{stage.timing}</div>
+        <h3 class="font-semibold text-lg text-neutral-900 mb-3">{stage.stage}</h3>
+        <ul class="space-y-2">
+          {stage.items.map(item => (
+            <li class="flex items-start gap-2 text-sm text-neutral-600">
+              <svg class="w-4 h-4 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <!-- AQL Standards -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">AQL Sampling Standards</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Acceptable Quality Limit (AQL) is an industry-standard method for determining acceptable defect levels in batch inspections. Rather than inspecting every unit, AQL sampling uses statistical sampling to verify quality across an order.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Common AQL levels for footwear: Major defects typically use AQL 2.5, meaning 2.5% defective units are acceptable. Minor defects may use AQL 4.0. Critical defects should have AQL 0, meaning any critical defect results in rejection.
+    </p>
+    
+    <div class="bg-neutral-100 rounded-lg p-6 mb-6">
+      <h3 class="font-semibold text-neutral-900 mb-4">Standard AQL Sampling Table</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-neutral-300">
+            <th class="py-2 px-3 text-left">Order Size</th>
+            <th class="py-2 px-3 text-left">Sample Size</th>
+            <th class="py-2 px-3 text-left">Major (AQL 2.5)</th>
+            <th class="py-2 px-3 text-left">Minor (AQL 4.0)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-neutral-200">
+            <td class="py-2 px-3">1,201 - 3,200</td>
+            <td class="py-2 px-3">125</td>
+            <td class="py-2 px-3">7</td>
+            <td class="py-2 px-3">10</td>
+          </tr>
+          <tr class="border-b border-neutral-200">
+            <td class="py-2 px-3">3,201 - 10,000</td>
+            <td class="py-2 px-3">200</td>
+            <td class="py-2 px-3">10</td>
+            <td class="py-2 px-3">14</td>
+          </tr>
+          <tr class="border-b border-neutral-200">
+            <td class="py-2 px-3">10,001 - 35,000</td>
+            <td class="py-2 px-3">315</td>
+            <td class="py-2 px-3">14</td>
+            <td class="py-2 px-3">21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Defect Classification</h2>
+  </div>
+
+  <!-- Defect Types -->
+  <div class="grid md:grid-cols-3 gap-4 mb-12">
+    {defects.map(defect => (
+      <div class={`p-4 rounded-lg ${defect.severity === 'Reject' ? 'bg-red-50' : defect.severity === 'Negotiate' ? 'bg-yellow-50' : 'bg-blue-50'}`}>
+        <h3 class="font-semibold text-neutral-900 mb-1">{defect.type}</h3>
+        <p class="text-sm text-neutral-600 mb-2">{defect.description}</p>
+        <span class={`text-xs font-medium ${defect.severity === 'Reject' ? 'text-red-600' : defect.severity === 'Negotiate' ? 'text-yellow-600' : 'text-blue-600'}`}>
+          Action: {defect.severity}
+        </span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Detailed Checklist -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Detailed Inspection Checklist</h2>
+  </div>
+
+  <div class="space-y-6 mb-12">
+    {checklistCategories.map(category => (
+      <div class="card">
+        <h3 class="font-semibold text-lg text-neutral-900 mb-4">{category.category}</h3>
+        <div class="grid md:grid-cols-2 gap-3">
+          {category.items.map(item => (
+            <label class="flex items-start gap-3 cursor-pointer group">
+              <input type="checkbox" class="mt-1 w-4 h-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500" />
+              <span class="text-neutral-600 group-hover:text-neutral-900 text-sm">{item}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Third-Party Inspection -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Third-Party Inspection Services</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      If you can't conduct inspections yourself, third-party inspection companies provide professional quality control services in China. Major providers include QIMA, Asia Quality Focus, and InSpec QC. These services typically charge per inspection day plus travel expenses.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Benefits of third-party inspection include professional, unbiased assessments, detailed reporting with photos, and accountability for findings. Some inspection companies also offer production monitoring and lab testing services.
+    </p>
+  </div>
+
+  <!-- Related Resources -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Sourcing Guides</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="/sourcing/how-to-vet-suppliers/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Supplier Vetting Guide</h4>
+        <p class="text-sm text-neutral-600">How to verify suppliers before placing orders.</p>
+      </a>
+      <a href="/sourcing/moq-negotiation-guide/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">MOQ Negotiation</h4>
+        <p class="text-sm text-neutral-600">Negotiate favorable order terms.</p>
+      </a>
+      <a href="/contact/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Need Help?</h4>
+        <p class="text-sm text-neutral-600">Connect with sourcing experts.</p>
+      </a>
+    </div>
+  </div>
+</PageLayout>

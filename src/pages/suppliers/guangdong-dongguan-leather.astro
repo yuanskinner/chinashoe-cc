@@ -1,0 +1,202 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const products = [
+  { name: 'Oxford Shoes', moq: '200 pairs', leadTime: '50-65 days' },
+  { name: 'Derby Shoes', moq: '200 pairs', leadTime: '50-65 days' },
+  { name: 'Loafers', moq: '200 pairs', leadTime: '45-60 days' },
+  { name: 'Chelsea Boots', moq: '150 pairs', leadTime: '55-70 days' },
+  { name: 'Brogue Shoes', moq: '200 pairs', leadTime: '50-65 days' },
+];
+
+const certifications = [
+  { name: 'BSCI', description: 'Business Social Compliance Initiative' },
+  { name: 'ISO 9001', description: 'Quality Management System' },
+  { name: 'Sedex', description: 'Supplier Ethical Data Exchange' },
+  { name: 'CE', description: 'European Conformity' },
+];
+
+const capabilities = [
+  { name: 'Goodyear Welt', description: 'Traditional construction for premium dress shoes' },
+  { name: 'Blake Stitch', description: 'Italian-style construction for flexible dress footwear' },
+  { name: 'Hand Finishing', description: 'Traditional craftsmanship for luxury products' },
+  { name: 'Exotic Leathers', description: 'Experience with premium and exotic materials' },
+];
+---
+
+<PageLayout
+  title="Guangdong Dongguan Leather Footwear Factory"
+  description="Verified supplier profile for a premium leather footwear manufacturer in Dongguan, Guangdong. Specializing in Goodyear welted dress shoes, oxfords, derbies, and luxury leather footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Guangdong', url: '/suppliers/guangdong/' },
+    { name: 'Dongguan Leather', url: '/suppliers/guangdong-dongguan-leather/' },
+  ]}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-success">Verified Supplier</span>
+      <span class="badge-primary">Leather Footwear</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Guangdong Dongguan Leather Footwear Factory
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Premium leather footwear manufacturer specializing in Goodyear welted dress shoes and luxury leather footwear. Located in Dongguan, China's premier hub for high-quality leather goods production.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=1200&h=400&fit=crop"
+      alt="Premium Leather Dress Shoes"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Quick Info -->
+  <div class="grid md:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">Dongguan</div>
+      <div class="text-sm text-neutral-500">Location</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">1995</div>
+      <div class="text-sm text-neutral-500">Established</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">600K</div>
+      <div class="text-sm text-neutral-500">Annual Capacity</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">98%</div>
+      <div class="text-sm text-neutral-500">Client Retention</div>
+    </div>
+  </div>
+
+  <!-- Company Overview -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Company Overview</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      With nearly three decades of experience in premium leather footwear manufacturing, our Dongguan facility has established itself as a leading producer of high-quality dress shoes for international brands. Our expertise lies in traditional construction methods, particularly Goodyear welt, combined with modern quality management systems.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our 18,000 square meter facility employs over 500 skilled craftspeople, including master shoemakers trained in traditional European techniques. We source premium leathers from tanneries in Italy, Spain, and India, ensuring our products meet the exacting standards of luxury footwear brands.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Our client portfolio includes European luxury brands, American department store private labels, and Japanese premium footwear labels. We understand the precise requirements of different markets and adapt our processes accordingly.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction Expertise</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Our specialty is Goodyear welt construction, the gold standard for dress shoes. This traditional method creates footwear that can be resoled multiple times, extending the product's life and value. We operate Goodyear welting machines alongside traditional hand-welting capabilities for our most demanding clients.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      We also offer Blake stitch construction for clients seeking Italian-style flexibility, and cemented construction for fashion-forward designs that don't require resolability. Our in-house leather cutting, stitching, and finishing capabilities ensure consistent quality throughout production.
+    </p>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Leather Sourcing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      We maintain partnerships with premium tanneries in Italy (Tuscany, Arzignano), Spain (Alcoy), and India. Our material specialists can source specific leathers to meet your requirements, from classic calfskin to exotic options including ostrich, crocodile, and cordovan.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      For clients with sustainability requirements, we offer leathers from tanneries certified by LWG (Leather Working Group), recycled leather options, and vegetable-tanned leathers from responsible sources.
+    </p>
+  </div>
+
+  <!-- Product Lines Table -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Product Lines</h2>
+  <div class="overflow-x-auto mb-12">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Product Category</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">MOQ</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Lead Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {products.map(product => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700">{product.name}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.moq}</td>
+            <td class="py-3 px-4 text-neutral-600">{product.leadTime}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Certifications -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Certifications</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    {certifications.map(cert => (
+      <div class="card">
+        <div class="text-lg font-semibold text-neutral-900 mb-1">{cert.name}</div>
+        <div class="text-sm text-neutral-600">{cert.description}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Capabilities -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Key Capabilities</h2>
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {capabilities.map(cap => (
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-neutral-900">{cap.name}</div>
+          <div class="text-sm text-neutral-600">{cap.description}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- AI Rating Section -->
+  <div class="bg-primary-50 rounded-xl p-6 mb-12">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">AI Supplier Rating</h3>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.8/5</div>
+        <div class="text-sm text-neutral-600">Overall Score</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.9</div>
+        <div class="text-sm text-neutral-600">Quality</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.7</div>
+        <div class="text-sm text-neutral-600">Communication</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-primary-600">4.6</div>
+        <div class="text-sm text-neutral-600">Delivery</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="bg-neutral-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-3">Interested in This Supplier?</h3>
+    <p class="text-neutral-600 mb-6 max-w-2xl mx-auto">
+      Contact us to request a quote, schedule a factory visit, or discuss your specific requirements with this verified supplier.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="btn-primary">Request Quote</a>
+      <a href="/sourcing/how-to-vet-suppliers/" class="btn-outline">Learn About Vetting</a>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,162 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const checklistItems = [
+  { category: 'Factory Verification', items: ['Business license verification', 'Factory registration documents', 'Ownership structure', 'Years in business', 'Production capacity verification'] },
+  { category: 'Facility Assessment', items: ['Production line inspection', 'Equipment condition', 'Worker facilities', 'Safety equipment', 'Cleanliness standards'] },
+  { category: 'Quality Systems', items: ['Quality control procedures', 'Inspection protocols', 'Testing capabilities', 'AQL standards used', 'Certifications held'] },
+  { category: 'Social Compliance', items: ['Labor practices', 'Working hours', 'Wage compliance', 'Child labor policy', 'Environmental practices'] },
+];
+
+const redFlags = [
+  'Reluctance to provide factory address',
+  'Prices significantly below market average',
+  'Pressure to skip sample development',
+  'No third-party inspection acceptance',
+  'Unwilling to show production floor',
+  'No verifiable client references',
+  'Reluctance about certifications',
+  'Unclear communication channels',
+];
+---
+
+<PageLayout
+  title="How to Vet Chinese Shoe Suppliers"
+  description="Complete guide to vetting and verifying Chinese footwear suppliers. Learn how to conduct factory audits, verify credentials, and identify red flags before placing orders."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'How to Vet Suppliers', url: '/sourcing/how-to-vet-suppliers/' },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Sourcing Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      How to Vet Chinese Shoe Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600">
+      A comprehensive guide to verifying and vetting footwear suppliers in China. Learn factory audit techniques, credential verification, and how to identify red flags before committing to orders.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&h=400&fit=crop"
+      alt="Factory Production Floor"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Why Vet Suppliers -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Why Vetting Suppliers Matters</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Sourcing footwear from China offers significant opportunities for cost savings and access to manufacturing expertise. However, the complexity of international supply chains and the diversity of supplier capabilities make thorough vetting essential. A single bad supplier relationship can result in quality issues, delayed shipments, financial losses, and damage to your brand reputation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Effective supplier vetting protects your business by verifying that potential partners can actually deliver on their promises. Many suppliers present attractive capabilities on paper that don't match their actual factory conditions. Physical verification through factory visits or third-party audits reveals the truth.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Pre-Qualification Research</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Before reaching out to suppliers, conduct background research to identify promising candidates. Use online B2B platforms, trade directories, and industry associations to create a long list of potential suppliers. Research the specific regions known for your product type—Putian and Quanzhou for sports shoes, Wenzhou for dress shoes, Chengdu for women's boots.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Review potential suppliers' online presence, including company websites, verified trade show participation, and any client testimonials or reviews. Be skeptical of suppliers with minimal online presence or those that appear only on B2B platforms without direct company information.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Initial Contact and Communication</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Initial communications reveal much about a supplier's professionalism and capability. Professional suppliers respond promptly with clear, detailed information. Watch for communication red flags including excessive delays in responses, vague answers to specific questions, and automatic acceptance of any order without discussion of feasibility.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      During initial contact, request: business license documentation, factory photos (not stock images), production capability overview, certifications held, and client references. Suppliers reluctant to provide basic documentation may have something to hide.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Factory Audit Checklist</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      A physical factory visit or third-party audit provides the most reliable verification of supplier capabilities. If visiting in person isn't feasible, consider hiring a third-party inspection company to conduct an audit on your behalf.
+    </p>
+  </div>
+
+  <!-- Audit Checklist -->
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    {checklistItems.map(section => (
+      <div class="card">
+        <h3 class="font-semibold text-lg text-neutral-900 mb-4">{section.category}</h3>
+        <ul class="space-y-2">
+          {section.items.map(item => (
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-neutral-600 text-sm">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <!-- Red Flags -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Red Flags to Watch For</h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mb-12">
+    {redFlags.map(flag => (
+      <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg">
+        <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-neutral-700 text-sm">{flag}</span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Verification Services -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Third-Party Verification Services</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      If visiting factories personally isn't feasible, third-party verification services provide professional factory audits. Major inspection companies including SGS, Bureau Veritas, Intertek, and QIMA offer factory audit services tailored to footwear manufacturing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      These services typically offer various audit types including basic factory verification, comprehensive quality audits, social compliance audits (BSCI, WRAP, SEDEX), and specialized footwear production audits. Costs vary by audit type and factory location.
+    </p>
+    
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Ongoing Monitoring</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Supplier vetting isn't a one-time activity. Establish ongoing monitoring practices including regular production updates, quality inspection reports, and periodic re-audits of critical suppliers. Maintain relationships with backup suppliers to reduce dependency risk.
+    </p>
+  </div>
+
+  <!-- Related Resources -->
+  <div class="bg-neutral-50 rounded-xl p-8">
+    <h3 class="text-lg font-bold text-neutral-900 mb-4">Related Sourcing Guides</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="/sourcing/moq-negotiation-guide/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">MOQ Negotiation Guide</h4>
+        <p class="text-sm text-neutral-600">Learn effective strategies for negotiating minimum order quantities.</p>
+      </a>
+      <a href="/sourcing/quality-control-checklist/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Quality Control Checklist</h4>
+        <p class="text-sm text-neutral-600">Comprehensive QC procedures for footwear orders.</p>
+      </a>
+      <a href="/suppliers/" class="card group">
+        <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600 mb-1">Supplier Directory</h4>
+        <p class="text-sm text-neutral-600">Browse verified Chinese footwear manufacturers.</p>
+      </a>
+    </div>
+  </div>
+</PageLayout>
