@@ -33,6 +33,16 @@ Before pushing to remote, MUST verify:
 - `node_modules/` - dependencies (in .gitignore)
 - `.env` files - secrets (in .gitignore)
 
+## Python Scripts Rules (CRITICAL)
+
+1. **NEVER fallback to demo/mock data** - If crawling fails, the script MUST fail with an error. No silent degradation.
+
+2. **Scripts are local-only tools** - They generate data locally, not content for the website directly.
+
+3. **Anti-scraping compliance** - Respect robots.txt, rate limits, and website terms of service.
+
+4. **Error handling** - Scripts should fail fast and loud if data cannot be obtained. Never return fake data.
+
 ## Project Structure
 
 ```
