@@ -1,0 +1,502 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Inspiration', url: '/inspiration/' },
+  { name: 'Spring/Summer 2025', url: '/inspiration/spring-summer-2025/' },
+];
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Spring/Summer 2025 Footwear Design Trends - ChinaShoe.cc",
+  "description": "Comprehensive guide to Spring/Summer 2025 footwear design trends including color palettes, materials, silhouettes, and manufacturing insights from Chinese suppliers.",
+  "author": { "@type": "Organization", "name": "ChinaShoe.cc" },
+  "publisher": { "@type": "Organization", "name": "ChinaShoe.cc", "url": "https://chinashoe.cc" },
+  "datePublished": "2025-01-15",
+  "dateModified": "2025-03-01",
+};
+---
+
+<PageLayout
+  title="Spring/Summer 2025 Footwear Design Trends"
+  description="Explore the defining footwear trends for Spring/Summer 2025 — color palettes, materials, silhouettes, and sourcing insights from Chinese manufacturers."
+  breadcrumbs={breadcrumbs}
+  structuredData={articleSchema}
+>
+  <!-- Hero -->
+  <div class="relative rounded-2xl overflow-hidden mb-12 h-72 md:h-96">
+    <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1200&h=600&fit=crop" alt="Spring Summer 2025 Footwear Trends" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <span class="inline-block px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full mb-3">SS25 Season Guide</span>
+      <h1 class="text-3xl md:text-5xl font-bold text-white mb-2">Spring/Summer 2025</h1>
+      <p class="text-white/80 text-lg max-w-2xl">The complete design reference for footwear brands and buyers sourcing from China</p>
+    </div>
+  </div>
+
+  <!-- Trend Overview -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Season Overview: What Defines SS25</h2>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-6">
+      The Spring/Summer 2025 season marks a decisive shift in global footwear design. Post-pandemic comfort expectations have permanently merged with high-fashion aesthetics, creating a landscape where technical performance and visual artistry coexist. For brands sourcing from China, this convergence opens unprecedented opportunities — Chinese manufacturers have invested heavily in hybrid construction capabilities that bridge the comfort-fashion divide.
+    </p>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-8">
+      Five macro-trends dominate the SS25 conversation: <strong>Organic Minimalism</strong>, <strong>Tactile Futurism</strong>, <strong>Mediterranean Revival</strong>, <strong>Quiet Luxury</strong>, and <strong>Bio-Engineered Performance</strong>. Each trend presents distinct opportunities for brands at different price points and market positions.
+    </p>
+
+    <!-- Trend Architecture Diagram -->
+    <div class="bg-neutral-50 rounded-xl p-6 mb-8">
+      <h3 class="text-lg font-semibold text-neutral-900 mb-4">SS25 Trend Architecture</h3>
+      <div class="mermaid">
+graph TD
+    A[SS25 Macro Trends] --> B[Organic Minimalism]
+    A --> C[Tactile Futurism]
+    A --> D[Mediterranean Revival]
+    A --> E[Quiet Luxury]
+    A --> F[Bio-Engineered Performance]
+    
+    B --> B1[Natural textures]
+    B --> B2[Earth-toned palettes]
+    B --> B3[Unstructured forms]
+    
+    C --> C1[Metallic mesh]
+    C --> C2[3D-knit uppers]
+    C --> C3[Iridescent finishes]
+    
+    D --> D1[Terracotta hues]
+    D --> D2[Woven leather]
+    D --> D3[Espadrille soles]
+    
+    E --> E1[Monochrome tonal]
+    E --> E2[Premium leathers]
+    E --> E3[Invisible branding]
+    
+    F --> F1[Algae-based foam]
+    F --> F2[Mycelium leather]
+    F --> F3[Recycled TPU]
+      </div>
+    </div>
+  </div>
+
+  <!-- Color Palettes -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Color Palettes for SS25</h2>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-8">
+      Color direction for SS25 splits into two emotional registers: <strong>grounded earth tones</strong> that signal stability and connection, and <strong>luminous brights</strong> that express optimism and energy. The strategic use of color is the single most cost-effective way to differentiate your collection — and Chinese dye houses have significantly expanded their color-matching capabilities for both leather and textile applications.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <!-- Palette 1 -->
+      <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+        <div class="flex h-24">
+          <div class="flex-1" style="background-color: #C4A882"></div>
+          <div class="flex-1" style="background-color: #8B7355"></div>
+          <div class="flex-1" style="background-color: #D4C5A9"></div>
+          <div class="flex-1" style="background-color: #5C4033"></div>
+          <div class="flex-1" style="background-color: #E8DCC8"></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-neutral-900 mb-1">Terracotta Dusk</h3>
+          <p class="text-sm text-neutral-500 mb-3">Mediterranean-inspired warmth — Pantone 14-1318 TCX leads</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Leather</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Suede</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Canvas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palette 2 -->
+      <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+        <div class="flex h-24">
+          <div class="flex-1" style="background-color: #E8F0E8"></div>
+          <div class="flex-1" style="background-color: #A8C5A0"></div>
+          <div class="flex-1" style="background-color: #5B7B5E"></div>
+          <div class="flex-1" style="background-color: #3D5C3E"></div>
+          <div class="flex-1" style="background-color: #C8D8C0"></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-neutral-900 mb-1">Botanical Whisper</h3>
+          <p class="text-sm text-neutral-500 mb-3">Nature-adjacent greens signal eco-conscious positioning</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Knit</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Mesh</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Recycled</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palette 3 -->
+      <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+        <div class="flex h-24">
+          <div class="flex-1" style="background-color: #F5F0EB"></div>
+          <div class="flex-1" style="background-color: #D4C8B8"></div>
+          <div class="flex-1" style="background-color: #B8A898"></div>
+          <div class="flex-1" style="background-color: #8C7C6C"></div>
+          <div class="flex-1" style="background-color: #FFFFFF"></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-neutral-900 mb-1">Quiet Sand</h3>
+          <p class="text-sm text-neutral-500 mb-3">The new neutral — warm off-whites and sand for luxury positioning</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Full-grain</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Nappa</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Patent</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palette 4 -->
+      <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+        <div class="flex h-24">
+          <div class="flex-1" style="background-color: #C0E0F0"></div>
+          <div class="flex-1" style="background-color: #70B8D8"></div>
+          <div class="flex-1" style="background-color: #2878A8"></div>
+          <div class="flex-1" style="background-color: #E0F0F8"></div>
+          <div class="flex-1" style="background-color: #5098C0"></div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-bold text-neutral-900 mb-1">Glacier Blue</h3>
+          <p class="text-sm text-neutral-500 mb-3">Cool aqueous tones for performance and lifestyle crossover</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">TPU</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Mesh</span>
+            <span class="text-xs px-2 py-1 bg-neutral-100 rounded">Foam</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Silhouettes -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Key Silhouettes & Shape Direction</h2>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-8">
+      Silhouette direction for SS25 diverges sharply from the oversized proportions that dominated 2023-2024. The new season favors <strong>refined proportions</strong> — slimmer midsoles, lower stack heights, and more anatomical shapes. This shift has significant implications for mold investment and tooling decisions when sourcing from Chinese factories.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+          <span class="text-2xl">👟</span>
+        </div>
+        <h3 class="font-bold text-neutral-900 mb-2">Slim-Profile Sneaker</h3>
+        <p class="text-neutral-600 text-sm mb-3">The chunky sneaker era recedes. SS25 favors low-profile silhouettes with 25-35mm midsole height, recalling 1970s running shapes but with modern cushioning technology.</p>
+        <div class="text-xs text-primary-600 font-medium">Midsole: 25-35mm | Last: Italy Slim</div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+          <span class="text-2xl">👠</span>
+        </div>
+        <h3 class="font-bold text-neutral-900 mb-2">Sculpted Mid-Heel</h3>
+        <p class="text-neutral-600 text-sm mb-3">The 50-65mm block heel replaces stilettos across women's collections. Sculptural heel shapes in transparent acrylic or brushed metal are key differentiators.</p>
+        <div class="text-xs text-primary-600 font-medium">Heel: 50-65mm | Shape: Sculptural</div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+          <span class="text-2xl">🩴</span>
+        </div>
+        <h3 class="font-bold text-neutral-900 mb-2">Arch-Support Sandal</h3>
+        <p class="text-neutral-600 text-sm mb-3">Comfort meets style in ergonomic sandal constructions. Molded cork footbeds with contoured arch support, elevated with premium leather straps and metal hardware.</p>
+        <div class="text-xs text-primary-600 font-medium">Footbed: Cork/EVA | Arch: 15-20mm</div>
+      </div>
+    </div>
+
+    <!-- Silhouette Evolution Diagram -->
+    <div class="bg-neutral-50 rounded-xl p-6">
+      <h3 class="text-lg font-semibold text-neutral-900 mb-4">Silhouette Evolution: SS23 → SS25</h3>
+      <div class="mermaid">
+graph LR
+    A[SS23 Oversized] --> B[SS24 Transitional]
+    B --> C[SS25 Refined]
+    
+    A --> A1[50-60mm midsole]
+    A --> A2[Broad last]
+    A --> A3[Chunky sole]
+    
+    B --> B1[35-45mm midsole]
+    B --> B2[Medium last]
+    B --> B3[Trimmed proportions]
+    
+    C --> C1[25-35mm midsole]
+    C --> C2[Slim last]
+    C --> C3[Anatomical shape]
+      </div>
+    </div>
+  </div>
+
+  <!-- Material Innovations -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Material Innovations for SS25</h2>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-8">
+      Material selection is where design intent meets manufacturing reality. The SS25 material landscape is defined by three forces: the <strong>regulatory push toward sustainable inputs</strong> (EU Green Deal compliance), the <strong>consumer demand for tactile richness</strong>, and the <strong>Chinese supply chain's rapid adoption of bio-based alternatives</strong>.
+    </p>
+
+    <!-- Material Innovation Flowchart -->
+    <div class="bg-neutral-50 rounded-xl p-6 mb-8">
+      <h3 class="text-lg font-semibold text-neutral-900 mb-4">SS25 Material Decision Framework</h3>
+      <div class="mermaid">
+graph TD
+    A[Material Selection] --> B["Price Position?"]
+    B -->|Premium| C[Natural Leather]
+    B -->|Mid-Range| D[Engineered Synthetic]
+    B -->|Value| E[Standard Synthetic]
+    
+    C --> C1[Full-grain Italian]
+    C --> C2[Veg-tan chrome-free]
+    C --> C3[Exotic embossed]
+    
+    D --> D1[Bio-based PU]
+    D --> D2[Recycled polyester mesh]
+    D --> D3[Mycelium leather]
+    
+    E --> E1[Standard PU leather]
+    E --> E2[Microfiber]
+    E --> E3[PVC compound]
+    
+    C1 --> F[EU REACH Compliant]
+    C2 --> F
+    D1 --> G[Green Deal Ready]
+    D2 --> G
+    E1 --> H[Basic Compliance]
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <h3 class="font-bold text-neutral-900 mb-3">Bio-Based PU Leather</h3>
+        <p class="text-neutral-600 text-sm mb-4">
+          The biggest material story for SS25 is the commercialization of bio-based PU leather. Chinese manufacturers in Wenzhou and Dongguan now offer PU leather with 20-40% bio-based content (derived from corn, sugarcane, or castor oil), at only 10-15% cost premium over conventional PU. This is the fastest route to EU Green Deal compliance for synthetic shoe uppers.
+        </p>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-green-600 font-medium">Cost: +10-15%</span>
+          <span class="text-blue-600 font-medium">Bio-content: 20-40%</span>
+          <span class="text-purple-600 font-medium">Lead time: +7 days</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <h3 class="font-bold text-neutral-900 mb-3">3D Engineered Mesh</h3>
+        <p class="text-neutral-600 text-sm mb-4">
+          Jacquard-engineered mesh uppers move from athletic into lifestyle and even dress casual categories for SS25. The technology allows zone-specific breathability, structure, and stretch in a single seamless upper — reducing cutting waste by up to 30%. Fujian-based factories now offer MOQs as low as 500 pairs for custom mesh patterns.
+        </p>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-green-600 font-medium">Waste: -30%</span>
+          <span class="text-blue-600 font-medium">MOQ: 500 pairs</span>
+          <span class="text-purple-600 font-medium">Setup: $2,000-5,000</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <h3 class="font-bold text-neutral-900 mb-3">Chrome-Free Tanned Leather</h3>
+        <p class="text-neutral-600 text-sm mb-4">
+          EU REACH Amendment 2024/2320 tightens limits on chromium VI, making chrome-free tanning a necessity for European market access. Sichuan and Zhejiang tanneries have scaled vegetable-tanning capacity significantly. Expect 5-8% higher leather cost but elimination of chromium VI risk entirely.
+        </p>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-green-600 font-medium">Cost: +5-8%</span>
+          <span class="text-blue-600 font-medium">REACH: Compliant</span>
+          <span class="text-purple-600 font-medium">Supply: Expanding</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-neutral-200 p-6">
+        <h3 class="font-bold text-neutral-900 mb-3">Recycled TPU Outsoles</h3>
+        <p class="text-neutral-600 text-sm mb-4">
+          Post-consumer recycled TPU outsoles are the outsole story of SS25. With major brands mandating 30%+ recycled content, Chinese outsole suppliers in Putian and Quanzhou have developed PCR-TPU compounds that match virgin TPU performance at comparable cost. Available in injection and compression molding grades.
+        </p>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-green-600 font-medium">PCR: 30-50%</span>
+          <span class="text-blue-600 font-medium">Cost: +3-5%</span>
+          <span class="text-purple-600 font-medium">Abrasion: Equal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sourcing Implications -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Sourcing Implications for Chinese Manufacturers</h2>
+    <p class="text-neutral-600 text-lg leading-relaxed mb-8">
+      Translating SS25 design trends into production realities requires strategic sourcing decisions. The following framework maps each trend to specific Chinese production clusters, lead times, and cost implications.
+    </p>
+
+    <!-- Sourcing Decision Flowchart -->
+    <div class="bg-neutral-50 rounded-xl p-6 mb-8">
+      <h3 class="text-lg font-semibold text-neutral-900 mb-4">SS25 Sourcing Decision Map</h3>
+      <div class="mermaid">
+graph TD
+    A[SS25 Collection Planning] --> B["Budget Tier?"]
+    B -->|Premium $50+ FOB| C[Dongguan/Guangzhou]
+    B -->|Mid-Range $20-50 FOB| D[Quanzhou/Putian]
+    B -->|Value Under $20 FOB| E[Wenzhou/Chengdu]
+    
+    C --> C1[Italian last systems]
+    C --> C2[Chrome-free leather]
+    C --> C3[Hand-finished]
+    
+    D --> D1[Athletic-lifestyle crossover]
+    D --> D2[Engineered mesh]
+    D --> D3[Recycled compounds]
+    
+    E --> E1[Fashion women shoes]
+    E --> E2[PU/canvas uppers]
+    E --> E3[Fast turnaround]
+    
+    C1 --> F[Lead: 60-90 days]
+    D1 --> G[Lead: 45-60 days]
+    E1 --> H[Lead: 25-40 days]
+      </div>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse bg-white rounded-xl overflow-hidden">
+        <thead>
+          <tr class="bg-neutral-50">
+            <th class="text-left p-4 font-semibold text-neutral-900">Trend</th>
+            <th class="text-left p-4 font-semibold text-neutral-900">Best Source Region</th>
+            <th class="text-left p-4 font-semibold text-neutral-900">FOB Range</th>
+            <th class="text-left p-4 font-semibold text-neutral-900">Lead Time</th>
+            <th class="text-left p-4 font-semibold text-neutral-900">MOQ</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr>
+            <td class="p-4 font-medium">Organic Minimalism</td>
+            <td class="p-4 text-neutral-600">Dongguan</td>
+            <td class="p-4 text-neutral-600">$35-55</td>
+            <td class="p-4 text-neutral-600">60-75 days</td>
+            <td class="p-4 text-neutral-600">300 pairs</td>
+          </tr>
+          <tr class="bg-neutral-50/50">
+            <td class="p-4 font-medium">Tactile Futurism</td>
+            <td class="p-4 text-neutral-600">Quanzhou</td>
+            <td class="p-4 text-neutral-600">$22-38</td>
+            <td class="p-4 text-neutral-600">45-60 days</td>
+            <td class="p-4 text-neutral-600">500 pairs</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-medium">Mediterranean Revival</td>
+            <td class="p-4 text-neutral-600">Chengdu</td>
+            <td class="p-4 text-neutral-600">$15-28</td>
+            <td class="p-4 text-neutral-600">30-45 days</td>
+            <td class="p-4 text-neutral-600">200 pairs</td>
+          </tr>
+          <tr class="bg-neutral-50/50">
+            <td class="p-4 font-medium">Quiet Luxury</td>
+            <td class="p-4 text-neutral-600">Guangzhou</td>
+            <td class="p-4 text-neutral-600">$40-65</td>
+            <td class="p-4 text-neutral-600">65-90 days</td>
+            <td class="p-4 text-neutral-600">200 pairs</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-medium">Bio-Engineered</td>
+            <td class="p-4 text-neutral-600">Putian/Xiamen</td>
+            <td class="p-4 text-neutral-600">$25-45</td>
+            <td class="p-4 text-neutral-600">50-70 days</td>
+            <td class="p-4 text-neutral-600">500 pairs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Design Elements Detail -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">Design Element Deep Dive</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-4">Sole & Midsole Trends</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">1</span></span>
+            <div>
+              <strong class="text-neutral-900">EVA Cup Sole Revival</strong>
+              <p class="text-sm text-neutral-600">Cup sole construction returns with updated proportions — thinner walls, exposed foam edges, and natural color EVA. Ideal for canvas and casual leather uppers.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">2</span></span>
+            <div>
+              <strong class="text-neutral-900">Sculpted TPU Platforms</strong>
+              <p class="text-sm text-neutral-600">For women's styles, sculpted TPU platforms with organic curves and transparent colorways. Injection-molded in Guangdong, tooling cost $8,000-15,000.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">3</span></span>
+            <div>
+              <strong class="text-neutral-900">Cork-Rubber Composites</strong>
+              <p class="text-sm text-neutral-600">Natural cork blended with rubber for lightweight, sustainable midsoles. A key differentiator for eco-positioned brands. Portuguese-design, Chinese-manufactured.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-4">Detailing & Trim</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">1</span></span>
+            <div>
+              <strong class="text-neutral-900">Invisible Branding</strong>
+              <p class="text-sm text-neutral-600">Debossed logos, tonal embroidery, and heat-stamped logos replace contrast branding. The logo is there but doesn't dominate — critical for Quiet Luxury positioning.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">2</span></span>
+            <div>
+              <strong class="text-neutral-900">Woven & Braided Elements</strong>
+              <p class="text-sm text-neutral-600">Leather weaving, raffia braiding, and textile strap details add handcrafted texture. Sichuan factories specialize in woven leather uppers at scale.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-primary-600 text-xs font-bold">3</span></span>
+            <div>
+              <strong class="text-neutral-900">Metal Hardware Accent</strong>
+              <p class="text-sm text-neutral-600">Brushed gold, matte nickel, and gunmetal buckles, eyelets, and zipper pulls. Hardware moves from functional to decorative in SS25 women's collections.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collection Planning Timeline -->
+  <div class="mb-16">
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">SS25 Collection Development Timeline</h2>
+    <div class="bg-neutral-50 rounded-xl p-6">
+      <div class="mermaid">
+gantt
+    title SS25 Footwear Development Timeline
+    dateFormat  YYYY-MM-DD
+    section Design
+    Trend Analysis & Color Selection    :done, des1, 2024-09-01, 2024-10-15
+    Sketch & Concept Development         :done, des2, 2024-10-01, 2024-11-30
+    Material Sourcing & Testing          :active, des3, 2024-11-01, 2025-01-15
+    section Prototyping
+    1st Prototype (3D Print/Manual)      :2024-12-01, 2025-01-31
+    Fit Testing & Revision               :2025-01-15, 2025-02-28
+    2nd Prototype (Production Sample)    :2025-02-01, 2025-03-15
+    section Production
+    Pre-Production Meeting               :2025-03-01, 2025-03-15
+    Bulk Material Procurement            :2025-03-15, 2025-04-15
+    Mass Production                      :2025-04-01, 2025-05-31
+    Quality Control & Shipping           :2025-05-15, 2025-06-30
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-8 text-center text-white">
+    <h3 class="text-2xl font-bold mb-3">Ready to Develop Your SS25 Collection?</h3>
+    <p class="text-primary-100 mb-6 max-w-2xl mx-auto">Connect with Chinese manufacturers who specialize in SS25 trend execution. Get matched with verified suppliers for your specific design requirements.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/suppliers/" class="inline-block px-6 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-colors">Browse Suppliers</a>
+      <a href="/contact/" class="inline-block px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Get Matched</a>
+    </div>
+  </div>
+</PageLayout>
