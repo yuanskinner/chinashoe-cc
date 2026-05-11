@@ -1,0 +1,261 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const categories = [
+  {
+    name: 'Canvas Sneakers',
+    description: 'Classic vulcanized construction with canvas upper and rubber sole',
+    href: '/encyclopedia/canvas-sneakers/',
+    icon: '👟',
+  },
+  {
+    name: 'Low-Top Sneakers',
+    description: 'Low-cut casual sneakers for everyday wear',
+    href: '/encyclopedia/canvas-sneakers/',
+    icon: '👟',
+  },
+  {
+    name: 'High-Top Sneakers',
+    description: 'High-cut sneakers with ankle support',
+    href: '/encyclopedia/canvas-sneakers/',
+    icon: '👟',
+  },
+  {
+    name: 'Slip-on Sneakers',
+    description: 'Elastic or laceless sneakers for easy on-off',
+    href: '/encyclopedia/loafers/',
+    icon: '👟',
+  },
+];
+
+const relatedMaterials = [
+  { name: 'Canvas', href: '/encyclopedia/materials/canvas/' },
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+  { name: 'Textiles', href: '/encyclopedia/materials/textiles/' },
+  { name: 'Mesh Fabric', href: '/encyclopedia/materials/mesh-fabric/' },
+];
+
+const relatedProcesses = [
+  { name: 'Vulcanized Construction', href: '/encyclopedia/manufacturing/vulcanized/' },
+  { name: 'Cemented Construction', href: '/encyclopedia/manufacturing/cemented/' },
+];
+---
+
+<PageLayout
+  title="Sneakers Encyclopedia - ChinaShoe.cc"
+  description="Comprehensive guide to sneakers: canvas sneakers, slip-ons, vulcanized construction, and casual footwear manufacturing in China."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Sneakers', url: '/encyclopedia/sneakers/' },
+  ]}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-primary-900 text-white py-16">
+    <div class="container-custom">
+      <div class="flex items-center gap-2 text-sm text-neutral-300 mb-4">
+        <a href="/encyclopedia/" class="hover:text-white transition-colors">Encyclopedia</a>
+        <span>/</span>
+        <span class="text-white">Sneakers</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Sneakers Encyclopedia</h1>
+      <p class="text-xl text-neutral-300 max-w-2xl">
+        Complete technical guide to sneakers: from classic canvas vulcanized to modern athletic sneakers, 
+        covering materials, construction methods, and manufacturing insights from Chinese factories.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Overview -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <h2>What Are Sneakers?</h2>
+            <p>
+              Sneakers represent the most versatile category in casual footwear, bridging the gap between 
+              athletic functionality and everyday style. The term "sneaker" originated in late 19th century 
+              America, referring to the rubber-soled shoes that allowed wearers to move silently ("sneak") 
+              around. Today, sneakers encompass a vast range of styles, from classic canvas vulcanized shoes 
+              to high-performance athletic footwear.
+            </p>
+            
+            <h2>Evolution of Sneaker Culture</h2>
+            <p>
+              The sneaker industry has transformed from functional athletic wear into a global cultural phenomenon. 
+              Key milestones include:
+            </p>
+            <ul>
+              <li><strong>1892:</strong> U.S. Rubber Company introduces the first canvas-top rubber-soled shoes</li>
+              <li><strong>1917:</strong> Converse Chuck Taylor All-Star launched as basketball shoes</li>
+              <li><strong>1949:</strong> Adidas Samba introduced for football/soccer training</li>
+              <li><strong>1960s-70s:</strong> Sneakers become symbols of youth rebellion and hip-hop culture</li>
+              <li><strong>1985:</strong> Nike Air Jordan revolutionizes sneaker-as-status-symbol</li>
+              <li><strong>2000s-Present:</strong> Sneakerhead culture and limited editions drive market growth</li>
+            </ul>
+
+            <h2>Major Sneaker Categories</h2>
+            
+            <h3>Canvas Sneakers</h3>
+            <p>
+              The quintessential casual sneaker, canvas sneakers feature a cotton canvas upper vulcanized 
+              with a natural rubber sole. Famous examples include Converse Chuck Taylor, Vans Old Skool, 
+              and Adidas Superstar (originally basketball). Chinese manufacturers in Putian (Fujian), 
+              Wenzhou (Zhejiang), and Guangzhou (Guangdong) produce the majority of the world's canvas 
+              sneakers at various quality tiers.
+            </p>
+            
+            <h4>Construction Methods</h4>
+            <p>
+              Canvas sneakers primarily use vulcanized construction:
+            </p>
+            <ul>
+              <li><strong>Vulcanized (Classic):</strong> Canvas upper is wrapped around last, rubber compound 
+                  is applied, and the assembly is heated in vulcanization oven at 140-160°C. Creates a single, 
+                  inseparable unit. Characterized by flexibility and durability.</li>
+              <li><strong>Injection Molded:</strong> Upper is attached to last, and molten rubber is injected 
+                  into mold. Creates clean seams and allows for complex sole designs. Common in budget 
+                  segments from Chinese factories.</li>
+              <li><strong>Cupsole:</strong> Vulcanized rubber cup-shaped sole is cemented to canvas upper. 
+                  Allows for removable insoles and better shock absorption. Popular in skateboarding sneakers.</li>
+            </ul>
+
+            <h3>Leather Sneakers</h3>
+            <p>
+              Leather sneakers combine premium materials with sneaker aesthetics. Premium options use 
+              full-grain or top-grain leather, while mid-tier products feature corrected-grain or 
+              split leather. Chinese tanneries in Henan, Hebei, and Guangdong supply leather to both 
+              domestic manufacturers and international brands.
+            </p>
+
+            <h3>Athletic Sneakers</h3>
+            <p>
+              Performance-driven sneakers incorporate advanced technologies:
+            </p>
+            <ul>
+              <li><strong>Running Shoes:</strong> Engineered midsoles (EVA, PU, TPU), breathable mesh uppers</li>
+              <li><strong>Basketball Shoes:</strong> High-top support, cushioned ankle protection, herringbone outsoles</li>
+              <li><strong>Cross-Training:</strong> Versatile construction for multiple sports activities</li>
+            </ul>
+
+            <h2>Materials Used in Sneakers</h2>
+            
+            <h3>Uppers</h3>
+            <ul>
+              <li><strong>Canvas:</strong> Cotton duck canvas (10-16 oz), offering breathability and customization</li>
+              <li><strong>Leather:</strong> Full-grain, top-grain, suede, nubuck for premium segment</li>
+              <li><strong>Synthetics:</strong> PU leather, microfiber, mesh, knit textiles for athletic models</li>
+              <li><strong>Textiles:</strong> Knitted uppers for flexibility and breathability</li>
+            </ul>
+
+            <h3>Soles</h3>
+            <ul>
+              <li><strong>Natural Rubber:</strong> Traditional vulcanized soles, excellent grip but higher cost</li>
+              <li><strong>Synthetic Rubber (SBR):</strong> Cost-effective alternative with good durability</li>
+              <li><strong>EVA:</strong> Lightweight cushioning for midsoles</li>
+              <li><strong>PU:</strong> Durable cushioning, often used in athletic sneakers</li>
+              <li><strong>TPU:</strong> Thermoplastic for heel counters and advanced cushioning</li>
+            </ul>
+
+            <h2>Manufacturing in China</h2>
+            <p>
+              China remains the world's largest sneaker producer, with major manufacturing hubs:
+            </p>
+            <ul>
+              <li><strong>Putian, Fujian:</strong> Known as "Sneaker City" - produces 40% of China's athletic shoes</li>
+              <li><strong>Wenzhou, Zhejiang:</strong> Traditional leather shoes and casual sneakers</li>
+              <li><strong>Dongguan, Guangdong:</strong> Premium manufacturing for international brands</li>
+              <li><strong>Quanzhou, Fujian:</strong> Sports shoes and athletic footwear</li>
+              <li><strong>Taicang, Jiangsu:</strong> Specialized in vulcanized canvas shoes</li>
+            </ul>
+
+            <h3>Quality Tiers in Chinese Production</h3>
+            <ul>
+              <li><strong>AAPE/Factory Firsts:</strong> Surplus production from branded orders; highest quality</li>
+              <li><strong>OEM Production:</strong> Contract manufacturing meeting brand specifications</li>
+              <li><strong>Trade Market Quality:</strong> Mid-tier production for wholesale markets</li>
+              <li><strong>Budget/AliExpress Quality:</strong> Entry-level production for low-price markets</li>
+            </ul>
+
+            <h2>Sourcing Considerations</h2>
+            <p>
+              When sourcing sneakers from China, key factors include:
+            </p>
+            <ul>
+              <li><strong>MOQ (Minimum Order Quantity):</strong> Typically 300-500 pairs per colorway</li>
+              <li><strong>Lead Time:</strong> 30-45 days for vulcanized; 45-60 days for injection-molded</li>
+              <li><strong>Sample Costs:</strong> $30-80 per pair for development samples</li>
+              <li><strong>Quality Verification:</strong> Third-party inspection recommended for orders over $10,000</li>
+              <li><strong>Certification Requirements:</strong> REACH, CPSIA for EU/US markets; material testing essential</li>
+            </ul>
+          </div>
+
+          <!-- Categories Grid -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Browse by Category</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              {categories.map(cat => (
+                <a href={cat.href} class="card group">
+                  <div class="flex items-center gap-4">
+                    <span class="text-3xl">{cat.icon}</span>
+                    <div>
+                      <h3 class="font-semibold group-hover:text-primary-600 transition-colors">
+                        {cat.name}
+                      </h3>
+                      <p class="text-sm text-neutral-600">{cat.description}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Related Materials -->
+          <div class="card">
+            <h3 class="font-semibold text-lg mb-4">Related Materials</h3>
+            <ul class="space-y-2">
+              {relatedMaterials.map(mat => (
+                <li>
+                  <a href={mat.href} class="text-primary-600 hover:text-primary-700 hover:underline">
+                    {mat.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Manufacturing Processes -->
+          <div class="card">
+            <h3 class="font-semibold text-lg mb-4">Manufacturing Processes</h3>
+            <ul class="space-y-2">
+              {relatedProcesses.map(proc => (
+                <li>
+                  <a href={proc.href} class="text-primary-600 hover:text-primary-700 hover:underline">
+                    {proc.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Sourcing CTA -->
+          <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Looking for Sneaker Suppliers?</h3>
+            <p class="text-sm text-neutral-600 mb-4">
+              Connect with verified Chinese manufacturers specializing in sneakers and casual footwear.
+            </p>
+            <a href="/suppliers/" class="btn-primary w-full text-center">
+              Find Suppliers
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

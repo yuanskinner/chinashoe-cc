@@ -1,0 +1,373 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const ageGroups = [
+  {
+    name: 'Infant (0-12 months)',
+    description: 'Soft-soled shoes for babies learning to walk',
+    href: '#',
+  },
+  {
+    name: 'Toddler (1-3 years)',
+    description: 'Flexible shoes for active toddlers',
+    href: '#',
+  },
+  {
+    name: 'Little Kids (4-8 years)',
+    description: 'School shoes and everyday footwear',
+    href: '#',
+  },
+  {
+    name: 'Big Kids (9-12 years)',
+    description: 'Pre-teen styles and athletic footwear',
+    href: '#',
+  },
+];
+
+const relatedMaterials = [
+  { name: 'Leather', href: '/encyclopedia/materials/leather/' },
+  { name: 'PU Leather', href: '/encyclopedia/materials/pu-leather/' },
+  { name: 'Canvas', href: '/encyclopedia/materials/canvas/' },
+  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
+];
+
+const relatedCategories = [
+  { name: 'Sneakers', href: '/encyclopedia/sneakers/' },
+  { name: 'Sandals', href: '/encyclopedia/sandals/' },
+  { name: 'Slippers', href: '/encyclopedia/slippers/' },
+];
+---
+
+<PageLayout
+  title="Children's Shoes Encyclopedia - ChinaShoe.cc"
+  description="Complete guide to children's shoes: safety standards, sizing, materials, and sourcing from Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: "Children's Shoes", url: '/encyclopedia/children-shoes/' },
+  ]}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-700 text-white py-16">
+    <div class="container-custom">
+      <div class="flex items-center gap-2 text-sm text-white/80 mb-4">
+        <a href="/encyclopedia/" class="hover:text-white transition-colors">Encyclopedia</a>
+        <span>/</span>
+        <span class="text-white">Children's Shoes</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Children's Shoes Encyclopedia</h1>
+      <p class="text-xl text-white/90 max-w-2xl">
+        Comprehensive guide to children's footwear: from infant soft soles to school shoes, 
+        covering safety standards, proper fit, and manufacturing insights from Chinese factories.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Overview -->
+          <div class="prose prose-lg max-w-none mb-12">
+            <h2>Importance of Proper Children's Footwear</h2>
+            <p>
+              Children's feet are not simply smaller versions of adult feet—they are still developing, 
+              with cartilage gradually transforming into bone through childhood and adolescence. 
+              Selecting appropriate footwear during these critical growth periods directly impacts:
+            </p>
+            <ul>
+              <li>Proper foot bone development and alignment</li>
+              <li>Balance and coordination skills</li>
+              <li>Posture and gait patterns</li>
+              <li>Overall physical development</li>
+            </ul>
+
+            <h2>Children's Foot Development Stages</h2>
+            
+            <h3>Infant Stage (0-12 Months)</h3>
+            <p>
+              Babies' feet are soft and pliable, with flexible cartilage that hasn't yet fully developed 
+              into bone. During this crawling and early walking stage:
+            </p>
+            <ul>
+              <li><strong>Soft-Soled Shoes:</strong> Recommended for protection against cold and rough surfaces</li>
+              <li><strong>Flexible Soles:</strong> Allow natural foot movement and muscle development</li>
+              <li><strong>Wide Toe Box:</strong> Accommodate natural toe splay for balance development</li>
+              <li><strong>Easy On/Off:</strong> Flexible closures for parent's convenience</li>
+            </ul>
+
+            <h3>Toddler Stage (1-3 Years)</h3>
+            <p>
+              As children begin walking independently, their feet face new challenges:
+            </p>
+            <ul>
+              <li><strong>Active Movement:</strong> Running, jumping, climbing require supportive yet flexible shoes</li>
+              <li><strong>Arch Development:</strong> Fat pads still fill the arch area; true arches develop by age 6-8</li>
+              <li><strong>Wide Feet:</strong> Children's feet are proportionally wider than adults</li>
+              <li><strong>Rapid Growth:</strong> Feet can grow 1-1.5mm per month; fit checks every 4-6 weeks needed</li>
+            </ul>
+
+            <h3>Little Kids (4-8 Years)</h3>
+            <p>
+              School-age children have more developed feet but still require careful shoe selection:
+            </p>
+            <ul>
+              <li><strong>School Shoes:</strong> Daily wear requires durable, supportive footwear</li>
+              <li><strong>Physical Activity:</strong> Athletic play demands shock absorption and stability</li>
+              <li><strong>Peer Awareness:</strong> Style preferences begin influencing choices</li>
+              <li><strong>Growth Spurts:</strong> Continue measuring feet regularly every 3-4 months</li>
+            </ul>
+
+            <h3>Big Kids (9-12 Years)</h3>
+            <p>
+              Pre-teens approach adult foot structure:
+            </p>
+            <ul>
+              <li><strong>Near-Adult Foot:</strong> Most foot structure is developed</li>
+              <li><strong>Sport Specialization:</strong> Athletic footwear for specific sports becomes important</li>
+              <li><strong>Independence:</strong> Children can better articulate fit preferences</li>
+              <li><strong>Hygiene:</strong> Breathable materials become more important</li>
+            </ul>
+
+            <h2>Safety Standards and Regulations</h2>
+            
+            <h3>International Requirements</h3>
+            
+            <h4>United States - CPSC & CPSIA</h4>
+            <p>
+              Children's products including shoes must comply with Consumer Product Safety Commission 
+              (CPSC) requirements:
+            </p>
+            <ul>
+              <li><strong>Lead Content:</strong> Maximum 100 ppm total lead in substrate</li>
+              <li><strong>Phthalates:</strong> Restricted phthalates prohibited in children's products</li>
+              <li><strong>Flammability:</strong> Must meet flammability standards for children's sleepwear</li>
+              <li><strong>Small Parts:</strong> No accessible small parts that pose choking hazards for ages &lt;3</li>
+            </ul>
+
+            <h4>European Union - REACH & EN Standards</h4>
+            <ul>
+              <li><strong>REACH Compliance:</strong> Chemical safety assessment for all components</li>
+              <li><strong>Azo Dyes:</strong> Carcinogenic amine dyes prohibited (&gt;30 mg/kg)</li>
+              <li><strong>Nickel Release:</strong> Maximum 0.5 µg/cm²/week for metal accessories</li>
+              <li><strong>Age Warning:</strong> Products for under 3 must be clearly labeled</li>
+            </ul>
+
+            <h4>General Requirements</h4>
+            <ul>
+              <li><strong>Slip Resistance:</strong> Outsole must provide adequate traction</li>
+              <li><strong>Heel Stability:</strong> Reinforced heels for walking shoes</li>
+              <li><strong>Secure Closures:</strong> Cannot come loose during normal wear</li>
+              <li><strong>Labeling:</strong> Material content, care instructions, country of origin</li>
+            </ul>
+
+            <h2>Key Features of Quality Children's Shoes</h2>
+            
+            <h3>Upper Materials</h3>
+            <ul>
+              <li><strong>Leather:</strong> Natural breathability, molds to foot shape; requires break-in period</li>
+              <li><strong>PU Leather:</strong> Cost-effective, easy maintenance; less breathable than genuine leather</li>
+              <li><strong>Canvas:</strong> Lightweight, breathable, easy to clean; popular for casual shoes</li>
+              <li><strong>Mesh:</strong> Excellent breathability for athletic styles; less durable than leather</li>
+              <li><strong>Knit Textiles:</strong> Flexible, sock-like fit; modern athletic aesthetic</li>
+            </ul>
+
+            <h3>Sole Construction</h3>
+            <ul>
+              <li><strong>Rubber Outsoles:</strong> Durable, slip-resistant traction</li>
+              <li><strong>EVA Midsoles:</strong> Lightweight cushioning for comfort</li>
+              <li><strong>Flexible Design:</strong> Shoes should bend at the ball of the foot, not in the middle</li>
+              <li><strong>Heel Counter:</strong> Firm but not rigid support for heel stability</li>
+            </ul>
+
+            <h3>Closure Systems</h3>
+            <ul>
+              <li><strong>Laces:</strong> Best adjustability; teach children to tie by age 6-7</li>
+              <li><strong>Hook and Loop (Velcro):</strong> Easy for young children; secure fit</li>
+              <li><strong>Elastic:</strong> Comfortable slip-on style; may lose stretch over time</li>
+              <li><strong>Zipper:</strong> Convenient but requires supplemental closure for security</li>
+            </ul>
+
+            <h2>Sizing Guide</h2>
+            
+            <h3>Measuring Children's Feet</h3>
+            <ol>
+              <li>Measure feet at end of day when feet are largest</li>
+              <li>Have child stand with weight distributed evenly</li>
+              <li>Measure both feet; use larger measurement</li>
+              <li>Add 0.5-1cm (1/4-3/8 inch) for growth room</li>
+              <li>Check width by pressing on widest part of foot</li>
+            </ol>
+
+            <h3>Size Charts</h3>
+            <p>
+              Chinese children's shoe sizes typically follow these ranges (inner length in cm):
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Chinese Size</th>
+                  <th>EU Size</th>
+                  <th>US Size (Child)</th>
+                  <th>Foot Length (cm)</th>
+                  <th>Approx. Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>15</td>
+                  <td>24</td>
+                  <td>7.5</td>
+                  <td>14.5-15</td>
+                  <td>18-24 months</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>26</td>
+                  <td>9.5</td>
+                  <td>17-17.5</td>
+                  <td>2.5-3 years</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>32</td>
+                  <td>1.5</td>
+                  <td>20-20.5</td>
+                  <td>4-5 years</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>39</td>
+                  <td>5.5</td>
+                  <td>24-24.5</td>
+                  <td>6-7 years</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>45</td>
+                  <td>11.5</td>
+                  <td>29-29.5</td>
+                  <td>9-10 years</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Common Issues and Prevention</h2>
+            
+            <h3>Ingrown Toenails</h3>
+            <p>
+              Often caused by shoes that are too tight or pointed toe boxes. Prevention: 
+              Proper fit with adequate toe space, straight-across nail trimming.
+            </p>
+
+            <h3>Flat Feet</h3>
+            <p>
+              Most children have flat feet until age 6-8 when arches develop. Most don't need 
+              corrective footwear unless prescribed by a podiatrist. Flexible, lightweight shoes 
+              support natural development.
+            </p>
+
+            <h3>Blisters and Calluses</h3>
+            <p>
+              Friction from poorly fitting shoes. Prevention: Smooth socks without seams, 
+              proper shoe fit, breaking in new shoes gradually.
+            </p>
+
+            <h2>Manufacturing in China</h2>
+            <p>
+              China is the leading producer of children's shoes globally, with major production hubs:
+            </p>
+            <ul>
+              <li><strong>Dongguan, Guangdong:</strong> Premium children's shoes for international brands</li>
+              <li><strong>Wenzhou, Zhejiang:</strong> Large volume production, competitive pricing</li>
+              <li><strong>Quanzhou, Fujian:</strong> Sports and athletic children's shoes</li>
+              <li><strong>Baoding, Hebei:</strong> Leather children's shoes</li>
+              <li><strong>Wenzhou, Zhejiang:</strong> PU and synthetic children's shoes</li>
+            </ul>
+
+            <h3>Production Requirements</h3>
+            <ul>
+              <li><strong>Material Testing:</strong> All materials must be tested for restricted substances</li>
+              <li><strong>Physical Testing:</strong> Tensile strength, abrasion, flexibility tests</li>
+              <li><strong>Documentation:</strong> Full material disclosure for compliance verification</li>
+              <li><strong>Packaging:</strong> No small parts in packaging; choking hazard warnings</li>
+            </ul>
+
+            <h2>Sourcing Checklist</h2>
+            <p>
+              When sourcing children's shoes from China:
+            </p>
+            <ul>
+              <li>Verify material safety compliance for your target market</li>
+              <li>Request full material breakdown and test reports</li>
+              <li>Check factory certifications (ISO, BSCI, Sedex)</li>
+              <li>Request samples in all size ranges</li>
+              <li>Verify age-appropriate design features</li>
+              <li>Confirm packaging compliance with toy safety regulations</li>
+              <li>Include fitting guides and foot measurement charts with products</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Age Groups -->
+          <div class="card">
+            <h3 class="font-semibold text-lg mb-4">Age Groups</h3>
+            <ul class="space-y-3">
+              {ageGroups.map(age => (
+                <li>
+                  <a href={age.href} class="block p-3 rounded-lg hover:bg-neutral-50 transition-colors">
+                    <div class="font-medium text-neutral-900">{age.name}</div>
+                    <div class="text-sm text-neutral-600">{age.description}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Related Materials -->
+          <div class="card">
+            <h3 class="font-semibold text-lg mb-4">Related Materials</h3>
+            <ul class="space-y-2">
+              {relatedMaterials.map(mat => (
+                <li>
+                  <a href={mat.href} class="text-primary-600 hover:text-primary-700 hover:underline">
+                    {mat.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Related Categories -->
+          <div class="card">
+            <h3 class="font-semibold text-lg mb-4">Related Categories</h3>
+            <ul class="space-y-2">
+              {relatedCategories.map(cat => (
+                <li>
+                  <a href={cat.href} class="text-primary-600 hover:text-primary-700 hover:underline">
+                    {cat.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Sourcing CTA -->
+          <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Looking for Children's Shoe Suppliers?</h3>
+            <p class="text-sm text-neutral-600 mb-4">
+              Connect with verified Chinese manufacturers specializing in children's footwear.
+            </p>
+            <a href="/suppliers/" class="btn-primary w-full text-center">
+              Find Suppliers
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
