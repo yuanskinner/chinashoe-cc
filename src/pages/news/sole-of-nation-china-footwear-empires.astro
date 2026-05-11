@@ -1,0 +1,341 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const keyCompanies = [
+  { name: 'ANTA', revenue: '80.2B CNY', position: '#1 Domestic Brand' },
+  { name: 'Li-Ning', revenue: '30B CNY', position: 'Heritage Sports Brand' },
+  { name: 'Xtep', revenue: '14.15B CNY', position: 'Running Specialist' },
+  { name: '361°', revenue: '11.1B CNY', position: 'Family Sportswear' },
+];
+
+const majorBrands = [
+  { name: '361°', founded: '1983', origin: 'Jinjiang, Fujian' },
+  { name: 'ANTA', founded: '1991', origin: 'Jinjiang, Fujian' },
+  { name: 'Li-Ning', founded: '1990', origin: 'Guangdong' },
+  { name: 'XTEP', founded: '1987', origin: 'Jinjiang, Fujian' },
+  { name: 'Aokang', founded: '1988', origin: 'Wenzhou, Zhejiang' },
+  { name: 'Red Dragonfly', founded: '1995', origin: 'Wenzhou, Zhejiang' },
+];
+---
+
+<PageLayout
+  title="The Sole of a Nation: A Journey Through China's Footwear Empires"
+  description="An in-depth exploration of China's four major footwear industrial clusters - Dongguan, Wenzhou, Jinjiang, and Chengdu - and the brands that built a global manufacturing powerhouse."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: "China's Footwear Empires", url: '/news/sole-of-nation-china-footwear-empires/' },
+  ]}
+  publishedTime="2026-05-11"
+  authors={['ChinaShoe Editorial Team']}
+  tags={['industry analysis', 'China manufacturing', 'sports brands', 'market leaders', 'footwear history']}
+>
+  <!-- Header Section -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">Industry Analysis</span>
+      <span class="text-sm text-neutral-500">May 11, 2026</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      The Sole of a Nation: A Journey Through China's Footwear Empires
+    </h1>
+    <p class="text-lg text-neutral-600">
+      An in-depth exploration of China's four major footwear industrial clusters and the entrepreneurial stories behind their rise to global dominance.
+    </p>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=400&fit=crop"
+      alt="Chinese footwear manufacturing facility"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Prologue: A Land of Shoemakers</h2>
+
+    <p class="text-neutral-600 mb-4">
+      On a winter morning in 1983, in the dusty township of Chendai, Jinjiang—a speck on the map of Fujian Province—a 43-year-old folk musician named Ding Jiantong made a decision that would echo across four decades of Chinese commerce. A suona (唢呐) player by trade, Ding had spent his life coaxing melodies from the double-reed horn at village weddings and funerals.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      With 2,000 yuan—roughly the price of a decent bicycle at the time—he founded Huafeng Shoe Factory. On a good day, his children could produce five pairs of leather shoes. Ding would load them onto his bicycle and pedal to the wholesale markets in neighboring Shishi, earning three yuan per pair.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Forty years later, that 2,000-yuan family workshop would become <strong>361°</strong>, a sportswear giant with annual revenue exceeding 11 billion yuan, listed on the Hong Kong Stock Exchange, and shipping to over 1,200 sales points across the globe.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      This is not one company's story. It is the story of how China—a nation that once clothed its billion citizens in identical black cotton slippers—became the world's largest footwear producer, a cauldron of brand ambition, and the birthplace of companies that would one day challenge Nike and Adidas on their home turf.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4 mt-8">Act I: Germination — The Mud, the Music, and the First Spark</h2>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Gymnast and the Tycoon (1990–1991)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In 1990, in the sleepy city of Sanshui in Guangdong Province, a 27-year-old retired gymnast registered a company under his own name. Li Ning had won six gold medals at the 1984 Los Angeles Olympics, earning the nickname "Prince of Gymnastics." With backing from Jianlibao founder Li Jingwei, he founded <strong>Li-Ning Sports Goods Co., Ltd.</strong>
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The following year, 1991, more than a thousand kilometers up the coast in Jinjiang, a 21-year-old named Ding Shizhong returned from Beijing with 200,000 yuan in his pocket. He and his father founded <strong>ANTA Shoes Co., Ltd.</strong> In a town already bristling with 3,000 shoe workshops, ANTA was one more face in the crowd. No one could have predicted that three decades later, these two companies would be locked in a duel for the soul of a 500-billion-yuan industry.
+    </p>
+
+    <!-- Image: Artisanal Craftsmanship -->
+    <div class="rounded-xl overflow-hidden my-8">
+      <img
+        src="https://images.unsplash.com/photo-1441986300917-64674bd700d4?w=1200&h=300&fit=crop"
+        alt="Artisanal shoe craftsmanship"
+        class="w-full h-48 md:h-64 object-cover"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Jinjiang Crucible</h3>
+
+    <p class="text-neutral-600 mb-4">
+      To understand Chinese footwear, you must understand Jinjiang. This nondescript coastal city in Fujian did not look like the cradle of an industrial revolution. But in the 1980s and 1990s, Jinjiang became the furnace in which China's sports shoe industry was forged.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The Jinjiang model was born. A family would start by copying a popular shoe design—often "borrowing" from Nike, Adidas, or Reebok. They would produce a small batch, sell it at the local market, and reinvest the profits into slightly better machinery. Year after year, the workshops grew into factories.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      By 1994, the first cracks appeared. Jinjiang's shoemakers hit a wall: their shoes were piling up unsold. Desperate, many factories pivoted to OEM (original equipment manufacturing)—making shoes for foreign brands, slapping on someone else's logo, and pocketing a sliver of the retail price.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      But a handful of entrepreneurs understood that OEM was a dead end. Among them was <strong>Ding Shui Bo</strong>, who founded <strong>XTEP (特步)</strong> in 1987 and made a bold pivot from export-oriented OEM to domestic brand-building in 2001.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Shoe That Burned — Aokang's Baptism of Fire</h3>
+
+    <p class="text-neutral-600 mb-4">
+      If Jinjiang was the cradle of sports shoes, <strong>Wenzhou</strong> was the heartland of leather footwear—and it carried a scar. In the 1980s, Wenzhou had earned a notorious reputation as China's capital of counterfeit and shoddy goods.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      It was into this smoldering landscape that <strong>Wang Zhentao</strong> stepped in 1988, founding the Yongjia Aolin Shoe Factory—the precursor to <strong>Aokang (奥康)</strong>. In 1999, he staged an extraordinary act of defiance: he collected counterfeit "Aokang" shoes from across the country and set them on fire in a public square in Hangzhou.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      This was no ordinary PR stunt. It was a calculated ritual of purification. Wang called it the "Fire of Vindication," and the Chinese footwear industry would never forget it.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Dragonfly Takes Flight</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Meanwhile, also in Wenzhou, <strong>Qian Jinbo</strong> founded <strong>Red Dragonfly (红蜻蜓)</strong> in 1995. "I don't want to just do business or production," he said. "I want to build a brand. A brand carries a mission, a responsibility. A brand must have cultural depth."
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In 1999, Red Dragonfly established a shoe culture research center. In 2005, Qian Jinbo funded China's first shoe culture museum, housing artifacts spanning from pre-Qin dynasty footwear to the present day.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4 mt-8">Act II: The Golden Age — Into the Fire, Through the Storm</h2>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Olympic Crucible (2007–2009)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      The years around 2008 were a fever dream for China's sports brands. The Beijing Olympics were approaching. Every brand with a logo and a marketing budget was rushing to open stores, sign endorsements, and pour inventory into a supply chain that seemed incapable of satiation.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      ANTA, which had been generating revenues that doubled annually—3.1 billion yuan in 2004, 6.7 billion in 2005, 12.5 billion in 2006, and 31.8 billion in 2007—went public on the Hong Kong Stock Exchange in 2007. Xtep followed in June 2008, and 361° listed in 2009.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      On August 8, 2008, at the Bird's Nest stadium in Beijing, Li Ning—the gymnast, the prince, the namesake—was hoisted on wires and "ran" across the upper rim of the stadium to light the Olympic cauldron. For an instant, the world's gaze was fixed on a Chinese sports brand, and Li Ning's company rode the wave to a domestic market share of 9.7%, briefly overtaking Adidas in its home market.
+    </p>
+
+    <!-- Image: Modern Factory -->
+    <div class="rounded-xl overflow-hidden my-8">
+      <img
+        src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&h=300&fit=crop"
+        alt="Modern shoe manufacturing factory"
+        class="w-full h-48 md:h-64 object-cover"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Great Inventory Winter (2010–2014)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      The Beijing Olympics were a party. The inventory crisis was the hangover. The entire industry had bet on the assumption that post-Olympic China would sustain its feverish appetite for sports goods. The bet was wrong.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Li Ning suffered most visibly. In 2010, the company attempted a bold brand repositioning. The result was catastrophic. Between 2012 and 2014, Li Ning accumulated losses exceeding 3.1 billion yuan.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      ANTA, by contrast, navigated the crisis with CEO Ding Shizhong personally leading teams to visit retail outlets across the country. The company shifted from a "brand wholesale" model to a "brand retail" model, implementing an ERP system for real-time visibility into every store's inventory.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The FILA Gamble (2009–2019)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In the depths of the crisis, ANTA acquired the trademark rights for <strong>FILA</strong> in China, Hong Kong, and Macau from Belle International. ANTA's turnaround of FILA has since become a staple of business school case studies.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Rather than positioning FILA as a budget-friendly alternative to Nike and Adidas, ANTA repositioned it as a premium sports-fashion brand, targeting second- and third-tier city centers with a 100% direct-to-consumer retail model.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In 2019, FILA generated 14.77 billion yuan in revenue, accounting for 43.5% of the group's total. A decade after being acquired for what seemed like pocket change, FILA had become the most potent secondary engine in Chinese footwear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Rise and Fall of the Shoe King</h3>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Belle International (百丽)</strong> was not just a shoe company. Founded in 1981, Belle had become the undisputed "King of Shoes" in China. By 2013, it operated over 19,000 retail outlets across the country.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      By 2017, Belle's financial deterioration had become impossible to ignore. In a transaction that shocked the market, a consortium led by Hillhouse Capital and CDH Investments took the company private for HK$53.1 billion—the largest privatization in the history of the Hong Kong Stock Exchange.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Ghost Factory Empire</h3>
+
+    <p class="text-neutral-600 mb-4">
+      While brands fought for consumer attention, a quieter, more lucrative empire was being built behind the scenes. <strong>Huali Group (华利集团)</strong> made shoes—for Nike, Converse, Vans, Puma, UGG, Columbia, Under Armour, and virtually every Western athletic brand.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Founded by Zhang Congyuan, Huali moved its manufacturing base to Vietnam long before "supply chain diversification" became a buzzword. By 2022, it was churning out 220 million pairs of shoes per year, generating 20.5 billion yuan in revenue.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4 mt-8">Act III: The Era of Quality Development — Global Ambitions, Homegrown Innovation</h2>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Phoenix Rising — Li Ning's Second Act (2015–2021)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In 2015, Li Ning himself—the namesake, the founder, the gymnast—returned to the company as acting CEO. He restored the original slogan, "Yi qie jie you ke neng" (一切皆有可能—"Anything Is Possible").
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In February 2018, Li Ning unveiled a new sub-brand called "<strong>China Li Ning (中国李宁)</strong>" at New York Fashion Week. The collection, themed "Wu Dao (悟道)"—"Enlightenment"—featured bold red-and-yellow color palettes reminiscent of 1990s Chinese sportswear.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The fashion world was stunned. This was something genuinely new: a confident, culturally rooted fusion of Chinese heritage and contemporary streetwear. The "Guochao (国潮)"—national trend—movement had found its avatar.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">ANTA's Global Conquest — The "Buy, Build, Belong" Strategy</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In 2019, ANTA led a consortium to acquire <strong>Amer Sports (亚玛芬体育)</strong>—a Finnish conglomerate whose portfolio included Arc'teryyx, Salomon, and Wilson—for €4.66 billion. It was the largest overseas acquisition ever made by a Chinese sportswear company.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In 2025, ANTA acquired a 29.06% stake in <strong>Puma SE</strong>. By 2025, ANTA's portfolio of brands covered virtually every imaginable consumer segment. The group's total revenue hit 80.2 billion yuan, with operating profit rising to 15%.
+    </p>
+
+    <!-- Image: Leather Working -->
+    <div class="rounded-xl overflow-hidden my-8">
+      <img
+        src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=1200&h=300&fit=crop"
+        alt="Leather shoe crafting process"
+        class="w-full h-48 md:h-64 object-cover"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Xtep's Running Obsession and 361°'s Quiet Consistency</h3>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Xtep</strong> made a decisive pivot in the 2010s: it would become China's premier running brand. Xtep became the sports brand sponsoring the most marathon events in China—over 1,000 races, involving more than 5 million cumulative participants.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>361°</strong>, meanwhile, pursued a strategy of focus on value-for-money products in lower-tier cities, aggressively developing children's sportswear (which accounted for 22% of revenue), and building out e-commerce.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The New Battlefield — Technology and Sustainability</h3>
+
+    <p class="text-neutral-600 mb-4">
+      By the mid-2020s, Chinese footwear companies had entered the "High-Quality Development" phase. Competition was no longer about who could open more stores or sign bigger celebrity endorsements. It was about who could master technology.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Li Ning's research and development spending exceeded 3 billion yuan over the past decade. In 2025, it launched "Super-BOOM (超䨻)" capsule technology—a next-generation foam compound promising better energy return, lighter weight, and longer durability.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Sustainability had moved from a nice-to-have press release bullet to a boardroom imperative. Li Ning achieved a BBB MSCI ESG rating in 2024. ANTA's factories were deploying renewable energy and water-recycling systems.
+    </p>
+  </div>
+
+  <!-- Company Statistics -->
+  <div class="bg-neutral-50 rounded-xl p-6 mb-12">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">China's Major Sportswear Brands (2025)</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {keyCompanies.map(company => (
+        <div class="bg-white rounded-lg p-4 shadow-sm">
+          <div class="text-2xl font-bold text-primary-600 mb-1">{company.revenue}</div>
+          <div class="font-semibold text-neutral-900">{company.name}</div>
+          <div class="text-sm text-neutral-500">{company.position}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Brand Origins Table -->
+  <div class="overflow-x-auto mb-12">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Major Brand Origins</h3>
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-neutral-200">
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Brand</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Founded</th>
+          <th class="text-left py-3 px-4 font-semibold text-neutral-700">Origin</th>
+        </tr>
+      </thead>
+      <tbody>
+        {majorBrands.map(brand => (
+          <tr class="border-b border-neutral-100">
+            <td class="py-3 px-4 text-neutral-700 font-medium">{brand.name}</td>
+            <td class="py-3 px-4 text-neutral-600">{brand.founded}</td>
+            <td class="py-3 px-4 text-neutral-600">{brand.origin}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Epilogue: A Billion Pairs, and Counting</h2>
+
+    <p class="text-neutral-600 mb-4">
+      In 2024, ANTA's group revenue surpassed 70 billion yuan for the first time. In 2025, it crossed 80 billion. The company had been China's market leader for four consecutive years, with a market share of 23%. Globally, it ranked third—behind only Nike and Adidas.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Collectively, the Big Four generated 659 billion yuan in revenue in the first half of 2025 alone. Behind them, contract manufacturers like Huali Group and Yue Yuen continued to produce hundreds of millions of pairs annually.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      To call this an "industry" feels almost inadequate. It was a civilization within a civilization—a universe of leather, rubber, foam, thread, ambition, heartbreak, and hope. It had weathered inventory crises, brand implosions, the rise of e-commerce, the COVID-19 pandemic, and the vast currents of China's economic transformation over forty years.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      And it kept moving forward, one step at a time, driven by the same impulse that had once sent a middle-aged suona player into his kitchen to dismantle his stove and make room for a dream.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Because in the end, shoes are never just shoes. They carry us where we need to go. And the people who make them carry the weight of a nation's aspirations.
+    </p>
+
+    <p class="text-neutral-600 font-medium">
+      The journey continues.
+    </p>
+  </div>
+
+  <!-- Data Source -->
+  <div class="text-sm text-neutral-500 border-t border-neutral-200 pt-6 mb-12">
+    <p><strong>Data Source:</strong> All financial figures, company histories, and industry statistics cited in this narrative are drawn from publicly available sources including corporate annual reports, stock exchange filings (HKEX, SZSE, SSE), official company websites, and major Chinese financial media outlets (Caixin, National Business Daily, China Fund News, Jiemian, Shanghai Securities News, etc.). Coverage period spans from the 1980s through fiscal year 2025. All figures in RMB (CNY) unless otherwise noted.</p>
+  </div>
+</PageLayout>

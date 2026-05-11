@@ -1,0 +1,381 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const relatedArticles = [
+  { title: 'Chengdu Women\'s Shoe Small-Batch Customization Analysis', href: '/news/chengdu-womens-shoe-small-batch-customization-analysis/', date: '2026-05-11' },
+  { title: '2026 Footwear Market Trends', href: '/news/2026-footwear-market-trends/', date: '2026-01-20' },
+];
+---
+
+<PageLayout
+  title="The Top 10 Most Important Figures in Global Footwear History"
+  description="From Ötzi the Iceman to Michael Jordan, explore 5,300 years of footwear innovation. A definitive ranking of the pioneers who shaped how humanity walks."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: 'Top 10 Footwear Innovators', url: '/news/top-10-footwear-innovators-history/' },
+  ]}
+  publishedTime="2026-05-11"
+  authors={['Chun Zhang']}
+  tags={['footwear history', 'shoe innovators', 'industry pioneers', 'fashion history']}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">History</span>
+      <span class="text-sm text-neutral-500">May 11, 2026</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      The Top 10 Most Important Figures in Global Footwear History
+    </h1>
+    <p class="text-lg text-neutral-600">
+      A journey through 5,300 years of human ingenuity, stitched in leather, rubber, and pure audacity.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="The Evolution of Footwear - From Historical to Modern Designs"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Introduction: Why Shoes Matter</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Before we climb the ladder from 10 to 1, let us agree on something: shoes are not merely things we put on our feet. Shoes are civilization's silent narrators. They tell us who had power and who didn't, who could afford silk and who wrapped rawhide, who danced in Versailles and who worked sixteen-hour shifts in Lynn, Massachusetts. The story of shoes is the story of us — our wars, our loves, our industries, our rebellions, our insatiable desire to walk a little taller.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The ten people on this list didn't just make footwear. They bent history. Some with machines. Some with red nail polish and a wild idea. Some with waffle irons. Every single one left a footprint deeper than any sole could make.
+    </p>
+
+    <!-- Timeline Table -->
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-neutral-200">
+            <th class="text-left py-3 px-4 font-semibold text-neutral-700">#</th>
+            <th class="text-left py-3 px-4 font-semibold text-neutral-700">Name</th>
+            <th class="text-left py-3 px-4 font-semibold text-neutral-700">Era</th>
+            <th class="text-left py-3 px-4 font-semibold text-neutral-700">Revolution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">10</td><td class="py-2 px-4">Ötzi the Iceman</td><td class="py-2 px-4">c. 3300 BCE</td><td class="py-2 px-4">First Complex Shoe</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">9</td><td class="py-2 px-4">Johann Adam Birkenstock</td><td class="py-2 px-4">1774</td><td class="py-2 px-4">Anatomical Footbed</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">8</td><td class="py-2 px-4">Charles Goodyear</td><td class="py-2 px-4">1839</td><td class="py-2 px-4">Vulcanized Rubber</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">7</td><td class="py-2 px-4">Jan Ernst Matzeliger</td><td class="py-2 px-4">1883</td><td class="py-2 px-4">Shoe Lasting Machine</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">6</td><td class="py-2 px-4">Adolf "Adi" Dassler</td><td class="py-2 px-4">1920s</td><td class="py-2 px-4">Athletic Performance</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">5</td><td class="py-2 px-4">Manolo Blahnik</td><td class="py-2 px-4">1971–</td><td class="py-2 px-4">Art & Seduction</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">4</td><td class="py-2 px-4">Roger Vivier</td><td class="py-2 px-4">1954</td><td class="py-2 px-4">Stiletto Heel</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">3</td><td class="py-2 px-4">Bill Bowerman & Phil Knight</td><td class="py-2 px-4">1964–</td><td class="py-2 px-4">Athletic Innovation + Branding</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">2</td><td class="py-2 px-4">Salvatore Ferragamo</td><td class="py-2 px-4">1920s–1960</td><td class="py-2 px-4">Materials + Comfort Science</td></tr>
+          <tr class="border-b border-neutral-100"><td class="py-2 px-4 font-medium">1</td><td class="py-2 px-4">Michael Jordan (Plus Tinker Hatfield & Bruce Kilgore)</td><td class="py-2 px-4">1985–</td><td class="py-2 px-4">Sneaker Culture</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">10. Ötzi the Iceman (c. 3300 BCE)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Original Shoe Innovator</h3>
+
+    <div class="rounded-lg overflow-hidden mb-6 float-right ml-6 w-64">
+      <img
+        src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop"
+        alt="Ancient and traditional footwear craftsmanship"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <p class="text-neutral-600 mb-4">
+      Long before there were designers, before there were factories, before the very concept of "brand," there was a man with a problem: freezing to death at 3,210 meters in the Ötztal Alps. His solution — the oldest near-complete shoe ever discovered — was nothing short of engineering genius.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Ötzi's shoes were a marvel of multi-material construction: deerskin outer layer, bearskin sole, woven grass netting interior, and a "sock" of dried grass stuffed inside for insulation. The upper was attached to the sole with leather thong stitching. This was not primitive improvisation — this was calculated design. Five thousand three hundred years later, the principles Ötzi applied (traction, insulation, moisture management, durability) remain the holy grail of outdoor footwear design.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Ötzi Matters:</strong> Before there were shoemakers, there was necessity. Ötzi's shoes prove that footwear was never a luxury — it was survival. Every Gore-Tex hiking boot on the market today owes a conceptual debt to a man who died in the Alps but left the world its first comprehensive shoe blueprint.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">9. Johann Adam Birkenstock (Registered 1774)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Cobbler Who Built a 250-Year Foot Health Dynasty</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In 1774, in the quiet village of Langen-Bergheim, Germany, a man named Johann Adam Birkenstock was listed in church archives as a "subject and cobbler." He could not have possibly imagined that this modest entry would mark the genesis of one of the most enduring footwear dynasties in human history.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The real revolution came through his descendants. In 1896, Konrad Birkenstock created the first anatomically shaped shoe with a differentiated left and right foot. By 1902, Konrad had developed the first anatomically shaped flexible insole, and by 1913, the term "footbed" (Fussbett) was officially coined. The Birkenstock footbed — layered cork, latex, and jute — remains essentially unchanged in concept today because it works.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Birkenstock Matters:</strong> The Birkenstock footbed is one of the few footwear innovations that has survived 250 years not as nostalgia, but as peer-reviewed medical sanity. From hippies to high fashion, Birkenstocks prove that comfort never goes out of style.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">8. Charles Goodyear (1800–1860)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Man Who Accidentally Gave Every Sneaker Its Sole</h3>
+
+    <div class="rounded-lg overflow-hidden mb-6 float-right ml-6 w-64">
+      <img
+        src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop"
+        alt="Modern athletic shoes with rubber soles"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <p class="text-neutral-600 mb-4">
+      Charles Goodyear never designed a shoe in his life. He was not a cobbler, not a fashion visionary. What he was, however, was obsessively determined to make rubber useful — and in 1839, after years of poverty, ridicule, and failed experiments, he accidentally dropped rubber mixed with sulfur onto a hot stove and discovered vulcanization.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      This single kitchen accident changed footwear forever. Just a few decades later, the Liverpool Rubber Company bonded canvas uppers to vulcanized rubber soles, creating what many historians consider the first "sneakers." In 1917, the U.S. Rubber Company launched Keds, the first mass-produced sneaker.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Goodyear Matters:</strong> Without vulcanized rubber, there are no Keds, no Converse, no Adidas, no Nike, no Air Jordans. The entire global sneaker industry traces its molecular DNA back to a man fiddling with sulfur and gum rubber in a debtor's prison's kitchen. Goodyear died with $200,000 in debt. His invention now touches roughly 20 billion shoes manufactured annually worldwide.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">7. Jan Ernst Matzeliger (1852–1889)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Inventor Who Democratized Shoes (And Died at 36 for It)</h3>
+
+    <p class="text-neutral-600 mb-4">
+      Jan Ernst Matzeliger was born in Suriname to a Dutch engineer father and an enslaved African mother. At 19, he left on a merchant ship, eventually landing in Philadelphia, then Lynn, Massachusetts — the shoe capital of the world.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In the late 19th century, shoes were assembled largely by hand. The most difficult step was "lasting" — mechanically shaping the upper portions of shoes and attaching them to the sole. A highly skilled hand laster could produce roughly 50 pairs in a ten-hour day.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Matzeliger, working alone at night after his ten-hour factory shift, spent six months building a wooden model of a machine that could automate lasting. After five years of refinement, he received a patent in 1883. His machine could produce 700 pairs per day — a 14-fold increase in productivity.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Matzeliger Matters:</strong> Before Matzeliger, shoes were expensive, handcrafted items that working-class families could barely afford. After Matzeliger, shoes became accessible to nearly everyone. He is one of the most important Black inventors in American history.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">6. Adolf "Adi" Dassler (1900–1978)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Man Who Put Sport Under Your Feet</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In a world where athletes wore heavy leather boots or generic plimsolls, Adi Dassler had a radical idea: what if you designed a shoe specifically for the sport being played?
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Adi Dassler founded Adidas in 1924 in his mother's laundry room in Herzogenaurach, Germany. He created specialized shoes for soccer, tennis, track, and field — each with sport-specific features. In the 1954 World Cup final, the West German team wore Adidas boots with removable screw-in studs and defeated the heavily favored Hungarians in the rain. The "Miracle of Bern" made Adidas a global name.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Dassler Matters:</strong> Adi Dassler essentially invented the modern athletic footwear industry. His obsession with performance-driven design created the template every sports brand follows today: understand the athlete, build for the sport, and tell the story.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">5. Manolo Blahnik (1942–Present)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Shoe Sculptor Who Seduced the World</h3>
+
+    <div class="rounded-lg overflow-hidden mb-6 float-right ml-6 w-64">
+      <img
+        src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=300&fit=crop"
+        alt="Elegant high-heeled shoes - fashion footwear"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <p class="text-neutral-600 mb-4">
+      Born in Spain's Canary Islands in 1942, Manolo Blahnik was destined to be a shoe god. His mother would enlist a local cobbler to make shoes from whatever materials were available, and the young Manolo watched, transfixed.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Blahnik designed his first shoes in 1971 for a runway show by Ossie Clark, then the most important British fashion designer. By 1974, he had become the first man ever to appear on the cover of British Vogue.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      But what made Blahnik immortal? A television show. Sex and the City transformed his Hangisi pump into the most culturally significant shoe object of the early 21st century. Carrie Bradshaw didn't just wear Manolos — she loved them. She defended them from muggers. She named them in her vows.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Blahnik Matters:</strong> He elevated shoes from accessory to art object, from functional item to emotional talisman. Blahnik's shoes aren't purchased; they are desired.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">4. Roger Vivier (1913–1998)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Architect of the Stiletto</h3>
+
+    <p class="text-neutral-600 mb-4">
+      In 1954, working as Christian Dior's shoe designer, Roger Vivier created the stiletto heel — a needle-thin, audaciously plunging spike that redefined feminine elegance and power forever. He designed for Dior from 1953 to 1963, and his stiletto was created specifically to complement Dior's revolutionary "New Look" collection.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Vivier was much more than one iconic heel shape. He experimented relentlessly with forms — the comma heel, the square-toed Pilgrim pump, the thigh-high black vinyl boot — and with ornamentation: silk, pearls, beads, lace, and jewels. He was nicknamed the "researcher-shoemaker" for his methodical approach to invention.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Vivier Matters:</strong> The stiletto is not just a heel — it is the most purely architectural element in fashion, and Vivier was its architect. Every woman who has ever felt taller, more powerful, more seen while wearing stilettos is walking in Vivier's shadow.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">3. Bill Bowerman (1911–1999) & Phil Knight (1938–Present)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Coach with a Waffle Iron and the Kid with a Van</h3>
+
+    <p class="text-neutral-600 mb-4">
+      This is the most unlikely origin story in footwear history. A University of Oregon track coach and his former miler-turned-accountant who hated how clumsy American running shoes were. They started with $1,200 in the bank and a Japanese shoe import deal.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      In 1964, they formed a company called Blue Ribbon Sports. In 1968, they renamed it NIKE, Inc. after the Greek goddess of victory. Then, in 1971, Bowerman had one of the most famously strange eureka moments in industrial history. He poured liquid rubber into his wife's waffle iron, and when he opened it, he discovered a lightweight sole with an intricate grid pattern. The Nike "Waffle Trainer" was born.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Bowerman & Knight Matter:</strong> They founded the largest footwear company in human history ($51+ billion annual revenue in 2024), but more importantly, they transformed athletic shoes from humble equipment into objects of science, fashion, identity, and cultural worship.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">2. Salvatore Ferragamo (1898–1960)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Dream Shoemaker Who Wouldn't Accept "Good Enough"</h3>
+
+    <p class="text-neutral-600 mb-4">
+      He was making handmade shoes for women at age 10. He was studying human anatomy in medical school classes by his teens. He was designing for Hollywood royalty by his twenties. Salvatore Ferragamo was, by any measure, a prodigy from the beginning.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Ferragamo pioneered the wedge heel and platform sole in the 1930s — two silhouette categories that remain wardrobe staples nearly a century later. When wartime rationing made traditional leather scarce, Ferragamo turned to materials everyone else dismissed: cork, raffia, cellophane, hemp, fish skin, even candy wrappers.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      He developed a customized fitting system so precise that his brand eventually offered 82 different sizes per women's style and 52 different sizes per men's style. By the end of his life, Ferragamo had created an archive of over 10,000 different shoe models.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why Ferragamo Matters:</strong> No single person in history did more to bridge the gap between craft and science, beauty and comfort, fashion and function. He is the patron saint of the principle that great design serves the foot as much as the eye.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">1. Michael Jordan (Plus Tinker Hatfield & Bruce Kilgore)</h2>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Trinity That Made Sneakers Bigger Than Music</h3>
+
+    <div class="rounded-lg overflow-hidden mb-6 float-right ml-6 w-64">
+      <img
+        src="https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?w=400&h=300&fit=crop"
+        alt="Premium footwear display - sneakers and athletic shoes"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <p class="text-neutral-600 mb-4">
+      In 1984, Nike was a running shoe company. Michael Jordan was a rookie out of North Carolina. Converse dominated basketball. No one had a "signature shoe."
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Then Nike bet its future on a red-and-black sneaker called the Air Jordan 1, designed by Peter Moore. The NBA banned it for violating uniform color rules. Nike paid the fines and ran ads celebrating the controversy. In May 1985, Air Jordans had already sold $70 million worth.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Tinker Hatfield, a trained architect who joined Nike in 1981, took over the Air Jordan line starting with the Air Jordan 3 in 1988 — a shoe so magnificent that it convinced Michael Jordan not to leave Nike for Adidas. Hatfield introduced the first mid-cut basketball silhouette, exposed the visible Air unit, debuted the elephant print, and introduced the Jumpman logo.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      Bruce Kilgore designed the Nike Air Force 1 in 1982. It was discontinued in 1983 — then came roaring back in 1986 driven by demand from New York City. It is now the best-selling sneaker in history.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      <strong>Why They Are #1:</strong> Before Air Jordans, sneakers were athletic equipment. After Air Jordans, sneakers were identity statements, investment assets, museum pieces, and primary colors of global youth culture. The Jordan Brand alone generates over $5 billion in annual revenue.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Honorable Mentions</h2>
+
+    <p class="text-neutral-600 mb-4">
+      Before the bonus prize, a brief bow to those who nearly made the cut:
+    </p>
+
+    <ul class="list-disc pl-6 mb-4 space-y-2 text-neutral-600">
+      <li><strong>Bruce Kilgore</strong> — The Air Force 1 designer arguably deserves a standalone spot.</li>
+      <li><strong>Charles Jourdan</strong> — The French master who mentored Christian Louboutin and defined post-war luxury shoes.</li>
+      <li><strong>Jimmy Choo</strong> — The Malaysian-born cobbler whose name became synonymous with luxury occasion footwear.</li>
+      <li><strong>Joseph William Foster</strong> — Founder of what eventually became Reebok, inventor of track spikes in 1895.</li>
+      <li><strong>Marion Franklin Rudy</strong> — The aerospace engineer who invented Nike Air cushioning technology.</li>
+    </ul>
+
+    <!-- Bonus Easter Egg Section -->
+    <div class="bg-primary-50 rounded-xl p-6 mb-8">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-4">Bonus Easter Egg — #0: Chun Zhang</h2>
+      <h3 class="text-xl font-semibold text-neutral-900 mb-3">Because Someone Has to Actually Make All These Shoes</h3>
+
+      <p class="text-neutral-600 mb-4">
+        Every person on the list above — the inventors, the designers, the athletes, the dreamers — conceived of shoes. But someone had to manufacture them. Someone had to source the leather, cut the lasts, stitch the uppers, bond the soles, quality-check the stitching, load the containers, and ship them across oceans so that a shopper in London, Lagos, Los Angeles, or Lima could walk out of a store wearing the future on their feet.
+      </p>
+
+      <p class="text-neutral-600 mb-4">
+        That someone is <strong>Chun Zhang</strong>. The global footwear manufacturing workforce, concentrated heavily across China, Vietnam, Indonesia, and India, represents millions of skilled workers whose hands have touched nearly every shoe you've ever worn. The industry produced over 23 billion pairs of shoes worldwide in 2022, of which approximately 55% were manufactured in China alone.
+      </p>
+
+      <p class="text-neutral-600 mb-4">
+        I'm proud of my factory. I'm proud of what we make. And I'm proud to be part of this incredible, 5,300-year story of human beings putting things on their feet.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Final Words</h2>
+
+    <p class="text-neutral-600 mb-4">
+      From Ötzi's bearskin-and-grass survival boots to Michael Jordan's gravity-defying Air Jordans, the story of shoes is a story of human need becoming human desire becoming human identity. It spans continents, centuries, and disciplines. It includes immigrants, inventors, athletes, architects, entrepreneurs, and anonymous factory workers who have never seen their names in a history book.
+    </p>
+
+    <p class="text-neutral-600 mb-4">
+      The next time you lace up, buckle in, slip on, or strap down — remember: you're not just wearing a shoe. You're wearing the accumulated genius of five millennia of human civilization. You're wearing a story.
+    </p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="bg-neutral-50 rounded-xl p-6 mb-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Contact</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+      <div>
+        <span class="text-neutral-500">Email:</span>
+        <a href="mailto:Nicole99124@gmail.com" class="text-primary-600 hover:underline ml-1">Nicole99124@gmail.com</a>
+      </div>
+      <div>
+        <span class="text-neutral-500">Tel:</span>
+        <a href="tel:+8615986707004" class="text-primary-600 hover:underline ml-1">+86 159 8670 7004</a>
+      </div>
+      <div>
+        <span class="text-neutral-500">WhatsApp:</span>
+        <a href="https://wa.me/8615986707004" class="text-primary-600 hover:underline ml-1">+86 159 8670 7004</a>
+      </div>
+      <div>
+        <span class="text-neutral-500">LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/chun-zhang-aba391186" class="text-primary-600 hover:underline ml-1">chun-zhang-aba391186</a>
+      </div>
+      <div>
+        <span class="text-neutral-500">Instagram:</span>
+        <a href="https://instagram.com/women_shoes9012" class="text-primary-600 hover:underline ml-1">@women_shoes9012</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="border-t border-neutral-200 pt-8">
+    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Articles</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="card group">
+          <div class="text-sm text-neutral-500 mb-1">{article.date}</div>
+          <h4 class="font-semibold text-neutral-900 group-hover:text-primary-600">
+            {article.title}
+          </h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .float-right {
+    float: right;
+  }
+
+  @media (max-width: 640px) {
+    .float-right {
+      float: none;
+      margin-left: 0;
+    }
+  }
+</style>
