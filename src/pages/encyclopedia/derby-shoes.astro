@@ -1,0 +1,410 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Bordeaux Derbies', url: '/encyclopedia/derby-shoes/bordeaux/', description: 'Side-laced French style', count: 15 },
+  { name: 'Long-wing Derbies', url: '/encyclopedia/derby-shoes/long-wing/', description: 'Full wing-tip design', count: 18 },
+  { name: 'Suede Derbies', url: '/encyclopedia/derby-shoes/suede/', description: 'Casual textured finish', count: 22 },
+  { name: 'Military Derbies', url: '/encyclopedia/derby-shoes/military/', description: 'Buckle-less dress boots', count: 12 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Derby Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to Derby shoes: open-lacing construction, half-brogue detailing, suede variations, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Derby Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into Derby shoe engineering: open-lacing system, half-brogue detailing, suede and calf variations, Goodyear welt, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Formal & Dress', url: '/encyclopedia/leather-shoes/' },
+    { name: 'Derby Shoes', url: '/encyclopedia/derby-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Derby Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The Derby shoe offers a perfect balance between formal elegance and practical 
+          adjustability. Its open-lacing construction provides superior fit flexibility, 
+          making it the versatile choice for business casual to semi-formal occasions. 
+          Explore the craftsmanship behind quality Derby shoes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Open Lacing System */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            The Derby Open-Lacing System
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Unlike the Oxford's closed lacing, Derby shoes feature "open lacing" where 
+              the eyelet facings (quarters) are sewn on top of the vamp. This creates a 
+              visible gap when unlaced, allowing easier foot entry and more adjustable fit 
+              across varying foot shapes and instep heights.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Construction Details</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Quarter with Facings</h4>
+                    <p class="text-gray-600 text-sm">
+                      The quarter piece includes attached eyelet facings. 
+                      These facings lay on top of the vamp when assembled, 
+                      creating the characteristic "open" appearance at the lace line.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Vamp Extension</h4>
+                    <p class="text-gray-600 text-sm">
+                      The vamp stops at the lace line, unlike Oxford where it extends under. 
+                      This creates the visible seam between vamp and quarters.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Lacing Flexibility</h4>
+                    <p class="text-gray-600 text-sm">
+                      Quarters can spread wider for foot entry. 
+                      Laces can be tightened more aggressively for high insteps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">When to Choose Derby</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">High Instep</h4>
+                    <p class="text-gray-600 text-sm">
+                      The adjustable lace line accommodates higher foot arches 
+                      that would be cramped in Oxford's closed system.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Wide Feet</h4>
+                    <p class="text-gray-600 text-sm">
+                      Quarters can spread further, providing more width 
+                      without compromising structure.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Business Casual</h4>
+                    <p class="text-gray-600 text-sm">
+                      Less formal than Oxford, making it appropriate 
+                      for dress codes that reject overt formality.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-blue-800 mb-3">Derby vs Oxford: Visual Guide</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 bg-white rounded-lg">
+                  <h4 class="font-semibold text-blue-900 mb-2">Derby</h4>
+                  <div class="w-full h-24 bg-gray-200 rounded flex items-center justify-center text-gray-500 text-sm">
+                    [Quarters]  ↑ gap visible ↑  [Vamp]
+                  </div>
+                  <p class="text-blue-700 text-xs mt-2">Facings sewn ON TOP of vamp</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg">
+                  <h4 class="font-semibold text-blue-900 mb-2">Oxford</h4>
+                  <div class="w-full h-24 bg-gray-200 rounded flex items-center justify-center text-gray-500 text-sm">
+                    [Continuous vamp facade]
+                  </div>
+                  <p class="text-blue-700 text-xs mt-2">Vamp extends UNDER facings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Brogue Detailing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Brogue Detailing Levels
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Brogueing refers to decorative punched perforations along seams and edges. 
+              Originally waterproofing details for Scottish and Irish country boots, 
+              brogues have evolved into purely decorative elements.
+            </p>
+            
+            <div class="grid md:grid-cols-4 gap-4 mb-8">
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-xl">👞</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-1">Full Brogue</h4>
+                <p class="text-gray-500 text-xs">Wing-tip with medallion</p>
+                <p class="text-primary-600 text-xs font-medium mt-2">Most decorative</p>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-xl">👞</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-1">Half Brogue</h4>
+                <p class="text-gray-500 text-xs">Cap toe with medallion</p>
+                <p class="text-secondary-600 text-xs font-medium mt-2">Semi-formal</p>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-xl">👞</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-1">Quarter Brogue</h4>
+                <p class="text-gray-500 text-xs">Cap toe only, no medallion</p>
+                <p class="text-accent-600 text-xs font-medium mt-2">Minimal detail</p>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span class="text-xl">👞</span>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-1">Punch-through</h4>
+                <p class="text-gray-500 text-xs">Seam punching only</p>
+                <p class="text-gray-600 text-xs font-medium mt-2">Plain oxford/derby</p>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-semibold text-gray-900 mb-3">Brogue Specifications</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex justify-between">
+                    <span>Punching style:</span>
+                    <span class="font-medium">Single or double row</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>Punching width:</span>
+                    <span class="font-medium">1.5-3mm</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>Seam edge distance:</span>
+                    <span class="font-medium">3-5mm</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>Medallion placement:</span>
+                    <span class="font-medium">Toe box center</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-semibold text-gray-900 mb-3">Brogue in China Production</h4>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-primary-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Manual punching by skilled workers</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-primary-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Laser cutting for consistency</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-primary-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Cost addition: $2-5 per pair</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Material Variations */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Material & Style Variations
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl">🐄</div>
+                <h3 class="text-lg font-semibold text-gray-900">Calf Leather Derby</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Classic polished calfskin. Dense grain, smooth surface. 
+                The most versatile Derby material for business and formal occasions.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Polished or burnished finish</li>
+                <li>• Black, cognac, tan, oxblood colors</li>
+                <li>• Pairs with suits, dress pants</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl">🦌</div>
+                <h3 class="text-lg font-semibold text-gray-900">Suede Derby</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Split leather with napped finish. Softer, more casual appearance. 
+                Ideal for business casual and smart weekend wear.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Suede or nubuck finishes</li>
+                <li>• Earth tones: tan, grey, navy</li>
+                <li>• Requires waterproofing treatment</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-stone-200 rounded-xl flex items-center justify-center text-2xl">🌿</div>
+                <h3 class="text-lg font-semibold text-gray-900">Vegetable-Tanned Derby</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Traditional tanning produces stiff, structured leather. 
+                Develops unique patina over years of wear.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Natural tan, honey colors</li>
+                <li>• Structured "stiff" feel initially</li>
+                <li>• Long break-in period</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brown-200 rounded-xl flex items-center justify-center text-2xl">🌰</div>
+                <h3 class="text-lg font-semibold text-gray-900">Crazy Horse Derby</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Wax-coated full-grain leather. Pull-up effect when bent. 
+                Shows marks and scratches as part of character.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Wax finish, pull-up leather</li>
+                <li>• Aged, rustic aesthetic</li>
+                <li>• Easy to maintain with wax</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Options</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Derby specialist region. Widespread quality. 
+                      Good for budget to mid-range production. 
+                      Look for factories with European clientele.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 150 pairs | Lead: 40-55 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Shanghai Surrounding</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium Derby production. Better leather sourcing. 
+                      Higher QC standards. Suitable for luxury segment.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 100 pairs | Lead: 50-65 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather (calf/suede)</span>
+                    <span class="font-semibold text-gray-900">$12.00-30.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Welt</span>
+                    <span class="font-semibold text-gray-900">$3.50-7.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole (leather/rubber)</span>
+                    <span class="font-semibold text-gray-900">$5.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining</span>
+                    <span class="font-semibold text-gray-900">$2.50-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Brogue Detailing (if applicable)</span>
+                    <span class="font-semibold text-gray-900">$2.00-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly</span>
+                    <span class="font-semibold text-gray-900">$7.00-18.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Goodyear)</span>
+                    <span class="font-bold text-primary-600">$35.00-80.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Cement)</span>
+                    <span class="font-bold text-secondary-600">$25.00-55.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

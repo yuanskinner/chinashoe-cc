@@ -1,0 +1,418 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import CategoryGrid from '../../../components/CategoryGrid.astro';
+
+const categories = [
+  { name: 'Full Grain Leather', url: '/encyclopedia/materials/full-grain-leather/', description: 'Premium quality', count: 45 },
+  { name: 'Top Grain Leather', url: '/encyclopedia/materials/top-grain-leather/', description: 'Corrected grain', count: 38 },
+  { name: 'Split Leather', url: '/encyclopedia/materials/split-leather/', description: 'Suede base layer', count: 28 },
+  { name: 'Exotic Leathers', url: '/encyclopedia/materials/exotic-leathers/', description: 'Croc, ostrich, snake', count: 22 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Leather Types Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to leather types: full grain, top grain, split leather, tanning processes, and quality selection from Chinese suppliers.",
+};
+---
+
+<PageLayout
+  title="Leather Types Guide - ChinaShoe.cc"
+  description="Deep dive into leather classification: full grain vs top grain, tanning methods, leather grades, quality selection, and sourcing from Chinese tanneries."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Leather Types', url: '/encyclopedia/materials/leather-types/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Leather Types <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Understanding leather is fundamental to quality footwear. From the animal 
+          hide selection to the final finish, each step determines the character 
+          and performance of the finished shoe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Leather Layers */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Understanding Leather Structure
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              A hide has distinct layers, each with different properties. 
+              Understanding this structure helps explain why different leather 
+              types behave differently.
+            </p>
+            
+            <div class="mb-8">
+              <div class="relative h-48 rounded-xl overflow-hidden bg-gradient-to-r from-amber-100 via-amber-200 to-amber-300">
+                <div class="absolute inset-0 flex">
+                  <div class="w-1/3 border-r border-amber-400/50 flex items-center justify-center">
+                    <div class="text-center">
+                      <p class="text-amber-800 font-bold text-sm">Grain Layer</p>
+                      <p class="text-amber-600 text-xs">Full Grain / Top Grain</p>
+                    </div>
+                  </div>
+                  <div class="w-1/3 border-r border-amber-400/50 flex items-center justify-center">
+                    <div class="text-center">
+                      <p class="text-amber-800 font-bold text-sm">Middle Layer</p>
+                      <p class="text-amber-600 text-xs">Better Flexibility</p>
+                    </div>
+                  </div>
+                  <div class="w-1/3 flex items-center justify-center">
+                    <div class="text-center">
+                      <p class="text-amber-800 font-bold text-sm">Flesh Layer</p>
+                      <p class="text-amber-600 text-xs">Split Leather / Suede</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Leather Layers Explained</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Grain Layer (Epidermis)</h4>
+                    <p class="text-gray-600 text-sm">
+                      The outermost layer with natural grain pattern. 
+                      Contains the tightest fiber structure. 
+                      Most durable, most expensive.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Middle Layer (Corium)</h4>
+                    <p class="text-gray-600 text-sm">
+                      Contains loosely woven fibers. 
+                      Provides flexibility and softness. 
+                      Source of split leather.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Flesh Layer</h4>
+                    <p class="text-gray-600 text-sm">
+                      Inner surface with no grain. 
+                      Typically becomes suede when buffed. 
+                      Lower cost applications.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Leather Quality Hierarchy</h3>
+                <div class="space-y-3">
+                  <div class="p-4 bg-green-50 rounded-xl border-l-4 border-green-500">
+                    <h4 class="font-semibold text-green-800">Full Grain Leather</h4>
+                    <p class="text-green-700 text-sm">
+                      Complete grain layer, minimal processing. 
+                      Develops patina. Highest quality.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-blue-50 rounded-xl border-l-4 border-blue-500">
+                    <h4 class="font-semibold text-blue-800">Top Grain Leather</h4>
+                    <p class="text-blue-700 text-sm">
+                      Sanded grain layer. 
+                      More uniform appearance. 
+                      Good durability at lower cost.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-100 rounded-xl border-l-4 border-gray-400">
+                    <h4 class="font-semibold text-gray-700">Genuine Leather</h4>
+                    <p class="text-gray-600 text-sm">
+                      Bottom layer of hide. 
+                      Real leather but lower quality. 
+                      Often embossed to look like grain.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-100 rounded-xl border-l-4 border-gray-300">
+                    <h4 class="font-semibold text-gray-600">Bonded Leather</h4>
+                    <p class="text-gray-500 text-sm">
+                      Shredded leather scraps + binder. 
+                      Contains 10-30% actual leather. 
+                      Lowest quality category.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tanning */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Tanning Methods
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Tanning transforms raw hide into usable leather. The method determines 
+              the leather's properties: durability, water resistance, flexibility, and color range.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="p-6 bg-amber-50 rounded-xl">
+                <h3 class="text-lg font-semibold text-amber-800 mb-4">Vegetable Tanning</h3>
+                <p class="text-amber-700 text-sm mb-4">
+                  Uses natural tannins from tree bark. 
+                  Traditional method, 1-3 months process time.
+                </p>
+                <div class="space-y-2 text-sm text-amber-700">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Develops patina over time</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Environmentally friendly</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Stiff initially, molds to foot</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Poor water resistance</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="p-6 bg-blue-50 rounded-xl">
+                <h3 class="text-lg font-semibold text-blue-800 mb-4">Chrome Tanning</h3>
+                <p class="text-blue-700 text-sm mb-4">
+                  Uses chromium salts. 
+                  Fast process, 24-48 hours. 
+                  Industry standard (80% of leather).
+                </p>
+                <div class="space-y-2 text-sm text-blue-700">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Consistent quality</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L4L19 7"></path></svg>
+                    <span>Water resistant</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Soft, flexible immediately</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Wide color range</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-semibold text-gray-800 mb-2">Wet-White</h4>
+                <p class="text-gray-600 text-xs">
+                  Chrome-free alternative using aldehydes. 
+                  Environmental compliance. 
+                  Growing in popularity.
+                </p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-semibold text-gray-800 mb-2">Zinc/Aluminum Tanning</h4>
+                <p class="text-gray-600 text-xs">
+                  Metal tanning variant. 
+                  Fast processing. 
+                  Specific applications.
+                </p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-semibold text-gray-800 mb-2">Combination</h4>
+                <p class="text-gray-600 text-xs">
+                  Vegetable then chrome. 
+                  Best of both methods. 
+                  Premium footwear.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Grades */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Leather Grades & Selection
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Grade Selection Criteria</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Select Grade</h4>
+                    <p class="text-gray-600 text-sm">
+                      Minimal imperfections. 
+                      Clean, uniform grain. 
+                      Premium footwear only.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $8-15/sqft</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Number One Grade</h4>
+                    <p class="text-gray-600 text-sm">
+                      Minor imperfections allowed. 
+                      Good overall appearance. 
+                      Most common for quality shoes.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $5-8/sqft</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Production Grade</h4>
+                    <p class="text-gray-600 text-sm">
+                      Visible imperfections possible. 
+                      Often corrected/sanded. 
+                      Volume production standard.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $3-5/sqft</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Thickness Guide</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">1.0-1.2mm</span>
+                    <span class="font-medium text-gray-800">Lining Leather</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">1.4-1.6mm</span>
+                    <span class="font-medium text-gray-800">Light Upper</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">1.8-2.0mm</span>
+                    <span class="font-medium text-gray-800">Standard Upper</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">2.2-2.5mm</span>
+                    <span class="font-medium text-gray-800">Heavy Duty</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">2.5-3.0mm</span>
+                    <span class="font-medium text-gray-800">Sole Leather</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            China Leather Suppliers
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Major Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest leather goods hub. 
+                      Wide supplier variety. 
+                      Competitive pricing.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Foshan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Quality leather production. 
+                      Better finishing capabilities. 
+                      Premium selections.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Haining, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Synthetic leather hub. 
+                      PU/PVC specialist. 
+                      Budget options.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Price Reference (FOB China)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Full Grain Calf</span>
+                    <span class="font-semibold text-gray-900">$4.00-12.00/sqft</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Top Grain Cowhide</span>
+                    <span class="font-semibold text-gray-900">$2.50-6.00/sqft</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Split Leather</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.50/sqft</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PU Synthetic</span>
+                    <span class="font-semibold text-gray-900">$0.80-3.00/sqft</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Avg. Upper (per pair)</span>
+                    <span class="font-bold text-primary-600">$6.00-25.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

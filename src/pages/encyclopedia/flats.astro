@@ -1,0 +1,304 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Ballet Flats', url: '/encyclopedia/flats/ballet/', description: 'Classic ballet style', count: 22 },
+  { name: 'Pointed Toe Flats', url: '/encyclopedia/flats/pointed/', description: 'Elegant pointed style', count: 18 },
+  { name: 'Ballet Flats', url: '/encyclopedia/flats/loafers/', description: 'Flat loafer style', count: 16 },
+  { name: 'Moccasin Flats', url: '/encyclopedia/flats/moccasin/', description: 'Moccasin construction', count: 14 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Flats Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to women's flat shoes: ballet flats, pointed toe flats, comfortable design, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Women's Flat Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into flat shoe engineering: ballet flat construction, comfort features, materials, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: "Women's Footwear", url: '/encyclopedia/womens-shoes/' },
+    { name: 'Flats', url: '/encyclopedia/flats/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Women's Flat Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          From 16th-century Venetian chopines to modern ballet flats, flat shoes have 
+          undergone countless transformations. Today, the challenge is combining 
+          comfort, style, and affordable manufacturing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Types of Flat Shoes
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">💃</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Ballet Flat</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                D'Orazi style with ribbon tie. 
+                Low-cut vamp. 
+                Dainty feminine design.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Origin: 16th century Italy</li>
+                <li>• Ribbon or elastic closure</li>
+                <li>• Flexible sole</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👠</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Pointed Flat</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Elongated pointed toe. 
+                Office appropriate. 
+                Elegant silhouette.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Trend-driven style</li>
+                <li>• May require sizing up</li>
+                <li>• Often with small heel</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">🥿</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Loafer Flat</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Slip-on with strap detail. 
+                Casual elegance. 
+                Easy wearing.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Versatile styling</li>
+                <li>• Low maintenance</li>
+                <li>• Work-appropriate</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🐴</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Moccasin Flat</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Wrapped sole construction. 
+                Casual comfort. 
+                Stitched detail.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• True moccasin construction</li>
+                <li>• Flexible fit</li>
+                <li>• Often unlined</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Ballet Flat Construction
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              The ballet flat's simplicity requires precision. Every element is visible, 
+              so quality materials and construction are essential.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">D'Orazi Construction</h3>
+                <p class="text-gray-600 mb-4">
+                  Named after Italian designer Rosa D'Orazio, this construction 
+                  features a single piece of leather wrapping the foot with 
+                  a separate sole attached.
+                </p>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Upper Construction</h4>
+                    <p class="text-gray-600 text-sm">
+                      Single piece from heel to toe. 
+                      Minimal seaming for clean look. 
+                      Soft, flexible drape.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Closure Options</h4>
+                    <p class="text-gray-600 text-sm">
+                      Ribbon tie: traditional, adjustable. 
+                      Elastic goring: easy on/off. 
+                      Bare: minimalist look.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Sole Engineering</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Leather Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Full leather for dress. 
+                      2-3mm thickness. 
+                      Buffed or painted edge.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Rubber Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Crepe or injected rubber. 
+                      Better grip. 
+                      More durable.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Split Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Separate heel and ball pieces. 
+                      Maximum flexibility. 
+                      Ballet aesthetic.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Insole Comfort Features</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm text-amber-700">
+                <div>
+                  <h4 class="font-medium mb-1">Memory Foam</h4>
+                  <p class="text-xs">Conforms to foot shape. Added cushioning.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Arch Support</h4>
+                  <p class="text-xs">Built-in or removable. Reduces fatigue.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Padded Insole</h4>
+                  <p class="text-xs">Gel or foam heel cushion. Shock absorption.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">3</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest ballet flat production. 
+                      Economical pricing. 
+                      Standard quality for volume.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 500 pairs | Lead: 25-40 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Chengdu, Sichuan</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Quality leather flats. 
+                      Better craftsmanship. 
+                      Premium positioning.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 35-50 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather/Satin</span>
+                    <span class="font-semibold text-gray-900">$4.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole (Leather/PU)</span>
+                    <span class="font-semibold text-gray-900">$1.00-3.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole</span>
+                    <span class="font-semibold text-gray-900">$1.50-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Ribbon/Elastic</span>
+                    <span class="font-semibold text-gray-900">$0.50-1.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Economy)</span>
+                    <span class="font-bold text-primary-600">$10.00-25.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Premium)</span>
+                    <span class="font-bold text-secondary-600">$18.00-38.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

@@ -1,215 +1,472 @@
 ---
-import PageLayout from '@layouts/PageLayout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
-const features = [
-  {
-    title: 'Cleat Types: FG, SG, AG, TF',
-    description: 'Understanding stud configurations for different playing surfaces and conditions.',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&h=300&fit=crop',
-    href: '/encyclopedia/soccer-cleats/cleat-types/',
-  },
-  {
-    title: 'Upper Materials',
-    description: 'Leather, synthetic, and knit uppers: performance characteristics and care requirements.',
-    image: 'https://images.unsplash.com/photo-1511886929837-354d827aae26?w=400&h=300&fit=crop',
-    href: '/encyclopedia/soccer-cleats/upper-materials/',
-  },
-  {
-    title: 'Fit & Sizing Guide',
-    description: 'How soccer cleats should fit: narrow vs wide feet, sock liner systems, and break-in tips.',
-    image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop',
-    href: '/encyclopedia/soccer-cleats/fit-guide/',
-  },
-  {
-    title: 'Position-Specific Cleats',
-    description: 'Goalkeeper, defender, midfielder, and striker cleat requirements explained.',
-    image: 'https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=400&h=300&fit=crop',
-    href: '/encyclopedia/soccer-cleats/position-specific/',
-  },
+
+const categories = [
+  { name: 'FG (Firm Ground) Cleats', url: '/encyclopedia/soccer-cleats/firm-ground/', description: 'Standard SG for natural grass', count: 45 },
+  { name: 'AG (Artificial Grass) Cleats', url: '/encyclopedia/soccer-cleats/artificial-grass/', description: 'Optimized for synthetic turf', count: 38 },
+  { name: 'SG (Soft Ground) Cleats', url: '/encyclopedia/soccer-cleats/soft-ground/', description: 'For wet, muddy conditions', count: 22 },
+  { name: 'FG/SG Hybrid Cleats', url: '/encyclopedia/soccer-cleats/hybrid/', description: 'Multi-ground versatility', count: 28 },
+  { name: 'IC (Indoor Court) Shoes', url: '/encyclopedia/soccer-cleats/indoor/', description: 'Flat soles for indoor surfaces', count: 35 },
 ];
 
-const relatedCategories = [
-  { name: 'Running Shoes', href: '/encyclopedia/running-shoes/', count: 156 },
-  { name: 'Training Shoes', href: '/encyclopedia/training-shoes/', count: 67 },
-  { name: 'Athletic Shoes', href: '/encyclopedia/athletic/', count: 120 },
-];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Soccer Cleats Encyclopedia - ChinaShoe.cc",
+  "description": "Complete technical guide to soccer cleats: stud configurations, upper materials, FG/AG/SG systems, and manufacturing from Chinese factories.",
+};
 ---
 
 <PageLayout
-  title="Soccer Cleats Guide"
-  description="Complete guide to soccer cleats: FG, SG, AG, TF stud types, upper materials, fit guidelines, and how to choose the right cleats for your position and playing surface."
+  title="Soccer Cleats Manufacturing Guide - ChinaShoe.cc"
+  description="Deep technical guide to soccer cleats: stud materials, soleplate engineering, upper construction (Kangaroo leather vs synthetic), FG/AG/SG systems, and sourcing from Chinese manufacturers."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Athletic & Sports', url: '/encyclopedia/running-shoes/' },
     { name: 'Soccer Cleats', url: '/encyclopedia/soccer-cleats/' },
   ]}
-  sidebarItems={[
-    {
-      title: 'Soccer Cleats',
-      links: [
-        { label: 'Overview', href: '/encyclopedia/soccer-cleats/', active: true },
-        { label: 'Cleat Types', href: '/encyclopedia/soccer-cleats/cleat-types/' },
-        { label: 'Upper Materials', href: '/encyclopedia/soccer-cleats/upper-materials/' },
-        { label: 'Fit Guide', href: '/encyclopedia/soccer-cleats/fit-guide/' },
-        { label: 'Position Guide', href: '/encyclopedia/soccer-cleats/position-specific/' },
-      ],
-    },
-    {
-      title: 'Related Categories',
-      links: [
-        { label: 'Running Shoes', href: '/encyclopedia/running-shoes/' },
-        { label: 'Training Shoes', href: '/encyclopedia/training-shoes/' },
-        { label: 'Athletic Footwear', href: '/encyclopedia/athletic/' },
-      ],
-    },
-  ]}
+  structuredData={structuredData}
 >
-  <div class="mb-8">
-    <span class="badge-primary mb-2">Athletic & Sports</span>
-    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Soccer Cleats Guide
-    </h1>
-    <p class="text-lg text-neutral-600">
-      Everything you need to know about soccer cleats: from stud configurations for different surfaces to upper materials and fit requirements for optimal performance.
-    </p>
-  </div>
-
-  <!-- Featured Image -->
-  <div class="rounded-xl overflow-hidden mb-8">
-    <img
-      src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&h=400&fit=crop"
-      alt="Soccer Cleats on Grass"
-      class="w-full h-64 md:h-80 object-cover"
-    />
-  </div>
-
-  <!-- Introduction Content -->
-  <div class="prose prose-lg max-w-none mb-12">
-    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Soccer Cleats</h2>
-    
-    <p class="text-neutral-600 mb-4">
-      Soccer cleats, also known as football boots in many parts of the world, are specialized athletic footwear designed specifically for playing soccer on grass pitches and artificial turf surfaces. Unlike regular athletic shoes, soccer cleats feature studs or cleats on the outsole that provide traction on soft ground, allowing players to accelerate, decelerate, and change direction with confidence.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The history of soccer cleats dates back to the early 20th century when players began modifying their boots to improve grip on muddy pitches. Today's soccer cleats are sophisticated pieces of sports equipment that incorporate advanced materials, biomechanical research, and precision engineering to enhance player performance while minimizing injury risk.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Stud Configurations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Firm Ground (FG):</strong> FG cleats feature molded studs designed for natural grass pitches in dry, firm conditions. They typically have a mix of conical and blade-shaped studs that provide optimal traction without excessive penetration into the ground. Most modern FG cleats can be used on a variety of natural grass conditions.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Soft Ground (SG):</strong> SG cleats are designed for wet, muddy conditions on natural grass pitches. They feature longer, replaceable studs that can penetrate soft ground for maximum grip. Traditionally made with metal studs, modern SG cleats often use hybrid systems with screw-in studs.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Artificial Grass (AG):</strong> AG cleats are specifically designed for artificial turf surfaces. They feature numerous short, hollow studs that distribute weight evenly across the synthetic surface, reducing stress on joints and providing consistent traction without the risk of stud compaction.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Turf (TF) / Indoor (IC):</strong> TF cleats feature small, numerous rubber studs designed for artificial turf and hard ground surfaces. Indoor court shoes (IC) have flat, non-marking rubber soles designed for indoor soccer on gymnasium floors.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Upper Materials and Construction</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      The upper of a soccer cleat plays a crucial role in touch sensitivity, ball control, and durability. Modern soccer cleats use various materials, each with distinct characteristics. Kangaroo leather (k-leather) remains popular for its soft touch and conforming fit, though synthetic materials have advanced significantly and offer consistent performance in various weather conditions.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Synthetic uppers, often made from polyurethane (PU) or thermoplastic polyurethane (TPU), provide excellent durability, water resistance, and consistent touch characteristics. Many modern cleats feature textured or stamped surfaces that enhance ball control by increasing friction between the foot and the ball.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Knit and mesh uppers have become increasingly popular, offering a sock-like fit with superior breathability. These materials conform to the foot quickly and provide excellent flexibility, though they may offer less protection than traditional leather or synthetic materials.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Position-Specific Considerations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      While modern soccer cleats are designed for general use, different positions may benefit from specific features. Goalkeepers often prefer cleats with excellent grip for quick lateral movements and explosive dives. Strikers may prioritize lightweight cleats for speed, while defenders might value added protection and stability.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      For businesses sourcing soccer cleats from China, understanding the different manufacturing capabilities is essential. Key production regions include Fujian (Quanzhou), known for sports footwear including soccer cleats, and Guangdong (Dongguan), with expertise in leather goods and athletic footwear.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      When evaluating Chinese manufacturers for soccer cleats, consider their experience with different stud systems, upper material capabilities, and quality control procedures for sports footwear. Request samples to evaluate stitching quality, material consistency, and overall construction before placing bulk orders.
-    </p>
-  </div>
-
-  <!-- Key Sections -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🌿</div>
-      <h3 class="font-semibold text-lg mb-2">Firm Ground (FG)</h3>
-      <p class="text-neutral-600 text-sm">
-        Molded studs for dry natural grass pitches and universal use.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🌧️</div>
-      <h3 class="font-semibold text-lg mb-2">Soft Ground (SG)</h3>
-      <p class="text-neutral-600 text-sm">
-        Long studs for wet, muddy conditions and soft pitches.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🤖</div>
-      <h3 class="font-semibold text-lg mb-2">Artificial Grass (AG)</h3>
-      <p class="text-neutral-600 text-sm">
-        Short, hollow studs for synthetic turf surfaces.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🏟️</div>
-      <h3 class="font-semibold text-lg mb-2">Turf / Indoor</h3>
-      <p class="text-neutral-600 text-sm">
-        Rubber studs for artificial turf or flat soles for indoor courts.
-      </p>
-    </div>
-  </div>
-
-  <!-- Article Grid -->
-  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    {features.map(article => (
-      <a href={article.href} class="card group overflow-hidden p-0">
-        <div class="aspect-video overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-sm text-neutral-600">
-            {article.description}
-          </p>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Soccer Cleats Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          From Adidas Copa to Nike Mercurial, explore the engineering behind soccer cleats. 
+          Understand stud configurations, soleplate technology, upper materials, and 
+          how leading Chinese factories produce professional-grade football boots.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Stud Systems */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Soleplate & Stud Configuration Systems
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Soccer cleat studs are not interchangeable—each configuration serves specific 
+              field conditions. Understanding stud geometry, materials, and placement is 
+              crucial for performance and injury prevention.
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div class="bg-gradient-to-b from-green-50 to-white rounded-xl p-6 border border-green-200">
+                <div class="text-3xl mb-3">🌿</div>
+                <h3 class="font-semibold text-gray-900 mb-2">FG (Firm Ground)</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Molded studs for natural dry grass. Standard configuration for most players.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• 6 studs typical</li>
+                  <li>• Height: 12-15mm</li>
+                  <li>• Conical or blade shape</li>
+                  <li>• TPU or aluminum</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-blue-50 to-white rounded-xl p-6 border border-blue-200">
+                <div class="text-3xl mb-3">🏟️</div>
+                <h3 class="font-semibold text-gray-900 mb-2">AG (Artificial Grass)</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Shorter, more numerous studs for synthetic turf. Reduces injury risk on artificial surfaces.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• 12-16 studs typical</li>
+                  <li>• Height: 8-10mm</li>
+                  <li>• Hollow or semi-blade</li>
+                  <li>• TPU primary material</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-yellow-50 to-white rounded-xl p-6 border border-yellow-200">
+                <div class="text-3xl mb-3">🌧️</div>
+                <h3 class="font-semibold text-gray-900 mb-2">SG (Soft Ground)</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Screw-in studs for wet, muddy conditions. Replaceable metal studs for premium grip.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• 6 studs typical</li>
+                  <li>• Height: 15-21mm</li>
+                  <li>• Replaceable metal</li>
+                  <li>• Aluminum or stainless steel</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-purple-50 to-white rounded-xl p-6 border border-purple-200">
+                <div class="text-3xl mb-3">🏠</div>
+                <h3 class="font-semibold text-gray-900 mb-2">IC (Indoor Court)</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Non-marking flat rubber soles for indoor surfaces, futsal, and hard ground.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Non-stud design</li>
+                  <li>• Gum rubber sole</li>
+                  <li>• Pivot point pattern</li>
+                  <li>• No marking compound</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Stud Material Engineering</h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">TPU (Thermoplastic Polyurethane)</h4>
+                  <p class="text-gray-600 text-sm">
+                    Most common stud material. Flexible, durable, cost-effective. 
+                    Hardness 85-95 Shore A. Suitable for FG and AG configurations.
+                    Can be injection molded in any color.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Aluminum</h4>
+                  <p class="text-gray-600 text-sm">
+                    Lightweight and durable. Used in premium SG systems. 
+                    Anodized for corrosion resistance. 
+                    Typical weight: 15-20g per stud vs 25-30g for steel.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-2">Stainless Steel</h4>
+                  <p class="text-gray-600 text-sm">
+                    Maximum durability for heavy-duty use. 
+                    Superior grip in wet conditions. 
+                    Heavier than aluminum. Common in professional rugby and American football.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Upper Materials */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Upper Material Technologies
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div class="space-y-6">
+                <div class="border-l-4 border-primary-500 pl-4">
+                  <h3 class="font-semibold text-gray-900 mb-2">Kangaroo Leather (K-Leather)</h3>
+                  <p class="text-gray-600 text-sm mb-3">
+                    Premium soccer cleat material. Thin, strong, molds to foot. 
+                    Preferred by professional players for touch sensitivity.
+                  </p>
+                  <ul class="text-xs text-gray-500 space-y-1">
+                    <li>• Thickness: 1.0-1.4mm</li>
+                    <li>• Tensile strength: 20+ N/mm²</li>
+                    <li>• Elongation at break: 40-60%</li>
+                    <li>• Water absorption: Higher than synthetic</li>
+                    <li>• Cost: 3-4x synthetic materials</li>
+                  </ul>
+                </div>
+                
+                <div class="border-l-4 border-secondary-500 pl-4">
+                  <h3 class="font-semibold text-gray-900 mb-2">Premium Synthetic (Teijin Microsphere)</h3>
+                  <p class="text-gray-600 text-sm mb-3">
+                    Japanese synthetic leather. Lightweight, consistent, all-weather performance.
+                  </p>
+                  <ul class="text-xs text-gray-500 space-y-1">
+                    <li>• Weight: 20-30% lighter than leather</li>
+                    <li>• Water resistance: Excellent</li>
+                    <li>• Durability: 2x leather lifespan</li>
+                    <li>• Consistency: Batch-to-batch uniformity</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="border-l-4 border-accent-500 pl-4">
+                  <h3 class="font-semibold text-gray-900 mb-2">Engineered Mesh / Knit</h3>
+                  <p class="text-gray-600 text-sm mb-3">
+                    Adidas Primeknit, Nike Flyknit technology. Sock-like fit, lightweight, breathable.
+                  </p>
+                  <ul class="text-xs text-gray-500 space-y-1">
+                    <li>• Single-layer construction</li>
+                    <li>• Adaptive fit zones</li>
+                    <li>• Superior breathability</li>
+                    <li>• Less durable than leather/synthetic</li>
+                  </ul>
+                </div>
+                
+                <div class="border-l-4 border-gray-400 pl-4">
+                  <h3 class="font-semibold text-gray-900 mb-2">Microfiber PU</h3>
+                  <p class="text-gray-600 text-sm mb-3">
+                    Cost-effective synthetic leather alternative. Good touch, consistent quality.
+                  </p>
+                  <ul class="text-xs text-gray-500 space-y-1">
+                    <li>• Thickness: 0.8-1.2mm</li>
+                    <li>• Abrasion resistance: Good</li>
+                    <li>• Cost: 50-70% of K-leather</li>
+                    <li>• Most common in mid-tier cleats</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-gray-200 bg-gray-50">
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Material</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Touch Feel</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Durability</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Weather</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Price Point</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">MOQ</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-600">
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">K-Leather</td>
+                    <td class="py-3 px-4">⭐⭐⭐⭐⭐</td>
+                    <td class="py-3 px-4">⭐⭐⭐</td>
+                    <td class="py-3 px-4">Poor in wet</td>
+                    <td class="py-3 px-4">Premium</td>
+                    <td class="py-3 px-4">500 pairs</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Teijin / Premium Synthetic</td>
+                    <td class="py-3 px-4">⭐⭐⭐⭐</td>
+                    <td class="py-3 px-4">⭐⭐⭐⭐</td>
+                    <td class="py-3 px-4">All-weather</td>
+                    <td class="py-3 px-4">High</td>
+                    <td class="py-3 px-4">500 pairs</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Microfiber PU</td>
+                    <td class="py-3 px-4">⭐⭐⭐</td>
+                    <td class="py-3 px-4">⭐⭐⭐⭐</td>
+                    <td class="py-3 px-4">All-weather</td>
+                    <td class="py-3 px-4">Mid</td>
+                    <td class="py-3 px-4">300 pairs</td>
+                </tr>
+                  <tr>
+                    <td class="py-3 px-4 font-medium">Knit / Mesh</td>
+                    <td class="py-3 px-4">⭐⭐⭐</td>
+                    <td class="py-3 px-4">⭐⭐⭐</td>
+                    <td class="py-3 px-4">Moderate</td>
+                    <td class="py-3 px-4">Mid-High</td>
+                    <td class="py-3 px-4">500 pairs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Boot Technologies */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Performance Technologies
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Speed Last</h3>
+                  <p class="text-gray-500 text-xs">Narrow, aerodynamic fit</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm">
+                Tapered silhouette from heel to toe. Reduced internal volume. 
+                Asymmetrical lacing for larger striking surface. 
+                Nike Mercurial, Adidas Adizero, Puma Ultra series.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🎯</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Control Last</h3>
+                  <p class="text-gray-500 text-xs">Enhanced touch and cushioning</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm">
+                Wider forefoot with enhanced padding. Full-grain leather preferred. 
+                Thicker upper for ball control. 
+                Adidas Copa, Nike Tiempo, New Balance Furon.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🏋️</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Power Last</h3>
+                  <p class="text-gray-500 text-xs">Supportive, lockdown fit</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm">
+                Reinforced chassis for shooting power. Stiffer materials in strike zones. 
+                Anti-slip sock liner. 
+                Adidas Predator, Nike Phantom, Puma King.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                  <span class="text-2xl">🌱</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">AG-Specific Design</h3>
+                  <p class="text-gray-500 text-xs">Optimized for artificial turf</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm">
+                Shorter studs to prevent "plugging" in artificial turf granules. 
+                More dispersed pressure points. 
+                Reinforced toe box for abrasion resistance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Manufacturing Hubs</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Fujian - Putian & Quanzhou</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Primary soccer cleat production. Adidas, Puma, New Balance OEM. 
+                      Advanced stud tooling. K-leather upper expertise.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 500 pairs/color | Lead: 45-60 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangdong - Dongguan & Zhongshan</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Synthetic upper specialization. Cost-competitive for mid-tier. 
+                      Quick sample turnaround. Good for brand development.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs/color | Lead: 35-45 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair FOB)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Premium Leather Upper</span>
+                    <span class="font-semibold text-gray-900">$6.00-10.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Synthetic Upper</span>
+                    <span class="font-semibold text-gray-900">$3.50-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">TPU Soleplate + Studs</span>
+                    <span class="font-semibold text-gray-900">$3.00-5.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Laces</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly ( lasting + bonding)</span>
+                    <span class="font-semibold text-gray-900">$2.00-3.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Stud Molds (amortized)</span>
+                    <span class="font-semibold text-gray-900">$0.50-1.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Leather)</span>
+                    <span class="font-bold text-primary-600">$13.00-23.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Synthetic)</span>
+                    <span class="font-bold text-secondary-600">$10.00-17.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Design Considerations for China Production</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-amber-700">
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <span>K-leather requires humidity-controlled storage and processing</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <span>Stud molds require 3-4 weeks lead time, factor into timeline</span>
+                  </li>
+                </ul>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <span>Multi-ground (FG/AG hybrid) requires specialized stud layouts</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <span>AG studs must meet specific height regulations for youth soccer</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
       </a>
     ))}
   </div>
+        </div>
 
-  <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
+      </div>
     </div>
-  </div>
+  </section>
 </PageLayout>

@@ -1,0 +1,356 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Chelsea Boots', url: '/encyclopedia/chelsea-boots/', description: 'Elastic side boots', count: 48 },
+  { name: 'Ankle Booties', url: '/encyclopedia/ankle-boots/booties/', description: 'Fashion ankle boots', count: 36 },
+  { name: 'Riding Boots', url: '/encyclopedia/ankle-boots/riding/', description: 'Low equestrian style', count: 28 },
+  { name: 'Combat Boots', url: '/encyclopedia/ankle-boots/combat/', description: 'Lace-up military style', count: 32 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Ankle Boots Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to ankle boot manufacturing: shaft height, heel types, construction methods, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Ankle Boots Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into ankle boot engineering: shaft height optimization, heel construction, lasting techniques, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: "Women's Footwear", url: '/encyclopedia/womens-shoes/' },
+    { name: 'Ankle Boots', url: '/encyclopedia/ankle-boots/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Ankle Boots Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The ankle boot occupies the perfect middle ground: protective enough for 
+          transitional weather, stylish enough for any occasion. From classic Chelsea 
+          boots to fashion booties, explore the engineering behind these versatile boots.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Shaft Heights */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Ankle Boot Shaft Heights
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 mb-8">
+            <p class="text-gray-600 mb-6">
+              The shaft—the part covering the ankle—determines the boot's fit, 
+              style, and functionality. Precise measurements ensure proper fit across sizes.
+            </p>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-4xl font-bold text-primary-600 mb-2">6"</div>
+                <p class="text-sm text-gray-600">15cm shaft</p>
+                <p class="text-xs text-gray-500 mt-2">Low ankle boot</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-4xl font-bold text-secondary-600 mb-2">7"</div>
+                <p class="text-sm text-gray-600">18cm shaft</p>
+                <p class="text-xs text-gray-500 mt-2">Standard ankle boot</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-4xl font-bold text-accent-600 mb-2">8"</div>
+                <p class="text-sm text-gray-600">20cm shaft</p>
+                <p class="text-xs text-gray-500 mt-2">Tall ankle boot</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="text-4xl font-bold text-gray-600 mb-2">9"+</div>
+                <p class="text-sm text-gray-600">23cm+ shaft</p>
+                <p class="text-xs text-gray-500 mt-2">Cuff boot territory</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👢</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Low Ankle Boot</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Just above ankle bone. 
+                Maximum leg visibility. 
+                Best with skinny jeans.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Most versatile</li>
+                <li>• All leg lengths work</li>
+                <li>• Easy on/off</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🦶</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Ankle Bootie</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Fits at ankle bone level. 
+                Fashion-forward style. 
+                Often with heel.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Trend-driven</li>
+                <li>• Various heel heights</li>
+                <li>• Often pointed toe</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">🐎</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Jodhpur Boot</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Ankle-high with strap. 
+                Equestrian heritage. 
+                Unique alternative.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Strap replaces elastic</li>
+                <li>• Distinctive look</li>
+                <li>• Dress casual</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🪖</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Combat Bootie</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Low ankle with lace-up. 
+                Military influence. 
+                Urban style.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Lace-to-toe option</li>
+                <li>• Chunky sole common</li>
+                <li>• Streetwear appeal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Heel Options */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Heel Types for Ankle Boots
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-16 h-20 mx-auto bg-gray-300 rounded-t-lg mb-2"></div>
+                <p class="text-sm font-medium text-gray-800">Block Heel</p>
+                <p class="text-xs text-gray-500">2-4cm</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-12 h-24 mx-auto bg-gray-300 rounded-t-lg mb-2"></div>
+                <p class="text-sm font-medium text-gray-800">Stiletto</p>
+                <p class="text-xs text-gray-500">6-10cm</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-16 mx-auto bg-gray-300 rounded-t-lg mb-2"></div>
+                <p class="text-sm font-medium text-gray-800">Kitten</p>
+                <p class="text-xs text-gray-500">3-5cm</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-16 h-12 mx-auto bg-gray-300 rounded-lg mb-2"></div>
+                <p class="text-sm font-medium text-gray-800">Wedge</p>
+                <p class="text-xs text-gray-500">4-7cm</p>
+              </div>
+              <div class="text-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-16 h-8 mx-auto bg-gray-300 rounded-lg mb-2"></div>
+                <p class="text-sm font-medium text-gray-800">Flat</p>
+                <p class="text-xs text-gray-500">0-2cm</p>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-900 mb-2">Heel Height Selection</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• 0-3cm: Casual, all-day comfort</li>
+                  <li>• 4-6cm: Daily wear, office appropriate</li>
+                  <li>• 7-10cm: Fashion, special occasions</li>
+                  <li>• 10cm+: Statement boots only</li>
+                </ul>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-900 mb-2">Construction Methods</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Stacked leather: Classic dress boot</li>
+                  <li>• Molded PU: Cost-effective fashion</li>
+                  <li>• Cork wedge: Summer styles</li>
+                  <li>• Platform: Height without angle</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Materials */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Ankle Boot Materials
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl mb-4">🐄</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Leather Ankle Boots</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Full-grain or top-grain leather. 
+                Durable, molds to foot. 
+                Premium positioning.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Natural breathability</li>
+                <li>• Ages beautifully</li>
+                <li>• Higher price point</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-4">✨</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Suede Ankle Boots</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Split leather with napped finish. 
+                Soft, luxurious texture. 
+                Matte appearance.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Requires protection</li>
+                <li>• Casual elegance</li>
+                <li>• Seasonal use</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧵</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Faux/PU Ankle Boots</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Synthetic upper materials. 
+                Budget-friendly. 
+                Trend-driven styles.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Affordable pricing</li>
+                <li>• Easy maintenance</li>
+                <li>• Variable durability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest women's boot production. 
+                      All price segments. 
+                      Fashion and standard quality.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 200 pairs | Lead: 35-50 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Chengdu, Sichuan</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Quality leather boots. 
+                      Italian-style last development. 
+                      Better finishing standards.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 150 pairs | Lead: 40-55 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Material</span>
+                    <span class="font-semibold text-gray-900">$8.00-25.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Lining</span>
+                    <span class="font-semibold text-gray-900">$3.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole + Heel</span>
+                    <span class="font-semibold text-gray-900">$5.00-15.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Hardware (Zippers, etc.)</span>
+                    <span class="font-semibold text-gray-900">$1.00-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly Labor</span>
+                    <span class="font-semibold text-gray-900">$6.00-18.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Fashion)</span>
+                    <span class="font-bold text-primary-600">$28.00-65.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Premium)</span>
+                    <span class="font-bold text-secondary-600">$45.00-95.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

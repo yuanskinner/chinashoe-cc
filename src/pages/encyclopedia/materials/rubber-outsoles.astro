@@ -1,0 +1,362 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import CategoryGrid from '../../../components/CategoryGrid.astro';
+
+const categories = [
+  { name: 'EVA Foam', url: '/encyclopedia/rubber-outsoles/eva/', description: 'Lightweight cushioning', count: 52 },
+  { name: 'Phylon', url: '/encyclopedia/rubber-outsoles/phylon/', description: 'Mid-density foam', count: 38 },
+  { name: 'TPR Sole', url: '/encyclopedia/rubber-outsoles/tpr/', description: 'Thermoplastic rubber', count: 42 },
+  { name: 'PU Sole', url: '/encyclopedia/rubber-outsoles/pu/', description: 'Polyurethane soles', count: 35 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Rubber Outsoles Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to shoe outsole materials: rubber types, EVA, PU, TPR, vulcanized rubber, and sourcing from Chinese suppliers.",
+};
+---
+
+<PageLayout
+  title="Rubber Outsoles Guide - ChinaShoe.cc"
+  description="Deep dive into outsole materials: natural rubber, EVA, PU, TPR, outsole construction, traction patterns, and sourcing from Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Rubber & Outsoles', url: '/encyclopedia/materials/rubber-outsoles/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Rubber Outsoles <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The outsole is the foundation of every shoe. From natural rubber's 
+          grip to EVA's cushioning, understanding outsole materials is 
+          critical for product performance and cost optimization.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Material Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Outsole Material Types
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl mb-4">🌳</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Natural Rubber</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Harvested from rubber trees. 
+                Excellent grip. 
+                Premium positioning.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Best wet grip</li>
+                <li>• Price: $3.00-5.00/kg</li>
+                <li>• 40-70 Shore A</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-4">🔵</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">EVA</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Ethylene-vinyl acetate foam. 
+                Lightweight cushioning. 
+                Athletic shoes.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Lightest density</li>
+                <li>• Price: $2.00-3.50/kg</li>
+                <li>• 15-45 Shore C</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-4">💜</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">PU (Polyurethane)</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Dual-density foam. 
+                Excellent durability. 
+                Work shoes.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Superior durability</li>
+                <li>• Price: $2.50-4.00/kg</li>
+                <li>• 35-60 Shore A</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">⚫</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">TPR</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Thermoplastic rubber. 
+                Process versatility. 
+                Casual shoes.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Easy to mold</li>
+                <li>• Price: $1.50-2.50/kg</li>
+                <li>• 50-85 Shore A</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Hardness */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Shore Hardness Guide
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Shore hardness measures material resistance to indentation. 
+              Different parts of the shoe require different hardness levels.
+            </p>
+            
+            <div class="mb-8">
+              <div class="relative">
+                <div class="h-4 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 rounded-full"></div>
+                <div class="flex justify-between mt-2 text-xs text-gray-500">
+                  <span>40A (Soft)</span>
+                  <span>60A (Medium)</span>
+                  <span>80A (Hard)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Hardness by Application</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">40-50 Shore A</h4>
+                    <p class="text-gray-600 text-sm">
+                      Heel cushioning. 
+                      Midsole applications. 
+                      Maximum comfort.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">55-65 Shore A</h4>
+                    <p class="text-gray-600 text-sm">
+                      Outsole ball area. 
+                      Flexibility + durability. 
+                      Natural foot flex point.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">70-85 Shore A</h4>
+                    <p class="text-gray-600 text-sm">
+                      Heel strike zone. 
+                      Maximum durability. 
+                      Abrasion resistance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Material Density</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">EVA</span>
+                    <span class="font-medium text-gray-800">0.15-0.35 g/cm³</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PU</span>
+                    <span class="font-medium text-gray-800">0.25-0.45 g/cm³</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">TPR</span>
+                    <span class="font-medium text-gray-800">0.90-1.10 g/cm³</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Vulcanized Rubber</span>
+                    <span class="font-medium text-gray-800">1.10-1.30 g/cm³</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Traction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Traction Patterns
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Common Patterns</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Diamond Pattern</h4>
+                    <p class="text-gray-600 text-sm">
+                      Standard traction. 
+                      All-purpose grip. 
+                      Most common.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Chevron Pattern</h4>
+                    <p class="text-gray-600 text-sm">
+                      Directional grip. 
+                      Forward motion traction. 
+                      Athletic shoes.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Lug Pattern</h4>
+                    <p class="text-gray-600 text-sm">
+                      Aggressive traction. 
+                      Outdoor/hiking. 
+                      Deep grooves.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Smooth/Clean</h4>
+                    <p class="text-gray-600 text-sm">
+                      Dress shoes. 
+                      No pattern. 
+                      Indoor use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Grip Performance</h3>
+                <div class="space-y-3">
+                  <div class="p-3 bg-green-50 rounded-lg">
+                    <h4 class="font-medium text-green-800">Wet Concrete</h4>
+                    <p class="text-green-700 text-xs">Lug + siping essential</p>
+                  </div>
+                  <div class="p-3 bg-amber-50 rounded-lg">
+                    <h4 class="font-medium text-amber-800">Indoor Floors</h4>
+                    <p class="text-amber-700 text-xs">Non-marking rubber preferred</p>
+                  </div>
+                  <div class="p-3 bg-blue-50 rounded-lg">
+                    <h4 class="font-medium text-blue-800">Sports Courts</h4>
+                    <p class="text-blue-700 text-xs">Herringbone pattern standard</p>
+                  </div>
+                  <div class="p-3 bg-gray-100 rounded-lg">
+                    <h4 class="font-medium text-gray-800">Outdoor/Trail</h4>
+                    <p class="text-gray-700 text-xs">Multi-directional lugs needed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            China Suppliers
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangzhou, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest outsole production. 
+                      All material types. 
+                      Sports shoe specialists.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Vulcanized rubber. 
+                      Vulcanized canvas shoes. 
+                      Traditional工艺.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Quanzhou, Fujian</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Sports brand suppliers. 
+                      Athletic outsoles. 
+                      Premium quality.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Price Reference (FOB China)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Vulcanized Rubber</span>
+                    <span class="font-semibold text-gray-900">$1.50-2.50/pair</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">EVA Outsole</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.00/pair</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PU Sole</span>
+                    <span class="font-semibold text-gray-900">$1.50-3.50/pair</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">TPR Sole</span>
+                    <span class="font-semibold text-gray-900">$0.80-1.50/pair</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Rubber Sheet (per kg)</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.00/kg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

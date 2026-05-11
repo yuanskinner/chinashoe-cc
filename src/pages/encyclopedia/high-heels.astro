@@ -1,215 +1,383 @@
 ---
-import PageLayout from '@layouts/PageLayout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
-const features = [
-  {
-    title: 'Stiletto Heels',
-    description: 'The iconic thin high heel: history, variations, and styling tips.',
-    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/high-heels/stiletto/',
-  },
-  {
-    title: 'Block Heels',
-    description: 'Stability and style: the practical choice for all-day comfort.',
-    image: 'https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=300&fit=crop',
-    href: '/encyclopedia/high-heels/block-heel/',
-  },
-  {
-    title: 'Wedge Heels',
-    description: 'The complete sole elevation: from espadrilles to modern designs.',
-    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=300&fit=crop',
-    href: '/encyclopedia/high-heels/wedge/',
-  },
-  {
-    title: 'Kitten Heels',
-    description: 'The elegant low heel: from Audrey Hepburn to modern fashion.',
-    image: 'https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=400&h=300&fit=crop',
-    href: '/encyclopedia/high-heels/kitten-heel/',
-  },
+
+const categories = [
+  { name: 'Stiletto Heels', url: '/encyclopedia/high-heels/stiletto/', description: 'Thin high heels', count: 24 },
+  { name: 'Block Heels', url: '/encyclopedia/high-heels/block/', description: 'Stable chunky heels', count: 28 },
+  { name: 'Wedge Heels', url: '/encyclopedia/high-heels/wedge/', description: 'Wedge sole shoes', count: 18 },
+  { name: 'Kitten Heels', url: '/encyclopedia/high-heels/kitten/', description: 'Low modest heels', count: 20 },
 ];
 
-const relatedCategories = [
-  { name: 'Sandals', href: '/encyclopedia/sandals/', count: 52 },
-  { name: 'Pumps', href: '/encyclopedia/pumps/', count: 38 },
-  { name: 'Boots', href: '/encyclopedia/boots/', count: 95 },
-];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "High Heels Manufacturing Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to high heel engineering: heel types, construction methods, foot health, and sourcing from Chinese manufacturers.",
+};
 ---
 
 <PageLayout
-  title="High Heels Guide"
-  description="Complete guide to high heels: stiletto, block heel, wedge, and kitten heel styles. Learn about heel types, comfort considerations, and how to choose the right heel height."
+  title="High Heels Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into high heel engineering: stiletto vs block heels, steel shank construction, lasting techniques, and sourcing from Chinese factories."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: "Women's Footwear", url: '/encyclopedia/womens-shoes/' },
     { name: 'High Heels', url: '/encyclopedia/high-heels/' },
   ]}
-  sidebarItems={[
-    {
-      title: 'High Heels',
-      links: [
-        { label: 'Overview', href: '/encyclopedia/high-heels/', active: true },
-        { label: 'Stiletto Heels', href: '/encyclopedia/high-heels/stiletto/' },
-        { label: 'Block Heels', href: '/encyclopedia/high-heels/block-heel/' },
-        { label: 'Wedge Heels', href: '/encyclopedia/high-heels/wedge/' },
-        { label: 'Kitten Heels', href: '/encyclopedia/high-heels/kitten-heel/' },
-      ],
-    },
-    {
-      title: 'Related Categories',
-      links: [
-        { label: 'Sandals', href: '/encyclopedia/sandals/' },
-        { label: 'Pumps', href: '/encyclopedia/pumps/' },
-        { label: 'Boots', href: '/encyclopedia/boots/' },
-      ],
-    },
-  ]}
+  structuredData={structuredData}
 >
-  <div class="mb-8">
-    <span class="badge-primary mb-2">Women's Footwear</span>
-    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      High Heels Guide
-    </h1>
-    <p class="text-lg text-neutral-600">
-      Everything you need to know about high heels: from classic stilettos to practical block heels. Explore heel types, comfort considerations, and styling guidelines.
-    </p>
-  </div>
-
-  <!-- Featured Image -->
-  <div class="rounded-xl overflow-hidden mb-8">
-    <img
-      src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=1200&h=400&fit=crop"
-      alt="Elegant High Heels"
-      class="w-full h-64 md:h-80 object-cover"
-    />
-  </div>
-
-  <!-- Introduction Content -->
-  <div class="prose prose-lg max-w-none mb-12">
-    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding High Heels</h2>
-    
-    <p class="text-neutral-600 mb-4">
-      High heels are shoes where the heel, compared with the toe, is significantly elevated. Beyond their practical function of adding height, high heels have become powerful fashion statements that can transform an outfit and boost confidence. From the boardroom to special occasions, high heels remain an essential element of women's footwear wardrobes worldwide.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The history of high heels spans centuries and cultures, from Egyptian butchers' platform shoes (for practical reasons) to Renaissance European nobility (for status). The modern high heel as we know it emerged in the 1950s with Christian Dior's introduction of the stiletto, which became an instant icon of feminine elegance.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Types of High Heels</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Stiletto Heels:</strong> Characterized by their thin, tapering heel, stilettos are the most iconic and feminine high heel style. They elongate the leg and create a dramatic silhouette but require practice and may cause discomfort during extended wear. Heel heights typically range from 3 to 6 inches (7.5 to 15 cm).
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Block Heels:</strong> Also known as chunky heels, these feature a thick, sturdy heel that provides excellent stability and support. Block heels offer a more practical option for all-day wear while still adding height and visual impact. They're versatile enough for professional settings and casual occasions.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Wedge Heels:</strong> Unlike traditional heels that elevate only the back of the shoe, wedges feature a solid sole that elevates the entire foot from heel to toe. This design distributes weight more evenly and provides excellent stability, making wedges a comfortable choice for extended wear.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Kitten Heels:</strong> These low heels, typically 1.5 to 2 inches (4-5 cm) tall, offer a sophisticated alternative to higher heels. Named for their subtle, demure appearance, kitten heels have experienced various revivals in fashion history, from Audrey Hepburn's iconic looks to modern minimalist fashion.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Materials and Construction</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      High heels are constructed from various materials that affect both aesthetics and durability. Leather and suede uppers offer premium quality and comfort, conforming to the foot over time. Synthetic materials provide more affordable options with consistent quality and easier maintenance.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The heel itself may be constructed from various materials including wood (for traditional block heels), metal (for stilettos), resin, or injected plastic. The quality of heel construction directly impacts durability and safety, making it an important consideration when sourcing high heels.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Comfort Considerations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Heel height is measured from the bottom of the heel to where it meets the sole at the toe. Moderate heels (2-3 inches) generally offer the best balance of style and comfort for most occasions. Higher heels shift body weight forward, increasing pressure on the ball of the foot and may affect posture and gait.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Features that improve heel comfort include cushioned insoles, arch support, padding around the ankle collar, and stable heel bases. Some high heels incorporate advanced cushioning technologies borrowed from athletic footwear, including gel inserts and memory foam padding.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      China is a major producer of women's high heels, with major manufacturing hubs including Chengdu (Sichuan) for fashion footwear and Guangdong province for various women's shoe categories. When sourcing high heels from China, key considerations include heel stability testing, material quality, and finishing standards.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Quality high heels require precise construction to ensure proper weight distribution and heel attachment. Request samples to evaluate heel stability, stitching quality, and material consistency. Pay particular attention to the attachment method between the upper and heel, as this is a common point of failure in lower-quality shoes.
-    </p>
-  </div>
-
-  <!-- Key Sections -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    <div class="card text-center">
-      <div class="text-4xl mb-4">📍</div>
-      <h3 class="font-semibold text-lg mb-2">Stiletto</h3>
-      <p class="text-neutral-600 text-sm">
-        The iconic thin heel for maximum elegance and dramatic height.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🧱</div>
-      <h3 class="font-semibold text-lg mb-2">Block Heel</h3>
-      <p class="text-neutral-600 text-sm">
-        Sturdy and stable for all-day comfort without sacrificing style.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">📐</div>
-      <h3 class="font-semibold text-lg mb-2">Wedge</h3>
-      <p class="text-neutral-600 text-sm">
-        Complete sole elevation for maximum stability and comfort.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🌸</div>
-      <h3 class="font-semibold text-lg mb-2">Kitten Heel</h3>
-      <p class="text-neutral-600 text-sm">
-        Subtle elegance with a low, sophisticated profile.
-      </p>
-    </div>
-  </div>
-
-  <!-- Article Grid -->
-  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    {features.map(article => (
-      <a href={article.href} class="card group overflow-hidden p-0">
-        <div class="aspect-video overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-sm text-neutral-600">
-            {article.description}
-          </p>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          High Heels Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          High heels have evolved from Renaissance platforms to the sleek stiletto. 
+          Behind every elegant heel lies sophisticated engineering: steel shanks, 
+          balanced weight distribution, and precise lasting techniques.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Heel Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Heel Types & Specifications
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">📍</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Stiletto</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Thin steel-reinforced heel. 
+                3-10cm height. Maximum height. 
+                Most challenging to walk in.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Steel rod core</li>
+                <li>• Laminated wood top</li>
+                <li>• Leather or rubber tip</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧱</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Block Heel</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Wide, sturdy heel. 
+                3-8cm height. More stable. 
+                Better for all-day wear.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Solid construction</li>
+                <li>• Wood or molded stack</li>
+                <li>• Maximum stability</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">📐</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Wedge Heel</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Solid sole-to-ground wedge. 
+                Even weight distribution. 
+                Platform front optional.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Cork or EVA core</li>
+                <li>• Full sole coverage</li>
+                <li>• Summer styles popular</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🌱</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Kitten Heel</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Low, slender heel. 
+                3-5cm height. Elegant comfort. 
+                Office appropriate.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Subtle lift</li>
+                <li>• Easy walking</li>
+                <li>• Professional style</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Heel Construction Engineering
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Stiletto Construction</h3>
+                <p class="text-gray-600 mb-4">
+                  The stiletto's elegance comes from sophisticated internal engineering. 
+                  A steel rod provides strength while minimizing bulk.
+                </p>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Steel Shank System</h4>
+                    <p class="text-gray-600 text-sm">
+                      Full-length steel rod from heel to ball. 
+                      Typically 6-8mm width. Provides rigidity. 
+                      Should flex at toe, not at arch.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Heel Pin Construction</h4>
+                    <p class="text-gray-600 text-sm">
+                      Multiple pins secure heel to upper. 
+                      Side pins for lateral stability. 
+                      Counter pins prevent rotation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Heel Height vs Balance</h3>
+                <p class="text-gray-600 mb-4">
+                  Higher heels shift weight forward, increasing pressure on the ball 
+                  of the foot. Proper design redistributes load.
+                </p>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">5cm Heel</h4>
+                    <p class="text-gray-600 text-sm">
+                      25% increased forefoot pressure. 
+                      Generally comfortable for all-day. 
+                      Sweet spot for dress heels.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">8-10cm Heel</h4>
+                    <p class="text-gray-600 text-sm">
+                      75% increased forefoot pressure. 
+                      Limit to 3-4 hours. 
+                      Requires practice to walk.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Platform Compensation</h4>
+                    <p class="text-gray-600 text-sm">
+                      3cm platform reduces effective height by 3cm. 
+                      Reduces foot angle. 
+                      More comfortable at same height.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-red-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-red-800 mb-3">Heel Attachment Methods</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm text-red-700">
+                <div>
+                  <h4 class="font-medium mb-1">Nailed Construction</h4>
+                  <p class="text-xs">Finishing nails into wood heel. Standard method.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Screwed</h4>
+                  <p class="text-xs">Machine screws. More secure for heavy heels.</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Welded</h4>
+                  <p class="text-xs">Plastic components fused. Molded heels.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Last Design */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            High Heel Last Design
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              The last determines the shoe's shape, fit, and walking mechanics. 
+              High heel lasts require specialized modifications from standard patterns.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Key Modifications</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Pitch Angle</h4>
+                    <p class="text-gray-600 text-sm">
+                      Angle from heel seat to toe. 
+                      Standard: 15-20°. 
+                      High fashion: 25-35°.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Heel Seat Position</h4>
+                    <p class="text-gray-600 text-sm">
+                      Heel center under the calcaneus. 
+                      Too far back: instability. 
+                      Too far forward: toe pressure.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Toe Box Volume</h4>
+                    <p class="text-gray-600 text-sm">
+                      Reduced volume in pointed styles. 
+                      Must accommodate natural toe spread. 
+                      Critical for comfort.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Insole & Arch Support</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Steel Shank</h4>
+                    <p class="text-gray-600 text-sm">
+                      Extends from heel to ball. 
+                      Prevents sole flexing. 
+                      Supports arch.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Metatarsal Pad</h4>
+                    <p class="text-gray-600 text-sm">
+                      Optional pad behind ball. 
+                      Redistributes pressure. 
+                      Added comfort feature.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Contoured Insole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Molded arch shape. 
+                      Maintains shape over time. 
+                      Premium feature.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest women's heel production. 
+                      All price points. 
+                      Standard and fashion quality.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 30-45 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Chengdu, Sichuan</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Quality leather heels. 
+                      Italian-style last development. 
+                      Better finishing standards.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 200 pairs | Lead: 40-55 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather/Satin</span>
+                    <span class="font-semibold text-gray-900">$6.00-18.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Steel Shank</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Heel (Wood/Steel)</span>
+                    <span class="font-semibold text-gray-900">$2.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Lining</span>
+                    <span class="font-semibold text-gray-900">$2.00-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole</span>
+                    <span class="font-semibold text-gray-900">$1.50-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly Labor</span>
+                    <span class="font-semibold text-gray-900">$4.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Fashion)</span>
+                    <span class="font-bold text-primary-600">$20.00-52.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Premium)</span>
+                    <span class="font-bold text-secondary-600">$35.00-85.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
       </a>
     ))}
   </div>
+        </div>
 
-  <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
+      </div>
     </div>
-  </div>
+  </section>
 </PageLayout>

@@ -1,229 +1,412 @@
 ---
-import PageLayout from '@layouts/PageLayout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
-const features = [
-  {
-    title: 'Penny Loafer History',
-    description: 'The origins and evolution of the iconic penny loafer from 1930s America.',
-    image: 'https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=300&fit=crop',
-    href: '/encyclopedia/loafers/penny-loafer/',
-  },
-  {
-    title: 'Tassel Loafers',
-    description: 'The American interpretation of loafers with decorative leather tassels.',
-    image: 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&h=300&fit=crop',
-    href: '/encyclopedia/loafers/tassel-loafer/',
-  },
-  {
-    title: 'Horsebit Loafer',
-    description: 'Gucci\'s contribution to American footwear: the horsebit loafer story.',
-    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
-    href: '/encyclopedia/loafers/horsebit-loafer/',
-  },
-  {
-    title: 'Suede vs Leather',
-    description: 'Choosing between suede and leather loafers: occasions, care, and style.',
-    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/loafers/suede-vs-leather/',
-  },
+
+const categories = [
+  { name: 'Penny Loafers', url: '/encyclopedia/loafers/penny/', description: 'Classic saddle strap design', count: 22 },
+  { name: 'Tassel Loafers', url: '/encyclopedia/loafers/tassel/', description: 'Italian-inspired decoration', count: 18 },
+  { name: 'Horsebit Loafers', url: '/encyclopedia/loafers/horsebit/', description: 'Gucci signature style', count: 15 },
+  { name: 'Slipper-style Loafers', url: '/encyclopedia/loafers/slipper/', description: 'Velvet and formal versions', count: 12 },
 ];
 
-const relatedCategories = [
-  { name: 'Dress Shoes', href: '/encyclopedia/dress-shoes/', count: 124 },
-  { name: 'Boots', href: '/encyclopedia/boots/', count: 95 },
-  { name: 'Casual Shoes', href: '/encyclopedia/casual-shoes/', count: 78 },
-];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Loafers Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to loafers: penny, tassel, horsebit styles, construction techniques, and sourcing from Chinese manufacturers.",
+};
 ---
 
 <PageLayout
-  title="Loafers Guide"
-  description="Complete guide to loafers: penny loafers, tassel loafers, horsebit loafers. History, styling tips, and how to choose the perfect slip-on dress shoe."
+  title="Loafers Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into loafer engineering: penny, tassel, and horsebit styles, moccasin construction, leather vs suede variations, and sourcing from Chinese factories."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Formal & Dress', url: '/encyclopedia/leather-shoes/' },
     { name: 'Loafers', url: '/encyclopedia/loafers/' },
   ]}
-  sidebarItems={[
-    {
-      title: 'Loafers',
-      links: [
-        { label: 'Overview', href: '/encyclopedia/loafers/', active: true },
-        { label: 'Penny Loafer', href: '/encyclopedia/loafers/penny-loafer/' },
-        { label: 'Tassel Loafer', href: '/encyclopedia/loafers/tassel-loafer/' },
-        { label: 'Horsebit Loafer', href: '/encyclopedia/loafers/horsebit-loafer/' },
-        { label: 'Suede vs Leather', href: '/encyclopedia/loafers/suede-vs-leather/' },
-      ],
-    },
-    {
-      title: 'Related Categories',
-      links: [
-        { label: 'Dress Shoes', href: '/encyclopedia/dress-shoes/' },
-        { label: 'Boots', href: '/encyclopedia/boots/' },
-        { label: 'Casual Shoes', href: '/encyclopedia/casual-shoes/' },
-      ],
-    },
-  ]}
+  structuredData={structuredData}
 >
-  <div class="mb-8">
-    <span class="badge-primary mb-2">Formal & Casual</span>
-    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Loafers Guide
-    </h1>
-    <p class="text-lg text-neutral-600">
-      Everything you need to know about loafers: from the classic penny loafer to horsebit designs. Learn about the history, styling, and construction of these versatile slip-on shoes.
-    </p>
-  </div>
-
-  <!-- Featured Image -->
-  <div class="rounded-xl overflow-hidden mb-8">
-    <img
-      src="https://images.unsplash.com/photo-1582897085656-c636d006a246?w=1200&h=400&fit=crop"
-      alt="Classic Brown Loafers"
-      class="w-full h-64 md:h-80 object-cover"
-    />
-  </div>
-
-  <!-- Introduction Content -->
-  <div class="prose prose-lg max-w-none mb-12">
-    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Loafers</h2>
-    
-    <p class="text-neutral-600 mb-4">
-      Loafers are slip-on shoes without laces, characterized by their convenient design and versatile styling options. Originally derived from the Norwegian word "løper" (runner), loafers have evolved from casual moccasin-like footwear into sophisticated dress shoes that bridge the gap between formal and casual wear.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The loafer's defining characteristic is its moccasin-like construction, featuring a single piece of leather that wraps around the foot and is sewn together at the top. This construction method distinguishes loafers from lace-up shoes and contributes to their comfortable, glove-like fit.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">History and Origins</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      The earliest loafer-style shoes appeared in the mid-1800s as wild moccasin shoes worn by Native American tribes. However, the modern loafer emerged in Europe during the early 20th century, with the Norwegian slipper serving as an early inspiration. The shoe gained popularity in America during the 1930s when the Bass Weejun was introduced, becoming an instant classic.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The penny loafer, named for the leather strip or "penny" inserted into the saddle strap, became a symbol of preppy style in post-war America. The shoe's association with Ivy League universities cemented its place in American fashion history.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Types of Loafers</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Penny Loafers:</strong> The most iconic American loafer style, featuring a leather strap (saddle) across the vamp with a diamond-shaped cutout. During the 1950s and 1960s, students would insert a penny into the slot for phone calls, giving the style its name. Today, penny loafers remain a versatile choice for business casual and smart casual occasions.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Tassel Loafers:</strong> Characterized by decorative leather tassels at the front lace entry point, American tassel loafers were popularized by the Duke of Windsor in the 1950s. They offer a more expressive, slightly less formal alternative to penny loafers.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Horsebit Loafers:</strong> Also known as Gucci loafers after the Italian fashion house popularized them in the 1950s, horsebit loafers feature a metal bar (shaped like a horse's bit) across the saddle. This style ranges from classic and conservative to bold and fashion-forward.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Belgian Loafers:</strong> A European style characterized by a small bow on the vamp, Belgian loafers are typically more streamlined and elegant than their American counterparts.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Construction and Materials</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Loafers can be constructed using various methods, from traditional Goodyear welt to more modern cemented construction. The choice of construction affects durability, repairability, and comfort.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Premium loafers often feature leather insoles and leather soles, providing excellent breathability and comfort. Some styles incorporate rubber pads on the sole for added durability and grip. The moccasin construction creates a natural flexibility that conforms to the foot over time.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Leather loafers offer classic aesthetics and durability, developing a beautiful patina over time. Suede loafers provide a softer, more casual appearance but require more careful maintenance. Some loafers feature exotic leathers such as suede, nubuck, or even crocodile for a more luxurious look.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Styling Guidelines</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Loafers are remarkably versatile and can be styled for various occasions. For business casual settings, pair leather loafers with dress pants or chinos and a button-down shirt. Suede loafers work well with jeans and casual shirts for smart casual occasions.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      No-show socks or loafer socks are recommended with loafers to maintain comfort and protect the leather from sweat. The choice between leather and suede loafers should consider the overall formality of your wardrobe and the occasions you'll be dressing for.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Chinese manufacturers in regions like Wenzhou (Zhejiang) and Dongguan (Guangdong) have extensive experience producing loafers at various quality levels. Key considerations when sourcing loafers include the construction method, leather quality, and hardware quality (for horsebit styles).
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      When evaluating loafer manufacturers, request samples to assess the quality of the moccasin construction, the consistency of stitching, and the comfort of the last. Pay attention to the depth and width of the shoe, as loafers should provide a snug but comfortable fit without excessive pressure points.
-    </p>
-  </div>
-
-  <!-- Key Sections -->
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    <div class="card text-center">
-      <div class="text-4xl mb-4">💰</div>
-      <h3 class="font-semibold text-lg mb-2">Penny Loafers</h3>
-      <p class="text-neutral-600 text-sm">
-        The classic American style with the iconic saddle strap and diamond cutout.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🎗️</div>
-      <h3 class="font-semibold text-lg mb-2">Tassel Loafers</h3>
-      <p class="text-neutral-600 text-sm">
-        Decorative leather tassels for a more expressive, slightly formal look.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🐴</div>
-      <h3 class="font-semibold text-lg mb-2">Horsebit Loafers</h3>
-      <p class="text-neutral-600 text-sm">
-        Italian-inspired elegance with metal hardware across the saddle.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🎀</div>
-      <h3 class="font-semibold text-lg mb-2">Belgian Loafers</h3>
-      <p class="text-neutral-600 text-sm">
-        Streamlined European design with a subtle bow detail.
-      </p>
-    </div>
-  </div>
-
-  <!-- Article Grid -->
-  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    {features.map(article => (
-      <a href={article.href} class="card group overflow-hidden p-0">
-        <div class="aspect-video overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-sm text-neutral-600">
-            {article.description}
-          </p>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Loafers Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The loafer represents effortless elegance—a shoe you simply slip into. 
+          Born from Norwegian farmers and perfected by Italian cordwainers, 
+          loafers have evolved into essential wardrobe staples. Explore the 
+          craftsmanship behind each style variation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Style Variations */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Classic Loafer Styles
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div class="bg-gradient-to-b from-amber-50 to-white rounded-xl p-6 border border-amber-200">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Penny Loafer</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  American classic. Leather strap with diamond-shaped opening 
+                  originally held a penny (or car key). Timeless simplicity.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• 1930s Bass Weejun origin</li>
+                  <li>• Narrow or wide strap</li>
+                  <li>• Business casual staple</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-orange-50 to-white rounded-xl p-6 border border-orange-200">
+                <div class="text-4xl mb-4">🎗️</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Tassel Loafer</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Italian elegance with decorative tassels at tongue. 
+                  Brook's Brothers popularized in America. 
+                  Semi-formal to formal occasions.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Alden tassel as icon</li>
+                  <li>• Tassels: leather or silk</li>
+                  <li>• Bold or subtle colors</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-gray-100 to-white rounded-xl p-6 border border-gray-300">
+                <div class="text-4xl mb-4">🐴</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Horsebit Loafer</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Gucci signature. Double strap with metal bit. 
+                  Italian luxury icon since 1953. 
+                  Highest formality among loafers.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Requires metal hardware</li>
+                  <li>• Pronged or looped bit</li>
+                  <li>• Can be worn with suits</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-purple-50 to-white rounded-xl p-6 border border-purple-200">
+                <div class="text-4xl mb-4">👑</div>
+                <h3 class="font-semibold text-gray-900 mb-2">Slipper Loafer</h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  Velvet or brocade uppers. Evening wear essential. 
+                  Traditional black or midnight blue. 
+                  Worn with tuxedo or formal suits.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-1">
+                  <li>• Prince Albert shape</li>
+                  <li>• Silk or velvet upper</li>
+                  <li>• Gold or silver bit optional</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Formality Hierarchy</h3>
+              <div class="flex items-center justify-between text-sm">
+                <div class="text-center px-4">
+                  <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center">👔</div>
+                  <p class="font-medium">Suit</p>
+                  <p class="text-gray-500 text-xs">Horsebit, Slipper</p>
+                </div>
+                <div class="text-center px-4">
+                  <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center">👨‍💼</div>
+                  <p class="font-medium">Business</p>
+                  <p class="text-gray-500 text-xs">Tassel, Penny</p>
+                </div>
+                <div class="text-center px-4">
+                  <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center">👨‍🎓</div>
+                  <p class="font-medium">Business Casual</p>
+                  <p class="text-gray-500 text-xs">Penny, Suede</p>
+                </div>
+                <div class="text-center px-4">
+                  <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-2 flex items-center justify-center">🎓</div>
+                  <p class="font-medium">Smart Casual</p>
+                  <p class="text-gray-500 text-xs">Suede Loafers</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Loafer Construction Techniques
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Loafers require specialized construction techniques distinct from lace-ups. 
+              The seamless "moccasin" construction is central to their character.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Moccasin Construction</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">True Moccasin Upper</h4>
+                    <p class="text-gray-600 text-sm">
+                      Single piece of leather wraps around foot. 
+                      Penny strap sewn on top. Hand-stitched seam at toe.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Gum Side</h4>
+                    <p class="text-gray-600 text-sm">
+                      Visible stitching where upper meets sole. 
+                      "Hand-stitched" appearance even if machine-made.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Vamp Thickness</h4>
+                    <p class="text-gray-600 text-sm">
+                      Usually 1.0-1.4mm for flexibility. 
+                      Thicker vamp adds structure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Sole Assembly</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Norwegian Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Visible "stitching" channel around perimeter. 
+                      Adds thickness and durability. Classic look.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Fiddle Back</h4>
+                    <p class="text-gray-600 text-sm">
+                      Curved waist indentation. Italian styling. 
+                      Reduces visual bulk at arch.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Rubber Sole Option</h4>
+                    <p class="text-gray-600 text-sm">
+                      Leather top with rubber bottom. 
+                      Tod's Gommino style. Casual comfort.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Chinese Loafer Manufacturing Expertise</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm text-amber-700">
+                <div>
+                  <h4 class="font-medium mb-2">Strengths</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• Leather moccasin lasting</li>
+                    <li>• Consistent strap placement</li>
+                    <li>• Quality hardware sourcing</li>
+                    <li>• Competitive pricing</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Challenges</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• True hand-stitching rare</li>
+                    <li>• "Fish mouth" seam quality</li>
+                    <li>• Hardware (bits) plating</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Quality Tips</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• Request "piping" edge detail</li>
+                    <li>• Check strap stitching density</li>
+                    <li>• Verify hardware attachment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Material Selection */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Loafer Material Selection
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-gray-200 bg-gray-50">
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Material</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Best For</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Formality</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Durability</th>
+                    <th class="text-left py-3 px-4 font-semibold text-gray-700">Care</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-600">
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Calf Leather</td>
+                    <td class="py-3 px-4">Year-round dress</td>
+                    <td class="py-3 px-4">High</td>
+                    <td class="py-3 px-4">Very Good</td>
+                    <td class="py-3 px-4">Polish regularly</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Pebbled Leather</td>
+                    <td class="py-3 px-4">Casual wear</td>
+                    <td class="py-3 px-4">Medium</td>
+                    <td class="py-3 px-4">Excellent</td>
+                    <td class="py-3 px-4">Condition monthly</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Suede</td>
+                    <td class="py-3 px-4">Summer, casual</td>
+                    <td class="py-3 px-4">Medium</td>
+                    <td class="py-3 px-4">Good</td>
+                    <td class="py-3 px-4">Suede brush + spray</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Nubuck</td>
+                    <td class="py-3 px-4">Fall/winter casual</td>
+                    <td class="py-3 px-4">Medium</td>
+                    <td class="py-3 px-4">Good</td>
+                    <td class="py-3 px-4">Nubuck cleaner</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4 font-medium">Exotics (Croc)</td>
+                    <td class="py-3 px-4">Statement pieces</td>
+                    <td class="py-3 px-4">Very High</td>
+                    <td class="py-3 px-4">Excellent</td>
+                    <td class="py-3 px-4">Special conditioner</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 font-medium">Velvet</td>
+                    <td class="py-3 px-4">Evening/formal</td>
+                    <td class="py-3 px-4">Formal</td>
+                    <td class="py-3 px-4">Moderate</td>
+                    <td class="py-3 px-4">Brush, spot clean</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Loafer specialist region. Moccasin construction expertise. 
+                      Good for penny and tassel styles. Budget to mid-range.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 200 pairs | Lead: 40-55 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangdong (Dongguan)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium loafer production. Horsebit hardware expertise. 
+                      Italian-style fiddle back. Luxury segment.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 100 pairs | Lead: 50-65 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather</span>
+                    <span class="font-semibold text-gray-900">$10.00-25.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Hardware (bit/strap)</span>
+                    <span class="font-semibold text-gray-900">$1.50-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole</span>
+                    <span class="font-semibold text-gray-900">$4.00-10.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly</span>
+                    <span class="font-semibold text-gray-900">$5.00-15.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Leather)</span>
+                    <span class="font-bold text-primary-600">$25.00-65.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Horsebit)</span>
+                    <span class="font-bold text-secondary-600">$28.00-70.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
       </a>
     ))}
   </div>
+        </div>
 
-  <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
+      </div>
     </div>
-  </div>
+  </section>
 </PageLayout>

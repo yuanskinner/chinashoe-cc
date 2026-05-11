@@ -1,0 +1,364 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import CategoryGrid from '../../../components/CategoryGrid.astro';
+
+const categories = [
+  { name: 'PU Leather', url: '/encyclopedia/materials/pu-leather/', description: 'Polyurethane synthetic', count: 38 },
+  { name: 'PVC Leather', url: '/encyclopedia/materials/pvc/', description: 'Polyvinyl chloride', count: 32 },
+  { name: 'Microfiber', url: '/encyclopedia/materials/microfiber/', description: 'Ultra-fine fiber', count: 28 },
+  { name: 'Mesh Fabric', url: '/encyclopedia/materials/mesh-fabric/', description: 'Breathable knit', count: 34 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Synthetic Materials Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to synthetic shoe materials: PU leather, PVC, microfiber, mesh, TPU, and sustainable alternatives from Chinese suppliers.",
+};
+---
+
+<PageLayout
+  title="Synthetic Shoe Materials Guide - ChinaShoe.cc"
+  description="Deep dive into synthetic materials: PU leather, PVC, microfiber, mesh fabric, TPU, performance characteristics, and sourcing from Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Synthetic Materials', url: '/encyclopedia/materials/synthetic-materials/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Synthetic Materials <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Modern footwear increasingly relies on synthetic materials. From budget-friendly 
+          PU leather to high-performance mesh, understanding these alternatives is 
+          essential for cost-effective sourcing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Types of Synthetic Materials
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧬</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">PU Leather</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Polyurethane coating on fabric base. 
+                Most common synthetic leather. 
+                Good hand feel, breathable.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• DMF-free options available</li>
+                <li>• Price: $1.50-5.00/meter</li>
+                <li>• Multiple finishes</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-4">💎</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">PVC Leather</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Polyvinyl chloride with plasticizer. 
+                Most durable option. 
+                Waterproof.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Highest durability</li>
+                <li>• Price: $1.00-3.50/meter</li>
+                <li>• Less breathable</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧵</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Microfiber</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Ultra-fine fiber nonwoven. 
+                Premium synthetic. 
+                Closest to real leather feel.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Cobible certified options</li>
+                <li>• Price: $3.00-8.00/meter</li>
+                <li>• High tear strength</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🔲</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">TPU Leather</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Thermoplastic polyurethane. 
+                Eco-friendly option. 
+                Recyclable.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Sustainable alternative</li>
+                <li>• Price: $2.50-6.00/meter</li>
+                <li>• Good flexibility</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* PU Leather */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            PU Leather Deep Dive
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              PU leather accounts for 60% of synthetic leather production. 
+              Understanding its structure helps select the right grade.
+            </p>
+            
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Layer Structure</h3>
+              <div class="grid md:grid-cols-4 gap-4">
+                <div class="text-center p-3 bg-purple-50 rounded-xl">
+                  <p class="font-medium text-purple-800 text-sm">Surface Film</p>
+                  <p class="text-purple-600 text-xs">PU coating + finish</p>
+                </div>
+                <div class="text-center p-3 bg-purple-100 rounded-xl">
+                  <p class="font-medium text-purple-800 text-sm">Foam Layer</p>
+                  <p class="text-purple-600 text-xs">Cushioning + thickness</p>
+                </div>
+                <div class="text-center p-3 bg-purple-200 rounded-xl">
+                  <p class="font-medium text-purple-800 text-sm">Adhesive Layer</p>
+                  <p class="text-purple-600 text-xs">Bonding agent</p>
+                </div>
+                <div class="text-center p-3 bg-purple-300 rounded-xl">
+                  <p class="font-medium text-purple-800 text-sm">Fabric Base</p>
+                  <p class="text-purple-600 text-xs">Knitted/woven support</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-800 mb-3">Premium PU (DMF-Free)</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Solvent-free production</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Better hand feel</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>No harmful odors</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>REACH compliant</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="p-4 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-800 mb-3">Standard PU (DMF)</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Contains DMF solvent</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Lower price point</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>May have odor</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Wide availability</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mesh Fabrics */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Mesh & Technical Fabrics
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Mesh Types</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Sandwich Mesh</h4>
+                    <p class="text-gray-600 text-sm">
+                      Three-layer construction: face + foam + backing. 
+                      Most common athletic mesh. 
+                      Good cushioning + breathability.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $2.00-4.50/meter</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">3D Mesh</h4>
+                    <p class="text-gray-600 text-sm">
+                      Mono-filament construction. 
+                      Three-dimensional structure. 
+                      Maximum airflow.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $3.00-6.00/meter</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Raschel Mesh</h4>
+                    <p class="text-gray-600 text-sm">
+                      Warp-knit construction. 
+                      Strong, dimensionally stable. 
+                      Heavy-duty applications.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Price: $1.50-3.50/meter</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Performance Specifications</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Weight</span>
+                    <span class="font-medium text-gray-800">150-400 GSM</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Air Permeability</span>
+                    <span class="font-medium text-gray-800">500-2000 mm/s</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Tensile Strength</span>
+                    <span class="font-medium text-gray-800">200-500 N/5cm</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Abrasion Resistance</span>
+                    <span class="font-medium text-gray-800">50,000+ cycles</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            China Suppliers
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Production Hubs</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Haining, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest synthetic leather hub. 
+                      Wenzhou leather goods supply base. 
+                      Competitive pricing.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Foshan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium technical fabrics. 
+                      Mesh specialists. 
+                      Better QC standards.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Xiamen, Fujian</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Sports shoe materials. 
+                      Mesh + synthetic specialists. 
+                      Major sports brand suppliers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Price Reference (FOB China)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PU Leather (Standard)</span>
+                    <span class="font-semibold text-gray-900">$1.50-3.00/m</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PU Leather (DMF-Free)</span>
+                    <span class="font-semibold text-gray-900">$2.50-5.00/m</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">PVC Leather</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.50/m</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Microfiber</span>
+                    <span class="font-semibold text-gray-900">$3.00-8.00/m</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Sandwich Mesh</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.50/m</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">3D Mesh</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00/m</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

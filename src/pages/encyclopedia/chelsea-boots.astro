@@ -1,0 +1,403 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Dress Chelsea', url: '/encyclopedia/chelsea-boots/dress/', description: 'Formal slim profile', count: 16 },
+  { name: 'Casual Chelsea', url: '/encyclopedia/chelsea-boots/casual/', description: 'Rounded toe, thick sole', count: 20 },
+  { name: 'Military Chelsea', url: '/encyclopedia/chelsea-boots/military/', description: 'Jodhpur boot style', count: 12 },
+  { name: 'Chelsea Materials', url: '/encyclopedia/chelsea-boots/materials/', description: 'Leather, suede, patent', count: 14 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Chelsea Boots Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to Chelsea boots: elastic goring, pull-on construction, heel styles, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Chelsea Boots Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into Chelsea boot engineering: elastic goring systems, pull-on construction, heel variations, leather vs suede, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Formal & Dress', url: '/encyclopedia/leather-shoes/' },
+    { name: 'Chelsea Boots', url: '/encyclopedia/chelsea-boots/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Chelsea Boots Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The Chelsea boot's iconic elastic side panels have made it a wardrobe essential 
+          since Victorian England. From Jermyn Street to modern streetwear, discover the 
+          construction techniques that create both formal and casual Chelsea boot variations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Defining Features: Elastic Goring System
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              The Chelsea boot's defining characteristic is its elastic side goring—a 
+              stretch panel that allows the boot to be pulled on and off without laces. 
+              This simple innovation revolutionized boot design.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Goring Specifications</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Elastic Material</h4>
+                    <p class="text-gray-600 text-sm">
+                      Typically 8-12mm wide spandex/elastane blend. 
+                      Cotton-wrapped for durability. Natural rubber optional.
+                    </p>
+                    <ul class="text-xs text-gray-500 mt-2 space-y-1">
+                      <li>• Stretch recovery: 95%+</li>
+                      <li>• Width tolerance: ±1mm</li>
+                      <li>• Color-matched to upper</li>
+                    </ul>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Attachment Method</h4>
+                    <p class="text-gray-600 text-sm">
+                      Sewn between upper and lining. Hidden stitching. 
+                      Should be continuous from ankle to heel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Heel Pull Tabs</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Single Tab</h4>
+                    <p class="text-gray-600 text-sm">
+                      Standard pull tab at heel counter. Leather or fabric. 
+                      25-35mm height, 15-20mm width.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Double Loop</h4>
+                    <p class="text-gray-600 text-sm">
+                      Two tabs for easier pulling. 
+                      Premium feature. Often paired with backstay.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Backstay</h4>
+                    <p class="text-gray-600 text-sm">
+                      Reinforced panel at heel. Prevents sagging. 
+                      Essential for durability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-blue-800 mb-3">China Goring Suppliers</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm text-blue-700">
+                <div>
+                  <h4 class="font-medium mb-1">Material Source</h4>
+                  <p class="text-xs">Wujiang, Jiangsu (textile hub)</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Pre-made Sets</h4>
+                  <p class="text-xs">Hangzhou, Zhejiang</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Custom Colors</h4>
+                  <p class="text-xs">Dye-matched to leather</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Style Variations */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Style Variations
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👢</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Dress Chelsea</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Slim profile, pointed or almond toe. 
+                Thin leather sole. Formal occasions.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Toe shape: Pointed/slim</li>
+                <li>• Heel: Slim Louis or block</li>
+                <li>• Upper: Polished calf</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🥾</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Casual Chelsea</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Rounder toe, chunkier sole. 
+                Vibram-style outsole option. Daily wear.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Toe shape: Round/square</li>
+                <li>• Heel: Stacked leather or rubber</li>
+                <li>• Upper: Suede or pull-up</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">🎯</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2"> Jodhpur Boot</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Ankle-high with strap and buckle. 
+                Equestrian heritage. Unique alternative.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Instead of elastic</li>
+                <li>• Leather strap + buckle</li>
+                <li>• Distinctive silhouette</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">✨</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Patent Chelsea</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                High-gloss patent leather. 
+                Black tie alternative. Formal events.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Patent lacquer finish</li>
+                <li>• Classic black only</li>
+                <li>• Dress code compliant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Heel Styles */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Heel Construction
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Heel Types</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Stacked Leather Heel</h4>
+                    <p class="text-gray-600 text-sm">
+                      Multiple leather layers laminated and shaped. 
+                      Classic dress boot aesthetic. 
+                      25-35mm standard height.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Single Block Heel</h4>
+                    <p class="text-gray-600 text-sm">
+                      One-piece leather or rubber. 
+                      Casual style. More stable walking.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Rubber Toplift</h4>
+                    <p class="text-gray-600 text-sm">
+                      Leather heel with rubber cap. 
+                      Reduces slip and wear. 
+                      Standard on most modern boots.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Sole Options</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Leather Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Traditional. Dress appropriate. 
+                      Requires maintenance. 
+                      Goodyear welt standard.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Dainite Rubber</h4>
+                    <p class="text-gray-600 text-sm">
+                      Studded rubber sole. 
+                      English classic. Anti-slip. 
+                      Dress casual compatibility.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Commando Sole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Chunky lug pattern. 
+                      Maximum grip. 
+                      Fully casual.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Boot specialist region. Elastic goring expertise. 
+                      Goodyear welt capabilities. Mid-range production.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 150 pairs | Lead: 45-60 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangdong (Dongguan)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium Chelsea boots. Italian-style last development. 
+                      Dress Chelsea specialists. Luxury segment.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 100 pairs | Lead: 50-65 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather</span>
+                    <span class="font-semibold text-gray-900">$12.00-28.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Elastic Goring</span>
+                    <span class="font-semibold text-gray-900">$1.50-3.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Welt</span>
+                    <span class="font-semibold text-gray-900">$4.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole + Heel</span>
+                    <span class="font-semibold text-gray-900">$6.00-14.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly</span>
+                    <span class="font-semibold text-gray-900">$8.00-20.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Goodyear)</span>
+                    <span class="font-bold text-primary-600">$38.00-82.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Cemented)</span>
+                    <span class="font-bold text-secondary-600">$28.00-58.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-green-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-green-800 mb-3">Chelsea Boot Quality Checklist</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Elastic should stretch without permanent deformation</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Goring color-matched to leather</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Backstay prevents heel sagging</span>
+                  </li>
+                </ul>
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Pull tab securely attached</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Heel properly countersunk</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Vamp length appropriate for body proportion</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

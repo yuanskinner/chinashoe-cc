@@ -1,0 +1,450 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Balmoral Oxfords', url: '/encyclopedia/oxford-shoes/balmoral/', description: 'Traditional closed-lacing formal', count: 18 },
+  { name: 'Cap-toe Oxfords', url: '/encyclopedia/oxford-shoes/cap-toe/', description: 'Decorative toe cap detail', count: 24 },
+  { name: 'Plain-toe Oxfords', url: '/encyclopedia/oxford-shoes/plain-toe/', description: 'Classic minimalist design', count: 20 },
+  { name: 'Whole-cut Oxfords', url: '/encyclopedia/oxford-shoes/whole-cut/', description: 'Single piece leather upper', count: 12 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Oxford Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to Oxford shoes: closed-lacing construction, Goodyear welt, Blake stitching, leather grades, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Oxford Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into Oxford shoe engineering: closed-lacing system, Goodyear welt vs Blake construction, leather grades (Calf, Box, Shell cordovan), and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Formal & Dress', url: '/encyclopedia/leather-shoes/' },
+    { name: 'Oxford Shoes', url: '/encyclopedia/oxford-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Oxford Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          The Oxford shoe represents the pinnacle of formal footwear craftsmanship. 
+          Its defining closed-lacing system creates a clean, elegant silhouette that 
+          has defined dress shoes for over two centuries. Discover the construction 
+          techniques, leather types, and manufacturing processes behind quality Oxfords.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Closed Lacing System */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            The Oxford Closed-Lacing System
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              The defining feature of an Oxford is its "closed lacing" construction, 
+              where the vamp (upper front) extends under the eyelet facings. When laced, 
+              the quarters (side pieces) are drawn together under the vamp, creating a 
+              sleek, unified appearance impossible with open-laced designs.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Construction Anatomy</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Vamp (Vamp Facade)</h4>
+                    <p class="text-gray-600 text-sm">
+                      The front portion covering the toes and instep. In closed-lacing, 
+                      extends beneath the quarters to create seamless appearance.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Quarters</h4>
+                    <p class="text-gray-600 text-sm">
+                      Side and heel portions. Include eyelet facings that are sewn under 
+                      the vamp. Critical for proper foot lockdown.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Tongue</h4>
+                    <p class="text-gray-600 text-sm">
+                      Medium-width, padded. Usually 3-4mm thickness. 
+                      Extends to 4th eyelet minimum for proper lace coverage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Why Closed Lacing Matters</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Formal Aesthetics</h4>
+                    <p class="text-gray-600 text-sm">
+                      Creates cleaner silhouette than Derbies. No gapping at lace line. 
+                      Preferred for black-tie, formal business, and ceremonial occasions.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Better Fit</h4>
+                    <p class="text-gray-600 text-sm">
+                      Quarters drawn together under vamp create more precise foot lockdown. 
+                      Better for narrow to medium-width feet.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Cleaner Profile</h4>
+                    <p class="text-gray-600 text-sm">
+                      No side stitching visible at lace line. 
+                      Allows for smoother, more elegant vamp designs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Oxford vs Derby: The Key Distinction</h3>
+              <p class="text-amber-700 text-sm mb-4">
+                Despite looking similar, Oxford and Derby differ fundamentally:
+              </p>
+              <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 bg-white rounded-lg">
+                  <h4 class="font-semibold text-amber-900 mb-2">Oxford</h4>
+                  <ul class="space-y-1 text-amber-700">
+                    <li>• Eyelet facings sewn under vamp</li>
+                    <li>• Quarters not visible at lace line</li>
+                    <li>• More formal, tighter fit</li>
+                    <li>• Traditional for dress occasions</li>
+                  </ul>
+                </div>
+                <div class="p-4 bg-white rounded-lg">
+                  <h4 class="font-semibold text-amber-900 mb-2">Derby</h4>
+                  <ul class="space-y-1 text-amber-700">
+                    <li>• Eyelet facings sewn on top of vamp</li>
+                    <li>• Visible gap where quarters meet</li>
+                    <li>• More adjustable, roomier fit</li>
+                    <li>• Appropriate for business casual</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Construction Methods */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Goodyear Welt vs Blake Stitching
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div class="bg-gradient-to-b from-primary-50 to-white rounded-xl p-6 border border-primary-200">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-3xl">🔧</div>
+                  <h3 class="text-xl font-semibold text-gray-900">Goodyear Welt</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  The gold standard of dress shoe construction. A strip of leather 
+                  (welt) is sewn around the perimeter, connecting upper, insole, and outsole.
+                </p>
+                <div class="space-y-3">
+                  <div>
+                    <h4 class="font-medium text-gray-800 text-sm mb-1">Advantages</h4>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                      <li>• Resoleable (3-5 times)</li>
+                      <li>• Superior water resistance</li>
+                      <li>• Better foot support</li>
+                      <li>• Traditional craftsmanship appeal</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 text-sm mb-1">Manufacturing</h4>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                      <li>• Requires Goodyear welting machine</li>
+                      <li>• Complex, labor-intensive</li>
+                      <li>• Typical China cost: $25-50 additional</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-gradient-to-b from-secondary-50 to-white rounded-xl p-6 border border-secondary-200">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-3xl">🧵</div>
+                  <h3 class="text-xl font-semibold text-gray-900">Blake Stitching</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Direct stitching of upper to outsole through the insole. 
+                  No welt, creating a slimmer profile than Goodyear.
+                </p>
+                <div class="space-y-3">
+                  <div>
+                    <h4 class="font-medium text-gray-800 text-sm mb-1">Advantages</h4>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                      <li>• Slimmer profile (2-3mm thinner)</li>
+                      <li>• More flexible feel</li>
+                      <li>• Lower manufacturing cost</li>
+                      <li>• Can be resoleable (with Blake machines)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800 text-sm mb-1">Manufacturing</h4>
+                    <ul class="text-xs text-gray-600 space-y-1">
+                      <li>• Requires Blake stitching machine</li>
+                      <li>• Simpler than Goodyear</li>
+                      <li>• Common in Italian luxury shoes</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="text-2xl mb-2">💧</div>
+                <h4 class="font-medium text-gray-800">Water Resistance</h4>
+                <p class="text-gray-500 text-xs mt-1">Goodyear > Blake</p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="text-2xl mb-2">👣</div>
+                <h4 class="font-medium text-gray-800">Flexibility</h4>
+                <p class="text-gray-500 text-xs mt-1">Blake > Goodyear</p>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-xl text-center">
+                <div class="text-2xl mb-2">🔄</div>
+                <h4 class="font-medium text-gray-800">Resoleability</h4>
+                <p class="text-gray-500 text-xs mt-1">Goodyear > Blake</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Leather Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Leather Selection for Oxfords
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Premium Leather Grades</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Calf Leather</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Most common quality leather. From calves under 12 months. 
+                      Fine grain, smooth surface, excellent polish potential.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• Thickness: 1.2-1.6mm for uppers</li>
+                      <li>• Grain pattern: Tight, consistent</li>
+                      <li>• Cost: $8-15/sq ft</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Box Calf</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Premium calf with tight grain. Chrome-tanned, drum-dyed. 
+                      Classic black and brown Oxfords use this material.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• Smooth, consistent surface</li>
+                      <li>• Excellent mirror shine</li>
+                      <li>• Cost: $12-20/sq ft</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Shell Cordovan</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Horse butt layer. Non-porous, extremely durable. 
+                      Develops unique patina over time. Made famous by Alden.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• Thickness: 1.5-2.0mm</li>
+                      <li>• No grain (flex layer only)</li>
+                      <li>• Cost: $30-50/sq ft</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Leather Specifications</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Tannage Types</h4>
+                    <ul class="text-xs text-gray-600 space-y-2">
+                      <li><strong>Chrome-tanned:</strong> Fast, water-resistant, lower cost</li>
+                      <li><strong>Vegetable-tanned:</strong> Traditional, develops patina, used for welts</li>
+                      <li><strong>Combination:</strong> Chrome base, vegetable finish</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Thickness Guide</h4>
+                    <ul class="text-xs text-gray-600 space-y-2">
+                      <li><strong>Vamp:</strong> 1.0-1.4mm (lighter for flexibility)</li>
+                      <li><strong>Quarters:</strong> 1.2-1.6mm (sturdier for structure)</li>
+                      <li><strong>Lining:</strong> 0.6-0.8mm (porc leather or fabric)</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 text-sm mb-2">Suppliers for China OEM</h4>
+                    <ul class="text-xs text-gray-600 space-y-2">
+                      <li>• Heng Long (Hong Kong) - crocodile, shell</li>
+                      <li>• Ver Off (Italy) - premium calf</li>
+                      <li>• Badalassi Carlo (Italy) - Pueblo, wax</li>
+                      <li>• Weinheimer (Germany) - Box calf</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      "Chinese Shoe Capital" - 1000+ factories. Leather dress shoe specialization. 
+                      Goodyear welt and Blake capabilities. Widespread but variable quality.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 150-300 pairs | Lead: 45-60 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangzhou, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium men's shoes. Italian-style production. 
+                      Higher labor costs, better craftsmanship for luxury segment.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 100-200 pairs | Lead: 50-70 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather (calf)</span>
+                    <span class="font-semibold text-gray-900">$15.00-35.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Welt</span>
+                    <span class="font-semibold text-gray-900">$4.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole (leather)</span>
+                    <span class="font-semibold text-gray-900">$6.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining Leather</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lasts + Tooling</span>
+                    <span class="font-semibold text-gray-900">$3.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly (lasting + stitching)</span>
+                    <span class="font-semibold text-gray-900">$8.00-20.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Goodyear Welt)</span>
+                    <span class="font-bold text-primary-600">$40.00-90.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Blake Stitch)</span>
+                    <span class="font-bold text-secondary-600">$35.00-75.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-green-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-green-800 mb-3">Quality Indicators</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Channeled insole (groove for stitching)</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Proper heel breast (front edge angle)</span>
+                  </li>
+                </ul>
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Leather outsole with wood pegging (Goodyear)</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Counter and toe puff (thermoformed)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

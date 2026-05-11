@@ -1,0 +1,496 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Trail Running Shoes', url: '/encyclopedia/hiking-shoes/trail-running/', description: 'Lightweight off-trail footwear', count: 32 },
+  { name: 'Waterproof Hiking Boots', url: '/encyclopedia/hiking-shoes/waterproof/', description: 'Gore-Tex and membrane technology', count: 28 },
+  { name: 'Mountaineering Boots', url: '/encyclopedia/hiking-shoes/mountaineering/', description: 'Technical ice and rock climbing', count: 18 },
+  { name: 'Hiking Mid Layers', url: '/encyclopedia/hiking-shoes/mid-layers/', description: 'Mid-cut ankle support', count: 24 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Hiking Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to hiking shoes: outsole traction, waterproof membranes, ankle support systems, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Hiking Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into hiking shoe engineering: Vibram outsole patterns, Gore-Tex waterproofing, ankle support configurations, EH safety standards, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Athletic & Sports', url: '/encyclopedia/running-shoes/' },
+    { name: 'Hiking Shoes', url: '/encyclopedia/hiking-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Hiking Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          From day hikes to multi-day backpacking, hiking footwear must balance protection, 
+          durability, and comfort across diverse terrain. Explore how Chinese manufacturers 
+          engineer hiking shoes meeting international safety and performance standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Outsole Systems */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Outsole Traction Engineering
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Hiking shoe outsoles face extreme conditions: wet rocks, loose gravel, mud, 
+              snow, and root-strewn trails. Multi-directional traction with self-cleaning 
+              properties is essential.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Vibram-Style Lug Patterns</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Multi-Terrain ( MTS)</h4>
+                    <p class="text-gray-600 text-sm">
+                      Versatile pattern for mixed terrain. 4-5mm lugs with multi-directional orientation. 
+                      Self-cleaning channels. Suitable for 70% of hiking applications.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Megagrip Compound</h4>
+                    <p class="text-gray-600 text-sm">
+                      Vibram's premium compound. Superior wet rock grip (coefficient 0.6+ on wet surfaces). 
+                      Durable on abrasive granite and sandstone. Standard in premium hiking brands.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Arctis/Idrogrip</h4>
+                    <p class="text-gray-600 text-sm">
+                      Ice and wet surface optimization. Used in winter hiking and mountaineering. 
+                      Soft compound maintains flexibility at low temperatures.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Outsole Construction</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Contoured EVA Midsole</h4>
+                    <p class="text-gray-600 text-sm">
+                      Integrated shank for trail stability. 6-8mm drop typical. 
+                      EVA density 220-280 kg/m³ for cushioning.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">TPU Heel Stabilizer</h4>
+                    <p class="text-gray-600 text-sm">
+                      External heel counter for descending control. 
+                      Prevents ankle rolling on uneven terrain.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Rock Plate Integration</h4>
+                    <p class="text-gray-600 text-sm">
+                      Flexible TPU or composite plate under forefoot. 
+                      Protects from stone bruises. 1-2mm thickness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Outsole Material Properties</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-200">
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Compound</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Hardness (Shore A)</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Wet Grip</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Durability</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Best For</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600">
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4 font-medium">Megagrip</td>
+                      <td class="py-3 px-4">65-70</td>
+                      <td class="py-3 px-4">Excellent</td>
+                      <td class="py-3 px-4">Very Good</td>
+                      <td class="py-3 px-4">Mixed terrain, wet rocks</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4 font-medium">XS Grip</td>
+                      <td class="py-3 px-4">55-60</td>
+                      <td class="py-3 px-4">Superior</td>
+                      <td class="py-3 px-4">Moderate</td>
+                      <td class="py-3 px-4">Slate, limestone</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4 font-medium">XS Edge</td>
+                      <td class="py-3 px-4">60-65</td>
+                      <td class="py-3 px-4">Good</td>
+                      <td class="py-3 px-4">Excellent</td>
+                      <td class="py-3 px-4">Hard surfaces, edges</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4 font-medium">Trail Bee</td>
+                      <td class="py-3 px-4">62-68</td>
+                      <td class="py-3 px-4">Good</td>
+                      <td class="py-3 px-4">Excellent</td>
+                      <td class="py-3 px-4">General hiking</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Waterproof Technology */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Waterproof Membrane Systems
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Waterproof hiking shoes require breathable membranes that keep water out while 
+              allowing moisture vapor to escape. This balance is critical for all-day comfort.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Membrane Technologies</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                    <h4 class="font-semibold text-gray-900 mb-2">GORE-TEX Extended Comfort</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Industry standard. 28,000 g/m²/24hr breathability. 
+                      28,000mm water column. ePE (expanded polyethylene) membrane.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• 3-layer or 2-layer construction</li>
+                      <li>• PFAS-free from 2023</li>
+                      <li>• Typical lifespan: 800-1000 hours</li>
+                    </ul>
+                  </div>
+                  <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                    <h4 class="font-semibold text-gray-900 mb-2">eVent / Texapore</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Direct venting technology. 25,000+ g/m²/24hr. 
+                      Slightly more breathable in high-output conditions.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• Direct Vaportm technology</li>
+                      <li>• Cost-effective alternative</li>
+                      <li>• Comparable waterproofing</li>
+                    </ul>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 mb-2">Proprietary Membranes</h4>
+                    <p class="text-gray-600 text-sm mb-2">
+                      Outdry (Columbia), HyVent (The North Face), Omni-Tech.
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-1">
+                      <li>• Usually 10,000-15,000 g/m²/24hr</li>
+                      <li>• More affordable options</li>
+                      <li>• Varying quality</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Construction Methods</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Gusseted Tongue</h4>
+                    <p class="text-gray-600 text-sm">
+                      Waterproof tongue extends to ankle. Prevents water entry through lacing area. 
+                      Essential for stream crossings. Minimum 80mm gusset height.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Sealed Seams</h4>
+                    <p class="text-gray-600 text-sm">
+                      Taped or welded seams critical. Bemis tape standard: 15mm width. 
+                      Full seam taping vs. critical seam taping (CCT).
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Lateral Waterproof Bootie</h4>
+                    <p class="text-gray-600 text-sm">
+                      Membrane laminated to upper lining. Factory-laminated in China. 
+                      Requires careful lasting to prevent membrane stress.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Waterproof vs. Breathability Trade-off</h3>
+              <p class="text-amber-700 text-sm">
+                No membrane is 100% breathable. In sustained rain, all waterproof hiking shoes will 
+                eventually wet out from inside. Breathability ratings matter most during high-output 
+                activity (>10°C ambient temperature). Below freezing, condensation inside the boot 
+                becomes the primary concern.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Ankle Support */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Ankle Support Configurations
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👟</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Low-Cut Hiking Shoes</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Trail runners and day hiking shoes. Maximum flexibility and weight savings. 
+                Suitable for established trails under 15kg load.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-2">
+                <li>• Weight: 400-600g/pair</li>
+                <li>• Ankle collar: 80-100mm</li>
+                <li>• Flexibility: High</li>
+                <li>• Best for: Day hikes, light loads</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🥾</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Mid-Cut Hiking Boots</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Balance of ankle protection and flexibility. Most popular category. 
+                Ankle collar above malleolus provides proprioceptive support.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-2">
+                <li>• Weight: 600-900g/pair</li>
+                <li>• Ankle collar: 120-150mm</li>
+                <li>• Flexibility: Moderate</li>
+                <li>• Best for: Overnight hikes, moderate loads</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧗</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">High-Cut Mountaineering</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Full ankle immobilization. Rigid sole for crampon compatibility. 
+                B3-rated for serious mountaineering.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-2">
+                <li>• Weight: 1000-1600g/pair</li>
+                <li>• Ankle collar: 160-200mm</li>
+                <li>• Flexibility: Rigid</li>
+                <li>• Best for: Technical terrain, heavy loads</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Safety Standards */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center text-red-600">4</span>
+            Safety & Certification Standards
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">ASTM / ANSI Standards (USA)</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">ASTM F2892-18</h4>
+                    <p class="text-gray-600 text-sm">
+                      Soft bottom protective footwear. Basic toe protection. 
+                      Minimum 50 Joules impact resistance. Minimum 15,000 PSI compression.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">ASTM F2413-18</h4>
+                    <p class="text-gray-600 text-sm">
+                      EH (Electrical Hazard) rated footwear. Protection against open circuits up to 18,000V dry.
+                      Required for utility, construction, and industrial hiking boots.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">EN Standards (Europe)</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">EN ISO 20345:2011</h4>
+                    <p class="text-gray-600 text-sm">
+                      Safety footwear. S3 classification includes: 
+                      steel toe cap (200J), closed heel, antistatic, energy absorption, 
+                      waterproof upper, penetration-resistant midsole.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">EN ISO 20347:2012</h4>
+                    <p class="text-gray-600 text-sm">
+                      Occupational footwear. OB classification without toe cap. 
+                      O1, O2, O3, O4 levels (similar to S1-S4 without toe protection).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-blue-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-blue-800 mb-3">China Factory Certification Requirements</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm text-blue-700">
+                <div>
+                  <h4 class="font-medium mb-2">Testing Requirements</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• Toecap impact: EN 12568 or ASTM F2412</li>
+                    <li>• Penetration resistance: EN ISO 20345 Clause 6.2.1</li>
+                    <li>• Outsole bond: EN ISO 17707</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Documentation</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• CE marking declaration</li>
+                    <li>• Technical file</li>
+                    <li>• Factory audit report (BSCI, SA8000)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Quality Control</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• AQL 2.5 for appearance</li>
+                    <li>• 100% toecap compression test</li>
+                    <li>• Random penetration test sampling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">5</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Safety footwear hub. EN ISO 20345 certified factories. 
+                      Good for EH-rated hiking boots. Mid-tier pricing.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 45-60 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Dongguan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium outdoor brands. Vibram-approved outsoles. 
+                      Gore-Tex licensed production. Higher QC standards.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 500 pairs | Lead: 50-65 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper (leather/synthetic)</span>
+                    <span class="font-semibold text-gray-900">$5.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Waterproof Membrane</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Midsole (EVA + shank)</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole (Vibram-style)</span>
+                    <span class="font-semibold text-gray-900">$4.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Toe Cap + Safety Components</span>
+                    <span class="font-semibold text-gray-900">$1.50-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly + Laces + Insole</span>
+                    <span class="font-semibold text-gray-900">$2.00-3.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Standard)</span>
+                    <span class="font-bold text-primary-600">$17.00-38.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Safety EH)</span>
+                    <span class="font-bold text-secondary-600">$22.00-45.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

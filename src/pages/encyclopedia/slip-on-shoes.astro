@@ -1,0 +1,354 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Loafers', url: '/encyclopedia/loafers/', description: 'Slip-on dress shoes', count: 64 },
+  { name: 'Mules', url: '/encyclopedia/mules/', description: 'Backless slip-ons', count: 52 },
+  { name: 'Slippers', url: '/encyclopedia/slippers/', description: 'Indoor casual', count: 48 },
+  { name: 'Espadrilles', url: '/encyclopedia/espadrilles/', description: 'Jute sole shoes', count: 28 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Slip-on Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to slip-on shoes: loafer construction, penny slot details, mule design, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Slip-on Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into slip-on shoe engineering: loafer construction, penny slot details, elastic goring, mule design, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Casual & Lifestyle', url: '/encyclopedia/sneakers/' },
+    { name: 'Slip-on Shoes', url: '/encyclopedia/slip-on-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Slip-on Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          From the Norwegian fishermen who invented the first slip-ons to the 
+          Wall Street penny loafer, slip-on shoes represent both utility and style. 
+          Explore the construction methods that make effortless elegance possible.
+       p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Types */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Types of Slip-on Shoes
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👞</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Penny Loafer</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Leather strap with diamond opening. 
+                Fits one penny. Ivy League classic.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Formal-casual versatility</li>
+                <li>• Full-grain leather</li>
+                <li>• Leather sole standard</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🎀</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Tassel Loafer</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Decorative tassels on leather strap. 
+                American classic. Statement piece.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Ornate detailing</li>
+                <li>• Leather fringe details</li>
+                <li>• Statement styling</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">💎</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Horsebit Loafer</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Metal bar across diamond opening. 
+                Gucci signature. Luxury segment.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Metal hardware</li>
+                <li>• Premium materials</li>
+                <li>• High-end positioning</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🥿</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Mule</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Backless design. Open heel. 
+                Breathable summer option.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• No heel counter</li>
+                <li>• Easy on/off</li>
+                <li>• Summer appropriate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Construction Methods
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Channeling Construction</h3>
+                <p class="text-gray-600 mb-4">
+                  Premium loafer construction where the welt is channeled—cut into the insole 
+                  and outsole—so seams are hidden for a clean, refined appearance.
+                </p>
+                <div class="space-y-3">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Norwegian Roll</h4>
+                    <p class="text-gray-600 text-sm">
+                      Visible outsole welt rolled outward. Water-resistant. 
+                      Outdoor-appropriate construction.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Blind Channel</h4>
+                    <p class="text-gray-600 text-sm">
+                      Hidden welt. Clean appearance. 
+                      Dress shoe standard. More complex process.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Strobel Construction</h3>
+                <p class="text-gray-600 mb-4">
+                  More economical construction where the upper is stitched directly to a 
+                  Strobel insole. Flexible and comfortable.
+                </p>
+                <div class="space-y-3">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Pros</h4>
+                    <p class="text-gray-600 text-sm">
+                      Lower cost. More flexible. 
+                      Faster production. Good comfort.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Cons</h4>
+                    <p class="text-gray-600 text-sm">
+                      Less durable. Less water-resistant. 
+                      Lower perceived value.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Penny Slot Specifications</h3>
+              <div class="grid md:grid-cols-4 gap-4 text-sm text-amber-700">
+                <div>
+                  <h4 class="font-medium mb-1">Diamond Opening</h4>
+                  <p class="text-xs">15-20mm width typical</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Slot Depth</h4>
+                  <p class="text-xs">3-5mm to hold penny</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Reinforcement</h4>
+                  <p class="text-xs">Metal or leather rim</p>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-1">Position</h4>
+                  <p class="text-xs">Center of vamp strap</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Elastic vs Leather */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Fit Systems: Elastic vs Leather
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="p-6 bg-blue-50 rounded-xl">
+                <h3 class="text-lg font-semibold text-blue-800 mb-4">Elastic Goring</h3>
+                <p class="text-blue-700 text-sm mb-4">
+                  Stretch panel built into side seams. 
+                  Allows easy on/off. Consistent fit.
+                </p>
+                <ul class="text-sm text-blue-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Easy entry/exit</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>No laces to adjust</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Memory fit</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Lower cost</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="p-6 bg-amber-50 rounded-xl">
+                <h3 class="text-lg font-semibold text-amber-800 mb-4">Leather Construction</h3>
+                <p class="text-amber-700 text-sm mb-4">
+                  Full leather upper with no stretch panels. 
+                  Requires precise sizing. More formal.
+                </p>
+                <ul class="text-sm text-amber-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Cleaner appearance</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Better breathability</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>More formal</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Precise fit required</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest loafer production in China. 
+                      Economical options. Standard quality. 
+                      Good for volume orders.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 200 pairs | Lead: 35-50 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangdong (Dongguan)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium loafer production. 
+                      Better finishing. Superior QC. 
+                      Luxury brand production.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 150 pairs | Lead: 45-60 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather</span>
+                    <span class="font-semibold text-gray-900">$8.00-22.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Welt</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole (Leather/Rubber)</span>
+                    <span class="font-semibold text-gray-900">$4.00-10.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining</span>
+                    <span class="font-semibold text-gray-900">$2.00-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Hardware (Tassels, etc.)</span>
+                    <span class="font-semibold text-gray-900">$1.00-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Goodyear)</span>
+                    <span class="font-bold text-primary-600">$25.00-55.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Cemented)</span>
+                    <span class="font-bold text-secondary-600">$18.00-38.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

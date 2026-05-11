@@ -1,0 +1,324 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Sailor Shoes', url: '/encyclopedia/boat-shoes/sailor/', description: 'Traditional maritime style', count: 12 },
+  { name: 'Leather Boat Shoes', url: '/encyclopedia/boat-shoes/leather/', description: 'Premium hand-stitched', count: 18 },
+  { name: 'Canvas Boat Shoes', url: '/encyclopedia/boat-shoes/canvas/', description: 'Summer casual options', count: 15 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Boat Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to boat shoes: hand-stitched moccasin construction, non-marking soles, water resistance, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Boat Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into boat shoe engineering: hand-stitched moccasin construction, 360° lacing system, non-marking siped soles, water resistance, and sourcing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Casual & Lifestyle', url: '/encyclopedia/sneakers/' },
+    { name: 'Boat Shoes', url: '/encyclopedia/boat-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Boat Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Created by Paul Sperry in 1935 to prevent slipping on wet boat decks, the boat shoe 
+          has evolved from functional marine footwear to a casual wardrobe essential. Discover 
+          the craftsmanship behind hand-stitched moccasin construction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Construction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            360° Moccasin Construction
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Boat shoes use true moccasin construction where the upper leather wraps 
+              completely around the foot. The distinctive 360° lacing system allows 
+              adjustment for wet feet that expand.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Moccasin Stitching</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Saddle Stitching</h4>
+                    <p class="text-gray-600 text-sm">
+                      Hand-stitched seam connecting vamp to quarter. 
+                      Waxed thread for water resistance. 
+                      Creates the characteristic "saddle" across foot.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800 mb-2">Side Seam</h4>
+                    <p class="text-gray-600 text-sm">
+                      Leather piece wraps from toe to heel. 
+                      Single seam or pieced panels. 
+                      Determines shoe width at ball.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">360° Lacing System</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Raw Edge Lacing</h4>
+                    <p class="text-gray-600 text-sm">
+                      Leather laces pass through raw leather edge holes. 
+                      Allows tightening even with swollen feet. 
+                      Signature Sperry feature.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Floating Laces</h4>
+                    <p class="text-gray-600 text-sm">
+                      Laces not attached to tongue. 
+                      Can be repositioned. 
+                      Authentic moccasin style.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-amber-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-amber-800 mb-3">Hand-Stitching vs Machine-Stitching</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-amber-700">
+                <div class="p-3 bg-white rounded-lg">
+                  <h4 class="font-medium mb-1">Hand-Stitched (Authentic)</h4>
+                  <ul class="text-xs space-y-1">
+                    <li>• Saddle stitch (two needles)</li>
+                    <li>• Waxed linen thread</li>
+                    <li>• 3-4 stitches per cm</li>
+                    <li>• Higher labor cost</li>
+                  </ul>
+                </div>
+                <div class="p-3 bg-white rounded-lg">
+                  <h4 class="font-medium mb-1">Machine-Stitched (Standard)</h4>
+                  <ul class="text-xs space-y-1">
+                    <li>• Single needle lockstitch</li>
+                    <li>• Polyester thread</li>
+                    <li>• Consistent stitch length</li>
+                    <li>• Cost-effective</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sole Technology */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Non-Marking Siped Soles
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Boat shoe soles feature siping—thin cuts that create channels for water 
+              to escape, providing grip on wet surfaces. The sole must be non-marking 
+              for boat decks.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-900 mb-3">Siping Patterns</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Horizontal sipes across sole</li>
+                  <li>• Perpendicular cuts at ball</li>
+                  <li>• Full-sole vs partial siping</li>
+                  <li>• 1-2mm cut depth</li>
+                </ul>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-900 mb-3">Materials</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Gum rubber (non-marking)</li>
+                  <li>• EVA compound</li>
+                  <li>• 55-65 Shore A hardness</li>
+                  <li>• Tan or white color</li>
+                </ul>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-xl">
+                <h3 class="font-semibold text-gray-900 mb-3">Performance</h3>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Wet coefficient: 0.5+</li>
+                  <li>• Deck grip without marking</li>
+                  <li>• Flexible, comfortable walk</li>
+                  <li>• Moderate durability</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-blue-800 mb-3">China Sole Suppliers</h3>
+              <p class="text-blue-700 text-sm">
+                Dongguan and Wenzhou factories have specialized siping equipment. 
+                Custom siping patterns require tooling. Minimum order 500 pairs for custom patterns. 
+                Standard Sperry-style siping available as catalog options.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Materials */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Upper Materials
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl">🐄</div>
+                <h3 class="text-lg font-semibold text-gray-900">Leather Boat Shoes</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Full-grain leather construction. Traditional and premium option. 
+                Leather conforms to foot over time.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Saltwater-resistant leather</li>
+                <li>• Molds to foot</li>
+                <li>• Requires breaking in</li>
+                <li>• Premium pricing</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">🧵</div>
+                <h3 class="text-lg font-semibold text-gray-900">Canvas Boat Shoes</h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Cotton canvas upper. Lighter, breathable, quick-drying. 
+                Perfect for summer and water activities.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Fast-drying</li>
+                <li>• Machine washable</li>
+                <li>• Casual summer style</li>
+                <li>• More affordable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Boat shoe specialist region. Moccasin construction expertise. 
+                      Hand-stitching capabilities. Competitive pricing.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 40-55 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Dongguan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium boat shoes. Premium leather sourcing. 
+                      Better QC standards. Luxury brand production.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 200 pairs | Lead: 45-60 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Leather/Canvas</span>
+                    <span class="font-semibold text-gray-900">$5.00-15.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Siped Outsole</span>
+                    <span class="font-semibold text-gray-900">$3.00-6.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Lining + Insole</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Hand-Stitching Labor</span>
+                    <span class="font-semibold text-gray-900">$3.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Laces + Hardware</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Leather)</span>
+                    <span class="font-bold text-primary-600">$18.00-40.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (Canvas)</span>
+                    <span class="font-bold text-secondary-600">$12.00-28.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

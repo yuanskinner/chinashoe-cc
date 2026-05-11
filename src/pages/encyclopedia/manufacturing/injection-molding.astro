@@ -1,0 +1,380 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import CategoryGrid from '../../../components/CategoryGrid.astro';
+
+const categories = [
+  { name: 'Direct Injection', url: '/encyclopedia/injection-molding/direct/', description: 'DIP process', count: 31 },
+  { name: 'PU Injection', url: '/encyclopedia/injection-molding/pu/', description: 'Polyurethane injection', count: 28 },
+  { name: 'TPR Molding', url: '/encyclopedia/injection-molding/tpr/', description: 'Thermoplastic rubber', count: 24 },
+  { name: 'EVA Molding', url: '/encyclopedia/injection-molding/eva/', description: 'EVA foam soles', count: 22 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Injection Molding Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to shoe injection molding: direct vulcanization, PU injection, TPR molding, machinery, and sourcing from Chinese factories.",
+};
+---
+
+<PageLayout
+  title="Injection Molding Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into shoe injection molding: direct injection, PU pouring, TPR molding, machinery specifications, and sourcing from Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Manufacturing', url: '/encyclopedia/manufacturing/' },
+    { name: 'Injection Molding', url: '/encyclopedia/manufacturing/injection-molding/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Injection Molding <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Injection molding revolutionized shoe manufacturing by enabling rapid, 
+          cost-effective production of complete soles and complete shoes. 
+          Understanding these processes helps optimize your sourcing strategy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Methods */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Injection Molding Methods
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🔄</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Direct Injection (DIP)</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Upper placed in mold, rubber injected directly. 
+                One-piece construction. 
+                Waterproof construction.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• No lasting required</li>
+                <li>• Production: 200-400 pairs/hr</li>
+                <li>• Cycle time: 8-15 seconds</li>
+              </ul>
+              <p class="text-primary-600 text-sm font-medium mt-4">Best for: Rain boots, safety boots</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">💧</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">PU Pouring</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Two-component PU injected into mold. 
+                Chemical reaction creates foam. 
+                Dual-density possible.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Lightweight soles</li>
+                <li>• Production: 100-200 pairs/hr</li>
+                <li>• Cycle time: 15-30 seconds</li>
+              </ul>
+              <p class="text-primary-600 text-sm font-medium mt-4">Best for: Athletic midsoles, work shoes</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">⚫</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">TPR Injection</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Thermoplastic rubber heated and injected. 
+                Recyclable material. 
+                Versatile design.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Easy color changes</li>
+                <li>• Production: 300-600 pairs/hr</li>
+                <li>• Cycle time: 5-10 seconds</li>
+              </ul>
+              <p class="text-primary-600 text-sm font-medium mt-4">Best for: Casual shoes, children's shoes</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-gray-200 rounded-xl flex items-center justify-center text-2xl mb-4">🧽</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">EVA Molding</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                EVA pellets melted and injected. 
+                Excellent cushioning. 
+                Midsole + outsole combo.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>• Low density foam</li>
+                <li>• Production: 150-300 pairs/hr</li>
+                <li>• Cycle time: 10-20 seconds</li>
+              </ul>
+              <p class="text-primary-600 text-sm font-medium mt-4">Best for: Running shoes, sneakers</p>
+            </div>
+          </div>
+        </div>
+
+        {/* DIP Process */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Direct Injection Process (DIP)
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              DIP is the most automated shoe manufacturing method. 
+              The upper and sole are fused in a single mold, 
+              eliminating separate lasting and attachment steps.
+            </p>
+            
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Process Steps</h3>
+              <div class="grid md:grid-cols-4 gap-4">
+                <div class="text-center p-4 bg-gray-50 rounded-xl">
+                  <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2 text-primary-600 font-bold">1</div>
+                  <p class="text-sm font-medium text-gray-800">Upper Preparation</p>
+                  <p class="text-xs text-gray-500">Lasted or unlasted upper</p>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-xl">
+                  <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2 text-primary-600 font-bold">2</div>
+                  <p class="text-sm font-medium text-gray-800">Mold Closing</p>
+                  <p class="text-xs text-gray-500">Hydraulic clamping</p>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-xl">
+                  <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2 text-primary-600 font-bold">3</div>
+                  <p class="text-sm font-medium text-gray-800">Injection</p>
+                  <p class="text-xs text-gray-500">Rubber/PU into mold</p>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-xl">
+                  <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2 text-primary-600 font-bold">4</div>
+                  <p class="text-sm font-medium text-gray-800">Demolding</p>
+                  <p class="text-xs text-gray-500">Finished shoe released</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="p-4 bg-green-50 rounded-xl">
+                <h3 class="font-semibold text-green-800 mb-3">Advantages</h3>
+                <ul class="text-sm text-green-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>No separate sole attachment</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Waterproof construction</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>High production efficiency</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Lower labor cost per pair</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="p-4 bg-amber-50 rounded-xl">
+                <h3 class="font-semibold text-amber-800 mb-3">Limitations</h3>
+                <ul class="text-sm text-amber-700 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>High tooling investment</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Limited upper material options</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Design complexity limited</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <span>Best for simple designs</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Machinery */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Machinery & Equipment
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Injection Machines</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Rotary DIP Machine</h4>
+                    <p class="text-gray-600 text-sm">
+                      Multiple stations rotate. 
+                      Continuous production. 
+                      High capacity.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">12-24 stations</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">Linear Machine</h4>
+                    <p class="text-gray-600 text-sm">
+                      Single station linear. 
+                      Lower investment. 
+                      Flexibility.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Simple operation</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-800">PU Pouring Machine</h4>
+                    <p class="text-gray-600 text-sm">
+                      Two-component mixing. 
+                      Precision dosing. 
+                      Automated mixing.
+                    </p>
+                    <p class="text-primary-600 text-sm font-medium mt-2">Metering pumps</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Tooling Specifications</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Mold Material</span>
+                    <span class="font-medium text-gray-800">Aluminum/Steel</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Typical Cavities</span>
+                    <span class="font-medium text-gray-800">1-2 pairs/mold</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Mold Cost (Aluminum)</span>
+                    <span class="font-medium text-gray-800">$3,000-8,000</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Mold Cost (Steel)</span>
+                    <span class="font-medium text-gray-800">$8,000-20,000</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Mold Lead Time</span>
+                    <span class="font-medium text-gray-800">30-60 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Dongguan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Largest injection facility cluster. 
+                      Sports shoes, casual shoes. 
+                      Modern equipment.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 500 pairs | Lead: 30-45 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Wenzhou, Zhejiang</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Rain boots, safety boots. 
+                      PVC/NR injection. 
+                      Traditional products.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 1,000 pairs | Lead: 25-40 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Quanzhou, Fujian</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Athletic shoes. 
+                      EVA/PU injection. 
+                      Sports brand suppliers.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 35-50 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Material (Rubber/PU)</span>
+                    <span class="font-semibold text-gray-900">$1.50-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Material</span>
+                    <span class="font-semibold text-gray-900">$3.00-12.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Injection Labor</span>
+                    <span class="font-semibold text-gray-900">$0.50-1.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Finishing</span>
+                    <span class="font-semibold text-gray-900">$0.30-0.80</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (DIP)</span>
+                    <span class="font-bold text-primary-600">$6.00-20.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-secondary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB (PU)</span>
+                    <span class="font-bold text-secondary-600">$8.00-28.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>

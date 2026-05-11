@@ -1,199 +1,477 @@
 ---
-import PageLayout from '@layouts/PageLayout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
-const features = [
-  {
-    title: 'Basketball Shoe Anatomy',
-    description: 'Understanding the key components: ankle support, cushioning systems, and outsole traction patterns.',
-    image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop',
-    href: '/encyclopedia/basketball-shoes/anatomy/',
-  },
-  {
-    title: 'Cushioning Technologies',
-    description: 'Air, foam, and hybrid cushioning systems used in modern basketball footwear.',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
-    href: '/encyclopedia/basketball-shoes/cushioning/',
-  },
-  {
-    title: 'High-Top vs Low-Top',
-    description: 'Ankle support versus mobility: choosing the right silhouette for your playing style.',
-    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
-    href: '/encyclopedia/basketball-shoes/silhouettes/',
-  },
-  {
-    title: 'Court Surfaces',
-    description: 'Indoor, outdoor, and multi-surface basketball shoe outsoles explained.',
-    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop',
-    href: '/encyclopedia/basketball-shoes/court-types/',
-  },
+
+const categories = [
+  { name: 'High-Top Basketball Shoes', url: '/encyclopedia/basketball-shoes/high-top/', description: 'Enhanced ankle support design', count: 42 },
+  { name: 'Low-Top Basketball Shoes', url: '/encyclopedia/basketball-shoes/low-top/', description: 'Lightweight and flexible', count: 38 },
+  { name: 'Mid-Top Basketball Shoes', url: '/encyclopedia/basketball-shoes/mid-top/', description: 'Balanced support and mobility', count: 28 },
+  { name: 'Basketball Shoe Materials', url: '/encyclopedia/basketball-shoes/materials/', description: 'Leather, synthetic, and knit', count: 18 },
+  { name: 'Basketball Shoe Cushioning', url: '/encyclopedia/basketball-shoes/cushioning/', description: 'Air, foam, and plate technology', count: 15 },
+  { name: 'NBA Performance Standards', url: '/encyclopedia/basketball-shoes/nba-standards/', description: 'League regulations and testing', count: 8 },
 ];
 
-const relatedCategories = [
-  { name: 'Running Shoes', href: '/encyclopedia/running-shoes/', count: 156 },
-  { name: 'Training Shoes', href: '/encyclopedia/training-shoes/', count: 67 },
-  { name: 'Sneakers', href: '/encyclopedia/sneakers/', count: 98 },
-];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Basketball Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete technical guide to basketball shoes: cushioning systems, upper materials, outsole technology, and professional sourcing from Chinese manufacturers.",
+  "mainEntity": {
+    "@type": "SportsActivityProfile",
+    "name": "Basketball Shoe Manufacturing",
+    "sport": "Basketball"
+  }
+};
 ---
 
 <PageLayout
-  title="Basketball Shoes Guide"
-  description="Complete guide to basketball shoes: from high-top ankle support to low-top mobility, cushioning technologies, and how to choose the right court shoes."
+  title="Basketball Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into basketball shoe construction: cushioning technology (Air, Zoom, Foam), upper materials (knit, leather, synthetic), outsole traction patterns, and sourcing from Chinese factories."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Athletic & Sports', url: '/encyclopedia/running-shoes/' },
     { name: 'Basketball Shoes', url: '/encyclopedia/basketball-shoes/' },
   ]}
-  sidebarItems={[
-    {
-      title: 'Basketball Shoes',
-      links: [
-        { label: 'Overview', href: '/encyclopedia/basketball-shoes/', active: true },
-        { label: 'Anatomy', href: '/encyclopedia/basketball-shoes/anatomy/' },
-        { label: 'Cushioning', href: '/encyclopedia/basketball-shoes/cushioning/' },
-        { label: 'Silhouettes', href: '/encyclopedia/basketball-shoes/silhouettes/' },
-        { label: 'Court Types', href: '/encyclopedia/basketball-shoes/court-types/' },
-      ],
-    },
-    {
-      title: 'Athletic Categories',
-      links: [
-        { label: 'Running Shoes', href: '/encyclopedia/running-shoes/' },
-        { label: 'Soccer Cleats', href: '/encyclopedia/soccer-cleats/' },
-        { label: 'Training Shoes', href: '/encyclopedia/training-shoes/' },
-        { label: 'Sneakers', href: '/encyclopedia/sneakers/' },
-      ],
-    },
-  ]}
+  structuredData={structuredData}
 >
-  <div class="mb-8">
-    <span class="badge-primary mb-2">Athletic & Sports</span>
-    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Basketball Shoes Guide
-    </h1>
-    <p class="text-lg text-neutral-600">
-      Everything you need to know about basketball shoes: from high-top ankle support to advanced cushioning technologies. Find the perfect basketball footwear for your game.
-    </p>
-  </div>
-
-  <!-- Featured Image -->
-  <div class="rounded-xl overflow-hidden mb-8">
-    <img
-      src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=400&fit=crop"
-      alt="Basketball Shoes Collection"
-      class="w-full h-64 md:h-80 object-cover"
-    />
-  </div>
-
-  <!-- Introduction Content -->
-  <div class="prose prose-lg max-w-none mb-12">
-    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Basketball Shoes</h2>
-    
-    <p class="text-neutral-600 mb-4">
-      Basketball shoes are specialized athletic footwear designed to provide the support, stability, and performance characteristics needed for the demanding movements in basketball. Unlike regular sneakers, basketball shoes are engineered with specific features that address the unique physical requirements of the sport.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      The sport of basketball involves frequent jumps, lateral movements, quick direction changes, and explosive acceleration. These movements place significant stress on the feet, ankles, and lower legs, making proper footwear essential for both performance enhancement and injury prevention. Modern basketball shoes incorporate advanced materials and technologies to address these demands while providing comfort during extended wear.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Key Features of Basketball Shoes</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Ankle Support:</strong> Perhaps the most distinguishing feature of basketball shoes is their ankle support system. High-top basketball shoes extend above the ankle to provide stability and help prevent ankle rolls, which are common injuries in basketball. Mid-top and low-top options offer increasing mobility at the expense of some ankle protection, catering to different player preferences and playing styles.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Cushioning Systems:</strong> Modern basketball shoes feature sophisticated cushioning systems that absorb impact forces during jumps and provide energy return for explosive movements. Common technologies include air cushioning (pressurized air units), foam cushioning (EVA, PU, or proprietary compounds), and hybrid systems that combine multiple technologies for optimal performance.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Traction Outsoles:</strong> The outsole patterns on basketball shoes are specifically designed for indoor court surfaces, typically featuring herringbone or pivot circle patterns that provide excellent grip on hardwood floors. Some models include outdoor-specific outsoles with more durable rubber compounds for playing on concrete and asphalt surfaces.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Upper Construction:</strong> Basketball shoe uppers are constructed from various materials including leather, synthetic leather, mesh, and knit textiles. Each material offers different benefits in terms of support, breathability, flexibility, and durability. Premium leather uppers provide excellent support and durability but may require a break-in period, while mesh and knit uppers offer superior breathability and a sock-like fit.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Choosing the Right Basketball Shoes</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Selecting the appropriate basketball shoes depends on several factors including your playing position, style of play, foot type, and personal preferences. Guards who prioritize speed and quickness may prefer lighter, low-top shoes with minimal break-in requirements. Centers and power players who need more support and cushioning for landing jumps may benefit from high-top models with maximum cushioning.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      For B2B buyers sourcing basketball shoes, understanding these technical requirements is essential for selecting the right manufacturer and product specifications. Chinese manufacturers like those in Putian and Dongguan have established expertise in basketball shoe production, with capabilities ranging from basic canvas basketball shoes to premium leather models with advanced cushioning systems.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Manufacturing Considerations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Chinese basketball shoe manufacturers offer various production capabilities including OEM (Original Equipment Manufacturing) and ODM (Original Design Manufacturing) services. When sourcing basketball shoes from China, key considerations include material quality, construction methods (cemented, vulcanized, or hybrid), cushioning system specifications, and quality control procedures.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Most basketball shoes are produced using cemented construction, where the upper is bonded to the midsole and outsole using industrial adhesives. This method allows for precise control over cushioning placement and provides a consistent, durable bond. Quality manufacturers implement rigorous testing protocols to ensure shoes can withstand the demands of basketball performance.
-    </p>
-  </div>
-
-  <!-- Key Sections -->
-  <div class="grid md:grid-cols-3 gap-8 mb-12">
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🏀</div>
-      <h3 class="font-semibold text-lg mb-2">For Guards</h3>
-      <p class="text-neutral-600 text-sm">
-        Lightweight, low-profile shoes designed for speed, agility, and quick direction changes.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">💪</div>
-      <h3 class="font-semibold text-lg mb-2">For Forwards</h3>
-      <p class="text-neutral-600 text-sm">
-        Versatile shoes balancing support, cushioning, and responsiveness for all-around performance.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">🔒</div>
-      <h3 class="font-semibold text-lg mb-2">For Centers</h3>
-      <p class="text-neutral-600 text-sm">
-        Maximum cushioning and support for players who frequently battle for position and jump.
-      </p>
-    </div>
-  </div>
-
-  <!-- Article Grid -->
-  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-    {features.map(article => (
-      <a href={article.href} class="card group overflow-hidden p-0">
-        <div class="aspect-video overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-sm text-neutral-600">
-            {article.description}
-          </p>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Basketball Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          From Nike Air to Anta'sKT series, explore the complete technical ecosystem of basketball footwear. 
+          Understand cushioning chemistry, upper engineering, and how Chinese manufacturers produce 
+          performance basketball shoes at scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Cushioning Technology Section */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Cushioning Technology Revolution
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Air Cushioning Systems</h3>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-gray-50 rounded-xl p-6">
+                <h4 class="font-semibold text-gray-900 mb-3">Nike Air</h4>
+                <p class="text-gray-600 text-sm">
+                  Pressurized Nike Air units integrated into heel and forefoot. 
+                  Pressure typically 20-30 PSI for optimal energy return. 
+                  Chinese factories like PT Santana produce OEM Air units.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6">
+                <h4 class="font-semibold text-gray-900 mb-3">Zoom Air</h4>
+                <p class="text-gray-600 text-sm">
+                  Tensile fiber-stabilized air cushion with responsive feel. 
+                  Thinner profile for lower offset. Used in Kobe and Kyrie lines. 
+                  Manufacturing requires precise pressure welding.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-6">
+                <h4 class="font-semibold text-gray-900 mb-3">React Foam</h4>
+                <p class="text-gray-600 text-sm">
+                  Nike's proprietary Cushlon foam with added resilience. 
+                  Density 280-320 kg/m³. Longer lasting than traditional EVA. 
+                  Anta, Li-Ning use similar nitrogen-infused foam technology.
+                </p>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Foam Midsole Materials</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-primary-500 pl-4">
+                <h4 class="font-semibold text-gray-900">EVA (Ethylene-Vinyl Acetate)</h4>
+                <p class="text-gray-600 text-sm mt-1">
+                  Most common basketball shoe midsole. Density 180-280 kg/m³. 
+                  Cost-effective but compresses over time. Typical compression set 35-50%. 
+                  Chinese factories produce medical-grade EVA with consistent quality.
+                </p>
+              </div>
+              <div class="border-l-4 border-secondary-500 pl-4">
+                <h4 class="font-semibold text-gray-900">PU (Polyurethane) Foam</h4>
+                <p class="text-gray-600 text-sm mt-1">
+                  Higher density (400-600 kg/m³) and better durability than EVA. 
+                  Used in premium lines. Excellent energy return. 
+                  Typical rebound rate 55-65%. Xtep and Peak use PU midsoles in professional lines.
+                </p>
+              </div>
+              <div class="border-l-4 border-accent-500 pl-4">
+                <h4 class="font-semibold text-gray-900">TPU Pebax Technology</h4>
+                <p class="text-gray-600 text-sm mt-1">
+                  Lightweight thermoplastic elastomer. Density 15-20% lower than EVA. 
+                  Used in carbon plate and full-length plate designs. 
+                  Anta's Nitrogen technology uses similar Pebax-based foam.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Upper Materials Section */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Upper Materials Engineering
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Performance Knit</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Engineered warp-knit or weft-knit fabrics with zones of varying elasticity. 
+                  Single-layer construction reduces weight by 15-25% vs traditional materials.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Flyknit (Nike), Primeknit (Adidas), Engineered Mesh (Jordan)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Denier: 50D-150D polyester or nylon yarn</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Breathability: 800-1200 g/m²/24hr (MOVD method)</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Synthetic Leather</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  PU-coated textiles offer leather-like aesthetics with better consistency 
+                  and 20-30% cost reduction. Premium versions use microfiber base.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Thickness: 0.8mm-1.8mm for basketball uppers</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Martindale abrasion: 50,000+ cycles</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>PU coating weight: 80-150 g/m²</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-gray-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Material Selection Matrix</h3>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-200">
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Material</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Weight (g/m²)</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Durability</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Cost Level</th>
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">Applications</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600">
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4">Premium Leather</td>
+                      <td class="py-3 px-4">800-1200</td>
+                      <td class="py-3 px-4">Excellent</td>
+                      <td class="py-3 px-4">High</td>
+                      <td class="py-3 px-4">Classic retros, signature editions</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4">Microfiber Synthetic</td>
+                      <td class="py-3 px-4">500-700</td>
+                      <td class="py-3 px-4">Very Good</td>
+                      <td class="py-3 px-4">Medium-High</td>
+                      <td class="py-3 px-4">Performance lines, team shoes</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                      <td class="py-3 px-4">Engineered Knit</td>
+                      <td class="py-3 px-4">200-350</td>
+                      <td class="py-3 px-4">Good</td>
+                      <td class="py-3 px-4">Medium</td>
+                      <td class="py-3 px-4">Lightweight performance, daily wear</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4">Mesh + TPU</td>
+                      <td class="py-3 px-4">300-450</td>
+                      <td class="py-3 px-4">Good</td>
+                      <td class="py-3 px-4">Medium-Low</td>
+                      <td class="py-3 px-4">Entry-level, lifestyle</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Outsole Technology */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Outsole Traction Systems
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-6">
+              Basketball shoe outsoles require multi-directional traction for quick cuts, 
+              explosive stops, and lateral movements. Pattern design and rubber compound 
+              are critical for performance.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Traction Patterns</h3>
+                <ul class="space-y-3 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Herringbone:</strong> Classic indoor court pattern. 4-6mm depth optimal.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-secondary-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Multi-Directional Pivot:</strong> Radial patterns for 360° movement.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-accent-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Hexagonal:</strong> Modern pattern with independent traction nodes.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Circle Pivot:</strong> Central pivot point for explosive direction changes.</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Rubber Compounds</h3>
+                <ul class="space-y-3 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Solid Rubber:</strong> Durometer 55-65A. Durable for indoor wood courts.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-secondary-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>XDR Rubber:</strong> Extended Durability Rubber. For outdoor concrete/asphalt.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-accent-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Gum Rubber:</strong> Natural rubber with superior grip on wood. 40-50A hardness.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-2 h-2 bg-gray-500 rounded-full mt-2 shrink-0"></span>
+                    <span><strong>Translucent Rubber:</strong> Carbon-seeded for aesthetic appeal. 50-60A.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-6 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">China Manufacturing Advantage</h3>
+              <p class="text-gray-600 text-sm">
+                Chinese rubber compound factories in Guangzhou, Putian, and Jinjiang produce 
+                customized formulas for basketball outsoles. Key suppliers like Dongguan Lisheng 
+                and Fujian Sanshan can adjust durometer, abrasion resistance (DIN 53516), 
+                and color within 5% tolerance. Tooling for outsole molds typically 15-25 days 
+                with CNC-machined aluminum or steel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Ankle Support Systems */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Ankle Support Architecture
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-2xl mb-4">👟</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">High-Top Design</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Ankle collar height above malleolus (ankle bone). 
+                Provides maximum support but restricts mobility. 
+                Preferred for power players and post positions.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>Collar height: 140-160mm</li>
+                <li>Typical offset: 12-16mm</li>
+                <li>Weight addition: +30-50g per shoe</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center text-2xl mb-4">🏃</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Mid-Top Design</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Collar at ankle bone level. Balanced support and flexibility. 
+                Most versatile profile for all-court players. 
+                Dominates modern basketball shoe market.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>Collar height: 100-125mm</li>
+                <li>Typical offset: 8-12mm</li>
+                <li>Weight addition: +15-25g per shoe</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+              <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center text-2xl mb-4">⚡</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Low-Top Design</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Below ankle bone for maximum freedom. 
+                Requires strong ankle strength. 
+                Popular for guards and speed-focused players.
+              </p>
+              <ul class="text-xs text-gray-500 space-y-1">
+                <li>Collar height: 70-95mm</li>
+                <li>Typical offset: 4-8mm</li>
+                <li>Weight addition: Baseline</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">5</span>
+            Sourcing from Chinese Manufacturers
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Major Manufacturing Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Fujian Province (Putian)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Nike, Adidas, Anta OEM base. 500+ factories. 
+                      Advanced injection molding capability. 
+                      Minimum order: 500-1000 pairs/color.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Guangdong Province (Guangzhou, Dongguan)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Diverse sports shoe production. Quick-turn capability. 
+                      Good for small batch customization. 
+                      Minimum order: 300-500 pairs/color.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Zhejiang Province (Wenzhou)</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Traditional shoemaking hub. Cost-competitive for mid-tier. 
+                      Strong in leather uppers. 
+                      Minimum order: 200-500 pairs/color.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper Materials</span>
+                    <span class="font-semibold text-gray-900">$4.00-8.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Midsole (EVA/PU)</span>
+                    <span class="font-semibold text-gray-900">$2.50-5.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole Mold + Rubber</span>
+                    <span class="font-semibold text-gray-900">$2.00-4.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly (Lasting + Bonding)</span>
+                    <span class="font-semibold text-gray-900">$1.50-3.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Laces + Packaging</span>
+                    <span class="font-semibold text-gray-900">$1.00-2.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB China</span>
+                    <span class="font-bold text-primary-600">$11.00-23.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-green-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-green-800 mb-3">Quality Verification Checklist</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <ul class="space-y-2 text-green-700">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Midsole compression test (ASTM D395)</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Outsole adhesion peel test (ASTM D903)</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Upper seam strength (ASTM D1683)</span>
+                  </li>
+                </ul>
+                <ul class="space-y-2 text-green-700">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Color matching to approval sample (ΔE < 1.5)</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Physical dimension verification</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Flexing test (SATRA TM92)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
       </a>
     ))}
   </div>
+        </div>
 
-  <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
+      </div>
     </div>
-  </div>
+  </section>
 </PageLayout>

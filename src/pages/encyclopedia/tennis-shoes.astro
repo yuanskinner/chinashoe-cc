@@ -1,0 +1,466 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+
+const categories = [
+  { name: 'Clay Court Shoes', url: '/encyclopedia/tennis-shoes/clay-court/', description: 'Optimized for red clay surfaces', count: 28 },
+  { name: 'Hard Court Shoes', url: '/encyclopedia/tennis-shoes/hard-court/', description: 'Cushioned for concrete/asphalt', count: 35 },
+  { name: 'Grass Court Shoes', url: '/encyclopedia/tennis-shoes/grass-court/', description: 'Traditional Wimbledon style', count: 15 },
+  { name: 'Court-Specific Studs', url: '/encyclopedia/tennis-shoes/studs/', description: 'Pig ear, herringbone patterns', count: 18 },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Tennis Shoes Encyclopedia - ChinaShoe.cc",
+  "description": "Complete guide to tennis shoes: court-specific outsoles, lateral support engineering, cushioning systems, and sourcing from Chinese manufacturers.",
+};
+---
+
+<PageLayout
+  title="Tennis Shoes Manufacturing Guide - ChinaShoe.cc"
+  description="Deep dive into tennis shoe engineering: court-specific traction (clay, hard, grass), lateral stability systems,Durable toe caps, pivot point design, and manufacturing from Chinese factories."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Athletic & Sports', url: '/encyclopedia/running-shoes/' },
+    { name: 'Tennis Shoes', url: '/encyclopedia/tennis-shoes/' },
+  ]}
+  structuredData={structuredData}
+>
+  <section class="py-12 bg-gradient-to-b from-primary-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium mb-6">
+          <span>Professional Guide</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Tennis Shoes Manufacturing <span class="text-primary-600">Encyclopedia</span>
+        </h1>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Tennis is unique among sports for its extreme lateral demands. Unlike running or soccer, 
+          tennis players spend 80% of movement in sideways motion. Discover how Chinese manufacturers 
+          engineer shoes for clay, hard court, and grass surfaces.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        {/* Court-Specific Traction */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">1</span>
+            Court-Specific Outsole Systems
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Tennis shoe outsoles must address three distinct surfaces, each requiring different 
+              traction strategies. The wrong outsole can reduce player performance by 15-20% and 
+              increase injury risk.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              <div class="bg-gradient-to-b from-orange-50 to-white rounded-xl p-6 border border-orange-200">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-3xl">🏟️</div>
+                  <h3 class="font-semibold text-gray-900">Clay Court</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Red clay requires "push-and-release" traction. Deep, widely-spaced lugs 
+                  penetrate surface and release cleanly.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                    <span>Full "pizza" herringbone pattern</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                    <span>Lug depth: 4-6mm</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                    <span>Wide spacing for clay release</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                    <span>Smooth heel drag zone</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-gray-100 to-white rounded-xl p-6 border border-gray-300">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-3xl">🏢</div>
+                  <h3 class="font-semibold text-gray-900">Hard Court</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Concrete and acrylic demand durable, multi-directional traction. 
+                  Non-marking compounds essential for indoor facilities.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                    <span>Modified herringbone pattern</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                    <span>Lug depth: 2-3mm</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                    <span>Non-marking rubber mandatory</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                    <span>Reinforced toe bumper</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-gradient-to-b from-green-50 to-white rounded-xl p-6 border border-green-200">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-3xl">🌿</div>
+                  <h3 class="font-semibold text-gray-900">Grass Court</h3>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Natural grass and Wimbledon-style surfaces need "studdier" traction. 
+                  Nylon "pig ears" are traditional but modern alternatives exist.
+                </p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                    <span>"Pig ear" or "dimple" pattern</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                    <span>Soft rubber compounds</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                    <span>Minimal lug definition</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                    <span>Sliding capability important</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Pivot Point Engineering</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Every quality tennis shoe includes a pivot point under the forefoot—typically 
+                2-3mm raised circle or hexagon. This allows 360° rotation without foot strain.
+              </p>
+              <div class="grid md:grid-cols-3 gap-4">
+                <div class="text-center p-4 bg-white rounded-lg">
+                  <div class="text-2xl mb-2">📍</div>
+                  <h4 class="font-medium text-gray-800 text-sm">Position</h4>
+                  <p class="text-gray-500 text-xs">Under ball of foot, slightly toward arch</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg">
+                  <div class="text-2xl mb-2">⭕</div>
+                  <h4 class="font-medium text-gray-800 text-sm">Diameter</h4>
+                  <p class="text-gray-500 text-xs">12-18mm typical</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg">
+                  <div class="text-2xl mb-2">📏</div>
+                  <h4 class="font-medium text-gray-800 text-sm">Height</h4>
+                  <p class="text-gray-500 text-xs">2-3mm raised from outsole</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Lateral Stability */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center text-secondary-600">2</span>
+            Lateral Support Architecture
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p class="text-gray-600 mb-8">
+              Tennis generates more lateral force than any other sport shoe application. 
+              Proper lateral containment prevents ankle rolls and metatarsal stress.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Lateral Support Components</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-primary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Heel Counter</h4>
+                    <p class="text-gray-600 text-sm">
+                      Rigid heel cup prevents calcaneal eversion. Should be 3-4mm thick TPU or PE. 
+                      Minimum 35 Shore D hardness. Extends from heel to midfoot.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-secondary-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Medial Post</h4>
+                    <p class="text-gray-600 text-sm">
+                      Dual-density midsole or TPU posting on inside edge. 
+                      Prevents overpronation during lateral cuts. 
+                      Density 55-65 Shore A for support zone.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-accent-500 pl-4">
+                    <h4 class="font-semibold text-gray-800">Lateral Buttress</h4>
+                    <p class="text-gray-600 text-sm">
+                      External TPU or rigid synthetic overlay. 
+                      Secures foot during aggressive lateral movements. 
+                      Common in Asics Court FF, Nike Air Zoom UltraFly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Upper Construction</h3>
+                <div class="space-y-4">
+                  <div class="border-l-4 border-gray-300 pl-4">
+                    <h4 class="font-semibold text-gray-800">Durable Toe Cap</h4>
+                    <p class="text-gray-600 text-sm">
+                      Reinforced toe box essential for dragging toes. 
+                      TPU or rubberized material, 1.5-2mm thickness. 
+                      Abrasion resistance 50,000+ Martindale cycles.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-gray-300 pl-4">
+                    <h4 class="font-semibold text-gray-800">Lateral Mesh Panels</h4>
+                    <p class="text-gray-600 text-sm">
+                      Breathable mesh on lateral side where lateral forces are highest. 
+                      Usually 3D spacer mesh for ventilation. 
+                      Reinforced with TPU overlays.
+                    </p>
+                  </div>
+                  <div class="border-l-4 border-gray-300 pl-4">
+                    <h4 class="font-semibold text-gray-800">Integrated Lacing System</h4>
+                    <p class="text-gray-600 text-sm">
+                      Offset lateral lacing for even pressure distribution. 
+                      5-6 eyelets standard. 
+                      Flat laces reduce pressure points during slides.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-blue-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-blue-800 mb-4">Durability Comparison by Surface</h3>
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-blue-200">
+                    <th class="text-left py-2 px-3 font-medium text-blue-700">Surface</th>
+                    <th class="text-left py-2 px-3 font-medium text-blue-700">Outsole Wear</th>
+                    <th class="text-left py-2 px-3 font-medium text-blue-700">Upper Stress</th>
+                    <th class="text-left py-2 px-3 font-medium text-blue-700">Lifespan (Hours)</th>
+                  </tr>
+                </thead>
+                <tbody class="text-blue-700">
+                  <tr class="border-b border-blue-100">
+                    <td class="py-2 px-3">Hard Court</td>
+                    <td class="py-2 px-3">High (abrasive)</td>
+                    <td class="py-2 px-3">High (lateral)</td>
+                    <td class="py-2 px-3">40-60 hours</td>
+                  </tr>
+                  <tr class="border-b border-blue-100">
+                    <td class="py-2 px-3">Clay Court</td>
+                    <td class="py-2 px-3">Low</td>
+                    <td class="py-2 px-3">Moderate</td>
+                    <td class="py-2 px-3">60-100 hours</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 px-3">Grass Court</td>
+                    <td class="py-2 px-3">Low</td>
+                    <td class="py-2 px-3">Low</td>
+                    <td class="py-2 px-3">80-120 hours</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Cushioning Systems */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600">3</span>
+            Tennis-Specific Cushioning
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Court Impact Demands</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  Tennis involves repetitive impact on hard surfaces. A tennis shoe absorbs 
+                  approximately 1.5-2x the impact forces of a running shoe per stride.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-600">
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-xs font-bold shrink-0">1</span>
+                    <span>Forefoot impacts during serving (up to 3x body weight)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-xs font-bold shrink-0">2</span>
+                    <span>Heel strikes during approach and recovery</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-xs font-bold shrink-0">3</span>
+                    <span>Lateral impacts during side-to-side movement</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 text-xs font-bold shrink-0">4</span>
+                    <span>Quick direction changes with impact absorption</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Recommended Midsole Setup</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-medium text-gray-800 text-sm mb-2">Heel Stack</h4>
+                    <p class="text-gray-600 text-xs">
+                      20-28mm heel height with dual-density foam or air unit. 
+                      Firmer lateral side, softer medial for stability.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-medium text-gray-800 text-sm mb-2">Forefoot Stack</h4>
+                    <p class="text-gray-600 text-xs">
+                      12-18mm with responsive foam. Zoom Air or similar tech common in premium models.
+                    </p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-medium text-gray-800 text-sm mb-2">Drop/Offset</h4>
+                    <p class="text-gray-600 text-xs">
+                      4-8mm typical. Lower drop for forward-leaning tennis stance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sourcing Guide */}
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">4</span>
+            Manufacturing & Sourcing
+          </h2>
+          
+          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">China Production Regions</h3>
+                <div class="space-y-4">
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Dongguan, Guangdong</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Premium tennis shoe OEM base. Nike, Adidas, Asics production. 
+                      Advanced lateral support engineering. Strong QC systems.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 500 pairs | Lead: 45-55 days</p>
+                  </div>
+                  <div class="p-4 bg-gray-50 rounded-xl">
+                    <h4 class="font-semibold text-gray-900 text-sm">Xiamen, Fujian</h4>
+                    <p class="text-gray-600 text-xs mt-1">
+                      Court shoe specialization including tennis. 
+                      Good for court-specific outsole tooling. 
+                      Cost-competitive for mid-tier.
+                    </p>
+                    <p class="text-primary-600 text-xs font-medium mt-2">MOQ: 300 pairs | Lead: 40-50 days</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Cost Breakdown (Per Pair)</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Upper (mesh/synthetic)</span>
+                    <span class="font-semibold text-gray-900">$3.00-5.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Midsole (dual-density EVA)</span>
+                    <span class="font-semibold text-gray-900">$2.50-4.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Outsole (court-specific)</span>
+                    <span class="font-semibold text-gray-900">$2.50-4.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Reinforced Toe Cap</span>
+                    <span class="font-semibold text-gray-900">$0.50-1.00</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Insole + Laces</span>
+                    <span class="font-semibold text-gray-900">$1.00-1.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span class="text-gray-600 text-sm">Assembly</span>
+                    <span class="font-semibold text-gray-900">$1.50-2.50</span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 bg-primary-50 px-4 rounded-lg">
+                    <span class="font-semibold text-gray-900">Total FOB China</span>
+                    <span class="font-bold text-primary-600">$11.00-19.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-green-50 rounded-xl">
+              <h3 class="text-lg font-semibold text-green-800 mb-3">Quality Specifications</h3>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-green-700">
+                <div>
+                  <h4 class="font-medium mb-2">Outsole Requirements</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• Non-marking compound (ASTM F2350)</li>
+                    <li>• Abrasion resistance: DIN 53516 < 200mm³</li>
+                    <li>• Pivot point integrity after 10,000 cycles</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium mb-2">Upper Requirements</h4>
+                  <ul class="space-y-1 text-xs">
+                    <li>• Toe cap abrasion: 50,000+ Martindale</li>
+                    <li>• Seam strength: > 50N/cm</li>
+                    <li>• Lateral overlay delamination resistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Categories */}
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Categories</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {categories.map(cat => (
+      <a href={cat.url} class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+          {cat.name}
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{cat.description}</p>
+        <span class="text-primary-600 text-sm font-medium">{cat.count} articles</span>
+      </a>
+    ))}
+  </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</PageLayout>
