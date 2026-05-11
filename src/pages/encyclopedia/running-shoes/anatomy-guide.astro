@@ -1,0 +1,558 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+const title = "Running Shoes Anatomy Guide: Complete Breakdown of Every Component";
+const description = "Deep-dive into the anatomy of running shoes — from outsole rubber compounds to midsole foam technologies, upper construction methods, and heel counter engineering. Understand how each component affects performance, comfort, and durability for informed purchasing decisions.";
+const keywords = "running shoe anatomy, running shoe components, midsole technology, outsole rubber, heel counter, shoe upper construction, running shoe guide, cushioning system, pronation support";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <!-- Breadcrumb -->
+  <nav class="mb-8 text-sm text-gray-500">
+    <a href="/" class="hover:text-primary-600">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/encyclopedia/" class="hover:text-primary-600">Encyclopedia</a>
+    <span class="mx-2">/</span>
+    <a href="/encyclopedia/running-shoes/" class="hover:text-primary-600">Running Shoes</a>
+    <span class="mx-2">/</span>
+    <span class="text-gray-900 font-medium">Anatomy Guide</span>
+  </nav>
+
+  <!-- Header -->
+  <header class="mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Running Shoes Anatomy Guide</h1>
+    <p class="text-xl text-gray-600 leading-relaxed">A complete breakdown of every component in a running shoe — from <strong>outsole rubber</strong> to <strong>midsole foam</strong>, <strong>upper construction</strong> to <strong>heel counter engineering</strong>. Understand what makes a great running shoe.</p>
+    <div class="mt-6 flex items-center gap-4 text-sm text-gray-500">
+      <span>Updated: June 2025</span>
+      <span>•</span>
+      <span>15 min read</span>
+      <span>•</span>
+      <span>By ChinaShoe Editorial Team</span>
+    </div>
+  </header>
+
+  <!-- Mermaid: Shoe Anatomy Overview -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Running Shoe Component Map</h2>
+    <p class="text-gray-600 mb-6">Every running shoe consists of <strong>three main structural layers</strong> — the <strong>upper</strong>, <strong>midsole</strong>, and <strong>outsole</strong> — plus critical sub-components that determine fit, cushioning, and traction. The diagram below maps the complete anatomy:</p>
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    A[Running Shoe] --> B[Upper]
+    A --> C[Midsole]
+    A --> D[Outsole]
+    
+    B --> B1[Toe Box]
+    B --> B2[Vamp / Midfoot]
+    B --> B3[Heel Counter]
+    B --> B4[Tongue]
+    B --> B5[Collar]
+    B --> B6[Lacing System]
+    
+    B2 --> B2a[Mesh / Knit]
+    B2 --> B2b[Overlays / Prints]
+    B2 --> B2c[Internal Heel Cage]
+    
+    C --> C1[Cushioning Foam]
+    C --> C2[Stability Post]
+    C --> C3[Shank / Torsion System]
+    C --> C4[Footbed / Insole]
+    
+    C1 --> C1a[EVA Foam]
+    C1 --> C1b[PU Foam]
+    C1 --> C1c[PEBA-based]
+    C1 --> C1d[TPE Blends]
+    
+    D --> D1[Forefoot Outsole]
+    D --> D2[Heel Outsole]
+    D --> D3[Flex Grooves]
+    D --> D4[Rubber Compound]
+    
+    D4 --> D4a[Carbon Rubber]
+    D4 --> D4b[Blown Rubber]
+    D4 --> D4c[Waffle / Lug Pattern]
+
+    style A fill:#B91C1C,color:#fff
+    style B fill:#1E40AF,color:#fff
+    style C fill:#047857,color:#fff
+    style D fill:#92400E,color:#fff
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Outsole -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">1. Outsole: The Foundation of Traction & Durability</h2>
+    
+    <p class="text-gray-600 mb-6">The <strong>outsole</strong> is the bottom layer of the running shoe that makes direct contact with the ground. It determines <strong>traction</strong>, <strong>durability</strong>, and <strong>ground feel</strong>. The choice of <strong>rubber compound</strong> and <strong>tread pattern</strong> directly impacts a runner's performance across different surfaces.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.1 Rubber Compound Types</h3>
+    
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="bg-primary-600 text-white">
+          <tr>
+            <th class="px-6 py-3 text-left">Rubber Type</th>
+            <th class="px-6 py-3 text-left">Hardness (Shore A)</th>
+            <th class="px-6 py-3 text-left">Durability</th>
+            <th class="px-6 py-3 text-left">Grip</th>
+            <th class="px-6 py-3 text-left">Weight</th>
+            <th class="px-6 py-3 text-left">Best For</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium"><strong>Carbon Rubber (BRS 1000)</strong></td>
+            <td class="px-6 py-4">65-75</td>
+            <td class="px-6 py-4 text-green-600 font-semibold">★★★★★</td>
+            <td class="px-6 py-4 text-yellow-600">★★★☆☆</td>
+            <td class="px-6 py-4 text-red-600">Heavy</td>
+            <td class="px-6 py-4">Heel strike zone, road running</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium"><strong>Blown Rubber</strong></td>
+            <td class="px-6 py-4">45-55</td>
+            <td class="px-6 py-4 text-yellow-600">★★★☆☆</td>
+            <td class="px-6 py-4 text-green-600 font-semibold">★★★★★</td>
+            <td class="px-6 py-4 text-green-600">Light</td>
+            <td class="px-6 py-4">Forefoot, lightweight trainers</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium"><strong>Vibram Megagrip</strong></td>
+            <td class="px-6 py-4">55-65</td>
+            <td class="px-6 py-4 text-green-600">★★★★☆</td>
+            <td class="px-6 py-4 text-green-600 font-semibold">★★★★★</td>
+            <td class="px-6 py-4 text-yellow-600">Medium</td>
+            <td class="px-6 py-4">Trail running, wet conditions</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium"><strong>Continental Rubber</strong></td>
+            <td class="px-6 py-4">50-60</td>
+            <td class="px-6 py-4 text-green-600">★★★★☆</td>
+            <td class="px-6 py-4 text-green-600 font-semibold">★★★★★</td>
+            <td class="px-6 py-4 text-yellow-600">Medium</td>
+            <td class="px-6 py-4">Wet road, all-weather racing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.2 Outsole Pattern Design</h3>
+    <p class="text-gray-600 mb-4">The <strong>tread pattern</strong> — also called the <strong>outsole geometry</strong> — controls how the shoe interacts with the ground. Key patterns include:</p>
+    <ul class="space-y-3 text-gray-600 mb-8">
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Waffle Pattern</strong> — Square/rectangular lugs providing multi-directional grip. Common on <strong>Nike Pegasus</strong> series. Best for <strong>road to light trail</strong> transitions.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Stud/Lug Pattern</strong> — Aggressive multi-directional lugs (4-6mm depth) for <strong>trail and ultra-trail</strong> running. Found on <strong>Salomon Speedcross</strong> and <strong>Hoka Speedgoat</strong>.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Flat Siping Pattern</strong> — Thin horizontal cuts (siping) for maximum <strong>wet surface contact area</strong>. Standard on racing flats like <strong>Adidas Adizero</strong>.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Hexagonal/Geometric Pattern</strong> — Computer-optimized lug shapes for <strong>balanced grip and flexibility</strong>. Used in <strong>Under Armour HOVR</strong> series.</span>
+      </li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.3 Outsole Selection Flowchart</h3>
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <div class="mermaid">
+graph TD
+    Start[Select Outsole] --> Surface["Running Surface?"]
+    Surface -->|Road| RoadType["Primary Condition?"]
+    Surface -->|Trail| TrailType["Trail Difficulty?"]
+    Surface -->|Track| TrackType["Track Type?"]
+    
+    RoadType -->|Dry| Carbon["Carbon Rubber Heel + Blown Rubber Forefoot<br/>Best durability + lightweight"]
+    RoadType -->|Wet/Rainy| Continental["Continental Rubber Full Coverage<br/>Best wet grip"]
+    RoadType -->|Mixed| Waffle["Waffle Pattern Outsole<br/>Versatile road-to-trail"]
+    
+    TrailType -->|Light/Gravel| Waffle2["Shallow Lug 2-3mm<br/>Waffle/Herringbone"]
+    TrailType -->|Technical/Mud| Vibram["Vibram Megagrip 5-6mm Lugs<br/>Deep stud pattern"]
+    TrailType -->|Mountain/Scree| Mount["Mountaineering Rubber 6-8mm<br/>Edge-to-edge lug coverage"]
+    
+    TrackType -->|Synthetic| Flat["Thin Flat Rubber with Siping<br/>Minimal weight"]
+    TrackType -->|Cross-country| Studs["6mm Metal-Tip Studs<br/>Maximum mud penetration"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Surface fill:#1E40AF,color:#fff
+    style RoadType fill:#047857,color:#fff
+    style TrailType fill:#047857,color:#fff
+    style TrackType fill:#047857,color:#fff
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Midsole -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">2. Midsole: The Heart of Cushioning & Energy Return</h2>
+    
+    <p class="text-gray-600 mb-6">The <strong>midsole</strong> is arguably the most important component of a running shoe. It sits between the <strong>outsole</strong> and the <strong>upper</strong>, and is responsible for <strong>impact absorption</strong>, <strong>energy return</strong>, <strong>stability</strong>, and <strong>ride feel</strong>. The evolution from traditional <strong>EVA foam</strong> to <strong>PEBA-based super-foams</strong> (like Nike ZoomX and Adidas Lightstrike Pro) has transformed running shoe performance.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.1 Midsole Foam Technology Comparison</h3>
+    
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="bg-primary-600 text-white">
+          <tr>
+            <th class="px-5 py-3 text-left">Foam Type</th>
+            <th class="px-5 py-3 text-left">Density (g/cm³)</th>
+            <th class="px-5 py-3 text-left">Energy Return</th>
+            <th class="px-5 py-3 text-left">Weight</th>
+            <th class="px-5 py-3 text-left">Durability</th>
+            <th class="px-5 py-3 text-left">Cost</th>
+            <th class="px-5 py-3 text-left">Example</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Traditional EVA</strong></td>
+            <td class="px-5 py-4">0.20-0.25</td>
+            <td class="px-5 py-4">55-60%</td>
+            <td class="px-5 py-4 text-red-600">Heavy</td>
+            <td class="px-5 py-4 text-green-600">★★★★★</td>
+            <td class="px-5 py-4 text-green-600">$</td>
+            <td class="px-5 py-4">Basic daily trainers</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Compression EVA (CMEVA)</strong></td>
+            <td class="px-5 py-4">0.15-0.20</td>
+            <td class="px-5 py-4">60-65%</td>
+            <td class="px-5 py-4 text-yellow-600">Medium</td>
+            <td class="px-5 py-4 text-green-600">★★★★☆</td>
+            <td class="px-5 py-4 text-yellow-600">$$</td>
+            <td class="px-5 py-4">Asics EVA, Saucony PWRFOAM</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>TPU Beads (Boost)</strong></td>
+            <td class="px-5 py-4">0.12-0.18</td>
+            <td class="px-5 py-4">70-75%</td>
+            <td class="px-5 py-4 text-yellow-600">Medium</td>
+            <td class="px-5 py-4 text-green-600">★★★★☆</td>
+            <td class="px-5 py-4 text-red-600">$$$</td>
+            <td class="px-5 py-4">Adidas Boost (eTPU)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>PEBA-based (ZoomX)</strong></td>
+            <td class="px-5 py-4">0.08-0.12</td>
+            <td class="px-5 py-4 font-bold text-primary-600">80-87%</td>
+            <td class="px-5 py-4 text-green-600">Ultra-light</td>
+            <td class="px-5 py-4 text-yellow-600">★★★☆☆</td>
+            <td class="px-5 py-4 text-red-600">$$$$</td>
+            <td class="px-5 py-4">Nike ZoomX, Puma Nitro Elite</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>TPE Blends</strong></td>
+            <td class="px-5 py-4">0.10-0.16</td>
+            <td class="px-5 py-4">65-72%</td>
+            <td class="px-5 py-4 text-yellow-600">Light</td>
+            <td class="px-5 py-4 text-green-600">★★★★☆</td>
+            <td class="px-5 py-4 text-yellow-600">$$</td>
+            <td class="px-5 py-4">Skechers Hyper Burst, On Cloud</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.2 Cushioning Architecture</h3>
+    <p class="text-gray-600 mb-4">How the midsole <strong>distributes impact forces</strong> is just as important as the foam material. Modern midsoles use several architectural strategies:</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Dual-Density Midsole</h4>
+        <p class="text-gray-600 text-sm">A <strong>softer foam on the lateral side</strong> for cushioning and a <strong>firmer foam on the medial side</strong> for stability. This design addresses <strong>overpronation</strong> by slowing the inward roll of the foot. Common in <strong>stability running shoes</strong> like Asics Gel-Kayano and Brooks Adrenaline GTS.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+        <h4 class="font-bold text-gray-900 mb-2">Plate-Enhanced Midsole</h4>
+        <p class="text-gray-600 text-sm">A <strong>carbon fiber or nylon plate</strong> embedded within the foam creates a <strong>rocker effect</strong> that propels the runner forward. <strong>Full-length carbon plates</strong> (Nike Vaporfly) maximize racing performance, while <strong>segmented plates</strong> (Saucony Speedroll) balance daily training comfort with speed.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500">
+        <h4 class="font-bold text-gray-900 mb-2">Pod / Chamber Design</h4>
+        <p class="text-gray-600 text-sm">Individual <strong>cushioning pods</strong> or <strong>air chambers</strong> allow independent compression zones. <strong>Nike Air Zoom</strong> uses pressurized air units, while <strong>On Cloud</strong> uses hollow CloudTec pods that collapse on landing and lock on push-off.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-amber-500">
+        <h4 class="font-bold text-gray-900 mb-2">Geometry-Driven Cushioning</h4>
+        <p class="text-gray-600 text-sm">Using <strong>foam shape</strong> rather than density to control cushioning. <strong>Hoka's Meta-Rocker</strong> uses a low-heel-to-toe differential and sculpted foam shape to create a smooth rolling motion. <strong>Saucny's SPEEDROLL</strong> uses a beveled toe and deep center groove.</p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.3 Midsole Technology Decision Tree</h3>
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <div class="mermaid">
+graph TD
+    Start[Choose Midsole] --> Goal["Primary Goal?"]
+    Goal -->|Race Day| RacePace["Race Distance?"]
+    Goal -->|Daily Training| TrainType["Weekly Mileage?"]
+    Goal -->|Trail/Ultra| TrailCush["Terrain Type?"]
+    
+    RacePace -->|5K-10K| Light["Lightweight TPE Blend<br/>Low stack 20-25mm<br/>Responsive ride"]
+    RacePace -->|Half-Marathon| Plate["PEBA Foam + Nylon Plate<br/>Stack 28-33mm<br/>Balanced energy return"]
+    RacePace -->|Marathon| Super["PEBA Foam + Carbon Plate<br/>Stack 35-39mm<br/>Maximum energy return 85%+"]
+    
+    TrainType -->|Less than 30km| EVA["Compression EVA<br/>Durable & affordable<br/>All-around comfort"]
+    TrainType -->|30-60km| DualDensity["Dual-Density TPU/EVA<br/>Stability + Cushioning<br/>Prevents overpronation"]
+    TrainType -->|60km+| MaxCushion["PEBA or TPE Blend<br/>High stack 30-38mm<br/>Maximum protection"]
+    
+    TrailCush -->|Rocky/Technical| RockPlate["EVA + Rock Plate<br/>Firm ride + Protection<br/>Low-to-ground feel"]
+    TrailCush -->|Soft Trail/Mud| SoftTrail["PEBA/TPE Midsole<br/>Deep lug outsole<br/>Balanced cushion + grip"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Goal fill:#1E40AF,color:#fff
+    style RacePace fill:#047857,color:#fff
+    style TrainType fill:#047857,color:#fff
+    style TrailCush fill:#047857,color:#fff
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Upper -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">3. Upper: Fit, Breathability & Lockdown</h2>
+    
+    <p class="text-gray-600 mb-6">The <strong>upper</strong> is the fabric or material portion that wraps over the top of the foot. It's responsible for <strong>fit</strong>, <strong>breathability</strong>, <strong>support</strong>, and <strong>weight</strong>. The evolution from <strong>sewn multi-piece uppers</strong> to <strong>engineered knit</strong> and <strong>3D-printed uppers</strong> has dramatically improved comfort and reduced waste.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">3.1 Upper Material Technologies</h3>
+    
+    <div class="space-y-4 mb-8">
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h4 class="font-bold text-gray-900 mb-2">Engineered Mesh (Flyknit / Primeknit)</h4>
+        <p class="text-gray-600 text-sm mb-3">A <strong>one-piece knit upper</strong> produced on a flat-knitting machine (Stoll or Shima Seiki). Varying stitch density creates <strong>zones of breathability and support</strong> without separate overlays. Reduces waste by <strong>60%</strong> compared to cut-and-sew. <strong>Nike Flyknit</strong> pioneered this in 2012; now standard across most performance running shoes.</p>
+        <div class="flex gap-4 text-sm">
+          <span class="text-green-600 font-medium">Breathability: ★★★★★</span>
+          <span class="text-yellow-600 font-medium">Support: ★★★☆☆</span>
+          <span class="text-green-600 font-medium">Weight: Ultra-light</span>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h4 class="font-bold text-gray-900 mb-2">3D-Printed Upper (FDM / SLS)</h4>
+        <p class="text-gray-600 text-sm mb-3">Additive manufacturing creates <strong>lattice-structured uppers</strong> with precise control over flexibility and stiffness zones. <strong>Adidas 4DFWD</strong> uses Carbon's Digital Light Synthesis for its midsole, while <strong>Under Armour ArchiTech</strong> pioneered 3D-printed upper structures. Currently limited to premium price points ($200+) but costs are decreasing.</p>
+        <div class="flex gap-4 text-sm">
+          <span class="text-yellow-600 font-medium">Breathability: ★★★☆☆</span>
+          <span class="text-green-600 font-medium">Support: ★★★★★</span>
+          <span class="text-yellow-600 font-medium">Weight: Medium</span>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h4 class="font-bold text-gray-900 mb-2">Multi-Layer Sandwich Mesh</h4>
+        <p class="text-gray-600 text-sm mb-3">Traditional construction with <strong>outer mesh + inner lining + foam padding</strong>. Still used in <strong>stability shoes</strong> and <strong>trail runners</strong> where durability and protection are priorities. <strong>Reinforced overlays</strong> (TPU films, synthetic leather) provide structure at stress points. Common in <strong>Asics Gel-Nimbus</strong> and <strong>Brooks Ghost</strong>.</p>
+        <div class="flex gap-4 text-sm">
+          <span class="text-yellow-600 font-medium">Breathability: ★★★☆☆</span>
+          <span class="text-green-600 font-medium">Support: ★★★★★</span>
+          <span class="text-red-600 font-medium">Weight: Heavy</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">3.2 Heel Counter Engineering</h3>
+    <p class="text-gray-600 mb-4">The <strong>heel counter</strong> (or heel cage) is a rigid or semi-rigid insert at the back of the shoe that cradles the heel. Its quality directly affects <strong>rearfoot stability</strong>, <strong>Achilles protection</strong>, and the overall lifespan of the shoe.</p>
+    
+    <div class="grid md:grid-cols-3 gap-4 mb-8">
+      <div class="bg-primary-50 rounded-lg p-4">
+        <h5 class="font-bold text-primary-800 mb-2">External Heel Counter</h5>
+        <p class="text-sm text-gray-700">Visible TPU or thermoplastic wrap on the outside of the upper. Provides <strong>maximum lockdown</strong>. Used in <strong>stability and motion-control shoes</strong>. Can cause blistering if not properly padded.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h5 class="font-bold text-blue-800 mb-2">Internal Heel Counter</h5>
+        <p class="text-sm text-gray-700">Hidden counter between the lining and upper. <strong>Cleaner aesthetics</strong>, comfortable feel. Standard in <strong>neutral trainers</strong>. Less rigid than external counters, which suits neutral pronators.</p>
+      </div>
+      <div class="bg-green-50 rounded-lg p-4">
+        <h5 class="font-bold text-green-800 mb-2">Minimalist / No Counter</h5>
+        <p class="text-sm text-gray-700">No rigid counter — relies on <strong>upper tension and foam cradling</strong>. Found in <strong>racing flats and minimalist shoes</strong>. Maximum freedom of movement but <strong>zero rearfoot correction</strong>.</p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">3.3 Lacing & Midfoot Lockdown Systems</h3>
+    <p class="text-gray-600 mb-4">The <strong>lacing system</strong> controls midfoot lockdown and prevents <strong>heel slippage</strong>. Modern innovations go far beyond simple eyelets:</p>
+    <ul class="space-y-3 text-gray-600 mb-8">
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Ghillie Lacing</strong> — Fabric loops instead of eyelet holes. Allows <strong>independent zone tensioning</strong>. Found on <strong>Hoka</strong> and <strong>Altra</strong> models.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Flywire Cables</strong> — High-tenacity <strong>Dyneema or Vectran cables</strong> integrated into the upper and connected to the laces. Provides <strong>targeted lockdown</strong> without added weight. <strong>Nike-exclusive technology</strong>.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>BOA Fit System</strong> — <strong>Dial-driven steel cable</strong> closure replacing traditional laces. Micro-adjustable, one-handed operation. Popular on <strong>trail running shoes</strong> (Salomon, The North Face) where quick on/off and precise fit matter.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-primary-600 font-bold mt-1">●</span>
+        <span><strong>Asymmetrical Lacing</strong> — Laces follow the <strong>natural curve of the foot</strong> to reduce top-of-foot pressure. <strong>Adidas</strong> and <strong>On Running</strong> use this approach to avoid pressure on the dorsal midfoot tendons.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section 4: Putting It Together -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">4. How Components Work Together: The Complete System</h2>
+    
+    <p class="text-gray-600 mb-6">A running shoe is not just a collection of parts — it's a <strong>kinetic chain</strong> where each component influences the next. Understanding how <strong>outsole → midsole → upper</strong> interact helps you make smarter purchasing decisions.</p>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph LR
+    A[Ground Impact] --> B[Outsole<br/>Traction + Initial Shock]
+    B --> C[Midsole<br/>Cushioning + Energy Return]
+    C --> D[Insole/Footbed<br/>Moisture + Micro-cushion]
+    D --> E[Upper<br/>Fit + Lockdown]
+    E --> F[Heel Counter<br/>Rearfoot Stability]
+    
+    F --> G[Ground Reaction Force<br/>Dissipated & Returned]
+    
+    H[Runner's Weight] --> C
+    I[Pronation Type] --> F
+    J[Running Speed] --> B
+
+    style A fill:#92400E,color:#fff
+    style B fill:#92400E,color:#fff
+    style C fill:#047857,color:#fff
+    style D fill:#7C3AED,color:#fff
+    style E fill:#1E40AF,color:#fff
+    style F fill:#B91C1C,color:#fff
+    style G fill:#15803D,color:#fff
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">4.1 Pronation Type & Component Matching</h3>
+    <p class="text-gray-600 mb-6">Your <strong>pronation type</strong> — the way your foot rolls after heel strike — determines which component combination is optimal for you:</p>
+    
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="px-5 py-3 text-left">Pronation Type</th>
+            <th class="px-5 py-3 text-left">Outsole</th>
+            <th class="px-5 py-3 text-left">Midsole</th>
+            <th class="px-5 py-3 text-left">Upper</th>
+            <th class="px-5 py-3 text-left">Heel Counter</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Neutral</strong></td>
+            <td class="px-5 py-4">Blown rubber, flex grooves</td>
+            <td class="px-5 py-4">Single-density PEBA/TPE</td>
+            <td class="px-5 py-4">Engineered knit, minimal overlays</td>
+            <td class="px-5 py-4">Internal, semi-rigid</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Mild Overpronation</strong></td>
+            <td class="px-5 py-4">Carbon heel, blown forefoot</td>
+            <td class="px-5 py-4">Dual-density (medial post)</td>
+            <td class="px-5 py-4">Reinforced medial side</td>
+            <td class="px-5 py-4">External, rigid TPU</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Severe Overpronation</strong></td>
+            <td class="px-5 py-4">Full carbon rubber, wide base</td>
+            <td class="px-5 py-4">Triple-density + medial post</td>
+            <td class="px-5 py-4">Multi-layer with rigid overlays</td>
+            <td class="px-5 py-4">External, extended TPU cage</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Supination</strong></td>
+            <td class="px-5 py-4">Soft blown rubber, curved last</td>
+            <td class="px-5 py-4">Extra cushion, lateral flex grooves</td>
+            <td class="px-5 py-4">Flexible knit, generous width</td>
+            <td class="px-5 py-4">Minimal or none</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 5: Sourcing Guide -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">5. Sourcing Quality Running Shoes from China</h2>
+    
+    <p class="text-gray-600 mb-6">China is the world's largest running shoe manufacturer, producing over <strong>60% of global running shoe output</strong>. Key manufacturing clusters include <strong>Dongguan</strong> (performance running), <strong>Putian</strong> (budget athletic), <strong>Quanzhou</strong> (sport shoes), and <strong>Chengdu</strong> (women's athletic). Here's what buyers should know:</p>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    Start[Sourcing Running Shoes from China] --> Factory["Factory Type?"]
+    Factory -->|OEM for Major Brands| OEM["Tier 1 OEM Factory<br/>Dongguan / Quanzhou<br/>MOQ: 3,000+ pairs<br/>Lead time: 60-90 days<br/>Price: $25-45/pair FOB"]
+    Factory -->|Mid-Range Manufacturer| Mid["Tier 2 Factory<br/>Putian / Wenzhou<br/>MOQ: 1,000+ pairs<br/>Lead time: 45-60 days<br/>Price: $12-25/pair FOB"]
+    Factory -->|Budget Manufacturer| Budget["Tier 3 Factory<br/>Regional clusters<br/>MOQ: 500+ pairs<br/>Lead time: 30-45 days<br/>Price: $5-12/pair FOB"]
+    
+    OEM --> OEMCheck["Quality Verification:<br/>• ISO 9001 certified<br/>• Brand audit reports<br/>• BSCI / WRAP compliance"]
+    Mid --> MidCheck["Quality Verification:<br/>• Sample testing<br/>• AQL 2.5 inspection<br/>• Flex test + abrasion test"]
+    Budget --> BudgetCheck["Quality Verification:<br/>• Physical sample review<br/>• Bond strength test<br/>• Colorfastness check"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Factory fill:#1E40AF,color:#fff
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">5.1 Key Quality Tests for Running Shoes</h3>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="px-5 py-3 text-left">Test</th>
+            <th class="px-5 py-3 text-left">Standard</th>
+            <th class="px-5 py-3 text-left">Pass Criteria</th>
+            <th class="px-5 py-3 text-left">Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Flex Resistance</strong></td>
+            <td class="px-5 py-4">SATRA TM92</td>
+            <td class="px-5 py-4">No sole separation after 50,000 cycles</td>
+            <td class="px-5 py-4">Simulates 500km+ of running</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Bond Strength</strong></td>
+            <td class="px-5 py-4">SATRA TM411</td>
+            <td class="px-5 py-4">&gt;3.5 N/mm (upper-sole bond)</td>
+            <td class="px-5 py-4">Prevents delamination during use</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Abrasion Resistance</strong></td>
+            <td class="px-5 py-4">DIN 53516</td>
+            <td class="px-5 py-4">&lt;250mm³ volume loss</td>
+            <td class="px-5 py-4">Outsole durability under friction</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-5 py-4 font-medium"><strong>Cushioning Retention</strong></td>
+            <td class="px-5 py-4">ASTM F1976</td>
+            <td class="px-5 py-4">&lt;15% compression set after 48h</td>
+            <td class="px-5 py-4">Midsole doesn't bottom out</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/encyclopedia/running-shoes/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Running Shoes Overview</h3>
+        <p class="text-gray-600 text-sm">Complete guide to running shoe types, selection, and performance.</p>
+      </a>
+      <a href="/encyclopedia/basketball-shoes/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Basketball Shoes Guide</h3>
+        <p class="text-gray-600 text-sm">Court-specific cushioning, ankle support, and traction analysis.</p>
+      </a>
+      <a href="/encyclopedia/soccer-cleats/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Soccer Cleats Types</h3>
+        <p class="text-gray-600 text-sm">Stud configurations, upper materials, and pitch matching.</p>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+</BaseLayout>

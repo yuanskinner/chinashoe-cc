@@ -1,0 +1,390 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+const title = "Safety Shoes Standards Guide: EN ISO 20345, ASTM F2413, GB 21148 — Complete Compliance Handbook";
+const description = "Comprehensive guide to safety shoe standards worldwide — EN ISO 20345 (Europe), ASTM F2413 (USA), GB 21148 (China), AS/NZS 2210 (Australia). Understand toe cap ratings (SB, S1, S2, S3, S4, S5), penetration resistance, slip ratings, and how to certify safety footwear for global markets.";
+const keywords = "safety shoes standards, EN ISO 20345, ASTM F2413, GB 21148, safety toe cap, steel toe shoes, composite toe, penetration resistance, slip resistant shoes, safety footwear certification, S1 S2 S3 S4 S5";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <nav class="mb-8 text-sm text-gray-500">
+    <a href="/" class="hover:text-primary-600">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/encyclopedia/" class="hover:text-primary-600">Encyclopedia</a>
+    <span class="mx-2">/</span>
+    <a href="/encyclopedia/safety-shoes/" class="hover:text-primary-600">Safety Shoes</a>
+    <span class="mx-2">/</span>
+    <span class="text-gray-900 font-medium">Standards</span>
+  </nav>
+
+  <header class="mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Safety Shoes Standards Guide</h1>
+    <p class="text-xl text-gray-600 leading-relaxed">From <strong>EN ISO 20345</strong> in Europe to <strong>ASTM F2413</strong> in the USA and <strong>GB 21148</strong> in China — safety shoe compliance is non-negotiable. This guide covers every <strong>protection class</strong>, <strong>toe cap type</strong>, <strong>penetration resistance</strong>, <strong>slip rating</strong>, and <strong>certification process</strong> you need to manufacture, source, or sell safety footwear globally.</p>
+    <div class="mt-6 flex items-center gap-4 text-sm text-gray-500">
+      <span>Updated: June 2025</span><span>•</span><span>16 min read</span><span>•</span><span>By ChinaShoe Editorial Team</span>
+    </div>
+  </header>
+
+  <!-- Global Standards Map -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Global Safety Footwear Standards Map</h2>
+    <p class="text-gray-600 mb-6">Different markets require different <strong>safety certifications</strong>. Selling non-compliant safety shoes can result in <strong>import bans</strong>, <strong>product recalls</strong>, and <strong>legal liability</strong>. Here's the global landscape:</p>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    Global[Global Safety Footwear Standards] --> EU["Europe<br/>EN ISO 20345:2022<br/>Mandatory CE marking<br/>Most comprehensive standard"]
+    Global --> US["United States<br/>ASTM F2413-18<br/>No federal mandate<br/>Industry/OSHA requirement"]
+    Global --> CN["China<br/>GB 21148-2020<br/>CCC certification required<br/>Mandatory for domestic sale"]
+    Global --> AU["Australia/NZ<br/>AS/NZS 2210.3<br/>Voluntary but industry standard<br/>Aligns with EN ISO"]
+    Global --> JP["Japan<br/>JIS T 8101<br/>JSAA certification<br/>Unique S-class system"]
+    
+    EU --> EUClass["Protection Classes<br/>SB → S1 → S2 → S3 → S4 → S5"]
+    US --> USClass["Impact/Compression<br/>I/75, C/75<br/>+ Metatarsal, Puncture, CS"]
+    CN --> CNClass["Protection Levels<br/>An1-An5 (toe cap)<br/>+ P1-P5 (puncture)<br/>+ Special requirements"]
+    
+    style Global fill:#B91C1C,color:#fff
+    style EU fill:#1E40AF,color:#fff
+    style US fill:#047857,color:#fff
+    style CN fill:#DC2626,color:#fff
+    style AU fill:#92400E,color:#fff
+    style JP fill:#7C3AED,color:#fff
+      </div>
+    </div>
+  </section>
+
+  <!-- EN ISO 20345 Deep Dive -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">EN ISO 20345:2022 — The European Standard</h2>
+    <p class="text-gray-600 mb-6">EN ISO 20345 is the <strong>world's most widely referenced safety shoe standard</strong>. The 2022 revision replaced the 2011 version with <strong>stricter slip testing</strong> and new <strong>climate category</strong> requirements.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Protection Class Hierarchy</h3>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden text-sm">
+        <thead class="bg-blue-700 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Class</th>
+            <th class="px-4 py-3 text-left">Toe Cap</th>
+            <th class="px-4 py-3 text-left">Antistatic</th>
+            <th class="px-4 py-3 text-left">Energy Absorption</th>
+            <th class="px-4 py-3 text-left">Water Resistant</th>
+            <th class="px-4 py-3 text-left">Penetration Resistant</th>
+            <th class="px-4 py-3 text-left">Typical Application</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">SB</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">Basic warehouse, light industry</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">S1</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes (heel)</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">Indoor manufacturing, assembly</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">S2</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes (upper)</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">Outdoor construction, logistics</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">S3</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes (steel/fiber midsole)</td>
+            <td class="px-4 py-3">Construction, mining, heavy industry</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">S4</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Fully molded</td>
+            <td class="px-4 py-3">—</td>
+            <td class="px-4 py-3">Rubber/PVC boots — food, chemicals</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-bold text-blue-700">S5</td>
+            <td class="px-4 py-3">200J impact</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Fully molded</td>
+            <td class="px-4 py-3">Yes</td>
+            <td class="px-4 py-3">Rubber boots — mining, agriculture</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Additional Property Codes (Add-Ons)</h3>
+    <div class="grid md:grid-cols-3 gap-4 mb-8">
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">A — Antistatic</h4>
+        <p class="text-blue-700 text-xs">Resistance 0.1-1000 MΩ. Required for electronics, explosive environments.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">E — Energy Absorption</h4>
+        <p class="text-blue-700 text-xs">Heel region absorbs ≥20J. Reduces foot fatigue on hard surfaces.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">WR — Water Resistant</h4>
+        <p class="text-blue-700 text-xs">Upper prevents water penetration for 60min flex test.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">P — Penetration Resistant</h4>
+        <p class="text-blue-700 text-xs">Steel midsole (1100N) or fiber midsole (1200N). Nail protection.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">HRO — Heat Resistant Outsole</h4>
+        <p class="text-blue-700 text-xs">Outsole withstands 300°C contact for 1min without melting.</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-1">CI — Cold Insulation</h4>
+        <p class="text-blue-700 text-xs">Temperature drop ≤10°C at -17°C. For cold storage, outdoor winter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toe Cap Comparison -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Toe Cap Materials: Steel vs Composite vs Aluminum</h2>
+    <p class="text-gray-600 mb-6">The <strong>toe cap</strong> is the heart of every safety shoe. Three materials dominate the market, each with distinct trade-offs in <strong>weight</strong>, <strong>protection level</strong>, <strong>temperature conductivity</strong>, and <strong>metal detector compatibility</strong>:</p>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    Start[Choose Toe Cap Type] --> Priority["Primary Priority?"]
+    
+    Priority -->|Maximum protection| Steel["STEEL TOE CAP<br/>Impact: 200J / Compression: 15kN<br/>Weight: 80-120g per cap<br/>Thickness: 2.0-2.5mm<br/>Cost: $0.80-1.50/pair<br/>Conducts cold/heat<br/>Triggers metal detectors"]
+    
+    Priority -->|Lightweight + metal-free| Comp["COMPOSITE TOE CAP<br/>Impact: 200J / Compression: 15kN<br/>Weight: 40-65g per cap<br/>Thickness: 3.5-5.0mm<br/>Cost: $2.50-4.50/pair<br/>Non-metallic<br/>Does NOT trigger detectors"]
+    
+    Priority -->|Balance of both| Alum["ALUMINUM TOE CAP<br/>Impact: 200J / Compression: 15kN<br/>Weight: 55-80g per cap<br/>Thickness: 2.5-3.5mm<br/>Cost: $1.50-3.00/pair<br/>Metallic but lighter<br/>TRIGGERS metal detectors"]
+
+    Steel --> SteelBest["Best for: Heavy construction,<br/>Mining, Foundries<br/>Budget-conscious B2B"]
+    Comp --> CompBest["Best for: Airport security,<br/>Electronics factories,<br/>Cold storage, Premium brands"]
+    Alum --> AlumBest["Best for: Mid-range safety,<br/>General manufacturing,<br/>Logistics/warehousing"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Steel fill:#4B5563,color:#fff
+    style Comp fill:#047857,color:#fff
+    style Alum fill:#1E40AF,color:#fff
+      </div>
+    </div>
+
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden text-sm">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Property</th>
+            <th class="px-4 py-3 text-left">Steel</th>
+            <th class="px-4 py-3 text-left">Composite (Fiber/Glass)</th>
+            <th class="px-4 py-3 text-left">Aluminum</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Impact Resistance</td>
+            <td class="px-4 py-3">200J (best)</td>
+            <td class="px-4 py-3">200J (meets standard)</td>
+            <td class="px-4 py-3">200J (good)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Weight per Pair</td>
+            <td class="px-4 py-3 text-red-600">160-240g (heaviest)</td>
+            <td class="px-4 py-3 text-green-600">80-130g (lightest)</td>
+            <td class="px-4 py-3">110-160g (middle)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Cold Conductivity</td>
+            <td class="px-4 py-3 text-red-600">High — conducts cold</td>
+            <td class="px-4 py-3 text-green-600">None — insulating</td>
+            <td class="px-4 py-3">Moderate</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Metal Detector</td>
+            <td class="px-4 py-3 text-red-600">Triggers alarm</td>
+            <td class="px-4 py-3 text-green-600">Invisible to scanners</td>
+            <td class="px-4 py-3 text-red-600">Triggers alarm</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">FOB Cost (China)</td>
+            <td class="px-4 py-3 text-green-600">$0.80-1.50/pair</td>
+            <td class="px-4 py-3 text-red-600">$2.50-4.50/pair</td>
+            <td class="px-4 py-3">$1.50-3.00/pair</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Slip Resistance -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Slip Resistance Ratings (2022 Update)</h2>
+    <p class="text-gray-600 mb-6">The <strong>2022 revision of EN ISO 20345</strong> introduced a completely new slip rating system. The old SRA/SRB/SRC system was replaced with <strong>more rigorous testing</strong> across three surface conditions:</p>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    Start[Slip Resistance Test] --> Floor1["Ceramic Tile + SLS<br/>(Sodium Lauryl Sulfate)"]
+    Start --> Floor2["Steel Floor + Glycerol"]
+    Start --> Floor3["Ceramic Tile + Water"]
+    
+    Floor1 --> Test1["Forward & Backward walk<br/>Measure friction coefficient"]
+    Floor2 --> Test2["Forward & Backward walk<br/>Measure friction coefficient"]
+    Floor3 --> Test3["Forward & Backward walk<br/>Measure friction coefficient"]
+    
+    Test1 --> Pass1["Pass?"]
+    Test2 --> Pass2["Pass?"]
+    Test3 --> Pass3["Pass?"]
+    
+    Pass1 -->|Yes| SRA["SRA — Basic slip resistance<br/>Suitable: Dry indoor areas"]
+    Pass2 -->|Yes| SRB["SRB — Oily surface resistance<br/>Suitable: Kitchens, workshops"]
+    Pass3 -->|Yes| SRC2["SRC+ — Enhanced water slip resistance<br/>Suitable: Wet outdoor environments"]
+    
+    Pass1 -->|Yes| Pass2 -->|Yes| Full["FULL COMPLIANCE<br/>Best for all conditions<br/>Most B2B contracts require this"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Full fill:#15803D,color:#fff
+    style SRA fill:#1E40AF,color:#fff
+    style SRB fill:#92400E,color:#fff
+    style SRC2 fill:#7C3AED,color:#fff
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification Process -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Certification Process for Safety Footwear</h2>
+    <p class="text-gray-600 mb-6">Getting safety shoes <strong>certified</strong> is a multi-step process involving <strong>type testing</strong>, <strong>factory audits</strong>, and <strong>ongoing surveillance</strong>. Here's the complete flow for <strong>CE marking</strong> (Europe) and <strong>CCC certification</strong> (China):</p>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="mermaid">
+graph TD
+    Start[Certification Process] --> Prep["1. Preparation<br/>Select applicable standard<br/>Define protection class<br/>Prepare technical file"]
+    
+    Prep --> Sample["2. Sample Production<br/>Produce 6-12 pairs<br/>Using production materials<br/>Same factory line"]
+    
+    Sample --> Lab["3. Laboratory Testing<br/>Toe cap impact: 200J<br/>Compression: 15kN<br/>Slip resistance test<br/>Penetration test if P-class<br/>Antistatic test if A-class"]
+    
+    Lab --> Result["Test Results?"]
+    Result -->|Fail| Fix["Fix Design<br/>Modify materials/construction<br/>Resubmit samples"]
+    Fix --> Sample
+    
+    Result -->|Pass| Audit["4. Factory Audit<br/>Quality management system<br/>Production consistency<br/>Material traceability<br/>ISO 9001 baseline"]
+    
+    Audit --> AuditResult["Audit Pass?"]
+    AuditResult -->|No| FixAudit["Address Gaps<br/>Implement QMS changes<br/>Schedule re-audit"]
+    FixAudit --> Audit
+    
+    AuditResult -->|Yes| Cert["5. Certification Issued<br/>CE marking (EU)<br/>CCC mark (China)<br/>Valid: 3-5 years<br/>Annual surveillance required"]
+    
+    Cert --> Maint["6. Ongoing Compliance<br/>Annual surveillance audit<br/>Production consistency checks<br/>Market sample testing<br/>Report any design changes"]
+
+    style Start fill:#B91C1C,color:#fff
+    style Cert fill:#15803D,color:#fff
+    style Fix fill:#DC2626,color:#fff
+    style FixAudit fill:#DC2626,color:#fff
+    style Maint fill:#1E40AF,color:#fff
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg mb-8">
+      <h4 class="font-bold text-amber-800 mb-2">China-Specific Certification Tip</h4>
+      <p class="text-amber-900 text-sm">For <strong>GB 21148 CCC certification</strong>, China requires <strong>CNAS-accredited lab testing</strong> conducted within China. Foreign test reports are <strong>not accepted</strong>. Budget <strong>$8,000-15,000</strong> and <strong>4-6 months</strong> for the full CCC process. Many Chinese factories already hold CCC — verify the certificate scope matches your product category.</p>
+    </div>
+  </section>
+
+  <!-- Quick Reference -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Quick Reference: Standards Comparison</h2>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-white rounded-xl shadow-md overflow-hidden text-sm">
+        <thead class="bg-primary-600 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Feature</th>
+            <th class="px-4 py-3 text-left">EN ISO 20345 (EU)</th>
+            <th class="px-4 py-3 text-left">ASTM F2413 (US)</th>
+            <th class="px-4 py-3 text-left">GB 21148 (China)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Toe Impact</td>
+            <td class="px-4 py-3">200J</td>
+            <td class="px-4 py-3">75 ft-lb (I/75)</td>
+            <td class="px-4 py-3">200J (An1-An5)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Compression</td>
+            <td class="px-4 py-3">15kN</td>
+            <td class="px-4 py-3">2500 lbs (C/75)</td>
+            <td class="px-4 py-3">15kN</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Penetration</td>
+            <td class="px-4 py-3">1100N (steel) / 1200N (fiber)</td>
+            <td class="px-4 py-3">270 lbs (Pru)</td>
+            <td class="px-4 py-3">1100N / 1200N</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Certification Body</td>
+            <td class="px-4 py-3">Notified Body (CE)</td>
+            <td class="px-4 py-3">Self-declaration (ASTM)</td>
+            <td class="px-4 py-3">CNCA-authorized (CCC)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Valid Period</td>
+            <td class="px-4 py-3">5 years (with surveillance)</td>
+            <td class="px-4 py-3">No expiry</td>
+            <td class="px-4 py-3">5 years (with annual audit)</td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Est. Cost</td>
+            <td class="px-4 py-3">$5,000-10,000</td>
+            <td class="px-4 py-3">$2,000-5,000</td>
+            <td class="px-4 py-3">$8,000-15,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/encyclopedia/safety-shoes/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Safety Shoes Overview</h3>
+        <p class="text-gray-600 text-sm">Complete introduction to protective footwear.</p>
+      </a>
+      <a href="/encyclopedia/manufacturing/injection-molding/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Injection Molding</h3>
+        <p class="text-gray-600 text-sm">The primary construction method for safety shoes.</p>
+      </a>
+      <a href="/sourcing/compliance/" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all group">
+        <h3 class="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">Compliance & Regulations</h3>
+        <p class="text-gray-600 text-sm">Sourcing compliance for global footwear markets.</p>
+      </a>
+    </div>
+  </section>
+</div>
+
+</BaseLayout>
