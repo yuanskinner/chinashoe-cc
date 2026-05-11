@@ -1,0 +1,176 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const relatedArticles = [
+  { title: 'Raw Material Costs Reshape Manufacturing', href: '/news/raw-material-costs-2024/', date: '2024-10-15' },
+  { title: 'European Sourcing Strategies', href: '/news/european-sourcing-strategies/', date: '2024-09-28' },
+];
+---
+
+<PageLayout
+  title="Labor Regulations 2024: How Rising Wages, ESG Mandates, and New Laws Are Reshaping Footwear Manufacturing"
+  description="In-depth analysis of 2024 labor regulation changes across China, Vietnam, Indonesia, and India — impact on footwear production costs, compliance requirements, and sourcing strategies for global buyers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: 'Labor Regulations 2024 Impact', url: '/news/labor-regulations-2024/' },
+  ]}
+  publishedTime="2024-08-12"
+  authors={['ChinaShoe Editorial Team']}
+  tags={['labor regulations', 'minimum wage', 'ESG compliance', 'footwear manufacturing', 'China labor law', 'Vietnam labor', 'social audit']}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">Regulatory Update</span>
+      <span class="text-sm text-neutral-500">August 12, 2024</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Labor Regulations 2024: How Rising Wages, ESG Mandates, and New Laws Are Reshaping Footwear Manufacturing
+    </h1>
+    <p class="text-lg text-neutral-600">
+      <strong>Labor costs</strong> in major footwear-producing countries rose <strong>8-15% in 2024</strong>, driven by <strong>minimum wage hikes</strong>, <strong>social insurance reforms</strong>, and <strong>EU/US ESG compliance requirements</strong>. Here's what every footwear buyer needs to know.
+    </p>
+  </div>
+
+  <img src="/images/news/labor-regulations.jpg" alt="Footwear factory workers and labor compliance documentation" class="w-full h-64 object-cover rounded-xl mb-8" />
+
+  <!-- Wage Comparison -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">1. 2024 Minimum Wage Changes Across Key Footwear Hubs</h2>
+
+    <div class="mermaid bg-gray-50 rounded-xl p-6 mb-4">
+      flowchart TD
+        A["Footwear Production Country"] --> B["China<br/>Dongguan/Chengdu"]
+        A --> C["Vietnam<br/>Ho Chi Minh / Dong Nai"]
+        A --> D["Indonesia<br/>West Java"]
+        A --> E["India<br/>Agra / Chennai"]
+        B --> B2["Min Wage: ¥2,360/mo<br/>+5.3% YoY<br/>Social ins: 23% of wage"]
+        C --> C2["Min Wage: 4.68M VND/mo<br/>+6.0% YoY<br/>Social ins: 23.5% of wage"]
+        D --> D2["Min Wage: IDR 4.9M/mo<br/>+6.5% YoY<br/>Social ins: 10.24% of wage"]
+        E --> E2["Min Wage: ₹17,500/mo<br/>+8.5% YoY<br/>PF + ESI: 15.67% of wage"]
+    </div>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full border-collapse bg-white rounded-lg overflow-hidden">
+        <thead class="bg-neutral-800 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Region</th>
+            <th class="px-4 py-3 text-left">Monthly Min Wage</th>
+            <th class="px-4 py-3 text-left">USD Equivalent</th>
+            <th class="px-4 py-3 text-left">Social Ins. (% of wage)</th>
+            <th class="px-4 py-3 text-left">Total Labor Cost/hr</th>
+            <th class="px-4 py-3 text-left">YoY Change</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-4 py-3"><strong>Dongguan, China</strong></td><td class="px-4 py-3">¥2,360</td><td class="px-4 py-3">$330</td><td class="px-4 py-3">23%</td><td class="px-4 py-3">$2.85</td><td class="px-4 py-3 text-red-600">+5.3%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Chengdu, China</strong></td><td class="px-4 py-3">¥2,100</td><td class="px-4 py-3">$295</td><td class="px-4 py-3">23%</td><td class="px-4 py-3">$2.55</td><td class="px-4 py-3 text-red-600">+4.8%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Ho Chi Minh, Vietnam</strong></td><td class="px-4 py-3">4.68M VND</td><td class="px-4 py-3">$190</td><td class="px-4 py-3">23.5%</td><td class="px-4 py-3">$1.65</td><td class="px-4 py-3 text-red-600">+6.0%</td></tr>
+          <tr><td class="px-4 py-3"><strong>West Java, Indonesia</strong></td><td class="px-4 py-3">IDR 4.9M</td><td class="px-4 py-3">$310</td><td class="px-4 py-3">10.24%</td><td class="px-4 py-3">$2.15</td><td class="px-4 py-3 text-red-600">+6.5%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Agra, India</strong></td><td class="px-4 py-3">₹17,500</td><td class="px-4 py-3">$210</td><td class="px-4 py-3">15.67%</td><td class="px-4 py-3">$1.80</td><td class="px-4 py-3 text-red-600">+8.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-neutral-700 mb-4">
+      <strong>Key takeaway:</strong> Vietnam's <strong>total labor cost advantage over China</strong> has narrowed from <strong>55% in 2019 to 42% in 2024</strong>. Indonesia's advantage is even smaller at <strong>24%</strong>. The era of dramatic labor arbitrage is ending—<strong>productivity, quality, and compliance</strong> are becoming the real differentiators.
+    </p>
+  </section>
+
+  <!-- ESG Compliance -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">2. ESG Due Diligence: The New Non-Negotiable</h2>
+    <p class="text-neutral-700 mb-4">
+      Three major regulations now require <strong>footwear brands to audit their entire supply chain</strong> for labor and environmental compliance:
+    </p>
+    <ul class="list-disc list-inside text-neutral-700 mb-4 space-y-3">
+      <li><strong>EU Corporate Sustainability Due Diligence Directive (CSDDD)</strong> — Effective 2026 for companies with 1,000+ employees. Requires <strong>human rights due diligence across the value chain</strong>. Penalty: up to <strong>5% of global net turnover</strong>.</li>
+      <li><strong>German Supply Chain Act (LkSG)</strong> — Already in effect since 2023 for companies with 3,000+ employees. Requires <strong>risk analysis, preventive measures, and remediation</strong> for labor violations in supplier factories.</li>
+      <li><strong>US Uyghur Forced Labor Prevention Act (UFLPA)</strong> — Rebuttable presumption that <strong>any goods produced wholly or partly in Xinjiang</strong> are made with forced labor. Footwear with <strong>leather or cotton from Xinjiang</strong> is subject to <strong>automatic detention at US ports</strong>.</li>
+    </ul>
+
+    <div class="mermaid bg-gray-50 rounded-xl p-6 mb-4">
+      flowchart TD
+        A["Brand Receives Order"] --> B["Supply Chain Due Diligence"]
+        B --> C["Tier 1: Assembly Factory<br/>SMETA/BSCI audit required"]
+        C --> D["Tier 2: Component Suppliers<br/>Soles, uppers, hardware"]
+        D --> E["Tier 3: Raw Materials<br/>Leather, rubber, textiles"]
+        E --> F["Xinjiang Origin?"]
+        F -->|"Yes"| G["US: Automatic detention<br/>EU: Risk flag"]
+        F -->|"No"| H["Document origin<br/>Traceability certificates"]
+        H --> I["Compliant Shipment"]
+        G --> J["Re-export or destroy<br/>Full financial loss"]
+    </div>
+  </section>
+
+  <!-- Cost Impact -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">3. Impact on Shoe FOB Prices</h2>
+    <p class="text-neutral-700 mb-4">
+      The cumulative effect of <strong>wage increases + social insurance + ESG compliance costs</strong> is pushing up FOB prices across all major categories:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full border-collapse bg-white rounded-lg overflow-hidden">
+        <thead class="bg-neutral-800 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Cost Component</th>
+            <th class="px-4 py-3 text-left">% of FOB Price</th>
+            <th class="px-4 py-3 text-left">2024 Increase</th>
+            <th class="px-4 py-3 text-left">FOB Impact</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-4 py-3"><strong>Direct labor</strong></td><td class="px-4 py-3">20-25%</td><td class="px-4 py-3 text-red-600">+8-12%</td><td class="px-4 py-3">+1.6-3.0%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Social insurance</strong></td><td class="px-4 py-3">5-8%</td><td class="px-4 py-3 text-red-600">+2-4%</td><td class="px-4 py-3">+0.1-0.3%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Compliance/audit costs</strong></td><td class="px-4 py-3">1-3%</td><td class="px-4 py-3 text-red-600">+50-100%</td><td class="px-4 py-3">+0.5-1.5%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Worker welfare programs</strong></td><td class="px-4 py-3">1-2%</td><td class="px-4 py-3 text-red-600">+30-50%</td><td class="px-4 py-3">+0.3-0.5%</td></tr>
+          <tr class="font-bold bg-neutral-50"><td class="px-4 py-3">Total Impact</td><td class="px-4 py-3"></td><td class="px-4 py-3"></td><td class="px-4 py-3 text-red-600">+2.5-5.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-neutral-700 mb-4">
+      For a <strong>women's leather ankle boot</strong> at <strong>$22 FOB</strong>, expect an additional <strong>$0.55-1.17 per pair</strong> in 2024. This may seem small, but at <strong>50,000 pairs/year</strong>, it adds <strong>$27,500-58,500</strong> to annual costs.
+    </p>
+  </section>
+
+  <!-- Buyer Action Items -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">4. Strategic Recommendations for Buyers</h2>
+    <div class="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg mb-6">
+      <h4 class="font-bold text-primary-800 mb-2">Essential Compliance Checklist</h4>
+      <ol class="text-primary-700 space-y-2 list-decimal list-inside">
+        <li>Require <strong>SMETA 4-Pillar audits</strong> (or BSCI) from all Tier 1 and Tier 2 suppliers annually</li>
+        <li>Implement <strong>raw material traceability</strong> for leather, cotton, and rubber to country/state level</li>
+        <li>Add <strong>labor compliance clauses</strong> to all purchase contracts with financial penalties</li>
+        <li>Budget <strong>3-5% additional cost</strong> for ESG compliance starting 2025</li>
+        <li>Evaluate <strong>automation-ready factories</strong> — those investing in cutting/stitching automation can offset 30-40% of labor cost increases</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="bg-white rounded-lg p-6 border border-gray-200">
+        <h3 class="font-semibold text-neutral-900 mb-2">How much do SMETA audits cost?</h3>
+        <p class="text-neutral-700">A <strong>SMETA 4-Pillar audit</strong> costs approximately <strong>$2,000-4,000 per factory</strong> depending on factory size and location. Most brands require <strong>annual audits</strong>. Some factories share audit costs across multiple brand clients through <strong>amfori BSCI shared audit programs</strong>.</p>
+      </div>
+      <div class="bg-white rounded-lg p-6 border border-gray-200">
+        <h3 class="font-semibold text-neutral-900 mb-2">Is Vietnam still a viable alternative to China for footwear?</h3>
+        <p class="text-neutral-700">Yes, but the <strong>cost advantage is shrinking</strong>. Vietnam's total labor cost is now <strong>42% lower than Dongguan</strong> (down from 55% in 2019). Vietnam still excels for <strong>athletic footwear</strong> (Nike, Adidas supply chains are well-established) but <strong>China remains superior for leather shoes, women's fashion, and complex constructions</strong> due to deeper skill base and more complete supply chains.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 pt-8">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Related Articles</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="block bg-white rounded-lg p-4 border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-neutral-900 mb-1">{article.title}</h3>
+          <span class="text-sm text-neutral-500">{article.date}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</PageLayout>

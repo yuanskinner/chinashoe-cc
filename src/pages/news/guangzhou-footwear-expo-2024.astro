@@ -1,0 +1,170 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const relatedArticles = [
+  { title: 'E-Commerce Footwear Distribution Revolution', href: '/news/ecommerce-footwear-distribution/', date: '2024-09-20' },
+  { title: 'AI-Powered Footwear Design Revolution', href: '/news/ai-design-footwear/', date: '2024-11-20' },
+];
+---
+
+<PageLayout
+  title="Guangzhou International Footwear Expo 2024: Key Trends, Deals, and Industry Insights"
+  description="Complete coverage of the Guangzhou International Footwear Expo 2024 — emerging trends, factory innovations, deal highlights, and strategic takeaways for global footwear buyers and sourcing professionals."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'News', url: '/news/' },
+    { title: 'Guangzhou Footwear Expo 2024', url: '/news/guangzhou-footwear-expo-2024/' },
+  ]}
+  publishedTime="2024-09-10"
+  authors={['ChinaShoe Editorial Team']}
+  tags={['Guangzhou expo', 'footwear trade show', 'shoe fair', 'sourcing event', 'China manufacturing', 'footwear trends 2025']}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-primary">Trade Show</span>
+      <span class="text-sm text-neutral-500">September 10, 2024</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Guangzhou International Footwear Expo 2024: Key Trends, Deals, and Industry Insights
+    </h1>
+    <p class="text-lg text-neutral-600">
+      The <strong>Guangzhou International Footwear Expo</strong> remains Asia's largest B2B shoe sourcing event. Our on-the-ground coverage reveals the <strong>materials innovations</strong>, <strong>pricing shifts</strong>, and <strong>strategic trends</strong> that will shape the <strong>2025 footwear market</strong>.
+    </p>
+  </div>
+
+  <img src="/images/news/guangzhou-footwear-expo.jpg" alt="Guangzhou International Footwear Expo 2024 exhibition hall with booths and buyers" class="w-full h-64 object-cover rounded-xl mb-8" />
+
+  <!-- Expo Overview -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">1. Expo Overview: Scale & Participation</h2>
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-primary-50 rounded-lg p-6 text-center">
+        <div class="text-3xl font-bold text-primary-700">1,200+</div>
+        <div class="text-neutral-600">Exhibitors</div>
+      </div>
+      <div class="bg-primary-50 rounded-lg p-6 text-center">
+        <div class="text-3xl font-bold text-primary-700">35,000+</div>
+        <div class="text-neutral-600">Professional Buyers</div>
+      </div>
+      <div class="bg-primary-50 rounded-lg p-6 text-center">
+        <div class="text-3xl font-bold text-primary-700">80,000 m²</div>
+        <div class="text-neutral-600">Exhibition Area</div>
+    </div>
+
+    <div class="mermaid bg-gray-50 rounded-xl p-6 mb-4">
+      flowchart LR
+        subgraph Halls["Expo Hall Layout"]
+          H1["Hall 1: Women's Shoes<br/>400+ exhibitors"]
+          H2["Hall 2: Men's & Casual<br/>250+ exhibitors"]
+          H3["Hall 3: Sports & Outdoor<br/>200+ exhibitors"]
+          H4["Hall 4: Materials & Components<br/>150+ exhibitors"]
+          H5["Hall 5: Machinery & Tech<br/>100+ exhibitors"]
+          H6["Hall 6: Kids & Safety<br/>100+ exhibitors"]
+        end
+    </div>
+  </section>
+
+  <!-- Top Trends -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">2. Top 5 Trends from the Show Floor</h2>
+
+    <h3 class="text-xl font-semibold text-neutral-800 mb-3">Trend 1: Bio-Based Sole Materials</h3>
+    <p class="text-neutral-700 mb-4">
+      <strong>Bio-based outsoles</strong> dominated the materials hall. Key innovations include <strong>algae-based EVA</strong> (Bloom Foam), <strong>rice husk rubber</strong> (20% agricultural waste content), and <strong>sugarcane-derived TPU</strong> (Braskem I'm green™). Prices have dropped <strong>15-20% since 2023</strong>, making them commercially viable for mid-market shoes.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-800 mb-3">Trend 2: Direct-to-Last Knitting</h3>
+    <p class="text-neutral-700 mb-4">
+      <strong>Stoll</strong> and <strong>Shima Seiki</strong> demonstrated <strong>whole-garment knitting machines</strong> that produce complete shoe uppers directly on the last—eliminating <strong>cutting waste</strong> and <strong>stitching labor</strong>. MOQ as low as <strong>50 pairs per colorway</strong>. Ideal for <strong>customizable athletic and casual shoes</strong>.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-800 mb-3">Trend 3: Digital Sampling & 3D Visualization</h3>
+    <p class="text-neutral-700 mb-4">
+      Multiple factories showcased <strong>3D product configurators</strong> allowing buyers to customize <strong>colors, materials, and sole options in real-time</strong>. This reduces <strong>physical sample rounds by 60%</strong> and compresses <strong>development timelines from 12 weeks to 4 weeks</strong>.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-800 mb-3">Trend 4: Anti-Slip & Safety Innovation</h3>
+    <p class="text-neutral-700 mb-4">
+      New <strong>SRC-rated outsoles</strong> with <strong>micro-glass fiber technology</strong> achieved <strong>30% better slip resistance</strong> than traditional rubber. Critical for <strong>safety footwear</strong> targeting EN ISO 20345 SRA/SRB/SRC standards.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-800 mb-3">Trend 5: Chengdu Women's Shoes Go Global</h3>
+    <p class="text-neutral-700 mb-4">
+      <strong>Chengdu's Wuhou District</strong> had the largest regional pavilion with <strong>80+ women's shoe factories</strong>. Key selling points: <strong>small MOQ (100-300 pairs)</strong>, <strong>fast sampling (7-10 days)</strong>, and <strong>competitive pricing ($8-15 FOB for mid-heel pumps)</strong>.
+    </p>
+  </section>
+
+  <!-- Pricing Intelligence -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">3. Pricing Intelligence from the Expo</h2>
+    <p class="text-neutral-700 mb-4">
+      Current FOB price ranges quoted at the show for <strong>key shoe categories</strong> (MOQ: 1,000 pairs):
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full border-collapse bg-white rounded-lg overflow-hidden">
+        <thead class="bg-neutral-800 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Category</th>
+            <th class="px-4 py-3 text-left">Low End</th>
+            <th class="px-4 py-3 text-left">Mid Range</th>
+            <th class="px-4 py-3 text-left">Premium</th>
+            <th class="px-4 py-3 text-left">YoY Change</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-4 py-3"><strong>Women's leather pumps</strong></td><td class="px-4 py-3">$8-10</td><td class="px-4 py-3">$12-18</td><td class="px-4 py-3">$20-28</td><td class="px-4 py-3 text-red-600">+3-5%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Women's ankle boots</strong></td><td class="px-4 py-3">$12-15</td><td class="px-4 py-3">$18-25</td><td class="px-4 py-3">$28-40</td><td class="px-4 py-3 text-red-600">+5-8%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Men's leather oxfords</strong></td><td class="px-4 py-3">$14-18</td><td class="px-4 py-3">$20-28</td><td class="px-4 py-3">$30-45</td><td class="px-4 py-3 text-red-600">+4-6%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Athletic sneakers (knit upper)</strong></td><td class="px-4 py-3">$6-9</td><td class="px-4 py-3">$10-15</td><td class="px-4 py-3">$18-25</td><td class="px-4 py-3 text-green-600">-2-3%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Safety shoes (steel toe)</strong></td><td class="px-4 py-3">$8-12</td><td class="px-4 py-3">$14-20</td><td class="px-4 py-3">$22-30</td><td class="px-4 py-3 text-red-600">+2-4%</td></tr>
+          <tr><td class="px-4 py-3"><strong>Children's shoes</strong></td><td class="px-4 py-3">$4-6</td><td class="px-4 py-3">$7-10</td><td class="px-4 py-3">$12-18</td><td class="px-4 py-3 text-green-600">-1-2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-neutral-700 mb-4">
+      <strong>Key driver:</strong> <strong>Leather costs</strong> rose 8-12% in 2024, pushing up prices for <strong>genuine leather shoes</strong>. Conversely, <strong>synthetic/knit athletic shoes</strong> saw slight price decreases due to <strong>overcapacity in Jinjiang's sneaker factories</strong>.
+    </p>
+  </section>
+
+  <!-- Buyer Strategy -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">4. Strategic Takeaways for Global Buyers</h2>
+    <div class="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg mb-6">
+      <h4 class="font-bold text-primary-800 mb-2">Top 5 Action Items Post-Expo</h4>
+      <ol class="text-primary-700 space-y-2 list-decimal list-inside">
+        <li><strong>Lock in leather shoe pricing now</strong> — expect further 3-5% increases in Q1 2025</li>
+        <li><strong>Request bio-based sole samples</strong> — test with your consumer base before competitors</li>
+        <li><strong>Negotiate smaller MOQs</strong> — Chengdu factories increasingly flexible at 200-300 pairs</li>
+        <li><strong>Invest in 3D sampling tools</strong> — reduces development cost by 40-60% within 6 months</li>
+        <li><strong>Visit Chengdu cluster</strong> — schedule factory visits in Wuhou District for women's shoes</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="bg-white rounded-lg p-6 border border-gray-200">
+        <h3 class="font-semibold text-neutral-900 mb-2">When is the next Guangzhou Footwear Expo?</h3>
+        <p class="text-neutral-700">The <strong>Spring 2025 edition</strong> is scheduled for <strong>May 2025</strong> at the Canton Fair Complex. Pre-registration typically opens in February. Early-bird buyer registration is free; on-site registration costs ¥200.</p>
+      </div>
+      <div class="bg-white rounded-lg p-6 border border-gray-200">
+        <h3 class="font-semibold text-neutral-900 mb-2">Is the expo worth attending for small brands?</h3>
+        <p class="text-neutral-700">Absolutely. The expo is ideal for <strong>small brands</strong> because you can meet <strong>100+ factories in 2-3 days</strong>, compare pricing side-by-side, and negotiate <strong>low MOQ arrangements</strong> directly. Budget approximately <strong>US$2,000-3,000</strong> for travel, hotel, and meals for a 3-day visit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-gray-200 pt-8">
+    <h2 class="text-xl font-bold text-neutral-900 mb-4">Related Articles</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedArticles.map(article => (
+        <a href={article.href} class="block bg-white rounded-lg p-4 border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-neutral-900 mb-1">{article.title}</h3>
+          <span class="text-sm text-neutral-500">{article.date}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</PageLayout>
