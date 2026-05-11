@@ -59,7 +59,7 @@ export function generateOrganizationSchema() {
     logo: 'https://chinashoe.cc/favicon.svg',
     description: 'Your trusted B2B footwear knowledge hub - Connecting global shoe buyers with Chinese manufacturers and industry insights.',
     sameAs: [
-      'https://linkedin.com/company/chinashoe',
+      'https://www.linkedin.com/in/chun-zhang-aba391186',
       'https://twitter.com/chinashoecc',
     ],
     contactPoint: {
@@ -97,6 +97,88 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
       position: index + 1,
       name: item.name,
       item: item.url?.startsWith('http') ? item.url : `https://chinashoe.cc${item.url || ''}`,
+    })),
+  };
+}
+
+// Generate Article Schema for content pages
+export function generateArticleSchema(props: {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  authors?: string[];
+  tags?: string[];
+  section?: string;
+}) {
+  const siteUrl = 'https://chinashoe.cc';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: props.title,
+    description: props.description,
+    url: props.url?.startsWith('http') ? props.url : `${siteUrl}${props.url}`,
+    image: props.image || `${siteUrl}/og-default.jpg`,
+    datePublished: props.publishedTime || new Date().toISOString(),
+    dateModified: props.modifiedTime || new Date().toISOString(),
+    author: props.authors?.map(a => ({
+      '@type': 'Person',
+      name: a,
+    })) || [{ '@type': 'Person', name: 'ChinaShoe.cc Editorial Team' }],
+    publisher: {
+      '@type': 'Organization',
+      name: 'ChinaShoe.cc',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/favicon.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': props.url?.startsWith('http') ? props.url : `${siteUrl}${props.url}`,
+    },
+    articleSection: props.section || 'Footwear Industry',
+    keywords: props.tags?.join(', ') || '',
+  };
+}
+
+// Generate FAQ Schema for FAQ content
+export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+// Generate HowTo Schema for step-by-step guides
+export function generateHowToSchema(props: {
+  name: string;
+  description: string;
+  steps: Array<{ name: string; text: string; image?: string }>;
+  totalTime?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: props.name,
+    description: props.description,
+    totalTime: props.totalTime,
+    step: props.steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.image && { image: step.image }),
     })),
   };
 }

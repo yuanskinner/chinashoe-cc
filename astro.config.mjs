@@ -9,9 +9,48 @@ export default defineConfig({
     tailwind(),
     sitemap({
       filter: (page) => !page.includes('/api/'),
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date(),
+      serialize(item) {
+        // Higher priority for key pages
+        if (item.url === 'https://chinashoe.cc/' || item.url === 'https://chinashoe.cc') {
+          item.changefreq = 'daily';
+          item.priority = 1.0;
+        } else if (
+          item.url.includes('/encyclopedia/') && 
+          !item.url.includes('/materials/') && 
+          !item.url.includes('/manufacturing/')
+        ) {
+          item.changefreq = 'weekly';
+          item.priority = 0.8;
+        } else if (
+          item.url.includes('/suppliers/')
+        ) {
+          item.changefreq = 'weekly';
+          item.priority = 0.9;
+        } else if (
+          item.url.includes('/market/')
+        ) {
+          item.changefreq = 'monthly';
+          item.priority = 0.8;
+        } else if (
+          item.url.includes('/sourcing/')
+        ) {
+          item.changefreq = 'monthly';
+          item.priority = 0.7;
+        } else if (
+          item.url === 'https://chinashoe.cc/about/' ||
+          item.url === 'https://chinashoe.cc/contact/'
+        ) {
+          item.changefreq = 'monthly';
+          item.priority = 0.5;
+        } else if (
+          item.url.includes('/privacy') ||
+          item.url.includes('/terms')
+        ) {
+          item.changefreq = 'yearly';
+          item.priority = 0.3;
+        }
+        return item;
+      },
     }),
   ],
   build: {

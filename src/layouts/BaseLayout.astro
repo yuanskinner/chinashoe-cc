@@ -72,6 +72,7 @@ const websiteSchema = generateWebsiteSchema();
     
     <!-- Alternate Languages (for future i18n) -->
     <link rel="alternate" hreflang="en" href={pageUrl} />
+    <link rel="alternate" hreflang="zh-Hans" href={pageUrl} />
     <link rel="alternate" hreflang="x-default" href={pageUrl} />
     
     <!-- Schema.org Structured Data -->
@@ -82,6 +83,31 @@ const websiteSchema = generateWebsiteSchema();
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Mermaid.js for diagram rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof mermaid !== 'undefined') {
+          mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+              primaryColor: '#B91C1C',
+              primaryTextColor: '#fff',
+              primaryBorderColor: '#991B1B',
+              lineColor: '#525252',
+              secondaryColor: '#FEE2E2',
+              tertiaryColor: '#FFF7ED',
+            },
+            flowchart: {
+              useMaxWidth: true,
+              htmlLabels: true,
+              curve: 'basis',
+            },
+          });
+        }
+      });
+    </script>
   </head>
   <body class="min-h-screen flex flex-col bg-white">
     <Header />

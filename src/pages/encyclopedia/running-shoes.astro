@@ -1,5 +1,7 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
+import FAQSection from '@components/FAQSection.astro';
+import { generateFAQSchema } from '@utils/seo';
 
 const features = [
   {
@@ -46,11 +48,27 @@ const relatedCategories = [
   { name: 'Hiking Shoes', href: '/encyclopedia/hiking-shoes/', count: 72 },
   { name: 'Tennis Shoes', href: '/encyclopedia/tennis-shoes/', count: 65 },
 ];
+
+const faqs = [
+  { question: 'How often should I replace my running shoes?', answer: 'Most running shoes should be replaced every 400-600 miles (640-960 km) or every 6-8 months for regular runners. Signs of wear include compressed midsole cushioning, worn-out treads, and increased body aches after runs.' },
+  { question: 'What is the difference between neutral and stability running shoes?', answer: 'Neutral shoes are designed for runners with normal pronation and provide balanced cushioning. Stability shoes include medial support features like denser foam or posting to prevent overpronation (inward rolling of the foot). Choose based on your gait analysis.' },
+  { question: 'Should running shoes be a size bigger?', answer: 'Yes, running shoes should typically be 0.5 to 1 size larger than your casual shoes. Your feet swell during running, and you need about a thumb\'s width of space between your longest toe and the shoe\'s end to prevent black toenails and blisters.' },
+  { question: 'Can I use running shoes for walking?', answer: 'While you can walk in running shoes, they are designed with forward motion in mind. Walking shoes have different flexibility patterns and heel strike cushioning. For regular walking, dedicated walking shoes may offer better support and durability.' },
+  { question: 'What is the best cushioning technology for marathon running?', answer: 'For marathons, responsive cushioning technologies like carbon plate systems (Nike ZoomX, Adidas Lightstrike Pro) combined with energy-returning foams are ideal. These reduce fatigue over long distances while maintaining efficiency.' },
+];
+
+const faqSchema = generateFAQSchema(faqs);
 ---
 
 <PageLayout
   title="Running Shoes Guide"
   description="Comprehensive guide to running shoes: anatomy, cushioning technologies, categories, and how to choose the right shoes for your running style."
+  type="article"
+  publishedTime="2025-01-15T08:00:00+08:00"
+  modifiedTime="2025-06-15T08:00:00+08:00"
+  authors={['ChinaShoe.cc Editorial Team']}
+  tags={['running shoes', 'athletic footwear', 'cushioning technology', 'shoe anatomy', 'running gear']}
+  section="Athletic & Sports"
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
@@ -160,4 +178,8 @@ const relatedCategories = [
       ))}
     </div>
   </div>
+
+  <!-- FAQ Section -->
+  <FAQSection faqs={faqs} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </PageLayout>
