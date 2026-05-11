@@ -1,0 +1,390 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Compliance & Regulations for Footwear"
+  description="Understanding footwear compliance requirements: safety standards, chemical regulations, labeling, and international trade compliance."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Compliance', url: '/sourcing/compliance/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Compliance & Regulations
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Understanding footwear compliance requirements: safety standards, chemical regulations, labeling, and international trade compliance
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Why Compliance Matters</h2>
+      <p>
+        Non-compliance can result in product recalls, fines, shipment delays, and reputational damage. Understanding requirements protects your business and customers.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Compliance Impact] --> B[Legal Requirements]
+    A --> C[Consumer Safety]
+    A --> D[Brand Protection]
+    A --> E[Market Access]
+    
+    B --> B1[Import regulations]
+    B1 --> B2[Avoid fines]
+    
+    C --> C1[No harmful chemicals]
+    C1 --> C2[No safety hazards]
+    
+    D --> D1[No recalls]
+    D1 --> D2[Reputation intact]
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Major Market Regulations</h2>
+      
+      <h3>United States (CPSC)</h3>
+      <p>
+        The Consumer Product Safety Commission (CPSC) regulates footwear safety.
+      </p>
+      <ul>
+        <li><strong>FHSA:</strong> Federal Hazardous Substances Act requirements</li>
+        <li><strong>Lead Paint:</strong> Max 90 ppm lead in paint/surface coatings</li>
+        <li><strong>Phthalates:</strong> DEHP, DBP, BBP restricted in children's shoes</li>
+        <li><strong>Small Parts:</strong> Not allowed in children's shoes under 3 years</li>
+        <li><strong>Flammability:</strong> Must meet flammability standards</li>
+      </ul>
+
+      <h3>European Union (REACH/CPSR)</h3>
+      <p>
+        The REACH regulation is the most comprehensive chemical regulation globally.
+      </p>
+      <ul>
+        <li><strong>REACH:</strong> Registration, Evaluation, Authorization of Chemicals</li>
+        <li><strong>SVHC:</strong> Substances of Very High Concern list</li>
+        <li><strong>Phthalates:</strong> DEHP, DBP, BBP, DINP restricted</li>
+        <li><strong>Azo Dyes:</strong> Certain azo dyes prohibited</li>
+        <li><strong>Nickel:</strong> Nickel release limits for metal parts</li>
+        <li><strong>CPSR:</strong> Cosmetic Products Safety Report for skin contact</li>
+      </ul>
+
+      <h3>United Kingdom (UK REACH)</h3>
+      <p>
+        Post-Brexit UK has maintained similar requirements with UK REACH.
+      </p>
+      <ul>
+        <li>Similar to EU REACH requirements</li>
+        <li>UKCA marking required</li>
+        <li>UK Responsible Person required</li>
+      </ul>
+
+      <h3>Australia</h3>
+      <ul>
+        <li><strong>ACCS:</strong> Australian Consumer Competition Commission</li>
+        <li><strong>Mandatory Standards:</strong> Product safety requirements</li>
+        <li><strong>Chemical Standards:</strong> Similar to EU approach</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Restricted Substances</h2>
+      <p>
+        Chemical restrictions vary by market but share common concerns.
+      </p>
+
+      <h3>Common Restricted Chemicals</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Chemical</th>
+              <th>Restriction</th>
+              <th>Typical Limit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lead</td>
+              <td>Paint, surface coatings</td>
+              <td>90-100 ppm</td>
+            </tr>
+            <tr>
+              <td>Phthalates (DEHP, DBP, BBP)</td>
+              <td>Plastic components</td>
+              <td>0.1% each</td>
+            </tr>
+            <tr>
+              <td>DINP, DIDP, DNOP</td>
+              <td>Children's products</td>
+              <td>0.1% each</td>
+            </tr>
+            <tr>
+              <td>Azo Dyes</td>
+              <td>Textile dyes</td>
+              <td>30 mg/kg</td>
+            </tr>
+            <tr>
+              <td>Formaldehyde</td>
+              <td>Textiles, leather</td>
+              <td>75-300 mg/kg</td>
+            </tr>
+            <tr>
+              <td>Nickel</td>
+              <td>Metal accessories</td>
+              <td>0.5 μg/cm²/week</td>
+            </tr>
+            <tr>
+              <td>Chrome (VI)</td>
+              <td>Leather products</td>
+              <td>3 mg/kg</td>
+            </tr>
+            <tr>
+              <td>PCBs</td>
+              <td>Banned substances</td>
+              <td>50 mg/kg</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Supplier Requirements</h3>
+      <p>
+        Require from your footwear suppliers:
+      </p>
+      <ul>
+        <li><strong>RSL (Restricted Substances List):</strong> Documented chemical compliance</li>
+        <li><strong>Test Reports:</strong> Third-party laboratory verification</li>
+        <li><strong>Material Data Sheets:</strong> MSDS for all materials</li>
+        <li><strong>Compliance Declaration:</strong> Written guarantee of compliance</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Labeling Requirements</h2>
+      <p>
+        Product labeling is mandatory in most markets. Requirements vary by region.
+      </p>
+
+      <h3>US Labeling Requirements</h3>
+      <ul>
+        <li><strong>FTC Labels:</strong> Country of origin mandatory</li>
+        <li><strong>Material Content:</strong> Textile fiber content required</li>
+        <li><strong>Size:</strong> US sizes clearly marked</li>
+        <li><strong>Care Instructions:</strong> If applicable</li>
+        <li><strong>RN Number:</strong> Registered identification number</li>
+      </ul>
+
+      <h3>EU Labeling Requirements</h3>
+      <ul>
+        <li><strong>CE Marking:</strong> If applicable to safety</li>
+        <li><strong>Country of Origin:</strong> Made in [country]</li>
+        <li><strong>EImporter:</strong> EU responsible party</li>
+        <li><strong>Size:</strong> EU sizing standard</li>
+        <li><strong>Material Content:</strong> Fiber composition</li>
+        <li><strong>Care Symbols:</strong> Standard care labels</li>
+      </ul>
+
+      <h3>Label Content Checklist</h3>
+      <div class="mermaid">
+flowchart TD
+    A[Label Checklist] --> B[Mandatory]
+    A --> C[Recommended]
+    
+    B --> B1[Country of Origin]
+    B1 --> B2[Size]
+    B2 --> B3[Material Content]
+    B3 --> B4[Manufacturer Info]
+    B3 --> B5[Care Instructions]
+    
+    C --> C1[Brand/Logo]
+    C1 --> C2[Style Number]
+    C2 --> C3[Barcode]
+    C2 --> C4[Import Date]
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Safety Standards</h2>
+      <p>
+        Different footwear types have specific safety requirements.
+      </p>
+
+      <h3>Safety Footwear (Occupational)</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Standard</th>
+              <th>Region</th>
+              <th>Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ASTM F2413</td>
+              <td>USA</td>
+              <td>Impact, compression, puncture resistance</td>
+            </tr>
+            <tr>
+              <td>EN ISO 20345</td>
+              <td>Europe</td>
+              <td>SB, S1-S5 categories</td>
+            </tr>
+            <tr>
+              <td>AS/NZS 2210</td>
+              <td>Australia</td>
+              <td>Safety footwear standards</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Children's Footwear</h3>
+      <ul>
+        <li><strong>Age-Appropriate:</strong> Design appropriate for child use</li>
+        <li><strong>Small Parts:</strong> No choking hazards</li>
+        <li><strong>Sharp Edges:</strong> No exposed sharp edges</li>
+        <li><strong>Secure Fastening:</strong> Straps, laces stay secured</li>
+        <li><strong>Slip Resistance:</strong> Appropriate for children</li>
+      </ul>
+
+      <h3>Athletic/Sports Footwear</h3>
+      <ul>
+        <li><strong>ASTM F2913:</strong> Slip resistance testing</li>
+        <li><strong>UV Resistance:</strong> For outdoor use</li>
+        <li><strong>Retroreflective:</strong> For running/jogging shoes</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Testing Requirements</h2>
+      <p>
+        Product testing validates compliance with regulations.
+      </p>
+
+      <h3>Common Tests for Footwear</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Method</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lead in Paint</td>
+              <td>CPSC-CH-E1003</td>
+              <td>Surface coating lead content</td>
+            </tr>
+            <tr>
+              <td>Phthalates</td>
+              <td>CPSC-CH-C1001</td>
+              <td>Plastic component testing</td>
+            </tr>
+            <tr>
+              <td>Azo Dyes</td>
+              <td>EN 14362</td>
+              <td>Textile dye safety</td>
+            </tr>
+            <tr>
+              <td>Formaldehyde</td>
+              <td>ISO 17226</td>
+              <td>Leather/textile content</td>
+            </tr>
+            <tr>
+              <td>Nickel Release</td>
+              <td>EN 1811</td>
+              <td>Metal accessories</td>
+            </tr>
+            <tr>
+              <td>Slip Resistance</td>
+              <td>ASTM F2913</td>
+              <td>Sole traction</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Testing Strategy</h3>
+      <ul>
+        <li><strong>Initial Testing:</strong> First production run</li>
+        <li><strong>Annual Testing:</strong> Ongoing compliance</li>
+        <li><strong>Material Changes:</strong> When materials change</li>
+        <li><strong>Supplier Changes:</strong> New supplier validation</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Documentation Requirements</h2>
+      <p>
+        Maintain comprehensive documentation for compliance verification.
+      </p>
+
+      <h3>Required Documentation</h3>
+      <ul>
+        <li><strong>Test Reports:</strong> From accredited laboratories</li>
+        <li><strong>Compliance Declarations:</strong> Supplier-signed declarations</li>
+        <li><strong>RSL Documentation:</strong> Restricted substances list</li>
+        <li><strong>Traceability Records:</strong> Production batch records</li>
+        <li><strong>Audit Reports:</strong> Factory audit documentation</li>
+        <li><strong>Label Samples:</strong> Approved label artwork</li>
+      </ul>
+
+      <h3>Retention Periods</h3>
+      <p>
+        Keep records for:
+      </p>
+      <ul>
+        <li><strong>US:</strong> 3 years after sale</li>
+        <li><strong>EU:</strong> 10 years after sale</li>
+        <li><strong>General:</strong> Duration of product lifecycle + 2 years</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Working with Suppliers</h2>
+      <p>
+        Compliance is a shared responsibility between buyer and supplier.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Compliance Responsibility] --> B[Buyer Responsibilities]
+    A --> C[Supplier Responsibilities]
+    
+    B --> B1[Clear Requirements]
+    B1 --> B2[Testing Verification]
+    B2 --> B3[Market Regulations]
+    
+    C --> C1[Material Testing]
+    C1 --> C2[Process Control]
+    C2 --> C3[Documentation]
+      </div>
+
+      <h3>Buyer Actions</h3>
+      <ul>
+        <li>Provide clear compliance requirements</li>
+        <li>Specify target market regulations</li>
+        <li>Verify testing credentials</li>
+        <li>Conduct factory audits</li>
+        <li>Monitor regulatory changes</li>
+      </ul>
+
+      <h3>Supplier Requirements</h3>
+      <ul>
+        <li>Maintain compliance documentation</li>
+        <li>Use approved materials only</li>
+        <li>Conduct regular testing</li>
+        <li>Report any compliance issues</li>
+        <li>Allow factory inspections</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

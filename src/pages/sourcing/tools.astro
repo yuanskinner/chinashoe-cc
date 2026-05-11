@@ -1,0 +1,560 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Tools & Templates for Footwear Sourcing"
+  description="Essential tools, templates, and resources for footwear sourcing: inspection checklists, supplier evaluation forms, and calculation tools."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Tools & Templates', url: '/sourcing/tools/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Tools & Templates
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Essential tools and templates for footwear sourcing: checklists, forms, calculators, and best practice documents
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Quality Inspection Checklists</h2>
+      <p>
+        Use these checklists to ensure consistent quality across orders and suppliers.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Inspection Process] --> B[Pre-shipment]
+    A --> C[During Production]
+    A --> D[Final Inspection]
+    
+    B --> B1[Materials Check]
+    B1 --> B2[First Article]
+    
+    C --> C1[Line Inspection]
+    C1 --> C2[Process Control]
+    
+    D --> D1[Visual Check]
+    D1 --> D2[Functional Test]
+    D2 --> D3[AQL Sampling]
+      </div>
+
+      <h3>Pre-Shipment Inspection Checklist</h3>
+      <div class="bg-neutral-50 p-6 rounded-lg">
+        <h4 class="font-semibold mb-4">Visual Inspection Points</h4>
+        <ul class="space-y-2">
+          <li><input type="checkbox" class="mr-2" /><strong>Overall Appearance:</strong> No visible defects, symmetry correct</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Stitching:</strong> Even spacing, no loose threads, proper tension</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Seams:</strong> No gap > 2mm, properly sealed</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Edges:</strong> Clean finishing, no rough edges</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Color Matching:</strong> Consistent across pairs and shipment</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Logo/Branding:</strong> Correct placement, clear printing</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Packaging:</strong> Correct style/color/size distribution</li>
+        </ul>
+        
+        <h4 class="font-semibold mb-4 mt-6">Functional Tests</h4>
+        <ul class="space-y-2">
+          <li><input type="checkbox" class="mr-2" /><strong>Fasteners:</strong> Zippers work smoothly, buttons secure</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Laces:</strong> Properly inserted, adequate length</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Buckles:</strong> Secure closure, easy operation</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Straps:</strong> Properly attached, adequate strength</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Flexing:</strong> No cracking at flex point</li>
+          <li><input type="checkbox" class="mr-2" /><strong>Heel Attachment:</strong> Secure, no wobble</li>
+        </ul>
+
+        <h4 class="font-semibold mb-4 mt-6">Size/Measurement Check</h4>
+        <ul class="space-y-2">
+          <li><input type="checkbox" class="mr-2" />Length within tolerance</li>
+          <li><input type="checkbox" class="mr-2" />Width within tolerance</li>
+          <li><input type="checkbox" class="mr-2" />Height correct</li>
+          <li><input type="checkbox" class="mr-2" />Weight within specification</li>
+        </ul>
+      </div>
+
+      <h3>AQL Sampling Standards</h3>
+      <p>
+        Use AQL (Acceptable Quality Level) sampling for objective quality determination.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Lot Size</th>
+              <th>Sample Size</th>
+              <th>AQL 2.5 (Major)</th>
+              <th>AQL 4.0 (Minor)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>501-1200</td>
+              <td>80</td>
+              <td>3</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>1201-3200</td>
+              <td>125</td>
+              <td>5</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>3201-10000</td>
+              <td>200</td>
+              <td>7</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>10001-35000</td>
+              <td>315</td>
+              <td>10</td>
+              <td>14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Supplier Evaluation Form</h2>
+      <p>
+        Use this template to systematically evaluate potential footwear suppliers.
+      </p>
+
+      <div class="bg-neutral-50 p-6 rounded-lg">
+        <h3 class="font-semibold mb-4">Factory Evaluation Scorecard</h3>
+        
+        <h4 class="font-medium mb-2">Section A: Production Capacity</h4>
+        <ul class="space-y-1 ml-4">
+          <li>Monthly capacity: _____ pairs</li>
+          <li>Number of production lines: _____</li>
+          <li>Workers count: _____</li>
+          <li>Lead time (standard): _____ days</li>
+          <li>Can meet your MOQ? [ ] Yes [ ] No</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Section B: Quality Management</h4>
+        <ul class="space-y-1 ml-4">
+          <li>Quality control staff: _____</li>
+          <li>QC ratio to workers: _____</li>
+          <li>Certifications: [ ] ISO [ ] BSCI [ ] SEDEX [ ] Other _____</li>
+          <li>Has laboratory? [ ] Yes [ ] No</li>
+          <li>Defect rate target: _____ %</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Section C: Experience</h4>
+        <ul class="space-y-1 ml-4">
+          <li>Years in business: _____</li>
+          <li>Years exporting: _____</li>
+          <li>Main markets: _____</li>
+          <li>Current major clients: _____</li>
+          <li>Experience with your product type? [ ] Yes [ ] No</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Section D: Communication</h4>
+        <ul class="space-y-1 ml-4">
+          <li>English speaking staff? [ ] Yes [ ] No</li>
+          <li>Response time: _____ hours</li>
+          <li>Communication tools: _____</li>
+          <li>Willing to video calls? [ ] Yes [ ] No</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Section E: Facilities</h4>
+        <ul class="space-y-1 ml-4">
+          <li>Factory area: _____ sqm</li>
+          <li>Showroom available? [ ] Yes [ ] No</li>
+          <li>Warehouse capacity: _____ sqm</li>
+          <li>Location (port distance): _____ km</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Landed Cost Calculator</h2>
+      <p>
+        Calculate the true cost of importing footwear with this formula.
+      </p>
+
+      <div class="bg-neutral-50 p-6 rounded-lg">
+        <h3 class="font-semibold mb-4">Total Landed Cost Formula</h3>
+        <div class="bg-white p-4 rounded border border-neutral-200 font-mono text-center">
+          <p class="text-lg">TLC = FOB + Ocean + Insurance + Duty + Clearance + Handling</p>
+        </div>
+
+        <h4 class="font-medium mb-2 mt-4">Example Calculation</h4>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Value</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FOB Price</td>
+                <td>$12.00/pair</td>
+                <td>Factory price</td>
+              </tr>
+              <tr>
+                <td>Ocean Freight</td>
+                <td>$0.85/pair</td>
+                <td>FCL 40ft, 6000 pairs</td>
+              </tr>
+              <tr>
+                <td>Insurance</td>
+                <td>$0.13/pair</td>
+                <td>~1.1% of value</td>
+              </tr>
+              <tr>
+                <td>Import Duty (12%)</td>
+                <td>$1.56/pair</td>
+                <td>12% x $13.00</td>
+              </tr>
+              <tr>
+                <td>Clearance</td>
+                <td>$0.25/pair</td>
+                <td>Broker fee</td>
+              </tr>
+              <tr>
+                <td>Local Delivery</td>
+                <td>$0.50/pair</td>
+                <td>Port to warehouse</td>
+              </tr>
+              <tr class="font-bold bg-primary-50">
+                <td>Total Landed Cost</td>
+                <td>$15.29/pair</td>
+                <td>27% above FOB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Price Negotiation Worksheet</h2>
+      <p>
+        Prepare for price negotiations with this worksheet.
+      </p>
+
+      <div class="bg-neutral-50 p-6 rounded-lg">
+        <h3 class="font-semibold mb-4">Pre-Negotiation Checklist</h3>
+        
+        <h4 class="font-medium mb-2">Know Your Position</h4>
+        <ul class="space-y-2">
+          <li>[ ] Target price: $_____</li>
+          <li>[ ] Walk-away price: $_____</li>
+          <li>[ ] Competitor quotes obtained: [ ] Yes [ ] No</li>
+          <li>[ ] Market price range known: [ ] Yes [ ] No</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Know Your Leverage</h4>
+        <ul class="space-y-2">
+          <li>[ ] Order volume: _____ pairs</li>
+          <li>[ ] Long-term potential: _____ pairs/year</li>
+          <li>[ ] Payment terms offered: _____</li>
+          <li>[ ] Alternative suppliers identified: [ ] Yes [ ] No</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Know Your Value</h4>
+        <ul class="space-y-2">
+          <li>[ ] Consistent ordering (loyalty premium?)</li>
+          <li>[ ] Full payment upfront (discount opportunity?)</li>
+          <li>[ ] Flexible delivery scheduling</li>
+          <li>[ ] Willingness to provide future business</li>
+        </ul>
+
+        <h4 class="font-medium mb-2 mt-4">Negotiation Trade-offs</h4>
+        <p class="text-sm mb-2">If they won't lower price, what can you ask for instead?</p>
+        <ul class="space-y-1">
+          <li>[ ] Extended payment terms</li>
+          <li>[ ] Free samples for next order</li>
+          <li>[ ] Reduced MOQ for first order</li>
+          <li>[ ] Faster production for rush orders</li>
+          <li>[ ] Waived tooling costs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Order Specification Template</h2>
+      <p>
+        Use this template to communicate order requirements clearly to suppliers.
+      </p>
+
+      <div class="bg-neutral-50 p-6 rounded-lg">
+        <pre class="whitespace-pre-wrap text-sm bg-white p-4 rounded border">
+═══════════════════════════════════════════
+       FOOTWEAR ORDER SPECIFICATION
+═══════════════════════════════════════════
+
+ORDER DETAILS
+Order Number: _____________
+Date: _____________
+Buyer: _____________
+Supplier: _____________
+
+PRODUCT INFORMATION
+Style Name: _____________
+Style Number: _____________
+Product Type: [ ] Athletic [ ] Casual [ ] Dress [ ] Other
+Gender: [ ] Men [ ] Women [ ] Children [ ] Unisex
+Size Range: US _____ to _____
+Width: [ ] Narrow [ ] Medium [ ] Wide [ ] Extra Wide
+
+MATERIALS
+Upper Material: _____________
+Lining Material: _____________
+Insole Material: _____________
+Outsole Material: _____________
+Hardware: _____________
+Packaging: _____________
+
+QUANTITY & PRICING
+Quantity per Size:
+  US 6: ___ pairs
+  US 7: ___ pairs
+  US 8: ___ pairs
+  US 9: ___ pairs
+  US 10: ___ pairs
+  US 11: ___ pairs
+  Total: ___ pairs
+
+FOB Price: $_____ per pair
+Total FOB Value: $_____
+Incoterms: [ ] EXW [ ] FOB [ ] CIF [ ] DDP
+Currency: _____________
+
+PRODUCTION TIMELINE
+Sample Approval Date: _____________
+Production Start: _____________
+Production Complete: _____________
+Ship Date: _____________
+Delivery Date: _____________
+
+QUALITY REQUIREMENTS
+AQL Standard: Major _____ Minor _____
+Inspection Standard: _____________
+Special Requirements: _____________
+
+PACKAGING
+Inner Packaging: _____________
+Master Carton: _____________
+Pairs per Carton: _____
+Carton Dimensions: _____ x _____ x _____ cm
+Carton Weight: _____ kg gross
+
+LABELING
+Brand Label: [ ] Required [ ] Not Required
+Size Label: [ ] Required [ ] Not Required
+Country of Origin: _____________
+UPC/EAN Barcode: [ ] Required [ ] Not Required
+
+PAYMENT TERMS
+Deposit: _____% upon order
+Balance: _____% before shipment
+Method: [ ] T/T [ ] L/C [ ] Other
+
+NOTES & SPECIAL INSTRUCTIONS
+_____________________________________________
+_____________________________________________
+_____________________________________________
+
+APPROVALS
+Buyer Signature: ____________ Date: _____
+Supplier Signature: ____________ Date: _____
+        </pre>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Production Timeline Template</h2>
+      <p>
+        Use this timeline to track production milestones.
+      </p>
+
+      <div class="mermaid">
+gantt
+    title Footwear Production Timeline
+    dateFormat  YYYY-MM-DD
+    section Sample
+    Sample approval           :a1, 2025-03-01, 14d
+    section Materials
+    Material procurement       :a2, after a1, 7d
+    Material inspection        :a3, after a2, 3d
+    section Production
+    Production start           :a4, after a3, 21d
+    Mid-line inspection        :a5, 2025-03-25, 1d
+    section QC
+    Final inspection           :a6, after a4, 3d
+    Packaging                 :a7, after a6, 3d
+    section Shipping
+    Ready for pickup           :a8, after a7, 1d
+    Shipment                   :a9, 2025-04-15, 1d
+      </div>
+
+      <h3>Standard Milestones</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Typical Timing</th>
+              <th>Action Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Order Confirmed</td>
+              <td>Day 0</td>
+              <td>Deposit payment</td>
+            </tr>
+            <tr>
+              <td>Sample Approved</td>
+              <td>Day 7-14</td>
+              <td>Written approval</td>
+            </tr>
+            <tr>
+              <td>Materials Shipped</td>
+              <td>Day 14-21</td>
+              <td>Track delivery</td>
+            </tr>
+            <tr>
+              <td>Production Start</td>
+              <td>Day 21-28</td>
+              <td>Request photos</td>
+            </tr>
+            <tr>
+              <td>Mid-line Inspection</td>
+              <td>Day 35-40</td>
+              <td>On-site/video QC</td>
+            </tr>
+            <tr>
+              <td>Final Inspection</td>
+              <td>Day 45-50</td>
+              <td>AQL sampling</td>
+            </tr>
+            <tr>
+              <td>Shipment</td>
+              <td>Day 50-55</td>
+              <td>Balance payment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Communication Templates</h2>
+      <p>
+        Standard templates for common communications with suppliers.
+      </p>
+
+      <h3>Initial Inquiry Email</h3>
+      <div class="bg-neutral-50 p-4 rounded-lg text-sm">
+        <pre class="whitespace-pre-wrap">
+Subject: Footwear Sourcing Inquiry - [Product Type]
+
+Dear [Supplier Name],
+
+I represent [Company Name], a [country] based 
+footwear importer. We are interested in sourcing 
+[product type] for our [market/brand].
+
+Requirements:
+- Product: [description]
+- Quantity: [amount] pairs per order
+- Quality Standard: [AQL/standard]
+- Target Price: $[XX.XX] FOB [port]
+- Target Delivery: [timeline]
+
+Could you please provide:
+1. Your product catalog
+2. FOB pricing for our requirements
+3. Sample availability and cost
+4. Production lead time
+5. Factory location and certifications
+
+Best regards,
+[Name]
+[Company]
+[Contact info]
+        </pre>
+      </div>
+
+      <h3 class="mt-6">Sample Request Email</h3>
+      <div class="bg-neutral-50 p-4 rounded-lg text-sm">
+        <pre class="whitespace-pre-wrap">
+Subject: Sample Request - Order #[XXXXX]
+
+Dear [Supplier Name],
+
+We would like to order samples for the following 
+styles as approved by our design team:
+
+Styles:
+1. [Style Name] - [Color] - Size [range]
+2. [Style Name] - [Color] - Size [range]
+
+Please ship:
+- [X] pairs per style (all sizes or [specific sizes])
+- Include original packaging
+
+Shipping address:
+[Full address]
+
+Please confirm:
+- Sample cost per pair
+- Shipping cost
+- Total amount due
+- Expected delivery date
+
+Payment: [PayPal/T/T to follow]
+
+Best regards,
+[Name]
+        </pre>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Useful Tools & Resources</h2>
+      
+      <h3>Currency Converters</h3>
+      <ul>
+        <li>XE.com - Real-time currency rates</li>
+        <li>OANDA - Historical rate data</li>
+        <li>XTransfer - Trade-focused forex</li>
+      </ul>
+
+      <h3>Shipping Calculators</h3>
+      <ul>
+        <li>Freightos - Container rate database</li>
+        <li>Flexport - Freight quotes</li>
+        <li>INTTRA - Ocean booking platform</li>
+      </ul>
+
+      <h3>Trade Databases</h3>
+      <ul>
+        <li>UN Comtrade - Trade statistics</li>
+        <li>Trade Map - Market analysis</li>
+        <li>HS Code Lookup - Tariff classification</li>
+      </ul>
+
+      <h3>Testing Laboratories</h3>
+      <ul>
+        <li>SGS - Global testing services</li>
+        <li>Bureau Veritas - Inspection & testing</li>
+        <li>Intertek - Laboratory services</li>
+        <li>TÜV - European testing</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

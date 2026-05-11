@@ -1,0 +1,425 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Shipping and Logistics for Footwear Import"
+  description="Complete guide to footwear shipping and logistics: incoterms, shipping methods, customs, documentation, and cost optimization."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Logistics', url: '/sourcing/logistics/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Shipping and Logistics for Footwear Import
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Complete guide to international logistics: shipping methods, incoterms, customs procedures, and cost optimization strategies
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Understanding Incoterms</h2>
+      <p>
+        Incoterms (International Commercial Terms) define the responsibilities of buyers and sellers in international trade. Choosing the right Incoterm affects your total cost, risk, and control over the shipment.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Choose Incoterm] --> B["Risk Transfer Point"]
+    B --> C[EXW - Ex Works]
+    B --> D[FCA - Free Carrier]
+    B --> E[CPT - Carriage Paid]
+    B --> F[CIP - Carriage Insurance]
+    B --> G[DAT - Delivered at Terminal]
+    B --> H[DAP - Delivered at Place]
+    B --> I[DDP - Delivered Duty Paid]
+    
+    C --> C1[Buyer assumes ALL risk]
+    C1 --> C2[Lowest seller obligation]
+    D --> D1[Seller delivers to carrier]
+    D1 --> D2[Buyer manages after]
+    F --> F1[Seller pays insurance]
+    F1 --> F2[Popular for footwear]
+    I --> I1[Seller assumes ALL risk]
+    I1 --> I2[Highest seller obligation]
+      </div>
+
+      <h3>Incoterms Comparison for Footwear</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Incoterm</th>
+              <th>Risk Transfer</th>
+              <th>Seller Obligations</th>
+              <th>Common Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>EXW</strong></td>
+              <td>Factory gate</td>
+              <td>Minimal</td>
+              <td>Buyer arranges all</td>
+            </tr>
+            <tr>
+              <td><strong>FOB</strong></td>
+              <td>Port of loading</td>
+              <td>Export clearance, loading</td>
+              <td>Traditional for China</td>
+            </tr>
+            <tr>
+              <td><strong>CIF</strong></td>
+              <td>Port of destination</td>
+              <td>+Ocean freight, insurance</td>
+              <td>Price quoted including freight</td>
+            </tr>
+            <tr>
+              <td><strong>DDP</strong></td>
+              <td>Buyer's location</td>
+              <td>All costs including duty</td>
+              <td>All-inclusive pricing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Recommended Incoterms by Situation</h3>
+      <ul>
+        <li><strong>New Importers:</strong> DDP - Simplest, supplier handles everything</li>
+        <li><strong>Experienced Importers:</strong> FOB - More control, lower cost</li>
+        <li><strong>Large Volume:</strong> CIF - Can negotiate better freight rates</li>
+        <li><strong>Small Orders:</strong> FOB - Consolidate shipments to reduce cost</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Shipping Methods</h2>
+      <p>
+        Footwear can be shipped via sea, air, or express courier. Each method has distinct cost, speed, and risk characteristics.
+      </p>
+
+      <div class="mermaid">
+flowchart LR
+    A[Shipping Options] --> B[Sea Freight]
+    A --> C[Air Freight]
+    A --> D[Express Courier]
+    
+    B --> B1[Full Container FCL]
+    B --> B2[Less than Container LCL]
+    C --> C1[Consolidated Air]
+    C --> C2[Charter]
+    D --> D1[Door-to-Door]
+    D --> D2[Door-to-Airport]
+      </div>
+
+      <h3>Sea Freight</h3>
+      <p>
+        The most common method for footwear imports due to cost efficiency. Ideal for orders of 500+ pairs.
+      </p>
+
+      <h4>Full Container Load (FCL)</h4>
+      <ul>
+        <li><strong>20ft Container:</strong> ~3,000-4,000 pairs (bulk)</li>
+        <li><strong>40ft Container:</strong> ~6,000-8,000 pairs (bulk)</li>
+        <li><strong>40ft HQ:</strong> ~7,000-9,000 pairs (bulk)</li>
+        <li><strong>Transit Time:</strong> 25-35 days to major ports</li>
+        <li><strong>Cost:</strong> $1,500-4,000 per container</li>
+      </ul>
+
+      <h4>Less than Container Load (LCL)</h4>
+      <ul>
+        <li>Consolidate with other shippers</li>
+        <li>Minimum volume: ~100 pairs</li>
+        <li>Transit Time: 30-40 days</li>
+        <li>Cost: $50-150 per CBM</li>
+      </ul>
+
+      <h3>Air Freight</h3>
+      <p>
+        Faster but significantly more expensive. Used for urgent orders or high-value footwear.
+      </p>
+      <ul>
+        <li><strong>Transit Time:</strong> 5-10 days</li>
+        <li><strong>Cost:</strong> $3-8 per kg</li>
+        <li><strong>Best For:</strong> Samples, urgent reorders, high-value products</li>
+      </ul>
+
+      <h3>Express Courier</h3>
+      <p>
+        Door-to-door service with customs clearance included. Convenient but expensive for large shipments.
+      </p>
+      <ul>
+        <li><strong>Transit Time:</strong> 3-7 days</li>
+        <li><strong>Cost:</strong> $8-20 per kg</li>
+        <li><strong>Best For:</strong> Samples, small orders, documents</li>
+      </ul>
+
+      <h3>Shipping Method Comparison</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Transit</th>
+              <th>Cost</th>
+              <th>Min Volume</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FCL Sea</td>
+              <td>25-35 days</td>
+              <td>$$$$$</td>
+              <td>~3,000 pairs</td>
+              <td>Large orders</td>
+            </tr>
+            <tr>
+              <td>LCL Sea</td>
+              <td>30-40 days</td>
+              <td>$$$</td>
+              <td>~100 pairs</td>
+              <td>Medium orders</td>
+            </tr>
+            <tr>
+              <td>Air Freight</td>
+              <td>5-10 days</td>
+              <td>$$$$</td>
+              <td>Any</td>
+              <td>Urgent/samples</td>
+            </tr>
+            <tr>
+              <td>Express</td>
+              <td>3-7 days</td>
+              <td>$$$$$</td>
+              <td>Any</td>
+              <td>Small/samples</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Packaging for Footwear</h2>
+      <p>
+        Proper packaging protects your products during transit and affects shipping costs.
+      </p>
+
+      <h3>Standard Packaging Configuration</h3>
+      <ul>
+        <li><strong>Inner Packaging:</strong> Individual shoe box or polybag</li>
+        <li><strong>Master Carton:</strong> Brown corrugated carton</li>
+        <li><strong>Packing:</strong> 6-12 pairs per carton (by size ratio)</li>
+        <li><strong>Pallet:</strong> Export-grade wooden or plastic pallet</li>
+      </ul>
+
+      <h3>Carton Specifications</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Size Range</th>
+              <th>Pairs/Carton</th>
+              <th>Carton Size (cm)</th>
+              <th>Gross Weight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Children (28-35)</td>
+              <td>12</td>
+              <td>50x35x25</td>
+              <td>8-10 kg</td>
+            </tr>
+            <tr>
+              <td>Women (36-39)</td>
+              <td>8</td>
+              <td>55x40x30</td>
+              <td>10-12 kg</td>
+            </tr>
+            <tr>
+              <td>Men (40-44)</td>
+              <td>6</td>
+              <td>60x45x35</td>
+              <td>12-15 kg</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Packaging Requirements</h3>
+      <ul>
+        <li><strong>Barcode Labels:</strong> Scannable UPC/EAN on each box</li>
+        <li><strong>Carton Markings:</strong> Style, size, color, quantity</li>
+        <li><strong>Country of Origin:</strong> Prominently displayed</li>
+        <li><strong>Fragile Warnings:</strong> For delicate materials</li>
+        <li><strong>Import/Export Symbols:</strong> As required</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Customs and Documentation</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Export from China] --> B[Customs Clearance]
+    B --> C[Inspection]
+    C --> D[Export License Check]
+    D --> E[Ocean/Air Transport]
+    E --> F[Arrival at Destination]
+    F --> G[Import Customs]
+    G --> H[Duty Payment]
+    H --> I[Inspection Release]
+    I --> J[Delivery to Warehouse]
+      </div>
+
+      <h3>Required Export Documents (China)</h3>
+      <ul>
+        <li><strong>Commercial Invoice:</strong> Full invoice with value, terms, description</li>
+        <li><strong>Packing List:</strong> Detailed carton contents</li>
+        <li><strong>Bill of Lading (B/L):</strong> Ocean bill or air waybill</li>
+        <li><strong>Export Declaration:</strong> Filed by factory or forwarder</li>
+        <li><strong>Certificate of Origin:</strong> For preferential tariffs</li>
+      </ul>
+
+      <h3>Required Import Documents (Destination)</h3>
+      <ul>
+        <li><strong>Commercial Invoice:</strong> For customs valuation</li>
+        <li><strong>Bill of Lading:</strong> Original for ocean freight</li>
+        <li><strong>Packing List:</strong> For inspection</li>
+        <li><strong>Entry Summary:</strong> Customs entry form</li>
+        <li><strong>Product Labels:</strong> Compliance verification</li>
+      </ul>
+
+      <h3>Import Duties and Tariffs</h3>
+      <p>
+        Footwear import duties vary by country and product classification. Key tariff codes:
+      </p>
+      <ul>
+        <li><strong>USA:</strong> HTS 6401-6406, Duties 8-20%</li>
+        <li><strong>EU:</strong> CN codes 6401-6406, Duties 8-17%</li>
+        <li><strong>UK:</strong> Similar to EU structure</li>
+        <li><strong>Australia:</strong> FTA rates may apply</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Freight Forwarder Selection</h2>
+      <p>
+        A reliable freight forwarder is essential for smooth logistics. They handle documentation, customs clearance, and coordination.
+      </p>
+
+      <h3>What to Look For</h3>
+      <ul>
+        <li><strong>Experience:</strong> Footwear/logistics specialization</li>
+        <li><strong>Network:</strong> Coverage in China and destination</li>
+        <li><strong>Services:</strong> Door-to-door, customs brokerage</li>
+        <li><strong>Technology:</strong> Tracking systems, documentation</li>
+        <li><strong>Insurance:</strong> Cargo insurance options</li>
+        <li><strong>References:</strong> Track record with similar clients</li>
+      </ul>
+
+      <h3>Key Questions to Ask</h3>
+      <ul>
+        <li>Do you handle footwear shipments?</li>
+        <li>What are your fees for FCL/LCL?</li>
+        <li>Do you offer customs clearance services?</li>
+        <li>What tracking capabilities do you have?</li>
+        <li>What happens if there's cargo damage?</li>
+        <li>Can you provide references from footwear clients?</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Cost Optimization Strategies</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Reduce Logistics Costs] --> B[Consolidate Shipments]
+    A --> C[Optimize Packaging]
+    A --> D[Choose Right Incoterm]
+    A --> E[Negotiate Rates]
+    A --> F[Plan Ahead]
+    
+    B --> B1[Combine orders]
+    B1 --> B2[Reduce per-unit cost]
+    
+    C --> C1[Right-size cartons]
+    C1 --> C2[Reduce void space]
+    
+    D --> D1[FOB vs CIF comparison]
+    D1 --> D2[Calculate total landed cost]
+    
+    E --> E1[Annual contracts]
+    E1 --> E2[Volume commitments]
+    
+    F --> F1[Book ahead]
+    F1 --> F2[Avoid peak surcharges]
+      </div>
+
+      <h3>Volume Optimization</h3>
+      <ul>
+        <li><strong>Order Consolidation:</strong> Combine multiple orders for full containers</li>
+        <li><strong>Regular Schedules:</strong> Monthly shipments vs. irregular</li>
+        <li><strong>Forward Planning:</strong> Book 2-4 weeks ahead to avoid peak rates</li>
+      </ul>
+
+      <h3>Packaging Optimization</h3>
+      <ul>
+        <li><strong>Right-size Cartons:</strong> Don't waste space</li>
+        <li><strong>Nested Packing:</strong> Maximize carton utilization</li>
+        <li><strong>Weight Optimization:</strong> Keep under rate breakpoints</li>
+      </ul>
+
+      <h3>Incoterm Cost Analysis</h3>
+      <p>
+        Always calculate total landed cost, not just unit price:
+      </p>
+      <ul>
+        <li>FOB price + ocean freight + insurance + duties + clearance + delivery</li>
+        <li>DDP price may seem higher but includes all costs</li>
+        <li>Compare on equal footing before deciding</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Risk Management</h2>
+      
+      <h3>Shipping Risks</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Physical Risks</h4>
+          <ul class="text-sm space-y-1">
+            <li>Water damage</li>
+            <li>Crushing/shifting</li>
+            <li>Theft/pilferage</li>
+            <li>Temperature damage</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Documentation Risks</h4>
+          <ul class="text-sm space-y-1">
+            <li>Customs delays</li>
+            <li>Incorrect classification</li>
+            <li>Missing documents</li>
+            <li>Valuation disputes</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Mitigation Strategies</h3>
+      <ul>
+        <li><strong>Cargo Insurance:</strong> Cover 110% of value</li>
+        <li><strong>Quality Packaging:</strong> Protect against damage</li>
+        <li><strong>Experienced Forwarder:</strong> Minimize documentation errors</li>
+        <li><strong>Contingency Planning:</strong> Build buffer time into schedules</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

@@ -1,0 +1,349 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Getting Started with China Footwear Sourcing"
+  description="Essential guide for beginners: how to start sourcing footwear from China, understand the market, and prepare for your first order."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Getting Started', url: '/sourcing/getting-started/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Getting Started with China Footwear Sourcing
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Everything you need to know to begin sourcing footwear from China confidently
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Introduction to China Footwear Sourcing</h2>
+      <p>
+        China remains the world's largest footwear producer, accounting for approximately 65% of global footwear production. The country's footwear industry offers unparalleled manufacturing capabilities, from high-volume commodity products to premium handcrafted items. This guide will walk you through the essential steps to start sourcing successfully.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>The Sourcing Journey: A Visual Overview</h2>
+      <p>
+        Understanding the complete sourcing workflow helps you plan effectively and avoid common pitfalls. Here's the typical journey from initial research to receiving your first shipment:
+      </p>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Define Your Product Requirements] --> B[Research Markets & Suppliers]
+    B --> C[Request Quotes & Samples]
+    C --> D[Evaluate Supplier Capabilities]
+    D --> E["Negotiate Terms"]
+    E -->|Accept| F[Sign Contract & Pay Deposit]
+    E -->|Reject| C
+    F --> G[Sample Approval]
+    G -->|Revisions Needed| H[Sample Modification]
+    H --> C
+    G -->|Approved| I[Mass Production]
+    I --> J[Quality Inspection]
+    J -->|Pass| K[Arrange Shipping]
+    J -->|Fail| L[Rework or Reject]
+    L --> I
+    K --> M[Receive Goods]
+    M --> N[Final Quality Check]
+    N --> O[Payment Balance]
+      </div>
+
+      <p class="mt-4 text-sm text-neutral-500">
+        The typical end-to-end sourcing cycle ranges from 45-90 days depending on product complexity and logistics.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 1: Define Your Requirements</h2>
+      <p>
+        Before contacting any supplier, you need clear specifications. Ambiguous requirements lead to quality issues, delays, and cost overruns.
+      </p>
+
+      <h3>Essential Product Specifications</h3>
+      <ul>
+        <li><strong>Product Type:</strong> Athletic, casual, formal, sandals, boots, etc.</li>
+        <li><strong>Target Market:</strong> North America, Europe, Asia, etc. (affects sizing and regulations)</li>
+        <li><strong>Quality Tier:</strong> Economy, mid-market, or premium positioning</li>
+        <li><strong>Price Target:</strong> FOB price range per pair</li>
+        <li><strong>Quantity:</strong> Initial order and projected annual volume</li>
+        <li><strong>Timeline:</strong> Required delivery date</li>
+      </ul>
+
+      <h3>Materials and Construction</h3>
+      <ul>
+        <li>Upper materials (leather, mesh, canvas, synthetic)</li>
+        <li>Outsole materials and construction method</li>
+        <li>Linings and insoles</li>
+        <li>Hardware and embellishments</li>
+        <li>Branding and packaging requirements</li>
+      </ul>
+
+      <h3>Technical Documentation</h3>
+      <p>
+        Prepare reference samples, technical packages, or detailed specifications. Include:
+      </p>
+      <ul>
+        <li>Product images or sketches</li>
+        <li>Material specifications</li>
+        <li>Size specifications</li>
+        <li>Packaging requirements</li>
+        <li>Labeling requirements</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 2: Research and Identify Suppliers</h2>
+      
+      <div class="mermaid">
+flowchart LR
+    A[Supplier Discovery Methods] --> B[Online Platforms]
+    A --> C[Trade Shows]
+    A --> D[Sourcing Agents]
+    A --> E[Direct Outreach]
+    
+    B --> B1[Alibaba/Made-in-China]
+    B --> B2[Industry Directories]
+    B --> B3[Social Media]
+    
+    C --> C1[Canton Fair]
+    C --> C2[Shanghai Shoes Expo]
+    C --> C3[MICAM Milano]
+    
+    D --> D1[Local Agents]
+    D --> D2[3PL Companies]
+    D --> D3[Sourcing Firms]
+    
+    E --> E1[Factory Websites]
+    E --> E2[Cold Inquiries]
+      </div>
+
+      <h3>Major Production Regions</h3>
+      
+      <div class="grid md:grid-cols-2 gap-4 my-6">
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Guangdong Province</h4>
+          <p class="text-sm text-neutral-600">
+            Athletic shoes, casual footwear, safety shoes. Major hubs: Dongguan, Guangzhou, Huizhou. Best for: Volume production, competitive pricing.
+          </p>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Fujian Province</h4>
+          <p class="text-sm text-neutral-600">
+            Sports brands, outdoor footwear. Major hub: Quanzhou. Best for: Athletic shoes, known for domestic sports brands.
+          </p>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Zhejiang Province</h4>
+          <p class="text-sm text-neutral-600">
+            Leather goods, fashion shoes. Major hubs: Wenzhou, Jiaxing. Best for: Dress shoes, leather products, export-oriented factories.
+          </p>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Shandong Province</h4>
+          <p class="text-sm text-neutral-600">
+            Rubber shoes, work footwear. Major hubs: Qingdao, Weifang. Best for: Rubber-soled shoes, outdoor footwear.
+          </p>
+        </div>
+      </div>
+
+      <h3>Evaluating Supplier Discovery Channels</h3>
+      
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Pros</th>
+              <th>Cons</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online Platforms</td>
+              <td>Wide selection, easy comparison</td>
+              <td>Quality varies, requires vetting</td>
+              <td>Initial research, small orders</td>
+            </tr>
+            <tr>
+              <td>Trade Shows</td>
+              <td>Direct contact, see products</td>
+              <td>Time-intensive, travel costs</td>
+              <td>Building relationships, new suppliers</td>
+            </tr>
+            <tr>
+              <td>Sourcing Agents</td>
+              <td>Local expertise, reduce language barrier</td>
+              <td>Additional cost, need to vet agent</td>
+              <td>Complex orders, new markets</td>
+            </tr>
+            <tr>
+              <td>Referrals</td>
+              <td>Pre-vetted, trusted</td>
+              <td>Limited options</td>
+              <td>Quality-focused orders</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 3: Initial Communication</h2>
+      <p>
+        Effective communication is critical. Many sourcing issues stem from misunderstandings that could be avoided with clear, thorough correspondence.
+      </p>
+
+      <h3>What to Include in Initial Inquiry</h3>
+      <ul>
+        <li>Self-introduction and company background</li>
+        <li>Product specifications (detailed as possible)</li>
+        <li>Target price per unit (FOB)</li>
+        <li>Required quantity per size/color</li>
+        <li>Packaging and labeling requirements</li>
+        <li>Target delivery date</li>
+        <li>Quality standards and certifications required</li>
+        <li>Sample requirements</li>
+      </ul>
+
+      <h3>Key Questions to Ask Suppliers</h3>
+      <ul>
+        <li>Do you specialize in this product type?</li>
+        <li>What is your production capacity per month?</li>
+        <li>What are your lead times for samples and bulk orders?</li>
+        <li>What quality control processes do you have?</li>
+        <li>Do you export to [your target market]?</li>
+        <li>What certifications do you hold?</li>
+        <li>Can you provide references from similar clients?</li>
+        <li>What are your payment terms?</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 4: Sample Evaluation</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Request Samples] --> B[Review Sample Quality]
+    B --> C["Acceptable?"]
+    C -->|Yes| D[Confirm Specifications]
+    C -->|No| E[Identify Issues]
+    E --> F[Request Revisions]
+    F --> G[Receive Revised Sample]
+    G --> B
+    D --> H[Negotiate Pricing]
+      </div>
+
+      <p>
+        Sample evaluation is your best opportunity to verify manufacturing quality before committing to production. Never skip this step for first-time supplier relationships.
+      </p>
+
+      <h3>Sample Types to Request</h3>
+      <ul>
+        <li><strong>Salesman Sample:</strong> Basic sample for reference (usually charged)</li>
+        <li><strong>Pre-production Sample:</strong> First run sample for approval before bulk</li>
+        <li><strong>Production Sample:</strong> Sample from actual production run</li>
+        <li><strong>Shipment Sample:</strong> Random sample from shipment for verification</li>
+      </ul>
+
+      <h3>Sample Evaluation Checklist</h3>
+      <ul>
+        <li>Materials match specifications</li>
+        <li>Construction quality meets standards</li>
+        <li>Size and fit are correct</li>
+        <li>Colors match reference</li>
+        <li>Packaging and labeling accurate</li>
+        <li>Branding and logos correct</li>
+        <li>Overall workmanship acceptable</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 5: Negotiation Basics</h2>
+      <p>
+        Price negotiation is a normal part of business. Understanding supplier cost structures helps you negotiate effectively.
+      </p>
+
+      <h3>Typical Price Components</h3>
+      <ul>
+        <li><strong>Materials:</strong> 35-50% of total cost</li>
+        <li><strong>Labor:</strong> 20-30% of total cost</li>
+        <li><strong>Factory Overhead:</strong> 10-15% of total cost</li>
+        <li><strong>Tooling/Molds:</strong> 5-10% (one-time cost)</li>
+        <li><strong>Profit Margin:</strong> 8-15%</li>
+      </ul>
+
+      <h3>Negotiation Leverage Points</h3>
+      <ul>
+        <li>Order volume (higher volume = lower unit price)</li>
+        <li>Payment terms (earlier payment = better pricing)</li>
+        <li>Off-season ordering (more flexibility)</li>
+        <li>Long-term partnership potential</li>
+        <li>Competitive quotes from multiple suppliers</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Step 6: Contract Essentials</h2>
+      <p>
+        Always use written contracts. Verbal agreements lead to disputes.
+      </p>
+
+      <h3>Must-Include Contract Terms</h3>
+      <ul>
+        <li>Complete product specifications</li>
+        <li>Unit price and total order value</li>
+        <li>Payment terms (deposit, balance)</li>
+        <li>Lead time and delivery date</li>
+        <li>Quality standards and acceptance criteria</li>
+        <li>Inspection procedures</li>
+        <li>Liability and warranty terms</li>
+        <li>Confidentiality clauses</li>
+        <li>Dispute resolution mechanism</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Common Beginner Mistakes to Avoid</h2>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 border border-red-200 bg-red-50 rounded-lg">
+          <h4 class="font-semibold text-red-700 mb-2">Skipping Sample Evaluation</h4>
+          <p class="text-sm text-red-600">Never skip samples for new suppliers. The cost of sample revisions is nothing compared to a rejected shipment.</p>
+        </div>
+        <div class="p-4 border border-red-200 bg-red-50 rounded-lg">
+          <h4 class="font-semibold text-red-700 mb-2">Unclear Specifications</h4>
+          <p class="text-sm text-red-600">Be specific. "Good quality" means different things to different people. Document everything.</p>
+        </div>
+        <div class="p-4 border border-red-200 bg-red-50 rounded-lg">
+          <h4 class="font-semibold text-red-700 mb-2">Ignoring Communication</h4>
+          <p class="text-sm text-red-600">Regular communication prevents surprises. Don't disappear for weeks during production.</p>
+        </div>
+        <div class="p-4 border border-red-200 bg-red-50 rounded-lg">
+          <h4 class="font-semibold text-red-700 mb-2">Full Payment Upfront</h4>
+          <p class="text-sm text-red-600">Never pay 100% upfront. Standard is 30% deposit, 70% before shipment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Next Steps</h2>
+      <p>
+        Ready to dive deeper? Explore these related guides:
+      </p>
+      <ul>
+        <li><a href="/sourcing/guide-to-sourcing-from-china/">Complete Sourcing Guide</a> - Comprehensive step-by-step process</li>
+        <li><a href="/sourcing/quality-control-checklist/">Quality Control Checklist</a> - Ensure consistent quality</li>
+        <li><a href="/sourcing/factory-audit-guide/">Factory Audit Guide</a> - Evaluate supplier capabilities</li>
+        <li><a href="/sourcing/understanding-moq/">Understanding MOQ</a> - Navigate minimum order requirements</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

@@ -1,0 +1,526 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Pricing & Costs for Footwear Sourcing"
+  description="Understanding footwear pricing structures, MOQ impact on costs, cost breakdowns, and strategies for managing production expenses."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Pricing & Costs', url: '/sourcing/pricing/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Pricing & Costs for Footwear Sourcing
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Comprehensive guide to footwear pricing structures, MOQ impact, cost breakdowns, and pricing optimization strategies
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Understanding Footwear Pricing</h2>
+      <p>
+        Footwear pricing is complex, with multiple factors affecting the final unit cost. Understanding the cost structure helps you negotiate better and avoid surprises.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Total Unit Cost] --> B[Material Costs 35-50%]
+    A --> C[Labor Costs 20-30%]
+    A --> D[Factory Overhead 10-15%]
+    A --> E[Tooling 5-10%]
+    A --> F[Profit Margin 8-15%]
+    
+    B --> B1[Upper Materials]
+    B --> B2[Outsole Materials]
+    B --> B3[Linings/Insoles]
+    B --> B4[Hardware/Findings]
+    B --> B5[Packaging]
+    
+    C --> C1[Direct Labor]
+    C --> C2[Indirect Labor]
+    C --> C3[Benefits]
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Cost Component Breakdown</h2>
+      
+      <h3>Material Costs (35-50% of total)</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>% of Material</th>
+              <th>Typical Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Upper Material</td>
+              <td>40-50%</td>
+              <td>$1.50-8.00</td>
+            </tr>
+            <tr>
+              <td>Outsole</td>
+              <td>20-30%</td>
+              <td>$0.80-4.00</td>
+            </tr>
+            <tr>
+              <td>Linings</td>
+              <td>8-12%</td>
+              <td>$0.30-1.00</td>
+            </tr>
+            <tr>
+              <td>Insoles</td>
+              <td>5-8%</td>
+              <td>$0.20-0.60</td>
+            </tr>
+            <tr>
+              <td>Hardware/Findings</td>
+              <td>5-10%</td>
+              <td>$0.20-0.80</td>
+            </tr>
+            <tr>
+              <td>Packaging</td>
+              <td>5-8%</td>
+              <td>$0.30-0.80</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Labor Costs (20-30% of total)</h3>
+      <p>
+        China's footwear labor costs average $2.50-4.00 per hour depending on region and worker skill. Total labor cost per pair depends on:
+      </p>
+      <ul>
+        <li><strong>Complexity:</strong> Simple slippers vs. athletic shoes</li>
+        <li><strong>Automation:</strong> Level of automated equipment</li>
+        <li><strong>Worker Skill:</strong> Experienced workers faster</li>
+        <li><strong>Location:</strong> Coastal vs. inland regions</li>
+      </ul>
+
+      <h3>Regional Labor Cost Comparison</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Region</th>
+              <th>Hourly Rate</th>
+              <th>Typical MOQ</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Guangdong (Coastal)</td>
+              <td>$3.50-4.50</td>
+              <td>500-1000</td>
+              <td>High quality, athletic</td>
+            </tr>
+            <tr>
+              <td>Fujian</td>
+              <td>$3.00-4.00</td>
+              <td>500-2000</td>
+              <td>Sports, outdoor</td>
+            </tr>
+            <tr>
+              <td>Zhejiang</td>
+              <td>$2.80-3.80</td>
+              <td>300-1000</td>
+              <td>Leather, dress</td>
+            </tr>
+            <tr>
+              <td>Wenzhou Area</td>
+              <td>$2.50-3.50</td>
+              <td>200-500</td>
+              <td>Economy, casual</td>
+            </tr>
+            <tr>
+              <td>Inland (Sichuan)</td>
+              <td>$2.00-2.80</td>
+              <td>300-1000</td>
+              <td>Labor-intensive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Understanding MOQ</h2>
+      <p>
+        Minimum Order Quantity (MOQ) is the minimum number of pairs a factory will produce per style/color. MOQ directly impacts your pricing and risk.
+      </p>
+
+      <div class="mermaid">
+flowchart LR
+    A[MOQ Impact] --> B[Lower MOQ]
+    A --> C[Higher MOQ]
+    
+    B --> B1[Higher Unit Price]
+    B1 --> B2[Lower Inventory Risk]
+    B1 --> B3[More Flexibility]
+    
+    C --> C1[Lower Unit Price]
+    C1 --> C2[Higher Inventory Risk]
+    C1 --> C3[Less Flexibility]
+      </div>
+
+      <h3>Typical MOQ Ranges</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Product Type</th>
+              <th>Typical MOQ</th>
+              <th>Price Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Simple Slippers</td>
+              <td>500-1000 pairs</td>
+              <td>15-25% above MOQ price</td>
+            </tr>
+            <tr>
+              <td>Casual/Canvas</td>
+              <td>500-1500 pairs</td>
+              <td>10-20% above MOQ price</td>
+            </tr>
+            <tr>
+              <td>Athletic/Sports</td>
+              <td>1000-3000 pairs</td>
+              <td>8-15% above MOQ price</td>
+            </tr>
+            <tr>
+              <td>Leather Dress</td>
+              <td>300-1000 pairs</td>
+              <td>12-18% above MOQ price</td>
+            </tr>
+            <tr>
+              <td>Premium/Custom</td>
+              <td>200-500 pairs</td>
+              <td>20-35% above MOQ price</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Strategies for Managing MOQ</h3>
+      <ul>
+        <li><strong>Combine Colors:</strong> Same style, multiple colors within MOQ</li>
+        <li><strong>Combine Sizes:</strong> All sizes within single order</li>
+        <li><strong>Plan Ahead:</strong> Larger orders reduce per-unit cost</li>
+        <li><strong>Build Forecasts:</strong> Share projections for flexibility</li>
+        <li><strong>Long-term Relationships:</strong> Flexibility earned over time</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Price Breakdown by Quality Tier</h2>
+      <p>
+        Footwear pricing varies dramatically based on quality positioning and target market.
+      </p>
+
+      <h3>FOB Price Ranges (USD per pair)</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Economy</th>
+              <th>Mid-Market</th>
+              <th>Premium</th>
+              <th>Luxury</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Casual/Slip-on</td>
+              <td>$3-6</td>
+              <td>$8-15</td>
+              <td>$20-35</td>
+              <td>$50+</td>
+            </tr>
+            <tr>
+              <td>Canvas Sneakers</td>
+              <td>$4-8</td>
+              <td>$10-20</td>
+              <td>$25-45</td>
+              <td>$60+</td>
+            </tr>
+            <tr>
+              <td>Leather Dress</td>
+              <td>$8-15</td>
+              <td>$18-35</td>
+              <td>$40-80</td>
+              <td>$120+</td>
+            </tr>
+            <tr>
+              <td>Athletic</td>
+              <td>$6-12</td>
+              <td>$15-30</td>
+              <td>$35-70</td>
+              <td>$100+</td>
+            </tr>
+            <tr>
+              <td>Sandals</td>
+              <td>$3-7</td>
+              <td>$9-18</td>
+              <td>$22-45</td>
+              <td>$70+</td>
+            </tr>
+            <tr>
+              <td>Boots</td>
+              <td>$10-20</td>
+              <td>$25-50</td>
+              <td>$55-100</td>
+              <td>$150+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-4 text-sm text-neutral-500">
+        Prices are indicative FOB China. Actual prices vary by specification, quantity, and supplier.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Total Landed Cost Calculation</h2>
+      <p>
+        The true cost of footwear includes more than just the FOB price. Calculate total landed cost for accurate profitability analysis.
+      </p>
+
+      <div class="mermaid">
+flowchart TD
+    A[Total Landed Cost] --> B[FOB Price]
+    A --> C[Ocean Freight]
+    A --> D[Insurance]
+    A --> E[Import Duties]
+    A --> F[Customs Clearance]
+    A --> G[Handling & Storage]
+    A --> H[Last Mile Delivery]
+    
+    C --> C1[$1-3 per pair]
+    C --> C2[FCL or LCL]
+    
+    E --> E1[8-20% by country]
+    E --> E2[Product classification]
+      </div>
+
+      <h3>Landek Cost Calculator Example</h3>
+      <p>
+        For a mid-market casual shoe at $12 FOB:
+      </p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Cost Component</th>
+              <th>Calculation</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FOB Price</td>
+              <td>Per pair</td>
+              <td>$12.00</td>
+            </tr>
+            <tr>
+              <td>Ocean Freight</td>
+              <td>~$0.80/pair (FCL)</td>
+              <td>$0.80</td>
+            </tr>
+            <tr>
+              <td>Insurance</td>
+              <td>~1% of value</td>
+              <td>$0.13</td>
+            </tr>
+            <tr>
+              <td>Import Duty (12%)</td>
+              <td>12% x $12.93</td>
+              <td>$1.55</td>
+            </tr>
+            <tr>
+              <td>Customs Clearance</td>
+              <td>Fixed + variable</td>
+              <td>$0.25</td>
+            </tr>
+            <tr>
+              <td>Local Handling</td>
+              <td>Warehouse + delivery</td>
+              <td>$0.50</td>
+            </tr>
+            <tr class="font-bold">
+              <td>Total Landed Cost</td>
+              <td></td>
+              <td>$15.23</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-4 text-sm">
+        <strong>Key Insight:</strong> Total landed cost is typically 25-35% higher than FOB price. Build this into your pricing strategy.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Tooling and Setup Costs</h2>
+      <p>
+        New product development requires tooling investment. These are one-time costs amortized over the first order.
+      </p>
+
+      <h3>Tooling Types and Costs</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Tooling Type</th>
+              <th>Purpose</th>
+              <th>Cost Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cutting Dies</td>
+              <td>Upper material cutting</td>
+              <td>$200-800 each</td>
+            </tr>
+            <tr>
+              <td>Outsole Molds</td>
+              <td>Rubber/TPU outsole molding</td>
+              <td>$500-3000 each</td>
+            </tr>
+            <tr>
+              <td>Lasts</td>
+              <td>Shoe form for lasting</td>
+              <td>$300-1500 pair</td>
+            </tr>
+            <tr>
+              <td>Insole Boards</td>
+              <td>Shank/insoles</td>
+              <td>$100-500</td>
+            </tr>
+            <tr>
+              <td>Packaging Dies</td>
+              <td>Box printing</td>
+              <td>$100-500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Amortizing Tooling</h3>
+      <p>
+        Typical tooling cost: $1,500-5,000 per new style. For a $15 shoe with 1000 pairs:
+      </p>
+      <ul>
+        <li>Tooling: $3,000</li>
+        <li>Amortized: $3.00 per pair</li>
+        <li>Effective first-order cost: $18.00/pair</li>
+        <li>Future orders: $15.00/pair (no tooling)</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Payment Terms</h2>
+      <p>
+        Payment terms affect your cash flow and risk exposure. Negotiate terms that protect both parties.
+      </p>
+
+      <h3>Standard Payment Terms</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Typical Payment</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sample Order</td>
+              <td>100% prepayment</td>
+              <td>Covers custom tooling</td>
+            </tr>
+            <tr>
+              <td>Bulk Order Deposit</td>
+              <td>30% on order</td>
+              <td>Raw material procurement</td>
+            </tr>
+            <tr>
+              <td>Mid-production</td>
+              <td>30% at QC pass</td>
+              <td>Labor and overhead</td>
+            </tr>
+            <tr>
+              <td>Balance</td>
+              <td>40% before shipment</td>
+              <td>Release documents</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Payment Methods</h3>
+      <ul>
+        <li><strong>T/T (Bank Transfer):</strong> Most common, 1-3 days</li>
+        <li><strong>PayPal:</strong> 3-5% fee, for small orders</li>
+        <li><strong>Letter of Credit:</strong> Bank担保, for large orders</li>
+        <li><strong>Escrow:</strong> Third-party holds payment</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Price Negotiation Strategies</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Price Negotiation] --> B[Leverage Points]
+    A --> C[Negotiation Tactics]
+    A --> D[Win-Win Outcomes]
+    
+    B --> B1[Volume commitment]
+    B --> B2[Long-term relationship]
+    B --> B3[Competitive quotes]
+    
+    C --> C1[Start low]
+    C --> C2[Bundle options]
+    C --> C3[Payment terms trade]
+    
+    D --> D1[Fair margin for supplier]
+    D --> D2[Competitive price for buyer]
+    D --> D3[Relationship building]
+      </div>
+
+      <h3>Leverage Points</h3>
+      <ul>
+        <li><strong>Volume:</strong> Larger orders = lower unit price</li>
+        <li><strong>Long-term:</strong> Regular orders = price loyalty</li>
+        <li><strong>Competition:</strong> Multiple supplier quotes</li>
+        <li><strong>Timing:</strong> Off-season ordering flexibility</li>
+        <li><strong>Payment:</strong> Faster payment = better price</li>
+      </ul>
+
+      <h3>Negotiation Tactics</h3>
+      <ul>
+        <li>Request itemized breakdowns</li>
+        <li>Compare quotes from multiple suppliers</li>
+        <li>Bundle multiple styles/colors</li>
+        <li>Offer longer-term commitment</li>
+        <li>Consider total value, not just price</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

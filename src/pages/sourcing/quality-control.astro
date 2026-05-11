@@ -1,0 +1,469 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Quality Control for Footwear Sourcing"
+  description="Comprehensive quality control guide for footwear sourcing: inspection methods, acceptance criteria, and quality standards for working with Chinese manufacturers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Quality Control', url: '/sourcing/quality-control/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Quality Control for Footwear Sourcing
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Comprehensive quality control guide: inspection methods, standards, and acceptance criteria for footwear production
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Introduction to Quality Control</h2>
+      <p>
+        Quality control is the cornerstone of successful footwear sourcing. Without systematic quality management, even the best-designed products can fail to meet customer expectations, resulting in costly returns, reputational damage, and lost business.
+      </p>
+      <p>
+        This guide covers the complete quality control lifecycle, from pre-production planning through final inspection, with practical checklists and decision frameworks.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Quality Control Process Flow</h2>
+      <p>
+        Quality management should be integrated throughout the production process, not just at the end. Here's the complete QC workflow:
+      </p>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Pre-Production Planning] --> B[Material Inspection]
+    B --> C["Acceptable?"]
+    C -->|No| B
+    C -->|Yes| D[First Article Inspection FAI]
+    D --> E["Approved?"]
+    E -->|No| F[Production Hold]
+    F --> G[Root Cause Analysis]
+    G --> H[Corrective Action]
+    H --> D
+    E -->|Yes| I[During Production Inspection]
+    I --> J["DPI Results"]
+    J -->|Issues Found| K[Defect Tracking]
+    K --> L[Re-inspection]
+    L --> I
+    J -->|Pass| M[Pre-Shipment Inspection]
+    M --> N["Passed?"]
+    N -->|Fail| O[Rework Required]
+    O --> P[Final Re-inspection]
+    P --> M
+    N -->|Pass| Q[Release for Shipment]
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Pre-Production Quality Planning</h2>
+      <p>
+        Quality planning begins before production starts. Clear specifications and standards prevent disputes and ensure everyone understands the requirements.
+      </p>
+
+      <h3>Creating Quality Specifications</h3>
+      <ul>
+        <li><strong>Technical Packages:</strong> Complete technical documentation including drawings, measurements, and material specs</li>
+        <li><strong>Approval Samples:</strong> Golden samples that define acceptable quality level</li>
+        <li><strong>AQL Standards:</strong> Define Acceptable Quality Level (typically AQL 2.5 for major defects, 4.0 for minor)</li>
+        <li><strong>Defect Classification:</strong> Clearly define critical, major, and minor defects</li>
+      </ul>
+
+      <h3>Defect Classification System</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Definition</th>
+              <th>AQL</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Critical</strong></td>
+              <td>Safety hazards, legal compliance issues</td>
+              <td>0% (zero tolerance)</td>
+              <td>100% sorting required</td>
+            </tr>
+            <tr>
+              <td><strong>Major</strong></td>
+              <td>Function impaired, customer likely to reject</td>
+              <td>2.5</td>
+              <td>AQL sampling inspection</td>
+            </tr>
+            <tr>
+              <td><strong>Minor</strong></td>
+              <td>Cosmetic issues, unlikely to affect sales</td>
+              <td>4.0</td>
+              <td>AQL sampling inspection</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Material Inspection</h2>
+      <p>
+        Materials account for 35-50% of footwear cost. Inspecting materials before production prevents costly errors.
+      </p>
+
+      <h3>Leather Materials</h3>
+      <ul>
+        <li><strong>Thickness:</strong> Verify with caliper (per spec +/- 0.2mm)</li>
+        <li><strong>Color Consistency:</strong> Match to approval sample under D65 light</li>
+        <li><strong>Surface Defects:</strong> Check for scars, growth marks, brand marks</li>
+        <li><strong>Physical Properties:</strong> Tensile strength, tear resistance (lab testing)</li>
+        <li><strong>Flex Cracking:</strong> Bally flexometer test (50,000 cycles minimum)</li>
+      </ul>
+
+      <h3>Synthetic Materials</h3>
+      <ul>
+        <li><strong>Thickness:</strong> Gauge measurement (per spec +/- 5%)</li>
+        <li><strong>Weight:</strong> GSM measurement (per spec +/- 5%)</li>
+        <li><strong>Color:</strong> Visual match under standard lighting</li>
+        <li><strong>Physical Properties:</strong> Abrasion resistance, adhesion (lab testing)</li>
+      </ul>
+
+      <h3>Outsole Materials</h3>
+      <ul>
+        <li><strong>Rubber Outsoles:</strong> Hardness (Shore A), density, abrasion resistance</li>
+        <li><strong>EVA Midsoles:</strong> Density, hardness, compression set</li>
+        <li><strong>TPU Outsoles:</strong> Hardness, color consistency, flex resistance</li>
+      </ul>
+
+      <div class="mermaid">
+flowchart LR
+    A[Material Receipt] --> B[Visual Inspection]
+    B --> C["Defects Found?"]
+    C -->|Yes| D[Sort or Reject]
+    D --> E[Supplier Notification]
+    C -->|No| F[Measurement Check]
+    F --> G["Within Spec?"]
+    G -->|No| H[Material Hold]
+    H --> I[Supplier Consultation]
+    I --> J[Use Decision]
+    G -->|Yes| K[Physical Testing]
+    K --> L["Test Pass?"]
+    L -->|No| M[Material Rejection]
+    L -->|Yes| N[Release for Production]
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>First Article Inspection (FAI)</h2>
+      <p>
+        FAI is conducted on the first completed pairs from production. This is your last chance to correct issues before mass production.
+      </p>
+
+      <h3>FAI Checklist Items</h3>
+      
+      <h4>1. Overall Appearance</h4>
+      <ul>
+        <li>Shape and profile match approved sample</li>
+        <li>Color matching approved sample</li>
+        <li>No visible defects on any surface</li>
+        <li>Overall workmanship acceptable</li>
+      </ul>
+
+      <h4>2. Upper Construction</h4>
+      <ul>
+        <li>Stitching: Even, no loose threads, correct stitch count per cm</li>
+        <li>Seams: No gap, properly bonded/sewn</li>
+        <li>Embossing/Printing: Correct pattern, no bleeding</li>
+        <li>Eyelets/Rivets: Secure, no corrosion, proper spacing</li>
+        <li>Laces: Correct length, color, aglet condition</li>
+      </ul>
+
+      <h4>3. Outsole Quality</h4>
+      <ul>
+        <li>Molding: No flash, complete replication of mold</li>
+        <li>Bonding: No lifting, delamination, or bubbling</li>
+        <li>Edges: Clean, no excess material</li>
+        <li>Markings: Correct size, style, logo</li>
+      </ul>
+
+      <h4>4. Bottom Construction</h4>
+      <ul>
+        <li>Welt stitching: Even, no missed stitches</li>
+        <li>Cement lines: Clean, consistent width</li>
+        <li>Heel attachment: Secure, proper height</li>
+      </ul>
+
+      <h4>5. Fit and Function</h4>
+      <ul>
+        <li>Last shape matches specification</li>
+        <li>Size verification (all sizes in range)</li>
+        <li>Zipper/Closure function</li>
+        <li>Flexibility appropriate for intended use</li>
+      </ul>
+
+      <h4>6. Labeling and Packaging</h4>
+      <ul>
+        <li>Size labels correct and readable</li>
+        <li>Country of origin correct</li>
+        <li>Material content labels accurate</li>
+        <li>Care instruction labels present</li>
+        <li>Barcode/UPC labels scannable</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>During Production Inspection (DPI)</h2>
+      <p>
+        DPI monitors quality consistency throughout production. Early detection prevents defect accumulation.
+      </p>
+
+      <h3>When to Conduct DPI</h3>
+      <ul>
+        <li>Start of production (after first 50-100 pairs)</li>
+        <li>After any line change or break</li>
+        <li>Mid-production checkpoint</li>
+        <li>After corrective actions are implemented</li>
+      </ul>
+
+      <h3>DPI Sampling Size</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Order Quantity</th>
+              <th>Sample Size</th>
+              <th>Critical</th>
+              <th>Major</th>
+              <th>Minor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>501-1200</td>
+              <td>80</td>
+              <td>0</td>
+              <td>3</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>1201-3200</td>
+              <td>125</td>
+              <td>0</td>
+              <td>5</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>3201-10000</td>
+              <td>200</td>
+              <td>0</td>
+              <td>7</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>10001-35000</td>
+              <td>315</td>
+              <td>0</td>
+              <td>10</td>
+              <td>14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Pre-Shipment Inspection (PSI)</h2>
+      <p>
+        PSI is the final quality gate before goods ship. This inspection verifies the shipment matches your order and meets quality standards.
+      </p>
+
+      <h3>PSI Procedure</h3>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Arrange Inspection] --> B[Random Sampling]
+    B --> C[Count Verification]
+    C --> D["Match Order?"]
+    D -->|No| E[Shortage Report]
+    D -->|Yes| F[Visual Inspection]
+    F --> G[Measurement Check]
+    G --> H[Function Test]
+    H --> I[Packaging Check]
+    I --> J[Labeling Verification]
+    J --> K[Defect Classification]
+    K --> L[Calculate Results]
+    L --> M["Pass AQL?"]
+    M -->|Yes| N[Issue Pass Report]
+    M -->|No| O[Fail Report]
+    O --> P[Negotiate Resolution]
+      </div>
+
+      <h3>PSI Inspection Points</h3>
+
+      <h4>1. Quantity Verification</h4>
+      <ul>
+        <li>Total pair count matches order</li>
+        <li>Size/color ratio matches specification</li>
+        <li>No shortages or overages</li>
+      </ul>
+
+      <h4>2. Pairing Check</h4>
+      <ul>
+        <li>All shoes properly paired</li>
+        <li>Left and right match</li>
+        <li>No mixed pairs</li>
+      </ul>
+
+      <h4>3. Visual Defects</h4>
+      <ul>
+        <li>Same as FAI checklist</li>
+        <li>Plus: Transit damage assessment</li>
+      </ul>
+
+      <h4>4. Measurements</h4>
+      <ul>
+        <li>Length: Check against size specification</li>
+        <li>Width: Spot check for each size</li>
+        <li>Height: Heel height, overall height</li>
+      </ul>
+
+      <h4>5. Packaging Integrity</h4>
+      <ul>
+        <li>Carton condition (no damage)</li>
+        <li>Carton marking accuracy</li>
+        <li>Packing method matches spec</li>
+        <li>Net/gross weight reasonable</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Common Footwear Defects</h2>
+      
+      <h3>Major Defects</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Stitching Defects</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Loose or broken stitches</li>
+            <li>Uneven stitch count</li>
+            <li>Skipped stitches</li>
+            <li>Unraveling thread</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Bonding Issues</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Delamination of sole</li>
+            <li>Peeling at toe or heel</li>
+            <li>Bubbling in cemented areas</li>
+            <li>Poor edge adhesion</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Material Defects</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Cracking or splitting leather</li>
+            <li>Mesh tears or runs</li>
+            <li>Color inconsistency</li>
+            <li>Visible scars or marks</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Structural Issues</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Twisted or warped shape</li>
+            <li>Asymmetric pairs</li>
+            <li>Incorrect heel height</li>
+            <li>Poor flex point alignment</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="mt-6">Minor Defects</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <h4 class="font-semibold text-yellow-700">Cosmetic Issues</h4>
+          <ul class="text-sm text-yellow-600 mt-2">
+            <li>Minor scratches on outsole</li>
+            <li>Slight color variation</li>
+            <li>Small dust marks</li>
+            <li>Minor glue residue</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <h4 class="font-semibold text-yellow-700">Finish Issues</h4>
+          <ul class="text-sm text-yellow-600 mt-2">
+            <li>Uneven dye uptake</li>
+            <li>Slight shine variation</li>
+            <li>Minor stitching tension variation</li>
+            <li>Small excess material trim</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Working with QC Agents</h2>
+      <p>
+        Many importers use third-party inspection services for objective quality assessment.
+      </p>
+
+      <h3>Popular QC Services</h3>
+      <ul>
+        <li><strong>Global Inspection:</strong> Wide network, competitive pricing</li>
+        <li><strong>QIMA:</strong> Global coverage, comprehensive reporting</li>
+        <li><strong>Asia Quality Focus:</strong> Footwear specialization</li>
+        <li><strong>Pro QC:</strong> Flexible engagement models</li>
+      </ul>
+
+      <h3>Inspection Brief Requirements</h3>
+      <ul>
+        <li>Inspection address and contact</li>
+        <li>Inspection date and time</li>
+        <li>Order details (quantity, style, sizes)</li>
+        <li>AQL standards to apply</li>
+        <li>Defect classification reference</li>
+        <li>Special requirements or concerns</li>
+        <li>Report format preferences</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Handling Quality Disputes</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Quality Issue Identified] --> B[Document Evidence]
+    B --> C["When Found?"]
+    C -->|Before Shipment| D[Negotiate Rework]
+    D --> E["Acceptable?"]
+    E -->|No| F[Request Replacement]
+    F --> G["Payment Impact?"]
+    G -->|Yes| H[Adjust Payment]
+    G -->|No| I[Proceed]
+    C -->|After Receipt| J[Assess Impact]
+    J --> K["Major Issue?"]
+    K -->|Yes| L[File Claim]
+    K -->|No| M[Document for Future]
+    L --> N[Negotiate Resolution]
+    N --> O[Compensation/Replacement]
+    N --> P[Supplier Corrective Action]
+      </div>
+
+      <h3>Prevention Strategies</h3>
+      <ul>
+        <li>Clear specifications with visual references</li>
+        <li>Pre-production samples with written approval</li>
+        <li>Regular communication during production</li>
+        <li>Third-party inspections</li>
+        <li>Escrow or hold-back payment arrangements</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>

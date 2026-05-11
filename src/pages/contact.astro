@@ -96,10 +96,56 @@ import { CONTACT, CONTACT_URLS, CONTACT_DISPLAY } from '@data/contact';
             ></textarea>
           </div>
 
-          <button type="submit" class="btn-primary w-full md:w-auto" onclick="event.preventDefault(); alert('Contact form feature is coming soon! Please reach us directly via email or WhatsApp.');">
+          <button type="submit" class="btn-primary w-full md:w-auto">
             Send Message
           </button>
+          <p class="text-sm text-neutral-500 mt-4">
+            Your message will be sent to {CONTACT.email}
+          </p>
         </form>
+        
+        <script define:vars={{ contactEmail: CONTACT.email }}>
+          document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const company = formData.get('company') || 'Not provided';
+            const inquiry = formData.get('inquiry');
+            const message = formData.get('message');
+            
+            const inquiryTypes = {
+              'supplier': 'Supplier Request',
+              'partnership': 'Business Partnership',
+              'content': 'Content Collaboration',
+              'technical': 'Technical Support',
+              'other': 'Other'
+            };
+            
+            const subject = encodeURIComponent(`ChinaShoe Inquiry: ${inquiryTypes[inquiry] || 'General'} from ${name}`);
+            const body = encodeURIComponent(
+              `Name: ${name}\n` +
+              `Email: ${email}\n` +
+              `Company: ${company}\n` +
+              `Inquiry Type: ${inquiryTypes[inquiry] || inquiry}\n\n` +
+              `Message:\n${message}`
+            );
+            
+            window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+            
+            // Show confirmation
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Message prepared! Check your email client.';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.disabled = false;
+              this.reset();
+            }, 3000);
+          });
+        </script>
       </div>
     </div>
 

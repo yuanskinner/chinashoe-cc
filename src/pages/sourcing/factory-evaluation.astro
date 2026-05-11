@@ -1,0 +1,386 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Factory Evaluation and Audit Guide"
+  description="How to evaluate and audit footwear factories in China: capabilities assessment, compliance verification, and supplier selection criteria."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Sourcing', url: '/sourcing/' },
+    { name: 'Factory Evaluation', url: '/sourcing/factory-evaluation/' },
+  ]}
+>
+  <article class="prose prose-lg max-w-none">
+    <header class="mb-8 pb-8 border-b border-neutral-200">
+      <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        Factory Evaluation and Audit Guide
+      </h1>
+      <p class="text-xl text-neutral-600">
+        Comprehensive guide to evaluating footwear factory capabilities, conducting audits, and selecting reliable suppliers
+      </p>
+    </header>
+
+    <section class="mb-8">
+      <h2>Why Factory Evaluation Matters</h2>
+      <p>
+        Factory evaluation is your primary risk mitigation tool when sourcing from China. A thorough evaluation before placing orders prevents costly quality issues, delivery delays, and relationship breakdowns.
+      </p>
+      <p>
+        Many sourcing failures stem from inadequate supplier assessment. Taking time to properly evaluate factories is an investment that pays dividends throughout your business relationship.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Factory Evaluation Process</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Identify Potential Suppliers] --> B[Background Research]
+    B --> C[Remote Assessment]
+    C --> D["Viable Candidate?"]
+    D -->|No| E[Remove from List]
+    D -->|Yes| F[Schedule Factory Visit]
+    F --> G[On-site Audit]
+    G --> H[Capability Assessment]
+    H --> I["Meets Standards?"]
+    I -->|No| J[Request Improvements or Reject]
+    I -->|Yes| K[Business Terms Negotiation]
+    K --> L[Contract Award]
+    J --> L
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Background Research</h2>
+      <p>
+        Before visiting or contacting a factory, conduct preliminary research to focus your efforts.
+      </p>
+
+      <h3>What to Research</h3>
+      <ul>
+        <li><strong>Business Registration:</strong> Verify legal entity and registration status</li>
+        <li><strong>Export History:</strong> Check target markets and export volumes</li>
+        <li><strong>Certifications:</strong> Look for ISO, BSCI, SA8000, etc.</li>
+        <li><strong>Reviews and References:</strong> Search for client testimonials</li>
+        <li><strong>Online Presence:</strong> Website, social media, trade profiles</li>
+        <li><strong>Production History:</strong> Years in operation, brand clients</li>
+      </ul>
+
+      <h3>Red Flags to Watch</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Suspicious Signs</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Recently established company</li>
+            <li>No verifiable export history</li>
+            <li>Claims to make products they don't have equipment for</li>
+            <li>Unusually low prices</li>
+            <li>Refuses to provide references</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <h4 class="font-semibold text-red-700">Verification Steps</h4>
+          <ul class="text-sm text-red-600 mt-2">
+            <li>Check business license number</li>
+            <li>Verify through Alibaba Trade Assurance</li>
+            <li>Search government databases</li>
+            <li>Check import/export records</li>
+            <li>Look for legal disputes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Factory Visit Preparation</h2>
+      <p>
+        A successful factory visit requires careful preparation. Arrive with clear objectives and an inspection checklist.
+      </p>
+
+      <h3>Visit Checklist</h3>
+      <ul>
+        <li><strong>Appointment:</strong> Schedule 1-2 weeks in advance</li>
+        <li><strong>Interpreter:</strong> Arrange if your Mandarin is limited</li>
+        <li><strong>Checklist:</strong> Prepare facility-specific inspection checklist</li>
+        <li><strong>Samples:</strong> Bring reference samples for comparison</li>
+        <li><strong>Camera:</strong> Document conditions (with permission)</li>
+        <li><strong>Measurement Tools:</strong> Calipers, color guides, etc.</li>
+      </ul>
+
+      <h3>What to Request</h3>
+      <ul>
+        <li>Complete factory tour (not just showroom)</li>
+        <li>Meeting with production manager</li>
+        <li>Meeting with quality control manager</li>
+        <li>Access to production records</li>
+        <li>Contact information for current clients (reference check)</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Factory Capability Assessment</h2>
+      
+      <div class="mermaid">
+flowchart TD
+    A[Capability Assessment] --> B[Production Capacity]
+    A --> C[Equipment]
+    A --> D[Workforce]
+    A --> E[Quality Systems]
+    A --> F[Experience]
+    
+    B --> B1[Monthly Capacity]
+    B --> B2[Current Utilization]
+    B --> B3[Lead Time Capacity]
+    
+    C --> C1[Equipment List]
+    C --> C2[Equipment Age]
+    C --> C3[Maintenance Records]
+    
+    D --> D1[Worker Count]
+    D --> D2[Skill Levels]
+    D --> D3[Turnover Rate]
+    
+    E --> E1[QC Procedures]
+    E --> E2[Certifications]
+    E --> E3[Testing Facilities]
+    
+    F --> F1[Product Types]
+    F --> F2[Client References]
+    F --> F3[Market Experience]
+      </div>
+
+      <h3>Production Capacity</h3>
+      <ul>
+        <li><strong>Monthly Capacity:</strong> Total pairs per month</li>
+        <li><strong>Production Lines:</strong> Number of assembly lines</li>
+        <li><strong>Current Utilization:</strong> Current order load percentage</li>
+        <li><strong>Lead Time Capacity:</strong> Can they meet your timeline?</li>
+      </ul>
+
+      <h3>Equipment Assessment</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Equipment Type</th>
+              <th>Purpose</th>
+              <th>What to Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cutting Machines</td>
+              <td>Die-cutting uppers</td>
+              <td>Precision, die inventory</td>
+            </tr>
+            <tr>
+              <td>Stitching Machines</td>
+              <td>Sewing operations</td>
+              <td>Type variety, condition</td>
+            </tr>
+            <tr>
+              <td>lasting Machines</td>
+              <td>Forming shoe shape</td>
+              <td>Automation level</td>
+            </tr>
+            <tr>
+              <td>Outsole Equipment</td>
+              <td>Injection/molding</td>
+              <td>Capacity, mold availability</td>
+            </tr>
+            <tr>
+              <td>Quality Testing</td>
+              <td>Testing facilities</td>
+              <td>Lab equipment, standards</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Quality System Evaluation</h2>
+      <p>
+        A factory's quality system determines the consistency of their output. Evaluate both documented procedures and actual practice.
+      </p>
+
+      <h3>Quality Documentation to Review</h3>
+      <ul>
+        <li>Quality manual and procedures</li>
+        <li>Work instructions for key processes</li>
+        <li>Inspection protocols</li>
+        <li>Non-conformance procedures</li>
+        <li>Corrective action processes</li>
+        <li>Equipment calibration records</li>
+      </ul>
+
+      <h3>Factory Certification Checklist</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Management</h4>
+          <ul class="text-sm space-y-1">
+            <li>ISO 9001:2015</li>
+            <li>Quality policy displayed</li>
+            <li>Management commitment visible</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Social Compliance</h4>
+          <ul class="text-sm space-y-1">
+            <li>BSCI</li>
+            <li>Sedex/SMETA</li>
+            <li>SA8000</li>
+            <li>ICTI</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-neutral-50 rounded-lg">
+          <h4 class="font-semibold mb-2">Environmental</h4>
+          <ul class="text-sm space-y-1">
+            <li>ISO 14001</li>
+            <li>Waste management</li>
+            <li>Chemical handling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2>Facility Inspection Checklist</h2>
+      
+      <h3>Production Areas</h3>
+      <ul>
+        <li>Clean and organized workstations</li>
+        <li>Proper lighting throughout</li>
+        <li>Appropriate ventilation</li>
+        <li>Safety equipment accessible</li>
+        <li>Material storage organized</li>
+        <li>Work-in-progress storage proper</li>
+      </ul>
+
+      <h3>Quality Control Areas</h3>
+      <ul>
+        <li>Dedicated QC stations</li>
+        <li>Measurement equipment calibrated</li>
+        <li>Testing facilities available</li>
+        <li>Defect sample boards displayed</li>
+        <li>AQL standards posted</li>
+      </ul>
+
+      <h3>Warehouse and Shipping</h3>
+      <ul>
+        <li>Finished goods storage clean</li>
+        <li>Packaging materials adequate</li>
+        <li>Shipping area accessible</li>
+        <li>Inventory management system</li>
+      </ul>
+
+      <h3>Worker Facilities</h3>
+      <ul>
+        <li>Clean cafeteria</li>
+        <li>Adequate rest areas</li>
+        <li>Proper bathrooms</li>
+        <li>Safety equipment provided</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Audit Scorecard</h2>
+      <p>
+        Use a standardized scoring system to compare factories objectively.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Weight</th>
+              <th>Score (1-5)</th>
+              <th>Weighted</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Production Capacity</td>
+              <td>15%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Equipment Condition</td>
+              <td>10%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Quality Systems</td>
+              <td>20%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Workforce Skills</td>
+              <td>10%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Certifications</td>
+              <td>10%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Facility Condition</td>
+              <td>10%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td>10%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Financial Stability</td>
+              <td>15%</td>
+              <td>___</td>
+              <td></td>
+            </tr>
+            <tr class="font-bold">
+              <td>Total Score</td>
+              <td>100%</td>
+              <td></td>
+              <td>___ / 5.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-4 text-sm text-neutral-500">
+        Score 4.0+ = Strong candidate | 3.0-3.9 = Acceptable with monitoring | Below 3.0 = Not recommended
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>Reference Checks</h2>
+      <p>
+        Always conduct reference checks with current or past clients. This provides insights that factories won't share themselves.
+      </p>
+
+      <h3>Questions to Ask References</h3>
+      <ul>
+        <li>What products did you have manufactured?</li>
+        <li>What was the order quantity and timeline?</li>
+        <li>How was communication throughout the process?</li>
+        <li>What was the quality like?</li>
+        <li>Were there any issues? How were they resolved?</li>
+        <li>Would you work with them again?</li>
+        <li>What are their strengths and weaknesses?</li>
+        <li>Any lessons learned?</li>
+      </ul>
+    </section>
+  </article>
+</PageLayout>
