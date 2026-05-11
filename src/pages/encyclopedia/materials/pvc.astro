@@ -1,0 +1,399 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'PVC Formulations',
+    description: 'Understanding PVC compound formulations for footwear applications.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pvc/formulations/',
+  },
+  {
+    title: 'PVC vs PU Comparison',
+    description: 'Comparative analysis of PVC and PU for footwear manufacturing.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pvc/pvc-vs-pu/',
+  },
+  {
+    title: 'PVC Durability',
+    description: 'Long-term performance and durability characteristics of PVC.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pvc/durability/',
+  },
+  {
+    title: 'Sustainability Options',
+    description: 'Environmental considerations and sustainable PVC alternatives.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pvc/sustainability/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 38 },
+  { name: 'PU Leather', href: '/encyclopedia/materials/pu-leather/', count: 42 },
+  { name: 'Outsole Materials', href: '/encyclopedia/materials/outsole/', count: 45 },
+];
+---
+
+<PageLayout
+  title="PVC Material Guide"
+  description="Complete guide to Polyvinyl Chloride (PVC) in footwear manufacturing: properties, processing, applications, cost analysis, and China sourcing strategies."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'PVC', url: '/encyclopedia/materials/pvc/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'PVC Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/pvc/', active: true },
+        { label: 'Formulations', href: '/encyclopedia/materials/pvc/formulations/' },
+        { label: 'PVC vs PU', href: '/encyclopedia/materials/pvc/pvc-vs-pu/' },
+        { label: 'Durability', href: '/encyclopedia/materials/pvc/durability/' },
+        { label: 'Sustainability', href: '/encyclopedia/materials/pvc/sustainability/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'PU Leather', href: '/encyclopedia/materials/pu-leather/' },
+        { label: 'Outsole Materials', href: '/encyclopedia/materials/outsole/' },
+        { label: 'TPR Materials', href: '/encyclopedia/materials/tpr/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Polyvinyl Chloride (PVC) Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to PVC in footwear manufacturing: understanding material properties, compound formulations, processing technologies, and cost-effective sourcing.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="PVC Material Applications in Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Global Production</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">40<span class="text-lg ml-1">M</span></p>
+      <p class="text-base text-gray-500">Metric tons annually worldwide</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Cost Advantage</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">30-50<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Lower cost than PU alternatives</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Industry Usage</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">15<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Of global footwear materials</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding PVC</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Polyvinyl Chloride (PVC) is one of the most widely produced synthetic plastics globally and has established significant presence in footwear manufacturing due to its unique combination of properties, processing flexibility, and cost efficiency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      In its pure form, PVC is a rigid material. For footwear applications, PVC is compounded with plasticizers to create flexible formulations that provide the softness and drape required for upper materials, or with other additives for outsole applications. This formulation flexibility enables a single polymer family to address diverse footwear requirements.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Chemical Structure</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC is produced through polymerization of vinyl chloride monomer (VCM), resulting in a polymer with repeating CH₂-CHCl units. The chlorine content of approximately 57% provides inherent flame retardancy and chemical resistance compared to other common plastics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thermal Stability:</strong> Pure PVC degrades at processing temperatures, requiring heat stabilizers to prevent decomposition during melt processing. Modern stabilizer systems enable stable processing across the temperature ranges required for extrusion and injection molding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Plasticizer Compatibility:</strong> The polarity of PVC enables incorporation of plasticizers that reduce intermolecular forces, creating flexible formulations. Plasticizer type and concentration significantly influence final properties.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Compound Formulations</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Flexible PVC Compounds</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Flexible PVC for footwear typically contains 30-60 phr (parts per hundred resin) of plasticizer, along with stabilizers, lubricants, and performance modifiers. The specific formulation determines final material properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>DINP/DINP Plasticizers:</strong> Di-isononyl phthalate and di-isodecyl phthalate are common general-purpose plasticizers, offering good balance of flexibility, durability, and cost efficiency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>DOTP Alternative:</strong> Dioctyl terephthalate provides similar performance to DEHP/DINP with improved environmental profile, increasingly preferred in markets with regulatory restrictions on phthalate plasticizers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Outsole Compounds</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC outsole compounds incorporate higher levels of fillers (typically calcium carbonate) to reduce cost while achieving required hardness and durability. Processing oil content is adjusted to maintain processability with higher filler loading.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hardness Range:</strong> PVC footwear compounds span from approximately 55 Shore A to 95 Shore A, covering the range from soft upper materials to firm outsole applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Filler Systems:</strong> Calcium carbonate is the primary filler for cost reduction, while specialty formulations may incorporate precipitated silica for enhanced mechanical properties.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Clear and Transparent Compounds</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC's natural clarity enables production of transparent and translucent formulations that are popular for fashion footwear and sport slides. Formulation adjustments optimize transparency while maintaining other required properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Clarity Optimization:</strong> Reducing filler content and selecting appropriate stabilizer systems maximizes transparency. Some fashion applications use unfilled formulations for maximum clarity.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Manufacturing Processes</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Injection Molding</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Injection molding is the dominant process for PVC footwear components, enabling high-volume production of complex shapes with minimal finishing requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Processing Temperature:</strong> Typical injection molding temperatures range from 160°C to 200°C, with specific temperatures depending on compound formulation and part geometry.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Mold Considerations:</strong> Corrosion-resistant mold materials are recommended due to acidic degradation products that can form during processing. Chrome-plated steel or stainless steel molds offer extended service life.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cycle Time:</strong> PVC injection molding typically achieves cycle times of 20-40 seconds, competitive with other footwear materials.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Extrusion Processing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Extrusion enables production of sheet, film, and profile shapes for subsequent fabrication or direct use in footwear construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sheet Extrusion:</strong> Flat sheet production for cutting operations, thermoforming, and lamination. Typical sheet thicknesses range from 0.5mm to 3mm.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Calendering:</strong> Heavy-gauge calendering produces sheet material with excellent thickness control and surface finish, particularly suitable for upper material production.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Direct Injection (Direct Soling)</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Direct injection attaches PVC outsoles directly to upper materials in a single molding operation, eliminating adhesive bonding and providing excellent sole attachment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Process Integration:</strong> The upper is positioned in the mold cavity, and PVC is injected to flow around the lasting margin, creating mechanical bond between sole and upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Design Flexibility:</strong> Direct injection enables complex sole geometries, multi-density constructions, and integration of decorative elements.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Performance Properties</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Mechanical Performance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC provides adequate mechanical performance for many footwear applications, though not matching the premium performance of TPU or premium leather alternatives.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tensile Strength:</strong> Typical tensile strength ranges from 10-20 MPa, suitable for general footwear applications but lower than TPU or leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Abrasion Resistance:</strong> Moderate abrasion resistance, with DIN values typically in the 100-200 mm³ range. Higher quality compounds can achieve better performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Fatigue:</strong> Plasticizer type and concentration influence flexibility retention over extended use. Premium formulations maintain flexibility better than economy grades.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Environmental Resistance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC demonstrates good resistance to water, dilute acids, and alkalis, making it suitable for daily wear applications. However, certain chemicals and extended UV exposure can cause degradation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>UV Stability:</strong> Extended sun exposure can cause surface chalking and color fading. UV stabilizer packages can extend outdoor service life for selected applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Plasticizer Migration:</strong> Lower quality formulations may exhibit plasticizer migration, causing surface tackiness or stiffening over time. Premium compounds address this limitation.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Comfort Characteristics</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water Resistance:</strong> PVC's low water absorption provides inherent water resistance, beneficial for rain boots and water activity footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thermal Properties:</strong> PVC becomes stiffer at low temperatures and softer at high temperatures, more so than some alternatives. This temperature sensitivity should be considered for extreme climate applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Breathability:</strong> Dense PVC provides limited breathability compared to leather or mesh. Perforated constructions or combinations with breathable materials address comfort requirements.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market Position</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Cost Analysis</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC's primary competitive advantage lies in its cost efficiency. Raw material costs are significantly lower than TPU or premium synthetic alternatives, and established processing infrastructure enables competitive production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Cost:</strong> PVC compound prices typically range from $1.00-2.00 per kg, compared to $3.00-5.00 for TPU and $2.50-4.00 for general-purpose PU.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Processing Efficiency:</strong> Established equipment base and efficient processing enable competitive component costs despite lower material performance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Application Segments</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PVC is most competitive in price-sensitive market segments where premium performance is not required, or in applications where its specific properties (water resistance, clarity, color options) provide unique value.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rain and Water Footwear:</strong> PVC's water resistance makes it popular for rain boots, water shoes, and pool footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fashion Footwear:</strong> PVC's clarity enables fashion-forward transparent designs that command premium positioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Children's Footwear:</strong> Cost efficiency and water resistance make PVC popular for children's rain boots and play footwear.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Production Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is the world's largest PVC producer and dominates PVC footwear component manufacturing. Key production regions include Guangdong (fashion and casual footwear), Zhejiang (rain boots and industrial footwear), and Fujian (sports footwear components).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Compound Suppliers:</strong> Numerous local and multinational compound suppliers serve the footwear industry, offering standard and custom formulations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Component Manufacturers:</strong> Hundreds of injection molding and extrusion facilities specialize in PVC footwear components, providing competitive pricing and established quality systems.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Regulatory Compliance:</strong> Verify compliance with target market regulations regarding plasticizers (phthalate restrictions in EU and US children's products) and heavy metal content.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Consistency:</strong> Request production samples and establish incoming inspection protocols to verify compound consistency across orders.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Environmental Standards:</strong> Some markets impose restrictions on PVC in specific applications. Verify target market requirements before committing to PVC-based designs.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💧</div>
+      <h3 class="font-semibold text-lg mb-2">Water Resistant</h3>
+      <p class="text-neutral-600 text-sm">
+        Inherent water resistance for wet conditions.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Cost Effective</h3>
+      <p class="text-neutral-600 text-sm">
+        30-50% lower cost than alternatives.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Versatile Colors</h3>
+      <p class="text-neutral-600 text-sm">
+        Excellent colorability and transparency.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔧</div>
+      <h3 class="font-semibold text-lg mb-2">Processable</h3>
+      <p class="text-neutral-600 text-sm">
+        Multiple processing methods available.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

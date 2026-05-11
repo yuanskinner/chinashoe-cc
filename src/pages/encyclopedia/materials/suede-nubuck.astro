@@ -1,0 +1,439 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Suede Characteristics',
+    description: 'Understanding split leather suede: processing and quality factors.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/suede-nubuck/suede/',
+  },
+  {
+    title: 'Nubuck Production',
+    description: 'How top grain nubuck achieves its velvety surface.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/suede-nubuck/nubuck/',
+  },
+  {
+    title: 'Care Techniques',
+    description: 'Professional suede and nubuck care and protection methods.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/suede-nubuck/care/',
+  },
+  {
+    title: 'Waterproofing Solutions',
+    description: 'Protecting suede and nubuck from water and stains.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/suede-nubuck/waterproofing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Full Grain Leather', href: '/encyclopedia/materials/full-grain-leather/', count: 45 },
+  { name: 'Top Grain Leather', href: '/encyclopedia/materials/top-grain-leather/', count: 32 },
+  { name: 'Leather Guide', href: '/encyclopedia/leather/', count: 65 },
+];
+---
+
+<PageLayout
+  title="Suede & Nubuck Guide"
+  description="Complete guide to suede and nubuck leather: understanding processing methods, quality characteristics, care techniques, and applications in premium footwear."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Suede & Nubuck', url: '/encyclopedia/materials/suede-nubuck/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Suede & Nubuck Guide',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/suede-nubuck/', active: true },
+        { label: 'Suede Production', href: '/encyclopedia/materials/suede-nubuck/suede/' },
+        { label: 'Nubuck Production', href: '/encyclopedia/materials/suede-nubuck/nubuck/' },
+        { label: 'Care Techniques', href: '/encyclopedia/materials/suede-nubuck/care/' },
+        { label: 'Waterproofing', href: '/encyclopedia/materials/suede-nubuck/waterproofing/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Full Grain Leather', href: '/encyclopedia/materials/full-grain-leather/' },
+        { label: 'Top Grain Leather', href: '/encyclopedia/materials/top-grain-leather/' },
+        { label: 'Exotic Leathers', href: '/encyclopedia/materials/exotic-leathers/' },
+        { label: 'Leather Guide', href: '/encyclopedia/leather/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Specialty Materials</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Suede & Nubuck Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to suede and nubuck leather: understanding processing methods, quality characteristics, specialized care, and proper applications in footwear.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Premium Suede Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-amber-700 font-medium mb-2">Softness Rating</p>
+      <p class="text-4xl font-bold text-amber-900 mb-2">Premium</p>
+      <p class="text-base text-gray-500">Exceptionally soft texture</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Breathability</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Excellent air circulation</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Care Requirement</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Specialized maintenance</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Suede and Nubuck</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Suede and nubuck represent two distinct but related categories of leather finished with soft, velvety surfaces. While both materials share characteristic texture properties, they originate from different layers of the hide and require different processing approaches.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The appeal of suede and nubuck lies in their distinctive tactile qualities and sophisticated appearance. The soft, napped surface provides exceptional comfort against the skin while conveying an aesthetic of refined casualness that appeals to fashion-conscious consumers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Fundamental Differences</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Suede:</strong> Created from the flesh side (split layer) of leather, suede derives from the inner portion of the hide after splitting. The surface consists of exposed fiber ends that create the characteristic nap.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nubuck:</strong> Produced from the grain side (top layer) of leather, nubuck begins as top grain leather that is then buffed to create a fine, velvety surface while retaining the underlying grain structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Implications:</strong> The source layer significantly impacts durability and performance. Nubuck's grain layer origin provides superior strength compared to split-derived suede, though both require careful maintenance.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Suede Production</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Split Leather Processing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Suede production begins with the split operation that separates the hide into layers. The lower split layer, which lacks the dense grain structure of the outer surface, becomes the foundation for suede production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Splitting Operations:</strong> Precision splitting machines cut the hide horizontally at controlled depths, producing splits of specific thickness suitable for different applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thickness Control:</strong> Suede thickness typically ranges from 0.5 mm to 2.0 mm, with heavier weights providing greater durability for footwear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Preparation:</strong> The split surface is prepared through buffing and finishing operations that enhance the nap character and ensure consistency.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Nap Raising</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The defining characteristic of suede—the soft, velvety nap—is created through specialized buffing operations that raise individual fibers from the leather surface.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Abrasion Processing:</strong> Rotating brushes or emery wheels abrade the leather surface, loosening and lifting fibers to create the characteristic nap.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nap Height:</strong> Processing parameters control nap height and density, with different finishes ranging from very short, tight naps to longer, softer nap characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Uniformity:</strong> Careful processing ensures consistent nap characteristics across the entire hide surface.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Quality Factors</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Suede quality varies significantly based on source hide quality, processing precision, and finishing treatments. Understanding quality factors enables informed material selection.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hide Origin:</strong> European cattle hides typically produce higher-quality suede due to controlled raising conditions and superior hide quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nap Consistency:</strong> Quality suede displays uniform nap height and density without bare spots or excessive variation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Strength Retention:</strong> Split processing should maintain adequate strength for intended applications without excessive thinning.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Nubuck Production</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Top Grain Foundation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Unlike suede, nubuck production begins with full grain or top grain leather that retains the structural integrity of the hide's outer layer. This foundation provides superior durability compared to split-derived suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Initial Selection:</strong> Only premium hides with minimal surface imperfections qualify for nubuck production, as the light buffing cannot mask significant defects.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tanning Requirements:</strong> Careful tanning ensures consistent dye penetration and color development, as surface characteristics directly impact final appearance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Surface Buffing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The distinctive velvety surface of nubuck is created through very fine buffing that lightly abrades the grain surface, raising a subtle nap while preserving the underlying grain pattern.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fine Abrasives:</strong> Extremely fine sandpaper or specialty buffing compounds create the characteristic surface without damaging underlying structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Minimal Material Removal:</strong> Unlike heavier sanding used for top grain correction, nubuck buffing removes only the most superficial material, typically less than 0.1 mm.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Velvet-like Texture:</strong> The fine, uniform nap creates a surface often compared to velvet or the softest leathers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Finishing Treatments</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Nubuck receives specialized finishing treatments that enhance appearance while providing modest protection against stains and moisture.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Enhancement:</strong> Dyes or pigments may be applied to enhance color richness and ensure consistency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Protective Treatments:</strong> Specialty nubuck protectants help maintain appearance and provide limited stain resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Anti-Static Treatment:</strong> Some nubuck receives anti-static treatment to reduce dust attraction.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Performance Characteristics</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Comfort Properties</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Suede and nubuck offer exceptional comfort characteristics that make them prized for footwear applications where extended wear is anticipated.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Softness:</strong> The napped surface provides exceptional softness against the foot, reducing break-in discomfort.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Conformability:</strong> Both materials conform quickly to foot shape, providing personalized fit.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Breathability:</strong> The open nap structure promotes air circulation, enhancing comfort during extended wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Durability Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      While prized for comfort and aesthetics, suede and nubuck require understanding their durability characteristics to ensure appropriate application and maintenance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nubuck Durability:</strong> Retained grain layer provides superior strength and abrasion resistance compared to split-derived suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Suede Durability:</strong> Split leather structure limits durability compared to grain-side materials, requiring appropriate application selection.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Wear Patterns:</strong> Heavy use areas may show nap compression and wear over time, characteristic of the materials rather than defects.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Care and Maintenance</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Daily Care</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Consistent daily care practices significantly impact the longevity and appearance of suede and nubuck footwear. Simple habits prevent the most common damage sources.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Brush Regularity:</strong> Brushing with a suede brush after wear maintains nap direction and removes surface dirt before it penetrates.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Shoe Trees:</strong> Cedar shoe trees absorb moisture and maintain shape while the leather is still slightly flexible.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rotation Practice:</strong> Alternating between multiple pairs allows complete drying and nap recovery between wears.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Stain Treatment</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Despite best prevention efforts, suede and nubuck will encounter staining. Understanding treatment options enables effective restoration.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Dry Stains:</strong> Gently brush dried stains with a suede brush; avoid water which can create water marks on untreated suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Wet Stains:</strong> Allow wet stains to dry completely, then brush with suede brush. Severe wet stains may require professional treatment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Oil/Grease Stains:</strong> Cornstarch or talc can absorb fresh oil stains if applied immediately and left overnight before brushing.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Waterproofing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Proactive waterproofing treatment significantly reduces water damage risk and simplifies maintenance for suede and nubuck footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Product Selection:</strong> Specialty suede/nubuck waterproofing sprays are formulated to penetrate the nap without altering appearance or texture.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Application Timing:</strong> Apply waterproofing to new shoes before first wear, and reapply after cleaning or every few months for regularly worn items.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Testing:</strong> Test waterproofing products on inconspicuous areas to verify compatibility with the specific leather.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Applications</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Footwear Applications</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Suede and nubuck serve various footwear applications where their comfort and aesthetic qualities are valued over maximum durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Chukka Boots:</strong> The classic suede chukka boot demonstrates the material's ideal pairing with simple, elegant construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Driving Shoes:</strong> Nubuck driving shoes balance casual elegance with exceptional comfort for extended wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Desert Boots:</strong> Suede remains the traditional choice for desert boots, providing comfort and classic appearance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Design Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Design with suede and nubuck requires consideration of their unique characteristics to ensure successful products.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Panel Placement:</strong> Consider nap direction when placing panels; consistent nap direction creates more uniform appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Stress Management:</strong> Design should accommodate suede's lower structural strength compared to full grain leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Contrast Opportunities:</strong> Combining suede or nubuck with smooth leather creates attractive design contrasts.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🐑</div>
+      <h3 class="font-semibold text-lg mb-2">Ultra Soft</h3>
+      <p class="text-neutral-600 text-sm">
+        Velvety nap texture.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💨</div>
+      <h3 class="font-semibold text-lg mb-2">Breathable</h3>
+      <p class="text-neutral-600 text-sm">
+        Excellent air circulation.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👔</div>
+      <h3 class="font-semibold text-lg mb-2">Sophisticated</h3>
+      <p class="text-neutral-600 text-sm">
+        Refined casual aesthetic.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="font-semibold text-lg mb-2">Protectable</h3>
+      <p class="text-neutral-600 text-sm">
+        Responds well to care.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

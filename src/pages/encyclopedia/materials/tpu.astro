@@ -1,0 +1,371 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'TPU Film Applications',
+    description: 'Thermoplastic polyurethane film in footwear: waterproofing, reinforcement, and design.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/tpu/tpu-film/',
+  },
+  {
+    title: 'TPU Foam Technology',
+    description: 'Lightweight cushioning solutions using expanded TPU foam technology.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/tpu/tpu-foam/',
+  },
+  {
+    title: 'TPU Injection Molding',
+    description: 'Direct injection molding of TPU components for outsoles and decorative elements.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/tpu/tpu-injection/',
+  },
+  {
+    title: 'TPU vs TPR Comparison',
+    description: 'Comparative analysis of TPU and TPR properties for footwear applications.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/tpu/tpu-vs-tpr/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 38 },
+  { name: 'Outsole Materials', href: '/encyclopedia/materials/outsole/', count: 45 },
+  { name: 'TPR Materials', href: '/encyclopedia/materials/tpr/', count: 28 },
+];
+---
+
+<PageLayout
+  title="TPU Material Guide"
+  description="Complete guide to Thermoplastic Polyurethane (TPU) in footwear manufacturing: properties, applications, processing methods, and strategic sourcing from China suppliers."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'TPU', url: '/encyclopedia/materials/tpu/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'TPU Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/tpu/', active: true },
+        { label: 'TPU Film', href: '/encyclopedia/materials/tpu/tpu-film/' },
+        { label: 'TPU Foam', href: '/encyclopedia/materials/tpu/tpu-foam/' },
+        { label: 'TPU Injection', href: '/encyclopedia/materials/tpu/tpu-injection/' },
+        { label: 'TPU vs TPR', href: '/encyclopedia/materials/tpu/tpu-vs-tpr/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Outsole Materials', href: '/encyclopedia/materials/outsole/' },
+        { label: 'TPR Materials', href: '/encyclopedia/materials/tpr/' },
+        { label: 'Rubber Materials', href: '/encyclopedia/materials/rubber/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Thermoplastic Polyurethane (TPU) Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to TPU in footwear: understanding material properties, processing technologies, performance applications, and China sourcing strategies.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="TPU Material Technology in Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Market Share</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">25<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Of athletic outsole materials</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Recyclability</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">100<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Thermoplastic - fully recyclable</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Hardness Range</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">60A-75D</p>
+      <p class="text-base text-gray-500">Versatile hardness options</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding TPU</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Thermoplastic Polyurethane (TPU) represents one of the most versatile families of synthetic polymers available for footwear manufacturing. Unlike traditional thermoset rubbers, TPU's thermoplastic nature means it can be melted, reshaped, and recycled, offering both manufacturing flexibility and environmental advantages.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      TPU's molecular structure combines the elasticity of rubber with the processability of plastics. The segmented urethane chemistry creates a block copolymer with hard crystalline domains providing strength and soft amorphous regions enabling flexibility. This unique architecture enables engineers to precisely tune mechanical properties by adjusting the ratio of hard to soft segments.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Material Classification</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polyester-based TPU:</strong> Offers superior oil and grease resistance, excellent mechanical properties, and good hydrolysis resistance. Preferred for industrial applications requiring chemical resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polyether-based TPU:</strong> Provides superior low-temperature flexibility and excellent hydrolysis resistance. Ideal for applications requiring performance in wet environments or cold conditions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polycaprolactone-based TPU:</strong> Combines excellent mechanical properties with biodegradability potential. Used in specialized applications where environmental considerations are paramount.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Physical Properties</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Mechanical Performance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      TPU demonstrates exceptional mechanical properties that make it suitable for demanding footwear applications. Its high tensile strength, excellent abrasion resistance, and superior tear strength provide durability in high-wear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tensile Strength:</strong> Ranges from 20 to 50 MPa depending on formulation, significantly exceeding many rubber compounds. This strength enables thinner section designs without compromising durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Abrasion Resistance:</strong> TPU's abrasion resistance ranks among the best of elastomeric materials, with DIN abrasion values typically below 30 mm³. This property is critical for outsole applications where wear is the primary failure mode.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hardness Range:</strong> TPU formulations span a remarkable hardness range from approximately 60 Shore A to 75 Shore D, enabling a single material family to address applications from soft cushioning to rigid structural components.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Flexibility and Elasticity</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The elastomeric nature of TPU provides excellent flexibility and elastic recovery. After deformation, TPU returns to its original shape with minimal permanent set, maintaining fit and function throughout the product lifecycle.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Elastic Recovery:</strong> TPU demonstrates 90-95% elastic recovery after 300% elongation, ensuring consistent performance under repeated flexing conditions encountered in footwear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Low-Temperature Performance:</strong> Polyether-based TPU maintains flexibility at temperatures as low as -40°C, making it suitable for cold-weather footwear applications.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Footwear Applications</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Outsole Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      TPU outsoles represent the largest volume application for TPU in footwear manufacturing. The material's combination of abrasion resistance, flexibility, and processing versatility makes it ideal for this demanding application.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Design Flexibility:</strong> TPU can be injection molded into complex geometries, enabling integrated traction patterns, flex grooves, and aesthetic design elements in single-piece constructions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Weight Considerations:</strong> While denser than many foam materials, TPU's ability to achieve equivalent durability at reduced thickness often results in comparable or improved overall weight efficiency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Stability:</strong> TPU accepts colorants well and maintains color integrity through extended wear and UV exposure, enabling vibrant, long-lasting aesthetic designs.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 TPU Film Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      TPU film has emerged as a critical material for performance upper construction. These thin, flexible sheets provide waterproofing, reinforcement, and design effects while maintaining breathability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Waterproof Membranes:</strong> Microporous TPU membranes provide waterproof protection while enabling moisture vapor transmission, addressing the classic contradiction between waterproofing and breathability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thermoforming:</strong> TPU films can be heated and formed over three-dimensional shapes, enabling seamless constructions and precise reinforcement placement.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 E-TPU Foam Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Expanded Thermoplastic Polyurethane (E-TPU) represents an innovative application of TPU technology. Microcellular foam particles are expanded through steam treatment, creating lightweight cushioning with excellent energy return.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Energy Return:</strong> E-TPU demonstrates energy return values exceeding 70%, significantly better than conventional EVA foam. Each compression cycle returns most of the absorbed energy to the wearer.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Durability:</strong> Unlike EVA foam, which can suffer from compression set over time, E-TPU maintains its cushioning properties through extended use, providing consistent performance throughout the product lifecycle.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Processing Methods</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Injection Molding</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Injection molding is the dominant production method for TPU footwear components. The process enables high-volume production of complex parts with minimal finishing requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Processing Temperature:</strong> Typical processing temperatures range from 190°C to 240°C depending on specific TPU grade. Temperature control is critical to achieve optimal flow and mechanical properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Mold Design:</strong> TPU's relatively high viscosity requires careful mold design with appropriate gate sizes and flow channels. Draft angles of 1-2° are typically required for part release.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cycle Time:</strong> Typical cycle times range from 30 to 60 seconds for standard footwear components, influenced by part thickness and cooling requirements.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Extrusion Processing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Extrusion enables production of continuous profiles used in footwear applications including sheet stock, tubing, and extruded shapes for component integration.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sheet Production:</strong> Flat sheet extrusion produces material for cutting operations, thermoforming, and lamination processes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Profile Extrusion:</strong> Complex cross-section profiles enable integration of multiple functions in single extrusion dies, reducing component count and assembly operations.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Sustainability Considerations</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Recyclability</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      TPU's thermoplastic nature enables recycling through conventional plastic processing methods. Material waste from production can be reground and reprocessed, reducing raw material costs and environmental impact.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Closed-Loop Recycling:</strong> Production scrap can be directly reintroduced into the production process, typically at addition rates of 10-20% without significant property degradation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>End-of-Life Recycling:</strong> Consumer footwear products can be collected and processed to recover TPU material for secondary applications, though collection infrastructure remains a challenge.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Bio-based Alternatives</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Emerging bio-based TPU formulations utilize renewable feedstocks including castor oil to partially replace petroleum-derived polyols. These formulations offer reduced carbon footprints while maintaining comparable performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Performance Parity:</strong> Premium bio-based TPU formulations can achieve equivalent mechanical properties to conventional materials, enabling sustainable alternatives without performance compromise.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">6.1 Supplier Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is a major producer of TPU materials and footwear components. Major production regions include Guangdong (injection molding), Zhejiang (film and sheet extrusion), and Fujian (sports shoe components).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Raw Material Suppliers:</strong> Several global and Chinese TPU manufacturers supply the footwear industry, with grades specifically optimized for injection molding and film applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Component Manufacturers:</strong> Numerous injection molding facilities specialize in TPU footwear components, offering mold-making, production, and finishing services.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">6.2 Sourcing Strategy</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grade Selection:</strong> Work with suppliers to select TPU grades optimized for specific applications. Key parameters include hardness, processing requirements, and performance targets.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Verification:</strong> Establish incoming inspection protocols to verify material properties against specifications. Key tests include hardness, tensile strength, and abrasion resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Supply Chain Integration:</strong> Consider vertical integration options where suppliers can provide both material and component production, simplifying logistics and quality management.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="font-semibold text-lg mb-2">High Elasticity</h3>
+      <p class="text-neutral-600 text-sm">
+        90%+ elastic recovery after deformation.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🛡️</div>
+      <h3 class="font-semibold text-lg mb-2">Abrasion Resistant</h3>
+      <p class="text-neutral-600 text-sm">
+        DIN abrasion below 30 mm³.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">♻️</div>
+      <h3 class="font-semibold text-lg mb-2">Recyclable</h3>
+      <p class="text-neutral-600 text-sm">
+        100% thermoplastic - fully recyclable.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Color Stable</h3>
+      <p class="text-neutral-600 text-sm">
+        Excellent colorability and retention.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

@@ -3,41 +3,41 @@ import PageLayout from '@layouts/PageLayout.astro';
 
 const features = [
   {
-    title: 'Vulcanization Process',
-    description: 'Heat and pressure bonding: the science of vulcanization.',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
-    href: '/encyclopedia/manufacturing/vulcanized/process/',
-  },
-  {
     title: 'Molded Soles',
-    description: 'Creating outsoles with integrated traction patterns and colors.',
-    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    description: 'Vulcanized molded sole production: process and quality.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
     href: '/encyclopedia/manufacturing/vulcanized/molded-soles/',
   },
   {
-    title: 'Canvas Vulcanized Shoes',
-    description: 'Classic sneakers: the vulcanized canvas shoe tradition.',
-    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
-    href: '/encyclopedia/manufacturing/vulcanized/canvas/',
+    title: 'Canvas Construction',
+    description: 'Canvas upper preparation and foxing application.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/canvas-construction/',
   },
   {
-    title: 'Quality and Durability',
-    description: 'Why vulcanized construction creates long-lasting footwear.',
+    title: 'Quality Standards',
+    description: 'Quality control methods for vulcanized footwear.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/vulcanized/quality-standards/',
+  },
+  {
+    title: 'China Production',
+    description: 'China vulcanized footwear manufacturing capabilities.',
     image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/manufacturing/vulcanized/quality/',
+    href: '/encyclopedia/manufacturing/vulcanized/china-production/',
   },
 ];
 
 const relatedCategories = [
-  { name: 'Cemented', href: '/encyclopedia/manufacturing/cemented/', count: 35 },
-  { name: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/', count: 45 },
-  { name: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/', count: 38 },
+  { name: 'Cemented Process', href: '/encyclopedia/manufacturing/cemented/', count: 35 },
+  { name: 'Canvas Materials', href: '/encyclopedia/materials/canvas/', count: 35 },
+  { name: 'Manufacturing Overview', href: '/encyclopedia/manufacturing/', count: 28 },
 ];
 ---
 
 <PageLayout
-  title="Vulcanized Construction Guide"
-  description="Complete guide to vulcanized footwear construction: the traditional method for canvas sneakers and molded rubber soles. Learn about the vulcanization process and its advantages."
+  title="Vulcanized Process Guide"
+  description="Complete guide to vulcanized footwear construction: understanding the vulcanization process, molded soles, canvas construction, quality control, and China manufacturing."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
@@ -46,151 +46,353 @@ const relatedCategories = [
   ]}
   sidebarItems={[
     {
-      title: 'Vulcanized Construction',
+      title: 'Vulcanized Process',
       links: [
         { label: 'Overview', href: '/encyclopedia/manufacturing/vulcanized/', active: true },
-        { label: 'Process', href: '/encyclopedia/manufacturing/vulcanized/process/' },
         { label: 'Molded Soles', href: '/encyclopedia/manufacturing/vulcanized/molded-soles/' },
-        { label: 'Canvas Shoes', href: '/encyclopedia/manufacturing/vulcanized/canvas/' },
-        { label: 'Quality', href: '/encyclopedia/manufacturing/vulcanized/quality/' },
+        { label: 'Canvas Construction', href: '/encyclopedia/manufacturing/vulcanized/canvas-construction/' },
+        { label: 'Quality Standards', href: '/encyclopedia/manufacturing/vulcanized/quality-standards/' },
+        { label: 'China Production', href: '/encyclopedia/manufacturing/vulcanized/china-production/' },
       ],
     },
     {
-      title: 'Other Methods',
+      title: 'Related Processes',
       links: [
-        { label: 'Cemented', href: '/encyclopedia/manufacturing/cemented/' },
+        { label: 'Cemented Process', href: '/encyclopedia/manufacturing/cemented/' },
+        { label: 'Direct Injection', href: '/encyclopedia/manufacturing/injection/' },
+        { label: 'Strobel Construction', href: '/encyclopedia/manufacturing/strobel/' },
         { label: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/' },
-        { label: 'Rubber Soles', href: '/encyclopedia/materials/rubber-soles/' },
       ],
     },
   ]}
 >
   <div class="mb-8">
-    <span class="badge-primary mb-2">Manufacturing Encyclopedia</span>
+    <span class="badge-primary mb-2">Manufacturing Guide</span>
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Vulcanized Construction Guide
+      Vulcanized Process Guide
     </h1>
     <p class="text-lg text-neutral-600">
-      Everything you need to know about vulcanized footwear construction: the traditional method used for canvas sneakers and molded rubber soles. Learn about the process and why it creates durable, flexible footwear.
+      Comprehensive guide to vulcanized footwear construction: understanding the vulcanization chemistry, production process, quality standards, and China manufacturing capabilities.
     </p>
   </div>
 
   <!-- Featured Image -->
   <div class="rounded-xl overflow-hidden mb-8">
     <img
-      src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&h=400&fit=crop"
-      alt="Classic Canvas Sneakers"
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Vulcanized Footwear Production"
       class="w-full h-64 md:h-80 object-cover"
     />
   </div>
 
-  <!-- Introduction Content -->
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-amber-700 font-medium mb-2">History</p>
+      <p class="text-4xl font-bold text-amber-900 mb-2">180+</p>
+      <p class="text-base text-gray-500">Years since invention</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Cure Temp</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">150°C</p>
+      <p class="text-base text-gray-500">Typical vulcanization temperature</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Market Share</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">25<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Of global footwear</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
   <div class="prose prose-lg max-w-none mb-12">
-    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Vulcanized Construction</h2>
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Vulcanization</h2>
     
     <p class="text-neutral-600 mb-4">
-      Vulcanized construction is a traditional shoe manufacturing method that uses heat and pressure to bond rubber soles to canvas or leather uppers. Named after Charles Goodyear (the inventor of vulcanized rubber, not to be confused with the Goodyear welt), this method creates exceptionally flexible, durable, and lightweight footwear.
+      Vulcanization represents one of the most transformative processes in footwear manufacturing history. Invented by Charles Goodyear in 1839, vulcanization chemically transforms raw rubber into a durable, elastic material while creating permanent bonds between rubber components and textile uppers. This process remains fundamental to the production of classic canvas sneakers and casual footwear worldwide.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      The vulcanization process transforms raw rubber compounds into elastic, durable materials while simultaneously bonding the sole to the upper. This creates a seamless, unified construction where the sole and upper work together as a single unit, providing exceptional flexibility and a characteristic "broken-in" feel from the first wear.
+      The vulcanization process derives its name from Vulcan, the Roman god of fire, reflecting the heat-intensive nature of the chemical transformation. This single innovation enabled the modern rubber footwear industry and established principles that remain relevant in contemporary manufacturing.
     </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Vulcanization Process</h3>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Chemical Foundation</h3>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Mold Pressing:</strong> The shoe is assembled with the raw rubber sole positioned against the upper. The assembled shoe is placed in a vulcanizing press that applies heat (typically 140-160°C) and pressure for a specific time. This heat cures the rubber while bonding it to the upper.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Time and Temperature:</strong> The vulcanization parameters must be precisely controlled. Under-vulcanization results in soft, tacky rubber that won't bond properly; over-vulcanization causes the rubber to become hard and brittle. Quality manufacturers carefully control these parameters.
+      <strong>Sulfur Cross-Linking:</strong> The vulcanization process introduces sulfur atoms that create cross-links between polymer chains in raw rubber.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Direct Vulcanization:</strong> In direct vulcanization, the assembled shoe is placed in a mold that shapes the sole while vulcanizing. This creates molded soles with integrated tread patterns and decorations.
+      <strong>Elastic Recovery:</strong> Cross-linked rubber molecules can stretch under stress and return to original dimensions when released.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Compression Vulcanization:</strong> For simpler constructions, shoes may be vulcanized in presses without molds, with the sole material taking its shape from pre-formed blanks. This method is common for basic canvas shoes.
+      <strong>Thermal Activation:</strong> Heat provides the energy required for cross-linking reactions to occur at practical rates.
     </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Process Overview</h2>
     
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Characteristics of Vulcanized Footwear</h3>
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Pre-Production Preparation</h3>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Exceptional Flexibility:</strong> Vulcanized shoes are known for their remarkable flexibility, bending easily with foot motion. This flexibility comes from the unified construction where the rubber sole and upper move as one.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Lightweight:</strong> Vulcanized constructions are typically lighter than cemented shoes with separate midsoles and outsoles. The absence of additional adhesive layers reduces weight.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Durability:</strong> Properly vulcanized shoes can last for years of heavy use. The chemical bond between rubber and upper provides excellent resistance to separation.
+      Successful vulcanized footwear production requires meticulous preparation of all components before assembly and curing.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Classic Aesthetics:</strong> Vulcanized construction produces the characteristic look of classic canvas sneakers with thin, flexible soles and clean lines.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Canvas Vulcanized Shoes</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      Canvas vulcanized shoes represent the classic sneaker design, exemplified by brands like Converse and Vans. These shoes feature canvas uppers that are lasted and vulcanized with rubber soles, creating lightweight, breathable, and affordable footwear.
+      <strong>Rubber Compound Mixing:</strong> Raw rubber is compounded with sulfur, accelerators, activators, and fillers to achieve target properties.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      The canvas upper is typically constructed from multiple pieces joined with seams that are often covered with rubber overlays for durability and style. The thin rubber foxing tape around the sole provides protection while maintaining flexibility.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Advantages and Limitations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Advantages:</strong> Vulcanized construction offers exceptional flexibility, lightweight design, excellent durability when properly made, classic aesthetics, and relatively simple manufacturing that can be cost-effective.
+      <strong>Mill Processing:</strong> The compounded rubber is processed through mixing mills to achieve uniform dispersion of all ingredients.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Limitations:</strong> The process is less suited to complex cushioning systems or multi-density midsoles. Limited ability to incorporate advanced cushioning technologies found in modern athletic footwear.
+      <strong>Sheet Production:</strong> Calendering or extrusion produces rubber sheets of consistent thickness for various components.
     </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Component Cutting</h3>
     
     <p class="text-neutral-600 mb-4">
-      China has extensive vulcanized footwear manufacturing capabilities, particularly in regions producing canvas sneakers and casual vulcanized shoes. When sourcing vulcanized footwear from China, verify the manufacturer's vulcanization equipment and process control capabilities.
+      Precision cutting of rubber components ensures consistent quality and proper fit during assembly.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      Request samples that demonstrate consistent vulcanization across multiple pairs. Evaluate sole flexibility by bending the shoe and checking for uniform flexibility without hard spots. Examine the bond between upper and sole for any signs of incomplete vulcanization or adhesive failure.
+      <strong>Die Cutting:</strong> Steel-rule dies cut components from rubber sheets with high precision and speed.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>CNC Cutting:</strong> Computer-controlled cutting enables complex shapes and rapid pattern changes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flash Removal:</strong> Trim excess material ensures clean component edges.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Upper Assembly</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The canvas or textile upper is assembled and prepared for lasting before rubber application.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pattern Cutting:</strong> Upper panels are cut from fabric according to precise patterns.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Stitching:</strong> Panels are joined using appropriate stitch types and thread for durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Eyelet Installation:</strong> Lace eyelets and other hardware are installed before lasting.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.4 Lasting Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Lasting stretches the upper over a form (last) to establish the three-dimensional shoe shape before rubber application.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Toe Lasting:</strong> The toe portion is stretched over the last and temporarily cemented.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Side Lasting:</strong> Sides are stretched and cemented, working from toe to heel.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heel Seat:</strong> The heel area is shaped and secured to complete the lasted upper.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Rubber Application</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Foxing Application</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The foxing tape—the characteristic curved rubber piece wrapping the toe area—is applied to the lasted upper before curing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Tape:</strong> Pre-cut or extruded rubber strips are positioned around the toe area.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Edge Rolling:</strong> The foxing edges are rolled to ensure complete contact with the upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Gap Closure:</strong> Any gaps between foxing sections are filled with raw rubber compound.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Outsole Attachment</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The rubber outsole is attached to the lasted upper before the vulcanization process.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Outsole Placement:</strong> The pre-cut outsole is positioned and pressed onto the upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pre-Forming:</strong> The assembled shoe is briefly heated to partially cure rubber and improve green strength.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Inspection:</strong> Visual inspection ensures proper alignment and complete coverage.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Vulcanization Curing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The assembled footwear is vulcanized in heated presses or autoclaves, completing the curing process.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Press Vulcanization:</strong> Individual shoes are placed in heated molds that shape and cure simultaneously.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Autoclave Vulcanization:</strong> Multiple shoes are cured together in pressurized steam or hot air chambers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cure Monitoring:</strong> Temperature and time are controlled to achieve optimal cross-link density.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Control</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Visual Inspection</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Visual inspection identifies obvious defects that may affect appearance or performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Defects:</strong> Checking for bubbles, splits, or discoloration in cured rubber.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Seam Integrity:</strong> Verifying that upper seams remain intact through the vulcanization process.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Alignment:</strong> Ensuring foxing tape is properly positioned without gaps or overlaps.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Physical Testing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Physical testing validates that vulcanized footwear meets performance requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Testing:</strong> Repeated flexing ensures rubber doesn't crack at the toe bend area.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Peel Testing:</strong> Measuring force required to separate foxing from upper validates bond strength.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Adhesion Testing:</strong> Assessing the bond between rubber layers ensures structural integrity.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Process Control</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Statistical process control ensures consistent quality throughout production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Temperature Monitoring:</strong> Continuous recording of vulcanization temperatures identifies process variations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Testing:</strong> Regular testing of rubber compounds ensures consistent formulation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Statistical Sampling:</strong> Regular sampling and testing provides process performance data.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Production Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is the world's largest producer of vulcanized footwear, with established manufacturing regions and extensive expertise in vulcanized construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Major Production Regions:</strong> Jiangsu Province (Changzhou, Yancheng), Fujian (Jinjiang), and Guangdong.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Production Scale:</strong> Individual factories often produce millions of pairs annually.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Capability Range</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese vulcanized footwear production spans a wide quality range, from basic commodity products to premium manufacturing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Commodity Production:</strong> High-volume, lower-cost production for mass-market distribution.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Brand Manufacturing:</strong> OEM production for international brands meeting specific quality standards.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Custom Production:</strong> Ability to accommodate unique specifications and small-batch production.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Factory Audits:</strong> On-site inspections verify equipment, processes, and quality systems.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sample Development:</strong> Prototype development ensures design feasibility before production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Specifications:</strong> Clear specifications for rubber compounds, cure parameters, and finished product requirements.
     </p>
   </div>
 
-  <!-- Key Sections -->
-  <div class="grid md:col-span-2 lg:grid-cols-4 gap-6 mb-12">
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
     <div class="card text-center">
-      <div class="text-4xl mb-4">🧘</div>
-      <h3 class="font-semibold text-lg mb-2">Flexible</h3>
+      <div class="text-4xl mb-4">🔥</div>
+      <h3 class="font-semibold text-lg mb-2">Vulcanized</h3>
       <p class="text-neutral-600 text-sm">
-        Exceptional bend with foot motion for natural movement.
+        Heat-cured rubber construction.
       </p>
     </div>
     <div class="card text-center">
-      <div class="text-4xl mb-4">🪶</div>
-      <h3 class="font-semibold text-lg mb-2">Lightweight</h3>
-      <p class="text-neutral-600 text-sm">
-        Minimal construction for lightweight, breathable footwear.
-      </p>
-    </div>
-    <div class="card text-center">
-      <div class="text-4xl mb-4">⏱️</div>
+      <div class="text-4xl mb-4">💪</div>
       <h3 class="font-semibold text-lg mb-2">Durable</h3>
       <p class="text-neutral-600 text-sm">
-        Chemical bonding creates long-lasting construction.
+        Cross-linked rubber bonds.
       </p>
     </div>
     <div class="card text-center">
-      <div class="text-4xl mb-4">🎨</div>
-      <h3 class="font-semibold text-lg mb-2">Classic Style</h3>
+      <div class="text-4xl mb-4">🌀</div>
+      <h3 class="font-semibold text-lg mb-2">Flexible</h3>
       <p class="text-neutral-600 text-sm">
-        Traditional aesthetics for timeless sneaker designs.
+        Natural rubber elasticity.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Iconic</h3>
+      <p class="text-neutral-600 text-sm">
+        Classic aesthetic appeal.
       </p>
     </div>
   </div>
@@ -208,10 +410,10 @@ const relatedCategories = [
           />
         </div>
         <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
             {article.title}
           </h3>
-          <p class="text-sm text-neutral-600">
+          <p class="text-neutral-600 text-sm">
             {article.description}
           </p>
         </div>
@@ -220,15 +422,12 @@ const relatedCategories = [
   </div>
 
   <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
-    </div>
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Content</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
   </div>
 </PageLayout>

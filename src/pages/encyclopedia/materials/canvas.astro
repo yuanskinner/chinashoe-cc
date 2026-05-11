@@ -1,0 +1,401 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Canvas Weave Types',
+    description: 'Plain weave, duck, and specialty canvas constructions.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/canvas/canvas-weave/',
+  },
+  {
+    title: 'Vulcanized Canvas Shoes',
+    description: 'The classic vulcanized construction process for canvas footwear.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/canvas/vulcanized-canvas/',
+  },
+  {
+    title: 'Waterproof Canvas',
+    description: 'Waxed and coated canvas treatments for water resistance.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/canvas/waterproof-canvas/',
+  },
+  {
+    title: 'Canvas Durability',
+    description: 'Understanding canvas strength ratings and performance characteristics.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/canvas/canvas-durability/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Textiles Overview', href: '/encyclopedia/materials/textiles/', count: 42 },
+  { name: 'Canvas Sneakers', href: '/encyclopedia/canvas-sneakers/', count: 35 },
+  { name: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/', count: 28 },
+];
+---
+
+<PageLayout
+  title="Canvas Material Guide"
+  description="Complete guide to canvas in footwear: understanding weave types, properties, vulcanized construction, waterproof treatments, and China sourcing strategies."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Canvas', url: '/encyclopedia/materials/canvas/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Canvas Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/canvas/', active: true },
+        { label: 'Weave Types', href: '/encyclopedia/materials/canvas/canvas-weave/' },
+        { label: 'Vulcanized Canvas', href: '/encyclopedia/materials/canvas/vulcanized-canvas/' },
+        { label: 'Waterproof Canvas', href: '/encyclopedia/materials/canvas/waterproof-canvas/' },
+        { label: 'Durability', href: '/encyclopedia/materials/canvas/canvas-durability/' },
+      ],
+    },
+    {
+      title: 'Related Content',
+      links: [
+        { label: 'Textiles', href: '/encyclopedia/materials/textiles/' },
+        { label: 'Canvas Sneakers', href: '/encyclopedia/canvas-sneakers/' },
+        { label: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/' },
+        { label: 'Natural Materials', href: '/encyclopedia/materials/natural/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Canvas Material Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to canvas in footwear: understanding weave constructions, performance characteristics, vulcanized processing, and strategic sourcing from China manufacturers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Classic Canvas Sneaker Construction"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">History</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">200<span class="text-lg ml-1">+</span></p>
+      <p class="text-base text-gray-500">Years of textile heritage</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Breathability</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Natural fiber ventilation</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Sustainability</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">100<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Biodegradable natural fibers</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Canvas</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas represents one of the oldest and most versatile textile materials in human history, with applications spanning sailcloth, tents, artwork supports, and footwear. In shoe manufacturing, canvas has established enduring appeal through its combination of breathability, durability, comfort, and timeless aesthetic.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The term "canvas" derives from the Greek word "cannabis" (hemp), reflecting the material's historical origin. While modern canvas encompasses various fiber compositions, the fundamental characteristic remains consistent: a plain-weave fabric constructed from plied yarns, providing strength, stability, and a distinctive visual texture.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Historical Significance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas footwear emerged from practical origins in 19th-century Europe, where workers required durable yet breathable shoes for industrial environments. The material's adoption accelerated with the development of rubber sole technology, which enabled the creation of the classic canvas sneaker that remains influential today.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The 20th century elevated canvas footwear from utilitarian work shoes to cultural symbols. Converse's Chuck Taylor All Star, introduced in 1917, demonstrated canvas's potential for mass-market athletic footwear, while subsequent decades saw canvas sneakers adopted by skateboarders, artists, musicians, and fashion movements.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Fiber Materials</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Cotton Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Cotton is the predominant fiber for footwear canvas, providing an optimal balance of properties for shoe upper applications. Cotton fibers offer excellent breathability, comfortable hand feel, and good dyeability for vibrant color options.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Breathability:</strong> Cotton's hollow fiber structure enables air circulation, helping regulate foot temperature and reduce moisture buildup during activity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Comfort:</strong> Soft fiber ends create a comfortable feel against skin, avoiding the irritation that some synthetic materials can cause.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Moisture Absorption:</strong> Cotton absorbs moisture readily (8-10% at standard conditions), which can be beneficial for sweat absorption but may extend drying time.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Hemp Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Hemp fibers offer several performance advantages over cotton, including greater tensile strength, better moisture regulation, and natural antimicrobial properties. Hemp canvas provides enhanced durability while maintaining breathability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Strength:</strong> Hemp demonstrates approximately 40% greater tensile strength than cotton, enabling thinner canvas constructions with equivalent durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Environmental Benefits:</strong> Hemp cultivation requires minimal pesticides and herbicides, and the plant grows rapidly with excellent carbon sequestration.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Blended Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Fiber blends combine the characteristics of multiple materials to achieve specific performance objectives. Common combinations include cotton-polyester blends for enhanced wrinkle resistance and cotton-linen blends for improved stability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cotton-Polyester:</strong> Adding polyester improves dimensional stability and quick-dry performance while maintaining cotton's comfort characteristics.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Weave Constructions</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Plain Weave Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Plain weave is the fundamental canvas construction, with warp and weft yarns interlacing in an alternating over-under pattern. This simple structure creates a stable, flat fabric with good printability and sewing characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Characteristics:</strong> Even surface appearance, good stability in both directions, excellent for printing and decoration.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Weight Range:</strong> Footwear canvas typically ranges from 6 oz to 12 oz per square yard, with heavier weights providing greater durability.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Duck Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Duck is a closely woven canvas variant with a higher thread count than standard plain weave. The term "duck" derives from the Dutch word "doek" (linen cloth). Duck canvas provides enhanced durability and water resistance compared to standard canvas.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Numbering System:</strong> Duck canvas is classified by weight, with lower numbers indicating heavier fabric. No. 8 duck (approximately 24 oz/yd²) is commonly used for work footwear applications.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Ripstop Canvas</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Ripstop canvas incorporates reinforcement yarns in a crosshatch pattern that prevent tear propagation. If the fabric is torn or punctured, the reinforcement yarns stop the damage from spreading.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Reinforcement Pattern:</strong> Typically 3-5mm intervals, reinforcement yarns are woven into the base fabric during manufacturing.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Performance Properties</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Durability Characteristics</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas durability depends on fiber type, weave construction, yarn quality, and finishing treatments. Understanding these factors enables selection of appropriate canvas grades for specific applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tensile Strength:</strong> Quality footwear canvas should demonstrate tensile strength exceeding 200 N in both warp and weft directions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tear Resistance:</strong> Tear strength values should exceed 30 N for adequate durability in demanding applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Seam Strength:</strong> Proper seam construction and sewing thread selection ensure that seams match or exceed fabric strength.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Breathability and Comfort</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas provides excellent breathability compared to leather or synthetic materials, enabling air circulation that helps regulate foot temperature and reduce moisture.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Air Permeability:</strong> Canvas air permeability typically ranges from 100-300 cfm depending on weight and weave density, significantly higher than most alternative materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Moisture Management:</strong> Natural fiber canvas absorbs perspiration while allowing evaporation, providing comfort during extended wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Water Resistance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Standard canvas absorbs water readily, which can be disadvantageous in wet conditions. However, various treatments can enhance water resistance while maintaining breathability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Wax Treatment:</strong> Wax coatings provide water repellency while maintaining canvas texture and breathability. Classic waxed canvas develops patina over time.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polymer Coatings:</strong> Lightweight polymer treatments can provide water resistance without significantly affecting hand feel or breathability.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Vulcanized Construction</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 The Vulcanization Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Vulcanization revolutionized canvas footwear by enabling permanent bonding between canvas uppers and rubber soles. The process involves heating rubber-soled shoes in molds, causing the rubber to partially cure while adhering to the canvas upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Historical Development:</strong> Goodyear's vulcanization patent of 1844 enabled the mass production of rubber-soled footwear, creating the foundation for the modern athletic shoe industry.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Construction Layers:</strong> Traditional vulcanized canvas shoes typically include canvas upper, canvas insole/lasting board, thin fabric lining, and vulcanized rubber outsole with foxing tape.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Manufacturing Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Vulcanized canvas shoe production involves multiple stages, from upper cutting through final vulcanization. Each step requires careful execution to achieve quality results.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Upper Assembly:</strong> Canvas panels are cut, printed if required, and sewn into upper configurations. Reinforcement patches are added at stress points.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Lasting:</strong> The completed upper is stretched over a shoe last and secured with adhesives and/or tacks. The lasted upper determines final shoe shape and fit.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Vulcanization:</strong> Completed shoes are placed in vulcanization presses at temperatures of approximately 150°C for 15-25 minutes, bonding rubber components and setting the final shape.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Quality Characteristics</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Well-constructed vulcanized canvas shoes demonstrate specific quality indicators that distinguish them from inferior products.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Bond:</strong> The rubber foxing tape should be fully bonded to both the outsole and upper, with no separation or lifting at edges.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Shape Retention:</strong> Quality vulcanized shoes maintain their shape over extended use, without collapse of the toe box or distortion of the heel counter area.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Production Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is the dominant global producer of canvas footwear, with manufacturing concentrated in regions with established textile and footwear industries. Key production areas include Jiangsu (canvas and vulcanized shoes), Zhejiang (casual footwear), and Guangdong (export-oriented production).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Canvas Suppliers:</strong> Numerous Chinese textile mills produce canvas specifically for footwear applications, offering various weights, fiber contents, and performance specifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Footwear Manufacturers:</strong> Both large-scale OEM facilities and small-batch artisan producers serve the canvas footwear market, enabling options from high-volume commodity production to limited-edition specialty items.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Canvas Specifications:</strong> Define canvas requirements including fiber content, weight, weave construction, color options, and any required certifications (organic, recycled content, etc.).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Vulcanization Capability:</strong> Not all footwear manufacturers have vulcanization capability. Verify equipment availability or consider working with specialized vulcanized footwear producers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Minimum Order Quantities:</strong> Canvas footwear production typically involves higher MOQs than casual footwear due to the specialized equipment requirements of vulcanization processing.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💨</div>
+      <h3 class="font-semibold text-lg mb-2">Breathable</h3>
+      <p class="text-neutral-600 text-sm">
+        Natural fiber ventilation for all-day comfort.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌱</div>
+      <h3 class="font-semibold text-lg mb-2">Sustainable</h3>
+      <p class="text-neutral-600 text-sm">
+        Biodegradable natural fibers.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Printable</h3>
+      <p class="text-neutral-600 text-sm">
+        Excellent surface for custom designs.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👟</div>
+      <h3 class="font-semibold text-lg mb-2">Classic Style</h3>
+      <p class="text-neutral-600 text-sm">
+        Timeless aesthetic appeal.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Content</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

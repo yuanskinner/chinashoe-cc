@@ -3,41 +3,41 @@ import PageLayout from '@layouts/PageLayout.astro';
 
 const features = [
   {
-    title: 'Adhesive Selection',
-    description: 'Choosing the right industrial adhesives for cemented footwear construction.',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
-    href: '/encyclopedia/manufacturing/cemented/adhesives/',
-  },
-  {
     title: 'Surface Preparation',
-    description: 'Proper upper and sole preparation for optimal adhesive bonding.',
-    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/manufacturing/cemented/preparation/',
+    description: 'Proper surface preparation for cemented construction.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/surface-preparation/',
   },
   {
-    title: 'Activation and Pressing',
-    description: 'Heat activation and pressing processes for strong bonds.',
-    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    title: 'Adhesive Selection',
+    description: 'Choosing the right adhesives for cemented footwear.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/manufacturing/cemented/adhesive-selection/',
+  },
+  {
+    title: 'Activation Process',
+    description: 'Chemical activation methods for optimal bonding.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
     href: '/encyclopedia/manufacturing/cemented/activation/',
   },
   {
-    title: 'Quality Testing',
-    description: 'Bond strength testing and quality control procedures.',
-    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=300&fit=crop',
+    title: 'Testing Methods',
+    description: 'Quality testing for cemented footwear bonds.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
     href: '/encyclopedia/manufacturing/cemented/testing/',
   },
 ];
 
 const relatedCategories = [
-  { name: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/', count: 45 },
-  { name: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/', count: 25 },
-  { name: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/', count: 28 },
+  { name: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/', count: 28 },
+  { name: 'Direct Injection', href: '/encyclopedia/manufacturing/injection/', count: 35 },
+  { name: 'Manufacturing Overview', href: '/encyclopedia/manufacturing/', count: 28 },
 ];
 ---
 
 <PageLayout
-  title="Cemented Construction Guide"
-  description="Complete guide to cemented footwear construction: the adhesive bonding method used in most modern shoes. Learn about the process, quality control, and how cemented shoes compare to other construction methods."
+  title="Cemented Process Guide"
+  description="Complete guide to cemented footwear construction: understanding adhesive technology, surface preparation, activation processes, quality testing, and China manufacturing."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
@@ -46,32 +46,33 @@ const relatedCategories = [
   ]}
   sidebarItems={[
     {
-      title: 'Cemented Construction',
+      title: 'Cemented Process',
       links: [
         { label: 'Overview', href: '/encyclopedia/manufacturing/cemented/', active: true },
-        { label: 'Adhesive Selection', href: '/encyclopedia/manufacturing/cemented/adhesives/' },
-        { label: 'Surface Preparation', href: '/encyclopedia/manufacturing/cemented/preparation/' },
-        { label: 'Activation & Pressing', href: '/encyclopedia/manufacturing/cemented/activation/' },
-        { label: 'Quality Testing', href: '/encyclopedia/manufacturing/cemented/testing/' },
+        { label: 'Surface Preparation', href: '/encyclopedia/manufacturing/cemented/surface-preparation/' },
+        { label: 'Adhesive Selection', href: '/encyclopedia/manufacturing/cemented/adhesive-selection/' },
+        { label: 'Activation', href: '/encyclopedia/manufacturing/cemented/activation/' },
+        { label: 'Testing', href: '/encyclopedia/manufacturing/cemented/testing/' },
       ],
     },
     {
-      title: 'Other Methods',
+      title: 'Related Processes',
       links: [
+        { label: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/' },
+        { label: 'Direct Injection', href: '/encyclopedia/manufacturing/injection/' },
+        { label: 'Strobel Construction', href: '/encyclopedia/manufacturing/strobel/' },
         { label: 'Goodyear Welt', href: '/encyclopedia/manufacturing/goodyear-welt/' },
-        { label: 'Blake Stitch', href: '/encyclopedia/manufacturing/blake-stitch/' },
-        { label: 'Vulcanized', href: '/encyclopedia/manufacturing/vulcanized/' },
       ],
     },
   ]}
 >
   <div class="mb-8">
-    <span class="badge-primary mb-2">Manufacturing Encyclopedia</span>
+    <span class="badge-primary mb-2">Manufacturing Guide</span>
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Cemented Construction Guide
+      Cemented Process Guide
     </h1>
     <p class="text-lg text-neutral-600">
-      Everything you need to know about cemented footwear construction: the adhesive bonding method used in most modern athletic and casual shoes. Learn about the process and quality factors.
+      Comprehensive guide to cemented footwear construction: understanding adhesive technology, surface preparation methods, activation processes, quality testing, and China manufacturing capabilities.
     </p>
   </div>
 
@@ -79,118 +80,357 @@ const relatedCategories = [
   <div class="rounded-xl overflow-hidden mb-8">
     <img
       src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
-      alt="Modern Athletic Shoe Construction"
+      alt="Cemented Footwear Construction"
       class="w-full h-64 md:h-80 object-cover"
     />
   </div>
 
-  <!-- Introduction Content -->
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Market Share</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">45<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Of all footwear produced</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Versatility</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Material compatibility</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Cost Efficiency</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">Excellent</p>
+      <p class="text-base text-gray-500">Production economics</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
   <div class="prose prose-lg max-w-none mb-12">
     <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Cemented Construction</h2>
     
     <p class="text-neutral-600 mb-4">
-      Cemented construction, also known as adhesive construction or stuck-on construction, is the most common method for joining shoe uppers to soles in modern footwear manufacturing. This method uses industrial adhesives to bond the upper, midsole, and outsole together, creating a flexible, lightweight, and cost-effective shoe.
+      Cemented construction—also known as adhesive bonding or stuck-on construction—represents the most widely used footwear assembly method globally. This process uses chemical adhesives to bond separate sole components to each other and to the upper, creating durable attachments without the mechanical interlocking features of stitched or vulcanized construction.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      While cemented construction doesn't offer the resolability of Goodyear welt or Blake stitch methods, it enables modern athletic shoe designs that would be impossible with traditional construction. The method is particularly suited to shoes with complex sole geometries, integrated cushioning systems, and performance-focused designs.
+      The cemented process achieves remarkable bond strength through carefully engineered surface preparation, adhesive selection, and application procedures. Modern adhesive technology enables cemented footwear to meet demanding performance requirements while providing flexibility in design and material selection.
     </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">The Cementing Process</h3>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Process Advantages</h3>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Surface Preparation:</strong> The bonding surfaces must be properly prepared to ensure strong adhesion. This typically involves roughening the surfaces, removing dust and contaminants, and ensuring appropriate moisture content. For leather, this may include cleaning and sometimes applying a primer.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Adhesive Application:</strong> Industrial adhesives are applied to both the upper lasting margin and the sole surface. Common adhesive systems include polyurethane (PU) adhesives, polychloroprene (CR) adhesives, and hot melt adhesives. Application must be even and thorough, covering the entire bonding surface.
+      <strong>Design Flexibility:</strong> Adhesive bonding accommodates diverse sole geometries and material combinations.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Flash-Off Time:</strong> After adhesive application, a flash-off period allows solvents to evaporate and the adhesive to reach the proper viscosity for bonding. This time must be carefully controlled—too short results in solvent entrapment; too long allows the adhesive to skin over.
+      <strong>Material Versatility:</strong> Bonds dissimilar materials including rubber, EVA, polyurethane, leather, and synthetics.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Heat Activation:</strong> Many modern adhesives require heat activation before bonding. The adhesive-coated surfaces are heated, typically to 60-80°C, which activates the adhesive and prepares it for bonding.
+      <strong>Production Efficiency:</strong> Relatively simple equipment requirements enable cost-effective production.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Adhesive Technology</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Polyurethane Adhesives</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Polyurethane (PU) adhesives dominate footwear cemented construction due to their excellent bond strength, flexibility, and versatility across various material combinations.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Pressing:</strong> The heated surfaces are brought together under pressure, typically using pressing machines that ensure uniform contact across the entire bonding surface. Pressure must be sufficient to ensure contact but not so high as to squeeze out all adhesive.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Adhesive Types</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Polychloroprene (Neoprene):</strong> Traditional choice for shoe cementing, offering excellent initial grab and good heat resistance. Requires solvent-based application and careful handling.
+      <strong>Moisture Cure:</strong> PU adhesives cure by reacting with atmospheric moisture, creating strong chemical bonds.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Polyurethane (PU):</strong> Water-based options available, offering good bond strength and environmental compliance. Common in European manufacturing due to regulatory pressures.
+      <strong>Flexibility:</strong> Cured PU remains flexible, accommodating the flexing of footwear during wear.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Hot Melt Adhesives:</strong> 100% solid materials that melt when heated and solidify on cooling. Offer fast processing and no solvent concerns but require precise temperature control.
+      <strong>Substrate Compatibility:</strong> Bonds effectively to both porous (leather, textiles) and non-porous (rubber, synthetics) materials.
     </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Quality Factors</h3>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Chloroprene Adhesives</h3>
     
     <p class="text-neutral-600 mb-4">
-      Bond strength depends on proper surface preparation, appropriate adhesive selection, correct flash-off timing, proper heat activation, and adequate pressing pressure. Failure in any step can lead to delamination—the most common quality issue in cemented footwear.
-    </p>
-    
-    <p class="text-neutral-600 mb-4">
-      Environmental factors including temperature and humidity can affect adhesive performance. Quality manufacturers maintain controlled production environments and adjust processes seasonally as needed.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Advantages and Limitations</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      <strong>Advantages:</strong> Cemented construction enables complex sole designs, lightweight construction, cost efficiency at scale, design flexibility, and compatibility with modern materials like EVA foam and mesh uppers.
+      Chloroprene (neoprene) adhesives provide excellent initial grab and heat resistance, making them suitable for specific applications.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      <strong>Limitations:</strong> Cemented shoes cannot be resoled in the traditional sense. Bond strength can degrade over time with exposure to flexing, heat, and moisture. Some adhesives may fail with extended exposure to water.
-    </p>
-    
-    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Sourcing Considerations for B2B Buyers</h3>
-    
-    <p class="text-neutral-600 mb-4">
-      When sourcing cemented footwear from China, quality control is critical given the adhesive-dependent nature of the construction. Evaluate the manufacturer's adhesive selection, surface preparation processes, and quality testing procedures.
+      <strong>Solvent-Based:</strong> Traditional chloroprene adhesives are dissolved in organic solvents.
     </p>
     
     <p class="text-neutral-600 mb-4">
-      Request pull-off tests demonstrating bond strength specifications. Evaluate sample durability through flex testing and exposure to heat and moisture. Understand the manufacturer's environmental controls and seasonal process adjustments.
+      <strong>Quick Grab:</strong> Chloroprene provides rapid initial bonding before final cure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heat Resistance:</strong> Excellent resistance to heat during the activation process.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Water-Based Adhesives</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Environmental concerns have driven adoption of water-based adhesive technologies, though with some performance trade-offs.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polymer Dispersions:</strong> Water-based PU and acrylic dispersions offer reduced VOC emissions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Application Challenges:</strong> Water-based adhesives require different application and drying parameters.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Regulatory Drivers:</strong> Environmental regulations increasingly favor water-based alternatives.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Surface Preparation</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Mechanical Roughening</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Mechanical surface preparation creates micro-roughness that increases effective bonding surface area and improves mechanical adhesion.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Abrasive Treatment:</strong> Wire brushes, sandpaper, or abrasive wheels roughen smooth surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Roughness Standards:</strong> Target surface roughness typically 20-40 microns Ra for optimal adhesion.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Contamination Removal:</strong> Mechanical treatment also removes surface contaminants including mold release agents.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Chemical Treatment</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chemical treatments modify surface energy and chemistry to improve adhesive wetting and bonding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Primers:</strong> Surface primers improve adhesion to difficult substrates like TPU or PVC.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flame Treatment:</strong> Oxidative flame treatment increases surface energy of polyolefin materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Corona Treatment:</strong> Electrical corona discharge modifies surface energy of film materials.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Cleaning Procedures</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Clean surfaces are essential for adhesive performance. Contamination from dust, oils, or previous treatments can significantly reduce bond strength.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Solvent Cleaning:</strong> Organic solvents remove oil and grease contamination.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Dry Cleaning:</strong> Compressed air or brushes remove loose particles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Timing Control:</strong> Surfaces must be clean immediately before adhesive application.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Application Process</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Adhesive Application</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Precise adhesive application ensures consistent bond quality while minimizing material waste.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Application Methods:</strong> Brush, spray, or roller application each provide different coverage characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Coverage Rates:</strong> Typical application rates range from 80-150 grams per square meter depending on substrate porosity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Uniformity:</strong> Even adhesive distribution prevents weak spots in the bonded assembly.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Drying and Flash-Off</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Adhesive films must be properly dried before activation to achieve optimal bond strength.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flash-Off Time:</strong> Solvent evaporation creates a dry-to-touch film with appropriate viscosity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Temperature Control:</strong> Drying temperature affects solvent evaporation rate and film properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Humidity Effects:</strong> For moisture-cure adhesives, humidity affects curing kinetics.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Activation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Heat activation converts the dried adhesive film into a tacky, bondable state ready for assembly.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Activation Temperature:</strong> Typical activation temperatures range from 60°C to 80°C depending on adhesive type.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heating Methods:</strong> Radiant heaters, hot air, or contact heating activate adhesive films.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Open Time:</strong> The activated adhesive remains bondable for limited time before cooling.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.4 Assembly and Pressing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Precise assembly and adequate pressing ensure complete contact between bonded surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Positioning:</strong> Components must be aligned correctly during initial contact.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Press Pressure:</strong> Adequate pressure ensures complete surface contact for molecular bonding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Dwell Time:</strong> Pressure must be maintained while adhesive cools below activation temperature.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Testing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Peel Testing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Peel testing measures the force required to separate bonded surfaces at a controlled rate.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>90-Degree Peel:</strong> Standard test method measuring peel force at constant angle.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>180-Degree Peel:</strong> Alternative configuration used for specific material combinations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Acceptance Criteria:</strong> Typical requirements range from 30-60 N/cm depending on application.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Shear Testing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Shear testing evaluates bond strength under parallel loading conditions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Block Shear:</strong> Applies load parallel to bonded interface.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Strap Peel:</strong> Wide specimen geometry minimizes peel effects.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Temperature Testing:</strong> Shear testing at elevated temperatures identifies heat-related failures.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Durability Testing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Real-world durability requires testing under conditions simulating actual wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Testing:</strong> Repeated flexing tests bond integrity under dynamic loading.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water Resistance:</strong> Soak testing evaluates bond degradation in wet conditions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Aging Testing:</strong> Accelerated aging simulates long-term performance.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Production Capabilities</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese footwear manufacturers have developed extensive expertise in cemented construction, with capabilities ranging from basic commodity production to premium quality manufacturing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Major Production Regions:</strong> Guangdong (casual and athletic), Fujian (sports footwear), and Zhejiang (fashion and casual).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Equipment Standards:</strong> Modern Chinese factories utilize current-generation adhesive application and activation equipment.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Quality Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Adhesive Specifications:</strong> Specify adhesive types, coverage rates, and activation parameters clearly.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Testing Protocols:</strong> Establish testing procedures and acceptance criteria for quality verification.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Environmental Standards:</strong> Verify compliance with VOC regulations for target markets.
     </p>
   </div>
 
-  <!-- Key Sections -->
+  <!-- Key Properties -->
   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
     <div class="card text-center">
-      <div class="text-4xl mb-4">🎨</div>
-      <h3 class="font-semibold text-lg mb-2">Design Flexibility</h3>
+      <div class="text-4xl mb-4">🔗</div>
+      <h3 class="font-semibold text-lg mb-2">Strong Bond</h3>
       <p class="text-neutral-600 text-sm">
-        Enables complex geometries impossible with traditional methods.
+        Engineered adhesion.
       </p>
     </div>
     <div class="card text-center">
-      <div class="text-4xl mb-4">🪶</div>
-      <h3 class="font-semibold text-lg mb-2">Lightweight</h3>
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Versatile</h3>
       <p class="text-neutral-600 text-sm">
-        No heavy welt or insole boards add unnecessary weight.
+        Material compatibility.
       </p>
     </div>
     <div class="card text-center">
       <div class="text-4xl mb-4">💰</div>
-      <h3 class="font-semibold text-lg mb-2">Cost Efficient</h3>
+      <h3 class="font-semibold text-lg mb-2">Cost-Effective</h3>
       <p class="text-neutral-600 text-sm">
-        Economical at scale with efficient manufacturing processes.
+        Production efficiency.
       </p>
     </div>
     <div class="card text-center">
-      <div class="text-4xl mb-4">⚡</div>
-      <h3 class="font-semibold text-lg mb-2">Fast Production</h3>
+      <div class="text-4xl mb-4">🔬</div>
+      <h3 class="font-semibold text-lg mb-2">Tested</h3>
       <p class="text-neutral-600 text-sm">
-        Faster manufacturing cycle compared to welted methods.
+        Quality verification.
       </p>
     </div>
   </div>
@@ -208,10 +448,10 @@ const relatedCategories = [
           />
         </div>
         <div class="p-4">
-          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
             {article.title}
           </h3>
-          <p class="text-sm text-neutral-600">
+          <p class="text-neutral-600 text-sm">
             {article.description}
           </p>
         </div>
@@ -220,15 +460,12 @@ const relatedCategories = [
   </div>
 
   <!-- Related Categories -->
-  <div class="border-t border-neutral-200 pt-8">
-    <h3 class="text-lg font-semibold text-neutral-900 mb-4">Related Categories</h3>
-    <div class="flex flex-wrap gap-3">
-      {relatedCategories.map(cat => (
-        <a href={cat.href} class="inline-flex items-center justify-between gap-2 px-4 py-2 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors">
-          <span class="font-medium text-neutral-700">{cat.name}</span>
-          <span class="text-sm text-neutral-500">({cat.count})</span>
-        </a>
-      ))}
-    </div>
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Content</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
   </div>
 </PageLayout>

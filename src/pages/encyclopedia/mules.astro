@@ -1,0 +1,427 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Heel Mules',
+    description: 'Classic heeled mule styles: from block heels to stilettos.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/mules/heel-mules/',
+  },
+  {
+    title: 'Flat Mules',
+    description: 'Effortless flat mule styles for everyday elegance.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/mules/flat-mules/',
+  },
+  {
+    title: 'Platform Mules',
+    description: 'Statement platform mules: height without discomfort.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/mules/platform-mules/',
+  },
+  {
+    title: 'Mule Construction',
+    description: 'Understanding mule construction and lasting techniques.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/mules/construction/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Slippers', href: '/encyclopedia/slippers/', count: 42 },
+  { name: 'Sandals', href: '/encyclopedia/sandals/', count: 45 },
+  { name: 'Heels', href: '/encyclopedia/heels/', count: 38 },
+];
+---
+
+<PageLayout
+  title="Mules Guide"
+  description="Complete guide to mules: understanding heeled, flat, and platform styles, construction techniques, fashion history, and manufacturing insights."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Categories', url: '/encyclopedia/categories/' },
+    { name: 'Mules', url: '/encyclopedia/mules/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Mules Category',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/mules/', active: true },
+        { label: 'Heel Mules', href: '/encyclopedia/mules/heel-mules/' },
+        { label: 'Flat Mules', href: '/encyclopedia/mules/flat-mules/' },
+        { label: 'Platform Mules', href: '/encyclopedia/mules/platform-mules/' },
+        { label: 'Construction', href: '/encyclopedia/mules/construction/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'Slippers', href: '/encyclopedia/slippers/' },
+        { label: 'Sandals', href: '/encyclopedia/sandals/' },
+        { label: 'Heels', href: '/encyclopedia/heels/' },
+        { label: 'Loafers', href: '/encyclopedia/loafers/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Category Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Mules Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to mules: understanding this versatile backless shoe style, from fashion history to construction techniques and China sourcing strategies.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Elegant Mule Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-pink-700 font-medium mb-2">Trend Status</p>
+      <p class="text-4xl font-bold text-pink-900 mb-2">Peak</p>
+      <p class="text-base text-gray-500">Major fashion focus</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Versatility</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Day to evening wear</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">History</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">500<span class="text-lg ml-1">+</span></p>
+      <p class="text-base text-gray-500">Years of heritage</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Mules</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Mules represent a distinctive footwear category characterized by their backless design. Unlike traditional shoes that encase the heel or sandals that secure the foot with straps, mules feature an exposed heel while the front portion provides coverage and style. This unique construction creates an effortless elegance that has captivated fashion enthusiasts for centuries.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The mule's defining characteristic lies in its name, derived from the Latin "mula" (sock), reflecting its origins as indoor footwear. Over time, mules evolved from bedroom slippers to fashion statements, experiencing multiple periods of popularity that have solidified their position as wardrobe essentials.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Defining Characteristics</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Backless Design:</strong> The defining feature of mules is the absence of a posterior heel enclosure, distinguishing them from closed-back shoes and most sandal styles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Covered Toes:</strong> Unlike flip-flops or simple slides, mules typically feature a covered toe box providing more structure and warmth.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Easy Entry:</strong> The backless design facilitates effortless foot insertion and removal, contributing to the mule's association with casual elegance.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Fashion History</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Origins</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The mule's origins trace back to Renaissance Europe, where they emerged as indoor footwear for the privileged classes. These early mules were often elaborately decorated, reflecting the wearer's status and wealth.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>European Heritage:</strong> French and Italian aristocracy embraced mules as private footwear, worn only within the home.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ornate Detailing:</strong> Early mules featured embroidery, jewels, and luxurious materials befitting their status as refined indoor wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 20th Century Evolution</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The 20th century witnessed the mule's transformation from private to public footwear, with major fashion houses introducing mule styles that redefined the category.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>1920s Liberation:</strong> The flapper era saw mules gaining popularity as hemlines rose and women sought more comfortable, practical footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>1950s Glamour:</strong> Christian Dior introduced mule designs with distinctive heels, establishing the high-fashion mule aesthetic.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>1990s Revival:</strong> Minimalist fashion brought mules back into prominence, with designers like Manolo Blahnik creating iconic mule styles.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Contemporary Fashion</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Today's mule market reflects diverse style influences, from minimalist Scandinavian design to maximalist luxury aesthetics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Designer Focus:</strong> Major luxury brands continue investing in mule collections, demonstrating sustained fashion relevance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Versatile Positioning:</strong> Contemporary mules successfully bridge casual and formal occasions, contributing to widespread adoption.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Style Variations</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Heel Mules</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Heel mules combine the effortless style of the mule silhouette with the height and elegance of elevated footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Block Heels:</strong> Chunky block heels provide stability and comfort while adding significant height.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Stiletto Mules:</strong> High heels create dramatic elegance, favored for evening and special occasions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Kitten Heels:</strong> Low heels offer subtle elevation with maximum comfort for extended wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Flat Mules</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Flat mules provide sophisticated style without heel height, making them ideal for everyday wear and professional environments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Ballet Flats Evolution:</strong> Mule adaptations of classic ballet flats offer elegant simplicity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Loafer Mules:</strong> Mule versions of classic loafers combine traditional craftsmanship with contemporary ease.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pointed Toe:</strong> Elongated toe boxes create the illusion of length while adding sophistication.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Platform Mules</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Platform mules provide significant height through thick sole construction, reducing foot angle while maximizing stature.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Continuous Platform:</strong> Even platform height maintains consistent comfort across the foot.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Chunky Soles:</strong> Bold platform constructions create statement footwear for fashion-forward consumers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Wedge Integration:</strong> Platform wedges combine the stability of wedges with the style of platforms.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Construction Techniques</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Lasting Methods</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Mule construction requires specialized lasting techniques due to the absence of heel enclosure. This creates unique challenges in achieving proper fit and appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Slip-Lasting:</strong> The upper is sewn together at the bottom and then attached to the insole, creating the characteristic flexibility of mules.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Combination Lasting:</strong> Combining slip-lasting at the toe with strobel lasting at the heel provides structure while maintaining flexibility.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heel Seat Construction:</strong> The heel area requires careful construction to prevent collapse while maintaining the mule's elegant line.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Heel Attachment</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Heel construction in mules requires different approaches than traditional heeled footwear, as the mule design eliminates conventional heel seat structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Counter-Free Design:</strong> Mules lack the internal heel counter found in traditional shoes, requiring alternative structural solutions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heel Block Attachment:</strong> The sole must provide secure heel attachment without the conventional heel seat enclosure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Reinforcement Techniques:</strong> Strategic reinforcement maintains heel shape and provides adequate support.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Material Selection</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Material choices in mule construction significantly impact both aesthetics and performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Upper Materials:</strong> Leather, suede, fabric, and synthetic materials each provide distinct aesthetic and comfort characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sole Considerations:</strong> The backless design places different demands on sole materials, requiring good grip and durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Padding Requirements:</strong> Mules require careful interior padding to ensure comfort without the support provided by enclosed heel construction.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Production Capabilities</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese manufacturers have developed significant mule production capabilities, with expertise ranging from mass-market production to premium quality manufacturing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Major Production Regions:</strong> Guangdong (fashion mules), Zhejiang (casual styles), and Fujian (comfort footwear).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specialization:</strong> Some factories specialize exclusively in mule production, developing deep expertise in this specific construction.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Quality Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heel Security:</strong> Verify heel attachment methods and test for adequate security given the counter-free design.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fit Assessment:</strong> The backless design creates specific fit challenges that require careful evaluation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Padding Quality:</strong> Interior cushioning quality significantly impacts mule comfort and wearability.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Design Considerations</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Proportion Balance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Successful mule design requires careful attention to proportions, balancing the exposed heel with the covered toe and overall silhouette.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Toe Box Height:</strong> Adequate toe box coverage prevents foot sliding while maintaining elegant proportions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heel Position:</strong> Heel placement affects weight distribution and comfort in backless footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Overall Length:</strong> Mule length affects the illusion of leg length and overall elegance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Functional Design</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Beyond aesthetics, mule design must address functional considerations specific to backless footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grip Considerations:</strong> The exposed heel requires sole design that prevents slippage during walking.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Padding Strategy:</strong> Strategic cushioning placement compensates for reduced structural support.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Entry Design:</strong> The opening must facilitate easy foot entry while maintaining secure wear.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👠</div>
+      <h3 class="font-semibold text-lg mb-2">Elegant</h3>
+      <p class="text-neutral-600 text-sm">
+        Effortless sophisticated style.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👣</div>
+      <h3 class="font-semibold text-lg mb-2">Easy Entry</h3>
+      <p class="text-neutral-600 text-sm">
+        Simple slip-on design.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Versatile</h3>
+      <p class="text-neutral-600 text-sm">
+        Day to evening wear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💃</div>
+      <h3 class="font-semibold text-lg mb-2">Trendy</h3>
+      <p class="text-neutral-600 text-sm">
+        Fashion-forward design.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Categories</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

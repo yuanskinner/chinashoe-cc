@@ -1,0 +1,413 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Premium Leather Selection',
+    description: 'How top-tier hides are selected and graded for luxury footwear.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/full-grain-leather/selection/',
+  },
+  {
+    title: 'Vegetable Tanning Process',
+    description: 'Traditional tanning methods that enhance leather quality and character.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/full-grain-leather/tanning/',
+  },
+  {
+    title: 'Patina Development',
+    description: 'How full grain leather develops beautiful character over time.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/full-grain-leather/patina/',
+  },
+  {
+    title: 'Care and Maintenance',
+    description: 'Professional guidance for preserving full grain leather footwear.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/full-grain-leather/care/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Top Grain Leather', href: '/encyclopedia/materials/top-grain-leather/', count: 32 },
+  { name: 'Genuine Leather', href: '/encyclopedia/materials/genuine-leather/', count: 28 },
+  { name: 'Leather Guide', href: '/encyclopedia/leather/', count: 65 },
+];
+---
+
+<PageLayout
+  title="Full Grain Leather Guide"
+  description="Complete guide to full grain leather in premium footwear: selection criteria, tanning processes, patina development, care instructions, and quality assessment."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Full Grain Leather', url: '/encyclopedia/materials/full-grain-leather/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Leather Quality Guide',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/full-grain-leather/', active: true },
+        { label: 'Selection', href: '/encyclopedia/materials/full-grain-leather/selection/' },
+        { label: 'Tanning', href: '/encyclopedia/materials/full-grain-leather/tanning/' },
+        { label: 'Patina', href: '/encyclopedia/materials/full-grain-leather/patina/' },
+        { label: 'Care Guide', href: '/encyclopedia/materials/full-grain-leather/care/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Top Grain Leather', href: '/encyclopedia/materials/top-grain-leather/' },
+        { label: 'Genuine Leather', href: '/encyclopedia/materials/genuine-leather/' },
+        { label: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/' },
+        { label: 'Exotic Leathers', href: '/encyclopedia/materials/exotic-leathers/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Premium Materials</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Full Grain Leather Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      The definitive guide to full grain leather: understanding the highest quality leather available, from hide selection through tanning to long-term care and patina development.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Premium Full Grain Leather Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-amber-700 font-medium mb-2">Quality Ranking</p>
+      <p class="text-4xl font-bold text-amber-900 mb-2">Highest</p>
+      <p class="text-base text-gray-500">Top tier leather classification</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Durability</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">30+</p>
+      <p class="text-base text-gray-500">Years with proper care</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Surface Integrity</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">100<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Original grain surface intact</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">What is Full Grain Leather?</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Full grain leather represents the pinnacle of leather quality, containing the complete grain surface with all its natural markings, strength, and character. Unlike lower grades that are sanded, buffed, or otherwise processed to remove imperfections, full grain leather retains the hide's original surface, allowing the material to develop a beautiful patina over time while maintaining exceptional durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The term "full grain" refers specifically to leather that has not had the surface layer (grain) removed or altered. The grain layer contains the densest, most durable portion of the hide, with tightly packed fibers that provide superior strength and resistance to wear. This intact grain surface also provides natural water resistance characteristics that are diminished in lower-quality leathers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Definition and Characteristics</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Full grain leather is defined by its complete preservation of the original hide surface. The grain layer remains entirely intact, including all natural variations, growth marks, healed scars, and inherent texture patterns that distinguish each hide.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Natural Markings:</strong> Each piece of full grain leather carries unique characteristics including subtle growth lines, areas of varying grain texture, and natural imperfections that tell the story of the animal's life. These markings are not defects but rather badges of authenticity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fiber Density:</strong> The grain layer contains the hide's most densely packed collagen fibers, providing mechanical strength that exceeds that of split leather or corrected-grain materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Patina Potential:</strong> The intact grain surface enables the development of patina—accelerated in warmer, more humid environments—that enhances the leather's character and beauty over time.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Hide Selection and Grading</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Source Animal Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The quality of full grain leather begins with the source hide. Different animal species produce leather with distinct characteristics suited to different applications. Understanding these variations enables appropriate material selection.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cattle Hide:</strong> The most common source for footwear leather, cattle hide provides large hides with consistent thickness and excellent durability. European cattle typically produce higher-quality hides due to climate conditions and breeding practices.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Calfskin:</strong> Hides from young cattle (under one year) produce exceptionally fine-grained leather with remarkable softness. Calfskin is prized for luxury footwear where supple feel is paramount.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Bullhide:</strong> Mature male cattle produce thicker, more robust hides with characteristic durability. Bullhide is often selected for work footwear or heavy-duty applications.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Hide Quality Factors</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Tanners evaluate hides based on multiple quality criteria that determine suitability for full grain leather production. These factors influence both processing requirements and final leather characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grain Uniformity:</strong> Premium hides exhibit consistent grain pattern across the surface, with minimal variation that would require correction processing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Condition:</strong> Hides should be free from brands, parasites, and significant scarring. Light healed scratches and small scars are acceptable as they demonstrate the animal's natural history.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thickness Consistency:</strong> Uniform thickness throughout the hide simplifies cutting operations and reduces waste during manufacturing.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 International Grading Systems</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Various national and regional grading systems evaluate hide quality for commercial purposes. While terminology varies by region, the underlying principles of assessing surface condition and structural integrity remain consistent.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Selection Numbers:</strong> Some systems use numerical selection grades, with lower numbers indicating higher quality. For example, Selection 1 represents premium hides with minimal defects.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Category Descriptions:</strong> Other systems use descriptive categories such as "Premium," "Number 1," "Number 2," etc., with clear specifications for acceptable marking and defect levels.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Tanning Processes</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Vegetable Tanning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Vegetable tanning represents the most traditional leather processing method, using natural tannins extracted from tree bark. This centuries-old process produces leather with exceptional character and the ability to develop rich patina over time.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tannin Sources:</strong> Oak bark, chestnut, quebracho, and sumac provide the primary tannin sources for vegetable tanning. Different bark combinations produce leather with varying characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Process Duration:</strong> Vegetable tanning requires extended processing time, typically 30-60 days or longer, allowing tannins to thoroughly penetrate the hide structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Environmental Impact:</strong> Vegetable tanning is more environmentally sustainable than chrome tanning, though it requires more water and land for bark sourcing.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Chrome Tanning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chrome tanning, introduced in the mid-19th century, revolutionized leather production by dramatically reducing processing time. Chromium salts penetrate the hide structure, producing leather with excellent softness and consistent quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Processing Efficiency:</strong> Chrome tanning reduces processing time to 24-48 hours, enabling high-volume production at competitive costs.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heat Resistance:</strong> Chrome-tanned leather demonstrates superior resistance to heat and moisture compared to vegetable-tanned alternatives.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Stability:</strong> Chrome-tanned leather exhibits excellent color retention and resistance to fading over extended use.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Combination Tanning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern premium leather often employs combination tanning processes that leverage the benefits of multiple methods. A typical combination approach might use chrome tanning for initial stabilization followed by vegetable retanning for enhanced character.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hybrid Characteristics:</strong> Combination-tanned leather can achieve the softness and processing efficiency of chrome-tanned leather while developing patina similar to vegetable-tanned alternatives.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Assessment</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Visual Inspection</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Quality assessment of full grain leather begins with careful visual examination. The surface appearance reveals much about the leather's origin, processing, and potential performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grain Pattern:</strong> Natural, irregular grain patterns indicate authentic full grain leather. Uniform or artificially embossed patterns may suggest lower-quality corrected grain material.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Porosity:</strong> Quality leather exhibits visible pores when examined closely, particularly in grain leather from cattle. Smooth, plastic-like surfaces may indicate coating or treatment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Consistency:</strong> Quality full grain leather displays even coloration without heavy surface coating that would mask the natural grain.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Physical Testing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Physical testing provides quantitative assessment of leather quality characteristics. While some tests require laboratory equipment, several assessments can be performed with simple tools.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water Drop Test:</strong> Genuine leather absorbs water slowly, forming a dark spot that disappears as it dries. Coated or synthetic materials may repel water or show immediate penetration.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Test:</strong> Quality leather bends smoothly without cracking or flaking at the crease lines. Inferior materials may show surface separation during flexing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Smell Assessment:</strong> Natural leather has a distinctive pleasant odor. Chemical or plastic odors may indicate excessive treatment or synthetic content.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Patina Development</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Understanding Patina</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Patina refers to the gradual transformation of leather's surface appearance through use, exposure, and care. Full grain leather develops patina particularly beautifully, as the natural grain surface interacts with oils from the skin, environmental conditions, and conditioning products.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Darkening:</strong> Light-colored leather typically darkens with patina development, acquiring rich, warm tones that reflect the owner's unique usage patterns.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Luster:</strong> Regular wear and conditioning develop a characteristic luster as the leather surface smooths and oils are absorbed.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Character Marks:</strong> Creases, scuffs, and wear patterns become part of the leather's story, enhancing rather than diminishing its beauty.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Factors Influencing Patina</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Multiple factors influence patina development, including environmental conditions, usage patterns, and care practices. Understanding these influences enables owners to encourage positive patina development.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Climate Effects:</strong> Warm, humid environments accelerate patina development by promoting oil absorption and oxidation. Cooler, drier conditions slow the process.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Usage Intensity:</strong> Regular wear introduces skin oils, perspiration, and mechanical action that contribute to patina. Infrequently worn shoes develop patina more slowly.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Care and Maintenance</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Daily Care Practices</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Consistent daily care practices significantly extend the lifespan and beauty of full grain leather footwear. Simple habits implemented with each wear yield cumulative benefits.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong> Cedar Shoe Trees:</strong> Inserting cedar shoe trees after wear absorbs moisture, maintains shape, and introduces natural oils that benefit the leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Brush Cleaning:</strong> Light brushing after wear removes surface dust and debris that can accumulate in creases and damage the leather over time.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rotation Practice:</strong> Rotating between multiple pairs allows each to fully dry between wears, preventing moisture-related damage.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Conditioning Protocol</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Regular conditioning maintains leather suppleness and prevents drying that leads to cracking. Conditioning frequency depends on wear intensity and environmental conditions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Conditioning Frequency:</strong> Monthly conditioning is appropriate for regularly worn footwear. Less frequent conditioning (quarterly) suits occasional wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Product Selection:</strong> Quality leather conditioners contain appropriate oils (mink, neatsfoot, or proprietary blends) without excessive solvents that can damage leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Application Technique:</strong> Apply conditioner sparingly with a soft cloth, allowing full absorption before buffing excess.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✨</div>
+      <h3 class="font-semibold text-lg mb-2">Natural Beauty</h3>
+      <p class="text-neutral-600 text-sm">
+        Unique grain patterns and character marks.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">⏳</div>
+      <h3 class="font-semibold text-lg mb-2">Patina Development</h3>
+      <p class="text-neutral-600 text-sm">
+        Beautifully improves with age.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">Exceptional Durability</h3>
+      <p class="text-neutral-600 text-sm">
+        30+ years with proper care.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌿</div>
+      <h3 class="font-semibold text-lg mb-2">Breathable</h3>
+      <p class="text-neutral-600 text-sm">
+        Natural comfort regulation.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

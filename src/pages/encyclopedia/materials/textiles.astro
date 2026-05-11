@@ -1,0 +1,459 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Knit Textiles',
+    description: 'Engineered knit constructions for performance footwear.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/textiles/knit-textiles/',
+  },
+  {
+    title: 'Woven Fabrics',
+    description: 'Traditional woven textile constructions and applications.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/textiles/woven-fabrics/',
+  },
+  {
+    title: 'Non-Woven Materials',
+    description: 'Non-woven textile technologies in footwear manufacturing.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/textiles/non-woven/',
+  },
+  {
+    title: 'Smart Textiles',
+    description: 'Emerging textile technologies for performance enhancement.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/textiles/smart-textiles/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Mesh Fabric', href: '/encyclopedia/materials/mesh-fabric/', count: 38 },
+  { name: 'Canvas Materials', href: '/encyclopedia/materials/canvas/', count: 35 },
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 42 },
+];
+---
+
+<PageLayout
+  title="Textiles Guide"
+  description="Complete guide to textile materials in footwear: understanding knit, woven, and non-woven constructions, performance characteristics, and material selection."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Textiles', url: '/encyclopedia/materials/textiles/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Textile Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/textiles/', active: true },
+        { label: 'Knit Textiles', href: '/encyclopedia/materials/textiles/knit-textiles/' },
+        { label: 'Woven Fabrics', href: '/encyclopedia/materials/textiles/woven-fabrics/' },
+        { label: 'Non-Woven', href: '/encyclopedia/materials/textiles/non-woven/' },
+        { label: 'Smart Textiles', href: '/encyclopedia/materials/textiles/smart-textiles/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Mesh Fabric', href: '/encyclopedia/materials/mesh-fabric/' },
+        { label: 'Canvas', href: '/encyclopedia/materials/canvas/' },
+        { label: 'Synthetic', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Natural Materials', href: '/encyclopedia/materials/natural/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Textile Materials Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to textile materials in footwear: understanding knit, woven, and non-woven constructions, performance characteristics, and strategic material selection.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Technical Textile Materials in Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Industry Share</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">35<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Of footwear upper materials</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Innovation Rate</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">High</p>
+      <p class="text-base text-gray-500">Rapid technology advancement</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Versatility</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">Extreme</p>
+      <p class="text-base text-gray-500">From casual to performance</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Textile Materials</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Textile materials constitute one of the largest and most diverse categories of footwear components, encompassing everything from traditional woven canvas to advanced engineered knits. The versatility of textile manufacturing enables precise engineering of mechanical properties, aesthetic characteristics, and functional performance across an extraordinary range of applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The footwear industry's relationship with textiles has evolved dramatically over recent decades. Where textiles once served primarily as economical alternatives to leather, today's technical textiles represent cutting-edge engineering that often outperforms traditional materials in specific applications.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Material Classification</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Textile materials for footwear are classified by construction method, fiber content, and functional characteristics. Understanding these classifications enables appropriate material selection for specific applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Construction Classification:</strong> Knit, woven, and non-woven constructions each provide distinct property profiles suited to different applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fiber Classification:</strong> Natural fibers (cotton, wool), synthetic fibers (polyester, nylon), and blended constructions offer different performance characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Functional Classification:</strong> Performance textiles may incorporate moisture management, antimicrobial, waterproof, or other specialized properties.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Knit Textiles</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Knit Construction Fundamentals</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Knit textiles are produced by interlocking loops of yarn, creating flexible, dimensionally stable structures with inherent stretch characteristics. Knit construction enables precise engineering of mechanical properties through stitch pattern manipulation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Loop Structure:</strong> The fundamental knit unit—the loop—creates the characteristic flexibility and recovery of knit textiles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pattern Variation:</strong> Different stitch patterns create varied surface textures, densities, and mechanical properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Yarn Selection:</strong> Fiber content, yarn size, and twist significantly impact final knit properties.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Weft Knitting</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Weft knitting creates fabric by forming loops across the fabric width, with each course (row) interlooping with the previous course. This construction enables production of tubular and flat fabrics with consistent stretch in cross-machine directions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Single Jersey:</strong> The simplest weft knit, producing lightweight fabric with good drape and stretch.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rib Structures:</strong> Combining face and back stitches creates fabric with excellent stretch recovery and dimensional stability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Purl Structures:</strong> All stitches knitted in purl create reversible fabric with bulkier appearance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Warp Knitting</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Warp knitting forms loops in the machine direction, with each warp yarn feeding to multiple needles across the fabric width. This construction produces stable fabrics with controlled stretch characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tricot Knits:</strong> Classic warp knit structure with fine vertical ribs on face and cross-wise ribs on back.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Raschel Knits:</strong> Coarser construction enabling integration of decorative patterns and textured surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Engineered Patterns:</strong> Computer-controlled knitting enables complex pattern integration.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Engineered Knit Technology</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Flyknit and Similar Technologies</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Engineered knit technologies, exemplified by Nike Flyknit and similar systems, represent the pinnacle of textile engineering for footwear. These systems produce one-piece upper constructions with precisely controlled properties across different foot zones.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Zone Engineering:</strong> Knit structure varies across the upper, providing support where needed while maximizing breathability elsewhere.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Seamless Construction:</strong> Single-piece knit eliminates traditional stitching, reducing material waste and improving comfort.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Efficiency:</strong> Engineered knitting uses only the material required, significantly reducing waste compared to traditional cutting.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 3D Knit Structures</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Advanced knitting technologies produce true three-dimensional fabric structures without subsequent shaping or seaming operations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Volume Knitting:</strong> Creates fabrics with varying thickness across the surface for integrated cushioning or support zones.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Shape-Knit Elements:</strong> Pre-shaped knit components require minimal or no additional processing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Integrated Functionality:</strong> 3D knitting can incorporate multiple material types and functional zones in a single production step.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Woven Textiles</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Woven Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Woven textiles are produced by interlacing warp (lengthwise) and weft (crosswise) yarns at right angles. This construction creates dimensionally stable fabrics with predictable mechanical properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Plain Weave:</strong> The simplest weave pattern, interlacing warp and weft in alternating over-under sequence.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Twill Weave:</strong> Diagonal pattern created by floating warp over multiple weft yarns, producing softer, more drapable fabrics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Satin Weave:</strong> Long floats create smooth, lustrous surfaces with reduced abrasion resistance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Canvas and Duck Weaves</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Heavy-duty woven fabrics including canvas and duck provide the durability required for work and casual footwear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Canvas Construction:</strong> Plain weave heavy fabrics provide excellent durability and stability for traditional sneaker construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Duck Weave:</strong> Tighter weave structure with higher thread count provides enhanced durability and water resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Weight Specifications:</strong> Canvas weight is specified in ounces per square yard, with heavier weights providing greater durability.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Ripstop Weaves</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Ripstop weaves incorporate reinforcement yarns in a crosshatch pattern that prevents tear propagation, providing enhanced durability in lightweight fabrics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Reinforcement Grid:</strong> Typically 3-5mm spacing, larger reinforcement yarns are woven into standard fabric construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Lightweight Durability:</strong> Ripstop enables significant weight reduction while maintaining adequate tear resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Footwear Applications:</strong> Trail running shoes and outdoor footwear frequently utilize ripstop uppers for lightweight durability.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Non-Woven Materials</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Non-Woven Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Non-woven textiles are produced by bonding or interlocking fibers through mechanical, thermal, or chemical processes rather than weaving or knitting. While not suitable for visible uppers, non-wovens serve essential structural functions in footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Web Formation:</strong> Fibers are arranged into a random-oriented web before bonding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Bonding Methods:</strong> Mechanical (needlepunch), thermal (melt-bond), or chemical (adhesive) bonding creates stable fabric structures.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Functional Properties:</strong> Non-wovens can be engineered for specific properties including filtration, cushioning, or structural support.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Footwear Applications</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Non-woven materials serve numerous essential functions in footwear construction, often invisible but critical to performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong> lasting Boards:</strong> Non-woven lasting boards provide structure and support during construction and wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Insoles:</strong> Non-woven insoles provide cushioning and moisture management functions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Collars and Tongues:</strong> Padding materials enhance comfort in these critical contact areas.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Fiber Materials</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Synthetic Fibers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Synthetic fibers dominate technical textile applications due to their engineered properties, consistency, and cost efficiency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polyester:</strong> The most widely used synthetic fiber, offering strength, durability, and excellent dyeability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Nylon (Polyamide):</strong> Superior strength-to-weight ratio and excellent abrasion resistance make nylon ideal for performance applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Polypropylene:</strong> Excellent moisture resistance and low density make polypropylene suitable for specific applications.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Natural and Cellulosic Fibers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Natural and cellulosic fibers provide comfort characteristics valued in certain footwear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cotton:</strong> Excellent comfort and moisture absorption make cotton appropriate for casual and dress footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Linen:</strong> Superior strength and cool feel make linen valued for summer footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Viscose/Rayon:</strong> Cellulosic fibers provide silk-like aesthetics and comfort in fashion footwear.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">6.1 Production Capabilities</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China dominates global textile production, including advanced technical textiles for footwear. The combination of established infrastructure, technical expertise, and competitive pricing makes China the primary sourcing destination.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Knit Fabric Production:</strong> Advanced knitting equipment including Stoll, Shima Seiki, and Karl Mayer machines enables production of cutting-edge engineered knits.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specialty Weaving:</strong> Capability for technical woven fabrics including ripstop, canvas, and performance textiles.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">6.2 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Technical Specifications:</strong> Define precise mechanical property requirements including stretch, recovery, and abrasion resistance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Certification Requirements:</strong> Verify compliance with REACH, OEKO-TEX, and other relevant textile safety standards.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Consistency Verification:</strong> Establish quality control protocols to ensure batch-to-batch consistency.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🔧</div>
+      <h3 class="font-semibold text-lg mb-2">Engineered</h3>
+      <p class="text-neutral-600 text-sm">
+        Precisely controlled properties.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💨</div>
+      <h3 class="font-semibold text-lg mb-2">Breathable</h3>
+      <p class="text-neutral-600 text-sm">
+        Excellent air circulation.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌿</div>
+      <h3 class="font-semibold text-lg mb-2">Lightweight</h3>
+      <p class="text-neutral-600 text-sm">
+        Minimal weight contribution.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">♻️</div>
+      <h3 class="font-semibold text-lg mb-2">Sustainable</h3>
+      <p class="text-neutral-600 text-sm">
+        Recycled fiber options.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

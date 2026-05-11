@@ -1,0 +1,413 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'House Slippers',
+    description: 'Traditional indoor slippers: construction and cultural significance.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/slippers/house-slippers/',
+  },
+  {
+    title: 'Memory Foam Slippers',
+    description: 'Modern comfort technology in slipper construction.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/slippers/memory-foam/',
+  },
+  {
+    title: 'Leather Slippers',
+    description: 'Premium leather slippers: craftsmanship and comfort.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/slippers/leather-slippers/',
+  },
+  {
+    title: 'China Manufacturing',
+    description: 'Understanding China slipper production capabilities.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/slippers/manufacturing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Mules', href: '/encyclopedia/mules/', count: 32 },
+  { name: 'Sandals', href: '/encyclopedia/sandals/', count: 45 },
+  { name: 'Casual Shoes', href: '/encyclopedia/casual-shoes/', count: 38 },
+];
+---
+
+<PageLayout
+  title="Slippers Guide"
+  description="Complete guide to slippers: understanding house slippers, memory foam comfort, leather craftsmanship, manufacturing processes, and China sourcing strategies."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Categories', url: '/encyclopedia/categories/' },
+    { name: 'Slippers', url: '/encyclopedia/slippers/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Slippers Category',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/slippers/', active: true },
+        { label: 'House Slippers', href: '/encyclopedia/slippers/house-slippers/' },
+        { label: 'Memory Foam', href: '/encyclopedia/slippers/memory-foam/' },
+        { label: 'Leather Slippers', href: '/encyclopedia/slippers/leather-slippers/' },
+        { label: 'Manufacturing', href: '/encyclopedia/slippers/manufacturing/' },
+      ],
+    },
+    {
+      title: 'Related Categories',
+      links: [
+        { label: 'Mules', href: '/encyclopedia/mules/' },
+        { label: 'Sandals', href: '/encyclopedia/sandals/' },
+        { label: 'Casual Shoes', href: '/encyclopedia/casual-shoes/' },
+        { label: 'Boots', href: '/encyclopedia/boots/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Category Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Slippers Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to slippers: understanding comfort technologies, material choices, construction methods, and strategic sourcing from China manufacturers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Comfortable House Slippers"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Global Market</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">$28B</p>
+      <p class="text-base text-gray-500">Annual market value</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">China Share</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">65<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Global production</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Comfort Priority</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">Primary</p>
+      <p class="text-base text-gray-500">Design focus</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Slippers</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Slippers represent one of humanity's oldest footwear forms, with archaeological evidence of primitive slippers dating back thousands of years. Today, slippers encompass a diverse category ranging from traditional house footwear to therapeutic medical appliances, all unified by the core purpose of providing comfort and protection for indoor wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The slipper category bridges practical comfort and personal expression. While fundamentally functional, slippers have evolved into fashion statements, comfort technologies, and cultural artifacts that reflect regional traditions and individual preferences.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Category Definition</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Slippers are characterized by their easy-on, easy-off design and emphasis on indoor comfort. Unlike outdoor footwear that prioritizes protection and support for varied terrain, slippers optimize for warmth, softness, and foot accommodation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Minimal Structure:</strong> Unlike shoes with firm lasting and structured toe boxes, slippers feature flexible construction that accommodates foot movement.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Easy Entry:</strong> Slippers typically lack complex closure systems, relying on slip-on design, simple elastic gussets, or fold-down collars.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Comfort Focus:</strong> Cushioning, warmth, and softness take priority over support or protection characteristics.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Material Technologies</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Memory Foam Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Memory foam, developed by NASA in the 1970s for aircraft cushioning, revolutionized slipper comfort. The viscoelastic material responds to body heat and pressure, conforming precisely to individual foot shapes for personalized comfort.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Conforming Comfort:</strong> Memory foam softens at body temperature, allowing it to flow around foot contours and distribute pressure evenly.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pressure Relief:</strong> The material's pressure-distributing properties make memory foam slippers particularly beneficial for people with foot pain or arthritis.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Recovery Characteristics:</strong> Quality memory foam slowly returns to original shape when pressure is removed, maintaining cushioning performance.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Latex and Rubber</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Natural and synthetic latex provide responsive cushioning with excellent durability. These materials offer different performance characteristics than memory foam, appealing to consumers who prefer more responsive cushioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Natural Latex:</strong> Derived from rubber tree sap, natural latex offers exceptional resilience and antimicrobial properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Synthetic Latex:</strong> Petroleum-based alternatives offer consistent quality and lower cost, though with different feel characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Dunlop Process:</strong> Traditional latex foaming produces denser, more supportive cushioning.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 EVA Cushioning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Ethylene-vinyl acetate (EVA) foam provides lightweight cushioning widely used in slipper midsoles. While not as conforming as memory foam, EVA offers excellent shock absorption and durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Lightweight Performance:</strong> EVA's low density makes it ideal for lightweight slipper constructions.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Durability:</strong> EVA maintains cushioning properties over extended use better than some alternatives.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cost Efficiency:</strong> EVA offers excellent value, making it popular for mid-range slipper production.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Construction Methods</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Moccasin Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The moccasin construction style represents one of the oldest slipper forms, featuring a soft leather or fabric upper wrapped around the foot with a stitched sole unit.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Traditional Design:</strong> Native American origins of moccasin construction influence current slipper styles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flexible Fit:</strong> Moccasin construction allows natural foot movement and accommodates various foot shapes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cultural Adaptations:</strong> Various cultures developed regional moccasin variations with distinct characteristics.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Slip-On Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The simplest slipper construction, slip-on styles feature elastic side gussets or minimal closures that allow easy foot entry without fastening.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Maximum Convenience:</strong> No fastening or adjustment required, ideal for elderly or mobility-impaired wearers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Simple Construction:</strong> Minimal components reduce manufacturing complexity and cost.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Common Applications:</strong> House slippers, hotel slippers, and disposable footwear frequently use slip-on construction.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Scuff Construction</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Scuff slippers feature an open-back design that exposes the heel while protecting the foot. This construction provides easy entry with minimal coverage.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Easy Entry/Exit:</strong> Open heel allows quick foot placement without deformation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Breathability:</strong> Open back design promotes air circulation for cooler wear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Popular Styles:</strong> Spa slippers, pool slippers, and casual house slippers commonly feature scuff construction.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Sole Technologies</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Indoor vs. Outdoor Soles</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Slipper soles require different characteristics depending on intended use environment. Indoor and outdoor slippers face fundamentally different challenges.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Indoor Soles:</strong> Primarily protect floors and provide basic cushioning. Soft, quiet materials avoid floor damage and noise.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Outdoor Transition Soles:</strong> Must provide traction on varied outdoor surfaces while maintaining indoor comfort characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Dual-Use Designs:</strong> Some slippers combine indoor comfort with outdoor durability for versatile wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Sole Materials</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Various sole materials serve different slipper applications, balancing comfort, durability, and cost considerations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Suede:</strong> Traditional indoor sole material provides soft floor protection and quiet movement.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rubber:</strong> Outdoor slipper soles require rubber for traction and durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>TPR (Thermoplastic Rubber):</strong> Combines rubber-like traction with flexible comfort.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Production Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China dominates global slipper production, with manufacturing concentrated in regions with established footwear industries. The country's combination of material suppliers, manufacturing expertise, and competitive pricing makes it the primary sourcing destination.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Major Production Regions:</strong> Guangdong (casual slippers), Zhejiang (memory foam and comfort slippers), and Fujian (rubber and outdoor slippers).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Availability:</strong> China offers comprehensive material supply chains for all slipper components.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Comfort Testing:</strong> Physical testing of cushioning performance is essential, as material specifications alone may not indicate actual comfort characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Size Consistency:</strong> Verify Chinese size conversion and ensure consistent sizing across production batches.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Safety:</strong> Ensure compliance with target market chemical safety regulations, particularly for children's slippers.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market Segments</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 House Slippers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The largest slipper segment, house slippers prioritize indoor comfort, warmth, and ease of use. This category encompasses diverse styles from simple scuffs to plush booties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Market Characteristics:</strong> High volume, moderate pricing, strong emphasis on comfort and convenience.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Consumer Preferences:</strong> Easy entry, warmth, and attractive appearance rank highest in purchase decisions.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Luxury and Premium</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Premium slipper segments focus on quality materials, superior craftsmanship, and distinctive design. Leather slippers, designer brands, and specialty materials serve this market.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Quality:</strong> Premium leather, genuine sheepskin, and natural materials differentiate premium offerings.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Craftsmanship:</strong> Hand-finishing, quality stitching, and attention to detail justify premium pricing.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏠</div>
+      <h3 class="font-semibold text-lg mb-2">Indoor Comfort</h3>
+      <p class="text-neutral-600 text-sm">
+        Optimized for home wear.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">👣</div>
+      <h3 class="font-semibold text-lg mb-2">Cushioned</h3>
+      <p class="text-neutral-600 text-sm">
+        Advanced comfort technologies.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧘</div>
+      <h3 class="font-semibold text-lg mb-2">Easy Entry</h3>
+      <p class="text-neutral-600 text-sm">
+        Simple on/off design.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Accessible</h3>
+      <p class="text-neutral-600 text-sm">
+        Wide price range available.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Categories</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

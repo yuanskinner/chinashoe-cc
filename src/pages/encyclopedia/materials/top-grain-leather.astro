@@ -1,0 +1,423 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Split Leather vs Top Grain',
+    description: 'Understanding the difference between leather layers and quality implications.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/top-grain-leather/split-vs-top-grain/',
+  },
+  {
+    title: 'Sanding and Finishing',
+    description: 'The finishing processes that create consistent top grain appearance.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/top-grain-leather/finishing/',
+  },
+  {
+    title: 'Corrected Grain Leather',
+    description: 'How surface imperfections are addressed while maintaining quality.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/top-grain-leather/corrected-grain/',
+  },
+  {
+    title: 'Quality Applications',
+    description: 'Where top grain leather delivers optimal value in footwear.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/top-grain-leather/applications/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Full Grain Leather', href: '/encyclopedia/materials/full-grain-leather/', count: 45 },
+  { name: 'Genuine Leather', href: '/encyclopedia/materials/genuine-leather/', count: 28 },
+  { name: 'Leather Guide', href: '/encyclopedia/leather/', count: 65 },
+];
+---
+
+<PageLayout
+  title="Top Grain Leather Guide"
+  description="Complete guide to top grain leather in footwear: understanding the second-highest quality leather, processing methods, applications, and quality differentiation from full grain."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Top Grain Leather', url: '/encyclopedia/materials/top-grain-leather/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Leather Quality Guide',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/top-grain-leather/', active: true },
+        { label: 'Split vs Top Grain', href: '/encyclopedia/materials/top-grain-leather/split-vs-top-grain/' },
+        { label: 'Finishing', href: '/encyclopedia/materials/top-grain-leather/finishing/' },
+        { label: 'Corrected Grain', href: '/encyclopedia/materials/top-grain-leather/corrected-grain/' },
+        { label: 'Applications', href: '/encyclopedia/materials/top-grain-leather/applications/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Full Grain Leather', href: '/encyclopedia/materials/full-grain-leather/' },
+        { label: 'Genuine Leather', href: '/encyclopedia/materials/genuine-leather/' },
+        { label: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/' },
+        { label: 'Exotic Leathers', href: '/encyclopedia/materials/exotic-leathers/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Premium Materials</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Top Grain Leather Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to top grain leather: understanding quality positioning, processing characteristics, finishing methods, and appropriate applications in footwear manufacturing.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Top Grain Leather Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Quality Position</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">#2</p>
+      <p class="text-base text-gray-500">Second highest leather quality</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">Thickness Range</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">1.0-1.5<span class="text-lg ml-1">mm</span></p>
+      <p class="text-base text-gray-500">Typical thickness for footwear</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Surface Treatment</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">Light</p>
+      <p class="text-base text-gray-500">Minimal finishing required</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">What is Top Grain Leather?</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather represents the second-highest quality classification in leather production, derived from the upper portion of the hide after the complete grain layer has been removed from lower-quality pieces. The surface is lightly sanded (typically 0.3-0.5 mm) to remove imperfections, then finished to achieve a uniform, consistent appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Despite the surface modification, top grain leather retains much of the original hide's strength and durability. The light sanding creates a more workable surface for finishing while maintaining a leather feel and performance that exceeds genuine leather or corrected grain alternatives.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Definition and Processing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather is created through a controlled surface modification process that removes only the most superficial irregularities while preserving the underlying grain pattern. This distinguishes it from corrected grain leather, which undergoes more extensive sanding and receives embossed patterns to simulate natural grain.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Minimal Surface Removal:</strong> Only 0.3-0.5 mm of surface material is removed, preserving most of the natural grain characteristics and underlying fiber structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Finishing Application:</strong> After sanding, a protective finish is applied to enhance appearance, provide stain resistance, and ensure color consistency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Retention:</strong> The retained leather portion maintains good tensile strength and durability characteristics inherent to the grain layer.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Hide Layers</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Anatomical Structure</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      A leather hide consists of three primary layers with distinct characteristics and leather-making properties. Understanding this structure explains the quality differences between full grain, top grain, and split leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grain Layer (Dermis):</strong> The outermost portion contains the tightest, most densely packed collagen fibers. This layer provides surface strength, durability, and the characteristic leather appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Middle Layer (Corium):</strong> Beneath the grain layer, the corium contains less organized fiber structures with greater spacing. This layer provides bulk and thickness but less surface durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flesh Layer:</strong> The innermost layer connects to the animal's muscle tissue and is typically removed during initial hide processing.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Split Production</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When hides are split horizontally, the upper portion (containing the grain layer) becomes top grain or full grain leather, while the lower portion becomes split leather. The split layer lacks the dense grain structure, resulting in different properties.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Split Leather Characteristics:</strong> Split leather has a suede-like reverse surface but lacks the tight fiber structure of the grain layer. It is often finished to create embossed "genuine leather" or suede products.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thickness Control:</strong> Splitting enables precise thickness control for different applications, with footwear typically requiring 1.0-1.5 mm material.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Finishing Processes</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Surface Preparation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Before finishing, top grain leather undergoes surface preparation to create an even foundation for subsequent treatments. This preparation establishes the final appearance and performance characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sanding Operations:</strong> Progressive sanding with increasingly fine abrasives removes surface irregularities while minimizing depth of material removal.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Degreasing:</strong> Solvent or aqueous cleaning removes surface oils and contaminants that could interfere with finish adhesion.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Humidification:</strong> Controlled moisture addition improves flexibility and ensures consistent finishing across the hide surface.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Finish Systems</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern top grain leather employs sophisticated finish systems that provide appearance, durability, and stain resistance. These systems typically consist of multiple layers applied in sequence.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Base Coats:</strong> Initial coating penetrates the leather surface, providing adhesion for subsequent layers and evening out minor surface variations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pigmented Finishes:</strong> Pigmented top coats provide color consistency and coverage, hiding remaining surface variations while maintaining leather-like appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Protective Topcoats:</strong> Final clear coating provides scratch resistance, stain protection, and durability against wear.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Finish Classifications</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather finishes are classified by their appearance and characteristics, enabling appropriate material selection for different applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Aniline Finish:</strong> Lightly pigmented finishes that allow some natural grain visibility while providing color uniformity. Premium aniline dyes penetrate the leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Semi-Aniline Finish:</strong> Slightly heavier pigmentation provides better stain resistance while retaining reasonable natural grain appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Pigmented Finish:</strong> Heavier pigmentation provides excellent color consistency and stain resistance, at some sacrifice of natural grain visibility.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Characteristics</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Durability Performance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather provides excellent durability suitable for demanding footwear applications. While not matching the extreme longevity of full grain, properly finished top grain leather serves well for many years.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Wear:</strong> The finish layer provides initial scratch and stain resistance, though deep wear eventually exposes the underlying leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tear Resistance:</strong> Retained grain layer fiber structure maintains good tear resistance, though slightly lower than full grain.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Longevity Expectations:</strong> Well-maintained top grain footwear typically provides 10-15 years of service, less than full grain but exceeding corrected grain alternatives.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Appearance Properties</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather provides aesthetic qualities that make it popular for fashion and casual footwear. The consistent appearance and finish options enable design flexibility.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Consistency:</strong> Finish pigmentation enables precise color matching across production batches, important for fashion footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Grain Pattern:</strong> While not identical to full grain, top grain retains much natural grain character, distinguishing it from heavily embossed alternatives.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Uniformity:</strong> The finishing process creates more uniform appearance than full grain, preferred for certain fashion applications.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Applications</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Fashion Footwear</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather's combination of appearance, consistency, and cost efficiency makes it the dominant leather choice for fashion footwear. The ability to achieve precise color matching and consistent quality across large production runs meets fashion industry requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Oxford and Derby Shoes:</strong> Top grain leather provides appropriate formality and durability for dress casual footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Boots:</strong> Many boot constructions use top grain leather for uppers, balancing durability with cost efficiency.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fashion Sneakers:</strong> Premium fashion sneakers often feature top grain leather panels, providing elevated aesthetics.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Casual Footwear</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The casual footwear market extensively uses top grain leather for its balance of quality perception, durability, and price positioning.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Loafers:</strong> Top grain leather's soft hand and attractive appearance suit the relaxed elegance of loafer construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Driving Shoes:</strong> Premium driving shoes frequently employ top grain leather for its combination of comfort and style.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sandals:</strong> Footbed and strap applications benefit from top grain leather's durability and appearance.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Differentiation</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Identifying Top Grain</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Distinguishing top grain from other leather classifications requires attention to surface characteristics, feel, and examination of edges and seams.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Examination:</strong> Top grain shows natural grain variation, though less pronounced than full grain. Uniform, perfectly consistent surfaces may indicate corrected grain.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Edge Inspection:</strong> At seams and edges, top grain leather shows a thin finish layer over leather structure, unlike heavily finished alternatives.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Feel Assessment:</strong> Top grain has leather-like flexibility and hand feel, distinguishing it from heavily plastic-coated materials.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Value Positioning</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather occupies an important position in the leather quality spectrum, providing meaningful quality improvement over lower classifications while avoiding the premium pricing of full grain.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Price Advantage:</strong> Top grain typically costs 20-40% less than full grain, providing attractive value for many applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Performance Ratio:</strong> Top grain delivers 70-80% of full grain durability at 60-70% of the price, representing favorable cost-performance balance.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Care Guidelines</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">6.1 Maintenance Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Top grain leather care requires attention to its finished surface, which provides initial protection but requires appropriate maintenance to maintain appearance over time.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Cleaning:</strong> Regular dusting and occasional damp wiping maintain surface cleanliness without damaging the finish.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Conditioning:</strong> Light conditioning with appropriate products maintains leather suppleness beneath the finish layer.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Protection:</strong> Waterproofing sprays help protect the finish layer from staining and moisture damage.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">✓</div>
+      <h3 class="font-semibold text-lg mb-2">Quality Leather</h3>
+      <p class="text-neutral-600 text-sm">
+        Second highest quality grade.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Consistent Appearance</h3>
+      <p class="text-neutral-600 text-sm">
+        Uniform color and texture.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">Durable</h3>
+      <p class="text-neutral-600 text-sm">
+        10-15 years service life.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Value Balance</h3>
+      <p class="text-neutral-600 text-sm">
+        Premium quality at reasonable price.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

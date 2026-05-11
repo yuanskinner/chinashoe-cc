@@ -1,0 +1,443 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Classic Vulcanized',
+    description: 'Traditional vulcanized canvas sneaker construction and heritage.',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop',
+    href: '/encyclopedia/canvas-sneakers/classic-vulcanized/',
+  },
+  {
+    title: 'Modern Canvas Tech',
+    description: 'Contemporary canvas sneaker technologies and innovations.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/canvas-sneakers/modern-tech/',
+  },
+  {
+    title: 'Custom Canvas',
+    description: 'Canvas sneaker customization: printing, painting, and DIY.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/canvas-sneakers/custom/',
+  },
+  {
+    title: 'China Production',
+    description: 'Understanding China canvas sneaker manufacturing capabilities.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/canvas-sneakers/manufacturing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/', count: 28 },
+  { name: 'Canvas Materials', href: '/encyclopedia/materials/canvas/', count: 35 },
+  { name: 'Sneakers', href: '/encyclopedia/sneakers/', count: 45 },
+];
+---
+
+<PageLayout
+  title="Canvas Sneakers Guide"
+  description="Complete guide to canvas sneakers: understanding vulcanized construction, modern technologies, customization options, and China manufacturing sourcing."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Categories', url: '/encyclopedia/categories/' },
+    { name: 'Canvas Sneakers', url: '/encyclopedia/canvas-sneakers/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Canvas Sneakers',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/canvas-sneakers/', active: true },
+        { label: 'Classic Vulcanized', href: '/encyclopedia/canvas-sneakers/classic-vulcanized/' },
+        { label: 'Modern Tech', href: '/encyclopedia/canvas-sneakers/modern-tech/' },
+        { label: 'Custom Canvas', href: '/encyclopedia/canvas-sneakers/custom/' },
+        { label: 'Manufacturing', href: '/encyclopedia/canvas-sneakers/manufacturing/' },
+      ],
+    },
+    {
+      title: 'Related Content',
+      links: [
+        { label: 'Vulcanized Process', href: '/encyclopedia/manufacturing/vulcanized/' },
+        { label: 'Canvas Materials', href: '/encyclopedia/materials/canvas/' },
+        { label: 'Sneakers', href: '/encyclopedia/sneakers/' },
+        { label: 'Casual Shoes', href: '/encyclopedia/casual-shoes/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Category Guide</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Canvas Sneakers Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to canvas sneakers: understanding vulcanized construction, modern comfort technologies, customization opportunities, and China production sourcing.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=400&fit=crop"
+      alt="Classic Canvas Sneakers"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Annual Market</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">$8B</p>
+      <p class="text-base text-gray-500">Global canvas sneaker market</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">History</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">100<span class="text-lg ml-1">+</span></p>
+      <p class="text-base text-gray-500">Years of heritage</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Customization</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">Unlimited</p>
+      <p class="text-base text-gray-500">Design possibilities</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Canvas Sneakers</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas sneakers represent one of the most iconic and enduring footwear categories, bridging athletic heritage with street style culture. From their origins as basketball court footwear to their current status as wardrobe essentials, canvas sneakers have maintained relevance through continuous reinvention while preserving core aesthetic and construction principles.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The canvas sneaker's appeal lies in its perfect balance of simplicity, versatility, and accessibility. The straightforward construction enables affordable pricing while providing adequate comfort for everyday activities. This combination has established canvas sneakers as the footwear of choice for diverse demographics worldwide.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">Cultural Significance</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas sneakers have served as cultural artifacts, reflecting and influencing fashion, music, art, and social movements throughout their history.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Subcultural Adoption:</strong> From greasers to punks to hip-hop artists, canvas sneakers have been embraced by various subcultures as symbols of identity and rebellion.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Artistic Medium:</strong> The blank canvas of an undecorated sneaker has inspired artists, designers, and individuals to create unique custom pieces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Global Appeal:</strong> Canvas sneakers transcend cultural boundaries, maintaining popularity across diverse markets worldwide.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Vulcanized Construction</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 The Vulcanization Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Vulcanization remains the defining construction method for authentic canvas sneakers. This process, invented by Charles Goodyear in 1839, transforms rubber into a durable, elastic material while creating permanent bonds between rubber soles and canvas uppers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heat Curing:</strong> Vulcanization occurs at temperatures of approximately 150°C, causing chemical cross-linking in rubber molecules.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sole Attachment:</strong> The vulcanization process simultaneously cures rubber and bonds it to the canvas upper, creating a unified construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Tape:</strong> The distinctive rubber foxing around the toe box is characteristic of vulcanized construction.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Construction Components</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Traditional vulcanized canvas sneakers consist of specific components assembled in a particular sequence to achieve the characteristic appearance and performance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Canvas Upper:</strong> The foundation of the sneaker, typically made from cotton canvas in weights ranging from 8 to 12 ounces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Rubber Outsole:</strong> Vulcanized rubber provides traction, durability, and the characteristic flexibility of canvas sneakers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Tape:</strong> The curved rubber piece wrapping the toe area provides protection and distinctive style.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Insole/Lasting Board:</strong> A thin cushioning layer provides basic comfort and supports the lasting process.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Quality Indicators</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Authentic vulcanized canvas sneakers demonstrate specific quality characteristics that distinguish them from inferior imitations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Seam Quality:</strong> Clean, consistent seams indicate proper construction and attention to detail.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Foxing Bond:</strong> The foxing tape should be fully bonded without gaps or lifting at edges.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flexibility:</strong> Genuine vulcanized sneakers flex easily at the ball of the foot without cracking.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Modern Technologies</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Comfort Innovations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      While preserving the classic aesthetic, modern canvas sneakers incorporate contemporary comfort technologies to enhance wearability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Memory Foam Insoles:</strong> Removable memory foam insoles provide enhanced cushioning while maintaining the classic look.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>EVA Midsoles:</strong> Some modern canvas sneakers incorporate EVA cushioning between the vulcanized outsole and upper.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Padded Collars:</strong> Additional padding around the ankle collar improves comfort without sacrificing style.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Material Advances</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Modern canvas sneaker materials often incorporate technical fabrics and treatments that enhance performance while preserving the classic canvas aesthetic.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Reinforced Canvas:</strong> Blended canvas with synthetic fibers provides enhanced durability while maintaining appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water-Resistant Treatments:</strong> Factory-applied treatments provide water resistance without the heavy feel of waxed canvas.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Recycled Materials:</strong> Sustainable canvas options utilize recycled cotton or polyester fibers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Design Evolution</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Contemporary designers have reimagined the canvas sneaker while respecting its heritage, creating variations that appeal to modern consumers.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Chunky Soles:</strong> Platform and chunky sole adaptations provide modern style while incorporating vulcanized construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Minimalist Variations:</strong> Simplified designs remove the foxing tape for a cleaner, more contemporary appearance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>High-Top Innovations:</strong> High-top canvas sneakers have evolved with unique design elements and material combinations.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Customization Culture</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 DIY Customization</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Canvas sneakers have become popular canvases for personal expression, with countless options for customization ranging from simple painting to complex modifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fabric Paint:</strong> Acrylic fabric paints enable freehand painting directly on canvas surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Stencil Techniques:</strong> Stencil-based designs allow precise, repeatable customizations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Appliqué:</strong> Fabric and leather appliqué add dimension and contrast to custom designs.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Professional Customization</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Professional customizers have elevated sneaker customization to art form, creating one-of-a-kind pieces for collectors and enthusiasts.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hand-Painted Art:</strong> Artists create elaborate painted designs using specialized techniques and materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Embroidery:</strong> Machine and hand embroidery add texture and detail to canvas surfaces.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Composite Constructions:</strong> Creative modifications combine multiple sneakers or add unusual materials.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">China Manufacturing</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Production Landscape</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China is the dominant producer of canvas sneakers, with manufacturing capabilities ranging from basic commodity production to premium quality manufacturing.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Major Production Regions:</strong> Jiangsu (classic vulcanized), Zhejiang (fashion sneakers), Guangdong (export quality).
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Vulcanization Expertise:</strong> Chinese manufacturers have developed extensive expertise in vulcanized construction methods.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Quality Tiers</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Chinese canvas sneaker production spans multiple quality tiers, from budget commodity products to premium manufacturing meeting international standards.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Commodity Production:</strong> High-volume, lower-cost production for mass-market distribution.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Premium Manufacturing:</strong> Higher-quality production for brand-name products meeting stricter specifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>OEM Capabilities:</strong> Contract manufacturing for international brands with quality control requirements.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Sourcing Considerations</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Vulcanization Verification:</strong> Confirm vulcanization process parameters and quality testing procedures.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Material Specifications:</strong> Define canvas weight, quality, and any required certifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Standards:</strong> Establish clear quality specifications and inspection protocols.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Market Analysis</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Consumer Segments</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The canvas sneaker market serves diverse consumer segments with varying priorities and price sensitivities.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Heritage Enthusiasts:</strong> Consumers seeking authentic, traditional canvas sneakers with historical accuracy.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fashion-Forward:</strong> Consumers prioritizing contemporary styling and designer collaborations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Value Seekers:</strong> Price-sensitive consumers seeking basic, functional canvas sneakers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Future Trends</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The canvas sneaker market continues evolving with emerging trends in sustainability, technology, and design.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sustainability Focus:</strong> Increased demand for eco-friendly materials and manufacturing processes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Customization Services:</strong> Growth in made-to-order and customizable canvas sneaker options.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hybrid Constructions:</strong> Continued innovation combining vulcanized elements with modern comfort technologies.
+    </p>
+  </div>
+
+  <!-- Key Properties -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Customizable</h3>
+      <p class="text-neutral-600 text-sm">
+        Perfect for personal expression.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌿</div>
+      <h3 class="font-semibold text-lg mb-2">Breathable</h3>
+      <p class="text-neutral-600 text-sm">
+        Natural canvas ventilation.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">Durable</h3>
+      <p class="text-neutral-600 text-sm">
+        Vulcanized construction lasts.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Accessible</h3>
+      <p class="text-neutral-600 text-sm">
+        Affordable pricing.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Content</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

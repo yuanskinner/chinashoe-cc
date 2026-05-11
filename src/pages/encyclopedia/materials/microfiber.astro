@@ -1,0 +1,439 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'Production Technology',
+    description: 'Advanced fibrillation and spinning technologies that create ultra-fine fibers.',
+    image: 'https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/microfiber/production-technology/',
+  },
+  {
+    title: 'Performance Comparison',
+    description: 'How microfiber compares to genuine leather and other synthetics.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/microfiber/performance-comparison/',
+  },
+  {
+    title: 'Suede Replacement Market',
+    description: 'Microfiber has become the leading replacement for suede in footwear.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/microfiber/suede-replacement/',
+  },
+  {
+    title: 'China Manufacturing',
+    description: 'Understanding Chinese microfiber production capabilities and quality.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/microfiber/china-manufacturing/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'PU Leather', href: '/encyclopedia/materials/pu-leather/', count: 48 },
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 38 },
+  { name: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/', count: 42 },
+];
+---
+
+<PageLayout
+  title="Microfiber Leather Guide"
+  description="Complete guide to microfiber leather (microfiber suede) in footwear manufacturing. Learn about production technology, performance characteristics, and B2B sourcing from China."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'Microfiber', url: '/encyclopedia/materials/microfiber/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Synthetic Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/microfiber/', active: true },
+        { label: 'Production Technology', href: '/encyclopedia/materials/microfiber/production-technology/' },
+        { label: 'Performance Comparison', href: '/encyclopedia/materials/microfiber/performance-comparison/' },
+        { label: 'Suede Replacement', href: '/encyclopedia/materials/microfiber/suede-replacement/' },
+        { label: 'China Manufacturing', href: '/encyclopedia/materials/microfiber/china-manufacturing/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'PU Leather', href: '/encyclopedia/materials/pu-leather/' },
+        { label: 'Synthetic Overview', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/' },
+        { label: 'Genuine Leather', href: '/encyclopedia/materials/leather/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Microfiber Leather Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to microfiber leather in footwear: understanding the technology, performance advantages, and strategic sourcing considerations for B2B buyers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&h=400&fit=crop"
+      alt="Microfiber Suede Materials in Footwear"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Fiber Fineness</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">0.001<span class="text-lg ml-1">denier</span></p>
+      <p class="text-base text-gray-500">100x finer than human hair, enabling leather-like texture</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">China Production</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">600<span class="text-lg ml-1">Million m²</span></p>
+      <p class="text-base text-gray-500">Annual capacity, representing 70% of global output</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Market Growth</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">12<span class="text-lg ml-1">% CAGR</span></p>
+      <p class="text-base text-gray-500">Driven by sustainability trends and performance demand</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding Microfiber Leather</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Microfiber leather represents the pinnacle of synthetic leather technology, engineered to replicate the structure, texture, and performance characteristics of genuine leather with remarkable accuracy. At its core, microfiber leather consists of ultra-fine fiber non-woven fabrics impregnated with polyurethane resin, creating a three-dimensional network structure that mimics the collagen fiber arrangement found in natural leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The development of microfiber leather traces back to the 1970s when Japanese manufacturers first commercialized the technology. However, significant advancements in fiber spinning, non-woven manufacturing, and PU impregnation processes over the past two decades have transformed microfiber leather from a novelty material into a mainstream choice for premium footwear applications. Today, microfiber leather is widely recognized as the closest synthetic alternative to genuine leather, offering comparable aesthetics and performance at a fraction of the cost.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">What Makes Microfiber Unique?</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The distinguishing characteristic of microfiber leather lies in its fiber architecture. While traditional synthetic leathers use relatively coarse fibers, microfiber leather employs filaments with deniers below 0.1, typically ranging from 0.001 to 0.05 denier. To provide perspective, a single human hair measures approximately 20 denier—meaning microfiber is literally hundreds of times finer than natural hair.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      This extreme fineness creates several critical advantages. First, the fine fibers can be packed into higher densities, creating a more uniform and compact structure. Second, the three-dimensional fiber network provides superior tear strength and tensile properties compared to conventional non-woven fabrics. Third, the fine fiber structure enables more effective impregnation with PU resin, resulting in better bonding and reduced delamination risks. Finally, the surface texture achievable with microfiber more closely resembles genuine leather, including the characteristic "break" pattern that develops with use.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Production Technology Deep Dive</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 Sea-Island Fiber Technology</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The dominant method for producing ultra-fine fibers employs sea-island bicomponent fiber technology. In this process, two polymers—typically polyester (the "sea") and polyamide or modified polyester (the "island")—are coextruded through specialized spinnerets to form fibers containing multiple continuous filaments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      After fiber spinning, the "sea" component is dissolved using chemical treatment, leaving behind the "island" fibers in their ultra-fine form. This method enables the production of fibers with 16, 36, or even 64 individual filaments per fiber strand, with each filament achieving deniers as low as 0.001-0.05. The resulting fiber bundle is then processed into non-woven fabrics through needle-punching, hydro-entanglement, or thermal bonding.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Technical Parameters:</strong> Standard sea-island fibers for microfiber leather contain 36 islands per fiber, with individual filament deniers of approximately 0.03-0.05. The island polymer is typically polyamide 6 or modified polyester, selected for superior dyeability and mechanical properties.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 Non-Woven Fabric Formation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The ultra-fine fibers are converted into three-dimensional non-woven fabrics through specialized manufacturing processes. The choice of non-woven formation method significantly impacts the final product characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Needle-Punching:</strong> The most common method, using barbed needles to mechanically entangle fiber webs into cohesive fabrics. Needle-punched microfiber non-wovens offer excellent tear strength and dimensional stability but may exhibit more visible fiber orientation patterns.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Hydro-Entanglement:</strong> Uses high-pressure water jets to entangle fibers, producing fabrics with smoother surfaces and more uniform structures. Hydro-entangled microfiber fabrics are preferred for premium applications where surface appearance is critical.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Spunlace:</strong> A variant of hydro-entanglement producing particularly soft and drapable fabrics. Spunlace microfiber is commonly used in applications requiring exceptional hand feel, such as glove linings and premium footwear uppers.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.3 Impregnation and Finishing</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The non-woven microfiber web undergoes PU impregnation to bind fibers together and create the leather-like matrix. This process involves immersing the fabric in PU solution, controlling pick-up through squeeze rollers, and then drying and curing in controlled temperature environments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Impregnation Formulas:</strong> The PU formulation typically includes polyols, diisocyanates, chain extenders, and various additives. Different formulations produce different performance characteristics—soft formulations for drapable applications, firm formulations for structural components. Premium formulations may include water-borne PU systems for environmental compliance.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Microfiber Density:</strong> The ratio of fiber to PU significantly impacts product characteristics. Higher fiber content (typically 60-70% by weight) produces more leather-like structures with better breathability and hand feel. Lower fiber content creates more uniform surfaces but reduces the characteristic microfiber texture.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Surface Finishing:</strong> After impregnation and curing, the fabric undergoes sanding, buffing, and optionally embossing to achieve the desired surface texture. Premium microfiber leather for footwear applications typically receives multiple sanding stages followed by buffing to create the characteristic velour surface.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Types of Microfiber Leather</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Microfiber Suede (Main Type)</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Microfiber suede represents the largest market segment, accounting for approximately 60% of total microfiber leather production. This material features a napped surface created through sanding and buffing processes, producing a texture remarkably similar to genuine suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The manufacturing process involves buffing the impregnated non-woven fabric to raise ultra-fine fibers on the surface, creating the characteristic velour texture. The nap height can be controlled through buffing intensity, with shorter naps producing more uniform appearances and longer naps creating softer hand feel.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Applications:</strong> Microfiber suede is extensively used in footwear uppers, particularly for casual shoes, athletic shoes, and fashion footwear. Its superior durability compared to genuine suede, combined with consistent quality and competitive pricing, has made it the material of choice for many major footwear brands.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 Microfiber Clarino</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Clarino is a registered trademark term that has become synonymous with high-quality microfiber leather. Originally developed by Kuraray in Japan, Clarino-type microfiber features particularly fine fibers and advanced production techniques that create exceptionally soft and durable materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Premium Clarino-type microfiber uses specially engineered fiber structures and proprietary impregnation formulas to achieve performance characteristics that often exceed genuine leather in specific metrics. The material is widely used in premium athletic footwear, professional sports equipment, and luxury fashion applications.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Microfiber for Sports Shoes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Specialized microfiber formulations for athletic footwear emphasize specific performance characteristics. These include enhanced abrasion resistance for high-wear areas, improved moisture management for athlete comfort, and specialized surface treatments for soccer cleats and other sports-specific applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Breathability Enhancement:</strong> Advanced microfiber sports leather incorporates perforated structures or specialized backing treatments to improve air circulation, addressing a historical criticism of synthetic leather materials.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Performance Characteristics</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Mechanical Properties</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Microfiber leather demonstrates mechanical properties that in many cases exceed those of genuine leather. The three-dimensional fiber network structure provides superior tear resistance and tensile strength, while the uniform fiber distribution eliminates the weak points inherent in natural hides.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tear Strength:</strong> Premium microfiber leather achieves tear strengths of 80-150 N, compared to 20-40 N for typical genuine leather. This enables thinner gauge applications without compromising durability.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tensile Strength:</strong> Tensile strengths of 30-50 N/mm² are typical for microfiber leather, substantially exceeding genuine leather's 10-25 N/mm² range.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Resistance:</strong> Microfiber leather exhibits excellent resistance to flex cracking, typically exceeding 100,000 cycles without visible surface deterioration compared to 20,000-50,000 cycles for genuine suede.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Durability Advantages</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Perhaps the most significant advantage of microfiber leather over genuine leather lies in its durability consistency. Genuine leather quality varies naturally between hides, between animals, and even within individual hides. Microfiber leather, produced under controlled factory conditions, offers uniform quality across every meter of production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Abrasion Resistance:</strong> Microfiber leather demonstrates superior abrasion resistance compared to genuine suede, maintaining surface appearance through extended use. Taber abrasion tests typically show weight loss of less than 0.1g per 1000 cycles compared to 0.3-0.5g for genuine suede.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Consistency:</strong> The impregnation and finishing processes enable precise color control, with minimal variation between batches. This consistency is particularly valuable for brands requiring matching components across multiple product lines.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Shape Retention:</strong> Microfiber leather maintains its form and appearance through extended wear, without the stretching, deformation, or "break" patterns that develop in genuine leather.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.3 Environmental Profile</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      While microfiber leather is derived from petroleum-based polymers rather than animal hides, its environmental profile presents a nuanced picture when compared to genuine leather production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Resource Efficiency:</strong> Microfiber leather production requires significantly less land, water, and energy compared to cattle farming for genuine leather. The carbon footprint per square meter is approximately 30-50% lower than equivalent genuine leather production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tanning Chemicals:</strong> Unlike genuine leather, which requires potentially harmful tanning chemicals including chromium compounds, microfiber leather production can utilize water-borne PU systems with minimal environmental impact.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>End-of-Life Considerations:</strong> Microfiber leather is not biodegradable, presenting challenges for end-of-life disposal. However, some manufacturers now offer recycling programs that convert production waste into secondary products.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">B2B Sourcing from China</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Market Overview</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      China has emerged as the dominant global producer of microfiber leather, accounting for approximately 70% of worldwide production capacity. The industry is concentrated in Jiangsu Province, particularly around Changshu and Suzhou, where a complete industrial ecosystem has developed including fiber production, non-woven manufacturing, PU chemical suppliers, and finishing operations.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      Major Chinese microfiber leather producers have invested heavily in advanced production technologies, with many facilities now operating equipment comparable to or exceeding Japanese and Korean competitors. This technological catch-up has enabled Chinese manufacturers to supply premium-quality materials at competitive price points.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Supplier Evaluation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When evaluating Chinese microfiber leather suppliers, B2B buyers should assess several critical factors:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Fiber Production Capability:</strong> The most sophisticated suppliers produce their own sea-island fibers in-house, enabling better quality control and formulation flexibility. Suppliers relying on purchased fibers may have less control over fiber characteristics.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Non-Woven Technology:</strong> Evaluate the non-woven production lines, including equipment age, automation level, and quality control systems. Advanced hydro-entanglement lines produce superior fabrics compared to older needle-punching equipment.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Certification:</strong> Look for ISO 9001, ISO 14001, and OEKO-TEX certifications indicating quality management systems and product safety compliance. Automotive suppliers may hold IATF 16949 certification.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Pricing Structure</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      As of 2025, typical FOB China pricing for microfiber leather suitable for footwear applications:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Standard Microfiber Suede:</strong> $4.00-6.00 per meter for basic specifications with 0.7-0.9mm thickness. Suitable for casual footwear and volume applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Premium Microfiber Suede:</strong> $6.00-10.00 per meter for enhanced formulations with improved durability, color fastness, and hand feel. Preferred for athletic footwear and fashion applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specialty Performance Grades:</strong> $10.00-18.00 per meter for specialized formulations including high-abrasion resistance, moisture management, and premium softness treatments.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Testing and Specification</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.1 Key Performance Tests</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Thickness:</strong> Measured according to ISO 1774 or similar standards, typically ranging from 0.5mm to 2.5mm for footwear applications. Thickness uniformity should be verified across the width and length of rolls.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Color Fastness:</strong> Rubbing fastness (ISO 105-X12), light fastness (ISO 105-B02), and washing fastness should all be specified based on end-use requirements. Premium grades should achieve Grade 4+ in rubbing fastness.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tear Strength:</strong> ISO 13937-2 or ASTM D2261 methods provide standardized tear strength measurements. Minimum requirements should be established based on application requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Resistance:</strong> ASTM D2096 or ISO 5402 methods evaluate resistance to flex cracking through repeated bending cycles.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">5.2 Sample Approval Process</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      B2B buyers should establish rigorous sample approval processes before production commitments. This should include laboratory testing of performance specifications, production sample approval confirming manufacturing capability, and pilot run validation in actual footwear construction.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specification Development:</strong> Detailed specifications should cover all relevant performance parameters, appearance standards with reference samples, testing protocols, and acceptance criteria. Specifications should be mutually agreed upon and documented before order placement.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Strategic Recommendations</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B footwear buyers establishing microfiber leather supply chains, the following recommendations summarize best practices:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Technology Partnership:</strong> Develop strategic relationships with technically capable suppliers willing to collaborate on formulation development and process optimization. The best results come from suppliers who understand your specific requirements and invest in meeting them.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Consistency:</strong> Establish statistical quality control requirements including acceptable quality levels (AQL), inspection sampling plans, and out-of-specification handling procedures. Uniform quality across batches is microfiber leather's key advantage over genuine leather.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Application Engineering:</strong> Work with suppliers to optimize microfiber selection for specific applications. Thickness, backing type, surface treatment, and color formulation should all be matched to end-use requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Supply Chain Resilience:</strong> Maintain relationships with at least two qualified suppliers for each critical material to ensure supply security and competitive pricing leverage.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🧬</div>
+      <h3 class="font-semibold text-lg mb-2">Ultra-Fine Fibers</h3>
+      <p class="text-neutral-600 text-sm">
+        100x finer than human hair for leather-like texture.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="font-semibold text-lg mb-2">Superior Durability</h3>
+      <p class="text-neutral-600 text-sm">
+        3-5x the tear strength of genuine leather.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="font-semibold text-lg mb-2">Consistent Quality</h3>
+      <p class="text-neutral-600 text-sm">
+        Uniform production eliminates hide variation.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌿</div>
+      <h3 class="font-semibold text-lg mb-2">Sustainable Option</h3>
+      <p class="text-neutral-600 text-sm">
+        Lower environmental impact than genuine leather.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>

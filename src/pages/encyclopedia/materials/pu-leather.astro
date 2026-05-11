@@ -1,0 +1,419 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const features = [
+  {
+    title: 'PU vs Genuine Leather',
+    description: 'Detailed comparison between PU leather and genuine leather for footwear applications.',
+    image: 'https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pu-leather/pu-vs-genuine/',
+  },
+  {
+    title: 'PU Leather Manufacturing',
+    description: 'How PU leather is manufactured: from base fabric to finished product.',
+    image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pu-leather/manufacturing/',
+  },
+  {
+    title: 'B2B Sourcing Guide',
+    description: 'Critical considerations for sourcing PU leather footwear from China.',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pu-leather/sourcing/',
+  },
+  {
+    title: 'Quality Standards',
+    description: 'Understanding PU leather quality grades and testing methods.',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
+    href: '/encyclopedia/materials/pu-leather/quality-standards/',
+  },
+];
+
+const relatedCategories = [
+  { name: 'Microfiber', href: '/encyclopedia/materials/microfiber/', count: 45 },
+  { name: 'Synthetic Materials', href: '/encyclopedia/materials/synthetic/', count: 38 },
+  { name: 'Genuine Leather', href: '/encyclopedia/materials/leather/', count: 52 },
+];
+---
+
+<PageLayout
+  title="PU Leather Guide"
+  description="Complete guide to PU leather (polyurethane leather) in footwear manufacturing. Learn about PU leather types, quality grades, manufacturing processes, and B2B sourcing considerations from China."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+    { name: 'PU Leather', url: '/encyclopedia/materials/pu-leather/' },
+  ]}
+  sidebarItems={[
+    {
+      title: 'Synthetic Materials',
+      links: [
+        { label: 'Overview', href: '/encyclopedia/materials/pu-leather/', active: true },
+        { label: 'PU vs Genuine Leather', href: '/encyclopedia/materials/pu-leather/pu-vs-genuine/' },
+        { label: 'Manufacturing Process', href: '/encyclopedia/materials/pu-leather/manufacturing/' },
+        { label: 'B2B Sourcing Guide', href: '/encyclopedia/materials/pu-leather/sourcing/' },
+        { label: 'Quality Standards', href: '/encyclopedia/materials/pu-leather/quality-standards/' },
+      ],
+    },
+    {
+      title: 'Related Materials',
+      links: [
+        { label: 'Microfiber', href: '/encyclopedia/materials/microfiber/' },
+        { label: 'Synthetic Overview', href: '/encyclopedia/materials/synthetic/' },
+        { label: 'Genuine Leather', href: '/encyclopedia/materials/leather/' },
+        { label: 'PVC Materials', href: '/encyclopedia/materials/pvc/' },
+      ],
+    },
+  ]}
+>
+  <div class="mb-8">
+    <span class="badge-primary mb-2">Materials Encyclopedia</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      PU Leather Guide
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Comprehensive guide to polyurethane leather in footwear: understanding types, manufacturing processes, quality standards, and strategic sourcing considerations for B2B buyers.
+    </p>
+  </div>
+
+  <!-- Featured Image -->
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img
+      src="https://images.unsplash.com/photo-1445536874178-53fb20d5fd43?w=1200&h=400&fit=crop"
+      alt="PU Leather Materials in Footwear Manufacturing"
+      class="w-full h-64 md:h-80 object-cover"
+    />
+  </div>
+
+  <!-- Key Statistics -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="card p-6">
+      <p class="text-lg text-blue-700 font-medium mb-2">Global PU Leather Market</p>
+      <p class="text-4xl font-bold text-blue-900 mb-2">$65<span class="text-lg ml-1">Billion</span></p>
+      <p class="text-base text-gray-500">2025 market size, projected 8.2% CAGR through 2030</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-green-700 font-medium mb-2">China Market Share</p>
+      <p class="text-4xl font-bold text-green-900 mb-2">45<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Global PU leather production capacity</p>
+    </div>
+    <div class="card p-6">
+      <p class="text-lg text-purple-700 font-medium mb-2">Cost vs Genuine Leather</p>
+      <p class="text-4xl font-bold text-purple-900 mb-2">60-70<span class="text-lg ml-1">%</span></p>
+      <p class="text-base text-gray-500">Lower price point while maintaining aesthetic appeal</p>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Understanding PU Leather</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Polyurethane leather, commonly known as PU leather or PU coated leather, represents one of the most significant developments in synthetic leather technology over the past five decades. As the footwear industry continues to evolve in response to both economic pressures and environmental concerns, PU leather has emerged as a versatile alternative to genuine leather, offering manufacturers and brands a compelling combination of cost efficiency, design flexibility, and consistent quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The global PU leather market has experienced substantial growth, driven primarily by increasing demand from the footwear industry, automotive sector, and furniture manufacturing. China's dominance in PU leather production—accounting for approximately 45% of global output—makes it the primary sourcing destination for international brands seeking cost-competitive materials. Understanding PU leather's characteristics, manufacturing processes, and quality parameters is essential for any B2B footwear buyer navigating the Chinese manufacturing landscape.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">What is PU Leather?</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      PU leather is a synthetic leather material manufactured by coating a base fabric—typically polyester, cotton, or a blend—with one or more layers of polyurethane resin. The resulting material mimics the appearance and texture of genuine leather while offering superior resistance to abrasion, moisture, and UV degradation in certain formulations. Unlike PVC leather, which uses polyvinyl chloride as the primary coating material, PU leather offers a softer hand feel and more breathable structure.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      The manufacturing process allows for remarkable customization in terms of thickness, texture patterns, color options, and performance characteristics. From budget-friendly options for mass-market footwear to premium formulations with enhanced durability and environmental profiles, PU leather spans a wide quality spectrum that B2B buyers must understand to make informed sourcing decisions.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Types of PU Leather for Footwear</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.1 By Base Fabric Structure</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Woven Base PU Leather:</strong> The highest quality category, featuring woven fabrics (typically polyester) as the base layer. Woven base PU leather offers superior tear strength, dimensional stability, and longevity compared to other base structures. This type is preferred for premium footwear applications where durability is paramount. The manufacturing process involves treating the woven fabric with bonding agents before applying the PU coating, creating a unified structure that resists delamination.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Non-Woven Base PU Leather:</strong> Manufactured using needle-punched or thermally bonded non-woven fabrics, this category represents the mid-range market segment. Non-woven base PU leather offers adequate performance for general footwear applications at a lower price point than woven alternatives. Quality varies significantly based on the non-woven fabric density and bonding quality.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Split Foam PU Leather:</strong> Features a foam layer between the base fabric and PU coating, providing additional thickness and a more leather-like texture. This type is commonly used in footwear applications requiring padded or cushioned characteristics. The foam layer is typically polyurethane foam that can be formulated for different densities and compression properties.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">1.2 By Surface Treatment</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PU Grained Leather:</strong> Features embossed grain patterns that replicate the natural texture of genuine leather. Modern embossing techniques can achieve remarkably realistic reproductions of various leather types, including full grain, top grain, and exotic leather patterns. The grain pattern is typically applied under heat and pressure using engraved rollers, with pattern depth and complexity determining both visual quality and price point.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PU Smooth Leather:</strong> Maintains a smooth surface without embossed patterns, offering a cleaner, more contemporary aesthetic. This type is particularly popular in fashion footwear and applications requiring solid color treatments. Quality assessment focuses on surface consistency, absence of defects, and color uniformity.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PU Nubuck-finished Leather:</strong> Undergoes special finishing processes to achieve a velvety texture similar to genuine nubuck leather. The surface is buffed or sanded after coating to create the characteristic soft touch. This type requires careful quality control as the buffing process can create inconsistent surface textures if not properly managed.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>PU Patent Leather:</strong> Features a high-gloss finish achieved through additional topcoat layers and controlled drying conditions. The glossy appearance is created by smoothing the surface during the coating process, often followed by lacquer coating for enhanced shine and scratch resistance. Patent-finished PU is commonly used in dress shoes, children's footwear, and fashion applications.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Manufacturing Process Deep Dive</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Understanding the PU leather manufacturing process is essential for B2B buyers seeking to evaluate supplier capabilities and identify potential quality issues. The production process typically involves the following stages, each presenting opportunities for quality differentiation.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.1 Base Fabric Preparation</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The process begins with selecting and preparing the base fabric, which forms the structural foundation of the PU leather. High-quality manufacturers use polyester woven fabrics with consistent thread counts and weights, typically ranging from 60 to 120 grams per square meter for footwear applications. The fabric undergoes pre-treatment processes including singeing to remove surface fibers, heat setting to stabilize dimensions, and sometimes coating with primer to enhance bonding with the PU layer.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Critical Quality Parameters:</strong> Fabric weight uniformity, tear strength, elongation properties, and moisture content all significantly impact the final product quality. Reputable manufacturers implement statistical process control (SPC) systems to monitor these parameters throughout production.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.2 PU Coating Application</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      The PU coating is applied to the prepared base fabric using one of several methods, each producing different characteristics:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Direct Coating:</strong> PU resin is directly applied to the base fabric using a knife-over-roller or doctor blade system. The coating thickness is controlled by adjusting the gap between the blade and fabric, typically ranging from 0.3mm to 1.5mm for footwear applications. This method offers excellent thickness control and is suitable for high-volume production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Transfer Coating:</strong> The PU layer is first applied to release paper or film, then subsequently laminated to the base fabric. This method allows for more complex surface textures and is particularly suitable for embossed patterns requiring detailed engraving. Transfer coating typically produces a more uniform surface appearance but at slightly higher cost.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Wet-Foam Coating:</strong> Used for products requiring a foam structure, this method involves whipping air into the PU mixture before application, creating a cellular structure that provides additional softness and bulk. Wet-foam coating is common for split foam PU leather products.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">2.3 Finishing Processes</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      After the base PU coating is applied and dried, additional finishing processes enhance the material's properties and appearance. These may include embossing to create grain patterns, buffing to achieve nubuck-like textures, lacquering for patent finishes, and application of topcoats for enhanced durability or specific visual effects.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Embossing:</strong> Engraved steel or rubber rollers apply heat and pressure to create surface textures. Pattern selection should align with the target footwear application—finer grains for dress shoes, more pronounced patterns for casual and outdoor footwear.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Topcoat Application:</strong> A final layer of protective coating enhances scratch resistance, UV stability, and water resistance. Premium formulations may include additives such as UV absorbers, antioxidants, and antimicrobial agents.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Quality Standards and Testing</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      Establishing clear quality standards is critical when sourcing PU leather from China. International standards provide frameworks for evaluating key performance characteristics, though many buyers establish additional specifications based on their specific product requirements.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.1 Physical Performance Tests</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tear Strength:</strong> Measured in Newtons (N), tear strength indicates the material's resistance to tearing once initiated. ASTM D2261 or ISO 13937-2 methods are commonly employed, with minimum requirements typically ranging from 15N to 30N depending on application requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Tensile Strength and Elongation:</strong> These parameters indicate the material's structural integrity and flexibility. Tensile strength minimums are typically 30-50 N/cm², with elongation at break ranging from 100% to 400% depending on formulation.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Adhesion Strength:</strong> Critical for footwear applications, adhesion testing evaluates the bond between PU coating and base fabric. The cross-cut adhesion test (ISO 2409) or peel test (ISO 2411) provides quantitative measures, with minimum requirements typically set at 2-3 N/cm.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Flex Cracking Resistance:</strong> ASTM D2096 or equivalent methods evaluate the material's resistance to surface cracking during repeated flexing, simulating the stresses encountered during footwear use. Premium materials should withstand 50,000+ flex cycles without visible cracking.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">3.2 Environmental and Safety Tests</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>AZO Dye Restrictions:</strong> European REACH regulations and similar standards restrict certain aromatic amine dyes that can form from certain AZO colorants. PU leather for European markets must comply with AZO dye limits of 30 mg/kg for individual dyes and 150 mg/kg for total aromatic amines.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Phthalate Content:</strong> Several phthalate plasticizers used in some PU leather formulations face regulatory restrictions in children's products and certain applications. DEHP, DBP, and BBP content typically must remain below 0.1% for children's footwear sold in the EU.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Formaldehyde Emissions:</strong> Particularly relevant for footwear that contacts skin, formaldehyde content is regulated in many markets. Chinese standards (GB/T 2912.1) and international methods (ISO 17226-1) provide testing protocols with typical limits of 75 mg/kg for direct skin contact applications.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">B2B Sourcing Considerations</h2>
+    
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.1 Supplier Evaluation Criteria</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      When sourcing PU leather from China for footwear manufacturing, systematic supplier evaluation is essential. Key criteria include production capacity and equipment, quality management systems certifications (ISO 9001, ISO 14001), environmental compliance credentials, and track record with international brands.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Production Capacity:</strong> Evaluate the supplier's monthly production volume, typically ranging from 500,000 to 5,000,000 meters depending on equipment configuration. Larger capacity suppliers can offer better pricing for high-volume orders but may have longer lead times for custom specifications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Equipment Investment:</strong> Modern production lines with automated coating and finishing equipment typically produce more consistent quality than older facilities. Look for evidence of recent equipment investment, particularly in coating application and finishing systems.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Systems:</strong> ISO 9001 certification indicates basic quality management system implementation, while more specialized certifications such as OEKO-TEX for safety or automotive-specific IATF 16949 for high-performance applications demonstrate advanced capabilities.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.2 Cost Structure Analysis</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      Understanding the cost structure of PU leather helps B2B buyers evaluate pricing competitiveness and identify potential quality risks. The primary cost components include:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Raw Materials (55-65% of cost):</strong> PU resin, base fabric, solvents, and additives. Raw material costs fluctuate with global chemical markets, and reputable suppliers adjust pricing quarterly or semi-annually based on material indices rather than monthly.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Manufacturing (25-35% of cost):</strong> Labor, equipment depreciation, energy consumption, and overhead allocation. Chinese manufacturing efficiency has improved significantly, with modern automated facilities achieving labor costs below 15% of total production cost.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Logistics and Compliance (5-15% of cost):</strong> Packaging, quality inspection, documentation, and transportation. Lead times typically range from 15-30 days for standard specifications, with custom colors or finishes requiring additional time.
+    </p>
+
+    <h3 class="text-xl font-semibold text-neutral-900 mb-3">4.3 Price Benchmarks</h3>
+    
+    <p class="text-neutral-600 mb-4">
+      As of 2025, typical FOB China pricing for PU leather suitable for footwear applications ranges from:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Economy Grade (Non-woven base):</strong> $1.50-2.50 per meter for basic specifications, suitable for budget footwear with moderate durability requirements.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Standard Grade (Woven base, basic finish):</strong> $2.50-4.00 per meter, representing the largest market segment with adequate quality for most casual and sports footwear applications.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Premium Grade (Woven base, enhanced finish):</strong> $4.00-7.00 per meter for high-performance formulations with enhanced durability, improved hand feel, and premium surface treatments.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specialty Grades:</strong> Exceeding $7.00 per meter for specialty applications such as waterproof formulations, antimicrobial treatments, or premium nubuck-like finishes.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Environmental Considerations</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      The environmental profile of PU leather has become increasingly important for brands and consumers. While genuine leather carries significant environmental baggage related to cattle farming and tanning processes, PU leather production presents its own environmental challenges, primarily related to solvent emissions and petroleum-based raw materials.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Water-Based PU Technology:</strong> Water-based PU formulations eliminate solvent emissions during production and are increasingly common in premium applications. These products command 10-20% price premiums but offer significantly reduced environmental impact and improved workplace safety.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Bio-Based PU:</strong> Emerging technologies incorporate bio-based raw materials derived from renewable sources, reducing petroleum dependency. Current bio-based content typically ranges from 20-40%, with ongoing research targeting higher percentages.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Recycled Content:</strong> Some manufacturers now offer PU leather with recycled polyester base fabrics, contributing to circular economy objectives while maintaining performance characteristics.
+    </p>
+
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">Strategic Recommendations</h2>
+    
+    <p class="text-neutral-600 mb-4">
+      For B2B footwear buyers establishing or optimizing PU leather supply chains from China, the following strategic recommendations summarize best practices derived from industry experience:
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Specification Development:</strong> Invest significant effort in developing detailed material specifications before engaging suppliers. Include all relevant physical performance requirements, environmental compliance thresholds, appearance standards with reference samples, and testing protocols. Ambiguous specifications inevitably lead to quality disputes.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Supplier Diversification:</strong> Avoid single-source dependency for critical materials. Establish relationships with at least two qualified suppliers for each major material category to ensure supply security and maintain competitive pricing leverage.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Sample Qualification:</strong> Require comprehensive sample qualification before production orders, including laboratory testing results, production sample approval, and pilot run validation. The additional lead time investment prevents costly quality failures in production.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Quality Audits:</strong> Conduct or commission periodic quality audits of production facilities, particularly for high-volume orders or new supplier relationships. On-site audits provide insights into manufacturing capabilities, quality systems, and working conditions that cannot be obtained through sample testing alone.
+    </p>
+    
+    <p class="text-neutral-600 mb-4">
+      <strong>Long-Term Partnerships:</strong> Develop strategic partnerships with key suppliers rather than pursuing purely transactional relationships. Long-term partners invest more readily in custom formulations, process improvements, and quality enhancements that benefit both parties.
+    </p>
+  </div>
+
+  <!-- Key Sections -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🏭</div>
+      <h3 class="font-semibold text-lg mb-2">Manufacturing</h3>
+      <p class="text-neutral-600 text-sm">
+        Precision coating and finishing processes deliver consistent quality.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">📊</div>
+      <h3 class="font-semibold text-lg mb-2">Quality Testing</h3>
+      <p class="text-neutral-600 text-sm">
+        Comprehensive testing ensures performance specifications.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">🌱</div>
+      <h3 class="font-semibold text-lg mb-2">Eco Options</h3>
+      <p class="text-neutral-600 text-sm">
+        Water-based and bio-based formulations available.
+      </p>
+    </div>
+    <div class="card text-center">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="font-semibold text-lg mb-2">Cost Effective</h3>
+      <p class="text-neutral-600 text-sm">
+        60-70% cost savings versus genuine leather.
+      </p>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Explore Topics</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    {features.map(article => (
+      <a href={article.href} class="card group overflow-hidden p-0">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+            {article.title}
+          </h3>
+          <p class="text-neutral-600 text-sm">
+            {article.description}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Related Categories -->
+  <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Materials</h2>
+  <div class="flex flex-wrap gap-3">
+    {relatedCategories.map(cat => (
+      <a href={cat.href} class="badge badge-outline">
+        {cat.name} ({cat.count})
+      </a>
+    ))}
+  </div>
+</PageLayout>
