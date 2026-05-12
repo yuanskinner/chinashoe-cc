@@ -1,0 +1,254 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import FAQSection from '@components/FAQSection.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'News', url: '/news/' },
+  { name: 'Dongguan Shoe Fair 2025' }
+];
+
+const faqs = [
+  {
+    question: 'When and where is the Dongguan Shoe Fair 2025?',
+    answer: 'The Dongguan International Shoe Fair (also known as the China Shoetec) is typically held in May at the Guangdong Modern International Exhibition Center (GDE) in Houjie, Dongguan. The 2025 spring edition is expected in late April or early May. Check the official website for exact dates as they are announced in Q1 2025.'
+  },
+  {
+    question: 'Is the Dongguan Shoe Fair worth attending for international buyers?',
+    answer: 'Absolutely. The Dongguan Shoe Fair is one of China\'s top 3 footwear trade shows, alongside the Canton Fair and Guangzhou Shoe Fair. It offers direct access to 800+ manufacturers, competitive factory-gate pricing (10-25% below trading company quotes), and the ability to inspect production quality in nearby factories. Most international buyers combine it with factory visits in the Dongguan-Shenzhen corridor.'
+  },
+  {
+    question: 'What should I prepare before attending the Dongguan Shoe Fair?',
+    answer: 'Essential preparations: (1) Register online for a buyer badge (free for international visitors); (2) Bring business cards in both English and Chinese; (3) Prepare a sourcing brief with target products, MOQ, and price range; (4) Book hotels early — Houjie area hotels fill up fast; (5) Plan factory visits for the days after the show; (6) Bring a measuring tape, camera, and notebook for sample evaluation.'
+  },
+  {
+    question: 'How does the Dongguan Shoe Fair compare to the Canton Fair for shoe sourcing?',
+    answer: 'The Canton Fair is broader (all products) while Dongguan Shoe Fair is footwear-focused. Dongguan offers deeper supplier specialization, more footwear-related seminars, and factories that are literally walking distance from the venue. Canton Fair has more total exhibitors but fewer dedicated shoe factories. For serious shoe buyers, attending both is optimal — Canton Fair for breadth, Dongguan for depth.'
+  },
+  {
+    question: 'Can I place orders directly at the Dongguan Shoe Fair?',
+    answer: 'Yes, many buyers negotiate and sign preliminary orders at the fair. However, best practice is to: (1) Shortlist 5-10 suppliers at the show; (2) Visit their factories for quality verification; (3) Request samples before confirming orders; (4) Sign contracts with clear QC terms, delivery schedules, and payment milestones. Never commit to large orders based solely on trade show samples.'
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+  }))
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Dongguan Shoe Fair 2025: Ultimate Buyer's Guide & Exhibition Preview",
+  "description": "Complete guide to the Dongguan International Shoe Fair 2025 — exhibition layout, buyer strategies, factory visit planning, and how to maximize your sourcing ROI at China's premier footwear trade show.",
+  "image": "/images/news/dongguan-shoe-fair.jpg",
+  "author": { "@type": "Organization", "name": "ChinaShoe.cc" },
+  "publisher": { "@type": "Organization", "name": "ChinaShoe.cc", "logo": { "@type": "ImageObject", "url": "/images/panda-logo.png" } },
+  "datePublished": "2025-01-12",
+  "dateModified": "2025-01-15"
+};
+---
+
+<BaseLayout
+  title="Dongguan Shoe Fair 2025: Ultimate Buyer's Guide & Exhibition Preview | ChinaShoe.cc"
+  description="Complete buyer's guide to Dongguan International Shoe Fair 2025 — exhibition layout, supplier meetings, factory visits, and sourcing strategies for international footwear buyers."
+  canonicalUrl="/news/dongguan-shoe-fair-2025/"
+  breadcrumbs={breadcrumbs}
+  structuredData={[faqSchema, articleSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <nav class="text-sm text-gray-500 mb-6">
+      {breadcrumbs.map((crumb, i) => (
+        <span>{i > 0 && ' / '}<a href={crumb.url} class="hover:text-primary-600">{crumb.name}</a></span>
+      ))}
+    </nav>
+
+    <img src="/images/news/dongguan-shoe-fair.jpg" alt="Dongguan International Shoe Fair exhibition hall with international buyers and shoe displays" class="w-full h-64 object-cover rounded-xl mb-8 shadow-lg" />
+
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Dongguan Shoe Fair 2025: The Ultimate Buyer's Guide</h1>
+    <p class="text-gray-500 mb-8">January 12, 2025 · 13 min read</p>
+
+    <div class="prose prose-lg max-w-none">
+      <p class="text-xl text-gray-600 leading-relaxed mb-8">
+        The <strong>Dongguan International Shoe Fair</strong> (China Shoetec) is China's most specialized footwear B2B exhibition. For international buyers seeking <strong>direct factory access</strong>, competitive pricing, and the widest range of Chinese shoe manufacturers, this is the must-attend event of 2025. Here's your complete guide to maximizing sourcing ROI.
+      </p>
+
+      <h2 id="overview" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Exhibition Overview</h2>
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 rounded-r-lg">
+        <p class="font-semibold text-blue-800">Key Facts — Dongguan Shoe Fair 2025</p>
+        <ul class="text-blue-800">
+          <li><strong>Venue:</strong> Guangdong Modern International Exhibition Center (GDE), Houjie, Dongguan</li>
+          <li><strong>Expected dates:</strong> Late April / Early May 2025 (Spring Edition)</li>
+          <li><strong>Exhibitors:</strong> 800+ shoe manufacturers and material suppliers</li>
+          <li><strong>Exhibition area:</strong> 40,000+ sqm</li>
+          <li><strong>International buyers:</strong> 15,000+ from 60+ countries</li>
+          <li><strong>Admission:</strong> Free for international trade visitors with pre-registration</li>
+        </ul>
+      </div>
+
+      <h2 id="layout" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Exhibition Layout & Zone Guide</h2>
+      <p>
+        The fair is organized into <strong>six themed zones</strong>, each targeting different sourcing needs:
+      </p>
+
+      <div class="my-8 bg-gray-50 rounded-xl p-6">
+        <h3 class="text-lg font-semibold mb-4 text-center">Dongguan Shoe Fair Exhibition Zones</h3>
+        <div class="mermaid">
+graph TB
+    A[Dongguan Shoe Fair 2025] --> B[Zone A: Finished Shoes]
+    A --> C[Zone B: Shoe Materials]
+    A --> D[Zone C: Machinery]
+    A --> E[Zone D: Design & Tech]
+    A --> F[Zone E: Chengdu/Western China]
+    A --> G[Zone F: International Pavilion]
+    B --> B1[Women's Fashion]
+    B --> B2[Athletic/Sports]
+    B --> B3[Casual/Comfort]
+    B --> B4[Safety/Industrial]
+    C --> C1[Leather & Synthetics]
+    C --> C2[Soles & Midsoles]
+    C --> C3[Adhesives & Chemicals]
+    D --> D1[Cutting Machines]
+    D --> D2[Stitching Equipment]
+    D --> D3[3D Print Prototyping]
+    E --> E1[AI Design Tools]
+    E --> E2[Trend Forecasting]
+    E --> E3[Sustainability Solutions]
+    style A fill:#1e3a5f,color:#fff
+    style B fill:#B91C1C,color:#fff
+    style E fill:#059669,color:#fff
+        </div>
+      </div>
+
+      <h2 id="strategy" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Buyer Strategy: 3-Day Sourcing Plan</h2>
+      <p>
+        Most international buyers attend for <strong>2-3 days</strong>. Here's the optimal plan:
+      </p>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">Day 1: Scout & Shortlist</h3>
+      <ul>
+        <li>Arrive early (9:00 AM) — use the first hour before crowds to scan the entire floor</li>
+        <li>Focus on <strong>Zone A (Finished Shoes)</strong> — identify 15-20 potential suppliers</li>
+        <li>Collect catalogs, name cards, and take photos of every product that matches your brief</li>
+        <li>Ask each supplier: <strong>factory location, MOQ, lead time, and export experience</strong></li>
+        <li>Narrow to <strong>8-10 priority suppliers</strong> by end of day</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">Day 2: Deep Dive & Negotiate</h3>
+      <ul>
+        <li>Return to your shortlisted suppliers for detailed discussions</li>
+        <li>Request <strong>FOB pricing, sample costs, and production timeline</strong> for your target styles</li>
+        <li>Ask to see <strong>physical samples</strong> — check stitching, material quality, and finishing</li>
+        <li>Negotiate <strong>sample terms</strong> — aim for free samples or refundable sample fees</li>
+        <li>Visit <strong>Zone C (Machinery)</strong> if you're sourcing for own production capability</li>
+        <li>Attend <strong>trend seminars</strong> in Zone D for 2025-2026 color and material forecasts</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-3">Day 3: Factory Visits</h3>
+      <ul>
+        <li>Schedule factory visits with your top 3-5 suppliers — most Dongguan factories are within <strong>30 minutes</strong> of the exhibition center</li>
+        <li>Verify production capabilities, QC processes, and worker conditions firsthand</li>
+        <li>Check for <strong>GRS, BSCI, or ISO certifications</strong> posted on factory walls</li>
+        <li>Discuss <strong>long-term partnership terms</strong> — volume discounts, exclusive designs, payment terms</li>
+      </ul>
+
+      <h2 id="pricing" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Price Benchmarks: What to Expect at the Fair</h2>
+      <p>
+        Trade show prices are typically <strong>10-25% below trading company quotes</strong> because you're dealing with factories directly. Here are realistic FOB price ranges:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-200 rounded-lg">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-3 text-left font-semibold">Product Category</th>
+              <th class="px-4 py-3 text-left font-semibold">FOB Price Range</th>
+              <th class="px-4 py-3 text-left font-semibold">MOQ</th>
+              <th class="px-4 py-3 text-left font-semibold">Lead Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t"><td class="px-4 py-3"><strong>Women's PU heels</strong></td><td class="px-4 py-3">$4.50-$8.00</td><td class="px-4 py-3">1,200 pairs</td><td class="px-4 py-3">35-50 days</td></tr>
+            <tr class="border-t bg-gray-50"><td class="px-4 py-3"><strong>Women's leather boots</strong></td><td class="px-4 py-3">$12.00-$22.00</td><td class="px-4 py-3">800 pairs</td><td class="px-4 py-3">45-60 days</td></tr>
+            <tr class="border-t"><td class="px-4 py-3"><strong>Athletic sneakers (mesh)</strong></td><td class="px-4 py-3">$6.00-$12.00</td><td class="px-4 py-3">2,000 pairs</td><td class="px-4 py-3">40-55 days</td></tr>
+            <tr class="border-t bg-gray-50"><td class="px-4 py-3"><strong>Casual canvas shoes</strong></td><td class="px-4 py-3">$3.00-$5.50</td><td class="px-4 py-3">3,000 pairs</td><td class="px-4 py-3">30-45 days</td></tr>
+            <tr class="border-t"><td class="px-4 py-3"><strong>Safety shoes (steel toe)</strong></td><td class="px-4 py-3">$8.00-$15.00</td><td class="px-4 py-3">1,000 pairs</td><td class="px-4 py-3">40-55 days</td></tr>
+            <tr class="border-t bg-gray-50"><td class="px-4 py-3"><strong>Children's shoes</strong></td><td class="px-4 py-3">$2.50-$5.00</td><td class="px-4 py-3">2,000 pairs</td><td class="px-4 py-3">30-45 days</td></tr>
+            <tr class="border-t"><td class="px-4 py-3"><strong>Sandals/flip-flops</strong></td><td class="px-4 py-3">$1.50-$3.50</td><td class="px-4 py-3">5,000 pairs</td><td class="px-4 py-3">25-35 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="tips" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Pro Tips for International Buyers</h2>
+
+      <div class="my-8 bg-gray-50 rounded-xl p-6">
+        <h3 class="text-lg font-semibold mb-4 text-center">Trade Show Sourcing Decision Flow</h3>
+        <div class="mermaid">
+graph TD
+    A[Meet Supplier at Fair] --> B["Export Experience?"]
+    B -->|"Under 2 years"| C[High Risk — Request References]
+    B -->|2-5 years| D["Certifications?"]
+    B -->|5+ years| E[Priority Supplier]
+    C --> F["Factory Visit?"]
+    D -->|None| G[Medium Risk — Visit Factory]
+    D -->|BSCI/GRS/ISO| H[Strong Candidate]
+    E --> I[Schedule Factory Visit Day 3]
+    F -->|"Yes"| J[Verify Production Capability]
+    F -->|"No"| K[Consider Alternative]
+    G --> L[Check QC Process In-Person]
+    H --> I
+    J --> M["Price Competitive?"]
+    L --> M
+    M -->|Yes| N[Request Samples + Quote]
+    M -->|No| O[Negotiate or Move On]
+    style A fill:#1e3a5f,color:#fff
+    style E fill:#059669,color:#fff
+    style H fill:#059669,color:#fff
+    style N fill:#B91C1C,color:#fff
+        </div>
+      </div>
+
+      <ul>
+        <li><strong>Bring a sourcing brief</strong> — One-page document with target products, MOQ, price range, delivery timeline, and quality standards. Chinese suppliers respond much better to specific requests.</li>
+        <li><strong>Use WeChat</strong> — Download WeChat before arriving. All Chinese suppliers use it. Scan QR codes to add contacts instantly.</li>
+        <li><strong>Hire an interpreter</strong> — $80-150/day for a professional English-Chinese interpreter. Worth every penny for negotiation accuracy.</li>
+        <li><strong>Check factory registrations</strong> — Ask for their business license (营业执照) number and verify on the National Enterprise Credit Information System</li>
+        <li><strong>Don't sign on the spot</strong> — Collect information, compare, and make decisions after the fair. "Limited time offers" at trade shows are marketing pressure tactics</li>
+        <li><strong>Sample strategy</strong> — Budget $500-1,000 for sample costs from 5-8 suppliers. This is your most valuable investment</li>
+      </ul>
+
+      <h2 id="chengdu" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Chengdu Women's Shoe Zone at the Fair</h2>
+      <p>
+        The fair features a dedicated <strong>Chengdu/Western China Pavilion (Zone E)</strong> showcasing women's fashion shoe manufacturers from China's "Women's Shoe Capital." This zone is particularly valuable for buyers seeking:
+      </p>
+      <ul>
+        <li><strong>Small-batch customization</strong> — Chengdu factories offer MOQ as low as 300-500 pairs/style</li>
+        <li><strong>Design flexibility</strong> — In-house design teams that can create custom collections from your sketches</li>
+        <li><strong>Competitive pricing</strong> — Chengdu labor costs are 30-40% lower than Dongguan/Shenzhen</li>
+        <li><strong>Quality leather work</strong> — Specialization in leather heels, boots, and fashion shoes</li>
+      </ul>
+
+      <div class="bg-primary-50 border-l-4 border-primary-500 p-4 my-6 rounded-r-lg">
+        <p class="font-semibold text-primary-800">Meet Our Verified Suppliers:</p>
+        <p class="text-primary-800">Can't make it to the fair? Connect directly with our <a href="/suppliers/balaa-shoe/" class="underline font-semibold">BALAA Shoe</a> and <a href="/suppliers/brara-shoe/" class="underline font-semibold">BRARA Shoes</a> — both Chengdu-based women's shoe specialists with proven export track records to North America and Europe.</p>
+      </div>
+
+      <h2 id="logistics" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Travel & Logistics Guide</h2>
+      <ul>
+        <li><strong>Nearest airport:</strong> Shenzhen Bao'an International (SZX) — 40 min by car to Houjie</li>
+        <li><strong>Alternative:</strong> Guangzhou Baiyun International (CAN) — 90 min by car</li>
+        <li><strong>Hotels:</strong> Book 2-3 months early; Houjie area hotels range from $40-120/night</li>
+        <li><strong>Visa:</strong> Business visa (M-type) required; allow 2-4 weeks for processing</li>
+        <li><strong>Currency:</strong> Bring RMB cash for small purchases; Alipay/WeChat Pay accepted everywhere</li>
+        <li><strong>Translation apps:</strong> Download Google Translate with offline Chinese; Baidu Translate works better locally</li>
+      </ul>
+    </div>
+
+    <FAQSection faqs={faqs} />
+  </div>
+</BaseLayout>
