@@ -1,0 +1,200 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const silhouettes = [
+  {
+    type: 'Oxford',
+    category: 'Formal',
+    profile: 'Low vamp, closed lacing, sleek toe',
+    proportions: 'Toe box 40% / Vamp 30% / Quarter 30%',
+    toeShapes: ['Almond (Classic)', 'Cap Toe (Business)', 'Whole Cut (Formal)', 'Wing Tip (Smart Casual)'],
+    lines: ['Closed lacing system — clean line from throat to quarter', 'Low vamp exposure — minimal visible sock', 'Sleek last with 5° toe spring'],
+    bestLast: 'European Square / British Rounded',
+    fobRange: '¥150-600',
+    svgPath: 'M30 60 Q40 20 80 25 L140 25 Q180 20 190 60 L185 90 L35 90 Z',
+  },
+  {
+    type: 'Derby',
+    category: 'Smart Casual',
+    profile: 'Open lacing, wider vamp, relaxed toe',
+    proportions: 'Toe box 35% / Vamp 35% / Quarter 30%',
+    toeShapes: ['Round (Casual)', 'Moc Toe (Heritage)', 'Brogue (Decorative)', 'Apron Toe (Country)'],
+    lines: ['Open lacing — throat opens wider for fit', 'Higher vamp exposure — visible tongue', 'Relaxed last with 8° toe spring'],
+    bestLast: 'American Round / Norwegian Wide',
+    fobRange: '¥120-450',
+    svgPath: 'M35 55 Q45 25 85 30 L135 28 Q175 22 185 55 L180 88 L40 88 Z',
+  },
+  {
+    type: 'Chelsea Boot',
+    category: 'Versatile',
+    profile: 'Ankle height, elastic side, clean shaft',
+    proportions: 'Toe box 25% / Shaft 50% / Elastic 25%',
+    toeShapes: ['Almond (Modern)', 'Round (Classic)', 'Snip Toe (Western)', 'Chisel (Contemporary)'],
+    lines: ['Clean shaft — no lacing, elastic gore only', 'Pull tab at back — entry point', 'Fitted ankle with 2cm elastic stretch'],
+    bestLast: 'Slim Almond / Cuban Heel',
+    fobRange: '¥130-500',
+    svgPath: 'M40 100 Q50 30 90 25 L130 25 Q170 30 180 100 L175 150 L45 150 Z',
+  },
+  {
+    type: 'Sneaker',
+    category: 'Casual / Athletic',
+    profile: 'Padded collar, chunky midsole, wide toe box',
+    proportions: 'Toe box 35% / Midsole 25% / Upper 40%',
+    toeShapes: ['Round (Running)', 'Tapered (Racing)', 'Wide Toe (Training)', 'Split Toe (Minimalist)'],
+    lines: ['Padded collar — comfort and ankle support', 'Thick midsole — visible cushioning technology', 'Wide base — stability platform'],
+    bestLast: 'Running Curve / Skate Flat',
+    fobRange: '¥60-250',
+    svgPath: 'M30 70 Q40 25 85 20 L145 18 Q195 20 200 70 L205 95 Q200 105 180 110 L50 110 Q30 105 25 95 Z',
+  },
+  {
+    type: 'High Heel Pump',
+    category: "Women's Formal",
+    profile: 'Low vamp, stiletto heel, pointed toe',
+    proportions: 'Toe box 30% / Vamp 40% / Heel 30%',
+    toeShapes: ['Pointed (Classic)', 'Almond (Comfort)', 'Square (Modern)', 'Open Toe (Evening)'],
+    lines: ['Deep plunge vamp — elongates leg line', 'Stiletto 8-10cm — shifts weight forward', 'Shank provides arch bridge support'],
+    bestLast: 'Pointed Stiletto / Block Heel',
+    fobRange: '¥80-300',
+    svgPath: 'M50 75 Q60 20 95 18 L130 20 Q160 25 165 75 L155 90 Q140 95 130 100 L120 105 Q110 108 100 105 L90 100 Q80 95 60 90 Z',
+  },
+  {
+    type: 'Ankle Boot',
+    category: 'Fall / Casual',
+    profile: 'Mid-ankle shaft, stacked heel, roomy toe',
+    proportions: 'Toe box 25% / Shaft 45% / Heel 30%',
+    toeShapes: ['Round (Casual)', 'Almond (Dressy)', 'Chisel (Modern)', 'Moc Toe (Heritage)'],
+    lines: ['Shaft height at ankle bone — versatile break point', 'Stacked heel 3-5cm — comfortable elevation', 'Wider throat — easy entry'],
+    bestLast: 'Western Round / Lug Sole',
+    fobRange: '¥110-400',
+    svgPath: 'M35 95 Q45 25 90 20 L140 18 Q185 22 195 95 L190 145 Q185 155 170 160 L60 160 Q45 155 40 145 Z',
+  },
+];
+
+const proportionRules = [
+  { rule: 'Golden Ratio', desc: 'Vamp-to-toe ratio of 1.618:1 creates the most visually balanced last', used: 'Premium dress shoes, luxury sneakers' },
+  { rule: 'Toe Spring', desc: '5-10° upward curve at toe — too flat looks stubby, too high looks clownish', used: 'All closed-toe shoes' },
+  { rule: 'Waist Break', desc: 'Narrowest point at arch — defines elegance in dress shoes', used: 'Oxfords, pumps, Chelsea boots' },
+  { rule: 'Heel-to-Toe Offset', desc: '0mm (barefoot) to 12mm (running) — determines gait mechanics', used: 'Athletic shoes, comfort shoes' },
+  { rule: 'Ball Flex Point', desc: 'Widest part of last = foot ball joint — flex groove alignment', used: 'All shoes with flex zones' },
+];
+---
+
+<PageLayout
+  title="Footwear Silhouette Studies — Proportions, Toe Shapes & Last Design"
+  description="Visual guide to shoe silhouettes, proportions, toe shapes, and last design principles. Essential reference for footwear designers and product developers."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Silhouette Studies', url: '/inspiration/silhouette-studies/' }]}
+>
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Silhouette Studies</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Visual breakdown of <strong>shoe proportions</strong>, <strong>toe shapes</strong>, and <strong>key design lines</strong>. Each silhouette includes the last type, FOB cost range, and proportional ratios used by Chinese last-makers.
+    </p>
+  </div>
+
+  <!-- Proportion Rules -->
+  <div class="bg-neutral-900 text-white rounded-2xl p-8 mb-10">
+    <h2 class="text-lg font-bold mb-6 text-center uppercase tracking-wider text-neutral-400">5 Proportion Rules Every Designer Must Know</h2>
+    <div class="grid md:grid-cols-5 gap-4">
+      {proportionRules.map(r => (
+        <div class="text-center">
+          <div class="text-2xl font-black text-primary-400 mb-2">{r.rule.split(' ').map(w => w[0]).join('')}</div>
+          <div class="text-sm font-bold mb-1">{r.rule}</div>
+          <div class="text-xs text-neutral-400">{r.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Silhouette Cards -->
+  <div class="grid md:grid-cols-2 gap-6">
+    {silhouettes.map(s => (
+      <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- SVG Silhouette -->
+        <div class="bg-gradient-to-br from-neutral-50 to-neutral-100 p-8 flex items-center justify-center" style="min-height: 180px;">
+          <svg viewBox="0 0 230 170" class="w-full max-w-xs" xmlns="http://www.w3.org/2000/svg">
+            <path d={s.svgPath} fill="none" stroke="#1C1C1C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Center line -->
+            <line x1="115" y1="10" x2="115" y2="165" stroke="#B91C1C" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.5"/>
+            {/* Proportion markers */}
+            <text x="115" y="12" text-anchor="middle" font-size="8" fill="#B91C1C" font-weight="bold">{s.proportions.split(' / ')[0]}</text>
+            <text x="115" y="80" text-anchor="middle" font-size="8" fill="#666" font-weight="bold">{s.type}</text>
+          </svg>
+        </div>
+
+        <!-- Info -->
+        <div class="p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <span class="text-xs text-primary-600 font-semibold uppercase">{s.category}</span>
+              <h2 class="text-xl font-bold text-neutral-900">{s.type}</h2>
+            </div>
+            <div class="text-right">
+              <div class="text-xs text-neutral-400">FOB</div>
+              <div class="font-bold text-primary-600">{s.fobRange}</div>
+            </div>
+          </div>
+
+          <p class="text-sm text-neutral-600 mb-3">{s.profile}</p>
+
+          <!-- Proportions -->
+          <div class="bg-neutral-50 rounded-lg p-3 mb-3 text-xs">
+            <span class="font-bold text-neutral-700">Proportions: </span>
+            <span class="text-neutral-500">{s.proportions}</span>
+          </div>
+
+          <!-- Toe Shapes -->
+          <div class="mb-3">
+            <span class="text-xs font-bold text-neutral-700 block mb-1">Toe Shape Options</span>
+            <div class="flex flex-wrap gap-1">
+              {s.toeShapes.map(t => (
+                <span class="px-2 py-0.5 bg-white border border-neutral-200 rounded text-xs text-neutral-600">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Key Lines -->
+          <div>
+            <span class="text-xs font-bold text-neutral-700 block mb-1">Key Design Lines</span>
+            <ul class="text-xs text-neutral-500 space-y-0.5">
+              {s.lines.map(l => (
+                <li class="flex items-start gap-1">
+                  <span class="text-primary-500 mt-0.5">→</span>
+                  {l}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-3 pt-3 border-t border-neutral-100 text-xs text-neutral-400">
+            Recommended Last: <strong class="text-neutral-600">{s.bestLast}</strong>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Toe Shape Comparison -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Toe Shape Comparison Guide</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-neutral-200 rounded-xl overflow-hidden">
+        <thead class="bg-neutral-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Toe Shape</th>
+            <th class="px-4 py-3 text-left">Visual Effect</th>
+            <th class="px-4 py-3 text-left">Comfort Level</th>
+            <th class="px-4 py-3 text-left">Best Shoe Type</th>
+            <th class="px-4 py-3 text-left">Last Adjustment</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Pointed</td><td>Elongates foot, formal</td><td>★★☆☆☆</td><td>Pumps, Dress Oxfords</td><td>+5mm beyond toe, narrow to 20mm</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Almond</td><td>Balanced, versatile</td><td>★★★★☆</td><td>Oxford, Loafer, Chelsea</td><td>+3mm beyond toe, 30mm width</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Round</td><td>Relaxed, casual</td><td>★★★★★</td><td>Derby, Sneaker, Boot</td><td>0mm extension, full toe width</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Chisel</td><td>Modern, architectural</td><td>★★★☆☆</td><td>Contemporary Dress, Boot</td><td>+2mm, squared at tip</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Square</td><td>Bold, fashion-forward</td><td>★★★☆☆</td><td>Fashion Boots, Mules</td><td>0mm, 90° cut at tip</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</PageLayout>

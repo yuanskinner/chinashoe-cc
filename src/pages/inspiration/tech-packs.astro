@@ -1,0 +1,181 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const techPackSections = [
+  {
+    step: '01',
+    name: 'Cover Sheet',
+    desc: 'Project identity and key specs at a glance',
+    fields: [
+      { label: 'Style Name', example: 'SS25-CC001 Chelsea Boot' },
+      { label: 'Season', example: 'Spring/Summer 2025' },
+      { label: 'Category', example: "Women's Ankle Boot" },
+      { label: 'Target Price (FOB)', example: '¥145.00' },
+      { label: 'Factory', example: 'Chengdu Meijiali Shoes Co., Ltd.' },
+      { label: 'Delivery Date', example: 'March 15, 2025' },
+    ],
+  },
+  {
+    step: '02',
+    name: 'Construction Spec',
+    desc: 'How the shoe is built — the most critical page',
+    fields: [
+      { label: 'Construction Method', example: 'Cemented + Lasted' },
+      { label: 'Last Code', example: 'WM-CHEL-07 (Almond Toe, EU 37-42)' },
+      { label: 'Heel Height', example: '55mm Stacked Leather + 10mm Top Lift' },
+      { label: 'Shank', example: '1.2mm Spring Steel, Full Length' },
+      { label: 'Insole', example: '2mm Non-Woven + 3mm Memory Foam' },
+      { label: 'Outsole', example: 'TPU Injection, 3mm Tread, #TR-445' },
+    ],
+  },
+  {
+    step: '03',
+    name: 'Material BOM',
+    desc: 'Bill of Materials — every component with supplier code',
+    fields: [
+      { label: 'Upper: Kid Suede', example: '1.0mm, #KS-Burgundy, Wenzhou Huanyu' },
+      { label: 'Lining: Pigskin', example: '0.6mm, #PS-Natural, Chengdu Jinli' },
+      { label: 'Sock: PU + Memory Foam', example: '3mm, #MF-Grey, Dongguan Hongda' },
+      { label: 'Elastic Gore', example: '55mm width, #EG-Black, Xiamen Elastic' },
+      { label: 'Pull Tab', example: 'Full Grain Leather, #FG-DarkBrown' },
+      { label: 'Adhesive', example: 'Water-based PU, #WB-200, Nanfang' },
+    ],
+  },
+  {
+    step: '04',
+    name: 'Color & Finish Spec',
+    desc: 'Pantone references and surface treatment details',
+    fields: [
+      { label: 'Upper Color', example: 'Pantone 19-1535 TCX (Suede Dye)' },
+      { label: 'Outsole Color', example: 'Pantone 19-0303 TCX (TPU Masterbatch)' },
+      { label: 'Edge Finish', example: '3-coat Burnished, #EF-Mahogany' },
+      { label: 'Hardware', example: 'Antique Brass, 0.3μm Plating' },
+      { label: 'Thread', example: 'Mara 70, #730 (Dark Brown), 10 SPI' },
+      { label: 'Logo Treatment', example: 'Debossed Blind, 0.8mm Depth' },
+    ],
+  },
+  {
+    step: '05',
+    name: 'Size Run & Grading',
+    desc: 'Measurement specifications for each size',
+    fields: [
+      { label: 'Size Range', example: 'EU 36-41 (6 sizes)' },
+      { label: 'Base Size', example: 'EU 38 (All specs based on this size)' },
+      { label: 'Length Grade', example: '+6.67mm per full size' },
+      { label: 'Width Grade', example: '+1.5mm per full size' },
+      { label: 'Bottom Grade', example: '+4mm per full size' },
+      { label: 'Half Sizes', example: 'Yes — 36.5, 37.5, 38.5, 39.5, 40.5' },
+    ],
+  },
+  {
+    step: '06',
+    name: 'Packaging Spec',
+    desc: 'Box, tissue, silica gel — every detail for retail delivery',
+    fields: [
+      { label: 'Shoe Box', example: '2-piece flip, 350g grey board, matte lamination' },
+      { label: 'Tissue Paper', example: '17gsm, unbleached, 2 sheets per pair' },
+      { label: 'Silica Gel', example: '2 x 5g packets per pair, cobalt-free' },
+      { label: 'Shoe Bag', example: 'Non-woven, drawstring, printed logo' },
+      { label: 'Hang Tag', example: '350g art card, 50x90mm, jute string' },
+      { label: 'Carton', example: '7-ply, 12-pair pack, 48x32x30cm' },
+    ],
+  },
+];
+
+const commonMistakes = [
+  { mistake: 'Missing Pantone codes', consequence: 'Factory guesses color → 3 rounds of samples wasted', fix: 'Always provide Pantone TCX (textile) code + physical swatch' },
+  { mistake: 'No last code specified', consequence: 'Factory uses their default last → wrong shape', fix: 'Provide last model # or send reference shoe' },
+  { mistake: 'BOM without supplier codes', consequence: 'Factory substitutes cheaper materials', fix: 'Specify supplier + product code for every BOM line' },
+  { mistake: 'Grading not specified', consequence: 'Size 36 fits, size 41 falls apart', fix: 'Always provide grading rules with base size measurements' },
+  { mistake: 'No packaging spec', consequence: 'Shoes arrive in wrong boxes → retail rejection', fix: 'Include full packaging section — box, tissue, carton' },
+];
+---
+
+<PageLayout
+  title="Footwear Tech Pack Guide — 6-Section Template with Real Examples"
+  description="Complete footwear tech pack template with 6 sections: Cover Sheet, Construction, BOM, Color Spec, Size Grading, and Packaging. Includes common mistakes and FOB cost optimization tips."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Tech Packs', url: '/inspiration/tech-packs/' }]}
+>
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Tech Packs</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      A complete <strong>6-section tech pack template</strong> with real examples. Every field filled in — ready to adapt for your next production order with Chinese factories.
+    </p>
+  </div>
+
+  <!-- Flow -->
+  <div class="bg-neutral-900 text-white rounded-2xl p-8 mb-10">
+    <h2 class="text-sm font-bold mb-6 text-center uppercase tracking-wider text-neutral-400">Tech Pack Flow — 6 Critical Sections</h2>
+    <div class="flex flex-wrap justify-center gap-2">
+      {['Cover Sheet', 'Construction', 'Material BOM', 'Color Spec', 'Size Grading', 'Packaging'].map((s, i) => (
+        <div class="flex items-center gap-2">
+          <div class="bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-bold">{s}</div>
+          {i < 5 && <span class="text-neutral-500">→</span>}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Section Cards -->
+  <div class="space-y-6">
+    {techPackSections.map(section => (
+      <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm">
+        <div class="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white px-6 py-4 flex items-center gap-4">
+          <span class="text-3xl font-black text-primary-400">{section.step}</span>
+          <div>
+            <h2 class="text-xl font-bold">{section.name}</h2>
+            <p class="text-sm text-neutral-300">{section.desc}</p>
+          </div>
+        </div>
+        <div class="divide-y divide-neutral-50">
+          {section.fields.map(field => (
+            <div class="px-6 py-3 flex items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-sm font-medium text-neutral-700 w-48 shrink-0">{field.label}</span>
+              <span class="text-sm text-primary-600 font-mono">{field.example}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Common Mistakes -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">5 Tech Pack Mistakes That Cost You 3+ Sample Rounds</h2>
+    <div class="space-y-4">
+      {commonMistakes.map(m => (
+        <div class="bg-red-50 border border-red-100 rounded-xl p-5">
+          <div class="flex items-start gap-3">
+            <span class="text-red-500 text-xl">⚠</span>
+            <div>
+              <h3 class="font-bold text-red-900">{m.mistake}</h3>
+              <p class="text-sm text-red-700 mb-1">{m.consequence}</p>
+              <div class="bg-white rounded-lg px-3 py-2 text-sm text-green-800 font-medium">
+                ✓ Fix: {m.fix}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Cost Impact -->
+  <div class="mt-12 bg-neutral-50 rounded-2xl p-8">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-4">How a Complete Tech Pack Saves You Money</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div>
+        <div class="text-4xl font-black text-red-500">3-4</div>
+        <div class="text-sm text-neutral-500">Sample rounds WITHOUT a proper tech pack</div>
+      </div>
+      <div>
+        <div class="text-4xl font-black text-green-600">1-2</div>
+        <div class="text-sm text-neutral-500">Sample rounds WITH a complete tech pack</div>
+      </div>
+      <div>
+        <div class="text-4xl font-black text-primary-600">¥15K+</div>
+        <div class="text-sm text-neutral-500">Saved per style in sample costs & time</div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

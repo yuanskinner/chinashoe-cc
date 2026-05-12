@@ -1,0 +1,197 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const combinations = [
+  {
+    category: 'Premium Dress',
+    combo: 'Full Grain Calfskin + Goodyear Welt + Leather Sole',
+    upper: { material: 'Full Grain Calfskin', color: '#1C1C1C', properties: 'Breathable, develops patina, 1.2-1.4mm' },
+    midsole: { material: 'Cork Filler', color: '#C4A35A', properties: 'Molds to foot, lightweight' },
+    outsole: { material: 'Leather Sole', color: '#3E2723', properties: 'Elegant, resoleable' },
+    technique: 'Goodyear Welted',
+    cost: '¥350-800 / pair (FOB)',
+    moq: '300 pairs',
+    bestFor: 'Oxford, Derby, Loafer',
+    tip: 'Calfskin <1.4mm ensures elegant draping without wrinkles at the vamp',
+  },
+  {
+    category: 'Athletic Performance',
+    combo: 'Engineered Mesh + TPU Cage + EVA Midsole + Rubber Outsole',
+    upper: { material: 'Engineered Mesh (Jacquard)', color: '#85C1E9', properties: 'Breathable, zones of stretch/support' },
+    midsole: { material: 'Dual-Density EVA', color: '#F0F3F4', properties: 'Lightweight, responsive cushioning' },
+    outsole: { material: 'Carbon Rubber + Blown Rubber', color: '#1B4F72', properties: 'High-wear + lightweight zones' },
+    technique: 'Cemented / Strobel',
+    cost: '¥80-200 / pair (FOB)',
+    moq: '1000 pairs',
+    bestFor: 'Running, Training, Walking',
+    tip: 'TPU cage adds lateral support without adding weight — key for stability shoes',
+  },
+  {
+    category: 'Casual Lifestyle',
+    combo: 'Waxed Canvas + Suede Heel Counter + Vulcanized Rubber',
+    upper: { material: 'Waxed Canvas 18oz', color: '#8B7355', properties: 'Water-resistant, vintage patina' },
+    midsole: { material: 'Vulcanized Rubber', color: '#F5F5F5', properties: 'Durable, flexible, iconic sidewall' },
+    outsole: { material: 'Vulcanized Rubber', color: '#1C1C1C', properties: 'Herringbone traction pattern' },
+    technique: 'Vulcanized',
+    cost: '¥45-100 / pair (FOB)',
+    moq: '2000 pairs',
+    bestFor: 'Canvas Sneakers, Skate, Slip-on',
+    tip: '18oz canvas holds shape better than 12oz — essential for unlined construction',
+  },
+  {
+    category: 'Sustainable Eco',
+    combo: 'Recycled PET Knit + Bloom Algae Foam + Natural Rubber',
+    upper: { material: 'Recycled PET Knit (rPET)', color: '#4A7C59', properties: 'Made from 6-8 plastic bottles, OEKO-TEX certified' },
+    midsole: { material: 'Bloom Algae EVA', color: '#E8D5B7', properties: '40% algae-based, carbon-negative' },
+    outsole: { material: 'Natural Rubber (FSC)', color: '#5D4E37', properties: 'Sustainably harvested, biodegradable' },
+    technique: 'Cemented (water-based adhesive)',
+    cost: '¥120-280 / pair (FOB)',
+    moq: '500 pairs',
+    bestFor: 'Eco Sneakers, Casual, Travel',
+    tip: 'rPET yarn requires 20% less dye than virgin polyester — reduces wastewater',
+  },
+  {
+    category: 'Women\'s Fashion Heel',
+    combo: 'Kid Suede + Leather Lining + TPU Outsole + Steel Shank',
+    upper: { material: 'Kid Suede', color: '#943126', properties: 'Ultra-soft, 0.8-1.0mm, luxurious nap' },
+    midsole: { material: 'Steel Shank + Leather Board', color: '#D5D8DC', properties: 'Arch support, structural rigidity' },
+    outsole: { material: 'TPU Injection', color: '#1C1C1C', properties: 'Slip-resistant, lightweight' },
+    technique: 'Cemented + Lasted',
+    cost: '¥100-250 / pair (FOB)',
+    moq: '500 pairs',
+    bestFor: 'Pumps, Heeled Boots, Mules',
+    tip: 'Kid suede under 1.0mm is essential for heels — thicker suede adds bulk at the toe',
+  },
+  {
+    category: 'Safety / Work Boot',
+    combo: 'Full Grain Oil Leather + Steel Toe Cap + PU Dual-Density Sole',
+    upper: { material: 'Oil-Tanned Full Grain', color: '#5D4E37', properties: 'Water/oil resistant, 1.8-2.0mm' },
+    midsole: { material: 'PU Dual-Density', color: '#2E4053', properties: 'Impact absorption + puncture resistance' },
+    outsole: { material: 'PU/TPU Outsole', color: '#1C1C1C', properties: 'SRC slip-rated, heat-resistant 300°C' },
+    technique: 'Direct Injection (DESMA)',
+    cost: '¥120-300 / pair (FOB)',
+    moq: '500 pairs',
+    bestFor: 'Safety Boots, Work Shoes, Industrial',
+    tip: 'Oil-tanned leather self-heals scratches — ideal for harsh work environments',
+  },
+];
+---
+
+<PageLayout
+  title="Footwear Material Combinations — Design & Sourcing Guide"
+  description="Expert guide to footwear material combinations. 6 proven upper-midsole-outsole combos with FOB pricing, MOQ, and production tips for Chinese manufacturers."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Material Combinations', url: '/inspiration/material-combinations/' }]}
+>
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Material Combinations</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Proven <strong>upper + midsole + outsole</strong> combinations used by China's top footwear factories. Each combo includes <strong>FOB pricing</strong>, <strong>MOQ</strong>, and <strong>production tips</strong> for sourcing professionals.
+    </p>
+  </div>
+
+  <!-- Layer Diagram -->
+  <div class="bg-neutral-900 text-white rounded-2xl p-8 mb-10">
+    <h2 class="text-lg font-bold mb-4 text-center uppercase tracking-wider text-neutral-400">Shoe Anatomy — 3-Layer System</h2>
+    <div class="max-w-lg mx-auto space-y-1">
+      <div class="bg-gradient-to-r from-amber-600 to-amber-800 rounded-t-xl px-6 py-4 text-center">
+        <span class="font-bold text-lg">UPPER</span>
+        <span class="text-amber-200 text-sm ml-2">Leather / Mesh / Canvas / Knit</span>
+      </div>
+      <div class="bg-gradient-to-r from-sky-600 to-sky-800 px-6 py-3 text-center">
+        <span class="font-bold">MIDSOLE</span>
+        <span class="text-sky-200 text-sm ml-2">EVA / PU / Cork / Algae Foam</span>
+      </div>
+      <div class="bg-gradient-to-r from-stone-600 to-stone-800 rounded-b-xl px-6 py-4 text-center">
+        <span class="font-bold text-lg">OUTSOLE</span>
+        <span class="text-stone-200 text-sm ml-2">Rubber / TPU / Leather / EVA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Combination Cards -->
+  <div class="space-y-8">
+    {combinations.map(combo => (
+      <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-neutral-50 to-white px-6 py-4 border-b border-neutral-100 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-primary-600 font-semibold uppercase tracking-wider">{combo.category}</span>
+            <h2 class="text-xl font-bold text-neutral-900">{combo.combo}</h2>
+          </div>
+          <div class="text-right text-sm">
+            <div class="text-neutral-500">FOB</div>
+            <div class="font-bold text-lg text-primary-600">{combo.cost}</div>
+          </div>
+        </div>
+
+        <!-- Material Layers -->
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-neutral-100">
+          <!-- Upper -->
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-5 h-5 rounded-full border-2 border-white shadow" style={`background-color: ${combo.upper.color}`}></div>
+              <span class="text-xs font-bold text-neutral-500 uppercase">Upper</span>
+            </div>
+            <div class="font-semibold text-neutral-900 mb-1">{combo.upper.material}</div>
+            <div class="text-xs text-neutral-500">{combo.upper.properties}</div>
+          </div>
+          <!-- Midsole -->
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-5 h-5 rounded-full border-2 border-white shadow" style={`background-color: ${combo.midsole.color}`}></div>
+              <span class="text-xs font-bold text-neutral-500 uppercase">Midsole</span>
+            </div>
+            <div class="font-semibold text-neutral-900 mb-1">{combo.midsole.material}</div>
+            <div class="text-xs text-neutral-500">{combo.midsole.properties}</div>
+          </div>
+          <!-- Outsole -->
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-5 h-5 rounded-full border-2 border-white shadow" style={`background-color: ${combo.outsole.color}`}></div>
+              <span class="text-xs font-bold text-neutral-500 uppercase">Outsole</span>
+            </div>
+            <div class="font-semibold text-neutral-900 mb-1">{combo.outsole.material}</div>
+            <div class="text-xs text-neutral-500">{combo.outsole.properties}</div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-neutral-50 px-6 py-4 flex flex-wrap items-center gap-4 text-sm border-t border-neutral-100">
+          <span class="px-2 py-1 bg-white border border-neutral-200 rounded text-xs font-medium">{combo.technique}</span>
+          <span class="px-2 py-1 bg-white border border-neutral-200 rounded text-xs font-medium">MOQ: {combo.moq}</span>
+          <span class="px-2 py-1 bg-white border border-neutral-200 rounded text-xs font-medium">{combo.bestFor}</span>
+          <div class="ml-auto text-primary-700 font-medium text-xs italic">{combo.tip}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Compatibility Matrix -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Attachment Compatibility Matrix</h2>
+    <p class="text-neutral-600 mb-4">Which <strong>construction method</strong> works with which material combo — a quick reference for design specification.</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-neutral-200 rounded-xl overflow-hidden">
+        <thead class="bg-neutral-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Construction</th>
+            <th class="px-4 py-3 text-center">Leather Upper</th>
+            <th class="px-4 py-3 text-center">Mesh/Knit</th>
+            <th class="px-4 py-3 text-center">Canvas</th>
+            <th class="px-4 py-3 text-center">Leather Sole</th>
+            <th class="px-4 py-3 text-center">EVA Midsole</th>
+            <th class="px-4 py-3 text-center">Rubber Sole</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Goodyear Welt</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-red-400">✗</td><td class="text-center text-yellow-500">△</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Cemented</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-yellow-500">△</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-green-600 font-bold">✓</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Vulcanized</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center text-green-600 font-bold">✓</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Injection (DESMA)</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-yellow-500">△</td><td class="text-center text-red-400">✗</td><td class="text-center text-red-400">✗</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-green-600 font-bold">✓</td></tr>
+          <tr class="hover:bg-neutral-50"><td class="px-4 py-2 font-medium">Strobel</td><td class="text-center text-yellow-500">△</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-yellow-500">△</td><td class="text-center text-red-400">✗</td><td class="text-center text-green-600 font-bold">✓</td><td class="text-center text-green-600 font-bold">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-neutral-400 mt-2">✓ = Recommended  |  △ = Possible with adjustments  |  ✗ = Not compatible</p>
+  </div>
+</PageLayout>

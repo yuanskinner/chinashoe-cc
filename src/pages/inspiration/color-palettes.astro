@@ -1,0 +1,241 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const palettes = [
+  {
+    season: 'Spring/Summer 2025',
+    theme: 'Botanical Revival',
+    colors: [
+      { hex: '#4A7C59', name: 'Fern Green', pantone: 'PANTONE 16-0230' },
+      { hex: '#E8D5B7', name: 'Warm Sand', pantone: 'PANTONE 13-1008' },
+      { hex: '#C4704B', name: 'Terracotta', pantone: 'PANTONE 18-1340' },
+      { hex: '#F5E6CC', name: 'Cream Ivory', pantone: 'PANTONE 11-0607' },
+      { hex: '#8B4513', name: 'Saddle Brown', pantone: 'PANTONE 18-1148' },
+    ],
+    application: 'Leather sandals, woven espadrilles, organic canvas sneakers',
+    mood: 'Natural, grounded, artisanal',
+  },
+  {
+    season: 'Spring/Summer 2025',
+    theme: 'Coastal Breeze',
+    colors: [
+      { hex: '#1B4F72', name: 'Deep Ocean', pantone: 'PANTONE 19-4033' },
+      { hex: '#85C1E9', name: 'Sky Blue', pantone: 'PANTONE 14-4318' },
+      { hex: '#F0F3F4', name: 'Seafoam White', pantone: 'PANTONE 11-0601' },
+      { hex: '#D4AC0D', name: 'Golden Sand', pantone: 'PANTONE 16-0840' },
+      { hex: '#AAB7B8', name: 'Driftwood', pantone: 'PANTONE 16-1100' },
+    ],
+    application: 'Boat shoes, nautical loafers, mesh running uppers',
+    mood: 'Fresh, breezy, maritime',
+  },
+  {
+    season: 'Fall/Winter 2025-26',
+    theme: 'Urban Noir',
+    colors: [
+      { hex: '#1C1C1C', name: 'Carbon Black', pantone: 'PANTONE 19-0303' },
+      { hex: '#5D6D7E', name: 'Slate Steel', pantone: 'PANTONE 18-3910' },
+      { hex: '#943126', name: 'Oxblood', pantone: 'PANTONE 19-1536' },
+      { hex: '#D5D8DC', name: 'Concrete Grey', pantone: 'PANTONE 14-4103' },
+      { hex: '#F4D03F', name: 'Electric Amber', pantone: 'PANTONE 14-0850' },
+    ],
+    application: 'Chelsea boots, leather sneakers, dress oxfords',
+    mood: 'Bold, metropolitan, statement',
+  },
+  {
+    season: 'Fall/Winter 2025-26',
+    theme: 'Nordic Heritage',
+    colors: [
+      { hex: '#2E4053', name: 'Midnight Pine', pantone: 'PANTONE 19-3920' },
+      { hex: '#A93226', name: 'Cranberry', pantone: 'PANTONE 18-1750' },
+      { hex: '#F2F3F4', name: 'Snow White', pantone: 'PANTONE 11-0601' },
+      { hex: '#7D6608', name: 'Amber Gold', pantone: 'PANTONE 16-1050' },
+      { hex: '#6E2C00', name: 'Rich Chestnut', pantone: 'PANTONE 19-1220' },
+    ],
+    application: 'Hiking boots, shearling-lined slippers, wool sneakers',
+    mood: 'Cozy, heritage, timeless',
+  },
+  {
+    season: 'Resort 2025',
+    theme: 'Sunset Gradient',
+    colors: [
+      { hex: '#E74C3C', name: 'Coral Fire', pantone: 'PANTONE 17-1563' },
+      { hex: '#F39C12', name: 'Marigold', pantone: 'PANTONE 14-1050' },
+      { hex: '#FDEBD0', name: 'Peach Blush', pantone: 'PANTONE 12-1006' },
+      { hex: '#8E44AD', name: 'Plum Dusk', pantone: 'PANTONE 18-3615' },
+      { hex: '#2C3E50', name: 'Twilight Navy', pantone: 'PANTONE 19-3832' },
+    ],
+    application: 'Resort wedges, strappy sandals, embroidered mules',
+    mood: 'Warm, vibrant, vacation',
+  },
+  {
+    season: 'Resort 2025',
+    theme: 'Mineral Earth',
+    colors: [
+      { hex: '#7B7D7D', name: 'Slate Rock', pantone: 'PANTONE 17-1100' },
+      { hex: '#B7950B', name: 'Raw Sienna', pantone: 'PANTONE 16-1046' },
+      { hex: '#6C3483', name: 'Amethyst Dust', pantone: 'PANTONE 18-3211' },
+      { hex: '#1ABC9C', name: 'Patina Teal', pantone: 'PANTONE 16-5123' },
+      { hex: '#F0E68C', name: 'Pale Khaki', pantone: 'PANTONE 13-0614' },
+    ],
+    application: 'Trail runners, outdoor sandals, utility boots',
+    mood: 'Earthy, textured, adventure',
+  },
+];
+
+const combinationRules = [
+  { rule: '60-30-10', desc: '60% dominant (upper), 30% secondary (sole/trim), 10% accent (stitching/logo)', example: 'Black upper + Grey sole + Red accent' },
+  { rule: 'Monochromatic', desc: 'Single hue in 3+ values — sophisticated for dress shoes', example: 'Navy → Steel Blue → Ice Blue' },
+  { rule: 'Complementary', desc: 'Opposite wheel colors — bold for sport/lifestyle', example: 'Deep Blue + Burnt Orange' },
+  { rule: 'Analogous', desc: '3 adjacent hues — natural for outdoor/casual', example: 'Terracotta + Rust + Burgundy' },
+  { rule: 'Neutral + Pop', desc: 'Neutral base with one vivid accent — modern minimalism', example: 'Off-White + Electric Green' },
+];
+---
+
+<PageLayout
+  title="Footwear Color Palettes — Seasonal Trends & Pantone Guides"
+  description="Explore curated footwear color palettes for Spring/Summer 2025 and Fall/Winter 2025-26. Pantone references, combination rules, and application guides for shoe designers and buyers."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Color Palettes', url: '/inspiration/color-palettes/' }]}
+>
+  <!-- Hero -->
+  <div class="mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Footwear Color Palettes
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Curated seasonal <strong>color systems</strong> for shoe designers and sourcing professionals. Each palette includes <strong>Pantone references</strong>, material application guides, and combination rules used by top Chinese footwear manufacturers.
+    </p>
+  </div>
+
+  <!-- Combination Rules - Quick Reference -->
+  <div class="bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-2xl p-8 mb-12 text-white">
+    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-2xl">🎨</span> Color Combination Rules
+    </h2>
+    <div class="grid md:grid-cols-5 gap-4">
+      {combinationRules.map(r => (
+        <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+          <div class="text-2xl font-black mb-1">{r.rule}</div>
+          <div class="text-xs text-white/70 mb-2">{r.desc}</div>
+          <div class="text-xs text-yellow-300 font-medium">{r.example}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Seasonal Palettes -->
+  {palettes.map(palette => (
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">{palette.season}</span>
+        <h2 class="text-2xl font-bold text-neutral-900">{palette.theme}</h2>
+      </div>
+
+      <!-- Color Swatches -->
+      <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
+        <!-- Swatch Bar -->
+        <div class="flex h-32">
+          {palette.colors.map(color => (
+            <div class="flex-1 relative group cursor-pointer transition-all hover:flex-[1.5]" style={`background-color: ${color.hex}`}>
+              <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="text-xs font-bold">{color.name}</div>
+                <div class="text-[10px] opacity-80">{color.pantone}</div>
+                <div class="text-[10px] font-mono">{color.hex}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Color Cards -->
+        <div class="grid grid-cols-5 divide-x divide-neutral-100">
+          {palette.colors.map(color => (
+            <div class="p-4 text-center">
+              <div class="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={`background-color: ${color.hex}`}></div>
+              <div class="text-sm font-semibold text-neutral-900">{color.name}</div>
+              <div class="text-[10px] text-neutral-400 font-mono">{color.hex}</div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Application -->
+        <div class="border-t border-neutral-100 px-6 py-4 bg-neutral-50 flex items-center gap-6">
+          <div>
+            <span class="text-xs text-neutral-500 uppercase tracking-wider">Application</span>
+            <div class="text-sm text-neutral-700 mt-1">{palette.application}</div>
+          </div>
+          <div class="ml-auto">
+            <span class="text-xs text-neutral-500 uppercase tracking-wider">Mood</span>
+            <div class="text-sm font-medium text-primary-600 mt-1">{palette.mood}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+
+  <!-- Material-Color Matrix -->
+  <div class="mt-12 mb-8">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Material × Color Matrix</h2>
+    <p class="text-neutral-600 mb-6">How the same color behaves differently across <strong>leather</strong>, <strong>synthetic</strong>, and <strong>textile</strong> substrates — critical for accurate color matching in production.</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-neutral-200 rounded-xl overflow-hidden">
+        <thead class="bg-neutral-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Color</th>
+            <th class="px-4 py-3 text-left">Full Grain Leather</th>
+            <th class="px-4 py-3 text-left">PU Synthetic</th>
+            <th class="px-4 py-3 text-left">Knit Textile</th>
+            <th class="px-4 py-3 text-left">Production Note</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr class="hover:bg-neutral-50">
+            <td class="px-4 py-3 font-medium flex items-center gap-2"><span class="w-4 h-4 rounded-full inline-block" style="background:#1C1C1C"></span> Black</td>
+            <td>Deep, warm undertones</td>
+            <td>Sharp, cool reflection</td>
+            <td>Flat, absorbs light</td>
+            <td class="text-neutral-500">Leather appears "softer" black</td>
+          </tr>
+          <tr class="hover:bg-neutral-50">
+            <td class="px-4 py-3 font-medium flex items-center gap-2"><span class="w-4 h-4 rounded-full inline-block border border-neutral-300" style="background:#F5E6CC"></span> Cream</td>
+            <td>Warm, natural variation</td>
+            <td>Uniform, clinical white</td>
+            <td>Yellowing risk over time</td>
+            <td class="text-neutral-500">Anti-yellowing agent required</td>
+          </tr>
+          <tr class="hover:bg-neutral-50">
+            <td class="px-4 py-3 font-medium flex items-center gap-2"><span class="w-4 h-4 rounded-full inline-block" style="background:#943126"></span> Oxblood</td>
+            <td>Rich depth, patina potential</td>
+            <td>Flat, no depth</td>
+            <td>Fades significantly</td>
+            <td class="text-neutral-500">Leather preferred for this shade</td>
+          </tr>
+          <tr class="hover:bg-neutral-50">
+            <td class="px-4 py-3 font-medium flex items-center gap-2"><span class="w-4 h-4 rounded-full inline-block" style="background:#1ABC9C"></span> Teal</td>
+            <td>Unusual, premium feel</td>
+            <td>Vivid, sporty</td>
+            <td>Colorfastness issues</td>
+            <td class="text-neutral-500">Test wash fastness on textiles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Sourcing Tips -->
+  <div class="bg-primary-50 border border-primary-100 rounded-2xl p-8 mt-8">
+    <h2 class="text-xl font-bold text-primary-900 mb-4">Sourcing Color Accuracy Tips</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-sm text-primary-800">
+      <div>
+        <h3 class="font-bold mb-2">1. Pantone TCX vs TPG</h3>
+        <p>Use <strong>Pantone TCX</strong> (cotton) for textile uppers and <strong>TPG</strong> (paper) for leather swatches. Never mix systems — a TCX color can shift 1-2 shades on leather.</p>
+      </div>
+      <div>
+        <h3 class="font-bold mb-2">2. Lightbox Verification</h3>
+        <p>Always verify under <strong>D65</strong> (daylight), <strong>TL84</strong> (store lighting), and <strong>CWF</strong> (office). Color that matches in daylight may shift under retail lighting.</p>
+      </div>
+      <div>
+        <h3 class="font-bold mb-2">3. Production Tolerance</h3>
+        <p>Acceptable ΔE (color difference): <strong>≤1.0</strong> for premium, <strong>≤2.0</strong> for mid-range. Always request a <strong>pre-production color strike-off</strong> before bulk order.</p>
+      </div>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,194 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const moods = [
+  {
+    name: 'Urban Nomad',
+    season: 'SS 2025',
+    keywords: 'Earth tones, raw textures, lived-in comfort',
+    palette: ['#8B7355', '#D4C5A9', '#4A4A4A', '#F5F0E8', '#6B4423'],
+    paletteNames: ['Desert Sand', 'Parchment', 'Charcoal', 'Bone White', 'Raw Umber'],
+    materials: [
+      { name: 'Washed Nubuck', use: 'Upper — soft, matte, natural grain visible' },
+      { name: 'Jute Rope', use: 'Lacing and trim — organic texture contrast' },
+      { name: 'Recycled Canvas', use: 'Lining — sustainable story, breathable' },
+    ],
+    shoeTypes: ['Desert Boot', 'Espadrille Sneaker', 'Slide Sandal'],
+    vibe: 'The traveler who values craftsmanship over logos. Think Morocco market meets Tokyo minimalism.',
+  },
+  {
+    name: 'Digital Bloom',
+    season: 'SS 2025',
+    keywords: 'Bioluminescent, hyper-natural, tech-organic fusion',
+    palette: ['#0A0A2E', '#FF6B9D', '#C44DFF', '#00F5D4', '#FFE66D'],
+    paletteNames: ['Deep Void', 'Neon Rose', 'Electric Violet', 'Biolum Green', 'Solar Flare'],
+    materials: [
+      { name: 'Reflective Knit', use: 'Upper — 3M reflective yarn, glows in flash photography' },
+      { name: 'Iridescent TPU', use: 'Accents — color-shift film, holographic effect' },
+      { name: 'Phosphorescent Outsole', use: 'Glow-in-dark TPU — charges in sunlight' },
+    ],
+    shoeTypes: ['Tech Runner', 'Platform Sneaker', 'Slide with LED Accent'],
+    vibe: 'Gen-Z meets nature. Bioluminescent mushrooms inspire after-dark streetwear.',
+  },
+  {
+    name: 'Quiet Luxury',
+    season: 'FW 2025',
+    keywords: 'Invisible quality, muted tones, tactile richness',
+    palette: ['#2C2C2C', '#8B8580', '#C4B7A6', '#E8E4DE', '#5C4033'],
+    paletteNames: ['Ink Black', 'Warm Grey', 'Cashmere', 'Ivory', 'Espresso'],
+    materials: [
+      { name: 'Calfskin', use: 'Upper — buttery hand-feel, no visible grain' },
+      { name: 'Suede + Shearling', use: 'Lining — warmth without bulk, tactile interior' },
+      { name: 'Matte Hardware', use: 'Buckles/zips — brushed nickel, no shine' },
+    ],
+    shoeTypes: ['Loafer', 'Chelsea Boot', 'Kitten Heel Mule'],
+    vibe: 'The Old Money aesthetic goes global. Zero logos, maximum material quality.',
+  },
+  {
+    name: 'Neo Heritage',
+    season: 'FW 2025',
+    keywords: 'Revived craft, modern proportion, cultural depth',
+    palette: ['#1B3A4B', '#8B0000', '#D4A574', '#F0E6D3', '#2D5016'],
+    paletteNames: ['Naval Blue', 'Heritage Red', 'Saddle Tan', 'Antique White', 'Forest'],
+    materials: [
+      { name: 'Waxed Flesh Leather', use: 'Upper — rugged surface, develops patina' },
+      { name: 'Harris Tweed Panel', use: 'Tongue/collar — heritage pattern, seasonal color' },
+      { name: 'Cork + Rubber Midsole', use: 'Sole — natural cushioning, sustainable story' },
+    ],
+    shoeTypes: ['Moc Toe Boot', 'Derby Brogue', 'Hiking Oxford'],
+    vibe: 'Scandinavian outdoor meets British country estate. Built for real terrain, styled for the city.',
+  },
+  {
+    name: 'Soft Architecture',
+    season: 'SS 2025',
+    keywords: 'Sculptural, volumetric, gravity-defying forms',
+    palette: ['#F8F4EF', '#E8DDD3', '#C9B99A', '#A69078', '#7D6B5D'],
+    paletteNames: ['Cloud', 'Sandstone', 'Dune', 'Mocha', 'Truffle'],
+    materials: [
+      { name: 'Molded EVA', use: 'One-piece upper — seamless, sculptural form' },
+      { name: '3D-Knit Spacer', use: 'Tongue/collar — volumetric cushion, zero stitching' },
+      { name: 'Translucent TPU', use: 'Heel counter — architectural detail, structural support' },
+    ],
+    shoeTypes: ['Clog Mule', 'Sculpted Slide', 'Balenciaga-type Boot'],
+    vibe: 'Zaha Hadid meets comfort wear. Organic curves, monolithic forms, neutral palette.',
+  },
+  {
+    name: 'Y2K Remix',
+    season: 'SS 2025',
+    keywords: 'Chrome, baby pink, chunky, nostalgic futurism',
+    palette: ['#FFB6C1', '#C0C0C0', '#4169E1', '#FF69B4', '#E6E6FA'],
+    paletteNames: ['Baby Pink', 'Chrome Silver', 'Royal Blue', 'Hot Pink', 'Lavender'],
+    materials: [
+      { name: 'Patent Leather', use: 'Upper — high-shine, retro-futuristic surface' },
+      { name: 'Mesh + PVC Overlay', use: 'Vamp panels — 2000s tech-sport aesthetic' },
+      { name: 'Chunky EVA Midsole', use: 'Platform sole — exaggerated proportion is key' },
+    ],
+    shoeTypes: ['Chunky Sneaker', 'Platform Sandal', 'Baby Mary Jane'],
+    vibe: 'Britney Spears meets The Matrix. Maximum volume, unapologetic color, nostalgic fun.',
+  },
+];
+---
+
+<PageLayout
+  title="Footwear Mood Boards — 6 Design Directions for SS/FW 2025"
+  description="Six curated mood boards for footwear design: Urban Nomad, Digital Bloom, Quiet Luxury, Neo Heritage, Soft Architecture, and Y2K Remix. Color palettes, material combos, and shoe types included."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Mood Boards', url: '/inspiration/mood-boards/' }]}
+>
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Mood Boards</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Six curated design directions for <strong>SS/FW 2025</strong>. Each mood board includes <strong>color palette</strong>, <strong>material selection</strong>, and <strong>target shoe types</strong> — ready to brief your Chinese factory.
+    </p>
+  </div>
+
+  <!-- Mood Board Grid -->
+  <div class="space-y-8">
+    {moods.map(mood => (
+      <div class="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- Header with Color Palette -->
+        <div class="flex">
+          {mood.palette.map((color, i) => (
+            <div
+              class="flex-1 py-8 flex items-end justify-center"
+              style={`background-color: ${color}; min-height: 100px;`}
+            >
+              <span
+                class="text-[10px] font-bold px-1 py-0.5 rounded"
+                class:list={[
+                  (color === '#0A0A2E' || color === '#2C2C2C' || color === '#1B3A4B' || color === '#8B0000' || color === '#2D5016')
+                    ? 'text-white/70 bg-black/20'
+                    : 'text-black/50 bg-white/40'
+                ]}
+              >
+                {mood.paletteNames[i]}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <!-- Content -->
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <span class="text-xs text-primary-600 font-semibold">{mood.season}</span>
+              <h2 class="text-2xl font-black text-neutral-900">{mood.name}</h2>
+            </div>
+          </div>
+
+          <p class="text-sm text-neutral-500 italic mb-4">"{mood.vibe}"</p>
+
+          <p class="text-sm text-neutral-600 mb-4">
+            <strong>Keywords:</strong> {mood.keywords}
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Materials -->
+            <div>
+              <h3 class="text-sm font-bold text-neutral-700 uppercase tracking-wider mb-3">Materials</h3>
+              <div class="space-y-2">
+                {mood.materials.map(mat => (
+                  <div class="bg-neutral-50 rounded-lg px-3 py-2">
+                    <span class="text-sm font-medium text-neutral-900">{mat.name}</span>
+                    <p class="text-xs text-neutral-500">{mat.use}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Shoe Types -->
+            <div>
+              <h3 class="text-sm font-bold text-neutral-700 uppercase tracking-wider mb-3">Target Shoe Types</h3>
+              <div class="space-y-2">
+                {mood.shoeTypes.map(shoe => (
+                  <div class="flex items-center gap-2 bg-primary-50 rounded-lg px-3 py-2">
+                    <span class="text-primary-500">▸</span>
+                    <span class="text-sm font-medium text-primary-900">{shoe}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Usage Guide -->
+  <div class="mt-12 bg-neutral-900 text-white rounded-2xl p-8">
+    <h2 class="text-lg font-bold mb-4">How to Use These Mood Boards</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-sm">
+      <div>
+        <span class="text-primary-400 font-bold">1. Select Direction</span>
+        <p class="text-neutral-400 mt-1">Choose a mood board that matches your brand DNA and target market</p>
+      </div>
+      <div>
+        <span class="text-primary-400 font-bold">2. Customize Palette</span>
+        <p class="text-neutral-400 mt-1">Adjust Pantone codes for your factory — all colors can be matched in leather, suede, or knit</p>
+      </div>
+      <div>
+        <span class="text-primary-400 font-bold">3. Brief Your Factory</span>
+        <p class="text-neutral-400 mt-1">Send the mood board + tech pack together for fastest sample turnaround</p>
+      </div>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,126 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const details = [
+  {
+    part: 'Stitching',
+    icon: '🧵',
+    focus: 'The 8-12 SPI Sweet Spot',
+    items: [
+      { name: 'Lockstitch (301)', desc: 'Standard for uppers — cannot unravel if one stitch breaks', spec: '8-10 SPI for leather, 10-12 SPI for dress', quality: 'Check: thread tension leaves no visible indentation' },
+      { name: 'Chainstitch (401)', desc: 'Used for decorative topstitching on sneakers and casual shoes', spec: '6-8 SPI visible, 12 SPI hidden chain', quality: 'Check: chain runs straight, no wavering' },
+      { name: 'Hand-Sewn Moccasin', desc: 'Hand-welted apron on loafers — premium construction', spec: '5-7 SPI, waxed linen thread', quality: 'Check: even stitch tension, no puckering at curves' },
+      { name: 'Saddle Stitch', desc: 'Double-needle technique for belts and heavy boots', spec: '4-6 SPI, braided nylon thread', quality: 'Check: alternating needle penetration — no skipped stitches' },
+    ],
+  },
+  {
+    part: 'Edge Finishing',
+    icon: '✂️',
+    focus: 'Where Quality Shows First',
+    items: [
+      { name: 'Burnished Edge', desc: 'Heat and friction melt leather fibers into a smooth, glossy surface', spec: '3 coats edge paint + burnishing wheel', quality: 'Check: no visible layer separation under 10x magnification' },
+      { name: 'Painted Edge', desc: 'Edge paint applied in layers — common for PU and corrected grain', spec: '2-3 coats with sanding between', quality: 'Check: no chipping after 50-bend flex test' },
+      { name: 'Folded Edge', desc: 'Leather folded over and stitched — cleanest finish for lining', spec: '0.5mm fold + edge glue + stitch', quality: 'Check: no visible raw edge, consistent fold width' },
+      { name: 'Raw Edge (Cut)', desc: 'Intentionally unfinished — used in deconstructed/artisan designs', spec: 'Clean single cut, no fraying fibers', quality: 'Check: cut must be laser-precise, no ragged fibers' },
+    ],
+  },
+  {
+    part: 'Hardware',
+    icon: '🔩',
+    focus: 'Small Parts, Big Impact',
+    items: [
+      { name: 'Eyelets / Grommets', desc: 'Reinforce lace holes — brass, nickel, or antique finish', spec: '4-7mm inner diameter, #0 or #00 size', quality: 'Check: no rotation after 50 lace pulls, no rust after salt spray' },
+      { name: 'D-Rings / Speed Hooks', desc: 'Quick lacing for boots — must hold under tension', spec: '20-25mm D-ring, 5-hook speed set', quality: 'Check: no deformation at 15kg pull force' },
+      { name: 'Buckles', desc: 'Decorative + functional for sandals and monk straps', spec: '15-25mm width, pin or roller type', quality: 'Check: spring returns to position 500+ cycles' },
+      { name: 'Zippers', desc: 'YKK #5 or #8 most common — nylon coil vs metal teeth', spec: 'YKK #5 for boots, #3 for dress shoes', quality: 'Check: smooth pull at -20°C, no separation under lateral force' },
+    ],
+  },
+  {
+    part: 'Sole Details',
+    icon: '👣',
+    focus: 'Where the Shoe Meets the Ground',
+    items: [
+      { name: 'Welt Stitch', desc: 'Visible stitching attaching welt to sole — hallmark of Goodyear construction', spec: '270° welt = dress, 360° = work boot', quality: 'Check: even stitch count per inch, no loose threads' },
+      { name: 'Tread Pattern', desc: 'Functional grip design — deeper = more traction, louder on hard floors', spec: '2mm (dress) to 5mm (outdoor) depth', quality: 'Check: consistent depth across sole, no air pockets in mold' },
+      { name: 'Heel Stack', desc: 'Layered construction — leather/rubber/foam combination for cushioning', spec: '3-layer: top piece + lifts + rubber base', quality: 'Check: no visible gap between layers, straight heel stack' },
+      { name: 'Shank', desc: 'Hidden steel or wood support bridging heel and ball — arch support', spec: '1.2mm spring steel, 8-10cm length', quality: 'Check: shoe bends only at ball, not at arch' },
+    ],
+  },
+];
+
+const qcCheckpoints = [
+  { stage: 'Upper Stitching', check: 'SPI count, thread tension, needle holes', tolerance: '±1 SPI from spec' },
+  { stage: 'Edge Finish', check: 'Paint adhesion, smoothness, color consistency', tolerance: 'No chips after flex test' },
+  { stage: 'Hardware', check: 'Plating quality, rotation resistance, rust test', tolerance: '24hr salt spray pass' },
+  { stage: 'Sole Bond', check: 'Peel strength between upper and sole', tolerance: '≥3.5 N/mm (EN ISO 20344)' },
+  { stage: 'Final Assembly', check: 'Left-right symmetry, collar height, tongue position', tolerance: '≤2mm asymmetry' },
+];
+---
+
+<PageLayout
+  title="Footwear Detail Close-ups — Stitching, Edges, Hardware & Sole Finishes"
+  description="Zoom into the details that define footwear quality: stitching specs, edge finishing, hardware grades, and sole construction. QC tolerances and production standards included."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Inspiration', url: '/inspiration/' }, { name: 'Detail Close-ups', url: '/inspiration/detail-close-ups/' }]}
+>
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Detail Close-ups</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      The <strong>micro-details</strong> that separate premium from mediocre. Each section includes <strong>production specs</strong>, <strong>quality checkpoints</strong>, and <strong>QC tolerances</strong> for sourcing professionals.
+    </p>
+  </div>
+
+  <!-- Detail Sections -->
+  {details.map(section => (
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-3xl">{section.icon}</span>
+        <div>
+          <h2 class="text-2xl font-bold text-neutral-900">{section.part}</h2>
+          <p class="text-sm text-primary-600 font-medium">{section.focus}</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        {section.items.map(item => (
+          <div class="bg-white border border-neutral-200 rounded-xl p-5 hover:border-primary-200 transition-colors">
+            <h3 class="font-bold text-neutral-900 text-lg mb-1">{item.name}</h3>
+            <p class="text-sm text-neutral-600 mb-3">{item.desc}</p>
+            <div class="bg-neutral-50 rounded-lg px-3 py-2 mb-2">
+              <span class="text-[10px] text-neutral-400 uppercase tracking-wider">Spec</span>
+              <div class="text-xs text-neutral-700 font-medium">{item.spec}</div>
+            </div>
+            <div class="bg-green-50 border border-green-100 rounded-lg px-3 py-2">
+              <span class="text-[10px] text-green-600 uppercase tracking-wider">QC Check</span>
+              <div class="text-xs text-green-800 font-medium">{item.quality}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+
+  <!-- QC Tolerance Table -->
+  <div class="mt-8">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">QC Tolerance Reference</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-neutral-200 rounded-xl overflow-hidden">
+        <thead class="bg-neutral-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Inspection Stage</th>
+            <th class="px-4 py-3 text-left">What to Check</th>
+            <th class="px-4 py-3 text-left">Acceptable Tolerance</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          {qcCheckpoints.map(cp => (
+            <tr class="hover:bg-neutral-50">
+              <td class="px-4 py-2 font-medium">{cp.stage}</td>
+              <td class="px-4 py-2 text-neutral-600">{cp.check}</td>
+              <td class="px-4 py-2 font-medium text-primary-600">{cp.tolerance}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</PageLayout>

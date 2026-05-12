@@ -33,12 +33,12 @@ const collections = [
 ];
 
 const designElements = [
-  { name: 'Color Palettes', icon: '🎨', count: 89 },
-  { name: 'Material Combinations', icon: '🧵', count: 67 },
-  { name: 'Silhouette Studies', icon: '📐', count: 54 },
-  { name: 'Detail Close-ups', icon: '🔍', count: 78 },
-  { name: 'Tech Packs', icon: '📋', count: 34 },
-  { name: 'Mood Boards', icon: '🖼️', count: 45 },
+  { name: 'Color Palettes', icon: '🎨', count: 89, href: '/inspiration/color-palettes/' },
+  { name: 'Material Combinations', icon: '🧵', count: 67, href: '/inspiration/material-combinations/' },
+  { name: 'Silhouette Studies', icon: '📐', count: 54, href: '/inspiration/silhouette-studies/' },
+  { name: 'Detail Close-ups', icon: '🔍', count: 78, href: '/inspiration/detail-close-ups/' },
+  { name: 'Tech Packs', icon: '📋', count: 34, href: '/inspiration/tech-packs/' },
+  { name: 'Mood Boards', icon: '🖼️', count: 45, href: '/inspiration/mood-boards/' },
 ];
 
 const trendingSearches = [
@@ -117,7 +117,7 @@ const trendingSearches = [
     <h2 class="text-2xl font-bold text-neutral-900 mb-6">Browse by Element</h2>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
       {designElements.map(element => (
-        <a href="/inspiration/" class="card text-center hover:border-primary-300 border border-transparent">
+        <a href={element.href} class="card text-center hover:border-primary-300 border border-transparent transition-all hover:shadow-md">
           <span class="text-3xl mb-2 block">{element.icon}</span>
           <h3 class="font-medium text-neutral-900 text-sm">{element.name}</h3>
           <span class="text-xs text-neutral-500">{element.count} items</span>
