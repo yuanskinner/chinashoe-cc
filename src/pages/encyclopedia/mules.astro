@@ -12,26 +12,26 @@ const features = [
     title: 'Flat Mules',
     description: 'Effortless flat mule styles for everyday elegance.',
     image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/mules/flat-mules/',
+    href: '/encyclopedia/mules/',
   },
   {
     title: 'Platform Mules',
     description: 'Statement platform mules: height without discomfort.',
     image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop',
-    href: '/encyclopedia/mules/platform-mules/',
+    href: '/encyclopedia/mules/heel-mules/',
   },
   {
     title: 'Mule Construction',
     description: 'Understanding mule construction and lasting techniques.',
     image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop',
-    href: '/encyclopedia/mules/construction/',
+    href: '/encyclopedia/mules/',
   },
 ];
 
 const relatedCategories = [
   { name: 'Slippers', href: '/encyclopedia/slippers/', count: 42 },
   { name: 'Sandals', href: '/encyclopedia/sandals/', count: 45 },
-  { name: 'Heels', href: '/encyclopedia/heels/', count: 38 },
+  { name: 'Heels', href: '/encyclopedia/high-heels/', count: 38 },
 ];
 ---
 
@@ -41,7 +41,7 @@ const relatedCategories = [
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Encyclopedia', url: '/encyclopedia/' },
-    { name: 'Categories', url: '/encyclopedia/categories/' },
+    { name: 'Categories', url: '/encyclopedia/' },
     { name: 'Mules', url: '/encyclopedia/mules/' },
   ]}
   sidebarItems={[
@@ -50,9 +50,9 @@ const relatedCategories = [
       links: [
         { label: 'Overview', href: '/encyclopedia/mules/', active: true },
         { label: 'Heel Mules', href: '/encyclopedia/mules/heel-mules/' },
-        { label: 'Flat Mules', href: '/encyclopedia/mules/flat-mules/' },
-        { label: 'Platform Mules', href: '/encyclopedia/mules/platform-mules/' },
-        { label: 'Construction', href: '/encyclopedia/mules/construction/' },
+        { label: 'Flat Mules', href: '/encyclopedia/mules/' },
+        { label: 'Platform Mules', href: '/encyclopedia/mules/heel-mules/' },
+        { label: 'Construction', href: '/encyclopedia/mules/' },
       ],
     },
     {
@@ -60,7 +60,7 @@ const relatedCategories = [
       links: [
         { label: 'Slippers', href: '/encyclopedia/slippers/' },
         { label: 'Sandals', href: '/encyclopedia/sandals/' },
-        { label: 'Heels', href: '/encyclopedia/heels/' },
+        { label: 'Heels', href: '/encyclopedia/high-heels/' },
         { label: 'Loafers', href: '/encyclopedia/loafers/' },
       ],
     },

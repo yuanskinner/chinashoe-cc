@@ -1,0 +1,182 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const products = [
+  { name: 'Women\'s High Heels', moq: '300 pairs', leadTime: '40-50 days' },
+  { name: 'Women\'s Flats', moq: '500 pairs', leadTime: '35-45 days' },
+  { name: 'Women\'s Sandals', moq: '500 pairs', leadTime: '30-40 days' },
+  { name: 'Women\'s Ankle Boots', moq: '200 pairs', leadTime: '45-55 days' },
+  { name: 'Women\'s Pumps', moq: '300 pairs', leadTime: '35-45 days' },
+];
+
+const certifications = [
+  { name: 'BSCI', description: 'Business Social Compliance Initiative' },
+  { name: 'ISO 9001', description: 'Quality Management System' },
+  { name: 'REACH Compliant', description: 'EU Chemical Regulation Compliance' },
+];
+
+const capabilities = [
+  { name: 'Stiletto Construction', description: 'Precision heel attachment with reinforced steel pins' },
+  { name: 'Leather Cutting (CAD)', description: 'Computer-aided design cutting for minimal waste' },
+  { name: 'Custom Last Making', description: 'In-house last development for unique toe shapes' },
+  { name: 'Embellishment', description: 'Rhinestone, embroidery, and hardware application' },
+];
+---
+
+<PageLayout
+  title="Wenzhou Huachen Shoes Co., Ltd. - Women's Fashion Footwear"
+  description="Verified supplier profile for Wenzhou Huachen Shoes, a professional women's fashion footwear manufacturer in Wenzhou, Zhejiang. Specializing in high heels, pumps, flats, and sandals with custom last-making and embellishment capabilities."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Zhejiang', url: '/suppliers/' },
+    { name: 'Wenzhou Huachen', url: '/suppliers/wenzhou-huachen/' },
+  ]}
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-success">Verified Supplier</span>
+      <span class="badge-primary">Women's Fashion</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Wenzhou Huachen Shoes Co., Ltd.
+    </h1>
+    <p class="text-lg text-neutral-600">
+      Professional women's fashion footwear manufacturer based in <strong>Wenzhou, Zhejiang Province</strong> — China's renowned hub for women's dress shoes. Specializing in <strong>high heels</strong>, <strong>pumps</strong>, <strong>flats</strong>, and <strong>fashion sandals</strong> with in-house custom last-making and premium embellishment capabilities.
+    </p>
+  </div>
+
+  <div class="rounded-xl overflow-hidden mb-8">
+    <img src="/images/suppliers/wenzhou-huachen.jpg" alt="Wenzhou Huachen Women's Fashion Shoes" class="w-full h-64 md:h-80 object-cover" />
+  </div>
+
+  <div class="grid md:grid-cols-4 gap-6 mb-12">
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">Wenzhou</div>
+      <div class="text-sm text-neutral-500">Location</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">2008</div>
+      <div class="text-sm text-neutral-500">Established</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">800K</div>
+      <div class="text-sm text-neutral-500">Annual Capacity</div>
+    </div>
+    <div class="card text-center">
+      <div class="text-2xl font-bold text-primary-600 mb-1">60+</div>
+      <div class="text-sm text-neutral-500">Brand Partners</div>
+    </div>
+  </div>
+
+  <div class="prose prose-lg max-w-none mb-12">
+    <h2>Company Overview</h2>
+    <p>Wenzhou Huachen Shoes Co., Ltd. is a specialist manufacturer in <strong>Wenzhou, Zhejiang</strong> — a city with over 40 years of heritage in women's dress shoe manufacturing. The factory operates <strong>3 dedicated production lines</strong> with a monthly output of <strong>60,000+ pairs</strong>, focusing exclusively on women's fashion and dress footwear.</p>
+    <p>What sets Huachen apart is its <strong>in-house last-making workshop</strong> and <strong>CAD leather cutting system</strong>, which allows for rapid development of custom toe shapes and highly efficient material usage. This vertical integration reduces development lead time by <strong>30%</strong> compared to typical OEM factories in the region.</p>
+
+    <h2>Product Catalog</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-neutral-200 rounded-lg overflow-hidden">
+        <thead class="bg-neutral-50">
+          <tr>
+            <th class="px-4 py-3 text-left text-sm font-semibold text-neutral-700">Product Category</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold text-neutral-700">MOQ</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold text-neutral-700">Lead Time</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold text-neutral-700">FOB Price Range</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          {products.map(p => (
+            <tr class="hover:bg-neutral-50">
+              <td class="px-4 py-3 text-sm font-medium text-neutral-900">{p.name}</td>
+              <td class="px-4 py-3 text-sm text-neutral-600">{p.moq}</td>
+              <td class="px-4 py-3 text-sm text-neutral-600">{p.leadTime}</td>
+              <td class="px-4 py-3 text-sm text-neutral-600">$6 – $15 / pair</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Manufacturing Capabilities</h2>
+    <div class="grid md:grid-cols-2 gap-4 not-prose">
+      {capabilities.map(c => (
+        <div class="bg-white border border-neutral-200 rounded-lg p-4">
+          <h3 class="font-semibold text-neutral-900 mb-1">{c.name}</h3>
+          <p class="text-sm text-neutral-600">{c.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2>Quality Assurance</h2>
+    <p>Huachen implements a rigorous <strong>4-point quality control system</strong> throughout production:</p>
+    <ul>
+      <li><strong>Pattern verification</strong>: Every new pattern is test-assembled before production approval</li>
+      <li><strong>Material inspection</strong>: All leather and synthetic materials are checked for color consistency, thickness, and defect rate before cutting</li>
+      <li><strong>In-line QC</strong>: Dedicated QC inspectors at each production station, checking heel alignment, stitching quality, and adhesive bond</li>
+      <li><strong>Final inspection</strong>: AQL 2.5 final random inspection with detailed reports provided to buyers</li>
+    </ul>
+
+    <h3>Specialized Testing</h3>
+    <ul>
+      <li><strong>Heel pull-off force</strong>: ≥ 600N for stilettos, ≥ 800N for block heels</li>
+      <li><strong>Sole flex resistance</strong>: ≥ 40,000 cycles without delamination</li>
+      <li><strong>Heel height accuracy</strong>: ±1mm tolerance from specification</li>
+      <li><strong>Chrome VI content</strong>: < 3ppm (REACH compliant)</li>
+    </ul>
+
+    <h2>Market & Export</h2>
+    <div class="grid md:grid-cols-3 gap-4 not-prose">
+      <div class="bg-primary-50 border border-primary-100 rounded-lg p-4 text-center">
+        <div class="text-2xl font-bold text-primary-600">50%</div>
+        <div class="text-sm text-neutral-600">Europe</div>
+      </div>
+      <div class="bg-primary-50 border border-primary-100 rounded-lg p-4 text-center">
+        <div class="text-2xl font-bold text-primary-600">30%</div>
+        <div class="text-sm text-neutral-600">Middle East & Africa</div>
+      </div>
+      <div class="bg-primary-50 border border-primary-100 rounded-lg p-4 text-center">
+        <div class="text-2xl font-bold text-primary-600">20%</div>
+        <div class="text-sm text-neutral-600">Americ & Asia</div>
+      </div>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="flex flex-wrap gap-3 not-prose">
+      {certifications.map(c => (
+        <div class="bg-green-50 border border-green-200 rounded-lg px-4 py-2">
+          <div class="font-semibold text-green-800 text-sm">{c.name}</div>
+          <div class="text-xs text-green-600">{c.description}</div>
+        </div>
+      ))}
+    </div>
+
+    <h2>Contact Information</h2>
+    <div class="bg-neutral-50 rounded-lg p-6 not-prose">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <p class="text-sm text-neutral-500">Address</p>
+          <p class="font-medium text-neutral-900">Ouhai Economic Zone, Wenzhou, Zhejiang, China</p>
+        </div>
+        <div>
+          <p class="text-sm text-neutral-500">Business Type</p>
+          <p class="font-medium text-neutral-900">Manufacturer (OEM/ODM)</p>
+        </div>
+        <div>
+          <p class="text-sm text-neutral-500">Employees</p>
+          <p class="font-medium text-neutral-900">120 – 180</p>
+        </div>
+        <div>
+          <p class="text-sm text-neutral-500">Annual Revenue</p>
+          <p class="font-medium text-neutral-900">US$3M – US$8M</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary-600 text-white rounded-xl p-8 text-center">
+    <h3 class="text-2xl font-bold mb-3">Ready to Source from Wenzhou Huachen?</h3>
+    <p class="mb-6 text-primary-100">Get connected with verified women's fashion footwear manufacturers in Wenzhou.</p>
+    <a href="/contact/" class="inline-block bg-white text-primary-600 font-semibold px-8 py-3 rounded-lg hover:bg-primary-50 transition-colors">Contact Us for Introduction</a>
+  </div>
+</PageLayout>

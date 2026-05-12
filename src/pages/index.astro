@@ -52,21 +52,21 @@ const latestNews = [
     excerpt: 'As labor costs rise in China, Vietnamese factories are attracting more B2B orders from European retailers.',
     date: '2024-12-15',
     category: 'Industry News',
-    href: '/news/vietnam-shoe-manufacturing/',
+    href: '/news/vietnam-shoe-manufacturing-2024/',
   },
   {
     title: 'Sustainable Materials Gain Traction in Athletic Footwear',
     excerpt: 'Major brands are committing to recycled and bio-based materials in their 2025 product lines.',
     date: '2024-12-12',
     category: 'Trends',
-    href: '/news/sustainable-footwear-materials/',
+    href: '/news/sustainable-footwear-materials-2025/',
   },
   {
     title: 'Dongguan Shoe Fair 2025: Key Dates and Registration',
     excerpt: 'China\'s premier footwear trade show announces dates for spring exhibition.',
     date: '2024-12-10',
     category: 'Events',
-    href: '/news/dongguan-shoe-fair/',
+    href: '/news/dongguan-shoe-fair-2025/',
   },
 ];
 
@@ -76,6 +76,7 @@ const featuredSuppliers = [
     location: 'Chengdu, Sichuan',
     specialization: "Women's Fashion Shoes, High Heels, Sandals, Boots",
     certifications: ['Gold Supplier 2yrs', '100% Response Rate', '≤2h Response'],
+    image: '/images/suppliers/balaa-shoe.jpg',
     href: '/suppliers/balaa-shoe/',
   },
   {
@@ -83,14 +84,40 @@ const featuredSuppliers = [
     location: 'Chengdu, Sichuan',
     specialization: "Women's Fashion Shoes, Casual Shoes, Customized Boots",
     certifications: ['Gold Supplier 8yrs', '1,000+ Transactions', '95.65% Response'],
+    image: '/images/suppliers/brara-shoe.jpg',
     href: '/suppliers/brara-shoe/',
+  },
+  {
+    name: 'Guangdong Perfect Footwear',
+    location: 'Dongguan, Guangdong',
+    specialization: 'Running Shoes, Basketball Shoes, Sports Sneakers',
+    certifications: ['BSCI', 'ISO 9001', 'Verified'],
+    image: '/images/suppliers/guangdong-perfect.jpg',
+    href: '/suppliers/guangdong-perfect-footwear/',
+  },
+  {
+    name: 'Fujian Yili Shoes',
+    location: 'Quanzhou, Fujian',
+    specialization: 'Sports Shoes, Hiking Shoes, Outdoor Footwear',
+    certifications: ['BSCI', 'SEDEX', 'Verified'],
+    image: '/images/suppliers/fujian-yili.jpg',
+    href: '/suppliers/fujian-yili-shoes/',
   },
   {
     name: 'Wenzhou Huachen Leather Goods',
     location: 'Wenzhou, Zhejiang',
-    specialization: 'Leather Shoes, Dress Shoes',
-    certifications: ['BSCI', 'Sedex'],
+    specialization: 'Oxford Shoes, Derby Shoes, Loafers',
+    certifications: ['BSCI', 'Sedex', 'Verified'],
+    image: '/images/suppliers/wenzhou-huachen.jpg',
     href: '/suppliers/wenzhou-huachen/',
+  },
+  {
+    name: 'Qingdao Safety First',
+    location: 'Qingdao, Shandong',
+    specialization: 'Safety Shoes, Work Boots, Steel Toe Cap Shoes',
+    certifications: ['EN ISO 20345', 'ASTM F2413', 'Verified'],
+    image: '/images/suppliers/qingdao-safety.jpg',
+    href: '/suppliers/qingdao-safety-first/',
   },
 ];
 
@@ -108,13 +135,11 @@ const stats = [
   type="website"
 >
   <!-- Hero Section -->
-  <section class="relative text-white overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-      <img src="/images/hero-craftsman.jpg" alt="Master craftsman handcrafting red leather high heel shoes" class="w-full h-full object-cover object-center" />
-      <!-- Gradient overlay: left side darker for text, right side lighter for image -->
-      <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/95 via-neutral-900/75 to-neutral-900/40"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-neutral-900/30"></div>
+  <section class="relative text-white overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-900 to-primary-900">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-20 w-96 h-96 bg-primary-600 rounded-full blur-3xl"></div>
     </div>
     
     <div class="container-custom relative z-10">
@@ -251,38 +276,41 @@ const stats = [
       
       <div class="grid md:grid-cols-3 gap-6">
         {featuredSuppliers.map(supplier => (
-          <a href={supplier.href} class="card group">
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+          <a href={supplier.href} class="card group p-0 overflow-hidden">
+            <div class="h-40 overflow-hidden">
+              <img
+                src={supplier.image}
+                alt={supplier.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold text-lg text-neutral-900 group-hover:text-primary-600 transition-colors">
+                  {supplier.name}
+                </h3>
+                <span class="badge-success">Verified</span>
               </div>
-              <span class="badge-success">Verified</span>
-            </div>
-            
-            <h3 class="font-semibold text-lg text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
-              {supplier.name}
-            </h3>
-            
-            <div class="flex items-center gap-2 text-sm text-neutral-500 mb-3">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              {supplier.location}
-            </div>
-            
-            <p class="text-sm text-neutral-600 mb-4">
-              Specialization: {supplier.specialization}
-            </p>
-            
-            <div class="flex flex-wrap gap-2">
-              {supplier.certifications.map(cert => (
-                <span class="text-xs px-2 py-1 bg-neutral-100 text-neutral-600 rounded">
-                  {cert}
-                </span>
-              ))}
+              
+              <div class="flex items-center gap-2 text-sm text-neutral-500 mb-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                {supplier.location}
+              </div>
+              
+              <p class="text-sm text-neutral-600 mb-3">
+                {supplier.specialization}
+              </p>
+              
+              <div class="flex flex-wrap gap-2">
+                {supplier.certifications.map(cert => (
+                  <span class="text-xs px-2 py-1 bg-neutral-100 text-neutral-600 rounded">
+                    {cert}
+                  </span>
+                ))}
+              </div>
             </div>
           </a>
         ))}

@@ -1,0 +1,137 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const materialCategories = [
+  {
+    name: 'Leather',
+    description: 'Natural and processed leather types for premium footwear',
+    items: [
+      { name: 'Full Grain Leather', href: '/encyclopedia/materials/full-grain-leather/', description: 'Highest quality, most durable natural leather' },
+      { name: 'Top Grain Leather', href: '/encyclopedia/materials/top-grain-leather/', description: 'Sanded and finished for uniform appearance' },
+      { name: 'Suede & Nubuck', href: '/encyclopedia/materials/suede-nubuck/', description: 'Brushed finishes for texture and style' },
+      { name: 'Exotic Leathers', href: '/encyclopedia/materials/exotic-leathers/', description: 'Crocodile, ostrich, snake, and stingray' },
+      { name: 'Leather Types Overview', href: '/encyclopedia/materials/leather-types/', description: 'Complete guide to leather classification' },
+    ],
+  },
+  {
+    name: 'Synthetic Materials',
+    description: 'Man-made materials for performance and affordability',
+    items: [
+      { name: 'PU Leather', href: '/encyclopedia/materials/pu-leather/', description: 'Polyurethane-coated synthetic leather' },
+      { name: 'Microfiber', href: '/encyclopedia/materials/microfiber/', description: 'Ultra-fine fiber synthetic suede replacement' },
+      { name: 'PVC', href: '/encyclopedia/materials/pvc/', description: 'Polyvinyl chloride for affordable applications' },
+      { name: 'Synthetic Materials Overview', href: '/encyclopedia/materials/synthetic-materials/', description: 'Complete guide to synthetic footwear materials' },
+    ],
+  },
+  {
+    name: 'Textiles & Mesh',
+    description: 'Woven and knitted fabrics for uppers',
+    items: [
+      { name: 'Mesh Fabric', href: '/encyclopedia/materials/mesh-fabric/', description: 'Breathable mesh for athletic uppers' },
+      { name: 'Textiles Overview', href: '/encyclopedia/materials/textiles/', description: 'Knit, woven, and smart textile technologies' },
+      { name: 'Canvas', href: '/encyclopedia/materials/canvas/', description: 'Classic cotton duck fabric for casual footwear' },
+    ],
+  },
+  {
+    name: 'Soles & Midsoles',
+    description: 'Outsole and midsole material technologies',
+    items: [
+      { name: 'TPU', href: '/encyclopedia/materials/tpu/', description: 'Thermoplastic polyurethane for soles and uppers' },
+      { name: 'EVA Midsoles', href: '/encyclopedia/materials/eva-midsoles/', description: 'Ethylene-vinyl acetate cushioning technology' },
+      { name: 'Rubber Outsoles', href: '/encyclopedia/materials/rubber-outsoles/', description: 'Traction, durability, and slip resistance' },
+    ],
+  },
+];
+---
+
+<PageLayout
+  title="Footwear Materials Encyclopedia"
+  description="Complete guide to footwear materials: leather types, synthetic materials, textiles, and sole technologies. Learn about properties, sourcing, and applications."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Materials', url: '/encyclopedia/materials/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Footwear Materials Encyclopedia
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Your comprehensive guide to footwear materials — from full grain leather to advanced synthetic composites. Understand properties, applications, quality grades, and sourcing considerations for every material used in modern shoe manufacturing.
+    </p>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">12+</div>
+      <div class="text-sm text-neutral-600">Material Categories</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">40+</div>
+      <div class="text-sm text-neutral-600">In-Depth Guides</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">500+</div>
+      <div class="text-sm text-neutral-600">Material Specs</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">100+</div>
+      <div class="text-sm text-neutral-600">Sourcing Tips</div>
+    </div>
+  </div>
+
+  <!-- Material Categories -->
+  {materialCategories.map(category => (
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-neutral-900 mb-2">{category.name}</h2>
+      <p class="text-neutral-600 mb-6">{category.description}</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {category.items.map(item => (
+          <a href={item.href} class="card group hover:border-primary-300 border border-transparent">
+            <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-1">{item.name}</h3>
+            <p class="text-sm text-neutral-600">{item.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  ))}
+
+  <!-- Material Comparison Table -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Material Quick Comparison</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-neutral-200 rounded-lg overflow-hidden text-sm">
+        <thead class="bg-neutral-50">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Material</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Durability</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Breathability</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Cost</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Best For</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr><td class="px-4 py-2 font-medium">Full Grain Leather</td><td class="px-4 py-2">★★★★★</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">$$$$</td><td class="px-4 py-2">Premium dress shoes</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Top Grain Leather</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">$$$</td><td class="px-4 py-2">Mid-range formal shoes</td></tr>
+          <tr><td class="px-4 py-2 font-medium">PU Leather</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">★★☆☆☆</td><td class="px-4 py-2">$</td><td class="px-4 py-2">Budget fashion shoes</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Microfiber</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">$$</td><td class="px-4 py-2">Athletic & casual</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Mesh Fabric</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">★★★★★</td><td class="px-4 py-2">$$</td><td class="px-4 py-2">Running shoes</td></tr>
+          <tr><td class="px-4 py-2 font-medium">TPU</td><td class="px-4 py-2">★★★★★</td><td class="px-4 py-2">★★☆☆☆</td><td class="px-4 py-2">$$$</td><td class="px-4 py-2">Sole & support structures</td></tr>
+          <tr><td class="px-4 py-2 font-medium">EVA</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">$$</td><td class="px-4 py-2">Midsole cushioning</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Rubber</td><td class="px-4 py-2">★★★★★</td><td class="px-4 py-2">★☆☆☆☆</td><td class="px-4 py-2">$$</td><td class="px-4 py-2">Outsole traction</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Canvas</td><td class="px-4 py-2">★★☆☆☆</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">$</td><td class="px-4 py-2">Casual sneakers</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Suede</td><td class="px-4 py-2">★★★☆☆</td><td class="px-4 py-2">★★★★☆</td><td class="px-4 py-2">$$$</td><td class="px-4 py-2">Boots & casual</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">Need Help Selecting Materials?</h3>
+    <p class="text-neutral-600 mb-4">Our sourcing guide covers material selection criteria for different shoe types and price points.</p>
+    <a href="/sourcing/" class="btn-primary">View Sourcing Guide</a>
+  </div>
+</PageLayout>

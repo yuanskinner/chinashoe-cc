@@ -1,6 +1,7 @@
 ---
 // Pagefind search modal component
 // Uses Pagefind for static site full-text search
+// Falls back to a helpful message in development mode
 ---
 
 <div id="search-modal" class="fixed inset-0 z-50 hidden">
@@ -33,6 +34,12 @@
           </svg>
           <p class="text-lg font-medium">Search ChinaShoe.cc</p>
           <p class="text-sm mt-1">Find shoes, materials, suppliers, and guides</p>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <a href="/encyclopedia/" class="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">Encyclopedia</a>
+            <a href="/suppliers/" class="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">Suppliers</a>
+            <a href="/sourcing/" class="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">Sourcing</a>
+            <a href="/news/" class="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">News</a>
+          </div>
         </div>
       </div>
     </div>
@@ -56,14 +63,19 @@
 <script>
   // Initialize Pagefind search
   let pagefindSearch: any = null;
+  let pagefindLoaded = false;
   
   async function initPagefind() {
+    if (pagefindLoaded) return;
     try {
-      // @ts-ignore - Pagefind is loaded at runtime
+      // @ts-ignore - Pagefind is loaded at runtime after build
       pagefindSearch = await import('/pagefind/pagefind.js');
       await pagefindSearch.init();
+      pagefindLoaded = true;
+      console.log('Pagefind loaded successfully');
     } catch (e) {
-      console.log('Pagefind not available yet');
+      console.log('Pagefind not available - search works on the published site after build');
+      pagefindLoaded = false;
     }
   }
 
@@ -75,7 +87,7 @@
       document.body.style.overflow = 'hidden';
       if (input) {
         input.value = '';
-        input.focus();
+        setTimeout(() => input.focus(), 50);
       }
       clearResults();
     }
@@ -91,15 +103,21 @@
 
   function clearResults() {
     const results = document.getElementById('search-results');
-    const placeholder = document.getElementById('search-placeholder');
     if (results) {
-      results.innerHTML = '';
-      if (placeholder) results.appendChild(placeholder.cloneNode(true));
+      results.innerHTML = `
+        <div class="text-center py-12 text-neutral-400">
+          <svg class="w-12 h-12 mx-auto mb-4 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <p class="text-lg font-medium">Search ChinaShoe.cc</p>
+          <p class="text-sm mt-1">Find shoes, materials, suppliers, and guides</p>
+        </div>
+      `;
     }
   }
 
   async function performSearch(query: string) {
-    if (!pagefindSearch || !query.trim()) {
+    if (!query.trim()) {
       clearResults();
       return;
     }
@@ -107,13 +125,33 @@
     const results = document.getElementById('search-results');
     if (!results) return;
 
+    // If Pagefind isn't loaded, show helpful message
+    if (!pagefindSearch) {
+      results.innerHTML = `
+        <div class="text-center py-8 text-neutral-400">
+          <svg class="w-10 h-10 mx-auto mb-3 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <p class="text-base font-medium text-neutral-600">Full-text search is available on the published site</p>
+          <p class="text-sm mt-2 text-neutral-500">Search indexing runs during build. Try browsing instead:</p>
+          <div class="flex flex-wrap justify-center gap-2 mt-3">
+            <a href="/encyclopedia/" class="text-sm px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full hover:bg-primary-100 transition-colors">Encyclopedia</a>
+            <a href="/suppliers/" class="text-sm px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full hover:bg-primary-100 transition-colors">Suppliers</a>
+            <a href="/sourcing/" class="text-sm px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full hover:bg-primary-100 transition-colors">Sourcing Guide</a>
+            <a href="/news/" class="text-sm px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full hover:bg-primary-100 transition-colors">News</a>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
     try {
       const search = await pagefindSearch.search(query);
       
       if (search.results.length === 0) {
         results.innerHTML = `
           <div class="text-center py-12 text-neutral-400">
-            <p class="text-lg font-medium">No results found</p>
+            <p class="text-lg font-medium">No results found for "${query}"</p>
             <p class="text-sm mt-1">Try different keywords like "leather", "sneakers", or "supplier"</p>
           </div>
         `;
@@ -126,12 +164,13 @@
 
       results.innerHTML = fragments.map((data: any) => {
         const excerpt = data.excerpt || data.meta?.description || '';
+        const highlightedExcerpt = excerpt.replace(/<(?!\/?mark)[^>]*>/g, '');
         return `
           <a href="${data.url}" class="search-result-item block px-4 py-4 rounded-lg border-b border-neutral-100 last:border-0">
             <div class="flex items-start gap-3">
               <div class="flex-1 min-w-0">
                 <h3 class="text-base font-semibold text-neutral-900 truncate">${data.meta?.title || data.url}</h3>
-                <p class="text-sm text-neutral-500 mt-1 line-clamp-2">${excerpt}</p>
+                <p class="text-sm text-neutral-500 mt-1 line-clamp-2">${highlightedExcerpt}</p>
                 <span class="inline-block mt-2 text-xs text-primary-600 font-medium">${data.url}</span>
               </div>
             </div>
@@ -140,6 +179,12 @@
       }).join('');
     } catch (e) {
       console.error('Search error:', e);
+      results.innerHTML = `
+        <div class="text-center py-8 text-red-400">
+          <p class="text-base font-medium">Search encountered an error</p>
+          <p class="text-sm mt-1">Please try again or browse our categories</p>
+        </div>
+      `;
     }
   }
 
@@ -166,6 +211,15 @@
         heroSearch.blur();
       });
       heroSearch.addEventListener('click', () => {
+        openSearch();
+      });
+    }
+
+    // Header search button opens modal
+    const searchToggle = document.getElementById('search-toggle');
+    if (searchToggle) {
+      searchToggle.addEventListener('click', (e) => {
+        e.preventDefault();
         openSearch();
       });
     }

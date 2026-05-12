@@ -111,12 +111,16 @@ const websiteSchema = generateWebsiteSchema();
     </script>
   </head>
   <body class="min-h-screen flex flex-col bg-white">
-    <Header />
+    <div data-pagefind-ignore>
+      <Header />
+    </div>
     <SearchModal />
-    <main class={`flex-1 ${className || ''}`}>
+    <main class={`flex-1 ${className || ''}`} data-pagefind-body>
       <slot />
     </main>
-    <Footer />
+    <div data-pagefind-ignore>
+      <Footer />
+    </div>
   </body>
 </html>
 

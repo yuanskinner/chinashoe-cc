@@ -1,0 +1,77 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const cities = [
+  { name: 'Yangzhou', description: "Children's shoes and casual footwear manufacturing center", count: 180 },
+  { name: 'Suzhou', description: 'Premium leather shoes and design-focused production', count: 85 },
+  { name: 'Nantong', description: 'Safety footwear and work boots manufacturing', count: 65 },
+  { name: 'Changzhou', description: 'Sports shoes and outdoor footwear', count: 55 },
+];
+---
+
+<PageLayout
+  title="Jiangsu Footwear Suppliers"
+  description="Find verified children's shoe, casual footwear, and leather shoe manufacturers in Jiangsu Province. Yangzhou-based suppliers specializing in kids footwear and casual shoes."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Jiangsu', url: '/suppliers/jiangsu/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Jiangsu Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Jiangsu Province is a <strong>major hub for children's footwear and casual shoes</strong>, with <strong>420+ registered manufacturers</strong>. <strong>Yangzhou</strong> is particularly renowned as China's children's shoe capital, producing over 30% of the nation's kids footwear output.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">420+</div>
+      <div class="text-sm text-neutral-600">Manufacturers</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">30%</div>
+      <div class="text-sm text-neutral-600">China Kids Shoes</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">BSCI</div>
+      <div class="text-sm text-neutral-600">Certified</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">EN71</div>
+      <div class="text-sm text-neutral-600">Toy Safety Compliant</div>
+    </div>
+  </div>
+
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Production Cities</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {cities.map(city => (
+        <div class="card border border-transparent">
+          <h3 class="font-semibold text-neutral-900 mb-1">{city.name}</h3>
+          <p class="text-sm text-neutral-600 mb-2">{city.description}</p>
+          <span class="text-xs text-primary-600 font-medium">{city.count} suppliers</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="mb-12 prose prose-lg max-w-none">
+    <h2>Why Source from Jiangsu?</h2>
+    <ul>
+      <li><strong>Children's shoe specialization</strong>: Yangzhou produces 30%+ of China's kids footwear</li>
+      <li><strong>Quality standards</strong>: Strong compliance with EN71 and CPSIA children's product regulations</li>
+      <li><strong>Design capability</strong>: Many factories offer in-house design for character and themed shoes</li>
+      <li><strong>Proximity to Shanghai</strong>: Easy access to Shanghai port for efficient export</li>
+    </ul>
+  </div>
+
+  <div class="bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">Need Children's Shoe Suppliers?</h3>
+    <p class="text-neutral-600 mb-4">Let us connect you with specialized kids footwear manufacturers in Jiangsu.</p>
+    <a href="/contact/" class="btn-primary">Contact Us</a>
+  </div>
+</PageLayout>

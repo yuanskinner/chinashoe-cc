@@ -1,0 +1,138 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const processes = [
+  {
+    name: 'Cemented Construction',
+    href: '/encyclopedia/manufacturing/cemented/',
+    description: 'The most common construction method — adhesive bonding of upper to sole. Fast, versatile, and cost-effective for mass production.',
+    bestFor: 'Casual shoes, sneakers, fashion footwear',
+    icon: '🧴',
+  },
+  {
+    name: 'Goodyear Welt',
+    href: '/encyclopedia/manufacturing/goodyear-welt/',
+    description: 'Premium construction with a welt strip stitched to both upper and sole. Resoleable, durable, and water-resistant.',
+    bestFor: 'Dress shoes, boots, premium footwear',
+    icon: '🪡',
+  },
+  {
+    name: 'Vulcanized Process',
+    href: '/encyclopedia/manufacturing/vulcanized/',
+    description: 'Heat and pressure bonding of rubber to canvas upper. Creates the classic sneaker with flexible, durable sole.',
+    bestFor: 'Canvas sneakers, skate shoes, casual footwear',
+    icon: '🔥',
+  },
+  {
+    name: 'Injection Molding',
+    href: '/encyclopedia/manufacturing/injection-molding/',
+    description: 'Direct injection of TPU/PVC/rubber onto the upper. Seamless bond, waterproof, high production speed.',
+    bestFor: 'Safety shoes, outdoor footwear, sports shoes',
+    icon: '⚗️',
+  },
+];
+
+const relatedTopics = [
+  { name: 'Footwear Materials', href: '/encyclopedia/materials/', description: 'Complete guide to shoe materials' },
+  { name: 'Quality Control', href: '/sourcing/quality-control/', description: 'Manufacturing quality standards' },
+  { name: 'Factory Evaluation', href: '/sourcing/factory-evaluation/', description: 'How to assess factory capabilities' },
+  { name: 'Sourcing Guide', href: '/sourcing/', description: 'End-to-end sourcing process' },
+];
+---
+
+<PageLayout
+  title="Footwear Manufacturing Processes"
+  description="Complete guide to shoe manufacturing processes: cemented, Goodyear welt, vulcanized, and injection molding. Understand construction methods, quality standards, and production considerations."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Encyclopedia', url: '/encyclopedia/' },
+    { name: 'Manufacturing', url: '/encyclopedia/manufacturing/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Footwear Manufacturing Processes
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Understanding shoe construction methods is essential for sourcing the right manufacturer. Each process offers different advantages in terms of <strong>durability</strong>, <strong>cost</strong>, <strong>water resistance</strong>, and <strong>production speed</strong>.
+    </p>
+  </div>
+
+  <!-- Process Comparison -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Construction Methods at a Glance</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-neutral-200 rounded-lg overflow-hidden text-sm">
+        <thead class="bg-neutral-50">
+          <tr>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Method</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Durability</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Water Resistance</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Resoleable</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Cost</th>
+            <th class="px-4 py-3 text-left font-semibold text-neutral-700">Speed</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-100">
+          <tr><td class="px-4 py-2 font-medium">Cemented</td><td class="px-4 py-2">Medium</td><td class="px-4 py-2">Low-Medium</td><td class="px-4 py-2">No</td><td class="px-4 py-2">Low</td><td class="px-4 py-2">Fast</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Goodyear Welt</td><td class="px-4 py-2">Very High</td><td class="px-4 py-2">High</td><td class="px-4 py-2">Yes</td><td class="px-4 py-2">High</td><td class="px-4 py-2">Slow</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Vulcanized</td><td class="px-4 py-2">High</td><td class="px-4 py-2">Medium</td><td class="px-4 py-2">No</td><td class="px-4 py-2">Medium</td><td class="px-4 py-2">Medium</td></tr>
+          <tr><td class="px-4 py-2 font-medium">Injection</td><td class="px-4 py-2">High</td><td class="px-4 py-2">Very High</td><td class="px-4 py-2">No</td><td class="px-4 py-2">Medium-High</td><td class="px-4 py-2">Very Fast</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Detailed Process Cards -->
+  <div class="space-y-8 mb-12">
+    {processes.map(process => (
+      <a href={process.href} class="block card group hover:border-primary-300 border border-transparent">
+        <div class="flex items-start gap-4">
+          <span class="text-4xl">{process.icon}</span>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors mb-2">
+              {process.name}
+            </h3>
+            <p class="text-neutral-600 mb-3">{process.description}</p>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-medium text-neutral-500">Best for:</span>
+              <span class="text-xs px-2 py-1 bg-primary-50 text-primary-700 rounded">{process.bestFor}</span>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-neutral-400 group-hover:text-primary-600 transition-colors shrink-0 mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Manufacturing Flowchart -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">General Shoe Manufacturing Flow</h2>
+    <div class="mermaid bg-white rounded-xl p-4">
+flowchart LR
+    A["Design & Pattern"] --> B["Material Sourcing"]
+    B --> C["Cutting"]
+    C --> D["Stitching Upper"]
+    D --> E["Lasting"]
+    E --> F["Sole Attachment"]
+    F --> G["Finishing"]
+    G --> H["QC Inspection"]
+    H --> I["Packaging"]
+    </div>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Related Topics</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {relatedTopics.map(topic => (
+        <a href={topic.href} class="card group hover:border-primary-300 border border-transparent">
+          <h3 class="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors mb-1">{topic.name}</h3>
+          <p class="text-sm text-neutral-600">{topic.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</PageLayout>

@@ -1,65 +1,58 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 
-const cities = [
-  { name: 'Wenzhou', description: "Women's dress shoes, fashion footwear, and leather shoes capital of China", count: 720 },
-  { name: 'Hangzhou', description: 'E-commerce driven shoe manufacturing and design centers', count: 180 },
-  { name: 'Taizhou', description: 'Injection-molded footwear and rain boots production', count: 95 },
-  { name: 'Shaoxing', description: 'Textile-based casual footwear manufacturing', count: 65 },
-];
-
 const suppliers = [
   {
-    name: 'Wenzhou Huachen Leather Goods Co.',
-    location: 'Wenzhou',
-    specialization: ['Oxford Shoes', 'Derby Shoes', 'Loafers'],
-    moq: '200 pairs',
-    href: '/suppliers/wenzhou-huachen/',
+    name: 'Qingdao Safety First Industrial Co.',
+    location: 'Qingdao',
+    specialization: ['Safety Shoes', 'Work Boots', 'Steel Toe Cap Shoes'],
+    moq: '500 pairs',
+    href: '/suppliers/qingdao-safety-first/',
   },
-  {
-    name: 'Zhejiang Wenzhou Dress Shoes Factory',
-    location: 'Wenzhou',
-    specialization: ['Dress Shoes', 'Women Heels', 'Formal Footwear'],
-    moq: '300 pairs',
-    href: '/suppliers/zhejiang-wenzhou-dress-shoes/',
-  },
+];
+
+const cities = [
+  { name: 'Qingdao', description: 'Safety shoes and industrial footwear hub with direct port access', count: 340 },
+  { name: 'Weifang', description: 'PU and chemical-resistant footwear manufacturing', count: 85 },
+  { name: 'Linyi', description: 'Budget safety shoes and rubber boots production', count: 120 },
+  { name: 'Jinan', description: 'Military and tactical footwear manufacturing', count: 45 },
 ];
 ---
 
 <PageLayout
-  title="Zhejiang Footwear Suppliers"
-  description="Find verified women's fashion and leather shoe manufacturers in Zhejiang Province. Wenzhou-based suppliers specializing in dress shoes, oxfords, and fashion footwear."
+  title="Shandong Footwear Suppliers"
+  description="Find verified safety shoe and work boot manufacturers in Shandong Province. CE EN ISO 20345 and ASTM F2413 certified factories with direct port access via Qingdao."
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Suppliers', url: '/suppliers/' },
-    { name: 'Zhejiang', url: '/suppliers/zhejiang/' },
+    { name: 'Shandong', url: '/suppliers/shandong/' },
   ]}
 >
   <div class="mb-8">
     <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-      Zhejiang Footwear Suppliers
+      Shandong Footwear Suppliers
     </h1>
     <p class="text-lg text-neutral-600 max-w-3xl">
-      Zhejiang Province is <strong>China's premier hub for women's fashion and leather footwear</strong>. With <strong>720+ registered manufacturers</strong>, the region — especially <strong>Wenzhou</strong> — has over 40 years of heritage in dress shoe production, serving brands across Europe, Middle East, and Southeast Asia.
+      Shandong Province is <strong>China's leading hub for safety and industrial footwear</strong>. With <strong>540+ registered manufacturers</strong>, the region specializes in steel-toe boots, composite-toe shoes, and certified protective footwear. Qingdao port provides direct export access to global markets.
     </p>
   </div>
 
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
     <div class="bg-primary-50 rounded-lg p-4 text-center">
-      <div class="text-2xl font-bold text-primary-600">720+</div>
+      <div class="text-2xl font-bold text-primary-600">540+</div>
       <div class="text-sm text-neutral-600">Manufacturers</div>
     </div>
     <div class="bg-primary-50 rounded-lg p-4 text-center">
-      <div class="text-2xl font-bold text-primary-600">40+</div>
-      <div class="text-sm text-neutral-600">Years Heritage</div>
+      <div class="text-2xl font-bold text-primary-600">15M+</div>
+      <div class="text-sm text-neutral-600">Annual Pairs</div>
     </div>
     <div class="bg-primary-50 rounded-lg p-4 text-center">
-      <div class="text-2xl font-bold text-primary-600">BSCI</div>
-      <div class="text-sm text-neutral-600">Certified</div>
+      <div class="text-2xl font-bold text-primary-600">EN 20345</div>
+      <div class="text-sm text-neutral-600">CE Certified</div>
     </div>
     <div class="bg-primary-50 rounded-lg p-4 text-center">
-      <div class="text-2xl font-bold text-primary-600">REACH</div>
-      <div class="text-sm text-neutral-600">Compliant</div>
+      <div class="text-2xl font-bold text-primary-600">ASTM</div>
+      <div class="text-sm text-neutral-600">US Standard</div>
     </div>
   </div>
 
@@ -98,5 +91,11 @@ const suppliers = [
         </div>
       ))}
     </div>
+  </div>
+
+  <div class="bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">Need a Safety Footwear Supplier?</h3>
+    <p class="text-neutral-600 mb-4">Let us connect you with CE and ASTM certified manufacturers in Shandong.</p>
+    <a href="/contact/" class="btn-primary">Contact Us</a>
   </div>
 </PageLayout>

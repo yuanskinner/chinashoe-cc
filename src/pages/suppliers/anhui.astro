@@ -1,0 +1,77 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+
+const cities = [
+  { name: 'Hefei', description: 'Casual and PU footwear manufacturing center', count: 120 },
+  { name: 'Fuyang', description: 'Budget shoes and slippers production', count: 85 },
+  { name: 'Wuhu', description: 'Injection-molded footwear and outdoor shoes', count: 55 },
+  { name: 'Bengbu', description: 'Children shoes and school footwear', count: 45 },
+];
+---
+
+<PageLayout
+  title="Anhui Footwear Suppliers"
+  description="Find verified shoe manufacturers in Anhui Province. Specializing in casual shoes, PU footwear, and budget production with competitive labor costs."
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Suppliers', url: '/suppliers/' },
+    { name: 'Anhui', url: '/suppliers/anhui/' },
+  ]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+      Anhui Footwear Suppliers
+    </h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">
+      Anhui Province has emerged as a <strong>cost-competitive footwear manufacturing region</strong>, with <strong>310+ registered factories</strong>. Lower labor costs than coastal provinces make Anhui attractive for <strong>budget and mid-range shoe production</strong>, particularly casual shoes, PU footwear, and children's shoes.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">310+</div>
+      <div class="text-sm text-neutral-600">Manufacturers</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">8M+</div>
+      <div class="text-sm text-neutral-600">Annual Pairs</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">20%</div>
+      <div class="text-sm text-neutral-600">Lower Labor Cost</div>
+    </div>
+    <div class="bg-primary-50 rounded-lg p-4 text-center">
+      <div class="text-2xl font-bold text-primary-600">ISO</div>
+      <div class="text-sm text-neutral-600">Certified</div>
+    </div>
+  </div>
+
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-neutral-900 mb-6">Production Cities</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {cities.map(city => (
+        <div class="card border border-transparent">
+          <h3 class="font-semibold text-neutral-900 mb-1">{city.name}</h3>
+          <p class="text-sm text-neutral-600 mb-2">{city.description}</p>
+          <span class="text-xs text-primary-600 font-medium">{city.count} suppliers</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="mb-12 prose prose-lg max-w-none">
+    <h2>Why Source from Anhui?</h2>
+    <ul>
+      <li><strong>Cost advantage</strong>: Labor costs 15-25% lower than Guangdong and Fujian</li>
+      <li><strong>Growing industry</strong>: Government incentives for footwear manufacturing investment</li>
+      <li><strong>Logistics</strong>: Direct rail connections to Shanghai and Ningbo ports</li>
+      <li><strong>Specialization</strong>: Strong in PU injection shoes, casual footwear, and children's shoes</li>
+    </ul>
+  </div>
+
+  <div class="bg-primary-50 rounded-xl p-8 text-center">
+    <h3 class="text-xl font-bold text-neutral-900 mb-2">Looking for Anhui Suppliers?</h3>
+    <p class="text-neutral-600 mb-4">Let us connect you with cost-competitive manufacturers in Anhui Province.</p>
+    <a href="/contact/" class="btn-primary">Contact Us</a>
+  </div>
+</PageLayout>
