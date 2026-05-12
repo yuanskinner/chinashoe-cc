@@ -108,69 +108,66 @@ const stats = [
   type="website"
 >
   <!-- Hero Section -->
-  <section class="relative text-white overflow-hidden min-h-[600px]">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-      <img src="/images/hero-craftsman.jpg" alt="Master craftsman handcrafting red leather high heel shoes" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/95 via-neutral-900/80 to-neutral-900/60"></div>
-    </div>
-    <!-- Subtle Pattern Overlay -->
-    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-    
-    <div class="relative container-custom py-20 lg:py-28">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-300 text-sm font-medium mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Your trusted B2B footwear knowledge hub
-        </div>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-          Connect with <span class="text-primary-400">Chinese Footwear</span> Manufacturers
-        </h1>
-        
-        <p class="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-          From design inspiration to supplier verification, we provide comprehensive resources for footwear designers, wholesalers, and retailers worldwide.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a href="/suppliers/" class="btn-primary text-lg px-8 py-3">
-            Find Suppliers
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  <section class="relative text-white overflow-hidden bg-neutral-900">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-0 items-center min-h-[600px]">
+        <!-- Left: Text Content -->
+        <div class="py-16 lg:py-20 lg:pr-8 relative z-10">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 border border-primary-500/30 text-primary-300 text-sm font-medium mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-          </a>
-          <a href="/encyclopedia/" class="btn-outline border-white text-white hover:bg-white/10 text-lg px-8 py-3">
-            Explore Encyclopedia
-          </a>
-        </div>
-        
-        <!-- Search Bar -->
-        <div class="max-w-2xl mx-auto">
-          <div class="bg-white rounded-xl p-2 flex items-center gap-2 shadow-2xl">
-            <svg class="w-5 h-5 text-neutral-400 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input
-              type="search"
-              placeholder="Search shoes, suppliers, materials, processes..."
-              class="flex-1 px-4 py-3 text-neutral-900 border-0 focus:ring-0"
-              onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon! Stay tuned.'); }"
-            />
-            <button type="button" class="btn-primary px-6 py-3" onclick="alert('Search feature is coming soon! Stay tuned.');">
-              Search
-            </button>
+            Your trusted B2B footwear knowledge hub
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+            Connect with <span class="text-primary-400">Chinese Footwear</span> Manufacturers
+          </h1>
+          
+          <p class="text-lg md:text-xl text-neutral-300 mb-8 max-w-xl">
+            From design inspiration to supplier verification, we provide comprehensive resources for footwear designers, wholesalers, and retailers worldwide.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-start gap-4 mb-10">
+            <a href="/suppliers/" class="btn-primary text-lg px-8 py-3">
+              Find Suppliers
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/encyclopedia/" class="btn-outline border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+              Explore Encyclopedia
+            </a>
+          </div>
+          
+          <!-- Search Bar -->
+          <div class="max-w-xl">
+            <div class="bg-white rounded-xl p-2 flex items-center gap-2 shadow-2xl">
+              <svg class="w-5 h-5 text-neutral-400 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="search"
+                placeholder="Search shoes, suppliers, materials..."
+                class="flex-1 px-4 py-3 text-neutral-900 border-0 focus:ring-0"
+                onkeydown="if(event.key==='Enter') { event.preventDefault(); alert('Search feature is coming soon!'); }"
+              />
+              <button type="button" class="btn-primary px-6 py-3" onclick="alert('Search feature is coming soon!');">
+                Search
+              </button>
+            </div>
           </div>
         </div>
+        
+        <!-- Right: Craftsman Image -->
+        <div class="relative h-full min-h-[400px] lg:min-h-[600px]">
+          <img src="/images/hero-craftsman.jpg" alt="Master craftsman handcrafting red leather high heel shoes" class="absolute inset-0 w-full h-full object-cover object-center" />
+          <!-- Subtle gradient on left edge for smooth blend -->
+          <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-neutral-900 to-transparent lg:block hidden"></div>
+          <!-- Bottom gradient -->
+          <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+        </div>
       </div>
-    </div>
-    
-    <!-- Wave Decoration -->
-    <div class="absolute bottom-0 left-0 right-0">
-      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 50L60 45C120 40 240 30 360 35C480 40 600 60 720 65C840 70 960 60 1080 50C1200 40 1320 30 1380 25L1440 20V100H1380C1320 100 1200 100 1080 100C960 100 840 100 720 100C600 100 480 100 360 100C240 100 120 100 60 100H0V50Z" fill="white"/>
-      </svg>
     </div>
   </section>
 
