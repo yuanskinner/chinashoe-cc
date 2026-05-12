@@ -60,6 +60,9 @@ export default defineConfig({
   vite: {
     build: {
       cssCodeSplit: true,
+      rollupOptions: {
+        external: ['/pagefind/pagefind.js']
+      }
     },
   },
   compressHTML: true,

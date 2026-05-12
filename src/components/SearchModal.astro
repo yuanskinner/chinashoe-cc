@@ -1,0 +1,198 @@
+---
+// Pagefind search modal component
+// Uses Pagefind for static site full-text search
+---
+
+<div id="search-modal" class="fixed inset-0 z-50 hidden">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-neutral-900/80 backdrop-blur-sm" id="search-backdrop"></div>
+  
+  <!-- Modal -->
+  <div class="relative max-w-2xl mx-auto mt-20 mx-4">
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <!-- Search Input -->
+      <div class="flex items-center px-6 py-4 border-b border-neutral-200">
+        <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search shoes, suppliers, materials, manufacturing..."
+          class="flex-1 ml-4 text-lg text-neutral-900 bg-transparent border-0 focus:ring-0 focus:outline-none"
+          autocomplete="off"
+        />
+        <kbd class="hidden sm:inline-flex items-center px-2 py-1 text-xs font-mono text-neutral-400 bg-neutral-100 rounded border border-neutral-200">ESC</kbd>
+      </div>
+      
+      <!-- Results -->
+      <div id="search-results" class="max-h-[60vh] overflow-y-auto px-6 py-4">
+        <div id="search-placeholder" class="text-center py-12 text-neutral-400">
+          <svg class="w-12 h-12 mx-auto mb-4 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <p class="text-lg font-medium">Search ChinaShoe.cc</p>
+          <p class="text-sm mt-1">Find shoes, materials, suppliers, and guides</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .search-result-item {
+    transition: background-color 0.15s ease;
+  }
+  .search-result-item:hover {
+    background-color: #F5F5F5;
+  }
+  .search-mark {
+    background-color: #FEF08A;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+</style>
+
+<script>
+  // Initialize Pagefind search
+  let pagefindSearch: any = null;
+  
+  async function initPagefind() {
+    try {
+      // @ts-ignore - Pagefind is loaded at runtime
+      pagefindSearch = await import('/pagefind/pagefind.js');
+      await pagefindSearch.init();
+    } catch (e) {
+      console.log('Pagefind not available yet');
+    }
+  }
+
+  function openSearch() {
+    const modal = document.getElementById('search-modal');
+    const input = document.getElementById('search-input') as HTMLInputElement;
+    if (modal) {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      clearResults();
+    }
+  }
+
+  function closeSearch() {
+    const modal = document.getElementById('search-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function clearResults() {
+    const results = document.getElementById('search-results');
+    const placeholder = document.getElementById('search-placeholder');
+    if (results) {
+      results.innerHTML = '';
+      if (placeholder) results.appendChild(placeholder.cloneNode(true));
+    }
+  }
+
+  async function performSearch(query: string) {
+    if (!pagefindSearch || !query.trim()) {
+      clearResults();
+      return;
+    }
+
+    const results = document.getElementById('search-results');
+    if (!results) return;
+
+    try {
+      const search = await pagefindSearch.search(query);
+      
+      if (search.results.length === 0) {
+        results.innerHTML = `
+          <div class="text-center py-12 text-neutral-400">
+            <p class="text-lg font-medium">No results found</p>
+            <p class="text-sm mt-1">Try different keywords like "leather", "sneakers", or "supplier"</p>
+          </div>
+        `;
+        return;
+      }
+
+      const fragments = await Promise.all(
+        search.results.slice(0, 8).map((r: any) => r.data())
+      );
+
+      results.innerHTML = fragments.map((data: any) => {
+        const excerpt = data.excerpt || data.meta?.description || '';
+        return `
+          <a href="${data.url}" class="search-result-item block px-4 py-4 rounded-lg border-b border-neutral-100 last:border-0">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <h3 class="text-base font-semibold text-neutral-900 truncate">${data.meta?.title || data.url}</h3>
+                <p class="text-sm text-neutral-500 mt-1 line-clamp-2">${excerpt}</p>
+                <span class="inline-block mt-2 text-xs text-primary-600 font-medium">${data.url}</span>
+              </div>
+            </div>
+          </a>
+        `;
+      }).join('');
+    } catch (e) {
+      console.error('Search error:', e);
+    }
+  }
+
+  // Debounce helper
+  function debounce(fn: Function, ms: number) {
+    let timer: number;
+    return (...args: any[]) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn(...args), ms) as unknown as number;
+    };
+  }
+
+  const debouncedSearch = debounce(performSearch, 300);
+
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    initPagefind();
+
+    // Hero search input opens modal
+    const heroSearch = document.getElementById('hero-search');
+    if (heroSearch) {
+      heroSearch.addEventListener('focus', () => {
+        openSearch();
+        heroSearch.blur();
+      });
+      heroSearch.addEventListener('click', () => {
+        openSearch();
+      });
+    }
+
+    // Modal search input
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const target = e.target as HTMLInputElement;
+        debouncedSearch(target.value);
+      });
+    }
+
+    // Close on backdrop click
+    const backdrop = document.getElementById('search-backdrop');
+    if (backdrop) {
+      backdrop.addEventListener('click', closeSearch);
+    }
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSearch();
+      // Cmd/Ctrl + K to open
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+    });
+  });
+</script>
